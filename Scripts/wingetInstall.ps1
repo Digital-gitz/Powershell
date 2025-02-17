@@ -33,14 +33,14 @@ winget install --id Odamex.Odamex  --accept-package-agreements --accept-source-a
 winget install --id  GodotEngine.GodotEngine  --accept-package-agreements --accept-source-agreements &&
 #? GoDot steam?
 winget install -e --id GNU.Wget2 --accept-package-agreements --accept-source-agreements 
-# TEXT EDITOR'S 
+# TEXT READER'S & EDITOR'S 
 winget install --id  Neovim.Neovim --accept-package-agreements --accept-source-agreements &&
 #Start-Process  "https://neovim.io/"
 #Start-Process  "https://github.com/neovim/neovim/blob/master/INSTALL.md"
 #Start-Process  "https://www.lunarvim.org/docs/installation"
 # winget install iA Writer  --silent --accept-package-agreements --accept-source-agreements &&
 # Start-Process "https://ia.net/writer/support/basics/markdown-guide"
-
+ winget install --id  SumatraPDF.SumatraPDF  --silent --accept-package-agreements --accept-source-agreements 
 #GRAPHICS
 
 #CLI
@@ -56,4 +56,4 @@ winget install -e --id SteelSeries.SteelSeriesEngine --silent --accept-package-a
 
 
 #programing Interface
-winget install -e --id Anaconda.Anaconda3 --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Anaconda.Miniconda3  --silent --accept-package-agreements --accept-source-agreements

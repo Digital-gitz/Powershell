@@ -47,7 +47,10 @@ $RequiredModules = @(
     @{Name = 'AWS.Tools.Common'; Purpose = 'AWS CLI integration'},
     @{Name = 'ImportExcel'; Purpose = 'Excel manipulation'},
     @{Name = 'PackageManagement'; Purpose = 'Package management'},
-    @{Name = 'PSFzf'; Purpose = 'Fuzzy finder'}
+    @{Name = 'PSFzf'; Purpose = 'Fuzzy finder'},
+    # @{Name = 'Navigation'; Purpose = 'Ease of Navigation to various directories and paths'},
+    # @{Name = 'BuildRepo'; Purpose = 'Module for building repositories using various build systems'},
+    @{Name = 'PowerShellGet'; Purpose = 'PowerShell module management'}
 )
 
 # Module import function with error handling
@@ -76,6 +79,47 @@ if ($host.Name -eq 'ConsoleHost') {
     foreach ($module in $RequiredModules) {
         Import-RequiredModule -Name $module.Name -Purpose $module.Purpose
     }
+}
+
+# Define and load custom scripts
+$CustomScripts = @(
+    @{Name = 'Navigation.ps1'; Purpose = 'Navigation functions'},
+    @{Name = 'GitHub.ps1'; Purpose = 'GitHub integration functions'},
+    @{Name = 'PNGtoVECTOR.ps1'; Purpose = 'PNG conversion utilities'},
+    @{Name = 'UtilityFunctions.aiUpdate.ps1'; Purpose = 'General utility functions'},
+    @{Name = 'SystemInfo.ps1'; Purpose = 'System information functions'},
+    @{Name = 'FileManagement.ps1'; Purpose = 'File management utilities'}
+)
+
+# Function to import custom scripts
+function Import-CustomScript {
+    param (
+        [Parameter(Mandatory)]
+        [string]$Name,
+        [string]$Purpose
+    )
+    
+    try {
+        $scriptPath = Join-Path $CommonPaths.Scripts $Name
+        if (Test-Path $scriptPath) {
+            Write-Host "Loading script: $scriptPath" -ForegroundColor Cyan
+            . $scriptPath
+            Write-Host "Successfully loaded script: $Name ($Purpose)" -ForegroundColor Green
+        } else {
+            Write-Warning "Script not found: $Name"
+        }
+    }
+    catch {
+        Write-Warning "Failed to load script: $Name. Error: $_"
+    }
+    if (-not (Test-Path $CommonPaths.Scripts)) {
+        New-Item -Path $CommonPaths.Scripts -ItemType Directory
+    }
+}
+
+# Load custom scripts after modules are loaded
+foreach ($script in $CustomScripts) {
+    Import-CustomScript -Name $script.Name -Purpose $script.Purpose
 }
 
 #region Custom Functions
@@ -218,3 +262,92 @@ function Show-Welcome {
 
 }
 Show-Welcome
+
+
+#region TeMpARiT FiLE.
+function goto {
+    param (
+        [Parameter(Mandatory = $false)]
+        [ValidateSet("home", "root", "dirps", "downloads", "documents", "pictures", "desktop", "github")]
+        [string]$location
+    )
+
+    if (-not $PSBoundParameters.ContainsKey('location')) {
+        Write-Host "Please specify a location. Valid locations are:" -ForegroundColor Yellow
+        $CommonPaths.Keys | ForEach-Object { Write-Host " - $_" }
+        return
+    }
+
+    if ($CommonPaths.ContainsKey($location)) {
+        if (Test-Path $CommonPaths.$location) {
+            Set-Location $CommonPaths.$location
+            Get-ChildItem
+        } else {
+            Write-Host "Path not found: $($CommonPaths.$location)" -ForegroundColor Red
+        }
+    } else {
+        Write-Host "Location '$location' is not defined in `$CommonPaths." -ForegroundColor Red
+    }
+}
+
+# Add tab completion for the goto function
+Register-ArgumentCompleter -CommandName goto -ParameterName location -ScriptBlock {
+    param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
+    $CommonPaths.Keys | Where-Object { $_ -like "$wordToComplete*" } | ForEach-Object { [System.Management.Automation.CompletionResult]::new($_) }
+}
+
+# Add a custom path to $CommonPaths
+function Add-CommonPath {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Name,
+        [Parameter(Mandatory = $true)]
+        [string]$Path
+    )
+    if (Test-Path $Path) {
+        $CommonPaths[$Name] = $Path
+        Write-Host "Path '$Path' added as '$Name'" -ForegroundColor Green
+    } else {
+        Write-Host "Path '$Path' does not exist. Please provide a valid path." -ForegroundColor Red
+    }
+}
+#region URL_glop
+function Open-Urls {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string[]]$Urls,
+        [Parameter(Mandatory = $false)]
+        [string]$Message = "Opened all URLs"
+    )
+
+    foreach ($url in $Urls) {
+        Start-Process $url
+    }
+
+    Write-Host $Message -ForegroundColor Green
+}
+
+# Example usage:
+function oAi {
+    $aiSites = @(
+        "https://chatgpt.com/",
+        "https://claude.ai/new",
+        "https://gemini.google.com/app?hl=en-GB", 
+        "https://chat.deepseek.com/",
+        "https://x.com/i/grok"
+    )
+    Open-Urls -Urls $aiSites -Message "Opened all AI chat websites"
+}
+
+function mysocial {
+    $socialSites = @(
+        "https://x.com/home",
+        "https://www.reddit.com/",
+        "https://www.tumblr.com/dashboard", 
+        "https://www.facebook.com/",
+        "https://www.instagram.com/",
+        "https://www.threads.net/"
+    )
+    Open-Urls -Urls $socialSites -Message "Opened all Social Media websites"
+}
+# End of Microsoft.PowerShell_profile.ps1

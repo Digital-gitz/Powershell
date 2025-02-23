@@ -17,20 +17,39 @@ A comprehensive PowerShell profile that provides:
 Author: Svyatoslav Oleg Russkiy
 Last Updated: 2025
 Version: 2.0
+debug 
+$DebugMode = $true
+function Write-DebugLog {
+    param ([string]$Message)
+    if ($DebugMode) {
+        Write-Host "[DEBUG] $Message" -ForegroundColor Gray
+    }
+}
+to list all user scripts use the following command:
+Get-ChildItem $scriptsPath  # Should show Install-OrUpdateModule.ps1
+
+?For whatever reason User scripts are not loading need to load then in manualy.
+?need to figure out how to load all user scripts in the profile.
+$scriptPath = Join-Path $CommonPaths.Scripts "$someScript.ps1"
+
 #>
+
+
 
 #region Environment Setup
 # Update WSL
 wsl --update
 
 # Common paths initialization
-$script:CommonPaths = @{
-    Home = $HOME
-    Documents = [Environment]::GetFolderPath('MyDocuments')
-    Desktop = [Environment]::GetFolderPath('Desktop')
-    PowerShell = Split-Path $PROFILE
-    GitHub = Join-Path $HOME "Github"
-    Scripts = Join-Path (Split-Path $PROFILE) "Scripts"
+$CommonPaths = @{
+    Home      = [System.Environment]::GetFolderPath('UserProfile')
+    Documents = [System.Environment]::GetFolderPath('MyDocuments')
+    Desktop   = [System.Environment]::GetFolderPath('Desktop')
+    Downloads = (Join-Path -Path ([System.Environment]::GetFolderPath('UserProfile')) -ChildPath 'Downloads')
+    Pictures  = (Join-Path -Path ([System.Environment]::GetFolderPath('UserProfile')) -ChildPath 'Pictures')
+    PowerShell = (Join-Path -Path ([System.Environment]::GetFolderPath('MyDocuments')) -ChildPath 'PowerShell')
+    GitHub    = (Join-Path -Path ([System.Environment]::GetFolderPath('UserProfile')) -ChildPath 'GitHub')
+    Scripts   = (Join-Path -Path ([System.Environment]::GetFolderPath('MyDocuments')) -ChildPath 'PowerShell\Scripts')
 }
 
 # Initialize working directory
@@ -81,15 +100,19 @@ if ($host.Name -eq 'ConsoleHost') {
     }
 }
 
+$CommonPaths.Scripts = $env:PS_SCRIPTS_PATH ?? (Join-Path $CommonPaths.PowerShell "Scripts")
+
 # Define and load custom scripts
 $CustomScripts = @(
+    @{Name = 'Install-OrUpdateModule.ps1'; Purpose = 'Install or update module functions'},
     @{Name = 'Navigation.ps1'; Purpose = 'Navigation functions'},
     @{Name = 'GitHub.ps1'; Purpose = 'GitHub integration functions'},
     @{Name = 'PNGtoVECTOR.ps1'; Purpose = 'PNG conversion utilities'},
     @{Name = 'UtilityFunctions.aiUpdate.ps1'; Purpose = 'General utility functions'},
     @{Name = 'SystemInfo.ps1'; Purpose = 'System information functions'},
     @{Name = 'FileManagement.ps1'; Purpose = 'File management utilities'}
-)
+    )
+    #Define common paths dynamically
 
 # Function to import custom scripts
 function Import-CustomScript {
@@ -98,33 +121,58 @@ function Import-CustomScript {
         [string]$Name,
         [string]$Purpose
     )
+
+
+    # First ensure Scripts directory exists
+    if (-not (Test-Path $CommonPaths.Scripts)) {
+        New-Item -Path $CommonPaths.Scripts -ItemType Directory -Force
+    }
     
     try {
         $scriptPath = Join-Path $CommonPaths.Scripts $Name
         if (Test-Path $scriptPath) {
-            Write-Host "Loading script: $scriptPath" -ForegroundColor Cyan
+            Write-Host "Debug: Found script at $scriptPath" -ForegroundColor Cyan
             . $scriptPath
             Write-Host "Successfully loaded script: $Name ($Purpose)" -ForegroundColor Green
+            
+            # Verify function is loaded
+            $functionName = $Name -replace '\.ps1$', ''
+            if (Get-Command -Name $functionName -ErrorAction SilentlyContinue) {
+                Write-Host "Verified function '$functionName' is available" -ForegroundColor Green
+            } else {
+                Write-Warning "Function '$functionName' not found after loading script"
+            }
         } else {
-            Write-Warning "Script not found: $Name"
+            Write-Warning "Script not found: $scriptPath"
         }
     }
     catch {
         Write-Warning "Failed to load script: $Name. Error: $_"
     }
-    if (-not (Test-Path $CommonPaths.Scripts)) {
-        New-Item -Path $CommonPaths.Scripts -ItemType Directory
-    }
 }
+
+Write-Host "Debug: Starting script loading process" -ForegroundColor Yellow
+Write-Host "Debug: Scripts directory path: $($CommonPaths.Scripts)" -ForegroundColor Yellow
+Write-Host "Debug: Scripts directory exists: $(Test-Path $CommonPaths.Scripts)" -ForegroundColor Yellow
+Write-Host "Debug: Scripts in directory:" -ForegroundColor Yellow
+Get-ChildItem -Path $CommonPaths.Scripts | ForEach-Object { Write-Host "- $($_.Name)" -ForegroundColor Cyan }
+
 
 # Load custom scripts after modules are loaded
 foreach ($script in $CustomScripts) {
+    Write-Host "Debug: Attempting to load $($script.Name)" -ForegroundColor Yellow
     Import-CustomScript -Name $script.Name -Purpose $script.Purpose
 }
 
 #region Custom Functions
-# Function to generate new GUID
 function Get-Guid {
+    <#
+    .SYNOPSIS
+    Generates a new GUID.
+    
+    .EXAMPLE
+    Get-Guid
+    #>
     [guid]::NewGuid().ToString()
 }
 
@@ -212,8 +260,15 @@ function Update-PowerShellProfile {
     Write-Host "PowerShell profile reloaded successfully." -ForegroundColor Green
 }
 
+Set-PSReadLineOption -Colors @{
+    Command = 'Green'
+    Parameter = 'Cyan'
+    String = 'Yellow'
+}
+
 #region Aliases
 Set-Alias -Name clr -Value Clear-Host
+# Open Explorer in the current directory
 Set-Alias -Name here -Value Open-ExplorerHere
 Set-Alias -Name ghs -Value Search-GitHubRepos
 Set-Alias -Name ghl -Value Get-GitHubRepoList
@@ -244,89 +299,27 @@ $principal = [Security.Principal.WindowsPrincipal] $identity
 if ($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Warning "PowerShell is running with Administrator privileges. Please be cautious."
 }
-function Show-Welcome {
-    [CmdletBinding()]
-    param()
-    
-    $TColor = "Cyan"
-    $Logo = @"
- ___ _             ____  _       _ _        _      
-|_ _( )_ __ ___   |  _ \(_) __ _(_) |_ __ _| |     
- | ||/| '_ ` _ \  | | | | |/ _` | | __/ _` | |     
- | |  | | | | | | | |_| | | (_| | | || (_| | |     
-|___| |_| |_| |_| |____/|_|\__, |_|\__\__,_|_|____ 
-                          |___/            |_____|
-"@
-    
-    Write-Host $Logo -ForegroundColor $TColor
 
-}
-Show-Welcome
 
 
 #region TeMpARiT FiLE.
-function goto {
-    param (
-        [Parameter(Mandatory = $false)]
-        [ValidateSet("home", "root", "dirps", "downloads", "documents", "pictures", "desktop", "github")]
-        [string]$location
-    )
 
-    if (-not $PSBoundParameters.ContainsKey('location')) {
-        Write-Host "Please specify a location. Valid locations are:" -ForegroundColor Yellow
-        $CommonPaths.Keys | ForEach-Object { Write-Host " - $_" }
-        return
-    }
-
-    if ($CommonPaths.ContainsKey($location)) {
-        if (Test-Path $CommonPaths.$location) {
-            Set-Location $CommonPaths.$location
-            Get-ChildItem
-        } else {
-            Write-Host "Path not found: $($CommonPaths.$location)" -ForegroundColor Red
-        }
-    } else {
-        Write-Host "Location '$location' is not defined in `$CommonPaths." -ForegroundColor Red
-    }
-}
-
-# Add tab completion for the goto function
-Register-ArgumentCompleter -CommandName goto -ParameterName location -ScriptBlock {
-    param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
-    $CommonPaths.Keys | Where-Object { $_ -like "$wordToComplete*" } | ForEach-Object { [System.Management.Automation.CompletionResult]::new($_) }
-}
-
-# Add a custom path to $CommonPaths
-function Add-CommonPath {
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$Name,
-        [Parameter(Mandatory = $true)]
-        [string]$Path
-    )
-    if (Test-Path $Path) {
-        $CommonPaths[$Name] = $Path
-        Write-Host "Path '$Path' added as '$Name'" -ForegroundColor Green
-    } else {
-        Write-Host "Path '$Path' does not exist. Please provide a valid path." -ForegroundColor Red
-    }
-}
 #region URL_glop
 function Open-Urls {
     param (
         [Parameter(Mandatory = $true)]
         [string[]]$Urls,
-        [Parameter(Mandatory = $false)]
         [string]$Message = "Opened all URLs"
     )
-
     foreach ($url in $Urls) {
-        Start-Process $url
+        if ($url -match '^https?://') {
+            Start-Process $url
+        } else {
+            Write-Warning "Invalid URL: $url"
+        }
     }
-
     Write-Host $Message -ForegroundColor Green
 }
-
 # Example usage:
 function oAi {
     $aiSites = @(
@@ -350,7 +343,7 @@ function mysocial {
         "https://disboard.org/search"
     )
     Open-Urls -Urls $socialSites -Message "Opened all Social Media websites"
-
+}
     function stonks {
         $Stocksites = @(
             "",
@@ -362,6 +355,8 @@ function mysocial {
             "https://robinhood.com/legend"
         )
         Open-Urls -Urls $Stocksites -Message "Opened all my stock trading websites"
+    }
+
     function HVAC {
         $HvacSites = @(
             # "https://chatgpt.com/g/g-nlEQxC91L-hvac-assistant",
@@ -369,4 +364,49 @@ function mysocial {
         Open-Urls -Urls $HvacSites -Message "Opened all Social Media websites"
 
 }
+    function Open-PowerShellGallery {
+        $pwshgall = @(
+            "https://www.powershellgallery.com/packages/"
+            )
+        Open-Urls -Urls $pwshgall -Message "Opens powershell gallery"
+
+}
+
+
+
+
+
+
+
+
+
+
+function Show-Welcome {
+    [CmdletBinding()]
+    param()
+    
+    $TColor = "Cyan"
+    $Date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    Write-Host "Welcome to PowerShell! Today is $Date" -ForegroundColor $TColor
+    $Logo = @"
+ ___ _             ____  _       _ _        _      
+|_ _( )_ __ ___   |  _ \(_) __ _(_) |_ __ _| |     
+ | ||/| '_ ` _ \  | | | | |/ _` | | __/ _` | |     
+ | |  | | | | | | | |_| | | (_| | | || (_| | |     
+|___| |_| |_| |_| |____/|_|\__, |_|\__\__,_|_|____ 
+                          |___/            |_____|
+"@
+    
+    Write-Host $Logo -ForegroundColor $TColor
+
+}
+Show-Welcome
+$ProfileStartTime = Get-Date
+# ... (rest of the profile script)
+$ProfileLoadTime = (Get-Date) - $ProfileStartTime
+Write-Host "Profile loaded in $($ProfileLoadTime.TotalMilliseconds) ms" -ForegroundColor Cyan
+
+
+
+
 # End of Microsoft.PowerShell_profile.ps1

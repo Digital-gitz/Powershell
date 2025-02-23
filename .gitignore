@@ -1,5 +1,15 @@
 # Ignore all .log files
 *.log
 
+# Ingnore all .env files
+*.env
+
 # Ignore all files in any directory named temp
 temp/
+
+# Ignore all .txt files in the root directory
+/*.txt
+
+#modules to ignore
+node_modules/
+Modules/

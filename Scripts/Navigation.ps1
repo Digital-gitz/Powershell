@@ -1,17 +1,11 @@
-# Define common paths dynamically
-$CommonPaths = @{
-    Home      = [System.Environment]::GetFolderPath('UserProfile')
-    Documents = [System.Environment]::GetFolderPath('MyDocuments')
-    Desktop   = [System.Environment]::GetFolderPath('Desktop')
-    Downloads = (Join-Path -Path ([System.Environment]::GetFolderPath('UserProfile')) -ChildPath 'Downloads')
-    Pictures  = (Join-Path -Path ([System.Environment]::GetFolderPath('UserProfile')) -ChildPath 'Pictures')
-    PowerShell = (Join-Path -Path ([System.Environment]::GetFolderPath('MyDocuments')) -ChildPath 'PowerShell')
-    GitHub    = (Join-Path -Path ([System.Environment]::GetFolderPath('UserProfile')) -ChildPath 'GitHub')
-    Scripts   = (Join-Path -Path ([System.Environment]::GetFolderPath('MyDocuments')) -ChildPath 'PowerShell\Scripts')
-}
+
 # Open current directory in Explorer
 function Open-ExplorerHere {
     Start-Process explorer.exe .
+}
+
+$script:CommonPaths = @{
+    Scripts = Join-Path (Split-Path $PROFILE) "Scripts"
 }
 
 # Navigate to a predefined location
@@ -61,42 +55,6 @@ function Add-CommonPath {
         Write-Host "Path '$Path' does not exist. Please provide a valid path." -ForegroundColor Red
     }
 }
-#region URL_glop
-function Open-Urls {
-    param (
-        [Parameter(Mandatory = $true)]
-        [string[]]$Urls,
-        [Parameter(Mandatory = $false)]
-        [string]$Message = "Opened all URLs"
-    )
 
-    foreach ($url in $Urls) {
-        Start-Process $url
-    }
-
-    Write-Host $Message -ForegroundColor Green
-}
-
-# Example usage:
-function oAi {
-    $aiSites = @(
-        "https://chatgpt.com/",
-        "https://claude.ai/new",
-        "https://gemini.google.com/app?hl=en-GB", 
-        "https://chat.deepseek.com/",
-        "https://x.com/i/grok"
-    )
-    Open-Urls -Urls $aiSites -Message "Opened all AI chat websites"
-}
-
-function mysocial {
-    $socialSites = @(
-        "https://x.com/home",
-        "https://www.reddit.com/",
-        "https://www.tumblr.com/dashboard", 
-        "https://www.facebook.com/",
-        "https://www.instagram.com/",
-        "https://www.threads.net/"
-    )
-    Open-Urls -Urls $socialSites -Message "Opened all Social Media websites"
-}
+Write-Output("Navigation UserScript Uploaded...")
+#endregion

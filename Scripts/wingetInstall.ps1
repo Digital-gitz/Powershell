@@ -10,7 +10,6 @@ winget install Microsoft.WindowsTerminal.Canary --silent --accept-package-agreem
 winget install Microsoft.DirectX --silent --accept-package-agreements --accept-source-agreements &&
 winget install -e --id Python.Python.3.12 --scope machine --silent --accept-package-agreements --accept-source-agreements &&
 winget install Rufus.Rufus --silent --accept-package-agreements --accept-source-agreements &&
-winget install vim.vim.nightly --silent --accept-package-agreements --accept-source-agreements &&
 winget install RevoUninstaller.RevoUninstaller --silent --accept-package-agreements --accept-source-agreements &&
 winget install Anysphere.Cursor --silent --accept-package-agreements --accept-source-agreements &&
 winget install Everything  --silent --accept-package-agreements --accept-source-agreements &&
@@ -55,6 +54,9 @@ winget install --id GitHub.cli
 #Start-Process "https://cli.github.com/"
 winget install --id Microsoft.Git
 winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown to see all results.
+winget install vim.vim.nightly --silent --accept-package-agreements --accept-source-agreements &&
+
+
 
 #Windows-terminal  
 winget install -e --id  Microsoft.WindowsTerminal --silent --accept-package-agreements --accept-source-agreements

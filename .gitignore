@@ -12,3 +12,13 @@ temp/
 
 #modules to ignore
 node_modules/
+# modules/
+
+# AWS CLI credentials and config
+.aws/
+.aws/config
+.aws/credentials
+
+# Custom AWS token or secret files
+aws_tokens.txt
+secrets/

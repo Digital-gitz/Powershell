@@ -43,17 +43,24 @@ winget install --id  Neovim.Neovim --accept-package-agreements --accept-source-a
  winget install --id  SumatraPDF.SumatraPDF  --silent --accept-package-agreements --accept-source-agreements 
 #GRAPHICS
 
-#CLI
-winget install --id GitHub.cli
-#Start-Process "https://cli.github.com/"
-winget install --id Microsoft.Git
-
-winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown to see all results.
-
-
 #Hardware
 winget install -e --id SteelSeries.SteelSeriesEngine --silent --accept-package-agreements --accept-source-agreements
 
-
 #programing Interface
 winget install -e --id  Anaconda.Miniconda3  --silent --accept-package-agreements --accept-source-agreements
+
+#CLI
+winget install -e --id Nushell.Nushell --silent --accept-package-agreements --accept-source-agreements
+winget install --id GitHub.cli
+#Start-Process "https://cli.github.com/"
+winget install --id Microsoft.Git
+winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown to see all results.
+
+#Windows-terminal  
+winget install -e --id  Microsoft.WindowsTerminal --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShell --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShellCore --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShellPreview --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShellUniversal --silent --accept-package-agreements --accept-source-agreements
+#Windows-terminal based Apps 
+winget install -e --id achannarasappa.ticker --silent --accept-package-agreements --accept-source-agreements

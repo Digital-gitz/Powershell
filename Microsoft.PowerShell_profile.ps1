@@ -347,7 +347,26 @@ function mysocial {
         "https://www.facebook.com/",
         "https://www.instagram.com/",
         "https://www.threads.net/"
+        "https://disboard.org/search"
     )
     Open-Urls -Urls $socialSites -Message "Opened all Social Media websites"
+
+    function stonks {
+        $Stocksites = @(
+            "",
+            "https://www.reddit.com/r/stocks/",
+            "https://www.webull.com/center",
+            "https://www.tradingview.com/", 
+            #"https://www.interactivebrokers.com/en/whyib/overview.php",
+            "https://robinhood.com/",
+            "https://robinhood.com/legend"
+        )
+        Open-Urls -Urls $Stocksites -Message "Opened all my stock trading websites"
+    function HVAC {
+        $HvacSites = @(
+            # "https://chatgpt.com/g/g-nlEQxC91L-hvac-assistant",
+        )
+        Open-Urls -Urls $HvacSites -Message "Opened all Social Media websites"
+
 }
 # End of Microsoft.PowerShell_profile.ps1

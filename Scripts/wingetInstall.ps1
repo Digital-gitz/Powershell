@@ -55,6 +55,8 @@ winget install --id GitHub.cli
 winget install --id Microsoft.Git
 winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown to see all results.
 winget install vim.vim.nightly --silent --accept-package-agreements --accept-source-agreements &&
+#terminal
+winget install hpjansson.Chafa --silent --accept-package-agreements --accept-source-agreements  
 
 
 
@@ -66,3 +68,8 @@ winget install -e --id  Microsoft.PowerShellPreview --silent --accept-package-ag
 winget install -e --id  Microsoft.PowerShellUniversal --silent --accept-package-agreements --accept-source-agreements
 #Windows-terminal based Apps 
 winget install -e --id achannarasappa.ticker --silent --accept-package-agreements --accept-source-agreements
+
+
+#programs 
+winget install -e --id Figma.Figma --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id Figma.FigmaAgent --silent --accept-package-agreements --accept-source-agreements

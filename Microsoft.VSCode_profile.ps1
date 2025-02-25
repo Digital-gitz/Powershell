@@ -34,7 +34,6 @@ $script:CommonPaths = @{
 }
 
 # Initialize working directory
-Set-Location $CommonPaths.PowerShell
 
 #region Module Management
 # Required modules with their purposes

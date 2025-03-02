@@ -1,0 +1,149 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PSPGP</S>
+      <Version N="Version">0.1.13</Version>
+      <S N="Type">Module</S>
+      <S N="Description">PSPGP is a PowerShell module that provides PGP functionality in PowerShell. It allows encrypting and decrypting files/folders and strings using PGP.</S>
+      <S N="Author">Przemyslaw Klys</S>
+      <S N="CompanyName">Przemyslaw.Klys</S>
+      <S N="Copyright">(c) 2011 - 2024 Przemyslaw Klys @ Evotec. All rights reserved.</S>
+      <DT N="PublishedDate">2024-09-18T13:00:03-04:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-03-02T00:41:08.2679102-05:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/EvotecIT/PSPGP/blob/master/License</URI>
+      <URI N="ProjectUri">https://github.com/EvotecIT/PSPGP</URI>
+      <URI N="IconUri">https://evotec.xyz/wp-content/uploads/2021/08/PSPGP.png</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>pgp</S>
+          <S>gpg</S>
+          <S>encrypt</S>
+          <S>decrypt</S>
+          <S>windows</S>
+          <S>macos</S>
+          <S>linux</S>
+          <S>PSModule</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSEdition_Core</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>New-PGPKey</S>
+                <S>Protect-PGP</S>
+                <S>Test-PGP</S>
+                <S>Unprotect-PGP</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>New-PGPKey</S>
+                <S>Protect-PGP</S>
+                <S>Test-PGP</S>
+                <S>Unprotect-PGP</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2011 - 2024 Przemyslaw Klys @ Evotec. All rights reserved.</S>
+          <S N="description">PSPGP is a PowerShell module that provides PGP functionality in PowerShell. It allows encrypting and decrypting files/folders and strings using PGP.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">832121</S>
+          <S N="downloadCount">3689073</S>
+          <S N="packageSize">4657967</S>
+          <S N="published">9/18/2024 1:00:03 PM -04:00</S>
+          <S N="created">9/18/2024 1:00:03 PM -04:00</S>
+          <S N="lastUpdated">3/2/2025 5:40:00 AM -05:00</S>
+          <S N="tags">pgp gpg encrypt decrypt windows macos linux PSModule PSEdition_Desktop PSEdition_Core PSFunction_New-PGPKey PSCommand_New-PGPKey PSFunction_Protect-PGP PSCommand_Protect-PGP PSFunction_Test-PGP PSCommand_Test-PGP PSFunction_Unprotect-PGP PSCommand_Unprotect-PGP PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-02T05:40:00Z</S>
+          <S N="NormalizedVersion">0.1.13</S>
+          <S N="Authors">Przemyslaw Klys</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PSPGP.nuspec|PSPGP.Libraries.ps1|PSPGP.psd1|PSPGP.psm1|Lib\Standard\BouncyCastle.Cryptography.dll|Lib\Standard\PgpCore.dll|Lib\Standard\PSPGP.dll</S>
+          <S N="GUID">edbf6d52-2d66-405e-a4d4-d4a95db8fb45</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Evotec</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\PSPGP\0.1.13</S>
+    </MS>
+  </Obj>
+</Objs>

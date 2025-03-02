@@ -170,12 +170,17 @@ function Open-Urls {
     }
     Write-Host $Message -ForegroundColor Green
 }
-
 # URL Collection Functions
-function oAi { Open-Urls -Urls $UrlCollections.AiSites -Message "Opened AI sites" }
-function MySocial { Open-Urls -Urls $UrlCollections.SocialSites -Message "Opened social sites" }
+function gally { Start-Process "https://www.powershellgallery.com/packages/" }
+function Aio { Open-Urls -Urls $UrlCollections.AiSites -Message "Opened AI sites" }
+function mysocial { Open-Urls -Urls $UrlCollections.SocialSites -Message "Opened social sites" }
 function Stocks { Open-Urls -Urls $UrlCollections.StockSites -Message "Opened stock sites" }
-function Open-PowerShellGallery { Start-Process "https://www.powershellgallery.com/packages/" }
+function learnsite { Open-Urls -Urls $UrlCollections.LearningSites -Message "Opened Web Learning sites" }
+function gitsites { Open-Urls -Urls $UrlCollections.GitSites -Message "Opened Git related sites" }
+function cloudsite { Open-Urls -Urls $UrlCollections.CloudSites -Message "Opened CloudSites" }
+function devsites { Open-Urls -Urls $UrlCollections.DeveloperSites -Message "Opened DeveloperSites" }
+function learndev { Open-Urls -Urls $UrlCollections.LearnWebDev -Message "Opened Learn WebDeveloper" }
+function newssites { Open-Urls -Urls $UrlCollections.NewsSites -Message "Opened Learn WebDeveloper" }
 
 #region PSReadLine Configuration
 if (Get-Command Set-PSReadLineOption -ErrorAction SilentlyContinue) {
@@ -196,6 +201,8 @@ if (Get-Command Set-PSReadLineOption -ErrorAction SilentlyContinue) {
 Set-Alias -Name clr -Value Clear-Host
 Set-Alias -Name reload -Value Update-PowerShellProfile
 
+#region Ect.
+
 # Admin check
 if ([Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Warning "PowerShell is running with Administrator privileges"
@@ -212,27 +219,174 @@ $ProfileStartTime = Get-Date
 $ProfileLoadTime = (Get-Date) - $ProfileStartTime
 Write-Host "Profile loaded in $($ProfileLoadTime.TotalMilliseconds) ms" -ForegroundColor Cyan
 
-# function Show-Welcome {
-#     [CmdletBinding()]
-#     param()
-    
-#     $TColor = "Cyan"
-#     $Date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-#     Write-Host "Welcome to PowerShell! Today is $Date" -ForegroundColor $TColor
-#     $Logo = @"
-#  ___ _             ____  _       _ _        _      
-# |_ _( )_ __ ___   |  _ \(_) __ _(_) |_ __ _| |     
-#  | ||/| '_ ` _ \  | | | | |/ _` | | __/ _` | |     
-#  | |  | | | | | | | |_| | | (_| | | || (_| | |     
-# |___| |_| |_| |_| |____/|_|\__, |_|\__\__,_|_|____ 
-#                           |___/            |_____|
-# "@
-    
-#     Write-Host $Logo -ForegroundColor $TColor
 
-# }
-# Show-Welcome
-# $ProfileStartTime = Get-Date
-# # ... (rest of the profile script)
-# $ProfileLoadTime = (Get-Date) - $ProfileStartTime
-# Write-Host "Profile loaded in $($ProfileLoadTime.TotalMilliseconds) ms" -ForegroundColor Cyan
+# Function to install or update a package
+function Install-Package {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory)][string]$PackageId,
+        [string]$Scope = "user"
+    )
+    
+    $result = winget list --id $PackageId --exact
+    
+    if ($result -match $PackageId) {
+        Write-Host "Updating $PackageId..." -ForegroundColor Yellow
+        winget upgrade --id $PackageId --silent --accept-package-agreements --accept-source-agreements
+    } else {
+        Write-Host "Installing $PackageId..." -ForegroundColor Cyan
+        winget install --id $PackageId --scope $Scope --silent --accept-package-agreements --accept-source-agreements
+    }
+}
+
+# Function to update all packages
+function Update-AllPackages {
+    Write-Host "Updating all installed packages..." -ForegroundColor Yellow
+    winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown
+}
+
+function Install-RequiredModule {
+    param (
+        [Parameter(Mandatory)][string]$Name,
+        [string]$Purpose,
+        [string]$Version
+    )
+    
+    try {
+        if (-not (Get-Module -Name $Name -ListAvailable)) {
+            if ($Version) {
+                Install-Module -Name $Name -RequiredVersion $Version -Scope CurrentUser -Force
+            } else {
+                Install-Module -Name $Name -Scope CurrentUser -Force
+            }
+        }
+        Import-Module -Name $Name -ErrorAction Stop
+    } catch {
+        Write-Warning "Failed to import module: $Name. Error: $_"
+    }
+}
+
+ function Remove-UnusedModules {
+    $installedModules = Get-InstalledModule
+    $usedModules = Get-Module | Select-Object -ExpandProperty Name
+    $unusedModules = $installedModules | Where-Object { $_.Name -notin $usedModules }
+    
+    if ($unusedModules) {
+        $unusedModules | ForEach-Object {
+            Write-Host "Removing unused module: $($_.Name)" -ForegroundColor Yellow
+            Uninstall-Module -Name $_.Name -Force
+        }
+    } else {
+        Write-Host "No unused modules found." -ForegroundColor Green
+    }
+}
+ function Update-CustomScripts {
+    param (
+        [string]$RepoUrl = "https://github.com/your-repo/scripts"
+    )
+    
+    try {
+        $tempDir = Join-Path $env:TEMP "ScriptUpdates"
+        if (Test-Path $tempDir) {
+            Remove-Item -Path $tempDir -Recurse -Force
+        }
+        New-Item -Path $tempDir -ItemType Directory | Out-Null
+        
+        Invoke-WebRequest -Uri "$RepoUrl/archive/main.zip" -OutFile "$tempDir\scripts.zip"
+        Expand-Archive -Path "$tempDir\scripts.zip" -DestinationPath $tempDir -Force
+        
+        $scriptsDir = Get-ChildItem -Path $tempDir -Directory | Select-Object -First 1
+        Copy-Item -Path "$($scriptsDir.FullName)\*" -Destination $CommonPaths.Scripts -Recurse -Force
+        
+        Write-Host "Custom scripts updated successfully." -ForegroundColor Green
+    } catch {
+        Write-Error "Failed to update custom scripts: $_"
+    } finally {
+        if (Test-Path $tempDir) {
+            Remove-Item -Path $tempDir -Recurse -Force
+        }
+    }
+}
+
+function Install-ConfiguredPackages {
+    [CmdletBinding()]
+    param(
+        [switch]$Force,
+        [switch]$SkipConfirmation
+    )
+    
+    if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+        Write-Error "Winget is not installed or not available in PATH"
+        return
+    }
+    
+    if (-not $Config.WingetPackages) {
+        Write-Warning "No Winget packages configured in config.psd1"
+        return
+    }
+    
+    $packageCount = $Config.WingetPackages.Count
+    
+    if (-not $SkipConfirmation) {
+        $confirmation = Read-Host "This will install/update $packageCount packages. Continue? (Y/N)"
+        if ($confirmation -ne 'Y') {
+            Write-Host "Operation cancelled" -ForegroundColor Yellow
+            return
+        }
+    }
+    
+    $successful = 0
+    $failed = 0
+    
+    foreach ($package in $Config.WingetPackages) {
+        $id = $package.Id
+        $scope = $package.Scope ?? "user"
+        
+        try {
+            Write-Host "Processing package: $id" -ForegroundColor Cyan
+            
+            # Check if package is already installed
+            $isInstalled = winget list --id $id --exact
+            
+            if ($isInstalled -match $id -and -not $Force) {
+                Write-Host "Updating $id..." -ForegroundColor Yellow
+                winget upgrade --id $id --silent --accept-package-agreements --accept-source-agreements
+            } else {
+                Write-Host "Installing $id..." -ForegroundColor Cyan
+                winget install --id $id --scope $scope --silent --accept-package-agreements --accept-source-agreements
+            }
+            
+            $successful++
+        } catch {
+            Write-Host "Failed to install/update $id`: $_" -ForegroundColor Red
+            $failed++
+        }
+    }
+    
+    Write-Host "Package installation complete. Successful: $successful, Failed: $failed" -ForegroundColor Green
+}
+
+function Show-Welcome {
+    [CmdletBinding()]
+    param()
+    
+    $TColor = "Cyan"
+    $Date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    Write-Host "Welcome to PowerShell! Today is $Date" -ForegroundColor $TColor
+    $Logo = @"
+ ___ _             ____  _       _ _        _      
+|_ _( )_ __ ___   |  _ \(_) __ _(_) |_ __ _| |     
+ | ||/| '_ ` _ \  | | | | |/ _` | | __/ _` | |     
+ | |  | | | | | | | |_| | | (_| | | || (_| | |     
+|___| |_| |_| |_| |____/|_|\__, |_|\__\__,_|_|____ 
+                          |___/            |_____|
+"@
+    
+    Write-Host $Logo -ForegroundColor $TColor
+
+}
+Show-Welcome
+$ProfileStartTime = Get-Date
+# ... (rest of the profile script)
+$ProfileLoadTime = (Get-Date) - $ProfileStartTime
+Write-Host "Profile loaded in $($ProfileLoadTime.TotalMilliseconds) ms" -ForegroundColor Cyan

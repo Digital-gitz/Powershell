@@ -1,0 +1,136 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">posh-winget</S>
+      <Version N="Version">0.0.8</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Support PowerShell module for winget.</S>
+      <S N="Author">nuits.jp</S>
+      <S N="CompanyName">nuits.jp</S>
+      <S N="Copyright">(c) nuits.jp. All rights reserved.</S>
+      <DT N="PublishedDate">2021-11-22T23:13:07-05:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-03-08T18:41:46.699695-05:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://raw.githubusercontent.com/nuitsjp/posh-winget/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/nuitsjp/posh-winget</URI>
+      <URI N="IconUri">https://raw.githubusercontent.com/nuitsjp/posh-winget/main/nuits.jp.256x256.png</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>winget</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Invoke-WingetList</S>
+                <S>Invoke-WingetImport</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Invoke-WingetList</S>
+                <S>Invoke-WingetImport</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">https://github.com/nuitsjp/posh-winget/releases</S>
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) nuits.jp. All rights reserved.</S>
+          <S N="description">Support PowerShell module for winget.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">https://github.com/nuitsjp/posh-winget/releases</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">8481</S>
+          <S N="downloadCount">8638</S>
+          <S N="packageSize">4529</S>
+          <S N="published">11/22/2021 11:13:07 PM -05:00</S>
+          <S N="created">11/22/2021 11:13:07 PM -05:00</S>
+          <S N="lastUpdated">3/8/2025 5:10:00 PM -05:00</S>
+          <S N="tags">winget PSModule PSFunction_Invoke-WingetList PSCommand_Invoke-WingetList PSFunction_Invoke-WingetImport PSCommand_Invoke-WingetImport PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-08T17:10:00Z</S>
+          <S N="NormalizedVersion">0.0.8</S>
+          <S N="Authors">nuits.jp</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">posh-winget.nuspec|posh-winget.ps1|posh-winget.psd1|posh-winget.psm1</S>
+          <S N="GUID">9b311919-2cd3-4c9f-bf8f-b35cf063da58</S>
+          <S N="PowerShellVersion">3.0</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\posh-winget\0.0.8</S>
+    </MS>
+  </Obj>
+</Objs>

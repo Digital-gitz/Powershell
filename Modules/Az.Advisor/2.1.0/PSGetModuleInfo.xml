@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:10:31-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:35.7052934-05:00</DT>
+        <DT>2025-03-09T18:20:09.1759558-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -69,11 +69,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -89,15 +93,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -144,15 +144,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6351057</S>
-          <S N="downloadCount">115483691</S>
+          <S N="versionDownloadCount">7182206</S>
+          <S N="downloadCount">116567300</S>
           <S N="packageSize">475177</S>
           <S N="published">1/14/2025 3:10:31 AM -05:00</S>
           <S N="created">1/14/2025 3:10:31 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule Advisor PSEdition_Core PSEdition_Desktop PSFunction_Disable-AzAdvisorRecommendation PSCommand_Disable-AzAdvisorRecommendation PSFunction_Enable-AzAdvisorRecommendation PSCommand_Enable-AzAdvisorRecommendation PSFunction_Get-AzAdvisorConfiguration PSCommand_Get-AzAdvisorConfiguration PSFunction_Get-AzAdvisorRecommendation PSCommand_Get-AzAdvisorRecommendation PSFunction_Set-AzAdvisorConfiguration PSCommand_Set-AzAdvisorConfiguration PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -164,7 +164,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.Advisor\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Advisor\2.1.0</S>
     </MS>
   </Obj>
 </Objs>

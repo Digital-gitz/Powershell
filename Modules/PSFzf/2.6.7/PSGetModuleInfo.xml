@@ -15,7 +15,7 @@
       <S N="Copyright">(c) 2020. All rights reserved.</S>
       <DT N="PublishedDate">2024-11-16T02:13:59-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-02-17T02:41:08.2681696-05:00</DT>
+        <DT>2025-03-09T15:09:42.656012-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -50,8 +50,23 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Enable-PsFzfAliases</S>
@@ -77,19 +92,8 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -118,10 +122,6 @@
               </LST>
             </Obj>
           </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
       <Nil N="PowerShellGetFormatVersion" />
@@ -144,15 +144,15 @@
           <S N="requireLicenseAcceptance">False</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">395162</S>
-          <S N="downloadCount">716866</S>
+          <S N="versionDownloadCount">418452</S>
+          <S N="downloadCount">740197</S>
           <S N="packageSize">64997</S>
           <S N="published">11/16/2024 2:13:59 AM -05:00</S>
           <S N="created">11/16/2024 2:13:59 AM -05:00</S>
-          <S N="lastUpdated">2/17/2025 7:40:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 7:00:00 PM -04:00</S>
           <S N="tags">PSModule PSFunction_Enable-PsFzfAliases PSCommand_Enable-PsFzfAliases PSFunction_Invoke-FuzzyEdit PSCommand_Invoke-FuzzyEdit PSFunction_Invoke-FuzzyFasd PSCommand_Invoke-FuzzyFasd PSFunction_Invoke-FuzzyGitStatus PSCommand_Invoke-FuzzyGitStatus PSFunction_Invoke-FuzzyHistory PSCommand_Invoke-FuzzyHistory PSFunction_Invoke-FuzzyKillProcess PSCommand_Invoke-FuzzyKillProcess PSFunction_Invoke-FuzzyScoop PSCommand_Invoke-FuzzyScoop PSFunction_Invoke-FuzzySetLocation PSCommand_Invoke-FuzzySetLocation PSFunction_Invoke-FuzzyZLocation PSCommand_Invoke-FuzzyZLocation PSFunction_Invoke-Fzf PSCommand_Invoke-Fzf PSFunction_Invoke-FzfTabCompletion PSCommand_Invoke-FzfTabCompletion PSFunction_Invoke-PsFzfGitBranches PSCommand_Invoke-PsFzfGitBranches PSFunction_Invoke-PsFzfGitFiles PSCommand_Invoke-PsFzfGitFiles PSFunction_Invoke-PsFzfGitHashes PSCommand_Invoke-PsFzfGitHashes PSFunction_Invoke-PsFzfGitStashes PSCommand_Invoke-PsFzfGitStashes PSFunction_Invoke-PsFzfGitTags PSCommand_Invoke-PsFzfGitTags PSFunction_Invoke-PsFzfRipgrep PSCommand_Invoke-PsFzfRipgrep PSFunction_Set-LocationFuzzyEverything PSCommand_Set-LocationFuzzyEverything PSFunction_Set-PsFzfOption PSCommand_Set-PsFzfOption PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-02-17T07:40:00Z</S>
+          <S N="updated">2025-03-09T19:00:00Z</S>
           <S N="NormalizedVersion">2.6.7</S>
           <S N="Authors">Michael Kelley</S>
           <S N="IsPrerelease">false</S>
@@ -162,7 +162,7 @@
           <S N="CompanyName">Unknown</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\PSFzf\2.6.7</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\PSFzf\2.6.7</S>
     </MS>
   </Obj>
 </Objs>

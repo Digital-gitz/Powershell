@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:12:35-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:51.3918789-05:00</DT>
+        <DT>2025-03-09T18:20:33.2802214-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -99,11 +99,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -149,15 +153,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -204,28 +204,27 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5776758</S>
-          <S N="downloadCount">15609188</S>
+          <S N="versionDownloadCount">6640967</S>
+          <S N="downloadCount">16552462</S>
           <S N="packageSize">1237538</S>
           <S N="published">1/14/2025 3:12:35 AM -05:00</S>
           <S N="created">1/14/2025 3:12:35 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule ConnectedMachine PSEdition_Core PSEdition_Desktop</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule ConnectedMachine PSEdition_Core PSEdition_Desktop PSFunction_Connect-AzConnectedMachine PSCommand_Connect-AzConnectedMachine PSFunction_Get-AzConnectedExtensionMetadata PSCommand_Get-AzConnectedExtensionMetadata PSFunction_Get-AzConnectedLicense PSCommand_Get-AzConnectedLicense PSFunction_Get-AzConnectedLicenseProfile PSCommand_Get-AzConnectedLicenseProfile PSFunction_Get-AzConnectedMachine PSCommand_Get-AzConnectedMachine PSFunction_Get-AzConnectedMachineExtension PSCommand_Get-AzConnectedMachineExtension PSFunction_Get-AzConnectedMachineRunCommand PSCommand_Get-AzConnectedMachineRunCommand PSFunction_Get-AzConnectedNetworkSecurityPerimeterConfiguration PSCommand_Get-AzConnectedNetworkSecurityPerimeterConfiguration PSFunction_Get-AzConnectedPrivateLinkScope PSCommand_Get-AzConnectedPrivateLinkScope PSFunction_Install-AzConnectedMachinePatch PSCommand_Install-AzConnectedMachinePatch PSFunction_Invoke-AzConnectedAssessMachinePatch PSCommand_Invoke-AzConnectedAssessMachinePatch PSFunction_Invoke-AzConnectedReconcileNetworkSecurityPerimeterConfiguration PSCommand_Invoke-AzConnectedReconcileNetworkSecurityPerimeterConfiguration PSFunction_New-AzConnectedLicense PSCommand_New-AzConnectedLicense PSFunction_New-AzConnectedLicenseDetail PSCommand_New-AzConnectedLicenseDetail PSFunction_New-AzConnectedLicenseProfile PSCommand_New-AzConnectedLicenseProfile PSFunction_New-AzConnectedLicenseProfileFeature PSCommand_New-AzConnectedLicenseProfileFeature PSFunction_New-AzConnectedMachineExtension PSCommand_New-AzConnectedMachineExtension PSFunction_New-AzConnectedMachineRunCommand PSCommand_New-AzConnectedMachineRunCommand PSFunction_New-AzConnectedPrivateLinkScope PSCommand_New-AzConnectedPrivateLinkScope PSFunction_Remove-AzConnectedLicense PSCommand_Remove-AzConnectedLicense PSFunction_Remove-AzConnectedLicenseProfile PSCommand_Remove-AzConnectedLicenseProfile PSFunction_Remove-AzConnectedMachine PSCommand_Remove-AzConnectedMachine PSFunction_Remove-AzConnectedMachineExtension PSCommand_Remove-AzConnectedMachineExtension PSFunction_Remove-AzConnectedMachineRunCommand PSCommand_Remove-AzConnectedMachineRunCommand PSFunction_Remove-AzConnectedPrivateLinkScope PSCommand_Remove-AzConnectedPrivateLinkScope PSFunction_Set-AzConnectedLicense PSCommand_Set-AzConnectedLicense PSFunction_Set-AzConnectedMachineExtension PSCommand_Set-AzConnectedMachineExtension PSFunction_Set-AzConnectedPrivateLinkScope PSCommand_Set-AzConnectedPrivateLinkScope PSFunction_Update-AzConnectedExtension PSCommand_Update-AzConnectedExtension PSFunction_Update-AzConnectedLicenseProfile PSCommand_Update-AzConnectedLicenseProfile PSFunction_Update-AzConnectedLicenseProfileFeature PSCommand_Update-AzConnectedLicenseProfileFeature PSFunction_Update-AzConnectedMachine PSCommand_Update-AzConnectedMachine PSFunction_Update-AzConnectedMachineExtension PSCommand_Update-AzConnectedMachineExtension PSFunction_Update-AzConnectedMachineRunCommand PSCommand_Update-AzConnectedMachineRunCommand PSFunction_Update-AzConnectedPrivateLinkScopeTag PSCommand_Update-AzConnectedPrivateLinkScopeTag PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.1.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
           <S N="ItemType">Module</S>
           <S N="FileList">Az.ConnectedMachine.nuspec|ConnectedMachine.Autorest\custom\autogen-model-cmdlets\New-AzConnectedLicenseProfileFeature.ps1|ConnectedMachine.Autorest\custom\autogen-model-cmdlets\Update-AzConnectedLicenseProfileFeature.ps1|ConnectedMachine.Autorest\exports\ProxyCmdletDefinitions.ps1|ConnectedMachine.Autorest\internal\Az.ConnectedMachine.internal.psm1|ConnectedMachine.Autorest\internal\ProxyCmdletDefinitions.ps1|ConnectedMachine.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|ConnectedMachine.Autorest\utils\Unprotect-SecureString.ps1|Az.ConnectedMachine.psm1|ConnectedMachine.Autorest\Az.ConnectedMachine.psm1|ConnectedMachine.Autorest\custom\Az.ConnectedMachine.custom.psm1|ConnectedMachine.Autorest\custom\MachineExtension.cs|ConnectedMachine.Autorest\custom\MachineExtensionUpdate.cs|ConnectedMachine.Autorest\custom\MachineRunCommand.cs|ConnectedMachine.Autorest\custom\Update-AzConnectedMachine.ps1|ConnectedMachine.Autorest\custom\autogen-model-cmdlets\New-AzConnectedLicenseDetail.ps1|Az.ConnectedMachine.psd1|ConnectedMachine.Autorest\Az.ConnectedMachine.format.ps1xml|ConnectedMachine.Autorest\bin\Az.ConnectedMachine.private.dll|ConnectedMachine.Autorest\custom\Connect-AzConnectedMachine.ps1|ConnectedMachine.Autorest\custom\MachineExtensionProperties.json.cs|ConnectedMachine.Autorest\custom\MachineExtensionUpgrade.cs|ConnectedMachine.Autorest\custom\New-AzConnectedMachineRunCommand_ScriptLocalPath.ps1|.signature.p7s</S>
-          <S N="Functions">Connect-AzConnectedMachine Get-AzConnectedExtensionMetadata Get-AzConnectedLicense Get-AzConnectedLicenseProfile Get-AzConnectedMachine Get-AzConnectedMachineExtension Get-AzConnectedMachineRunCommand Get-AzConnectedNetworkSecurityPerimeterConfiguration Get-AzConnectedPrivateLinkScope Install-AzConnectedMachinePatch Invoke-AzConnectedAssessMachinePatch Invoke-AzConnectedReconcileNetworkSecurityPerimeterConfiguration New-AzConnectedLicense New-AzConnectedLicenseDetail New-AzConnectedLicenseProfile New-AzConnectedLicenseProfileFeature New-AzConnectedMachineExtension New-AzConnectedMachineRunCommand New-AzConnectedPrivateLinkScope Remove-AzConnectedLicense Remove-AzConnectedLicenseProfile Remove-AzConnectedMachine Remove-AzConnectedMachineExtension Remove-AzConnectedMachineRunCommand Remove-AzConnectedPrivateLinkScope Set-AzConnectedLicense Set-AzConnectedMachineExtension Set-AzConnectedPrivateLinkScope Update-AzConnectedExtension Update-AzConnectedLicenseProfile Update-AzConnectedLicenseProfileFeature Update-AzConnectedMachine Update-AzConnectedMachineExtension Update-AzConnectedMachineRunCommand Update-AzConnectedPrivateLinkScopeTag</S>
           <S N="GUID">259a0542-8329-4b9e-8f72-dab0efc583e9</S>
           <S N="PowerShellVersion">5.1</S>
           <S N="DotNetFrameworkVersion">4.7.2</S>
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ConnectedMachine\1.1.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ConnectedMachine\1.1.1</S>
     </MS>
   </Obj>
 </Objs>

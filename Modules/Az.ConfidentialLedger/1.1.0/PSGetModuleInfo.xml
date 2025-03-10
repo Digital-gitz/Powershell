@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:12:25-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:50.7065084-05:00</DT>
+        <DT>2025-03-09T18:20:32.24804-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -71,11 +71,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -93,15 +97,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -148,15 +148,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6027996</S>
-          <S N="downloadCount">62982216</S>
+          <S N="versionDownloadCount">6833665</S>
+          <S N="downloadCount">63984826</S>
           <S N="packageSize">411582</S>
           <S N="published">1/14/2025 3:12:25 AM -05:00</S>
           <S N="created">1/14/2025 3:12:25 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule ConfidentialLedger PSEdition_Core PSEdition_Desktop PSFunction_Get-AzConfidentialLedger PSCommand_Get-AzConfidentialLedger PSFunction_New-AzConfidentialLedger PSCommand_New-AzConfidentialLedger PSFunction_New-AzConfidentialLedgerAADBasedSecurityPrincipalObject PSCommand_New-AzConfidentialLedgerAADBasedSecurityPrincipalObject PSFunction_New-AzConfidentialLedgerCertBasedSecurityPrincipalObject PSCommand_New-AzConfidentialLedgerCertBasedSecurityPrincipalObject PSFunction_Remove-AzConfidentialLedger PSCommand_Remove-AzConfidentialLedger PSFunction_Test-AzConfidentialLedgerNameAvailability PSCommand_Test-AzConfidentialLedgerNameAvailability PSFunction_Update-AzConfidentialLedger PSCommand_Update-AzConfidentialLedger PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -168,7 +168,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ConfidentialLedger\1.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ConfidentialLedger\1.1.0</S>
     </MS>
   </Obj>
 </Objs>

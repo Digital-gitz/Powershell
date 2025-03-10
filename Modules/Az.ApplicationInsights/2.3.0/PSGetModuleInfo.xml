@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:11:07-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:40.1258591-05:00</DT>
+        <DT>2025-03-09T18:20:16.5874078-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -101,11 +101,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -153,15 +157,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -208,15 +208,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6355920</S>
-          <S N="downloadCount">114577303</S>
+          <S N="versionDownloadCount">7179434</S>
+          <S N="downloadCount">115652396</S>
           <S N="packageSize">948686</S>
           <S N="published">1/14/2025 3:11:07 AM -05:00</S>
           <S N="created">1/14/2025 3:11:07 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule ApplicationInsights PSEdition_Core PSEdition_Desktop PSFunction_Get-AzApplicationInsights PSCommand_Get-AzApplicationInsights PSFunction_Get-AzApplicationInsightsApiKey PSCommand_Get-AzApplicationInsightsApiKey PSFunction_Get-AzApplicationInsightsContinuousExport PSCommand_Get-AzApplicationInsightsContinuousExport PSFunction_Get-AzApplicationInsightsLinkedStorageAccount PSCommand_Get-AzApplicationInsightsLinkedStorageAccount PSFunction_Get-AzApplicationInsightsMyWorkbook PSCommand_Get-AzApplicationInsightsMyWorkbook PSFunction_Get-AzApplicationInsightsWebTest PSCommand_Get-AzApplicationInsightsWebTest PSFunction_Get-AzApplicationInsightsWorkbook PSCommand_Get-AzApplicationInsightsWorkbook PSFunction_Get-AzApplicationInsightsWorkbookRevision PSCommand_Get-AzApplicationInsightsWorkbookRevision PSFunction_Get-AzApplicationInsightsWorkbookTemplate PSCommand_Get-AzApplicationInsightsWorkbookTemplate PSFunction_New-AzApplicationInsights PSCommand_New-AzApplicationInsights PSFunction_New-AzApplicationInsightsApiKey PSCommand_New-AzApplicationInsightsApiKey PSFunction_New-AzApplicationInsightsContinuousExport PSCommand_New-AzApplicationInsightsContinuousExport PSFunction_New-AzApplicationInsightsLinkedStorageAccount PSCommand_New-AzApplicationInsightsLinkedStorageAccount PSFunction_New-AzApplicationInsightsMyWorkbook PSCommand_New-AzApplicationInsightsMyWorkbook PSFunction_New-AzApplicationInsightsWebTest PSCommand_New-AzApplicationInsightsWebTest PSFunction_New-AzApplicationInsightsWebTestGeolocationObject PSCommand_New-AzApplicationInsightsWebTestGeolocationObject PSFunction_New-AzApplicationInsightsWebTestHeaderFieldObject PSCommand_New-AzApplicationInsightsWebTestHeaderFieldObject PSFunction_New-AzApplicationInsightsWorkbook PSCommand_New-AzApplicationInsightsWorkbook PSFunction_New-AzApplicationInsightsWorkbookTemplate PSCommand_New-AzApplicationInsightsWorkbookTemplate PSFunction_New-AzApplicationInsightsWorkbookTemplateGalleryObject PSCommand_New-AzApplicationInsightsWorkbookTemplateGalleryObject PSFunction_Remove-AzApplicationInsights PSCommand_Remove-AzApplicationInsights PSFunction_Remove-AzApplicationInsightsApiKey PSCommand_Remove-AzApplicationInsightsApiKey PSFunction_Remove-AzApplicationInsightsContinuousExport PSCommand_Remove-AzApplicationInsightsContinuousExport PSFunction_Remove-AzApplicationInsightsLinkedStorageAccount PSCommand_Remove-AzApplicationInsightsLinkedStorageAccount PSFunction_Remove-AzApplicationInsightsMyWorkbook PSCommand_Remove-AzApplicationInsightsMyWorkbook PSFunction_Remove-AzApplicationInsightsWebTest PSCommand_Remove-AzApplicationInsightsWebTest PSFunction_Remove-AzApplicationInsightsWorkbook PSCommand_Remove-AzApplicationInsightsWorkbook PSFunction_Remove-AzApplicationInsightsWorkbookTemplate PSCommand_Remove-AzApplicationInsightsWorkbookTemplate PSFunction_Set-AzApplicationInsightsContinuousExport PSCommand_Set-AzApplicationInsightsContinuousExport PSFunction_Set-AzApplicationInsightsDailyCap PSCommand_Set-AzApplicationInsightsDailyCap PSFunction_Set-AzApplicationInsightsPricingPlan PSCommand_Set-AzApplicationInsightsPricingPlan PSFunction_Update-AzApplicationInsights PSCommand_Update-AzApplicationInsights PSFunction_Update-AzApplicationInsightsLinkedStorageAccount PSCommand_Update-AzApplicationInsightsLinkedStorageAccount PSFunction_Update-AzApplicationInsightsMyWorkbook PSCommand_Update-AzApplicationInsightsMyWorkbook PSFunction_Update-AzApplicationInsightsWebTestTag PSCommand_Update-AzApplicationInsightsWebTestTag PSFunction_Update-AzApplicationInsightsWorkbook PSCommand_Update-AzApplicationInsightsWorkbook PSFunction_Update-AzApplicationInsightsWorkbookTemplate PSCommand_Update-AzApplicationInsightsWorkbookTemplate PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.3.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -228,7 +228,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ApplicationInsights\2.3.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ApplicationInsights\2.3.0</S>
     </MS>
   </Obj>
 </Objs>

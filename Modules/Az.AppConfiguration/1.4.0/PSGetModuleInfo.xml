@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:11:04-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:39.3128117-05:00</DT>
+        <DT>2025-03-09T18:20:15.2563833-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -82,11 +82,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -115,15 +119,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -170,15 +170,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6359279</S>
-          <S N="downloadCount">95239667</S>
+          <S N="versionDownloadCount">7178924</S>
+          <S N="downloadCount">96291112</S>
           <S N="packageSize">892120</S>
           <S N="published">1/14/2025 3:11:04 AM -05:00</S>
           <S N="created">1/14/2025 3:11:04 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule AppConfiguration PSEdition_Core PSEdition_Desktop PSFunction_Clear-AzAppConfigurationDeletedStore PSCommand_Clear-AzAppConfigurationDeletedStore PSFunction_Get-AzAppConfigurationDeletedStore PSCommand_Get-AzAppConfigurationDeletedStore PSFunction_Get-AzAppConfigurationKey PSCommand_Get-AzAppConfigurationKey PSFunction_Get-AzAppConfigurationKeyValue PSCommand_Get-AzAppConfigurationKeyValue PSFunction_Get-AzAppConfigurationLabel PSCommand_Get-AzAppConfigurationLabel PSFunction_Get-AzAppConfigurationRevision PSCommand_Get-AzAppConfigurationRevision PSFunction_Get-AzAppConfigurationStore PSCommand_Get-AzAppConfigurationStore PSFunction_Get-AzAppConfigurationStoreKey PSCommand_Get-AzAppConfigurationStoreKey PSFunction_New-AzAppConfigurationStore PSCommand_New-AzAppConfigurationStore PSFunction_New-AzAppConfigurationStoreKey PSCommand_New-AzAppConfigurationStoreKey PSFunction_Remove-AzAppConfigurationKeyValue PSCommand_Remove-AzAppConfigurationKeyValue PSFunction_Remove-AzAppConfigurationLock PSCommand_Remove-AzAppConfigurationLock PSFunction_Remove-AzAppConfigurationStore PSCommand_Remove-AzAppConfigurationStore PSFunction_Set-AzAppConfigurationKeyValue PSCommand_Set-AzAppConfigurationKeyValue PSFunction_Set-AzAppConfigurationLock PSCommand_Set-AzAppConfigurationLock PSFunction_Test-AzAppConfigurationKeyValue PSCommand_Test-AzAppConfigurationKeyValue PSFunction_Test-AzAppConfigurationStoreNameAvailability PSCommand_Test-AzAppConfigurationStoreNameAvailability PSFunction_Update-AzAppConfigurationStore PSCommand_Update-AzAppConfigurationStore PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.4.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -190,7 +190,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.AppConfiguration\1.4.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.AppConfiguration\1.4.0</S>
     </MS>
   </Obj>
 </Objs>

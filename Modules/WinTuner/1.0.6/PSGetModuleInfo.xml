@@ -1,0 +1,127 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">WinTuner</S>
+      <Version N="Version">1.0.6</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Package and publish any apps from WinGet to Intune.</S>
+      <S N="Author">Stephan van Rooij (@svrooij)</S>
+      <S N="CompanyName">svrooij</S>
+      <S N="Copyright">Stephan van Rooij 2024, licensed under GNU GPLv3</S>
+      <DT N="PublishedDate">2025-02-19T13:05:04-05:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-03-09T15:09:25.7705124-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://wintuner.app/</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Intune</S>
+          <S>Win32</S>
+          <S>WinGet</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">This module is still a work-in-progress. Changes might be made without notice.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Stephan van Rooij 2024, licensed under GNU GPLv3</S>
+          <S N="description">Package and publish any apps from WinGet to Intune.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">This module is still a work-in-progress. Changes might be made without notice.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">9055</S>
+          <S N="downloadCount">128181</S>
+          <S N="packageSize">44572925</S>
+          <S N="published">2/19/2025 1:05:04 PM -05:00</S>
+          <S N="created">2/19/2025 1:05:04 PM -05:00</S>
+          <S N="lastUpdated">3/9/2025 6:40:00 PM -04:00</S>
+          <S N="tags">Intune Win32 WinGet PSModule</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-09T18:40:00Z</S>
+          <S N="NormalizedVersion">1.0.6</S>
+          <S N="Authors">Stephan van Rooij (@svrooij)</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">WinTuner.nuspec|Riok.Mapperly.Abstractions.dll|Microsoft.PowerShell.MarkdownRender.dll|ref\System.Memory.dll|runtimes\linux-arm64\native\libpsl-native.so|Microsoft.IdentityModel.Abstractions.dll|Microsoft.Bcl.AsyncInterfaces.dll|ref\System.Threading.dll|runtimes\linux-musl-x64\native\libpsl-native.so|Microsoft.CodeAnalysis.dll|System.Speech.dll|ref\System.Threading.Thread.dll|runtimes\win7-x86\native\miutils.dll|System.ServiceModel.Security.dll|OpenMcdf.dll|ref\System.AppContext.dll|runtimes\win7-x86\native\mi.dll|System.Reflection.Context.dll|Microsoft.Identity.Client.Broker.dll|ref\System.Transactions.Local.dll|runtimes\win7-x86\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|System.ServiceProcess.ServiceController.dll|System.Configuration.ConfigurationManager.dll|ref\System.Console.dll|runtimes\osx\native\libmi.dylib|System.Formats.Asn1.dll|System.Text.Encodings.Web.dll|ref\System.Globalization.dll|runtimes\osx\native\libpsrpclient.dylib|System.Text.Json.dll|Microsoft.Win32.SystemEvents.dll|ref\System.Numerics.Vectors.dll|runtimes\osx\native\libpsl-native.dylib|WinTuner.psd1|System.Net.Http.WinHttpHandler.dll|ref\System.Security.SecureString.dll|runtimes\win8-x86\native\miutils.dll|System.DirectoryServices.AccountManagement.dll|ref\System.Reflection.Emit.ILGeneration.dll|ref\System.Runtime.Intrinsics.dll|runtimes\win8-x86\native\mi.dll|System.ServiceModel.NetTcp.dll|ref\System.Threading.ThreadPool.dll|ref\System.Net.Primitives.dll|runtimes\win81-x64\native\miutils.dll|Microsoft.Kiota.Abstractions.dll|ref\System.Net.Requests.dll|ref\Microsoft.VisualBasic.Core.dll|runtimes\win81-x64\native\mi.dll|System.Data.Odbc.dll|ref\System.Resources.Reader.dll|ref\System.Diagnostics.Debug.dll|runtimes\win81-x64\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|Microsoft.IdentityModel.Logging.dll|ref\System.Reflection.Primitives.dll|ref\Microsoft.Win32.Primitives.dll|runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib|WingetIntune.deps.json|ref\System.Security.dll|ref\System.IO.IsolatedStorage.dll|runtimes\win7-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|Microsoft.Extensions.Configuration.Binder.dll|ref\System.Formats.Asn1.dll|ref\System.Reflection.dll|runtimes\win7-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|System.Security.Permissions.dll|ref\System.Text.Json.dll|ref\System.Linq.Expressions.dll|runtimes\ios\lib\net6.0\System.Data.Odbc.dll|Microsoft.Win32.Registry.AccessControl.dll|ref\System.Net.WebClient.dll|ref\System.Xml.dll|runtimes\win10-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|System.ServiceModel.dll|ref\System.Collections.Concurrent.dll|ref\System.Text.Encoding.CodePages.dll|runtimes\win10-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|Microsoft.Kiota.Serialization.Form.dll|ref\System.IO.Compression.dll|ref\System.Xml.XPath.dll|runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll|Microsoft.IdentityModel.Protocols.dll|ref\System.Text.RegularExpressions.dll|ref\System.Security.Claims.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.Commands.Diagnostics.dll|Svrooij.WinTuner.CmdLets.pdb|ref\System.Configuration.dll|ref\System.Transactions.dll|runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll|Microsoft.Extensions.ObjectPool.dll|ref\System.Diagnostics.StackTrace.dll|ref\System.Reflection.DispatchProxy.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.ConsoleHost.dll|Microsoft.Extensions.Http.dll|ref\System.Xml.XDocument.dll|ref\System.Data.Common.dll|runtimes\win\lib\net6.0\System.DirectoryServices.AccountManagement.dll|Microsoft.Extensions.DependencyInjection.dll|ref\System.Diagnostics.Contracts.dll|ref\System.ObjectModel.dll|runtimes\win\lib\net6.0\System.Data.Odbc.dll|System.ComponentModel.Composition.Registration.dll|ref\System.IO.UnmanagedMemoryStream.dll|ref\System.Buffers.dll|runtimes\win\lib\net6.0\Microsoft.Win32.Registry.AccessControl.dll|Microsoft.Identity.Client.Extensions.Msal.dll|ref\System.Runtime.Loader.dll|ref\System.Reflection.Emit.Lightweight.dll|runtimes\win\lib\net6.0\Microsoft.WSMan.Runtime.dll|Winget.CommunityRepository.deps.json|ref\System.Xml.XPath.XDocument.dll|ref\System.Globalization.Extensions.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.CoreCLR.Eventing.dll|Microsoft.Extensions.Logging.dll|ref\System.Resources.Writer.dll|ref\System.Xml.Serialization.dll|runtimes\win\lib\net6.0\Microsoft.Management.Infrastructure.CimCmdlets.dll|Microsoft.Graph.Beta.dll|ref\System.Core.dll|ref\System.Drawing.dll|runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll|Microsoft.IdentityModel.Validators.dll|ref\System.Runtime.Serialization.Primitives.dll|ref\System.ValueTuple.dll|runtimes\win\lib\net6.0\System.Security.AccessControl.dll|System.ServiceModel.Syndication.dll|ref\System.dll|ref\System.Text.Encoding.dll|runtimes\win\lib\net6.0\Microsoft.WSMan.Management.dll|System.IdentityModel.Tokens.Jwt.dll|ref\System.Threading.Tasks.Dataflow.dll|ref\System.Security.Cryptography.Primitives.dll|runtimes\win\lib\net6.0\System.IO.Ports.dll|Microsoft.ApplicationInsights.dll|ref\System.IO.Pipes.dll|ref\System.Xml.ReaderWriter.dll|runtimes\win\lib\net6.0\System.Threading.AccessControl.dll|Microsoft.IdentityModel.Tokens.dll|ref\System.Reflection.Emit.dll|ref\System.Net.Http.Json.dll|runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll|Microsoft.Extensions.Options.dll|ref\System.Collections.Specialized.dll|ref\System.IO.dll|runtimes\win\lib\net6.0\System.Management.dll|Microsoft.Extensions.Options.ConfigurationExtensions.dll|ref\System.Diagnostics.TextWriterTraceListener.dll|ref\System.Collections.Immutable.dll|runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll|Markdig.Signed.dll|ref\Microsoft.CSharp.dll|ref\System.ComponentModel.EventBasedAsync.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.Commands.Utility.dll|System.DirectoryServices.Protocols.dll|ref\System.Collections.NonGeneric.dll|ref\System.ComponentModel.Annotations.dll|runtimes\win\lib\net6.0\System.DirectoryServices.dll|WinTuner.psm1|ref\System.IO.MemoryMappedFiles.dll|ref\System.Security.Cryptography.X509Certificates.dll|runtimes\win\lib\net6.0\System.Management.Automation.dll|System.Security.AccessControl.dll|ref\System.IO.FileSystem.AccessControl.dll|ref\System.Security.Principal.Windows.dll|runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll|Microsoft.Graph.Core.dll|ref\System.IO.FileSystem.Watcher.dll|ref\System.Runtime.Serialization.Xml.dll|runtimes\win\lib\net6.0\System.Windows.Extensions.dll|Svrooij.WinTuner.CmdLets.xml|ref\System.ComponentModel.dll|ref\System.Data.DataSetExtensions.dll|runtimes\win\lib\net6.0\System.Data.OleDb.dll|System.IO.Ports.dll|ref\System.Data.dll|ref\System.Threading.Channels.dll|runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll|System.Security.Cryptography.Xml.dll|ref\System.Collections.dll|ref\System.Windows.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.SDK.dll|System.Threading.AccessControl.dll|ref\System.Reflection.Metadata.dll|ref\System.Net.Http.dll|runtimes\win\lib\net6.0\System.Runtime.Caching.dll|System.Diagnostics.EventLog.dll|ref\System.IO.FileSystem.dll|ref\System.Threading.Overlapped.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.Security.dll|Microsoft.IdentityModel.Protocols.OpenIdConnect.dll|ref\System.Dynamic.Runtime.dll|ref\System.Security.Principal.dll|runtimes\win\lib\net6.0\System.Drawing.Common.dll|Newtonsoft.Json.dll|ref\System.Net.WebSockets.Client.dll|ref\System.Diagnostics.DiagnosticSource.dll|runtimes\win\lib\net6.0\System.Speech.dll|WingetIntune.dll|ref\System.Net.Security.dll|ref\System.Runtime.dll|runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll|Microsoft.Kiota.Serialization.Text.dll|ref\System.Runtime.Numerics.dll|ref\System.Runtime.Handles.dll|runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll|System.Management.dll|ref\System.Net.WebSockets.dll|ref\System.ComponentModel.DataAnnotations.dll|runtimes\win\lib\net6.0\Microsoft.PowerShell.Commands.Management.dll|System.Runtime.CompilerServices.Unsafe.dll|ref\System.IO.FileSystem.DriveInfo.dll|ref\System.Net.NetworkInformation.dll|runtimes\win\lib\net6.0\System.Net.Http.WinHttpHandler.dll|System.Security.Cryptography.Pkcs.dll|ref\WindowsBase.dll|ref\System.Reflection.TypeExtensions.dll|runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll|System.Web.Services.Description.dll|ref\System.Security.Cryptography.Csp.dll|ref\System.Text.Encoding.Extensions.dll|runtimes\unix\lib\net6.0\Microsoft.PowerShell.ConsoleHost.dll|Svrooij.PowerShell.DependencyInjection.dll|ref\System.Linq.Queryable.dll|ref\System.Drawing.Primitives.dll|runtimes\unix\lib\net6.0\System.IO.Ports.dll|WinTuner.Proxy.Client.dll|ref\System.Runtime.InteropServices.dll|ref\System.Diagnostics.FileVersionInfo.dll|runtimes\unix\lib\net6.0\Microsoft.PowerShell.Commands.Utility.dll|System.ComponentModel.Composition.dll|ref\System.Net.ServicePoint.dll|ref\mscorlib.dll|runtimes\unix\lib\net6.0\System.Management.Automation.dll|ref\System.Net.WebHeaderCollection.dll|ref\System.Xml.Linq.dll|runtimes\unix\lib\net6.0\Microsoft.PowerShell.SDK.dll|Microsoft.CodeAnalysis.CSharp.dll|ref\System.Resources.ResourceManager.dll|ref\System.Text.Encodings.Web.dll|runtimes\unix\lib\net6.0\Microsoft.PowerShell.Security.dll|System.IO.Packaging.dll|ref\System.Threading.Tasks.dll|ref\System.Web.HttpUtility.dll|runtimes\unix\lib\net6.0\System.Drawing.Common.dll|Microsoft.Extensions.Logging.Configuration.dll|ref\System.Reflection.Extensions.dll|ref\Microsoft.VisualBasic.dll|runtimes\unix\lib\net6.0\Microsoft.PowerShell.Commands.Management.dll|Svrooij.WinTuner.CmdLets.deps.json|ref\System.Runtime.CompilerServices.VisualC.dll|ref\System.IO.Compression.Brotli.dll|runtimes\unix\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|WinTuner.Proxy.Client.pdb|ref\System.Globalization.Calendars.dll|runtimes\win7-x64\native\miutils.dll|runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll|System.Memory.Data.dll|ref\System.Net.HttpListener.dll|runtimes\win7-x64\native\mi.dll|runtimes\win10-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|WinTuner.Proxy.Client.deps.json|ref\System.IO.Pipes.AccessControl.dll|runtimes\win7-x64\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|runtimes\win10-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|YamlDotNet.dll|ref\System.Net.WebProxy.dll|runtimes\win10-x64\native\miutils.dll|runtimes\freebsd\lib\net6.0\System.Data.Odbc.dll|System.DirectoryServices.dll|ref\System.Security.Cryptography.Algorithms.dll|runtimes\win10-x64\native\mi.dll|runtimes\win-arm64\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|Microsoft.Extensions.Configuration.dll|ref\System.Diagnostics.Process.dll|runtimes\win10-x64\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|runtimes\win-arm64\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|Microsoft.Extensions.Primitives.dll|ref\System.Diagnostics.Tools.dll|runtimes\win-x86\native\msalruntime_x005F_x86.dll|runtimes\illumos\lib\net6.0\System.Data.Odbc.dll|System.CodeDom.dll|ref\System.IO.Compression.FileSystem.dll|runtimes\win-x86\native\pwrshplugin.dll|runtimes\linux\lib\net6.0\System.Data.Odbc.dll|Microsoft.Kiota.Http.HttpClientLibrary.dll|ref\System.Threading.Tasks.Parallel.dll|runtimes\win-x86\native\PowerShell.Core.Instrumentation.dll|runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll|Microsoft.Kiota.Serialization.Json.dll|ref\System.Runtime.Serialization.Json.dll|runtimes\win-x86\native\sni.dll|runtimes\win8-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|System.Security.Cryptography.ProtectedData.dll|ref\System.Security.Cryptography.OpenSsl.dll|runtimes\win10-x86\native\miutils.dll|runtimes\win8-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|Winget.CommunityRepository.pdb|ref\System.Numerics.dll|runtimes\win10-x86\native\mi.dll|runtimes\win81-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|System.Windows.Extensions.dll|ref\System.Security.Cryptography.Cng.dll|runtimes\win10-x86\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|runtimes\win81-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|System.Data.OleDb.dll|ref\System.Linq.Parallel.dll|runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib|runtimes\win-arm\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|Microsoft.Identity.Client.NativeInterop.dll|ref\System.Xml.XmlSerializer.dll|runtimes\linux-x64\native\libSystem.IO.Ports.Native.so|runtimes\win-arm\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|System.Private.ServiceModel.dll|ref\System.Net.Sockets.dll|runtimes\linux-x64\native\libpsl-native.so|runtimes\win7-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|Svrooij.WinTuner.CmdLets.dll-Help.xml|ref\System.Security.AccessControl.dll|runtimes\linux-x64\native\libmi.so|runtimes\win7-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|WingetIntune.pdb|ref\System.Diagnostics.Tracing.dll|runtimes\linux-x64\native\libpsrpclient.so|runtimes\osx\lib\net6.0\System.Data.Odbc.dll|Svrooij.WinTuner.CmdLets.dll|ref\System.Diagnostics.TraceSource.dll|runtimes\win-arm64\native\msalruntime_arm64.dll|runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll|Azure.Identity.dll|ref\System.Web.dll|runtimes\win-arm64\native\miutils.dll|runtimes\solaris\lib\net6.0\System.Data.Odbc.dll|System.ClientModel.dll|ref\System.Net.Ping.dll|runtimes\win-arm64\native\pwrshplugin.dll|runtimes\win8-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|System.Diagnostics.PerformanceCounter.dll|ref\System.Net.Mail.dll|runtimes\win-arm64\native\mi.dll|runtimes\win8-x86\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|SvRooij.ContentPrep.dll|ref\System.Runtime.Serialization.Formatters.dll|runtimes\win-arm64\native\PowerShell.Core.Instrumentation.dll|runtimes\win81-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.Native.dll|System.ServiceModel.Primitives.dll|ref\System.Xml.XmlDocument.dll|runtimes\win-arm64\native\sni.dll|runtimes\win81-x64\lib\netstandard1.6\Microsoft.Management.Infrastructure.dll|Std.UriTemplate.dll|ref\System.Threading.Timer.dll|runtimes\win-arm64\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|runtimes\tvos\lib\net6.0\System.Data.Odbc.dll|NJsonSchema.dll|ref\System.ServiceModel.Web.dll|runtimes\win-x64\native\pwrshplugin.dll|runtimes\win\lib\net6.0\Modules\Microsoft.WSMan.Management\WSMan.format.ps1xml|Microsoft.Extensions.Configuration.Abstractions.dll|ref\Microsoft.Win32.Registry.dll|runtimes\win-x64\native\msalruntime.dll|runtimes\win\lib\net6.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1|Microsoft.Extensions.DependencyInjection.Abstractions.dll|ref\System.Threading.Tasks.Extensions.dll|runtimes\win-x64\native\PowerShell.Core.Instrumentation.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1|Microsoft.Kiota.Serialization.Multipart.dll|ref\System.Runtime.Serialization.dll|runtimes\win-x64\native\sni.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1|System.ServiceModel.Duplex.dll|ref\System.Runtime.InteropServices.RuntimeInformation.dll|runtimes\linux-arm\native\libSystem.IO.Ports.Native.so|runtimes\win\lib\net6.0\Modules\PSDiagnostics\PSDiagnostics.psm1|Winget.CommunityRepository.dll|ref\System.Runtime.CompilerServices.Unsafe.dll|runtimes\linux-arm\native\libpsl-native.so|runtimes\win\lib\net6.0\Modules\PSDiagnostics\PSDiagnostics.psd1|Microsoft.IdentityModel.JsonWebTokens.dll|ref\System.IO.FileSystem.Primitives.dll|runtimes\win8-x64\native\miutils.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1|Microsoft.Extensions.Logging.Abstractions.dll|ref\System.ServiceProcess.dll|runtimes\win8-x64\native\mi.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Diagnostics\Microsoft.PowerShell.Diagnostics.psd1|System.Runtime.Caching.dll|ref\System.Net.dll|runtimes\win81-x86\native\miutils.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Diagnostics\Event.format.ps1xml|System.ServiceModel.Http.dll|ref\System.Security.Cryptography.Encoding.dll|runtimes\win81-x86\native\mi.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Diagnostics\Diagnostics.format.ps1xml|System.Diagnostics.DiagnosticSource.dll|ref\System.IO.Compression.ZipFile.dll|runtimes\win81-x86\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Diagnostics\GetEvent.types.ps1xml|System.Data.SqlClient.dll|ref\netstandard.dll|runtimes\win-arm\native\miutils.dll|runtimes\win\lib\net6.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1|Microsoft.Identity.Client.dll|ref\System.ComponentModel.Primitives.dll|runtimes\win-arm\native\pwrshplugin.dll|runtimes\win\lib\net6.0\Modules\CimCmdlets\CimCmdlets.psd1|System.Drawing.Common.dll|ref\System.Linq.dll|runtimes\win-arm\native\mi.dll|runtimes\unix\lib\net6.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1|Azure.Core.dll|ref\System.ComponentModel.TypeConverter.dll|runtimes\win-arm\native\PowerShell.Core.Instrumentation.dll|runtimes\unix\lib\net6.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1|Namotion.Reflection.dll|ref\System.Net.NameResolution.dll|runtimes\win-arm\native\Microsoft.Management.Infrastructure.Native.Unmanaged.dll|runtimes\unix\lib\net6.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1|Microsoft.Kiota.Authentication.Azure.dll|ref\System.Runtime.Extensions.dll|runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so|runtimes\unix\lib\net6.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1</S>
+          <S N="GUID">d813f5e2-ef9a-44a3-8f14-d282c01b5ead</S>
+          <S N="PowerShellVersion">7.2</S>
+          <S N="CompanyName">Stephan van Rooij</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\WinTuner\1.0.6</S>
+    </MS>
+  </Obj>
+</Objs>

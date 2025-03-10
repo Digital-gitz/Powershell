@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:16:37-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:21.5126248-05:00</DT>
+        <DT>2025-03-09T18:21:13.6210565-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -74,11 +74,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -99,15 +103,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -154,15 +154,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6109615</S>
-          <S N="downloadCount">70435939</S>
+          <S N="versionDownloadCount">6917947</S>
+          <S N="downloadCount">71446741</S>
           <S N="packageSize">445640</S>
           <S N="published">1/14/2025 3:16:37 AM -05:00</S>
           <S N="created">1/14/2025 3:16:37 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule ManagedServiceIdentity PSEdition_Core PSEdition_Desktop PSFunction_Get-AzFederatedIdentityCredential PSCommand_Get-AzFederatedIdentityCredential PSFunction_Get-AzSystemAssignedIdentity PSCommand_Get-AzSystemAssignedIdentity PSFunction_Get-AzUserAssignedIdentity PSCommand_Get-AzUserAssignedIdentity PSFunction_Get-AzUserAssignedIdentityAssociatedResource PSCommand_Get-AzUserAssignedIdentityAssociatedResource PSFunction_New-AzFederatedIdentityCredential PSCommand_New-AzFederatedIdentityCredential PSFunction_New-AzUserAssignedIdentity PSCommand_New-AzUserAssignedIdentity PSFunction_Remove-AzFederatedIdentityCredential PSCommand_Remove-AzFederatedIdentityCredential PSFunction_Remove-AzUserAssignedIdentity PSCommand_Remove-AzUserAssignedIdentity PSFunction_Update-AzFederatedIdentityCredential PSCommand_Update-AzFederatedIdentityCredential PSFunction_Update-AzUserAssignedIdentity PSCommand_Update-AzUserAssignedIdentity PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.3.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -174,7 +174,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ManagedServiceIdentity\1.3.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ManagedServiceIdentity\1.3.0</S>
     </MS>
   </Obj>
 </Objs>

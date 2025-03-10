@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:17:25-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:28.3459373-05:00</DT>
+        <DT>2025-03-09T18:21:22.39432-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -108,11 +108,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -167,15 +171,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -222,15 +222,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6162952</S>
-          <S N="downloadCount">73782273</S>
+          <S N="versionDownloadCount">6962918</S>
+          <S N="downloadCount">74795563</S>
           <S N="packageSize">1259419</S>
           <S N="published">1/14/2025 3:17:25 AM -05:00</S>
           <S N="created">1/14/2025 3:17:25 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule MySql PSEdition_Core PSEdition_Desktop PSFunction_Get-AzMySqlConfiguration PSCommand_Get-AzMySqlConfiguration PSFunction_Get-AzMySqlConnectionString PSCommand_Get-AzMySqlConnectionString PSFunction_Get-AzMySqlFirewallRule PSCommand_Get-AzMySqlFirewallRule PSFunction_Get-AzMySqlFlexibleServer PSCommand_Get-AzMySqlFlexibleServer PSFunction_Get-AzMySqlFlexibleServerAdvancedThreatProtectionSetting PSCommand_Get-AzMySqlFlexibleServerAdvancedThreatProtectionSetting PSFunction_Get-AzMySqlFlexibleServerConfiguration PSCommand_Get-AzMySqlFlexibleServerConfiguration PSFunction_Get-AzMySqlFlexibleServerConnectionString PSCommand_Get-AzMySqlFlexibleServerConnectionString PSFunction_Get-AzMySqlFlexibleServerDatabase PSCommand_Get-AzMySqlFlexibleServerDatabase PSFunction_Get-AzMySqlFlexibleServerFirewallRule PSCommand_Get-AzMySqlFlexibleServerFirewallRule PSFunction_Get-AzMySqlFlexibleServerLocationBasedCapability PSCommand_Get-AzMySqlFlexibleServerLocationBasedCapability PSFunction_Get-AzMySqlFlexibleServerReplica PSCommand_Get-AzMySqlFlexibleServerReplica PSFunction_Get-AzMySqlReplica PSCommand_Get-AzMySqlReplica PSFunction_Get-AzMySqlServer PSCommand_Get-AzMySqlServer PSFunction_Get-AzMySqlVirtualNetworkRule PSCommand_Get-AzMySqlVirtualNetworkRule PSFunction_New-AzMySqlFirewallRule PSCommand_New-AzMySqlFirewallRule PSFunction_New-AzMySqlFlexibleServer PSCommand_New-AzMySqlFlexibleServer PSFunction_New-AzMySqlFlexibleServerDatabase PSCommand_New-AzMySqlFlexibleServerDatabase PSFunction_New-AzMySqlFlexibleServerFirewallRule PSCommand_New-AzMySqlFlexibleServerFirewallRule PSFunction_New-AzMySqlFlexibleServerReplica PSCommand_New-AzMySqlFlexibleServerReplica PSFunction_New-AzMySqlReplica PSCommand_New-AzMySqlReplica PSFunction_New-AzMySqlServer PSCommand_New-AzMySqlServer PSFunction_New-AzMySqlVirtualNetworkRule PSCommand_New-AzMySqlVirtualNetworkRule PSFunction_Remove-AzMySqlFirewallRule PSCommand_Remove-AzMySqlFirewallRule PSFunction_Remove-AzMySqlFlexibleServer PSCommand_Remove-AzMySqlFlexibleServer PSFunction_Remove-AzMySqlFlexibleServerDatabase PSCommand_Remove-AzMySqlFlexibleServerDatabase PSFunction_Remove-AzMySqlFlexibleServerFirewallRule PSCommand_Remove-AzMySqlFlexibleServerFirewallRule PSFunction_Remove-AzMySqlServer PSCommand_Remove-AzMySqlServer PSFunction_Remove-AzMySqlVirtualNetworkRule PSCommand_Remove-AzMySqlVirtualNetworkRule PSFunction_Restart-AzMySqlFlexibleServer PSCommand_Restart-AzMySqlFlexibleServer PSFunction_Restart-AzMySqlServer PSCommand_Restart-AzMySqlServer PSFunction_Restore-AzMySqlFlexibleServer PSCommand_Restore-AzMySqlFlexibleServer PSFunction_Restore-AzMySqlServer PSCommand_Restore-AzMySqlServer PSFunction_Start-AzMySqlFlexibleServer PSCommand_Start-AzMySqlFlexibleServer PSFunction_Stop-AzMySqlFlexibleServer PSCommand_Stop-AzMySqlFlexibleServer PSFunction_Test-AzMySqlFlexibleServerConnect PSCommand_Test-AzMySqlFlexibleServerConnect PSFunction_Update-AzMySqlConfiguration PSCommand_Update-AzMySqlConfiguration PSFunction_Update-AzMySqlFirewallRule PSCommand_Update-AzMySqlFirewallRule PSFunction_Update-AzMySqlFlexibleServer PSCommand_Update-AzMySqlFlexibleServer PSFunction_Update-AzMySqlFlexibleServerAdvancedThreatProtectionSetting PSCommand_Update-AzMySqlFlexibleServerAdvancedThreatProtectionSetting PSFunction_Update-AzMySqlFlexibleServerConfiguration PSCommand_Update-AzMySqlFlexibleServerConfiguration PSFunction_Update-AzMySqlFlexibleServerFirewallRule PSCommand_Update-AzMySqlFlexibleServerFirewallRule PSFunction_Update-AzMySqlServer PSCommand_Update-AzMySqlServer PSFunction_Update-AzMySqlServerConfigurationsList PSCommand_Update-AzMySqlServerConfigurationsList PSFunction_Update-AzMySqlVirtualNetworkRule PSCommand_Update-AzMySqlVirtualNetworkRule PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.3.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -242,7 +242,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.MySql\1.3.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.MySql\1.3.0</S>
     </MS>
   </Obj>
 </Objs>

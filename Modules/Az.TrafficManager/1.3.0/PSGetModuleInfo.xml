@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:20:49-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:31:03.3865258-05:00</DT>
+        <DT>2025-03-09T18:22:05.1221169-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -63,7 +63,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -93,7 +101,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -121,18 +133,6 @@
                 <S>Set-AzTrafficManagerProfile</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -178,15 +178,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5980359</S>
-          <S N="downloadCount">108662764</S>
+          <S N="versionDownloadCount">6764450</S>
+          <S N="downloadCount">109671555</S>
           <S N="packageSize">132109</S>
           <S N="published">1/14/2025 3:20:49 AM -05:00</S>
           <S N="created">1/14/2025 3:20:49 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM TrafficManager PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzTrafficManagerCustomHeaderToEndpoint PSCommand_Add-AzTrafficManagerCustomHeaderToEndpoint PSCmdlet_Add-AzTrafficManagerCustomHeaderToProfile PSCommand_Add-AzTrafficManagerCustomHeaderToProfile PSCmdlet_Add-AzTrafficManagerEndpointConfig PSCommand_Add-AzTrafficManagerEndpointConfig PSCmdlet_Add-AzTrafficManagerExpectedStatusCodeRange PSCommand_Add-AzTrafficManagerExpectedStatusCodeRange PSCmdlet_Add-AzTrafficManagerIpAddressRange PSCommand_Add-AzTrafficManagerIpAddressRange PSCmdlet_Disable-AzTrafficManagerEndpoint PSCommand_Disable-AzTrafficManagerEndpoint PSCmdlet_Disable-AzTrafficManagerProfile PSCommand_Disable-AzTrafficManagerProfile PSCmdlet_Enable-AzTrafficManagerEndpoint PSCommand_Enable-AzTrafficManagerEndpoint PSCmdlet_Enable-AzTrafficManagerProfile PSCommand_Enable-AzTrafficManagerProfile PSCmdlet_Get-AzTrafficManagerEndpoint PSCommand_Get-AzTrafficManagerEndpoint PSCmdlet_Get-AzTrafficManagerProfile PSCommand_Get-AzTrafficManagerProfile PSCmdlet_New-AzTrafficManagerEndpoint PSCommand_New-AzTrafficManagerEndpoint PSCmdlet_New-AzTrafficManagerProfile PSCommand_New-AzTrafficManagerProfile PSCmdlet_Remove-AzTrafficManagerCustomHeaderFromEndpoint PSCommand_Remove-AzTrafficManagerCustomHeaderFromEndpoint PSCmdlet_Remove-AzTrafficManagerCustomHeaderFromProfile PSCommand_Remove-AzTrafficManagerCustomHeaderFromProfile PSCmdlet_Remove-AzTrafficManagerEndpoint PSCommand_Remove-AzTrafficManagerEndpoint PSCmdlet_Remove-AzTrafficManagerEndpointConfig PSCommand_Remove-AzTrafficManagerEndpointConfig PSCmdlet_Remove-AzTrafficManagerExpectedStatusCodeRange PSCommand_Remove-AzTrafficManagerExpectedStatusCodeRange PSCmdlet_Remove-AzTrafficManagerIpAddressRange PSCommand_Remove-AzTrafficManagerIpAddressRange PSCmdlet_Remove-AzTrafficManagerProfile PSCommand_Remove-AzTrafficManagerProfile PSCmdlet_Set-AzTrafficManagerEndpoint PSCommand_Set-AzTrafficManagerEndpoint PSCmdlet_Set-AzTrafficManagerProfile PSCommand_Set-AzTrafficManagerProfile PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.3.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -198,7 +198,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.TrafficManager\1.3.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.TrafficManager\1.3.0</S>
     </MS>
   </Obj>
 </Objs>

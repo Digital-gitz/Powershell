@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:19:16-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:42.3629215-05:00</DT>
+        <DT>2025-03-09T18:21:40.0515183-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -78,11 +78,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -107,15 +111,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -162,15 +162,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6055017</S>
-          <S N="downloadCount">82114305</S>
+          <S N="versionDownloadCount">6853391</S>
+          <S N="downloadCount">83136549</S>
           <S N="packageSize">525981</S>
           <S N="published">1/14/2025 3:19:16 AM -05:00</S>
           <S N="created">1/14/2025 3:19:16 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule ResourceMover PSEdition_Core PSEdition_Desktop PSFunction_Add-AzResourceMoverMoveResource PSCommand_Add-AzResourceMoverMoveResource PSFunction_Get-AzResourceMoverMoveCollection PSCommand_Get-AzResourceMoverMoveCollection PSFunction_Get-AzResourceMoverMoveResource PSCommand_Get-AzResourceMoverMoveResource PSFunction_Get-AzResourceMoverRequiredForResources PSCommand_Get-AzResourceMoverRequiredForResources PSFunction_Get-AzResourceMoverUnresolvedDependency PSCommand_Get-AzResourceMoverUnresolvedDependency PSFunction_Invoke-AzResourceMoverBulkRemove PSCommand_Invoke-AzResourceMoverBulkRemove PSFunction_Invoke-AzResourceMoverCommit PSCommand_Invoke-AzResourceMoverCommit PSFunction_Invoke-AzResourceMoverDiscard PSCommand_Invoke-AzResourceMoverDiscard PSFunction_Invoke-AzResourceMoverInitiateMove PSCommand_Invoke-AzResourceMoverInitiateMove PSFunction_Invoke-AzResourceMoverPrepare PSCommand_Invoke-AzResourceMoverPrepare PSFunction_New-AzResourceMoverMoveCollection PSCommand_New-AzResourceMoverMoveCollection PSFunction_Remove-AzResourceMoverMoveCollection PSCommand_Remove-AzResourceMoverMoveCollection PSFunction_Remove-AzResourceMoverMoveResource PSCommand_Remove-AzResourceMoverMoveResource PSFunction_Resolve-AzResourceMoverMoveCollectionDependency PSCommand_Resolve-AzResourceMoverMoveCollectionDependency PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.3.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -182,7 +182,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ResourceMover\1.3.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ResourceMover\1.3.0</S>
     </MS>
   </Obj>
 </Objs>

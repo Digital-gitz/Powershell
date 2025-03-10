@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:13:32-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:57.9190737-05:00</DT>
+        <DT>2025-03-09T18:20:43.2769216-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -64,7 +64,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -115,7 +123,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -165,18 +177,6 @@
               </LST>
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
         </DCT>
       </Obj>
       <Nil N="PowerShellGetFormatVersion" />
@@ -221,15 +221,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6211805</S>
-          <S N="downloadCount">111660043</S>
+          <S N="versionDownloadCount">7024279</S>
+          <S N="downloadCount">112720449</S>
           <S N="packageSize">602688</S>
           <S N="published">1/14/2025 3:13:32 AM -05:00</S>
           <S N="created">1/14/2025 3:13:32 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM DataLake Store PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzDataLakeStoreFirewallRule PSCommand_Add-AzDataLakeStoreFirewallRule PSCmdlet_Add-AzDataLakeStoreItemContent PSCommand_Add-AzDataLakeStoreItemContent PSCmdlet_Add-AzDataLakeStoreTrustedIdProvider PSCommand_Add-AzDataLakeStoreTrustedIdProvider PSCmdlet_Add-AzDataLakeStoreVirtualNetworkRule PSCommand_Add-AzDataLakeStoreVirtualNetworkRule PSCmdlet_Enable-AzDataLakeStoreKeyVault PSCommand_Enable-AzDataLakeStoreKeyVault PSCmdlet_Export-AzDataLakeStoreChildItemProperty PSCommand_Export-AzDataLakeStoreChildItemProperty PSCmdlet_Export-AzDataLakeStoreItem PSCommand_Export-AzDataLakeStoreItem PSCmdlet_Get-AzDataLakeStoreAccount PSCommand_Get-AzDataLakeStoreAccount PSCmdlet_Get-AzDataLakeStoreChildItem PSCommand_Get-AzDataLakeStoreChildItem PSCmdlet_Get-AzDataLakeStoreChildItemSummary PSCommand_Get-AzDataLakeStoreChildItemSummary PSCmdlet_Get-AzDataLakeStoreDeletedItem PSCommand_Get-AzDataLakeStoreDeletedItem PSCmdlet_Get-AzDataLakeStoreFirewallRule PSCommand_Get-AzDataLakeStoreFirewallRule PSCmdlet_Get-AzDataLakeStoreItem PSCommand_Get-AzDataLakeStoreItem PSCmdlet_Get-AzDataLakeStoreItemAclEntry PSCommand_Get-AzDataLakeStoreItemAclEntry PSCmdlet_Get-AzDataLakeStoreItemContent PSCommand_Get-AzDataLakeStoreItemContent PSCmdlet_Get-AzDataLakeStoreItemOwner PSCommand_Get-AzDataLakeStoreItemOwner PSCmdlet_Get-AzDataLakeStoreItemPermission PSCommand_Get-AzDataLakeStoreItemPermission PSCmdlet_Get-AzDataLakeStoreTrustedIdProvider PSCommand_Get-AzDataLakeStoreTrustedIdProvider PSCmdlet_Get-AzDataLakeStoreVirtualNetworkRule PSCommand_Get-AzDataLakeStoreVirtualNetworkRule PSCmdlet_Import-AzDataLakeStoreItem PSCommand_Import-AzDataLakeStoreItem PSCmdlet_Join-AzDataLakeStoreItem PSCommand_Join-AzDataLakeStoreItem PSCmdlet_Move-AzDataLakeStoreItem PSCommand_Move-AzDataLakeStoreItem PSCmdlet_New-AzDataLakeStoreAccount PSCommand_New-AzDataLakeStoreAccount PSCmdlet_New-AzDataLakeStoreItem PSCommand_New-AzDataLakeStoreItem PSCmdlet_Remove-AzDataLakeStoreAccount PSCommand_Remove-AzDataLakeStoreAccount PSCmdlet_Remove-AzDataLakeStoreFirewallRule PSCommand_Remove-AzDataLakeStoreFirewallRule PSCmdlet_Remove-AzDataLakeStoreItem PSCommand_Remove-AzDataLakeStoreItem PSCmdlet_Remove-AzDataLakeStoreItemAcl PSCommand_Remove-AzDataLakeStoreItemAcl PSCmdlet_Remove-AzDataLakeStoreItemAclEntry PSCommand_Remove-AzDataLakeStoreItemAclEntry PSCmdlet_Remove-AzDataLakeStoreTrustedIdProvider PSCommand_Remove-AzDataLakeStoreTrustedIdProvider PSCmdlet_Remove-AzDataLakeStoreVirtualNetworkRule PSCommand_Remove-AzDataLakeStoreVirtualNetworkRule PSCmdlet_Restore-AzDataLakeStoreDeletedItem PSCommand_Restore-AzDataLakeStoreDeletedItem PSCmdlet_Set-AzDataLakeStoreAccount PSCommand_Set-AzDataLakeStoreAccount PSCmdlet_Set-AzDataLakeStoreFirewallRule PSCommand_Set-AzDataLakeStoreFirewallRule PSCmdlet_Set-AzDataLakeStoreItemAcl PSCommand_Set-AzDataLakeStoreItemAcl PSCmdlet_Set-AzDataLakeStoreItemAclEntry PSCommand_Set-AzDataLakeStoreItemAclEntry PSCmdlet_Set-AzDataLakeStoreItemExpiry PSCommand_Set-AzDataLakeStoreItemExpiry PSCmdlet_Set-AzDataLakeStoreItemOwner PSCommand_Set-AzDataLakeStoreItemOwner PSCmdlet_Set-AzDataLakeStoreItemPermission PSCommand_Set-AzDataLakeStoreItemPermission PSCmdlet_Set-AzDataLakeStoreTrustedIdProvider PSCommand_Set-AzDataLakeStoreTrustedIdProvider PSCmdlet_Set-AzDataLakeStoreVirtualNetworkRule PSCommand_Set-AzDataLakeStoreVirtualNetworkRule PSCmdlet_Test-AzDataLakeStoreAccount PSCommand_Test-AzDataLakeStoreAccount PSCmdlet_Test-AzDataLakeStoreItem PSCommand_Test-AzDataLakeStoreItem PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.4.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -241,7 +241,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.DataLakeStore\1.4.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DataLakeStore\1.4.0</S>
     </MS>
   </Obj>
 </Objs>

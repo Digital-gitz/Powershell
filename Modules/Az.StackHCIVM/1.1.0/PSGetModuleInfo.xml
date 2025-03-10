@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:20:11-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:55.0473391-05:00</DT>
+        <DT>2025-03-09T18:21:55.42862-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -95,11 +95,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -141,15 +145,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -196,15 +196,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5739401</S>
-          <S N="downloadCount">32858575</S>
+          <S N="versionDownloadCount">6519644</S>
+          <S N="downloadCount">33724708</S>
           <S N="packageSize">1634276</S>
           <S N="published">1/14/2025 3:20:11 AM -05:00</S>
           <S N="created">1/14/2025 3:20:11 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule StackHCIVM PSEdition_Core PSEdition_Desktop PSFunction_Add-AzStackHCIVMVirtualMachineDataDisk PSCommand_Add-AzStackHCIVMVirtualMachineDataDisk PSFunction_Add-AzStackHCIVMVirtualMachineNetworkInterface PSCommand_Add-AzStackHCIVMVirtualMachineNetworkInterface PSFunction_Get-AzStackHCIVMImage PSCommand_Get-AzStackHCIVMImage PSFunction_Get-AzStackHCIVMLogicalNetwork PSCommand_Get-AzStackHCIVMLogicalNetwork PSFunction_Get-AzStackHCIVMNetworkInterface PSCommand_Get-AzStackHCIVMNetworkInterface PSFunction_Get-AzStackHCIVMStoragePath PSCommand_Get-AzStackHCIVMStoragePath PSFunction_Get-AzStackHCIVMVirtualHardDisk PSCommand_Get-AzStackHCIVMVirtualHardDisk PSFunction_Get-AzStackHCIVMVirtualMachine PSCommand_Get-AzStackHCIVMVirtualMachine PSFunction_New-AzStackHCIVMImage PSCommand_New-AzStackHCIVMImage PSFunction_New-AzStackHCIVMLogicalNetwork PSCommand_New-AzStackHCIVMLogicalNetwork PSFunction_New-AzStackHCIVMNetworkInterface PSCommand_New-AzStackHCIVMNetworkInterface PSFunction_New-AzStackHCIVMStoragePath PSCommand_New-AzStackHCIVMStoragePath PSFunction_New-AzStackHCIVMVirtualHardDisk PSCommand_New-AzStackHCIVMVirtualHardDisk PSFunction_New-AzStackHCIVMVirtualMachine PSCommand_New-AzStackHCIVMVirtualMachine PSFunction_Remove-AzStackHCIVMImage PSCommand_Remove-AzStackHCIVMImage PSFunction_Remove-AzStackHCIVMLogicalNetwork PSCommand_Remove-AzStackHCIVMLogicalNetwork PSFunction_Remove-AzStackHCIVMNetworkInterface PSCommand_Remove-AzStackHCIVMNetworkInterface PSFunction_Remove-AzStackHCIVMStoragePath PSCommand_Remove-AzStackHCIVMStoragePath PSFunction_Remove-AzStackHCIVMVirtualHardDisk PSCommand_Remove-AzStackHCIVMVirtualHardDisk PSFunction_Remove-AzStackHCIVMVirtualMachine PSCommand_Remove-AzStackHCIVMVirtualMachine PSFunction_Remove-AzStackHCIVMVirtualMachineDataDisk PSCommand_Remove-AzStackHCIVMVirtualMachineDataDisk PSFunction_Remove-AzStackHCIVMVirtualMachineNetworkInterface PSCommand_Remove-AzStackHCIVMVirtualMachineNetworkInterface PSFunction_Restart-AzStackHCIVMVirtualMachine PSCommand_Restart-AzStackHCIVMVirtualMachine PSFunction_Start-AzStackHCIVMVirtualMachine PSCommand_Start-AzStackHCIVMVirtualMachine PSFunction_Stop-AzStackHCIVMVirtualMachine PSCommand_Stop-AzStackHCIVMVirtualMachine PSFunction_Update-AzStackHCIVMImage PSCommand_Update-AzStackHCIVMImage PSFunction_Update-AzStackHCIVMLogicalNetwork PSCommand_Update-AzStackHCIVMLogicalNetwork PSFunction_Update-AzStackHCIVMNetworkInterface PSCommand_Update-AzStackHCIVMNetworkInterface PSFunction_Update-AzStackHCIVMStoragePath PSCommand_Update-AzStackHCIVMStoragePath PSFunction_Update-AzStackHCIVMVirtualHardDisk PSCommand_Update-AzStackHCIVMVirtualHardDisk PSFunction_Update-AzStackHCIVMVirtualMachine PSCommand_Update-AzStackHCIVMVirtualMachine PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:20:00Z</S>
           <S N="NormalizedVersion">1.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -216,7 +216,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.StackHCIVM\1.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.StackHCIVM\1.1.0</S>
     </MS>
   </Obj>
 </Objs>

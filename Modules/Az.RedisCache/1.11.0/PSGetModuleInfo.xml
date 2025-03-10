@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:18:54-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:39.0619814-05:00</DT>
+        <DT>2025-03-09T18:21:36.0953218-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -64,7 +64,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -100,7 +108,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -134,18 +146,6 @@
                 <S>Clear-AzRedisCache</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -191,15 +191,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Added support for choosing Zonal Allocation Policy</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6251687</S>
-          <S N="downloadCount">109987862</S>
+          <S N="versionDownloadCount">7057794</S>
+          <S N="downloadCount">111037891</S>
           <S N="packageSize">271633</S>
           <S N="published">1/14/2025 3:18:54 AM -05:00</S>
           <S N="created">1/14/2025 3:18:54 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM Redis Cache PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Export-AzRedisCache PSCommand_Export-AzRedisCache PSCmdlet_Get-AzRedisCache PSCommand_Get-AzRedisCache PSCmdlet_Get-AzRedisCacheFirewallRule PSCommand_Get-AzRedisCacheFirewallRule PSCmdlet_Get-AzRedisCacheKey PSCommand_Get-AzRedisCacheKey PSCmdlet_Get-AzRedisCacheLink PSCommand_Get-AzRedisCacheLink PSCmdlet_Get-AzRedisCachePatchSchedule PSCommand_Get-AzRedisCachePatchSchedule PSCmdlet_Import-AzRedisCache PSCommand_Import-AzRedisCache PSCmdlet_New-AzRedisCache PSCommand_New-AzRedisCache PSCmdlet_New-AzRedisCacheFirewallRule PSCommand_New-AzRedisCacheFirewallRule PSCmdlet_New-AzRedisCacheKey PSCommand_New-AzRedisCacheKey PSCmdlet_New-AzRedisCacheLink PSCommand_New-AzRedisCacheLink PSCmdlet_New-AzRedisCachePatchSchedule PSCommand_New-AzRedisCachePatchSchedule PSCmdlet_New-AzRedisCacheScheduleEntry PSCommand_New-AzRedisCacheScheduleEntry PSCmdlet_Remove-AzRedisCache PSCommand_Remove-AzRedisCache PSCmdlet_Remove-AzRedisCacheDiagnostic PSCommand_Remove-AzRedisCacheDiagnostic PSCmdlet_Remove-AzRedisCacheFirewallRule PSCommand_Remove-AzRedisCacheFirewallRule PSCmdlet_Remove-AzRedisCacheLink PSCommand_Remove-AzRedisCacheLink PSCmdlet_Remove-AzRedisCachePatchSchedule PSCommand_Remove-AzRedisCachePatchSchedule PSCmdlet_Reset-AzRedisCache PSCommand_Reset-AzRedisCache PSCmdlet_Set-AzRedisCache PSCommand_Set-AzRedisCache PSCmdlet_Set-AzRedisCacheDiagnostic PSCommand_Set-AzRedisCacheDiagnostic PSCmdlet_Get-AzRedisCacheAccessPolicy PSCommand_Get-AzRedisCacheAccessPolicy PSCmdlet_New-AzRedisCacheAccessPolicy PSCommand_New-AzRedisCacheAccessPolicy PSCmdlet_Remove-AzRedisCacheAccessPolicy PSCommand_Remove-AzRedisCacheAccessPolicy PSCmdlet_Get-AzRedisCacheAccessPolicyAssignment PSCommand_Get-AzRedisCacheAccessPolicyAssignment PSCmdlet_New-AzRedisCacheAccessPolicyAssignment PSCommand_New-AzRedisCacheAccessPolicyAssignment PSCmdlet_Remove-AzRedisCacheAccessPolicyAssignment PSCommand_Remove-AzRedisCacheAccessPolicyAssignment PSCmdlet_Clear-AzRedisCache PSCommand_Clear-AzRedisCache PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.11.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -211,7 +211,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.RedisCache\1.11.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.RedisCache\1.11.0</S>
     </MS>
   </Obj>
 </Objs>

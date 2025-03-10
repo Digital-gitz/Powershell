@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:19:48-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:50.7188432-05:00</DT>
+        <DT>2025-03-09T18:21:50.5483503-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -85,23 +85,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzSignalR</S>
-                <S>Get-AzSignalRKey</S>
-                <S>Get-AzSignalRUsage</S>
-                <S>New-AzSignalR</S>
-                <S>New-AzSignalRKey</S>
-                <S>Remove-AzSignalR</S>
-                <S>Restart-AzSignalR</S>
-                <S>Set-AzSignalRUpstream</S>
-                <S>Test-AzSignalRName</S>
-                <S>Update-AzSignalR</S>
-                <S>Update-AzSignalRNetworkAcl</S>
-              </LST>
+              <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -144,19 +136,27 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="8">
               <TNRef RefId="2" />
-              <LST />
+              <LST>
+                <S>Get-AzSignalR</S>
+                <S>Get-AzSignalRKey</S>
+                <S>Get-AzSignalRUsage</S>
+                <S>New-AzSignalR</S>
+                <S>New-AzSignalRKey</S>
+                <S>Remove-AzSignalR</S>
+                <S>Restart-AzSignalR</S>
+                <S>Set-AzSignalRUpstream</S>
+                <S>Test-AzSignalRName</S>
+                <S>Update-AzSignalR</S>
+                <S>Update-AzSignalRNetworkAcl</S>
+              </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="8" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="8" />
           </En>
         </DCT>
       </Obj>
@@ -202,15 +202,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Removed 'Microsoft.Azure.Management.SignalR' Version '1.1.2-preview' PackageReference</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6214885</S>
-          <S N="downloadCount">108929257</S>
+          <S N="versionDownloadCount">7016658</S>
+          <S N="downloadCount">109973290</S>
           <S N="packageSize">780610</S>
           <S N="published">1/14/2025 3:19:48 AM -05:00</S>
           <S N="created">1/14/2025 3:19:48 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM SignalR PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzSignalR PSCommand_Get-AzSignalR PSCmdlet_Get-AzSignalRKey PSCommand_Get-AzSignalRKey PSCmdlet_Get-AzSignalRUsage PSCommand_Get-AzSignalRUsage PSCmdlet_New-AzSignalR PSCommand_New-AzSignalR PSCmdlet_New-AzSignalRKey PSCommand_New-AzSignalRKey PSCmdlet_Remove-AzSignalR PSCommand_Remove-AzSignalR PSCmdlet_Restart-AzSignalR PSCommand_Restart-AzSignalR PSCmdlet_Set-AzSignalRUpstream PSCommand_Set-AzSignalRUpstream PSCmdlet_Test-AzSignalRName PSCommand_Test-AzSignalRName PSCmdlet_Update-AzSignalR PSCommand_Update-AzSignalR PSCmdlet_Update-AzSignalRNetworkAcl PSCommand_Update-AzSignalRNetworkAcl PSIncludes_Cmdlet PSFunction_Get-AzWebPubSub PSCommand_Get-AzWebPubSub PSFunction_Get-AzWebPubSubCustomCertificate PSCommand_Get-AzWebPubSubCustomCertificate PSFunction_Get-AzWebPubSubCustomDomain PSCommand_Get-AzWebPubSubCustomDomain PSFunction_Get-AzWebPubSubHub PSCommand_Get-AzWebPubSubHub PSFunction_Get-AzWebPubSubKey PSCommand_Get-AzWebPubSubKey PSFunction_Get-AzWebPubSubSku PSCommand_Get-AzWebPubSubSku PSFunction_Get-AzWebPubSubUsage PSCommand_Get-AzWebPubSubUsage PSFunction_New-AzWebPubSub PSCommand_New-AzWebPubSub PSFunction_New-AzWebPubSubCustomCertificate PSCommand_New-AzWebPubSubCustomCertificate PSFunction_New-AzWebPubSubCustomDomain PSCommand_New-AzWebPubSubCustomDomain PSFunction_New-AzWebPubSubEventHubEndpointObject PSCommand_New-AzWebPubSubEventHubEndpointObject PSFunction_New-AzWebPubSubEventNameFilterObject PSCommand_New-AzWebPubSubEventNameFilterObject PSFunction_New-AzWebPubSubHub PSCommand_New-AzWebPubSubHub PSFunction_New-AzWebPubSubKey PSCommand_New-AzWebPubSubKey PSFunction_Remove-AzWebPubSub PSCommand_Remove-AzWebPubSub PSFunction_Remove-AzWebPubSubCustomCertificate PSCommand_Remove-AzWebPubSubCustomCertificate PSFunction_Remove-AzWebPubSubCustomDomain PSCommand_Remove-AzWebPubSubCustomDomain PSFunction_Remove-AzWebPubSubHub PSCommand_Remove-AzWebPubSubHub PSFunction_Restart-AzWebPubSub PSCommand_Restart-AzWebPubSub PSFunction_Test-AzWebPubSubNameAvailability PSCommand_Test-AzWebPubSubNameAvailability PSFunction_Update-AzWebPubSub PSCommand_Update-AzWebPubSub PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -222,7 +222,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.SignalR\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.SignalR\2.1.0</S>
     </MS>
   </Obj>
 </Objs>

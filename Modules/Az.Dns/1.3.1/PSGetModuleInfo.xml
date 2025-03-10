@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:14:14-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:03.5851084-05:00</DT>
+        <DT>2025-03-09T18:20:51.0610208-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -67,23 +67,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzDnsRecordConfig</S>
-                <S>Get-AzDnsRecordSet</S>
-                <S>Get-AzDnsZone</S>
-                <S>New-AzDnsRecordConfig</S>
-                <S>New-AzDnsRecordSet</S>
-                <S>New-AzDnsZone</S>
-                <S>Remove-AzDnsRecordConfig</S>
-                <S>Remove-AzDnsRecordSet</S>
-                <S>Remove-AzDnsZone</S>
-                <S>Set-AzDnsRecordSet</S>
-                <S>Set-AzDnsZone</S>
-              </LST>
+              <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -108,19 +100,27 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="8">
               <TNRef RefId="2" />
-              <LST />
+              <LST>
+                <S>Add-AzDnsRecordConfig</S>
+                <S>Get-AzDnsRecordSet</S>
+                <S>Get-AzDnsZone</S>
+                <S>New-AzDnsRecordConfig</S>
+                <S>New-AzDnsRecordSet</S>
+                <S>New-AzDnsZone</S>
+                <S>Remove-AzDnsRecordConfig</S>
+                <S>Remove-AzDnsRecordSet</S>
+                <S>Remove-AzDnsZone</S>
+                <S>Set-AzDnsRecordSet</S>
+                <S>Set-AzDnsZone</S>
+              </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="8" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="8" />
           </En>
         </DCT>
       </Obj>
@@ -166,15 +166,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6257860</S>
-          <S N="downloadCount">111168892</S>
+          <S N="versionDownloadCount">7070452</S>
+          <S N="downloadCount">112228676</S>
           <S N="packageSize">532483</S>
           <S N="published">1/14/2025 3:14:14 AM -05:00</S>
           <S N="created">1/14/2025 3:14:14 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM DNS PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzDnsRecordConfig PSCommand_Add-AzDnsRecordConfig PSCmdlet_Get-AzDnsRecordSet PSCommand_Get-AzDnsRecordSet PSCmdlet_Get-AzDnsZone PSCommand_Get-AzDnsZone PSCmdlet_New-AzDnsRecordConfig PSCommand_New-AzDnsRecordConfig PSCmdlet_New-AzDnsRecordSet PSCommand_New-AzDnsRecordSet PSCmdlet_New-AzDnsZone PSCommand_New-AzDnsZone PSCmdlet_Remove-AzDnsRecordConfig PSCommand_Remove-AzDnsRecordConfig PSCmdlet_Remove-AzDnsRecordSet PSCommand_Remove-AzDnsRecordSet PSCmdlet_Remove-AzDnsZone PSCommand_Remove-AzDnsZone PSCmdlet_Set-AzDnsRecordSet PSCommand_Set-AzDnsRecordSet PSCmdlet_Set-AzDnsZone PSCommand_Set-AzDnsZone PSIncludes_Cmdlet PSFunction_Get-AzDnsDnssecConfig PSCommand_Get-AzDnsDnssecConfig PSFunction_New-AzDnsDnssecConfig PSCommand_New-AzDnsDnssecConfig PSFunction_Remove-AzDnsDnssecConfig PSCommand_Remove-AzDnsDnssecConfig PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.3.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -186,7 +186,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.Dns\1.3.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Dns\1.3.1</S>
     </MS>
   </Obj>
 </Objs>

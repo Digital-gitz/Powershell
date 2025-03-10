@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:12:02-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:47.731799-05:00</DT>
+        <DT>2025-03-09T18:20:27.7535735-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -94,11 +94,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -139,15 +143,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -194,15 +194,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6225398</S>
-          <S N="downloadCount">79860196</S>
+          <S N="versionDownloadCount">7067342</S>
+          <S N="downloadCount">80919728</S>
           <S N="packageSize">926983</S>
           <S N="published">1/14/2025 3:12:02 AM -05:00</S>
           <S N="created">1/14/2025 3:12:02 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule CloudService PSEdition_Core PSEdition_Desktop PSFunction_Get-AzCloudService PSCommand_Get-AzCloudService PSFunction_Get-AzCloudServiceInstanceView PSCommand_Get-AzCloudServiceInstanceView PSFunction_Get-AzCloudServiceNetworkInterface PSCommand_Get-AzCloudServiceNetworkInterface PSFunction_Get-AzCloudServiceOSFamily PSCommand_Get-AzCloudServiceOSFamily PSFunction_Get-AzCloudServiceOSVersion PSCommand_Get-AzCloudServiceOSVersion PSFunction_Get-AzCloudServicePublicIPAddress PSCommand_Get-AzCloudServicePublicIPAddress PSFunction_Get-AzCloudServiceRoleInstance PSCommand_Get-AzCloudServiceRoleInstance PSFunction_Get-AzCloudServiceRoleInstanceRemoteDesktopFile PSCommand_Get-AzCloudServiceRoleInstanceRemoteDesktopFile PSFunction_Get-AzCloudServiceRoleInstanceView PSCommand_Get-AzCloudServiceRoleInstanceView PSFunction_Invoke-AzCloudServiceRebuild PSCommand_Invoke-AzCloudServiceRebuild PSFunction_Invoke-AzCloudServiceReimage PSCommand_Invoke-AzCloudServiceReimage PSFunction_Invoke-AzCloudServiceRoleInstanceRebuild PSCommand_Invoke-AzCloudServiceRoleInstanceRebuild PSFunction_Invoke-AzCloudServiceRoleInstanceReimage PSCommand_Invoke-AzCloudServiceRoleInstanceReimage PSFunction_New-AzCloudService PSCommand_New-AzCloudService PSFunction_New-AzCloudServiceDiagnosticsExtension PSCommand_New-AzCloudServiceDiagnosticsExtension PSFunction_New-AzCloudServiceExtensionObject PSCommand_New-AzCloudServiceExtensionObject PSFunction_New-AzCloudServiceLoadBalancerConfigurationObject PSCommand_New-AzCloudServiceLoadBalancerConfigurationObject PSFunction_New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject PSCommand_New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject PSFunction_New-AzCloudServiceRemoteDesktopExtensionObject PSCommand_New-AzCloudServiceRemoteDesktopExtensionObject PSFunction_New-AzCloudServiceRoleProfilePropertiesObject PSCommand_New-AzCloudServiceRoleProfilePropertiesObject PSFunction_New-AzCloudServiceVaultSecretGroupObject PSCommand_New-AzCloudServiceVaultSecretGroupObject PSFunction_Remove-AzCloudService PSCommand_Remove-AzCloudService PSFunction_Remove-AzCloudServiceRoleInstance PSCommand_Remove-AzCloudServiceRoleInstance PSFunction_Restart-AzCloudService PSCommand_Restart-AzCloudService PSFunction_Restart-AzCloudServiceRoleInstance PSCommand_Restart-AzCloudServiceRoleInstance PSFunction_Set-AzCloudServiceUpdateDomain PSCommand_Set-AzCloudServiceUpdateDomain PSFunction_Start-AzCloudService PSCommand_Start-AzCloudService PSFunction_Stop-AzCloudService PSCommand_Stop-AzCloudService PSFunction_Switch-AzCloudService PSCommand_Switch-AzCloudService PSFunction_Update-AzCloudService PSCommand_Update-AzCloudService PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -214,7 +214,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.CloudService\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.CloudService\2.1.0</S>
     </MS>
   </Obj>
 </Objs>

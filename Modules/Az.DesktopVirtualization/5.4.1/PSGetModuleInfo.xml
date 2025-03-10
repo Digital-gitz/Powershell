@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:13:49-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:00.5926687-05:00</DT>
+        <DT>2025-03-09T18:20:46.9511243-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -121,11 +121,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -193,15 +197,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -248,15 +248,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6449515</S>
-          <S N="downloadCount">104184199</S>
+          <S N="versionDownloadCount">7275420</S>
+          <S N="downloadCount">105255473</S>
           <S N="packageSize">1396910</S>
           <S N="published">1/14/2025 3:13:49 AM -05:00</S>
           <S N="created">1/14/2025 3:13:49 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule DesktopVirtualization PSEdition_Core PSEdition_Desktop PSFunction_Disconnect-AzWvdUserSession PSCommand_Disconnect-AzWvdUserSession PSFunction_Expand-AzWvdMsixImage PSCommand_Expand-AzWvdMsixImage PSFunction_Get-AzWvdAppAttachPackage PSCommand_Get-AzWvdAppAttachPackage PSFunction_Get-AzWvdApplication PSCommand_Get-AzWvdApplication PSFunction_Get-AzWvdApplicationGroup PSCommand_Get-AzWvdApplicationGroup PSFunction_Get-AzWvdDesktop PSCommand_Get-AzWvdDesktop PSFunction_Get-AzWvdHostPool PSCommand_Get-AzWvdHostPool PSFunction_Get-AzWvdHostPoolRegistrationToken PSCommand_Get-AzWvdHostPoolRegistrationToken PSFunction_Get-AzWvdMsixPackage PSCommand_Get-AzWvdMsixPackage PSFunction_Get-AzWvdPrivateEndpointConnection PSCommand_Get-AzWvdPrivateEndpointConnection PSFunction_Get-AzWvdPrivateLinkResource PSCommand_Get-AzWvdPrivateLinkResource PSFunction_Get-AzWvdRegistrationInfo PSCommand_Get-AzWvdRegistrationInfo PSFunction_Get-AzWvdScalingPlan PSCommand_Get-AzWvdScalingPlan PSFunction_Get-AzWvdScalingPlanPersonalSchedule PSCommand_Get-AzWvdScalingPlanPersonalSchedule PSFunction_Get-AzWvdScalingPlanPooledSchedule PSCommand_Get-AzWvdScalingPlanPooledSchedule PSFunction_Get-AzWvdSessionHost PSCommand_Get-AzWvdSessionHost PSFunction_Get-AzWvdStartMenuItem PSCommand_Get-AzWvdStartMenuItem PSFunction_Get-AzWvdUserSession PSCommand_Get-AzWvdUserSession PSFunction_Get-AzWvdWorkspace PSCommand_Get-AzWvdWorkspace PSFunction_Import-AzWvdAppAttachPackageInfo PSCommand_Import-AzWvdAppAttachPackageInfo PSFunction_New-AzWvdAppAttachPackage PSCommand_New-AzWvdAppAttachPackage PSFunction_New-AzWvdApplication PSCommand_New-AzWvdApplication PSFunction_New-AzWvdApplicationGroup PSCommand_New-AzWvdApplicationGroup PSFunction_New-AzWvdHostPool PSCommand_New-AzWvdHostPool PSFunction_New-AzWvdMsixPackage PSCommand_New-AzWvdMsixPackage PSFunction_New-AzWvdRegistrationInfo PSCommand_New-AzWvdRegistrationInfo PSFunction_New-AzWvdScalingPlan PSCommand_New-AzWvdScalingPlan PSFunction_New-AzWvdScalingPlanPersonalSchedule PSCommand_New-AzWvdScalingPlanPersonalSchedule PSFunction_New-AzWvdScalingPlanPooledSchedule PSCommand_New-AzWvdScalingPlanPooledSchedule PSFunction_New-AzWvdWorkspace PSCommand_New-AzWvdWorkspace PSFunction_Register-AzWvdApplicationGroup PSCommand_Register-AzWvdApplicationGroup PSFunction_Remove-AzWvdAppAttachPackage PSCommand_Remove-AzWvdAppAttachPackage PSFunction_Remove-AzWvdApplication PSCommand_Remove-AzWvdApplication PSFunction_Remove-AzWvdApplicationGroup PSCommand_Remove-AzWvdApplicationGroup PSFunction_Remove-AzWvdHostPool PSCommand_Remove-AzWvdHostPool PSFunction_Remove-AzWvdMsixPackage PSCommand_Remove-AzWvdMsixPackage PSFunction_Remove-AzWvdPrivateEndpointConnection PSCommand_Remove-AzWvdPrivateEndpointConnection PSFunction_Remove-AzWvdRegistrationInfo PSCommand_Remove-AzWvdRegistrationInfo PSFunction_Remove-AzWvdScalingPlan PSCommand_Remove-AzWvdScalingPlan PSFunction_Remove-AzWvdScalingPlanPersonalSchedule PSCommand_Remove-AzWvdScalingPlanPersonalSchedule PSFunction_Remove-AzWvdScalingPlanPooledSchedule PSCommand_Remove-AzWvdScalingPlanPooledSchedule PSFunction_Remove-AzWvdSessionHost PSCommand_Remove-AzWvdSessionHost PSFunction_Remove-AzWvdUserSession PSCommand_Remove-AzWvdUserSession PSFunction_Remove-AzWvdWorkspace PSCommand_Remove-AzWvdWorkspace PSFunction_Send-AzWvdUserSessionMessage PSCommand_Send-AzWvdUserSessionMessage PSFunction_Unregister-AzWvdApplicationGroup PSCommand_Unregister-AzWvdApplicationGroup PSFunction_Update-AzWvdAppAttachPackage PSCommand_Update-AzWvdAppAttachPackage PSFunction_Update-AzWvdApplication PSCommand_Update-AzWvdApplication PSFunction_Update-AzWvdApplicationGroup PSCommand_Update-AzWvdApplicationGroup PSFunction_Update-AzWvdDesktop PSCommand_Update-AzWvdDesktop PSFunction_Update-AzWvdHostPool PSCommand_Update-AzWvdHostPool PSFunction_Update-AzWvdMsixPackage PSCommand_Update-AzWvdMsixPackage PSFunction_Update-AzWvdScalingPlan PSCommand_Update-AzWvdScalingPlan PSFunction_Update-AzWvdScalingPlanPersonalSchedule PSCommand_Update-AzWvdScalingPlanPersonalSchedule PSFunction_Update-AzWvdScalingPlanPooledSchedule PSCommand_Update-AzWvdScalingPlanPooledSchedule PSFunction_Update-AzWvdSessionHost PSCommand_Update-AzWvdSessionHost PSFunction_Update-AzWvdWorkspace PSCommand_Update-AzWvdWorkspace PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">5.4.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -268,7 +268,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.DesktopVirtualization\5.4.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DesktopVirtualization\5.4.1</S>
     </MS>
   </Obj>
 </Objs>

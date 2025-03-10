@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:18:05-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:34.1190083-05:00</DT>
+        <DT>2025-03-09T18:21:29.6879171-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -95,11 +95,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -141,15 +145,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -196,15 +196,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5346299</S>
-          <S N="downloadCount">16905319</S>
+          <S N="versionDownloadCount">6109866</S>
+          <S N="downloadCount">17716815</S>
           <S N="packageSize">1130766</S>
           <S N="published">1/14/2025 3:18:05 AM -05:00</S>
           <S N="created">1/14/2025 3:18:05 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule {ModuleNamePlaceHolder} PSEdition_Core PSEdition_Desktop PSFunction_Add-AzOracleCloudVMClusterVM PSCommand_Add-AzOracleCloudVMClusterVM PSFunction_Get-AzOracleAutonomousDatabase PSCommand_Get-AzOracleAutonomousDatabase PSFunction_Get-AzOracleAutonomousDatabaseBackup PSCommand_Get-AzOracleAutonomousDatabaseBackup PSFunction_Get-AzOracleAutonomousDatabaseCharacterSet PSCommand_Get-AzOracleAutonomousDatabaseCharacterSet PSFunction_Get-AzOracleAutonomousDatabaseNationalCharacterSet PSCommand_Get-AzOracleAutonomousDatabaseNationalCharacterSet PSFunction_Get-AzOracleAutonomousDatabaseVersion PSCommand_Get-AzOracleAutonomousDatabaseVersion PSFunction_Get-AzOracleCloudExadataInfrastructure PSCommand_Get-AzOracleCloudExadataInfrastructure PSFunction_Get-AzOracleCloudVMCluster PSCommand_Get-AzOracleCloudVMCluster PSFunction_Get-AzOracleDbNode PSCommand_Get-AzOracleDbNode PSFunction_Get-AzOracleDbServer PSCommand_Get-AzOracleDbServer PSFunction_Get-AzOracleDbSystemShape PSCommand_Get-AzOracleDbSystemShape PSFunction_Get-AzOracleDnsPrivateView PSCommand_Get-AzOracleDnsPrivateView PSFunction_Get-AzOracleDnsPrivateZone PSCommand_Get-AzOracleDnsPrivateZone PSFunction_Get-AzOracleGiVersion PSCommand_Get-AzOracleGiVersion PSFunction_Invoke-AzOracleActionDbNode PSCommand_Invoke-AzOracleActionDbNode PSFunction_Invoke-AzOracleSwitchoverAutonomousDatabase PSCommand_Invoke-AzOracleSwitchoverAutonomousDatabase PSFunction_New-AzOracleAutonomousDatabase PSCommand_New-AzOracleAutonomousDatabase PSFunction_New-AzOracleAutonomousDatabaseBackup PSCommand_New-AzOracleAutonomousDatabaseBackup PSFunction_New-AzOracleCloudExadataInfrastructure PSCommand_New-AzOracleCloudExadataInfrastructure PSFunction_New-AzOracleCloudVMCluster PSCommand_New-AzOracleCloudVMCluster PSFunction_New-AzOracleCustomerContactObject PSCommand_New-AzOracleCustomerContactObject PSFunction_New-AzOracleNsgCidrObject PSCommand_New-AzOracleNsgCidrObject PSFunction_Remove-AzOracleAutonomousDatabase PSCommand_Remove-AzOracleAutonomousDatabase PSFunction_Remove-AzOracleAutonomousDatabaseBackup PSCommand_Remove-AzOracleAutonomousDatabaseBackup PSFunction_Remove-AzOracleCloudExadataInfrastructure PSCommand_Remove-AzOracleCloudExadataInfrastructure PSFunction_Remove-AzOracleCloudVMCluster PSCommand_Remove-AzOracleCloudVMCluster PSFunction_Remove-AzOracleCloudVMClusterVM PSCommand_Remove-AzOracleCloudVMClusterVM PSFunction_Restore-AzOracleAutonomousDatabase PSCommand_Restore-AzOracleAutonomousDatabase PSFunction_Update-AzOracleAutonomousDatabase PSCommand_Update-AzOracleAutonomousDatabase PSFunction_Update-AzOracleCloudExadataInfrastructure PSCommand_Update-AzOracleCloudExadataInfrastructure PSFunction_Update-AzOracleCloudVMCluster PSCommand_Update-AzOracleCloudVMCluster PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -216,7 +216,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.Oracle\1.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Oracle\1.1.0</S>
     </MS>
   </Obj>
 </Objs>

@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:20:37-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:31:01.3511617-05:00</DT>
+        <DT>2025-03-09T18:22:02.7376976-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -91,11 +91,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -133,15 +137,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -188,15 +188,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6039896</S>
-          <S N="downloadCount">102177191</S>
+          <S N="versionDownloadCount">6837641</S>
+          <S N="downloadCount">103213397</S>
           <S N="packageSize">774251</S>
           <S N="published">1/14/2025 3:20:37 AM -05:00</S>
           <S N="created">1/14/2025 3:20:37 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM Support PSModule PSEdition_Core PSEdition_Desktop PSFunction_Get-AzSupportChatTranscript PSCommand_Get-AzSupportChatTranscript PSFunction_Get-AzSupportChatTranscriptsNoSubscription PSCommand_Get-AzSupportChatTranscriptsNoSubscription PSFunction_Get-AzSupportCommunication PSCommand_Get-AzSupportCommunication PSFunction_Get-AzSupportCommunicationsNoSubscription PSCommand_Get-AzSupportCommunicationsNoSubscription PSFunction_Get-AzSupportFile PSCommand_Get-AzSupportFile PSFunction_Get-AzSupportFilesNoSubscription PSCommand_Get-AzSupportFilesNoSubscription PSFunction_Get-AzSupportFileWorkspace PSCommand_Get-AzSupportFileWorkspace PSFunction_Get-AzSupportFileWorkspacesNoSubscription PSCommand_Get-AzSupportFileWorkspacesNoSubscription PSFunction_Get-AzSupportOperation PSCommand_Get-AzSupportOperation PSFunction_Get-AzSupportProblemClassification PSCommand_Get-AzSupportProblemClassification PSFunction_Get-AzSupportService PSCommand_Get-AzSupportService PSFunction_Get-AzSupportTicket PSCommand_Get-AzSupportTicket PSFunction_Get-AzSupportTicketsNoSubscription PSCommand_Get-AzSupportTicketsNoSubscription PSFunction_New-AzSupportCommunication PSCommand_New-AzSupportCommunication PSFunction_New-AzSupportCommunicationsNoSubscription PSCommand_New-AzSupportCommunicationsNoSubscription PSFunction_New-AzSupportFileAndUpload PSCommand_New-AzSupportFileAndUpload PSFunction_New-AzSupportFileAndUploadNoSubscription PSCommand_New-AzSupportFileAndUploadNoSubscription PSFunction_New-AzSupportFileWorkspace PSCommand_New-AzSupportFileWorkspace PSFunction_New-AzSupportFileWorkspacesNoSubscription PSCommand_New-AzSupportFileWorkspacesNoSubscription PSFunction_New-AzSupportTicket PSCommand_New-AzSupportTicket PSFunction_New-AzSupportTicketsNoSubscription PSCommand_New-AzSupportTicketsNoSubscription PSFunction_Test-AzSupportCommunicationNameAvailability PSCommand_Test-AzSupportCommunicationNameAvailability PSFunction_Test-AzSupportCommunicationsNoSubscriptionNameAvailability PSCommand_Test-AzSupportCommunicationsNoSubscriptionNameAvailability PSFunction_Test-AzSupportTicketNameAvailability PSCommand_Test-AzSupportTicketNameAvailability PSFunction_Test-AzSupportTicketsNoSubscriptionNameAvailability PSCommand_Test-AzSupportTicketsNoSubscriptionNameAvailability PSFunction_Update-AzSupportTicket PSCommand_Update-AzSupportTicket PSFunction_Update-AzSupportTicketsNoSubscription PSCommand_Update-AzSupportTicketsNoSubscription PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:20:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -208,7 +208,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.Support\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Support\2.1.0</S>
     </MS>
   </Obj>
 </Objs>

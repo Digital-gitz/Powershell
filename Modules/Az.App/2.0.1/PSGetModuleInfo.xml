@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:10:56-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:38.2881678-05:00</DT>
+        <DT>2025-03-09T18:20:13.7593243-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -163,11 +163,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -277,15 +281,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -332,15 +332,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6077396</S>
-          <S N="downloadCount">38804384</S>
+          <S N="versionDownloadCount">6890261</S>
+          <S N="downloadCount">39706779</S>
           <S N="packageSize">1929577</S>
           <S N="published">1/14/2025 3:10:56 AM -05:00</S>
           <S N="created">1/14/2025 3:10:56 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule App PSEdition_Core PSEdition_Desktop PSFunction_Disable-AzContainerAppRevision PSCommand_Disable-AzContainerAppRevision PSFunction_Enable-AzContainerAppRevision PSCommand_Enable-AzContainerAppRevision PSFunction_Get-AzContainerApp PSCommand_Get-AzContainerApp PSFunction_Get-AzContainerAppAuthConfig PSCommand_Get-AzContainerAppAuthConfig PSFunction_Get-AzContainerAppAuthToken PSCommand_Get-AzContainerAppAuthToken PSFunction_Get-AzContainerAppAvailableWorkloadProfile PSCommand_Get-AzContainerAppAvailableWorkloadProfile PSFunction_Get-AzContainerAppBillingMeter PSCommand_Get-AzContainerAppBillingMeter PSFunction_Get-AzContainerAppConnectedEnv PSCommand_Get-AzContainerAppConnectedEnv PSFunction_Get-AzContainerAppConnectedEnvCert PSCommand_Get-AzContainerAppConnectedEnvCert PSFunction_Get-AzContainerAppConnectedEnvDapr PSCommand_Get-AzContainerAppConnectedEnvDapr PSFunction_Get-AzContainerAppConnectedEnvDaprSecret PSCommand_Get-AzContainerAppConnectedEnvDaprSecret PSFunction_Get-AzContainerAppConnectedEnvStorage PSCommand_Get-AzContainerAppConnectedEnvStorage PSFunction_Get-AzContainerAppCustomHostName PSCommand_Get-AzContainerAppCustomHostName PSFunction_Get-AzContainerAppDiagnosticDetector PSCommand_Get-AzContainerAppDiagnosticDetector PSFunction_Get-AzContainerAppDiagnosticRevision PSCommand_Get-AzContainerAppDiagnosticRevision PSFunction_Get-AzContainerAppDiagnosticRoot PSCommand_Get-AzContainerAppDiagnosticRoot PSFunction_Get-AzContainerAppJob PSCommand_Get-AzContainerAppJob PSFunction_Get-AzContainerAppJobExecution PSCommand_Get-AzContainerAppJobExecution PSFunction_Get-AzContainerAppJobSecret PSCommand_Get-AzContainerAppJobSecret PSFunction_Get-AzContainerAppManagedCert PSCommand_Get-AzContainerAppManagedCert PSFunction_Get-AzContainerAppManagedEnv PSCommand_Get-AzContainerAppManagedEnv PSFunction_Get-AzContainerAppManagedEnvAuthToken PSCommand_Get-AzContainerAppManagedEnvAuthToken PSFunction_Get-AzContainerAppManagedEnvCert PSCommand_Get-AzContainerAppManagedEnvCert PSFunction_Get-AzContainerAppManagedEnvDapr PSCommand_Get-AzContainerAppManagedEnvDapr PSFunction_Get-AzContainerAppManagedEnvDaprSecret PSCommand_Get-AzContainerAppManagedEnvDaprSecret PSFunction_Get-AzContainerAppManagedEnvDiagnosticDetector PSCommand_Get-AzContainerAppManagedEnvDiagnosticDetector PSFunction_Get-AzContainerAppManagedEnvDiagnosticRoot PSCommand_Get-AzContainerAppManagedEnvDiagnosticRoot PSFunction_Get-AzContainerAppManagedEnvStorage PSCommand_Get-AzContainerAppManagedEnvStorage PSFunction_Get-AzContainerAppManagedEnvWorkloadProfileState PSCommand_Get-AzContainerAppManagedEnvWorkloadProfileState PSFunction_Get-AzContainerAppRevision PSCommand_Get-AzContainerAppRevision PSFunction_Get-AzContainerAppRevisionReplica PSCommand_Get-AzContainerAppRevisionReplica PSFunction_Get-AzContainerAppSecret PSCommand_Get-AzContainerAppSecret PSFunction_Get-AzContainerAppSourceControl PSCommand_Get-AzContainerAppSourceControl PSFunction_New-AzContainerApp PSCommand_New-AzContainerApp PSFunction_New-AzContainerAppAuthConfig PSCommand_New-AzContainerAppAuthConfig PSFunction_New-AzContainerAppConfigurationObject PSCommand_New-AzContainerAppConfigurationObject PSFunction_New-AzContainerAppConnectedEnv PSCommand_New-AzContainerAppConnectedEnv PSFunction_New-AzContainerAppConnectedEnvCert PSCommand_New-AzContainerAppConnectedEnvCert PSFunction_New-AzContainerAppConnectedEnvDapr PSCommand_New-AzContainerAppConnectedEnvDapr PSFunction_New-AzContainerAppConnectedEnvStorage PSCommand_New-AzContainerAppConnectedEnvStorage PSFunction_New-AzContainerAppCustomDomainObject PSCommand_New-AzContainerAppCustomDomainObject PSFunction_New-AzContainerAppDaprMetadataObject PSCommand_New-AzContainerAppDaprMetadataObject PSFunction_New-AzContainerAppEnvironmentVarObject PSCommand_New-AzContainerAppEnvironmentVarObject PSFunction_New-AzContainerAppIdentityProviderObject PSCommand_New-AzContainerAppIdentityProviderObject PSFunction_New-AzContainerAppInitContainerTemplateObject PSCommand_New-AzContainerAppInitContainerTemplateObject PSFunction_New-AzContainerAppIPSecurityRestrictionRuleObject PSCommand_New-AzContainerAppIPSecurityRestrictionRuleObject PSFunction_New-AzContainerAppJob PSCommand_New-AzContainerAppJob PSFunction_New-AzContainerAppJobExecutionContainerObject PSCommand_New-AzContainerAppJobExecutionContainerObject PSFunction_New-AzContainerAppJobScaleRuleObject PSCommand_New-AzContainerAppJobScaleRuleObject PSFunction_New-AzContainerAppManagedCert PSCommand_New-AzContainerAppManagedCert PSFunction_New-AzContainerAppManagedEnv PSCommand_New-AzContainerAppManagedEnv PSFunction_New-AzContainerAppManagedEnvCert PSCommand_New-AzContainerAppManagedEnvCert PSFunction_New-AzContainerAppManagedEnvDapr PSCommand_New-AzContainerAppManagedEnvDapr PSFunction_New-AzContainerAppManagedEnvStorage PSCommand_New-AzContainerAppManagedEnvStorage PSFunction_New-AzContainerAppProbeHeaderObject PSCommand_New-AzContainerAppProbeHeaderObject PSFunction_New-AzContainerAppProbeObject PSCommand_New-AzContainerAppProbeObject PSFunction_New-AzContainerAppRegistryCredentialObject PSCommand_New-AzContainerAppRegistryCredentialObject PSFunction_New-AzContainerAppScaleRuleAuthObject PSCommand_New-AzContainerAppScaleRuleAuthObject PSFunction_New-AzContainerAppScaleRuleObject PSCommand_New-AzContainerAppScaleRuleObject PSFunction_New-AzContainerAppSecretObject PSCommand_New-AzContainerAppSecretObject PSFunction_New-AzContainerAppSecretVolumeItemObject PSCommand_New-AzContainerAppSecretVolumeItemObject PSFunction_New-AzContainerAppServiceBindObject PSCommand_New-AzContainerAppServiceBindObject PSFunction_New-AzContainerAppSourceControl PSCommand_New-AzContainerAppSourceControl PSFunction_New-AzContainerAppTemplateObject PSCommand_New-AzContainerAppTemplateObject PSFunction_New-AzContainerAppTrafficWeightObject PSCommand_New-AzContainerAppTrafficWeightObject PSFunction_New-AzContainerAppVolumeMountObject PSCommand_New-AzContainerAppVolumeMountObject PSFunction_New-AzContainerAppVolumeObject PSCommand_New-AzContainerAppVolumeObject PSFunction_New-AzContainerAppWorkloadProfileObject PSCommand_New-AzContainerAppWorkloadProfileObject PSFunction_Remove-AzContainerApp PSCommand_Remove-AzContainerApp PSFunction_Remove-AzContainerAppAuthConfig PSCommand_Remove-AzContainerAppAuthConfig PSFunction_Remove-AzContainerAppConnectedEnv PSCommand_Remove-AzContainerAppConnectedEnv PSFunction_Remove-AzContainerAppConnectedEnvCert PSCommand_Remove-AzContainerAppConnectedEnvCert PSFunction_Remove-AzContainerAppConnectedEnvDapr PSCommand_Remove-AzContainerAppConnectedEnvDapr PSFunction_Remove-AzContainerAppConnectedEnvStorage PSCommand_Remove-AzContainerAppConnectedEnvStorage PSFunction_Remove-AzContainerAppJob PSCommand_Remove-AzContainerAppJob PSFunction_Remove-AzContainerAppManagedCert PSCommand_Remove-AzContainerAppManagedCert PSFunction_Remove-AzContainerAppManagedEnv PSCommand_Remove-AzContainerAppManagedEnv PSFunction_Remove-AzContainerAppManagedEnvCert PSCommand_Remove-AzContainerAppManagedEnvCert PSFunction_Remove-AzContainerAppManagedEnvDapr PSCommand_Remove-AzContainerAppManagedEnvDapr PSFunction_Remove-AzContainerAppManagedEnvStorage PSCommand_Remove-AzContainerAppManagedEnvStorage PSFunction_Restart-AzContainerAppRevision PSCommand_Restart-AzContainerAppRevision PSFunction_Start-AzContainerApp PSCommand_Start-AzContainerApp PSFunction_Start-AzContainerAppJob PSCommand_Start-AzContainerAppJob PSFunction_Stop-AzContainerApp PSCommand_Stop-AzContainerApp PSFunction_Stop-AzContainerAppJobExecution PSCommand_Stop-AzContainerAppJobExecution PSFunction_Test-AzContainerAppConnectedEnvNameAvailability PSCommand_Test-AzContainerAppConnectedEnvNameAvailability PSFunction_Test-AzContainerAppNamespaceAvailability PSCommand_Test-AzContainerAppNamespaceAvailability PSFunction_Update-AzContainerApp PSCommand_Update-AzContainerApp PSFunction_Update-AzContainerAppAuthConfig PSCommand_Update-AzContainerAppAuthConfig PSFunction_Update-AzContainerAppConnectedEnvCert PSCommand_Update-AzContainerAppConnectedEnvCert PSFunction_Update-AzContainerAppConnectedEnvDapr PSCommand_Update-AzContainerAppConnectedEnvDapr PSFunction_Update-AzContainerAppConnectedEnvStorage PSCommand_Update-AzContainerAppConnectedEnvStorage PSFunction_Update-AzContainerAppJob PSCommand_Update-AzContainerAppJob PSFunction_Update-AzContainerAppManagedCert PSCommand_Update-AzContainerAppManagedCert PSFunction_Update-AzContainerAppManagedEnv PSCommand_Update-AzContainerAppManagedEnv PSFunction_Update-AzContainerAppManagedEnvCert PSCommand_Update-AzContainerAppManagedEnvCert PSFunction_Update-AzContainerAppManagedEnvDapr PSCommand_Update-AzContainerAppManagedEnvDapr PSFunction_Update-AzContainerAppManagedEnvStorage PSCommand_Update-AzContainerAppManagedEnvStorage PSFunction_Update-AzContainerAppSourceControl PSCommand_Update-AzContainerAppSourceControl PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.0.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -352,7 +352,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.App\2.0.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.App\2.0.1</S>
     </MS>
   </Obj>
 </Objs>

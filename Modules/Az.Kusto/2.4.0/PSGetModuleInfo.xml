@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:16:04-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:15.9576997-05:00</DT>
+        <DT>2025-03-09T18:21:06.5774896-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -133,11 +133,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -217,15 +221,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -272,15 +272,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Added new cmdlets_x000D__x000A_    - 'Add-AzKustoClusterCalloutPolicy'_x000D__x000A_    - 'Get-AzKustoClusterCalloutPolicy'_x000D__x000A_    - 'Remove-AzKustoClusterCalloutPolicy'_x000D__x000A_    - 'Get-AzKustoClusterFollowerDatabaseGet'</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6170653</S>
-          <S N="downloadCount">98139839</S>
+          <S N="versionDownloadCount">6977958</S>
+          <S N="downloadCount">99187752</S>
           <S N="packageSize">1131215</S>
           <S N="published">1/14/2025 3:16:04 AM -05:00</S>
           <S N="created">1/14/2025 3:16:04 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule Kusto PSEdition_Core PSEdition_Desktop PSFunction_Add-AzKustoClusterCalloutPolicy PSCommand_Add-AzKustoClusterCalloutPolicy PSFunction_Add-AzKustoClusterLanguageExtension PSCommand_Add-AzKustoClusterLanguageExtension PSFunction_Add-AzKustoDatabasePrincipal PSCommand_Add-AzKustoDatabasePrincipal PSFunction_Get-AzKustoAttachedDatabaseConfiguration PSCommand_Get-AzKustoAttachedDatabaseConfiguration PSFunction_Get-AzKustoCluster PSCommand_Get-AzKustoCluster PSFunction_Get-AzKustoClusterCalloutPolicy PSCommand_Get-AzKustoClusterCalloutPolicy PSFunction_Get-AzKustoClusterFollowerDatabase PSCommand_Get-AzKustoClusterFollowerDatabase PSFunction_Get-AzKustoClusterFollowerDatabaseGet PSCommand_Get-AzKustoClusterFollowerDatabaseGet PSFunction_Get-AzKustoClusterLanguageExtension PSCommand_Get-AzKustoClusterLanguageExtension PSFunction_Get-AzKustoClusterOutboundNetworkDependencyEndpoint PSCommand_Get-AzKustoClusterOutboundNetworkDependencyEndpoint PSFunction_Get-AzKustoClusterPrincipalAssignment PSCommand_Get-AzKustoClusterPrincipalAssignment PSFunction_Get-AzKustoClusterSku PSCommand_Get-AzKustoClusterSku PSFunction_Get-AzKustoDatabase PSCommand_Get-AzKustoDatabase PSFunction_Get-AzKustoDatabasePrincipal PSCommand_Get-AzKustoDatabasePrincipal PSFunction_Get-AzKustoDatabasePrincipalAssignment PSCommand_Get-AzKustoDatabasePrincipalAssignment PSFunction_Get-AzKustoDataConnection PSCommand_Get-AzKustoDataConnection PSFunction_Get-AzKustoManagedPrivateEndpoint PSCommand_Get-AzKustoManagedPrivateEndpoint PSFunction_Get-AzKustoOperationsResult PSCommand_Get-AzKustoOperationsResult PSFunction_Get-AzKustoOperationsResultLocation PSCommand_Get-AzKustoOperationsResultLocation PSFunction_Get-AzKustoPrivateEndpointConnection PSCommand_Get-AzKustoPrivateEndpointConnection PSFunction_Get-AzKustoPrivateLinkResource PSCommand_Get-AzKustoPrivateLinkResource PSFunction_Get-AzKustoSandboxCustomImage PSCommand_Get-AzKustoSandboxCustomImage PSFunction_Get-AzKustoScript PSCommand_Get-AzKustoScript PSFunction_Get-AzKustoSku PSCommand_Get-AzKustoSku PSFunction_Invoke-AzKustoClusterMigration PSCommand_Invoke-AzKustoClusterMigration PSFunction_Invoke-AzKustoDataConnectionValidation PSCommand_Invoke-AzKustoDataConnectionValidation PSFunction_Invoke-AzKustoDetachClusterFollowerDatabase PSCommand_Invoke-AzKustoDetachClusterFollowerDatabase PSFunction_Invoke-AzKustoDiagnoseClusterVirtualNetwork PSCommand_Invoke-AzKustoDiagnoseClusterVirtualNetwork PSFunction_Invoke-AzKustoInviteDatabaseFollower PSCommand_Invoke-AzKustoInviteDatabaseFollower PSFunction_New-AzKustoAttachedDatabaseConfiguration PSCommand_New-AzKustoAttachedDatabaseConfiguration PSFunction_New-AzKustoCluster PSCommand_New-AzKustoCluster PSFunction_New-AzKustoClusterPrincipalAssignment PSCommand_New-AzKustoClusterPrincipalAssignment PSFunction_New-AzKustoDatabase PSCommand_New-AzKustoDatabase PSFunction_New-AzKustoDatabasePrincipalAssignment PSCommand_New-AzKustoDatabasePrincipalAssignment PSFunction_New-AzKustoDataConnection PSCommand_New-AzKustoDataConnection PSFunction_New-AzKustoManagedPrivateEndpoint PSCommand_New-AzKustoManagedPrivateEndpoint PSFunction_New-AzKustoPrivateEndpointConnection PSCommand_New-AzKustoPrivateEndpointConnection PSFunction_New-AzKustoSandboxCustomImage PSCommand_New-AzKustoSandboxCustomImage PSFunction_New-AzKustoScript PSCommand_New-AzKustoScript PSFunction_Remove-AzKustoAttachedDatabaseConfiguration PSCommand_Remove-AzKustoAttachedDatabaseConfiguration PSFunction_Remove-AzKustoCluster PSCommand_Remove-AzKustoCluster PSFunction_Remove-AzKustoClusterCalloutPolicy PSCommand_Remove-AzKustoClusterCalloutPolicy PSFunction_Remove-AzKustoClusterLanguageExtension PSCommand_Remove-AzKustoClusterLanguageExtension PSFunction_Remove-AzKustoClusterPrincipalAssignment PSCommand_Remove-AzKustoClusterPrincipalAssignment PSFunction_Remove-AzKustoDatabase PSCommand_Remove-AzKustoDatabase PSFunction_Remove-AzKustoDatabasePrincipal PSCommand_Remove-AzKustoDatabasePrincipal PSFunction_Remove-AzKustoDatabasePrincipalAssignment PSCommand_Remove-AzKustoDatabasePrincipalAssignment PSFunction_Remove-AzKustoDataConnection PSCommand_Remove-AzKustoDataConnection PSFunction_Remove-AzKustoManagedPrivateEndpoint PSCommand_Remove-AzKustoManagedPrivateEndpoint PSFunction_Remove-AzKustoPrivateEndpointConnection PSCommand_Remove-AzKustoPrivateEndpointConnection PSFunction_Remove-AzKustoSandboxCustomImage PSCommand_Remove-AzKustoSandboxCustomImage PSFunction_Remove-AzKustoScript PSCommand_Remove-AzKustoScript PSFunction_Start-AzKustoCluster PSCommand_Start-AzKustoCluster PSFunction_Stop-AzKustoCluster PSCommand_Stop-AzKustoCluster PSFunction_Test-AzKustoAttachedDatabaseConfigurationNameAvailability PSCommand_Test-AzKustoAttachedDatabaseConfigurationNameAvailability PSFunction_Test-AzKustoClusterNameAvailability PSCommand_Test-AzKustoClusterNameAvailability PSFunction_Test-AzKustoClusterPrincipalAssignmentNameAvailability PSCommand_Test-AzKustoClusterPrincipalAssignmentNameAvailability PSFunction_Test-AzKustoDatabaseNameAvailability PSCommand_Test-AzKustoDatabaseNameAvailability PSFunction_Test-AzKustoDatabasePrincipalAssignmentNameAvailability PSCommand_Test-AzKustoDatabasePrincipalAssignmentNameAvailability PSFunction_Test-AzKustoDataConnectionNameAvailability PSCommand_Test-AzKustoDataConnectionNameAvailability PSFunction_Test-AzKustoManagedPrivateEndpointNameAvailability PSCommand_Test-AzKustoManagedPrivateEndpointNameAvailability PSFunction_Test-AzKustoSandboxCustomImageNameAvailability PSCommand_Test-AzKustoSandboxCustomImageNameAvailability PSFunction_Test-AzKustoScriptNameAvailability PSCommand_Test-AzKustoScriptNameAvailability PSFunction_Update-AzKustoCluster PSCommand_Update-AzKustoCluster PSFunction_Update-AzKustoDatabase PSCommand_Update-AzKustoDatabase PSFunction_Update-AzKustoDataConnection PSCommand_Update-AzKustoDataConnection PSFunction_Update-AzKustoManagedPrivateEndpoint PSCommand_Update-AzKustoManagedPrivateEndpoint PSFunction_Update-AzKustoSandboxCustomImage PSCommand_Update-AzKustoSandboxCustomImage PSFunction_Update-AzKustoScript PSCommand_Update-AzKustoScript PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.4.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -292,7 +292,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.Kusto\2.4.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Kusto\2.4.0</S>
     </MS>
   </Obj>
 </Objs>

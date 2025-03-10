@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-02-11T02:20:50-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:58.5504523-05:00</DT>
+        <DT>2025-03-09T18:20:44.265976-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -116,11 +116,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -183,15 +187,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -238,15 +238,15 @@
           <S N="releaseNotes">* Updated Help Doc of Get-AzAccessToken Usage in DataProtection</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">2335801</S>
-          <S N="downloadCount">58700601</S>
+          <S N="versionDownloadCount">3141278</S>
+          <S N="downloadCount">59698189</S>
           <S N="packageSize">1372714</S>
           <S N="published">2/11/2025 2:20:50 AM -05:00</S>
           <S N="created">2/11/2025 2:20:50 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule DataProtection PSEdition_Core PSEdition_Desktop PSFunction_Backup-AzDataProtectionBackupInstanceAdhoc PSCommand_Backup-AzDataProtectionBackupInstanceAdhoc PSFunction_Edit-AzDataProtectionPolicyRetentionRuleClientObject PSCommand_Edit-AzDataProtectionPolicyRetentionRuleClientObject PSFunction_Edit-AzDataProtectionPolicyTagClientObject PSCommand_Edit-AzDataProtectionPolicyTagClientObject PSFunction_Edit-AzDataProtectionPolicyTriggerClientObject PSCommand_Edit-AzDataProtectionPolicyTriggerClientObject PSFunction_Find-AzDataProtectionRestorableTimeRange PSCommand_Find-AzDataProtectionRestorableTimeRange PSFunction_Get-AzDataProtectionBackupInstance PSCommand_Get-AzDataProtectionBackupInstance PSFunction_Get-AzDataProtectionBackupInstancesExtensionRouting PSCommand_Get-AzDataProtectionBackupInstancesExtensionRouting PSFunction_Get-AzDataProtectionBackupPolicy PSCommand_Get-AzDataProtectionBackupPolicy PSFunction_Get-AzDataProtectionBackupVault PSCommand_Get-AzDataProtectionBackupVault PSFunction_Get-AzDataProtectionJob PSCommand_Get-AzDataProtectionJob PSFunction_Get-AzDataProtectionOperation PSCommand_Get-AzDataProtectionOperation PSFunction_Get-AzDataProtectionOperationStatus PSCommand_Get-AzDataProtectionOperationStatus PSFunction_Get-AzDataProtectionPolicyTemplate PSCommand_Get-AzDataProtectionPolicyTemplate PSFunction_Get-AzDataProtectionRecoveryPoint PSCommand_Get-AzDataProtectionRecoveryPoint PSFunction_Get-AzDataProtectionResourceGuard PSCommand_Get-AzDataProtectionResourceGuard PSFunction_Get-AzDataProtectionResourceGuardMapping PSCommand_Get-AzDataProtectionResourceGuardMapping PSFunction_Get-AzDataProtectionSoftDeletedBackupInstance PSCommand_Get-AzDataProtectionSoftDeletedBackupInstance PSFunction_Initialize-AzDataProtectionBackupInstance PSCommand_Initialize-AzDataProtectionBackupInstance PSFunction_Initialize-AzDataProtectionRestoreRequest PSCommand_Initialize-AzDataProtectionRestoreRequest PSFunction_New-AzDataProtectionBackupConfigurationClientObject PSCommand_New-AzDataProtectionBackupConfigurationClientObject PSFunction_New-AzDataProtectionBackupInstance PSCommand_New-AzDataProtectionBackupInstance PSFunction_New-AzDataProtectionBackupPolicy PSCommand_New-AzDataProtectionBackupPolicy PSFunction_New-AzDataProtectionBackupVault PSCommand_New-AzDataProtectionBackupVault PSFunction_New-AzDataProtectionBackupVaultStorageSettingObject PSCommand_New-AzDataProtectionBackupVaultStorageSettingObject PSFunction_New-AzDataProtectionPolicyTagCriteriaClientObject PSCommand_New-AzDataProtectionPolicyTagCriteriaClientObject PSFunction_New-AzDataProtectionPolicyTriggerScheduleClientObject PSCommand_New-AzDataProtectionPolicyTriggerScheduleClientObject PSFunction_New-AzDataProtectionResourceGuard PSCommand_New-AzDataProtectionResourceGuard PSFunction_New-AzDataProtectionRestoreConfigurationClientObject PSCommand_New-AzDataProtectionRestoreConfigurationClientObject PSFunction_New-AzDataProtectionRetentionLifeCycleClientObject PSCommand_New-AzDataProtectionRetentionLifeCycleClientObject PSFunction_Remove-AzDataProtectionBackupInstance PSCommand_Remove-AzDataProtectionBackupInstance PSFunction_Remove-AzDataProtectionBackupPolicy PSCommand_Remove-AzDataProtectionBackupPolicy PSFunction_Remove-AzDataProtectionBackupVault PSCommand_Remove-AzDataProtectionBackupVault PSFunction_Remove-AzDataProtectionResourceGuard PSCommand_Remove-AzDataProtectionResourceGuard PSFunction_Remove-AzDataProtectionResourceGuardMapping PSCommand_Remove-AzDataProtectionResourceGuardMapping PSFunction_Resume-AzDataProtectionBackupInstanceProtection PSCommand_Resume-AzDataProtectionBackupInstanceProtection PSFunction_Search-AzDataProtectionBackupInstanceInAzGraph PSCommand_Search-AzDataProtectionBackupInstanceInAzGraph PSFunction_Search-AzDataProtectionBackupVaultInAzGraph PSCommand_Search-AzDataProtectionBackupVaultInAzGraph PSFunction_Search-AzDataProtectionJobInAzGraph PSCommand_Search-AzDataProtectionJobInAzGraph PSFunction_Set-AzDataProtectionMSIPermission PSCommand_Set-AzDataProtectionMSIPermission PSFunction_Set-AzDataProtectionResourceGuardMapping PSCommand_Set-AzDataProtectionResourceGuardMapping PSFunction_Start-AzDataProtectionBackupInstanceRestore PSCommand_Start-AzDataProtectionBackupInstanceRestore PSFunction_Stop-AzDataProtectionBackupInstanceProtection PSCommand_Stop-AzDataProtectionBackupInstanceProtection PSFunction_Suspend-AzDataProtectionBackupInstanceBackup PSCommand_Suspend-AzDataProtectionBackupInstanceBackup PSFunction_Sync-AzDataProtectionBackupInstance PSCommand_Sync-AzDataProtectionBackupInstance PSFunction_Test-AzDataProtectionBackupInstanceReadiness PSCommand_Test-AzDataProtectionBackupInstanceReadiness PSFunction_Test-AzDataProtectionBackupInstanceRestore PSCommand_Test-AzDataProtectionBackupInstanceRestore PSFunction_Undo-AzDataProtectionBackupInstanceDeletion PSCommand_Undo-AzDataProtectionBackupInstanceDeletion PSFunction_Unlock-AzDataProtectionResourceGuardOperation PSCommand_Unlock-AzDataProtectionResourceGuardOperation PSFunction_Update-AzDataProtectionBackupInstance PSCommand_Update-AzDataProtectionBackupInstance PSFunction_Update-AzDataProtectionBackupInstanceAssociatedPolicy PSCommand_Update-AzDataProtectionBackupInstanceAssociatedPolicy PSFunction_Update-AzDataProtectionBackupVault PSCommand_Update-AzDataProtectionBackupVault PSFunction_Update-AzDataProtectionResourceGuard PSCommand_Update-AzDataProtectionResourceGuard PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.6.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -258,7 +258,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.DataProtection\2.6.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DataProtection\2.6.1</S>
     </MS>
   </Obj>
 </Objs>

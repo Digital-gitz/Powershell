@@ -1,0 +1,123 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">kmt.winget.autocomplete</S>
+      <Version N="Version">0.1.0</Version>
+      <S N="Type">Module</S>
+      <S N="Description">enables the winget autocomplete functionality when imported</S>
+      <S N="Author">Kevin Marquette</S>
+      <S N="CompanyName">KevinMarquette</S>
+      <S N="Copyright">(c) Kevin Marquette. All rights reserved.</S>
+      <DT N="PublishedDate">2020-09-23T19:14:21-04:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-03-09T15:08:07.5150767-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/KevinMarquette/winget.autocomplete/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/KevinMarquette/winget.autocomplete</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>autocomplete</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) Kevin Marquette. All rights reserved.</S>
+          <S N="description">enables the winget autocomplete functionality when imported</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">10049</S>
+          <S N="downloadCount">10049</S>
+          <S N="packageSize">5232</S>
+          <S N="published">9/23/2020 7:14:21 PM -04:00</S>
+          <S N="created">9/23/2020 7:14:21 PM -04:00</S>
+          <S N="lastUpdated">3/9/2025 4:10:00 PM -04:00</S>
+          <S N="tags">autocomplete PSModule</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-09T16:10:00Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Kevin Marquette</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">kmt.winget.autocomplete.nuspec|kmt.winget.autocomplete.psd1|kmt.winget.autocomplete.psm1|LICENSE|README.md</S>
+          <S N="GUID">88a13543-d49a-4318-9995-5d42f2618fc4</S>
+          <S N="CompanyName">PowerShellExplained.com</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\kmt.winget.autocomplete\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

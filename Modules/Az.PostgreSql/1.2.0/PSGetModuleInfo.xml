@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:18:24-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:35.7480859-05:00</DT>
+        <DT>2025-03-09T18:21:31.8494259-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -103,11 +103,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -157,15 +161,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -212,15 +212,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6110114</S>
-          <S N="downloadCount">73747347</S>
+          <S N="versionDownloadCount">6911027</S>
+          <S N="downloadCount">74761053</S>
           <S N="packageSize">1162819</S>
           <S N="published">1/14/2025 3:18:24 AM -05:00</S>
           <S N="created">1/14/2025 3:18:24 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule PostgreSql PSEdition_Core PSEdition_Desktop PSFunction_Get-AzPostgreSqlConfiguration PSCommand_Get-AzPostgreSqlConfiguration PSFunction_Get-AzPostgreSqlConnectionString PSCommand_Get-AzPostgreSqlConnectionString PSFunction_Get-AzPostgreSqlFirewallRule PSCommand_Get-AzPostgreSqlFirewallRule PSFunction_Get-AzPostgreSqlFlexibleServer PSCommand_Get-AzPostgreSqlFlexibleServer PSFunction_Get-AzPostgreSqlFlexibleServerConfiguration PSCommand_Get-AzPostgreSqlFlexibleServerConfiguration PSFunction_Get-AzPostgreSqlFlexibleServerConnectionString PSCommand_Get-AzPostgreSqlFlexibleServerConnectionString PSFunction_Get-AzPostgreSqlFlexibleServerDatabase PSCommand_Get-AzPostgreSqlFlexibleServerDatabase PSFunction_Get-AzPostgreSqlFlexibleServerFirewallRule PSCommand_Get-AzPostgreSqlFlexibleServerFirewallRule PSFunction_Get-AzPostgreSqlFlexibleServerLocationBasedCapability PSCommand_Get-AzPostgreSqlFlexibleServerLocationBasedCapability PSFunction_Get-AzPostgreSqlReplica PSCommand_Get-AzPostgreSqlReplica PSFunction_Get-AzPostgreSqlServer PSCommand_Get-AzPostgreSqlServer PSFunction_Get-AzPostgreSqlVirtualNetworkRule PSCommand_Get-AzPostgreSqlVirtualNetworkRule PSFunction_New-AzPostgreSqlFirewallRule PSCommand_New-AzPostgreSqlFirewallRule PSFunction_New-AzPostgreSqlFlexibleServer PSCommand_New-AzPostgreSqlFlexibleServer PSFunction_New-AzPostgreSqlFlexibleServerDatabase PSCommand_New-AzPostgreSqlFlexibleServerDatabase PSFunction_New-AzPostgreSqlFlexibleServerFirewallRule PSCommand_New-AzPostgreSqlFlexibleServerFirewallRule PSFunction_New-AzPostgreSqlReplica PSCommand_New-AzPostgreSqlReplica PSFunction_New-AzPostgreSqlServer PSCommand_New-AzPostgreSqlServer PSFunction_New-AzPostgreSqlVirtualNetworkRule PSCommand_New-AzPostgreSqlVirtualNetworkRule PSFunction_Remove-AzPostgreSqlFirewallRule PSCommand_Remove-AzPostgreSqlFirewallRule PSFunction_Remove-AzPostgreSqlFlexibleServer PSCommand_Remove-AzPostgreSqlFlexibleServer PSFunction_Remove-AzPostgreSqlFlexibleServerDatabase PSCommand_Remove-AzPostgreSqlFlexibleServerDatabase PSFunction_Remove-AzPostgreSqlFlexibleServerFirewallRule PSCommand_Remove-AzPostgreSqlFlexibleServerFirewallRule PSFunction_Remove-AzPostgreSqlServer PSCommand_Remove-AzPostgreSqlServer PSFunction_Remove-AzPostgreSqlVirtualNetworkRule PSCommand_Remove-AzPostgreSqlVirtualNetworkRule PSFunction_Restart-AzPostgreSqlFlexibleServer PSCommand_Restart-AzPostgreSqlFlexibleServer PSFunction_Restart-AzPostgreSqlServer PSCommand_Restart-AzPostgreSqlServer PSFunction_Restore-AzPostgreSqlFlexibleServer PSCommand_Restore-AzPostgreSqlFlexibleServer PSFunction_Restore-AzPostgreSqlServer PSCommand_Restore-AzPostgreSqlServer PSFunction_Start-AzPostgreSqlFlexibleServer PSCommand_Start-AzPostgreSqlFlexibleServer PSFunction_Stop-AzPostgreSqlFlexibleServer PSCommand_Stop-AzPostgreSqlFlexibleServer PSFunction_Test-AzPostgreSqlFlexibleServerConnect PSCommand_Test-AzPostgreSqlFlexibleServerConnect PSFunction_Update-AzPostgreSqlConfiguration PSCommand_Update-AzPostgreSqlConfiguration PSFunction_Update-AzPostgreSqlFirewallRule PSCommand_Update-AzPostgreSqlFirewallRule PSFunction_Update-AzPostgreSqlFlexibleServer PSCommand_Update-AzPostgreSqlFlexibleServer PSFunction_Update-AzPostgreSqlFlexibleServerConfiguration PSCommand_Update-AzPostgreSqlFlexibleServerConfiguration PSFunction_Update-AzPostgreSqlFlexibleServerFirewallRule PSCommand_Update-AzPostgreSqlFlexibleServerFirewallRule PSFunction_Update-AzPostgreSqlServer PSCommand_Update-AzPostgreSqlServer PSFunction_Update-AzPostgreSqlVirtualNetworkRule PSCommand_Update-AzPostgreSqlVirtualNetworkRule PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.2.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -232,7 +232,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.PostgreSql\1.2.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.PostgreSql\1.2.0</S>
     </MS>
   </Obj>
 </Objs>

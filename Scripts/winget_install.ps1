@@ -79,3 +79,24 @@ winget install -e --id Insomnia.Insomnia --silent --accept-package-agreements --
 
 # Upgrade all installed packages
 winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown
+
+
+
+
+@{ Id = "Microsoft.DirectX" },
+Python.Python.3.12
+RevoUninstaller.RevoUninstaller
+voidtools.Everything
+Apple.iCloud
+Inkscape.Inkscape
+Elgato.StreamDeck
+BlenderFoundation.Blender
+GoLang.Go
+OpenJS.NodeJS.LTS
+Rustlang.Rustup
+Odamex.Odamex
+Neovim.Neovim
+SteelSeries.GG
+Nushell.Nushell
+vim.vim
+Docker.DockerDesktop

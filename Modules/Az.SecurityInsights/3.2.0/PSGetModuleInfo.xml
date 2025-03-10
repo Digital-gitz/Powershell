@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:19:31-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:47.496877-05:00</DT>
+        <DT>2025-03-09T18:21:46.4854492-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -126,11 +126,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -203,15 +207,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -258,15 +258,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6081274</S>
-          <S N="downloadCount">79097060</S>
+          <S N="versionDownloadCount">6880496</S>
+          <S N="downloadCount">80120766</S>
           <S N="packageSize">1836946</S>
           <S N="published">1/14/2025 3:19:31 AM -05:00</S>
           <S N="created">1/14/2025 3:19:31 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule SecurityInsights PSEdition_Core PSEdition_Desktop PSFunction_Get-AzSentinelAlertRule PSCommand_Get-AzSentinelAlertRule PSFunction_Get-AzSentinelAlertRuleAction PSCommand_Get-AzSentinelAlertRuleAction PSFunction_Get-AzSentinelAlertRuleTemplate PSCommand_Get-AzSentinelAlertRuleTemplate PSFunction_Get-AzSentinelAutomationRule PSCommand_Get-AzSentinelAutomationRule PSFunction_Get-AzSentinelBookmark PSCommand_Get-AzSentinelBookmark PSFunction_Get-AzSentinelBookmarkRelation PSCommand_Get-AzSentinelBookmarkRelation PSFunction_Get-AzSentinelDataConnector PSCommand_Get-AzSentinelDataConnector PSFunction_Get-AzSentinelEnrichment PSCommand_Get-AzSentinelEnrichment PSFunction_Get-AzSentinelEntity PSCommand_Get-AzSentinelEntity PSFunction_Get-AzSentinelEntityActivity PSCommand_Get-AzSentinelEntityActivity PSFunction_Get-AzSentinelEntityInsight PSCommand_Get-AzSentinelEntityInsight PSFunction_Get-AzSentinelEntityQuery PSCommand_Get-AzSentinelEntityQuery PSFunction_Get-AzSentinelEntityQueryTemplate PSCommand_Get-AzSentinelEntityQueryTemplate PSFunction_Get-AzSentinelEntityRelation PSCommand_Get-AzSentinelEntityRelation PSFunction_Get-AzSentinelEntityTimeline PSCommand_Get-AzSentinelEntityTimeline PSFunction_Get-AzSentinelIncident PSCommand_Get-AzSentinelIncident PSFunction_Get-AzSentinelIncidentAlert PSCommand_Get-AzSentinelIncidentAlert PSFunction_Get-AzSentinelIncidentBookmark PSCommand_Get-AzSentinelIncidentBookmark PSFunction_Get-AzSentinelIncidentComment PSCommand_Get-AzSentinelIncidentComment PSFunction_Get-AzSentinelIncidentEntity PSCommand_Get-AzSentinelIncidentEntity PSFunction_Get-AzSentinelIncidentRelation PSCommand_Get-AzSentinelIncidentRelation PSFunction_Get-AzSentinelMetadata PSCommand_Get-AzSentinelMetadata PSFunction_Get-AzSentinelOnboardingState PSCommand_Get-AzSentinelOnboardingState PSFunction_Get-AzSentinelSetting PSCommand_Get-AzSentinelSetting PSFunction_Get-AzSentinelThreatIntelligenceIndicator PSCommand_Get-AzSentinelThreatIntelligenceIndicator PSFunction_Get-AzSentinelThreatIntelligenceIndicatorMetric PSCommand_Get-AzSentinelThreatIntelligenceIndicatorMetric PSFunction_Invoke-AzSentinelThreatIntelligenceIndicatorQuery PSCommand_Invoke-AzSentinelThreatIntelligenceIndicatorQuery PSFunction_New-AzSentinelAlertRule PSCommand_New-AzSentinelAlertRule PSFunction_New-AzSentinelAlertRuleAction PSCommand_New-AzSentinelAlertRuleAction PSFunction_New-AzSentinelAutomationRule PSCommand_New-AzSentinelAutomationRule PSFunction_New-AzSentinelBookmark PSCommand_New-AzSentinelBookmark PSFunction_New-AzSentinelBookmarkRelation PSCommand_New-AzSentinelBookmarkRelation PSFunction_New-AzSentinelDataConnector PSCommand_New-AzSentinelDataConnector PSFunction_New-AzSentinelEntityQuery PSCommand_New-AzSentinelEntityQuery PSFunction_New-AzSentinelIncident PSCommand_New-AzSentinelIncident PSFunction_New-AzSentinelIncidentComment PSCommand_New-AzSentinelIncidentComment PSFunction_New-AzSentinelIncidentRelation PSCommand_New-AzSentinelIncidentRelation PSFunction_New-AzSentinelIncidentTeam PSCommand_New-AzSentinelIncidentTeam PSFunction_New-AzSentinelOnboardingState PSCommand_New-AzSentinelOnboardingState PSFunction_Remove-AzSentinelAlertRule PSCommand_Remove-AzSentinelAlertRule PSFunction_Remove-AzSentinelAlertRuleAction PSCommand_Remove-AzSentinelAlertRuleAction PSFunction_Remove-AzSentinelAutomationRule PSCommand_Remove-AzSentinelAutomationRule PSFunction_Remove-AzSentinelBookmark PSCommand_Remove-AzSentinelBookmark PSFunction_Remove-AzSentinelBookmarkRelation PSCommand_Remove-AzSentinelBookmarkRelation PSFunction_Remove-AzSentinelDataConnector PSCommand_Remove-AzSentinelDataConnector PSFunction_Remove-AzSentinelEntityQuery PSCommand_Remove-AzSentinelEntityQuery PSFunction_Remove-AzSentinelIncident PSCommand_Remove-AzSentinelIncident PSFunction_Remove-AzSentinelIncidentComment PSCommand_Remove-AzSentinelIncidentComment PSFunction_Remove-AzSentinelIncidentRelation PSCommand_Remove-AzSentinelIncidentRelation PSFunction_Remove-AzSentinelOnboardingState PSCommand_Remove-AzSentinelOnboardingState PSFunction_Test-AzSentinelDataConnectorCheckRequirement PSCommand_Test-AzSentinelDataConnectorCheckRequirement PSFunction_Update-AzSentinelAlertRule PSCommand_Update-AzSentinelAlertRule PSFunction_Update-AzSentinelAlertRuleAction PSCommand_Update-AzSentinelAlertRuleAction PSFunction_Update-AzSentinelAutomationRule PSCommand_Update-AzSentinelAutomationRule PSFunction_Update-AzSentinelBookmark PSCommand_Update-AzSentinelBookmark PSFunction_Update-AzSentinelBookmarkRelation PSCommand_Update-AzSentinelBookmarkRelation PSFunction_Update-AzSentinelDataConnector PSCommand_Update-AzSentinelDataConnector PSFunction_Update-AzSentinelEntityQuery PSCommand_Update-AzSentinelEntityQuery PSFunction_Update-AzSentinelIncident PSCommand_Update-AzSentinelIncident PSFunction_Update-AzSentinelIncidentComment PSCommand_Update-AzSentinelIncidentComment PSFunction_Update-AzSentinelIncidentRelation PSCommand_Update-AzSentinelIncidentRelation PSFunction_Update-AzSentinelSetting PSCommand_Update-AzSentinelSetting PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">3.2.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -278,7 +278,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.SecurityInsights\3.2.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.SecurityInsights\3.2.0</S>
     </MS>
   </Obj>
 </Objs>

@@ -1,0 +1,1 @@
+. $PSScriptRoot\posh-winget.ps1

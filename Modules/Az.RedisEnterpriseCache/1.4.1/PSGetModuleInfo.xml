@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:19:01-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:39.731859-05:00</DT>
+        <DT>2025-03-09T18:21:36.7495976-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -84,11 +84,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -119,15 +123,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -174,15 +174,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">3472271</S>
-          <S N="downloadCount">83507076</S>
+          <S N="versionDownloadCount">4273872</S>
+          <S N="downloadCount">84533616</S>
           <S N="packageSize">707078</S>
           <S N="published">1/14/2025 3:19:01 AM -05:00</S>
           <S N="created">1/14/2025 3:19:01 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule RedisEnterpriseCache PSEdition_Core PSEdition_Desktop PSFunction_Export-AzRedisEnterpriseCache PSCommand_Export-AzRedisEnterpriseCache PSFunction_Get-AzRedisEnterpriseCache PSCommand_Get-AzRedisEnterpriseCache PSFunction_Get-AzRedisEnterpriseCacheAccessPolicyAssignment PSCommand_Get-AzRedisEnterpriseCacheAccessPolicyAssignment PSFunction_Get-AzRedisEnterpriseCacheDatabase PSCommand_Get-AzRedisEnterpriseCacheDatabase PSFunction_Get-AzRedisEnterpriseCacheKey PSCommand_Get-AzRedisEnterpriseCacheKey PSFunction_Get-AzRedisEnterpriseCacheOperationStatus PSCommand_Get-AzRedisEnterpriseCacheOperationStatus PSFunction_Import-AzRedisEnterpriseCache PSCommand_Import-AzRedisEnterpriseCache PSFunction_Invoke-AzRedisEnterpriseCacheDatabaseFlush PSCommand_Invoke-AzRedisEnterpriseCacheDatabaseFlush PSFunction_Invoke-AzRedisEnterpriseCacheForceDatabaseLinkToReplicationGroup PSCommand_Invoke-AzRedisEnterpriseCacheForceDatabaseLinkToReplicationGroup PSFunction_Invoke-AzRedisEnterpriseCacheForceDatabaseUnlink PSCommand_Invoke-AzRedisEnterpriseCacheForceDatabaseUnlink PSFunction_New-AzRedisEnterpriseCache PSCommand_New-AzRedisEnterpriseCache PSFunction_New-AzRedisEnterpriseCacheAccessPolicyAssignment PSCommand_New-AzRedisEnterpriseCacheAccessPolicyAssignment PSFunction_New-AzRedisEnterpriseCacheDatabase PSCommand_New-AzRedisEnterpriseCacheDatabase PSFunction_New-AzRedisEnterpriseCacheKey PSCommand_New-AzRedisEnterpriseCacheKey PSFunction_Remove-AzRedisEnterpriseCache PSCommand_Remove-AzRedisEnterpriseCache PSFunction_Remove-AzRedisEnterpriseCacheAccessPolicyAssignment PSCommand_Remove-AzRedisEnterpriseCacheAccessPolicyAssignment PSFunction_Remove-AzRedisEnterpriseCacheDatabase PSCommand_Remove-AzRedisEnterpriseCacheDatabase PSFunction_Update-AzRedisEnterpriseCache PSCommand_Update-AzRedisEnterpriseCache PSFunction_Update-AzRedisEnterpriseCacheDatabase PSCommand_Update-AzRedisEnterpriseCacheDatabase PSFunction_Update-AzRedisEnterpriseCacheDatabaseDbRedisVersion PSCommand_Update-AzRedisEnterpriseCacheDatabaseDbRedisVersion PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.4.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -194,7 +194,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.RedisEnterpriseCache\1.4.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.RedisEnterpriseCache\1.4.1</S>
     </MS>
   </Obj>
 </Objs>

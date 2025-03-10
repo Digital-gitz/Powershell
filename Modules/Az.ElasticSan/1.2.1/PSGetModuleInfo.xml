@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:14:38-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:05.5298666-05:00</DT>
+        <DT>2025-03-09T18:20:53.3006025-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -83,11 +83,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -117,15 +121,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -172,15 +172,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5901882</S>
-          <S N="downloadCount">33388509</S>
+          <S N="versionDownloadCount">6693169</S>
+          <S N="downloadCount">34267100</S>
           <S N="packageSize">704044</S>
           <S N="published">1/14/2025 3:14:38 AM -05:00</S>
           <S N="created">1/14/2025 3:14:38 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule ElasticSan PSEdition_Core PSEdition_Desktop PSFunction_Add-AzElasticSanVolumeGroupNetworkRule PSCommand_Add-AzElasticSanVolumeGroupNetworkRule PSFunction_Get-AzElasticSan PSCommand_Get-AzElasticSan PSFunction_Get-AzElasticSanSkuList PSCommand_Get-AzElasticSanSkuList PSFunction_Get-AzElasticSanVolume PSCommand_Get-AzElasticSanVolume PSFunction_Get-AzElasticSanVolumeGroup PSCommand_Get-AzElasticSanVolumeGroup PSFunction_Get-AzElasticSanVolumeSnapshot PSCommand_Get-AzElasticSanVolumeSnapshot PSFunction_New-AzElasticSan PSCommand_New-AzElasticSan PSFunction_New-AzElasticSanVirtualNetworkRuleObject PSCommand_New-AzElasticSanVirtualNetworkRuleObject PSFunction_New-AzElasticSanVolume PSCommand_New-AzElasticSanVolume PSFunction_New-AzElasticSanVolumeGroup PSCommand_New-AzElasticSanVolumeGroup PSFunction_New-AzElasticSanVolumeSnapshot PSCommand_New-AzElasticSanVolumeSnapshot PSFunction_Remove-AzElasticSan PSCommand_Remove-AzElasticSan PSFunction_Remove-AzElasticSanVolume PSCommand_Remove-AzElasticSanVolume PSFunction_Remove-AzElasticSanVolumeGroup PSCommand_Remove-AzElasticSanVolumeGroup PSFunction_Remove-AzElasticSanVolumeGroupNetworkRule PSCommand_Remove-AzElasticSanVolumeGroupNetworkRule PSFunction_Remove-AzElasticSanVolumeSnapshot PSCommand_Remove-AzElasticSanVolumeSnapshot PSFunction_Update-AzElasticSan PSCommand_Update-AzElasticSan PSFunction_Update-AzElasticSanVolume PSCommand_Update-AzElasticSanVolume PSFunction_Update-AzElasticSanVolumeGroup PSCommand_Update-AzElasticSanVolumeGroup PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.2.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -192,7 +192,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ElasticSan\1.2.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ElasticSan\1.2.1</S>
     </MS>
   </Obj>
 </Objs>

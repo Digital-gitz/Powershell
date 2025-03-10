@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:16:40-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:22.2186994-05:00</DT>
+        <DT>2025-03-09T18:21:14.5758687-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -74,11 +74,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -99,15 +103,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -154,15 +154,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6135266</S>
-          <S N="downloadCount">108205412</S>
+          <S N="versionDownloadCount">6940975</S>
+          <S N="downloadCount">109255664</S>
           <S N="packageSize">450568</S>
           <S N="published">1/14/2025 3:16:40 AM -05:00</S>
           <S N="created">1/14/2025 3:16:40 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule ManagedServices PSEdition_Core PSEdition_Desktop PSFunction_Get-AzManagedServicesAssignment PSCommand_Get-AzManagedServicesAssignment PSFunction_Get-AzManagedServicesDefinition PSCommand_Get-AzManagedServicesDefinition PSFunction_Get-AzManagedServicesMarketplaceDefinition PSCommand_Get-AzManagedServicesMarketplaceDefinition PSFunction_New-AzManagedServicesAssignment PSCommand_New-AzManagedServicesAssignment PSFunction_New-AzManagedServicesAuthorizationObject PSCommand_New-AzManagedServicesAuthorizationObject PSFunction_New-AzManagedServicesDefinition PSCommand_New-AzManagedServicesDefinition PSFunction_New-AzManagedServicesEligibleApproverObject PSCommand_New-AzManagedServicesEligibleApproverObject PSFunction_New-AzManagedServicesEligibleAuthorizationObject PSCommand_New-AzManagedServicesEligibleAuthorizationObject PSFunction_Remove-AzManagedServicesAssignment PSCommand_Remove-AzManagedServicesAssignment PSFunction_Remove-AzManagedServicesDefinition PSCommand_Remove-AzManagedServicesDefinition PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">3.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -174,7 +174,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.ManagedServices\3.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ManagedServices\3.1.0</S>
     </MS>
   </Obj>
 </Objs>

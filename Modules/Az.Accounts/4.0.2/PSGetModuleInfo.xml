@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-15T06:24:11-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:34.3582379-05:00</DT>
+        <DT>2025-03-09T18:20:06.8129904-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -66,7 +66,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -112,7 +120,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -157,18 +169,6 @@
               </LST>
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
         </DCT>
       </Obj>
       <Nil N="PowerShellGetFormatVersion" />
@@ -192,15 +192,15 @@
           <S N="releaseNotes">* Fixed unsigned dll:_x000D__x000A_    - 'System.Buffers.dll'_x000D__x000A_    - 'System.Memory.dll'</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">36800871</S>
-          <S N="downloadCount">565394661</S>
+          <S N="versionDownloadCount">42959975</S>
+          <S N="downloadCount">571861187</S>
           <S N="packageSize">9958477</S>
           <S N="published">1/15/2025 6:24:11 AM -05:00</S>
           <S N="created">1/15/2025 6:24:11 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM Accounts Authentication Environment Subscription PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Disable-AzDataCollection PSCommand_Disable-AzDataCollection PSCmdlet_Disable-AzContextAutosave PSCommand_Disable-AzContextAutosave PSCmdlet_Enable-AzDataCollection PSCommand_Enable-AzDataCollection PSCmdlet_Enable-AzContextAutosave PSCommand_Enable-AzContextAutosave PSCmdlet_Remove-AzEnvironment PSCommand_Remove-AzEnvironment PSCmdlet_Get-AzEnvironment PSCommand_Get-AzEnvironment PSCmdlet_Set-AzEnvironment PSCommand_Set-AzEnvironment PSCmdlet_Add-AzEnvironment PSCommand_Add-AzEnvironment PSCmdlet_Get-AzSubscription PSCommand_Get-AzSubscription PSCmdlet_Connect-AzAccount PSCommand_Connect-AzAccount PSCmdlet_Get-AzContext PSCommand_Get-AzContext PSCmdlet_Set-AzContext PSCommand_Set-AzContext PSCmdlet_Import-AzContext PSCommand_Import-AzContext PSCmdlet_Save-AzContext PSCommand_Save-AzContext PSCmdlet_Get-AzTenant PSCommand_Get-AzTenant PSCmdlet_Send-Feedback PSCommand_Send-Feedback PSCmdlet_Resolve-AzError PSCommand_Resolve-AzError PSCmdlet_Select-AzContext PSCommand_Select-AzContext PSCmdlet_Rename-AzContext PSCommand_Rename-AzContext PSCmdlet_Remove-AzContext PSCommand_Remove-AzContext PSCmdlet_Clear-AzContext PSCommand_Clear-AzContext PSCmdlet_Disconnect-AzAccount PSCommand_Disconnect-AzAccount PSCmdlet_Get-AzContextAutosaveSetting PSCommand_Get-AzContextAutosaveSetting PSCmdlet_Set-AzDefault PSCommand_Set-AzDefault PSCmdlet_Get-AzDefault PSCommand_Get-AzDefault PSCmdlet_Clear-AzDefault PSCommand_Clear-AzDefault PSCmdlet_Register-AzModule PSCommand_Register-AzModule PSCmdlet_Enable-AzureRmAlias PSCommand_Enable-AzureRmAlias PSCmdlet_Disable-AzureRmAlias PSCommand_Disable-AzureRmAlias PSCmdlet_Uninstall-AzureRm PSCommand_Uninstall-AzureRm PSCmdlet_Invoke-AzRestMethod PSCommand_Invoke-AzRestMethod PSCmdlet_Get-AzAccessToken PSCommand_Get-AzAccessToken PSCmdlet_Open-AzSurveyLink PSCommand_Open-AzSurveyLink PSCmdlet_Get-AzConfig PSCommand_Get-AzConfig PSCmdlet_Update-AzConfig PSCommand_Update-AzConfig PSCmdlet_Clear-AzConfig PSCommand_Clear-AzConfig PSCmdlet_Export-AzConfig PSCommand_Export-AzConfig PSCmdlet_Import-AzConfig PSCommand_Import-AzConfig PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">4.0.2</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -212,7 +212,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.Accounts\4.0.2</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Accounts\4.0.2</S>
     </MS>
   </Obj>
 </Objs>

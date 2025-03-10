@@ -1,0 +1,439 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">GoogleCloud</S>
+      <Version N="Version">1.0.1.10</Version>
+      <S N="Type">Module</S>
+      <S N="Description">PowerShell cmdlets for the Google Cloud Platform.</S>
+      <S N="Author">Google Inc</S>
+      <S N="CompanyName">google_cloud_tools</S>
+      <S N="Copyright">Google Inc. All rights reserved.</S>
+      <DT N="PublishedDate">2018-09-17T22:43:33-04:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-03-09T18:21:42.963363-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/GoogleCloudPlatform/google-cloud-powershell/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/GoogleCloudPlatform/google-cloud-powershell</URI>
+      <URI N="IconUri">https://raw.githubusercontent.com/GoogleCloudPlatform/google-cloud-powershell/master/Assets/LOGO.png</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Google</S>
+          <S>Cloud</S>
+          <S>Compute</S>
+          <S>Storage</S>
+          <S>GCS</S>
+          <S>GCE</S>
+          <S>SQL</S>
+          <S>DNS</S>
+          <S>PubSub</S>
+          <S>Logging</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-GcsBucketAcl</S>
+                <S>Get-GcsBucketAcl</S>
+                <S>Remove-GcsBucketAcl</S>
+                <S>Add-GcsObjectAcl</S>
+                <S>Get-GcsObjectAcl</S>
+                <S>Remove-GcsObjectAcl</S>
+                <S>Add-GcsDefaultObjectAcl</S>
+                <S>Get-GcsDefaultObjectAcl</S>
+                <S>Remove-GcsDefaultObjectAcl</S>
+                <S>Get-GcsBucket</S>
+                <S>New-GcsBucket</S>
+                <S>Remove-GcsBucket</S>
+                <S>Test-GcsBucket</S>
+                <S>Remove-GcsBucketLogging</S>
+                <S>Write-GcsBucketLogging</S>
+                <S>Remove-GcsBucketWebsite</S>
+                <S>Write-GcsBucketWebsite</S>
+                <S>New-GcsObject</S>
+                <S>Get-GcsObject</S>
+                <S>Set-GcsObject</S>
+                <S>Remove-GcsObject</S>
+                <S>Read-GcsObject</S>
+                <S>Write-GcsObject</S>
+                <S>Test-GcsObject</S>
+                <S>Copy-GcsObject</S>
+                <S>Get-GcSqlBackupRun</S>
+                <S>Remove-GcSqlBackupRun</S>
+                <S>Get-GcSqlFlags</S>
+                <S>Get-GcSqlInstance</S>
+                <S>Add-GcSqlInstance</S>
+                <S>Remove-GcSqlInstance</S>
+                <S>Export-GcSqlInstance</S>
+                <S>Import-GcSqlInstance</S>
+                <S>Restart-GcSqlInstance</S>
+                <S>Start-GcSqlReplica</S>
+                <S>Stop-GcSqlReplica</S>
+                <S>ConvertTo-GcSqlInstance</S>
+                <S>Restore-GcSqlInstanceBackup</S>
+                <S>Update-GcSqlInstance</S>
+                <S>Invoke-GcSqlInstanceFailover</S>
+                <S>New-GcSqlInstanceConfig</S>
+                <S>New-GcSqlInstanceReplicaConfig</S>
+                <S>Get-GcSqlOperation</S>
+                <S>New-GcSqlSettingConfig</S>
+                <S>Get-GcSqlSslCert</S>
+                <S>Add-GcSqlSslCert</S>
+                <S>Remove-GcSqlSslCert</S>
+                <S>Add-GcSqlSslEphemeral</S>
+                <S>Reset-GcSqlSslConfig</S>
+                <S>Get-GcSqlTiers</S>
+                <S>Get-GcpsMessage</S>
+                <S>New-GcpsMessage</S>
+                <S>Publish-GcpsMessage</S>
+                <S>Send-GcpsAck</S>
+                <S>Set-GcpsAckDeadline</S>
+                <S>New-GcpsSubscription</S>
+                <S>Get-GcpsSubscription</S>
+                <S>Set-GcpsSubscriptionConfig</S>
+                <S>Remove-GcpsSubscription</S>
+                <S>New-GcpsTopic</S>
+                <S>Get-GcpsTopic</S>
+                <S>Remove-GcpsTopic</S>
+                <S>Get-GcLogEntry</S>
+                <S>New-GcLogMonitoredResource</S>
+                <S>New-GcLogEntry</S>
+                <S>Get-GcLog</S>
+                <S>Remove-GcLog</S>
+                <S>Get-GcLogMetric</S>
+                <S>New-GcLogMetric</S>
+                <S>Set-GcLogMetric</S>
+                <S>Remove-GcLogMetric</S>
+                <S>Get-GcLogSink</S>
+                <S>New-GcLogSink</S>
+                <S>Set-GcLogSink</S>
+                <S>Remove-GcLogSink</S>
+                <S>Get-GcdChange</S>
+                <S>Add-GcdChange</S>
+                <S>Get-GcdManagedZone</S>
+                <S>Add-GcdManagedZone</S>
+                <S>Remove-GcdManagedZone</S>
+                <S>Get-GcdQuota</S>
+                <S>Get-GcdResourceRecordSet</S>
+                <S>New-GcdResourceRecordSet</S>
+                <S>Remove-GkeNodePool</S>
+                <S>Get-GceMachineType</S>
+                <S>Get-GceManagedInstanceGroup</S>
+                <S>Add-GceManagedInstanceGroup</S>
+                <S>Remove-GceManagedInstanceGroup</S>
+                <S>Set-GceManagedInstanceGroup</S>
+                <S>Wait-GceManagedInstanceGroup</S>
+                <S>New-GceNetwork</S>
+                <S>Get-GceNetwork</S>
+                <S>Remove-GceNetwork</S>
+                <S>Add-GceRoute</S>
+                <S>Get-GceRoute</S>
+                <S>Remove-GceRoute</S>
+                <S>Add-GceSnapshot</S>
+                <S>Get-GceSnapshot</S>
+                <S>Remove-GceSnapshot</S>
+                <S>Get-GceAddress</S>
+                <S>Add-GceAddress</S>
+                <S>Remove-GceAddress</S>
+                <S>Get-GceBackendService</S>
+                <S>New-GceAttachedDiskConfig</S>
+                <S>Get-GceFirewall</S>
+                <S>Add-GceFirewall</S>
+                <S>Remove-GceFirewall</S>
+                <S>Set-GceFirewall</S>
+                <S>Get-GceForwardingRule</S>
+                <S>Add-GceHealthCheck</S>
+                <S>Get-GceHealthCheck</S>
+                <S>Remove-GceHealthCheck</S>
+                <S>Set-GceHealthCheck</S>
+                <S>Get-GceImage</S>
+                <S>Add-GceImage</S>
+                <S>Remove-GceImage</S>
+                <S>Disable-GceImage</S>
+                <S>Get-GceInstance</S>
+                <S>Add-GceInstance</S>
+                <S>Remove-GceInstance</S>
+                <S>Start-GceInstance</S>
+                <S>Stop-GceInstance</S>
+                <S>Restart-GceInstance</S>
+                <S>Set-GceInstance</S>
+                <S>Get-GceDisk</S>
+                <S>New-GceDisk</S>
+                <S>Resize-GceDisk</S>
+                <S>Remove-GceDisk</S>
+                <S>New-GceInstanceConfig</S>
+                <S>Get-GceInstanceTemplate</S>
+                <S>Add-GceInstanceTemplate</S>
+                <S>Remove-GceInstanceTemplate</S>
+                <S>Get-GceMetadata</S>
+                <S>New-GceServiceAccountConfig</S>
+                <S>Get-GceTargetPool</S>
+                <S>Set-GceTargetPool</S>
+                <S>Get-GceTargetProxy</S>
+                <S>Get-GceUrlMap</S>
+                <S>New-GceFirewallProtocol</S>
+                <S>Get-GcpProject</S>
+                <S>Get-GcIamPolicyBinding</S>
+                <S>Add-GcIamPolicyBinding</S>
+                <S>Remove-GcIamPolicyBinding</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>gs:</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-GcsBucketAcl</S>
+                <S>Get-GcsBucketAcl</S>
+                <S>Remove-GcsBucketAcl</S>
+                <S>Add-GcsObjectAcl</S>
+                <S>Get-GcsObjectAcl</S>
+                <S>Remove-GcsObjectAcl</S>
+                <S>Add-GcsDefaultObjectAcl</S>
+                <S>Get-GcsDefaultObjectAcl</S>
+                <S>Remove-GcsDefaultObjectAcl</S>
+                <S>Get-GcsBucket</S>
+                <S>New-GcsBucket</S>
+                <S>Remove-GcsBucket</S>
+                <S>Test-GcsBucket</S>
+                <S>Remove-GcsBucketLogging</S>
+                <S>Write-GcsBucketLogging</S>
+                <S>Remove-GcsBucketWebsite</S>
+                <S>Write-GcsBucketWebsite</S>
+                <S>New-GcsObject</S>
+                <S>Get-GcsObject</S>
+                <S>Set-GcsObject</S>
+                <S>Remove-GcsObject</S>
+                <S>Read-GcsObject</S>
+                <S>Write-GcsObject</S>
+                <S>Test-GcsObject</S>
+                <S>Copy-GcsObject</S>
+                <S>Get-GcSqlBackupRun</S>
+                <S>Remove-GcSqlBackupRun</S>
+                <S>Get-GcSqlFlags</S>
+                <S>Get-GcSqlInstance</S>
+                <S>Add-GcSqlInstance</S>
+                <S>Remove-GcSqlInstance</S>
+                <S>Export-GcSqlInstance</S>
+                <S>Import-GcSqlInstance</S>
+                <S>Restart-GcSqlInstance</S>
+                <S>Start-GcSqlReplica</S>
+                <S>Stop-GcSqlReplica</S>
+                <S>ConvertTo-GcSqlInstance</S>
+                <S>Restore-GcSqlInstanceBackup</S>
+                <S>Update-GcSqlInstance</S>
+                <S>Invoke-GcSqlInstanceFailover</S>
+                <S>New-GcSqlInstanceConfig</S>
+                <S>New-GcSqlInstanceReplicaConfig</S>
+                <S>Get-GcSqlOperation</S>
+                <S>New-GcSqlSettingConfig</S>
+                <S>Get-GcSqlSslCert</S>
+                <S>Add-GcSqlSslCert</S>
+                <S>Remove-GcSqlSslCert</S>
+                <S>Add-GcSqlSslEphemeral</S>
+                <S>Reset-GcSqlSslConfig</S>
+                <S>Get-GcSqlTiers</S>
+                <S>Get-GcpsMessage</S>
+                <S>New-GcpsMessage</S>
+                <S>Publish-GcpsMessage</S>
+                <S>Send-GcpsAck</S>
+                <S>Set-GcpsAckDeadline</S>
+                <S>New-GcpsSubscription</S>
+                <S>Get-GcpsSubscription</S>
+                <S>Set-GcpsSubscriptionConfig</S>
+                <S>Remove-GcpsSubscription</S>
+                <S>New-GcpsTopic</S>
+                <S>Get-GcpsTopic</S>
+                <S>Remove-GcpsTopic</S>
+                <S>Get-GcLogEntry</S>
+                <S>New-GcLogMonitoredResource</S>
+                <S>New-GcLogEntry</S>
+                <S>Get-GcLog</S>
+                <S>Remove-GcLog</S>
+                <S>Get-GcLogMetric</S>
+                <S>New-GcLogMetric</S>
+                <S>Set-GcLogMetric</S>
+                <S>Remove-GcLogMetric</S>
+                <S>Get-GcLogSink</S>
+                <S>New-GcLogSink</S>
+                <S>Set-GcLogSink</S>
+                <S>Remove-GcLogSink</S>
+                <S>Get-GcdChange</S>
+                <S>Add-GcdChange</S>
+                <S>Get-GcdManagedZone</S>
+                <S>Add-GcdManagedZone</S>
+                <S>Remove-GcdManagedZone</S>
+                <S>Get-GcdQuota</S>
+                <S>Get-GcdResourceRecordSet</S>
+                <S>New-GcdResourceRecordSet</S>
+                <S>Remove-GkeNodePool</S>
+                <S>Get-GceMachineType</S>
+                <S>Get-GceManagedInstanceGroup</S>
+                <S>Add-GceManagedInstanceGroup</S>
+                <S>Remove-GceManagedInstanceGroup</S>
+                <S>Set-GceManagedInstanceGroup</S>
+                <S>Wait-GceManagedInstanceGroup</S>
+                <S>New-GceNetwork</S>
+                <S>Get-GceNetwork</S>
+                <S>Remove-GceNetwork</S>
+                <S>Add-GceRoute</S>
+                <S>Get-GceRoute</S>
+                <S>Remove-GceRoute</S>
+                <S>Add-GceSnapshot</S>
+                <S>Get-GceSnapshot</S>
+                <S>Remove-GceSnapshot</S>
+                <S>Get-GceAddress</S>
+                <S>Add-GceAddress</S>
+                <S>Remove-GceAddress</S>
+                <S>Get-GceBackendService</S>
+                <S>New-GceAttachedDiskConfig</S>
+                <S>Get-GceFirewall</S>
+                <S>Add-GceFirewall</S>
+                <S>Remove-GceFirewall</S>
+                <S>Set-GceFirewall</S>
+                <S>Get-GceForwardingRule</S>
+                <S>Add-GceHealthCheck</S>
+                <S>Get-GceHealthCheck</S>
+                <S>Remove-GceHealthCheck</S>
+                <S>Set-GceHealthCheck</S>
+                <S>Get-GceImage</S>
+                <S>Add-GceImage</S>
+                <S>Remove-GceImage</S>
+                <S>Disable-GceImage</S>
+                <S>Get-GceInstance</S>
+                <S>Add-GceInstance</S>
+                <S>Remove-GceInstance</S>
+                <S>Start-GceInstance</S>
+                <S>Stop-GceInstance</S>
+                <S>Restart-GceInstance</S>
+                <S>Set-GceInstance</S>
+                <S>Get-GceDisk</S>
+                <S>New-GceDisk</S>
+                <S>Resize-GceDisk</S>
+                <S>Remove-GceDisk</S>
+                <S>New-GceInstanceConfig</S>
+                <S>Get-GceInstanceTemplate</S>
+                <S>Add-GceInstanceTemplate</S>
+                <S>Remove-GceInstanceTemplate</S>
+                <S>Get-GceMetadata</S>
+                <S>New-GceServiceAccountConfig</S>
+                <S>Get-GceTargetPool</S>
+                <S>Set-GceTargetPool</S>
+                <S>Get-GceTargetProxy</S>
+                <S>Get-GceUrlMap</S>
+                <S>New-GceFirewallProtocol</S>
+                <S>Get-GcpProject</S>
+                <S>Get-GcIamPolicyBinding</S>
+                <S>Add-GcIamPolicyBinding</S>
+                <S>Remove-GcIamPolicyBinding</S>
+                <S>gs:</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">This module contains a set of cmdlets that let you manage Google Cloud Platform resources._x000D__x000A_Currently, the supported resources are Google Cloud Storage, Google Compute Engine,_x000D__x000A_Google Cloud DNS and Google Cloud SQL._x000D__x000A__x000D__x000A_The module also contains a PowerShell provider for Google Cloud Storage. This provider allows_x000D__x000A_you to use commands like 'cd', 'dir', 'copy' and 'del' to navigate and manipulate your data_x000D__x000A_in Cloud Storage as if the data were on a local file system._x000D__x000A__x000D__x000A_The module requires Google Cloud SDK to work.</S>
+      <Obj N="Dependencies" RefId="9">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="10">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Google Inc. All rights reserved.</S>
+          <S N="description">PowerShell cmdlets for the Google Cloud Platform.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">This module contains a set of cmdlets that let you manage Google Cloud Platform resources._x000D__x000A_Currently, the supported resources are Google Cloud Storage, Google Compute Engine,_x000D__x000A_Google Cloud DNS and Google Cloud SQL._x000D__x000A__x000D__x000A_The module also contains a PowerShell provider for Google Cloud Storage. This provider allows_x000D__x000A_you to use commands like 'cd', 'dir', 'copy' and 'del' to navigate and manipulate your data_x000D__x000A_in Cloud Storage as if the data were on a local file system._x000D__x000A__x000D__x000A_The module requires Google Cloud SDK to work.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2504100</S>
+          <S N="downloadCount">2508494</S>
+          <S N="packageSize">9629925</S>
+          <S N="published">9/17/2018 10:43:33 PM -04:00</S>
+          <S N="created">9/17/2018 10:43:33 PM -04:00</S>
+          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
+          <S N="tags">Google Cloud Compute Storage GCS GCE SQL DNS PubSub Logging PSEdition_Core PSEdition_Desktop PSModule PSCmdlet_Add-GcsBucketAcl PSCommand_Add-GcsBucketAcl PSCmdlet_Get-GcsBucketAcl PSCommand_Get-GcsBucketAcl PSCmdlet_Remove-GcsBucketAcl PSCommand_Remove-GcsBucketAcl PSCmdlet_Add-GcsObjectAcl PSCommand_Add-GcsObjectAcl PSCmdlet_Get-GcsObjectAcl PSCommand_Get-GcsObjectAcl PSCmdlet_Remove-GcsObjectAcl PSCommand_Remove-GcsObjectAcl PSCmdlet_Add-GcsDefaultObjectAcl PSCommand_Add-GcsDefaultObjectAcl PSCmdlet_Get-GcsDefaultObjectAcl PSCommand_Get-GcsDefaultObjectAcl PSCmdlet_Remove-GcsDefaultObjectAcl PSCommand_Remove-GcsDefaultObjectAcl PSCmdlet_Get-GcsBucket PSCommand_Get-GcsBucket PSCmdlet_New-GcsBucket PSCommand_New-GcsBucket PSCmdlet_Remove-GcsBucket PSCommand_Remove-GcsBucket PSCmdlet_Test-GcsBucket PSCommand_Test-GcsBucket PSCmdlet_Remove-GcsBucketLogging PSCommand_Remove-GcsBucketLogging PSCmdlet_Write-GcsBucketLogging PSCommand_Write-GcsBucketLogging PSCmdlet_Remove-GcsBucketWebsite PSCommand_Remove-GcsBucketWebsite PSCmdlet_Write-GcsBucketWebsite PSCommand_Write-GcsBucketWebsite PSCmdlet_New-GcsObject PSCommand_New-GcsObject PSCmdlet_Get-GcsObject PSCommand_Get-GcsObject PSCmdlet_Set-GcsObject PSCommand_Set-GcsObject PSCmdlet_Remove-GcsObject PSCommand_Remove-GcsObject PSCmdlet_Read-GcsObject PSCommand_Read-GcsObject PSCmdlet_Write-GcsObject PSCommand_Write-GcsObject PSCmdlet_Test-GcsObject PSCommand_Test-GcsObject PSCmdlet_Copy-GcsObject PSCommand_Copy-GcsObject PSCmdlet_Get-GcSqlBackupRun PSCommand_Get-GcSqlBackupRun PSCmdlet_Remove-GcSqlBackupRun PSCommand_Remove-GcSqlBackupRun PSCmdlet_Get-GcSqlFlags PSCommand_Get-GcSqlFlags PSCmdlet_Get-GcSqlInstance PSCommand_Get-GcSqlInstance PSCmdlet_Add-GcSqlInstance PSCommand_Add-GcSqlInstance PSCmdlet_Remove-GcSqlInstance PSCommand_Remove-GcSqlInstance PSCmdlet_Export-GcSqlInstance PSCommand_Export-GcSqlInstance PSCmdlet_Import-GcSqlInstance PSCommand_Import-GcSqlInstance PSCmdlet_Restart-GcSqlInstance PSCommand_Restart-GcSqlInstance PSCmdlet_Start-GcSqlReplica PSCommand_Start-GcSqlReplica PSCmdlet_Stop-GcSqlReplica PSCommand_Stop-GcSqlReplica PSCmdlet_ConvertTo-GcSqlInstance PSCommand_ConvertTo-GcSqlInstance PSCmdlet_Restore-GcSqlInstanceBackup PSCommand_Restore-GcSqlInstanceBackup PSCmdlet_Update-GcSqlInstance PSCommand_Update-GcSqlInstance PSCmdlet_Invoke-GcSqlInstanceFailover PSCommand_Invoke-GcSqlInstanceFailover PSCmdlet_New-GcSqlInstanceConfig PSCommand_New-GcSqlInstanceConfig PSCmdlet_New-GcSqlInstanceReplicaConfig PSCommand_New-GcSqlInstanceReplicaConfig PSCmdlet_Get-GcSqlOperation PSCommand_Get-GcSqlOperation PSCmdlet_New-GcSqlSettingConfig PSCommand_New-GcSqlSettingConfig PSCmdlet_Get-GcSqlSslCert PSCommand_Get-GcSqlSslCert PSCmdlet_Add-GcSqlSslCert PSCommand_Add-GcSqlSslCert PSCmdlet_Remove-GcSqlSslCert PSCommand_Remove-GcSqlSslCert PSCmdlet_Add-GcSqlSslEphemeral PSCommand_Add-GcSqlSslEphemeral PSCmdlet_Reset-GcSqlSslConfig PSCommand_Reset-GcSqlSslConfig PSCmdlet_Get-GcSqlTiers PSCommand_Get-GcSqlTiers PSCmdlet_Get-GcpsMessage PSCommand_Get-GcpsMessage PSCmdlet_New-GcpsMessage PSCommand_New-GcpsMessage PSCmdlet_Publish-GcpsMessage PSCommand_Publish-GcpsMessage PSCmdlet_Send-GcpsAck PSCommand_Send-GcpsAck PSCmdlet_Set-GcpsAckDeadline PSCommand_Set-GcpsAckDeadline PSCmdlet_New-GcpsSubscription PSCommand_New-GcpsSubscription PSCmdlet_Get-GcpsSubscription PSCommand_Get-GcpsSubscription PSCmdlet_Set-GcpsSubscriptionConfig PSCommand_Set-GcpsSubscriptionConfig PSCmdlet_Remove-GcpsSubscription PSCommand_Remove-GcpsSubscription PSCmdlet_New-GcpsTopic PSCommand_New-GcpsTopic PSCmdlet_Get-GcpsTopic PSCommand_Get-GcpsTopic PSCmdlet_Remove-GcpsTopic PSCommand_Remove-GcpsTopic PSCmdlet_Get-GcLogEntry PSCommand_Get-GcLogEntry PSCmdlet_New-GcLogMonitoredResource PSCommand_New-GcLogMonitoredResource PSCmdlet_New-GcLogEntry PSCommand_New-GcLogEntry PSCmdlet_Get-GcLog PSCommand_Get-GcLog PSCmdlet_Remove-GcLog PSCommand_Remove-GcLog PSCmdlet_Get-GcLogMetric PSCommand_Get-GcLogMetric PSCmdlet_New-GcLogMetric PSCommand_New-GcLogMetric PSCmdlet_Set-GcLogMetric PSCommand_Set-GcLogMetric PSCmdlet_Remove-GcLogMetric PSCommand_Remove-GcLogMetric PSCmdlet_Get-GcLogSink PSCommand_Get-GcLogSink PSCmdlet_New-GcLogSink PSCommand_New-GcLogSink PSCmdlet_Set-GcLogSink PSCommand_Set-GcLogSink PSCmdlet_Remove-GcLogSink PSCommand_Remove-GcLogSink PSCmdlet_Get-GcdChange PSCommand_Get-GcdChange PSCmdlet_Add-GcdChange PSCommand_Add-GcdChange PSCmdlet_Get-GcdManagedZone PSCommand_Get-GcdManagedZone PSCmdlet_Add-GcdManagedZone PSCommand_Add-GcdManagedZone PSCmdlet_Remove-GcdManagedZone PSCommand_Remove-GcdManagedZone PSCmdlet_Get-GcdQuota PSCommand_Get-GcdQuota PSCmdlet_Get-GcdResourceRecordSet PSCommand_Get-GcdResourceRecordSet PSCmdlet_New-GcdResourceRecordSet PSCommand_New-GcdResourceRecordSet PSCmdlet_Remove-GkeNodePool PSCommand_Remove-GkeNodePool PSCmdlet_Get-GceMachineType PSCommand_Get-GceMachineType PSCmdlet_Get-GceManagedInstanceGroup PSCommand_Get-GceManagedInstanceGroup PSCmdlet_Add-GceManagedInstanceGroup PSCommand_Add-GceManagedInstanceGroup PSCmdlet_Remove-GceManagedInstanceGroup PSCommand_Remove-GceManagedInstanceGroup PSCmdlet_Set-GceManagedInstanceGroup PSCommand_Set-GceManagedInstanceGroup PSCmdlet_Wait-GceManagedInstanceGroup PSCommand_Wait-GceManagedInstanceGroup PSCmdlet_New-GceNetwork PSCommand_New-GceNetwork PSCmdlet_Get-GceNetwork PSCommand_Get-GceNetwork PSCmdlet_Remove-GceNetwork PSCommand_Remove-GceNetwork PSCmdlet_Add-GceRoute PSCommand_Add-GceRoute PSCmdlet_Get-GceRoute PSCommand_Get-GceRoute PSCmdlet_Remove-GceRoute PSCommand_Remove-GceRoute PSCmdlet_Add-GceSnapshot PSCommand_Add-GceSnapshot PSCmdlet_Get-GceSnapshot PSCommand_Get-GceSnapshot PSCmdlet_Remove-GceSnapshot PSCommand_Remove-GceSnapshot PSCmdlet_Get-GceAddress PSCommand_Get-GceAddress PSCmdlet_Add-GceAddress PSCommand_Add-GceAddress PSCmdlet_Remove-GceAddress PSCommand_Remove-GceAddress PSCmdlet_Get-GceBackendService PSCommand_Get-GceBackendService PSCmdlet_New-GceAttachedDiskConfig PSCommand_New-GceAttachedDiskConfig PSCmdlet_Get-GceFirewall PSCommand_Get-GceFirewall PSCmdlet_Add-GceFirewall PSCommand_Add-GceFirewall PSCmdlet_Remove-GceFirewall PSCommand_Remove-GceFirewall PSCmdlet_Set-GceFirewall PSCommand_Set-GceFirewall PSCmdlet_Get-GceForwardingRule PSCommand_Get-GceForwardingRule PSCmdlet_Add-GceHealthCheck PSCommand_Add-GceHealthCheck PSCmdlet_Get-GceHealthCheck PSCommand_Get-GceHealthCheck PSCmdlet_Remove-GceHealthCheck PSCommand_Remove-GceHealthCheck PSCmdlet_Set-GceHealthCheck PSCommand_Set-GceHealthCheck PSCmdlet_Get-GceImage PSCommand_Get-GceImage PSCmdlet_Add-GceImage PSCommand_Add-GceImage PSCmdlet_Remove-GceImage PSCommand_Remove-GceImage PSCmdlet_Disable-GceImage PSCommand_Disable-GceImage PSCmdlet_Get-GceInstance PSCommand_Get-GceInstance PSCmdlet_Add-GceInstance PSCommand_Add-GceInstance PSCmdlet_Remove-GceInstance PSCommand_Remove-GceInstance PSCmdlet_Start-GceInstance PSCommand_Start-GceInstance PSCmdlet_Stop-GceInstance PSCommand_Stop-GceInstance PSCmdlet_Restart-GceInstance PSCommand_Restart-GceInstance PSCmdlet_Set-GceInstance PSCommand_Set-GceInstance PSCmdlet_Get-GceDisk PSCommand_Get-GceDisk PSCmdlet_New-GceDisk PSCommand_New-GceDisk PSCmdlet_Resize-GceDisk PSCommand_Resize-GceDisk PSCmdlet_Remove-GceDisk PSCommand_Remove-GceDisk PSCmdlet_New-GceInstanceConfig PSCommand_New-GceInstanceConfig PSCmdlet_Get-GceInstanceTemplate PSCommand_Get-GceInstanceTemplate PSCmdlet_Add-GceInstanceTemplate PSCommand_Add-GceInstanceTemplate PSCmdlet_Remove-GceInstanceTemplate PSCommand_Remove-GceInstanceTemplate PSCmdlet_Get-GceMetadata PSCommand_Get-GceMetadata PSCmdlet_New-GceServiceAccountConfig PSCommand_New-GceServiceAccountConfig PSCmdlet_Get-GceTargetPool PSCommand_Get-GceTargetPool PSCmdlet_Set-GceTargetPool PSCommand_Set-GceTargetPool PSCmdlet_Get-GceTargetProxy PSCommand_Get-GceTargetProxy PSCmdlet_Get-GceUrlMap PSCommand_Get-GceUrlMap PSCmdlet_New-GceFirewallProtocol PSCommand_New-GceFirewallProtocol PSCmdlet_Get-GcpProject PSCommand_Get-GcpProject PSCmdlet_Get-GcIamPolicyBinding PSCommand_Get-GcIamPolicyBinding PSCmdlet_Add-GcIamPolicyBinding PSCommand_Add-GcIamPolicyBinding PSCmdlet_Remove-GcIamPolicyBinding PSCommand_Remove-GcIamPolicyBinding PSIncludes_Cmdlet PSFunction_gs: PSCommand_gs: PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-09T22:20:00Z</S>
+          <S N="NormalizedVersion">1.0.1.10</S>
+          <S N="Authors">Google Inc</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">GoogleCloud.nuspec|AppendPsModulePath.ps1|GoogleCloud.psd1|GoogleCloud.psm1|GoogleCloudPlatform.Format.ps1xml|PatchFromGcs.ps1|coreclr\Google.Api.Gax.dll|coreclr\Google.Api.Gax.Rest.dll|coreclr\Google.Apis.Auth.dll|coreclr\Google.Apis.Auth.PlatformServices.dll|coreclr\Google.Apis.Bigquery.v2.dll|coreclr\Google.Apis.CloudResourceManager.v1.dll|coreclr\Google.Apis.Compute.v1.dll|coreclr\Google.Apis.Container.v1.dll|coreclr\Google.Apis.Core.dll|coreclr\Google.Apis.dll|coreclr\Google.Apis.Dns.v1.dll|coreclr\Google.Apis.Iam.v1.dll|coreclr\Google.Apis.Logging.v2.dll|coreclr\Google.Apis.Pubsub.v1.dll|coreclr\Google.Apis.SQLAdmin.v1beta4.dll|coreclr\Google.Apis.Storage.v1.dll|coreclr\Google.Cloud.BigQuery.V2.dll|coreclr\Google.PowerShell.deps.json|coreclr\Google.PowerShell.dll|coreclr\Microsoft.CSharp.dll|coreclr\Microsoft.Extensions.PlatformAbstractions.dll|coreclr\Microsoft.PowerShell.CoreCLR.AssemblyLoadContext.dll|coreclr\Microsoft.PowerShell.CoreCLR.Eventing.dll|coreclr\Newtonsoft.Json.dll|coreclr\System.AppContext.dll|coreclr\System.Buffers.dll|coreclr\System.Collections.Concurrent.dll|coreclr\System.Collections.Immutable.dll|coreclr\System.Collections.NonGeneric.dll|coreclr\System.Collections.Specialized.dll|coreclr\System.ComponentModel.dll|coreclr\System.ComponentModel.EventBasedAsync.dll|coreclr\System.ComponentModel.Primitives.dll|coreclr\System.ComponentModel.TypeConverter.dll|coreclr\System.Data.Common.dll|coreclr\System.Diagnostics.Contracts.dll|coreclr\System.Diagnostics.DiagnosticSource.dll|coreclr\System.Diagnostics.StackTrace.dll|coreclr\System.Dynamic.Runtime.dll|coreclr\System.Interactive.Async.dll|coreclr\System.IO.Compression.ZipFile.dll|coreclr\System.IO.FileSystem.Primitives.dll|coreclr\System.Linq.dll|coreclr\System.Linq.Expressions.dll|coreclr\System.Management.Automation.dll|coreclr\System.Net.WebHeaderCollection.dll|coreclr\System.ObjectModel.dll|coreclr\System.Private.DataContractSerialization.dll|coreclr\System.Reflection.Emit.dll|coreclr\System.Reflection.Emit.ILGeneration.dll|coreclr\System.Reflection.Emit.Lightweight.dll|coreclr\System.Reflection.Metadata.dll|coreclr\System.Reflection.TypeExtensions.dll|coreclr\System.Runtime.CompilerServices.VisualC.dll|coreclr\System.Runtime.InteropServices.RuntimeInformation.dll|coreclr\System.Runtime.Loader.dll|coreclr\System.Runtime.Numerics.dll|coreclr\System.Runtime.Serialization.Formatters.dll|coreclr\System.Runtime.Serialization.Primitives.dll|coreclr\System.Runtime.Serialization.Xml.dll|coreclr\System.Security.Claims.dll|coreclr\System.Security.Cryptography.OpenSsl.dll|coreclr\System.Security.Cryptography.Primitives.dll|coreclr\System.Security.Principal.dll|coreclr\System.Text.RegularExpressions.dll|coreclr\System.Threading.dll|coreclr\System.Threading.Tasks.Extensions.dll|coreclr\System.Threading.Tasks.Parallel.dll|coreclr\System.Threading.Thread.dll|coreclr\System.Threading.ThreadPool.dll|coreclr\System.Xml.ReaderWriter.dll|coreclr\System.Xml.XDocument.dll|coreclr\System.Xml.XmlDocument.dll|coreclr\System.Xml.XmlSerializer.dll|coreclr\System.Xml.XPath.dll|coreclr\System.Xml.XPath.XmlDocument.dll|fullclr\BouncyCastle.Crypto.dll|fullclr\Google.Api.Gax.dll|fullclr\Google.Api.Gax.Rest.dll|fullclr\Google.Api.Gax.Rest.xml|fullclr\Google.Api.Gax.xml|fullclr\Google.Apis.Auth.dll|fullclr\Google.Apis.Auth.PlatformServices.dll|fullclr\Google.Apis.Auth.xml|fullclr\Google.Apis.Bigquery.v2.dll|fullclr\Google.Apis.Bigquery.v2.xml|fullclr\Google.Apis.CloudResourceManager.v1.dll|fullclr\Google.Apis.CloudResourceManager.v1.xml|fullclr\Google.Apis.Compute.v1.dll|fullclr\Google.Apis.Compute.v1.xml|fullclr\Google.Apis.Container.v1.dll|fullclr\Google.Apis.Container.v1.xml|fullclr\Google.Apis.Core.dll|fullclr\Google.Apis.Core.xml|fullclr\Google.Apis.dll|fullclr\Google.Apis.Dns.v1.dll|fullclr\Google.Apis.Dns.v1.xml|fullclr\Google.Apis.Iam.v1.dll|fullclr\Google.Apis.Iam.v1.xml|fullclr\Google.Apis.Logging.v2.dll|fullclr\Google.Apis.Logging.v2.xml|fullclr\Google.Apis.PlatformServices.dll|fullclr\Google.Apis.Pubsub.v1.dll|fullclr\Google.Apis.Pubsub.v1.xml|fullclr\Google.Apis.SQLAdmin.v1beta4.dll|fullclr\Google.Apis.SQLAdmin.v1beta4.xml|fullclr\Google.Apis.Storage.v1.dll|fullclr\Google.Apis.Storage.v1.xml|fullclr\Google.Apis.xml|fullclr\Google.Cloud.BigQuery.V2.dll|fullclr\Google.Cloud.BigQuery.V2.xml|fullclr\Google.PowerShell.dll|fullclr\Google.PowerShell.dll-Help.xml|fullclr\Google.PowerShell.dll.config|fullclr\Google.PowerShell.XML|fullclr\log4net.dll|fullclr\log4net.xml|fullclr\Microsoft.Threading.Tasks.dll|fullclr\Microsoft.Threading.Tasks.Extensions.Desktop.dll|fullclr\Microsoft.Threading.Tasks.Extensions.Desktop.xml|fullclr\Microsoft.Threading.Tasks.Extensions.dll|fullclr\Microsoft.Threading.Tasks.Extensions.xml|fullclr\Microsoft.Threading.Tasks.xml|fullclr\Newtonsoft.Json.dll|fullclr\Newtonsoft.Json.xml|fullclr\System.Interactive.Async.dll|fullclr\System.Interactive.Async.xml|fullclr\System.Management.Automation.dll|fullclr\System.Net.Http.Extensions.dll|fullclr\System.Net.Http.Extensions.xml|fullclr\System.Net.Http.Primitives.dll|fullclr\System.Net.Http.Primitives.xml|fullclr\Zlib.Portable.dll|fullclr\Zlib.Portable.xml</S>
+          <S N="GUID">e74637e6-7a4e-422d-bb9c-ca50809d78bb</S>
+          <S N="PowerShellVersion">3.0</S>
+          <S N="DotNetFrameworkVersion">4.0</S>
+          <S N="CLRVersion">4.0</S>
+          <S N="ProcessorArchitecture">None</S>
+          <S N="CompanyName">Google Inc</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\GoogleCloud\1.0.1.10</S>
+    </MS>
+  </Obj>
+</Objs>

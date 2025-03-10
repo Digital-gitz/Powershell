@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:17:56-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:32.5947891-05:00</DT>
+        <DT>2025-03-09T18:21:27.622874-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -64,7 +64,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -93,7 +101,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -120,18 +132,6 @@
                 <S>Set-AzNotificationHubsNamespaceAuthorizationRule</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -177,15 +177,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6173883</S>
-          <S N="downloadCount">109717308</S>
+          <S N="versionDownloadCount">6978321</S>
+          <S N="downloadCount">110765945</S>
           <S N="packageSize">134918</S>
           <S N="published">1/14/2025 3:17:56 AM -05:00</S>
           <S N="created">1/14/2025 3:17:56 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM Media NotificationHubs PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzNotificationHub PSCommand_Get-AzNotificationHub PSCmdlet_Get-AzNotificationHubAuthorizationRule PSCommand_Get-AzNotificationHubAuthorizationRule PSCmdlet_Get-AzNotificationHubListKey PSCommand_Get-AzNotificationHubListKey PSCmdlet_Get-AzNotificationHubPNSCredential PSCommand_Get-AzNotificationHubPNSCredential PSCmdlet_Get-AzNotificationHubsNamespace PSCommand_Get-AzNotificationHubsNamespace PSCmdlet_Get-AzNotificationHubsNamespaceAuthorizationRule PSCommand_Get-AzNotificationHubsNamespaceAuthorizationRule PSCmdlet_Get-AzNotificationHubsNamespaceListKey PSCommand_Get-AzNotificationHubsNamespaceListKey PSCmdlet_New-AzNotificationHub PSCommand_New-AzNotificationHub PSCmdlet_New-AzNotificationHubAuthorizationRule PSCommand_New-AzNotificationHubAuthorizationRule PSCmdlet_New-AzNotificationHubKey PSCommand_New-AzNotificationHubKey PSCmdlet_New-AzNotificationHubsNamespace PSCommand_New-AzNotificationHubsNamespace PSCmdlet_New-AzNotificationHubsNamespaceAuthorizationRule PSCommand_New-AzNotificationHubsNamespaceAuthorizationRule PSCmdlet_New-AzNotificationHubsNamespaceKey PSCommand_New-AzNotificationHubsNamespaceKey PSCmdlet_Remove-AzNotificationHub PSCommand_Remove-AzNotificationHub PSCmdlet_Remove-AzNotificationHubAuthorizationRule PSCommand_Remove-AzNotificationHubAuthorizationRule PSCmdlet_Remove-AzNotificationHubsNamespace PSCommand_Remove-AzNotificationHubsNamespace PSCmdlet_Remove-AzNotificationHubsNamespaceAuthorizationRule PSCommand_Remove-AzNotificationHubsNamespaceAuthorizationRule PSCmdlet_Set-AzNotificationHub PSCommand_Set-AzNotificationHub PSCmdlet_Set-AzNotificationHubAuthorizationRule PSCommand_Set-AzNotificationHubAuthorizationRule PSCmdlet_Set-AzNotificationHubsNamespace PSCommand_Set-AzNotificationHubsNamespace PSCmdlet_Set-AzNotificationHubsNamespaceAuthorizationRule PSCommand_Set-AzNotificationHubsNamespaceAuthorizationRule PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.2.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -197,7 +197,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.NotificationHubs\1.2.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.NotificationHubs\1.2.0</S>
     </MS>
   </Obj>
 </Objs>

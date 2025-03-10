@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:12:07-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:48.5573166-05:00</DT>
+        <DT>2025-03-09T18:20:28.8348447-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -63,7 +63,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -103,7 +111,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -141,18 +153,6 @@
                 <S>Update-AzCognitiveServicesAccountNetworkRuleSet</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -198,15 +198,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6223307</S>
-          <S N="downloadCount">112654254</S>
+          <S N="versionDownloadCount">7037816</S>
+          <S N="downloadCount">113717968</S>
           <S N="packageSize">205986</S>
           <S N="published">1/14/2025 3:12:07 AM -05:00</S>
           <S N="created">1/14/2025 3:12:07 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM CognitiveServices PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzCognitiveServicesAccountNetworkRule PSCommand_Add-AzCognitiveServicesAccountNetworkRule PSCmdlet_Get-AzCognitiveServicesAccount PSCommand_Get-AzCognitiveServicesAccount PSCmdlet_Get-AzCognitiveServicesAccountCommitmentPlan PSCommand_Get-AzCognitiveServicesAccountCommitmentPlan PSCmdlet_Get-AzCognitiveServicesAccountDeployment PSCommand_Get-AzCognitiveServicesAccountDeployment PSCmdlet_Get-AzCognitiveServicesAccountKey PSCommand_Get-AzCognitiveServicesAccountKey PSCmdlet_Get-AzCognitiveServicesAccountModel PSCommand_Get-AzCognitiveServicesAccountModel PSCmdlet_Get-AzCognitiveServicesAccountNetworkRuleSet PSCommand_Get-AzCognitiveServicesAccountNetworkRuleSet PSCmdlet_Get-AzCognitiveServicesAccountSku PSCommand_Get-AzCognitiveServicesAccountSku PSCmdlet_Get-AzCognitiveServicesAccountType PSCommand_Get-AzCognitiveServicesAccountType PSCmdlet_Get-AzCognitiveServicesAccountUsage PSCommand_Get-AzCognitiveServicesAccountUsage PSCmdlet_Get-AzCognitiveServicesCommitmentPlan PSCommand_Get-AzCognitiveServicesCommitmentPlan PSCmdlet_Get-AzCognitiveServicesCommitmentPlanAssociation PSCommand_Get-AzCognitiveServicesCommitmentPlanAssociation PSCmdlet_Get-AzCognitiveServicesCommitmentTier PSCommand_Get-AzCognitiveServicesCommitmentTier PSCmdlet_Get-AzCognitiveServicesModel PSCommand_Get-AzCognitiveServicesModel PSCmdlet_Get-AzCognitiveServicesUsage PSCommand_Get-AzCognitiveServicesUsage PSCmdlet_New-AzCognitiveServicesAccount PSCommand_New-AzCognitiveServicesAccount PSCmdlet_New-AzCognitiveServicesAccountApiProperty PSCommand_New-AzCognitiveServicesAccountApiProperty PSCmdlet_New-AzCognitiveServicesAccountCommitmentPlan PSCommand_New-AzCognitiveServicesAccountCommitmentPlan PSCmdlet_New-AzCognitiveServicesAccountDeployment PSCommand_New-AzCognitiveServicesAccountDeployment PSCmdlet_New-AzCognitiveServicesAccountKey PSCommand_New-AzCognitiveServicesAccountKey PSCmdlet_New-AzCognitiveServicesCommitmentPlan PSCommand_New-AzCognitiveServicesCommitmentPlan PSCmdlet_New-AzCognitiveServicesCommitmentPlanAssociation PSCommand_New-AzCognitiveServicesCommitmentPlanAssociation PSCmdlet_New-AzCognitiveServicesObject PSCommand_New-AzCognitiveServicesObject PSCmdlet_Remove-AzCognitiveServicesAccount PSCommand_Remove-AzCognitiveServicesAccount PSCmdlet_Remove-AzCognitiveServicesAccountCommitmentPlan PSCommand_Remove-AzCognitiveServicesAccountCommitmentPlan PSCmdlet_Remove-AzCognitiveServicesAccountDeployment PSCommand_Remove-AzCognitiveServicesAccountDeployment PSCmdlet_Remove-AzCognitiveServicesAccountNetworkRule PSCommand_Remove-AzCognitiveServicesAccountNetworkRule PSCmdlet_Remove-AzCognitiveServicesCommitmentPlan PSCommand_Remove-AzCognitiveServicesCommitmentPlan PSCmdlet_Remove-AzCognitiveServicesCommitmentPlanAssociation PSCommand_Remove-AzCognitiveServicesCommitmentPlanAssociation PSCmdlet_Set-AzCognitiveServicesAccount PSCommand_Set-AzCognitiveServicesAccount PSCmdlet_Undo-AzCognitiveServicesAccountRemoval PSCommand_Undo-AzCognitiveServicesAccountRemoval PSCmdlet_Update-AzCognitiveServicesAccountNetworkRuleSet PSCommand_Update-AzCognitiveServicesAccountNetworkRuleSet PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.15.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -218,7 +218,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.CognitiveServices\1.15.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.CognitiveServices\1.15.0</S>
     </MS>
   </Obj>
 </Objs>

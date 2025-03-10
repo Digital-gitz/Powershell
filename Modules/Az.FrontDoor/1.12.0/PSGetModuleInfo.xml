@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:15:00-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:09.1863263-05:00</DT>
+        <DT>2025-03-09T18:20:58.125497-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -63,7 +63,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -108,7 +116,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -151,18 +163,6 @@
                 <S>Update-AzFrontDoorWafPolicy</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -208,15 +208,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6235206</S>
-          <S N="downloadCount">109834964</S>
+          <S N="versionDownloadCount">7045124</S>
+          <S N="downloadCount">110891192</S>
           <S N="packageSize">246098</S>
           <S N="published">1/14/2025 3:15:00 AM -05:00</S>
           <S N="created">1/14/2025 3:15:00 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM FrontDoor PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Disable-AzFrontDoorCustomDomainHttps PSCommand_Disable-AzFrontDoorCustomDomainHttps PSCmdlet_Enable-AzFrontDoorCustomDomainHttps PSCommand_Enable-AzFrontDoorCustomDomainHttps PSCmdlet_Get-AzFrontDoor PSCommand_Get-AzFrontDoor PSCmdlet_Get-AzFrontDoorFrontendEndpoint PSCommand_Get-AzFrontDoorFrontendEndpoint PSCmdlet_Get-AzFrontDoorRulesEngine PSCommand_Get-AzFrontDoorRulesEngine PSCmdlet_Get-AzFrontDoorWafManagedRuleSetDefinition PSCommand_Get-AzFrontDoorWafManagedRuleSetDefinition PSCmdlet_Get-AzFrontDoorWafPolicy PSCommand_Get-AzFrontDoorWafPolicy PSCmdlet_New-AzFrontDoor PSCommand_New-AzFrontDoor PSCmdlet_New-AzFrontDoorBackendObject PSCommand_New-AzFrontDoorBackendObject PSCmdlet_New-AzFrontDoorBackendPoolObject PSCommand_New-AzFrontDoorBackendPoolObject PSCmdlet_New-AzFrontDoorBackendPoolsSettingObject PSCommand_New-AzFrontDoorBackendPoolsSettingObject PSCmdlet_New-AzFrontDoorFrontendEndpointObject PSCommand_New-AzFrontDoorFrontendEndpointObject PSCmdlet_New-AzFrontDoorHeaderActionObject PSCommand_New-AzFrontDoorHeaderActionObject PSCmdlet_New-AzFrontDoorHealthProbeSettingObject PSCommand_New-AzFrontDoorHealthProbeSettingObject PSCmdlet_New-AzFrontDoorLoadBalancingSettingObject PSCommand_New-AzFrontDoorLoadBalancingSettingObject PSCmdlet_New-AzFrontDoorRoutingRuleObject PSCommand_New-AzFrontDoorRoutingRuleObject PSCmdlet_New-AzFrontDoorRulesEngine PSCommand_New-AzFrontDoorRulesEngine PSCmdlet_New-AzFrontDoorRulesEngineActionObject PSCommand_New-AzFrontDoorRulesEngineActionObject PSCmdlet_New-AzFrontDoorRulesEngineMatchConditionObject PSCommand_New-AzFrontDoorRulesEngineMatchConditionObject PSCmdlet_New-AzFrontDoorRulesEngineRuleObject PSCommand_New-AzFrontDoorRulesEngineRuleObject PSCmdlet_New-AzFrontDoorWafLogScrubbingRuleObject PSCommand_New-AzFrontDoorWafLogScrubbingRuleObject PSCmdlet_New-AzFrontDoorWafLogScrubbingSettingObject PSCommand_New-AzFrontDoorWafLogScrubbingSettingObject PSCmdlet_New-AzFrontDoorWafCustomRuleObject PSCommand_New-AzFrontDoorWafCustomRuleObject PSCmdlet_New-AzFrontDoorWafCustomRuleGroupByVariableObject PSCommand_New-AzFrontDoorWafCustomRuleGroupByVariableObject PSCmdlet_New-AzFrontDoorWafManagedRuleExclusionObject PSCommand_New-AzFrontDoorWafManagedRuleExclusionObject PSCmdlet_New-AzFrontDoorWafManagedRuleObject PSCommand_New-AzFrontDoorWafManagedRuleObject PSCmdlet_New-AzFrontDoorWafManagedRuleOverrideObject PSCommand_New-AzFrontDoorWafManagedRuleOverrideObject PSCmdlet_New-AzFrontDoorWafMatchConditionObject PSCommand_New-AzFrontDoorWafMatchConditionObject PSCmdlet_New-AzFrontDoorWafPolicy PSCommand_New-AzFrontDoorWafPolicy PSCmdlet_New-AzFrontDoorWafRuleGroupOverrideObject PSCommand_New-AzFrontDoorWafRuleGroupOverrideObject PSCmdlet_Remove-AzFrontDoor PSCommand_Remove-AzFrontDoor PSCmdlet_Remove-AzFrontDoorContent PSCommand_Remove-AzFrontDoorContent PSCmdlet_Remove-AzFrontDoorRulesEngine PSCommand_Remove-AzFrontDoorRulesEngine PSCmdlet_Remove-AzFrontDoorWafPolicy PSCommand_Remove-AzFrontDoorWafPolicy PSCmdlet_Set-AzFrontDoor PSCommand_Set-AzFrontDoor PSCmdlet_Set-AzFrontDoorRulesEngine PSCommand_Set-AzFrontDoorRulesEngine PSCmdlet_Update-AzFrontDoorWafPolicy PSCommand_Update-AzFrontDoorWafPolicy PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.12.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -228,7 +228,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.FrontDoor\1.12.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.FrontDoor\1.12.0</S>
     </MS>
   </Obj>
 </Objs>

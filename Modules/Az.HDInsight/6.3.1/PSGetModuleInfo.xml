@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:15:17-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:11.3396363-05:00</DT>
+        <DT>2025-03-09T18:21:00.6320149-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -63,7 +63,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
@@ -123,7 +131,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="7">
               <TNRef RefId="2" />
               <LST>
@@ -182,18 +194,6 @@
               </LST>
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
         </DCT>
       </Obj>
       <Nil N="PowerShellGetFormatVersion" />
@@ -238,15 +238,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6393260</S>
-          <S N="downloadCount">111332466</S>
+          <S N="versionDownloadCount">7206292</S>
+          <S N="downloadCount">112392296</S>
           <S N="packageSize">586138</S>
           <S N="published">1/14/2025 3:15:17 AM -05:00</S>
           <S N="created">1/14/2025 3:15:17 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM HDInsight PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzHDInsightClusterIdentity PSCommand_Add-AzHDInsightClusterIdentity PSCmdlet_Add-AzHDInsightComponentVersion PSCommand_Add-AzHDInsightComponentVersion PSCmdlet_Add-AzHDInsightConfigValue PSCommand_Add-AzHDInsightConfigValue PSCmdlet_Add-AzHDInsightMetastore PSCommand_Add-AzHDInsightMetastore PSCmdlet_Add-AzHDInsightScriptAction PSCommand_Add-AzHDInsightScriptAction PSCmdlet_Add-AzHDInsightSecurityProfile PSCommand_Add-AzHDInsightSecurityProfile PSCmdlet_Add-AzHDInsightStorage PSCommand_Add-AzHDInsightStorage PSCmdlet_Disable-AzHDInsightAzureMonitor PSCommand_Disable-AzHDInsightAzureMonitor PSCmdlet_Disable-AzHDInsightAzureMonitorAgent PSCommand_Disable-AzHDInsightAzureMonitorAgent PSCmdlet_Disable-AzHDInsightMonitoring PSCommand_Disable-AzHDInsightMonitoring PSCmdlet_Enable-AzHDInsightAzureMonitor PSCommand_Enable-AzHDInsightAzureMonitor PSCmdlet_Enable-AzHDInsightAzureMonitorAgent PSCommand_Enable-AzHDInsightAzureMonitorAgent PSCmdlet_Enable-AzHDInsightMonitoring PSCommand_Enable-AzHDInsightMonitoring PSCmdlet_Get-AzHDInsightAzureMonitor PSCommand_Get-AzHDInsightAzureMonitor PSCmdlet_Get-AzHDInsightAzureMonitorAgent PSCommand_Get-AzHDInsightAzureMonitorAgent PSCmdlet_Get-AzHDInsightCluster PSCommand_Get-AzHDInsightCluster PSCmdlet_Update-AzHDInsightCluster PSCommand_Update-AzHDInsightCluster PSCmdlet_Get-AzHDInsightClusterAutoscaleConfiguration PSCommand_Get-AzHDInsightClusterAutoscaleConfiguration PSCmdlet_Get-AzHDInsightHost PSCommand_Get-AzHDInsightHost PSCmdlet_Get-AzHDInsightJob PSCommand_Get-AzHDInsightJob PSCmdlet_Get-AzHDInsightJobOutput PSCommand_Get-AzHDInsightJobOutput PSCmdlet_Get-AzHDInsightMonitoring PSCommand_Get-AzHDInsightMonitoring PSCmdlet_Get-AzHDInsightPersistedScriptAction PSCommand_Get-AzHDInsightPersistedScriptAction PSCmdlet_Get-AzHDInsightProperty PSCommand_Get-AzHDInsightProperty PSCmdlet_Get-AzHDInsightScriptActionHistory PSCommand_Get-AzHDInsightScriptActionHistory PSCmdlet_Invoke-AzHDInsightHiveJob PSCommand_Invoke-AzHDInsightHiveJob PSCmdlet_New-AzHDInsightCluster PSCommand_New-AzHDInsightCluster PSCmdlet_New-AzHDInsightClusterAutoscaleConfiguration PSCommand_New-AzHDInsightClusterAutoscaleConfiguration PSCmdlet_New-AzHDInsightClusterAutoscaleScheduleCondition PSCommand_New-AzHDInsightClusterAutoscaleScheduleCondition PSCmdlet_New-AzHDInsightClusterConfig PSCommand_New-AzHDInsightClusterConfig PSCmdlet_New-AzHDInsightHiveJobDefinition PSCommand_New-AzHDInsightHiveJobDefinition PSCmdlet_New-AzHDInsightIPConfiguration PSCommand_New-AzHDInsightIPConfiguration PSCmdlet_New-AzHDInsightMapReduceJobDefinition PSCommand_New-AzHDInsightMapReduceJobDefinition PSCmdlet_New-AzHDInsightPigJobDefinition PSCommand_New-AzHDInsightPigJobDefinition PSCmdlet_New-AzHDInsightPrivateLinkConfiguration PSCommand_New-AzHDInsightPrivateLinkConfiguration PSCmdlet_New-AzHDInsightSqoopJobDefinition PSCommand_New-AzHDInsightSqoopJobDefinition PSCmdlet_New-AzHDInsightStreamingMapReduceJobDefinition PSCommand_New-AzHDInsightStreamingMapReduceJobDefinition PSCmdlet_Remove-AzHDInsightCluster PSCommand_Remove-AzHDInsightCluster PSCmdlet_Remove-AzHDInsightClusterAutoscaleConfiguration PSCommand_Remove-AzHDInsightClusterAutoscaleConfiguration PSCmdlet_Remove-AzHDInsightPersistedScriptAction PSCommand_Remove-AzHDInsightPersistedScriptAction PSCmdlet_Restart-AzHDInsightHost PSCommand_Restart-AzHDInsightHost PSCmdlet_Set-AzHDInsightClusterAutoscaleConfiguration PSCommand_Set-AzHDInsightClusterAutoscaleConfiguration PSCmdlet_Set-AzHDInsightClusterDiskEncryptionKey PSCommand_Set-AzHDInsightClusterDiskEncryptionKey PSCmdlet_Set-AzHDInsightClusterSize PSCommand_Set-AzHDInsightClusterSize PSCmdlet_Set-AzHDInsightDefaultStorage PSCommand_Set-AzHDInsightDefaultStorage PSCmdlet_Set-AzHDInsightGatewayCredential PSCommand_Set-AzHDInsightGatewayCredential PSCmdlet_Set-AzHDInsightPersistedScriptAction PSCommand_Set-AzHDInsightPersistedScriptAction PSCmdlet_Start-AzHDInsightJob PSCommand_Start-AzHDInsightJob PSCmdlet_Stop-AzHDInsightJob PSCommand_Stop-AzHDInsightJob PSCmdlet_Submit-AzHDInsightScriptAction PSCommand_Submit-AzHDInsightScriptAction PSCmdlet_Use-AzHDInsightCluster PSCommand_Use-AzHDInsightCluster PSCmdlet_Wait-AzHDInsightJob PSCommand_Wait-AzHDInsightJob PSIncludes_Cmdlet</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">6.3.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -258,7 +258,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.HDInsight\6.3.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.HDInsight\6.3.1</S>
     </MS>
   </Obj>
 </Objs>

@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:13:53-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:01.4470781-05:00</DT>
+        <DT>2025-03-09T18:20:48.1572779-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -177,11 +177,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -305,15 +309,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -360,15 +360,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5936232</S>
-          <S N="downloadCount">37766998</S>
+          <S N="versionDownloadCount">6730614</S>
+          <S N="downloadCount">38650309</S>
           <S N="packageSize">2538613</S>
           <S N="published">1/14/2025 3:13:53 AM -05:00</S>
           <S N="created">1/14/2025 3:13:53 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule DevCenter PSEdition_Core PSEdition_Desktop PSFunction_Connect-AzDevCenterAdminCatalog PSCommand_Connect-AzDevCenterAdminCatalog PSFunction_Connect-AzDevCenterAdminProjectCatalog PSCommand_Connect-AzDevCenterAdminProjectCatalog PSFunction_Deploy-AzDevCenterUserEnvironment PSCommand_Deploy-AzDevCenterUserEnvironment PSFunction_Get-AzDevCenterAdminAttachedNetwork PSCommand_Get-AzDevCenterAdminAttachedNetwork PSFunction_Get-AzDevCenterAdminCatalog PSCommand_Get-AzDevCenterAdminCatalog PSFunction_Get-AzDevCenterAdminCatalogSyncErrorDetail PSCommand_Get-AzDevCenterAdminCatalogSyncErrorDetail PSFunction_Get-AzDevCenterAdminCustomizationTask PSCommand_Get-AzDevCenterAdminCustomizationTask PSFunction_Get-AzDevCenterAdminCustomizationTaskErrorDetail PSCommand_Get-AzDevCenterAdminCustomizationTaskErrorDetail PSFunction_Get-AzDevCenterAdminDevBoxDefinition PSCommand_Get-AzDevCenterAdminDevBoxDefinition PSFunction_Get-AzDevCenterAdminDevCenter PSCommand_Get-AzDevCenterAdminDevCenter PSFunction_Get-AzDevCenterAdminEnvironmentDefinition PSCommand_Get-AzDevCenterAdminEnvironmentDefinition PSFunction_Get-AzDevCenterAdminEnvironmentDefinitionErrorDetail PSCommand_Get-AzDevCenterAdminEnvironmentDefinitionErrorDetail PSFunction_Get-AzDevCenterAdminEnvironmentType PSCommand_Get-AzDevCenterAdminEnvironmentType PSFunction_Get-AzDevCenterAdminGallery PSCommand_Get-AzDevCenterAdminGallery PSFunction_Get-AzDevCenterAdminImage PSCommand_Get-AzDevCenterAdminImage PSFunction_Get-AzDevCenterAdminImageVersion PSCommand_Get-AzDevCenterAdminImageVersion PSFunction_Get-AzDevCenterAdminNetworkConnection PSCommand_Get-AzDevCenterAdminNetworkConnection PSFunction_Get-AzDevCenterAdminNetworkConnectionHealthDetail PSCommand_Get-AzDevCenterAdminNetworkConnectionHealthDetail PSFunction_Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint PSCommand_Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint PSFunction_Get-AzDevCenterAdminOperationStatus PSCommand_Get-AzDevCenterAdminOperationStatus PSFunction_Get-AzDevCenterAdminPlan PSCommand_Get-AzDevCenterAdminPlan PSFunction_Get-AzDevCenterAdminPlanMember PSCommand_Get-AzDevCenterAdminPlanMember PSFunction_Get-AzDevCenterAdminPool PSCommand_Get-AzDevCenterAdminPool PSFunction_Get-AzDevCenterAdminProject PSCommand_Get-AzDevCenterAdminProject PSFunction_Get-AzDevCenterAdminProjectAllowedEnvironmentType PSCommand_Get-AzDevCenterAdminProjectAllowedEnvironmentType PSFunction_Get-AzDevCenterAdminProjectCatalog PSCommand_Get-AzDevCenterAdminProjectCatalog PSFunction_Get-AzDevCenterAdminProjectCatalogSyncErrorDetail PSCommand_Get-AzDevCenterAdminProjectCatalogSyncErrorDetail PSFunction_Get-AzDevCenterAdminProjectEnvironmentDefinition PSCommand_Get-AzDevCenterAdminProjectEnvironmentDefinition PSFunction_Get-AzDevCenterAdminProjectEnvironmentDefinitionErrorDetail PSCommand_Get-AzDevCenterAdminProjectEnvironmentDefinitionErrorDetail PSFunction_Get-AzDevCenterAdminProjectEnvironmentType PSCommand_Get-AzDevCenterAdminProjectEnvironmentType PSFunction_Get-AzDevCenterAdminProjectInheritedSetting PSCommand_Get-AzDevCenterAdminProjectInheritedSetting PSFunction_Get-AzDevCenterAdminSchedule PSCommand_Get-AzDevCenterAdminSchedule PSFunction_Get-AzDevCenterAdminSku PSCommand_Get-AzDevCenterAdminSku PSFunction_Get-AzDevCenterAdminUsage PSCommand_Get-AzDevCenterAdminUsage PSFunction_Get-AzDevCenterUserCatalog PSCommand_Get-AzDevCenterUserCatalog PSFunction_Get-AzDevCenterUserDevBox PSCommand_Get-AzDevCenterUserDevBox PSFunction_Get-AzDevCenterUserDevBoxAction PSCommand_Get-AzDevCenterUserDevBoxAction PSFunction_Get-AzDevCenterUserDevBoxCustomizationGroup PSCommand_Get-AzDevCenterUserDevBoxCustomizationGroup PSFunction_Get-AzDevCenterUserDevBoxCustomizationTaskDefinition PSCommand_Get-AzDevCenterUserDevBoxCustomizationTaskDefinition PSFunction_Get-AzDevCenterUserDevBoxCustomizationTaskLog PSCommand_Get-AzDevCenterUserDevBoxCustomizationTaskLog PSFunction_Get-AzDevCenterUserDevBoxOperation PSCommand_Get-AzDevCenterUserDevBoxOperation PSFunction_Get-AzDevCenterUserDevBoxRemoteConnection PSCommand_Get-AzDevCenterUserDevBoxRemoteConnection PSFunction_Get-AzDevCenterUserEnvironment PSCommand_Get-AzDevCenterUserEnvironment PSFunction_Get-AzDevCenterUserEnvironmentAction PSCommand_Get-AzDevCenterUserEnvironmentAction PSFunction_Get-AzDevCenterUserEnvironmentDefinition PSCommand_Get-AzDevCenterUserEnvironmentDefinition PSFunction_Get-AzDevCenterUserEnvironmentLog PSCommand_Get-AzDevCenterUserEnvironmentLog PSFunction_Get-AzDevCenterUserEnvironmentOperation PSCommand_Get-AzDevCenterUserEnvironmentOperation PSFunction_Get-AzDevCenterUserEnvironmentOutput PSCommand_Get-AzDevCenterUserEnvironmentOutput PSFunction_Get-AzDevCenterUserEnvironmentType PSCommand_Get-AzDevCenterUserEnvironmentType PSFunction_Get-AzDevCenterUserPool PSCommand_Get-AzDevCenterUserPool PSFunction_Get-AzDevCenterUserProject PSCommand_Get-AzDevCenterUserProject PSFunction_Get-AzDevCenterUserSchedule PSCommand_Get-AzDevCenterUserSchedule PSFunction_Invoke-AzDevCenterAdminExecuteCheckNameAvailability PSCommand_Invoke-AzDevCenterAdminExecuteCheckNameAvailability PSFunction_Invoke-AzDevCenterAdminExecuteCheckScopedNameAvailability PSCommand_Invoke-AzDevCenterAdminExecuteCheckScopedNameAvailability PSFunction_Invoke-AzDevCenterUserDelayDevBoxAction PSCommand_Invoke-AzDevCenterUserDelayDevBoxAction PSFunction_Invoke-AzDevCenterUserDelayEnvironmentAction PSCommand_Invoke-AzDevCenterUserDelayEnvironmentAction PSFunction_New-AzDevCenterAdminAttachedNetwork PSCommand_New-AzDevCenterAdminAttachedNetwork PSFunction_New-AzDevCenterAdminCatalog PSCommand_New-AzDevCenterAdminCatalog PSFunction_New-AzDevCenterAdminDevBoxDefinition PSCommand_New-AzDevCenterAdminDevBoxDefinition PSFunction_New-AzDevCenterAdminDevCenter PSCommand_New-AzDevCenterAdminDevCenter PSFunction_New-AzDevCenterAdminEnvironmentType PSCommand_New-AzDevCenterAdminEnvironmentType PSFunction_New-AzDevCenterAdminGallery PSCommand_New-AzDevCenterAdminGallery PSFunction_New-AzDevCenterAdminNetworkConnection PSCommand_New-AzDevCenterAdminNetworkConnection PSFunction_New-AzDevCenterAdminPlan PSCommand_New-AzDevCenterAdminPlan PSFunction_New-AzDevCenterAdminPlanMember PSCommand_New-AzDevCenterAdminPlanMember PSFunction_New-AzDevCenterAdminPool PSCommand_New-AzDevCenterAdminPool PSFunction_New-AzDevCenterAdminProject PSCommand_New-AzDevCenterAdminProject PSFunction_New-AzDevCenterAdminProjectCatalog PSCommand_New-AzDevCenterAdminProjectCatalog PSFunction_New-AzDevCenterAdminProjectEnvironmentType PSCommand_New-AzDevCenterAdminProjectEnvironmentType PSFunction_New-AzDevCenterAdminSchedule PSCommand_New-AzDevCenterAdminSchedule PSFunction_New-AzDevCenterUserDevBox PSCommand_New-AzDevCenterUserDevBox PSFunction_New-AzDevCenterUserDevBoxCustomizationGroup PSCommand_New-AzDevCenterUserDevBoxCustomizationGroup PSFunction_New-AzDevCenterUserEnvironment PSCommand_New-AzDevCenterUserEnvironment PSFunction_Remove-AzDevCenterAdminAttachedNetwork PSCommand_Remove-AzDevCenterAdminAttachedNetwork PSFunction_Remove-AzDevCenterAdminCatalog PSCommand_Remove-AzDevCenterAdminCatalog PSFunction_Remove-AzDevCenterAdminDevBoxDefinition PSCommand_Remove-AzDevCenterAdminDevBoxDefinition PSFunction_Remove-AzDevCenterAdminDevCenter PSCommand_Remove-AzDevCenterAdminDevCenter PSFunction_Remove-AzDevCenterAdminEnvironmentType PSCommand_Remove-AzDevCenterAdminEnvironmentType PSFunction_Remove-AzDevCenterAdminGallery PSCommand_Remove-AzDevCenterAdminGallery PSFunction_Remove-AzDevCenterAdminNetworkConnection PSCommand_Remove-AzDevCenterAdminNetworkConnection PSFunction_Remove-AzDevCenterAdminPlan PSCommand_Remove-AzDevCenterAdminPlan PSFunction_Remove-AzDevCenterAdminPlanMember PSCommand_Remove-AzDevCenterAdminPlanMember PSFunction_Remove-AzDevCenterAdminPool PSCommand_Remove-AzDevCenterAdminPool PSFunction_Remove-AzDevCenterAdminProject PSCommand_Remove-AzDevCenterAdminProject PSFunction_Remove-AzDevCenterAdminProjectCatalog PSCommand_Remove-AzDevCenterAdminProjectCatalog PSFunction_Remove-AzDevCenterAdminProjectEnvironmentType PSCommand_Remove-AzDevCenterAdminProjectEnvironmentType PSFunction_Remove-AzDevCenterAdminSchedule PSCommand_Remove-AzDevCenterAdminSchedule PSFunction_Remove-AzDevCenterUserDevBox PSCommand_Remove-AzDevCenterUserDevBox PSFunction_Remove-AzDevCenterUserEnvironment PSCommand_Remove-AzDevCenterUserEnvironment PSFunction_Repair-AzDevCenterUserDevBox PSCommand_Repair-AzDevCenterUserDevBox PSFunction_Restart-AzDevCenterUserDevBox PSCommand_Restart-AzDevCenterUserDevBox PSFunction_Skip-AzDevCenterUserDevBoxAction PSCommand_Skip-AzDevCenterUserDevBoxAction PSFunction_Skip-AzDevCenterUserEnvironmentAction PSCommand_Skip-AzDevCenterUserEnvironmentAction PSFunction_Start-AzDevCenterAdminNetworkConnectionHealthCheck PSCommand_Start-AzDevCenterAdminNetworkConnectionHealthCheck PSFunction_Start-AzDevCenterAdminPoolHealthCheck PSCommand_Start-AzDevCenterAdminPoolHealthCheck PSFunction_Start-AzDevCenterUserDevBox PSCommand_Start-AzDevCenterUserDevBox PSFunction_Stop-AzDevCenterUserDevBox PSCommand_Stop-AzDevCenterUserDevBox PSFunction_Sync-AzDevCenterAdminCatalog PSCommand_Sync-AzDevCenterAdminCatalog PSFunction_Sync-AzDevCenterAdminProjectCatalog PSCommand_Sync-AzDevCenterAdminProjectCatalog PSFunction_Test-AzDevCenterUserDevBoxCustomizationTaskAction PSCommand_Test-AzDevCenterUserDevBoxCustomizationTaskAction PSFunction_Update-AzDevCenterAdminCatalog PSCommand_Update-AzDevCenterAdminCatalog PSFunction_Update-AzDevCenterAdminDevBoxDefinition PSCommand_Update-AzDevCenterAdminDevBoxDefinition PSFunction_Update-AzDevCenterAdminDevCenter PSCommand_Update-AzDevCenterAdminDevCenter PSFunction_Update-AzDevCenterAdminEnvironmentType PSCommand_Update-AzDevCenterAdminEnvironmentType PSFunction_Update-AzDevCenterAdminNetworkConnection PSCommand_Update-AzDevCenterAdminNetworkConnection PSFunction_Update-AzDevCenterAdminPlan PSCommand_Update-AzDevCenterAdminPlan PSFunction_Update-AzDevCenterAdminPlanMember PSCommand_Update-AzDevCenterAdminPlanMember PSFunction_Update-AzDevCenterAdminPool PSCommand_Update-AzDevCenterAdminPool PSFunction_Update-AzDevCenterAdminProject PSCommand_Update-AzDevCenterAdminProject PSFunction_Update-AzDevCenterAdminProjectCatalog PSCommand_Update-AzDevCenterAdminProjectCatalog PSFunction_Update-AzDevCenterAdminProjectEnvironmentType PSCommand_Update-AzDevCenterAdminProjectEnvironmentType PSFunction_Update-AzDevCenterAdminSchedule PSCommand_Update-AzDevCenterAdminSchedule PSFunction_Update-AzDevCenterUserEnvironment PSCommand_Update-AzDevCenterUserEnvironment PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.0.1</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -380,7 +380,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.DevCenter\2.0.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DevCenter\2.0.1</S>
     </MS>
   </Obj>
 </Objs>

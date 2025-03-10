@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:20:07-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:30:54.2129417-05:00</DT>
+        <DT>2025-03-09T18:21:54.3974876-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -114,11 +114,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -179,15 +183,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -234,15 +234,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6210473</S>
-          <S N="downloadCount">75872469</S>
+          <S N="versionDownloadCount">7008885</S>
+          <S N="downloadCount">76913353</S>
           <S N="packageSize">966852</S>
           <S N="published">1/14/2025 3:20:07 AM -05:00</S>
           <S N="created">1/14/2025 3:20:07 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule StackHci PSEdition_Core PSEdition_Desktop PSFunction_Add-AzStackHCIVMAttestation PSCommand_Add-AzStackHCIVMAttestation PSFunction_Disable-AzStackHCIAttestation PSCommand_Disable-AzStackHCIAttestation PSFunction_Disable-AzStackHCIRemoteSupport PSCommand_Disable-AzStackHCIRemoteSupport PSFunction_Enable-AzStackHCIAttestation PSCommand_Enable-AzStackHCIAttestation PSFunction_Enable-AzStackHCIRemoteSupport PSCommand_Enable-AzStackHCIRemoteSupport PSFunction_Get-AzStackHciArcSetting PSCommand_Get-AzStackHciArcSetting PSFunction_Get-AzStackHciCluster PSCommand_Get-AzStackHciCluster PSFunction_Get-AzStackHciDeploymentSetting PSCommand_Get-AzStackHciDeploymentSetting PSFunction_Get-AzStackHciEdgeDevice PSCommand_Get-AzStackHciEdgeDevice PSFunction_Get-AzStackHciExtension PSCommand_Get-AzStackHciExtension PSFunction_Get-AzStackHCILogsDirectory PSCommand_Get-AzStackHCILogsDirectory PSFunction_Get-AzStackHCIRemoteSupportAccess PSCommand_Get-AzStackHCIRemoteSupportAccess PSFunction_Get-AzStackHCIRemoteSupportSessionHistory PSCommand_Get-AzStackHCIRemoteSupportSessionHistory PSFunction_Get-AzStackHciSecuritySetting PSCommand_Get-AzStackHciSecuritySetting PSFunction_Get-AzStackHciUpdate PSCommand_Get-AzStackHciUpdate PSFunction_Get-AzStackHciUpdateRun PSCommand_Get-AzStackHciUpdateRun PSFunction_Get-AzStackHciUpdateSummary PSCommand_Get-AzStackHciUpdateSummary PSFunction_Get-AzStackHCIVMAttestation PSCommand_Get-AzStackHCIVMAttestation PSFunction_Install-AzStackHCIRemoteSupport PSCommand_Install-AzStackHCIRemoteSupport PSFunction_Invoke-AzStackHciConsentAndInstallDefaultExtension PSCommand_Invoke-AzStackHciConsentAndInstallDefaultExtension PSFunction_Invoke-AzStackHciExtendClusterSoftwareAssuranceBenefit PSCommand_Invoke-AzStackHciExtendClusterSoftwareAssuranceBenefit PSFunction_Invoke-AzStackHciUpdate PSCommand_Invoke-AzStackHciUpdate PSFunction_New-AzStackHciArcSetting PSCommand_New-AzStackHciArcSetting PSFunction_New-AzStackHciCluster PSCommand_New-AzStackHciCluster PSFunction_New-AzStackHciDeploymentSetting PSCommand_New-AzStackHciDeploymentSetting PSFunction_New-AzStackHciEdgeDevice PSCommand_New-AzStackHciEdgeDevice PSFunction_New-AzStackHciExtension PSCommand_New-AzStackHciExtension PSFunction_New-AzStackHciSecuritySetting PSCommand_New-AzStackHciSecuritySetting PSFunction_Register-AzStackHCI PSCommand_Register-AzStackHCI PSFunction_Remove-AzStackHciArcSetting PSCommand_Remove-AzStackHciArcSetting PSFunction_Remove-AzStackHciCluster PSCommand_Remove-AzStackHciCluster PSFunction_Remove-AzStackHciDeploymentSetting PSCommand_Remove-AzStackHciDeploymentSetting PSFunction_Remove-AzStackHciEdgeDevice PSCommand_Remove-AzStackHciEdgeDevice PSFunction_Remove-AzStackHciExtension PSCommand_Remove-AzStackHciExtension PSFunction_Remove-AzStackHCIRemoteSupport PSCommand_Remove-AzStackHCIRemoteSupport PSFunction_Remove-AzStackHciSecuritySetting PSCommand_Remove-AzStackHciSecuritySetting PSFunction_Remove-AzStackHciUpdate PSCommand_Remove-AzStackHciUpdate PSFunction_Remove-AzStackHciUpdateRun PSCommand_Remove-AzStackHciUpdateRun PSFunction_Remove-AzStackHciUpdateSummary PSCommand_Remove-AzStackHciUpdateSummary PSFunction_Remove-AzStackHCIVMAttestation PSCommand_Remove-AzStackHCIVMAttestation PSFunction_Set-AzStackHCI PSCommand_Set-AzStackHCI PSFunction_Set-AzStackHciDeploymentSetting PSCommand_Set-AzStackHciDeploymentSetting PSFunction_Set-AzStackHciEdgeDevice PSCommand_Set-AzStackHciEdgeDevice PSFunction_Set-AzStackHciSecuritySetting PSCommand_Set-AzStackHciSecuritySetting PSFunction_Set-AzStackHciUpdate PSCommand_Set-AzStackHciUpdate PSFunction_Set-AzStackHciUpdateRun PSCommand_Set-AzStackHciUpdateRun PSFunction_Set-AzStackHciUpdateSummary PSCommand_Set-AzStackHciUpdateSummary PSFunction_Test-AzStackHciEdgeDevice PSCommand_Test-AzStackHciEdgeDevice PSFunction_Unregister-AzStackHCI PSCommand_Unregister-AzStackHCI PSFunction_Update-AzStackHciCluster PSCommand_Update-AzStackHciCluster PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:20:00Z</S>
           <S N="NormalizedVersion">2.5.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -254,7 +254,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.StackHCI\2.5.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.StackHCI\2.5.0</S>
     </MS>
   </Obj>
 </Objs>

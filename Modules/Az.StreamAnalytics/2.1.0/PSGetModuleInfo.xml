@@ -15,7 +15,7 @@
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:20:30-05:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:31:00.3254982-05:00</DT>
+        <DT>2025-03-09T18:22:01.5385514-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -95,11 +95,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">RoleCapability</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -141,15 +145,11 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Workflow</S>
             <Ref N="Value" RefId="6" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Cmdlet</S>
             <Ref N="Value" RefId="6" />
           </En>
         </DCT>
@@ -196,15 +196,15 @@
           <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6063200</S>
-          <S N="downloadCount">108887925</S>
+          <S N="versionDownloadCount">6861792</S>
+          <S N="downloadCount">109928440</S>
           <S N="packageSize">925306</S>
           <S N="published">1/14/2025 3:20:30 AM -05:00</S>
           <S N="created">1/14/2025 3:20:30 AM -05:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
+          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
           <S N="tags">Azure ResourceManager ARM PSModule StreamAnalytics PSEdition_Core PSEdition_Desktop PSFunction_Get-AzStreamAnalyticsCluster PSCommand_Get-AzStreamAnalyticsCluster PSFunction_Get-AzStreamAnalyticsClusterStreamingJob PSCommand_Get-AzStreamAnalyticsClusterStreamingJob PSFunction_Get-AzStreamAnalyticsDefaultFunctionDefinition PSCommand_Get-AzStreamAnalyticsDefaultFunctionDefinition PSFunction_Get-AzStreamAnalyticsFunction PSCommand_Get-AzStreamAnalyticsFunction PSFunction_Get-AzStreamAnalyticsInput PSCommand_Get-AzStreamAnalyticsInput PSFunction_Get-AzStreamAnalyticsJob PSCommand_Get-AzStreamAnalyticsJob PSFunction_Get-AzStreamAnalyticsOutput PSCommand_Get-AzStreamAnalyticsOutput PSFunction_Get-AzStreamAnalyticsQuota PSCommand_Get-AzStreamAnalyticsQuota PSFunction_Get-AzStreamAnalyticsTransformation PSCommand_Get-AzStreamAnalyticsTransformation PSFunction_New-AzStreamAnalyticsCluster PSCommand_New-AzStreamAnalyticsCluster PSFunction_New-AzStreamAnalyticsFunction PSCommand_New-AzStreamAnalyticsFunction PSFunction_New-AzStreamAnalyticsInput PSCommand_New-AzStreamAnalyticsInput PSFunction_New-AzStreamAnalyticsJob PSCommand_New-AzStreamAnalyticsJob PSFunction_New-AzStreamAnalyticsOutput PSCommand_New-AzStreamAnalyticsOutput PSFunction_New-AzStreamAnalyticsTransformation PSCommand_New-AzStreamAnalyticsTransformation PSFunction_Remove-AzStreamAnalyticsCluster PSCommand_Remove-AzStreamAnalyticsCluster PSFunction_Remove-AzStreamAnalyticsFunction PSCommand_Remove-AzStreamAnalyticsFunction PSFunction_Remove-AzStreamAnalyticsInput PSCommand_Remove-AzStreamAnalyticsInput PSFunction_Remove-AzStreamAnalyticsJob PSCommand_Remove-AzStreamAnalyticsJob PSFunction_Remove-AzStreamAnalyticsOutput PSCommand_Remove-AzStreamAnalyticsOutput PSFunction_Start-AzStreamAnalyticsJob PSCommand_Start-AzStreamAnalyticsJob PSFunction_Stop-AzStreamAnalyticsJob PSCommand_Stop-AzStreamAnalyticsJob PSFunction_Test-AzStreamAnalyticsFunction PSCommand_Test-AzStreamAnalyticsFunction PSFunction_Test-AzStreamAnalyticsInput PSCommand_Test-AzStreamAnalyticsInput PSFunction_Test-AzStreamAnalyticsOutput PSCommand_Test-AzStreamAnalyticsOutput PSFunction_Update-AzStreamAnalyticsCluster PSCommand_Update-AzStreamAnalyticsCluster PSFunction_Update-AzStreamAnalyticsFunction PSCommand_Update-AzStreamAnalyticsFunction PSFunction_Update-AzStreamAnalyticsInput PSCommand_Update-AzStreamAnalyticsInput PSFunction_Update-AzStreamAnalyticsJob PSCommand_Update-AzStreamAnalyticsJob PSFunction_Update-AzStreamAnalyticsOutput PSCommand_Update-AzStreamAnalyticsOutput PSFunction_Update-AzStreamAnalyticsTransformation PSCommand_Update-AzStreamAnalyticsTransformation PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
+          <S N="updated">2025-03-09T22:20:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>
@@ -216,7 +216,7 @@
           <S N="CompanyName">Microsoft Corporation</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Az.StreamAnalytics\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.StreamAnalytics\2.1.0</S>
     </MS>
   </Obj>
 </Objs>

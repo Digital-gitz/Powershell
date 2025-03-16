@@ -51,15 +51,15 @@ function Get-SystemInfo {
     )
 
     # Get computer information
-    $computerInfo = Get-WmiObject -Class Win32_ComputerSystem
-    $osInfo = Get-WmiObject -Class Win32_OperatingSystem
-    $biosInfo = Get-WmiObject -Class Win32_BIOS
-    $processorInfo = Get-WmiObject -Class Win32_Processor
-    $memoryInfo = Get-WmiObject -Class Win32_PhysicalMemory
-    $networkInfo = Get-WmiObject -Class Win32_NetworkAdapterConfiguration | Where-Object { $_.IPEnabled -eq $true }
+    # $computerInfo = Get-WmiObject -Class Win32_ComputerSystem
+    # $osInfo = Get-WmiObject -Class Win32_OperatingSystem
+    # $biosInfo = Get-WmiObject -Class Win32_BIOS
+    # $processorInfo = Get-WmiObject -Class Win32_Processor
+    # $memoryInfo = Get-WmiObject -Class Win32_PhysicalMemory
+    # $networkInfo = Get-WmiObject -Class Win32_NetworkAdapterConfiguration | Where-Object { $_.IPEnabled -eq $true }
 }
 
-    # ? Display computer information rememeber to hash shit out.
+    # ? Display computer information remember to hash shit out.
     [PSCustomObject]@{
         ComputerName = $ComputerName
         Manufacturer = $Manufacturer

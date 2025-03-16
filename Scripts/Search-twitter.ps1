@@ -31,11 +31,11 @@ $results = $wc.DownloadString($queryUrl)
 ## segments that look like "<div class='msg'>...</div>"
 $matches = $results |
 Select-String -Pattern '(?s)<div[^>]*msg[^>]*>.*?</div>' -AllMatches
-{foreach($match in $matches.Matches)
-## Replace anything in angle brackets with an empty string,
-## leaving just plain text remaining.
-$tweet = $match.Value -replace '<[^>]*>', ''
-## Output the text
+foreach($match in $matches.Matches) {
+    ## Replace anything in angle brackets with an empty string,
+    ## leaving just plain text remaining.
+    $tweet = $match.Value -replace '<[^>]*>', ''
+    ## Output the text
 [System.Web.HttpUtility]::HtmlDecode($tweet.Trim()) + "`n"
 }
 Text parsing on less structured web pages, while possible to accomplish with compli-

@@ -10,18 +10,42 @@
     
     # URL collections for various functions
     UrlCollections = @{
+        #region AI
         AI = @{
-            LLM = @(
-                "https://chatgpt.com/",
-                "https://chat.openai.com/",
-                "https://www.eleuther.ai/",
-                "https://claude.ai/new",
-                "https://gemini.google.com/app?hl=en-GB", 
-                "https://chat.deepseek.com/",
-                "https://x.com/i/grok",
-                "https://you.com/",
-                "https://pi.ai/" # New: Pi assistant
-            )
+            LLM = @{
+                Dashboard = @(
+                    "https://platform.deepseek.com/",
+                    "https://localai.io/"
+                )
+                Chat = @(
+                    "https://chat.openai.com/",
+                    "https://claude.ai/new",
+                    "https://x.com/i/grok",
+                    "https://you.com/",
+                    "https://pi.ai/",
+                    "https://chatgpt.com/",
+                    "https://chat.openai.com/",
+                    "https://claude.ai/new",
+                    "https://gemini.google.com/app?hl=en-GB",
+                    "https://chat.deepseek.com/"
+                )
+                deepseek = @(
+                    "https://chat.deepseek.com/"
+                    "https://platform.deepseek.com/"
+                    "https://deepseekcoder.github.io/",
+                    "https://api-docs.deepseek.com/api/deepseek-api/"
+                    )
+                Resources = @(
+                    "https://www.openai.com/api/introduction/", # OpenAI API docs
+                    "https://www.eleuther.ai/", # Open source LLM research
+                    "https://chatgpt.com/" # ChatGPT community
+                )
+                aiDocs = @(
+                    "https://www.deepseek.com/docs/overview",
+                    "https://ai.google.dev/gemini-api/docs/openai"
+                    
+                )
+            }
             AiPackages = @(
                 "https://huggingface.co/",
                 "https://www.tensorflow.org/",
@@ -38,9 +62,15 @@
             AiArt = @(
                 "https://anything.world/"
             )
+            Azure = @(
+                "https://portal.azure.com/"
+                "https://learn.microsoft.com/en-us/azure/"
+                "https://learn.microsoft.com/en-us/azure/openai/"
+                "https://learn.microsoft.com/en-us/azure/cognitive-services/"
+            )   
         }
-
-        # Google Services - Reorganized into categories
+        #endregion AI
+        #region Google Services
         Google = @{
             Core = @(
                 "https://www.google.com/",
@@ -75,6 +105,18 @@
                 "https://www.google.com/adsense",
                 "https://www.google.com/webmasters"
             )
+            Blogs = @(
+                "https://www.google.com/blog",
+                "https://www.google.com/blog",
+                "https://www.google.com/blog",
+                "https://www.google.com/blog"
+            )
+            Cloud = @(
+                "https://www.google.com/cloud",
+                "https://www.google.com/cloud-storage",
+                "https://www.google.com/cloud-storage",
+                "https://www.google.com/cloud-storage"
+            )
             Other = @(
                 "https://www.google.com/news",
                 "https://www.google.com/alerts",
@@ -84,8 +126,8 @@
                 "https://www.google.com/finance"
             )
         }
-
-        # Developer Resources
+        #endregion Google Services
+        #region Developer Resources
         Development = @{
             Documentation = @(
                 "https://devdocs.io/", # New: Combined API documentation
@@ -93,8 +135,15 @@
                 "https://developer.mozilla.org/",
                 "https://kubernetes.io/docs/",
                 "https://docs.cursor.com/get-started/welcome",
-                "https://docs.aws.amazon.com/"
+                "https://docs.aws.amazon.com/",
+                "https://tpo.pages.torproject.net/core/arti/guides/compiling-arti"
             )
+            VersionControl = @(
+                "https://github.com/",
+                "https://gitlab.com/",
+                "https://bitbucket.org/"
+            )
+
             GitSites = @(
                 "https://github.com/",
                 "https://gitlab.com/",
@@ -139,6 +188,15 @@
                 "https://console.cloud.google.com/", # New: Google Cloud Console
                 "https://cloud.digitalocean.com/" # New: DigitalOcean
             )
+            CloudStorage = @(
+                "https://www.dropbox.com/",
+                "https://www.google.com/drive",
+                "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage",
+                "https://www.pcloud.com/",
+                "https://www.mega.nz/",
+                "https://www.icloud.com/"
+            )
+
             macro = @(
                 "https://www.arduino.cc/",
                 "https://www.raspberrypi.org/",
@@ -147,9 +205,13 @@
                 "https://www.seeedstudio.com/" # New: Seeed Studio
                 "https://www.clipboardfusion.com/Macros/" # New: Seeed Studio
             )
+            plugins = @(
+                "https://www.powershellgallery.com/",
+                "https://github.com/microsoft/PowerToys/blob/main/doc/thirdPartyRunPlugins.md"
+            )
         }
-        
-        # Finance & Investing
+        #endregion Developer Resources
+        #region Finance & Investing
         Finance = @{
             StockSites = @(
                 "https://www.reddit.com/r/stocks/",
@@ -209,6 +271,9 @@
                 "https://www.blockchain.com/", # New: Blockchain explorer
                 "https://etherscan.io/", # New: Ethereum explorer
                 "https://defillama.com/" # New: DeFi analytics
+            )
+            CryptoNews = @(
+                "https://www.cryptopotato.com/" # New: Crypto news
             )
             Banking = @(
                 "https://www.td.com/us/en/personal-banking/my-td",
@@ -270,8 +335,8 @@
                 "https://www.principal.com/"
             )
         }
-        
-        # News & Media
+        #endregion Finance & Investing
+        #region News & Media
         News = @{
             NewsSites = @(
                 "https://www.bbc.co.uk/news",
@@ -313,7 +378,8 @@
                 "https://tidal.com/" # New: Tidal
             )
         }
-        # Art & Design
+        #endregion News & Media
+        #region Art & Design
         Art = @{
         ArtReff = @(
             "https://www.artstation.com/",
@@ -331,8 +397,9 @@
             "https://www.artsy.net/", # New: Fine art marketplace
             "https://www.saatchiart.com/" # New: Original artwork
         )
-    }
-        # Social Media
+        }
+        #endregion Art & Design
+        #region Social Media
         Social = @{
             Professional = @(
                 "https://www.linkedin.com/"
@@ -351,8 +418,9 @@
             Community = @(
                 "https://disboard.org/search"
             )
-    }        
-        # Learning
+        }
+        #endregion Social Media
+        #region Learning
         Learning = @{
             Platforms = @(
                 "https://learn.microsoft.com/",
@@ -368,8 +436,8 @@
                 "https://docs.docker.com/" # New: Docker docs
             )
         }
-        
-        # Utilities
+        #endregion Learning
+        #region Utilities
         Utilities = @{
             Drawing = @(
                 "https://excalidraw.com/", # New: Excalidraw 
@@ -385,6 +453,16 @@
                 "https://clayelectric.com/"
             )
         }
+        Search = @(
+            "https://www.google.com/",
+            "https://www.bing.com/",
+            "https://www.yahoo.com/",
+            "https://www.duckduckgo.com/"
+        )
+        Other = @(
+            "https://github.com/ChrisTitusTech/winutil"
+        )
+        #endregion Utilities
     }
 
     # Required PowerShell modules

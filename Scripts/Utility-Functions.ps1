@@ -141,11 +141,13 @@ if (Get-Command Set-PSReadLineOption -ErrorAction SilentlyContinue) {
     # Custom key handlers
     Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
     Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+    Set-PSReadLineOption -PredictionSource History
+    Set-PSReadLineOption -PredictionViewStyle ListView
+    Set-PSReadLineOption -EditMode Windows
+    Set-PSReadLineKeyHandler -Key Ctrl+q -Function TabCompleteNext
+    Set-PSReadLineKeyHandler -Key Ctrl+Q -Function TabCompletePrevious
 }
 
-Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -EditMode Windows
 
 function Initialize-PSReadLine {
     if (-not (Get-Module PSReadLine)) { return }
@@ -178,71 +180,90 @@ function Initialize-PSReadLine {
     }
     
 
-function Import-EnvironmentSpecificConfig {
-    [CmdletBinding()]
-    param(
-        [Parameter(Mandatory=$false)]
-        [string]$ConfigDir = (Join-Path $PSScriptRoot "Environments")
-    )
-    
-    # Determine environment
-    $computerName = $env:COMPUTERNAME
-    $userName = $env:USERNAME
-    $domain = $env:USERDOMAIN
-    $osVersion = [System.Environment]::OSVersion.Version
-    
-    # Possible config files to look for
-    $configFiles = @(
-        # Computer-specific config
-        "$ConfigDir\computer-$computerName.psd1",
-        # User-specific config
-        "$ConfigDir\user-$userName.psd1",
-        # Domain-specific config
-        "$ConfigDir\domain-$domain.psd1",
-        # OS-specific config (Windows 10/11)
-        "$ConfigDir\os-win$($osVersion.Major).psd1"
-    )
-    
-    $loadedConfigs = @()
-    
-    foreach ($file in $configFiles) {
-        if (Test-Path $file) {
-            try {
-                $envConfig = Import-PowerShellDataFile -Path $file -ErrorAction Stop
-                
-                # Merge with main config
-                foreach ($key in $envConfig.Keys) {
-                    if ($Config.ContainsKey($key) -and $Config[$key] -is [hashtable] -and $envConfig[$key] -is [hashtable]) {
-                        # Merge hashtables
-                        foreach ($subKey in $envConfig[$key].Keys) {
-                            $Config[$key][$subKey] = $envConfig[$key][$subKey]
-                        }
-                    }
-                    else {
-                        # Replace/add key
-                        $Config[$key] = $envConfig[$key]
-                    }
-                }
-                
-                $loadedConfigs += (Split-Path -Path $file -Leaf)
-                Write-Host "Loaded environment config: $(Split-Path -Path $file -Leaf)" -ForegroundColor Green
-            }
-            catch {
-                Write-Warning "Failed to load environment config $file`: $_"
-            }
-        }
-    }
-    
-    # Create the directory if it doesn't exist
-    if (-not (Test-Path $ConfigDir)) {
-        New-Item -Path $ConfigDir -ItemType Directory -Force | Out-Null
-        Write-Host "Created environments directory: $ConfigDir" -ForegroundColor Green
-    }
-    
-    return $loadedConfigs
-}
+
 
     # Standard key bindings
     Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
     Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-}
+    Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+    }
+
+
+    function Show-Path {
+        $paths = $env:PATH -split ';'
+        foreach ($path in $paths) {
+            if (Test-Path $path) {
+                Write-Host $path -ForegroundColor Green
+            } else {
+                Write-Host $path -ForegroundColor Red
+            }
+        }
+    }
+    function Show-LLMConfig {
+        Write-Output "/agent config openai-gpt"
+    }
+    
+
+    function Import-EnvironmentSpecificConfig {
+        [CmdletBinding()]
+        param(
+            [Parameter(Mandatory=$false)]
+            [string]$ConfigDir = (Join-Path $PSScriptRoot "Environments")
+        )
+        
+        # Determine environment
+        $computerName = $env:COMPUTERNAME
+        $userName = $env:USERNAME
+        $domain = $env:USERDOMAIN
+        $osVersion = [System.Environment]::OSVersion.Version
+        
+        # Possible config files to look for
+        $configFiles = @(
+            # Computer-specific config
+            "$ConfigDir\computer-$computerName.psd1",
+            # User-specific config
+            "$ConfigDir\user-$userName.psd1",
+            # Domain-specific config
+            "$ConfigDir\domain-$domain.psd1",
+            # OS-specific config (Windows 10/11)
+            "$ConfigDir\os-win$($osVersion.Major).psd1"
+        )
+        
+        $loadedConfigs = @()
+        
+        foreach ($file in $configFiles) {
+            if (Test-Path $file) {
+                try {
+                    $envConfig = Import-PowerShellDataFile -Path $file -ErrorAction Stop
+                    
+                    # Merge with main config
+                    foreach ($key in $envConfig.Keys) {
+                        if ($Config.ContainsKey($key) -and $Config[$key] -is [hashtable] -and $envConfig[$key] -is [hashtable]) {
+                            # Merge hashtables
+                            foreach ($subKey in $envConfig[$key].Keys) {
+                                $Config[$key][$subKey] = $envConfig[$key][$subKey]
+                            }
+                        }
+                        else {
+                            # Replace/add key
+                            $Config[$key] = $envConfig[$key]
+                        }
+                    }
+                    
+                    $loadedConfigs += (Split-Path -Path $file -Leaf)
+                    Write-Host "Loaded environment config: $(Split-Path -Path $file -Leaf)" -ForegroundColor Green
+                }
+                catch {
+                    Write-Warning "Failed to load environment config $file`: $_"
+                }
+            }
+        }
+        
+        # Create the directory if it doesn't exist
+        if (-not (Test-Path $ConfigDir)) {
+            New-Item -Path $ConfigDir -ItemType Directory -Force | Out-Null
+            Write-Host "Created environments directory: $ConfigDir" -ForegroundColor Green
+        }
+        
+        return $loadedConfigs
+    }

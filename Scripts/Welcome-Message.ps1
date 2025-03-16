@@ -242,19 +242,19 @@ function Show-Welcome {
         [switch]$ShowCommands,
         
         [Parameter(Mandatory=$false)]
-        [switch]$ShowTips = $true,
+        [switch]$ShowTips,
         
         [Parameter(Mandatory=$false)]
-        [switch]$ShowQuote = $true,
+        [switch]$ShowQuote,
         
         [Parameter(Mandatory=$false)]
         [string]$CustomMessage,
         
         [Parameter(Mandatory=$false)]
-        [switch]$ShowSystemInfo = $true,
+        [switch]$ShowSystemInfo,
         
         [Parameter(Mandatory=$false)]
-        [switch]$ShowAnimation = $true,
+        [switch]$ShowAnimation,
         
         [int]$DelaySeconds = 1
     )
@@ -309,35 +309,6 @@ function Show-Welcome {
     Write-Host "`n$Logo" -ForegroundColor $ThemeColors.Primary
     Write-Host "`nInitializing Digital Environment..." -ForegroundColor $ThemeColors.Primary
     Write-Host "System Time: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor $ThemeColors.Secondary
-    
-    # Display system info with proper spacing
-    # if ($ShowSystemInfo) {
-    #     $metrics = Get-SystemMetrics
-    #     if ($metrics) {
-    #         Write-Host "`nSystem Diagnostics:" -ForegroundColor $ThemeColors.Primary
-    #         Write-Host "└─ Host: $($metrics.ComputerName)" -ForegroundColor $ThemeColors.Secondary
-    #         Write-Host "└─ User: $($metrics.User)" -ForegroundColor $ThemeColors.Secondary
-    #         Write-Host "└─ OS: $($metrics.OS)" -ForegroundColor $ThemeColors.Secondary
-    #         Write-Host "└─ Processor: $($metrics.CPU.Name)" -ForegroundColor $ThemeColors.Secondary
-            
-    #         # Show CPU usage as a progress bar if available
-    #         if ($metrics.CPU.Load -ne "N/A") {
-    #             $cpuBar = Show-ProgressBar -Percent $metrics.CPU.Load -Length 15 -Label "CPU"
-    #             Write-Host "└─ $cpuBar" -ForegroundColor $ThemeColors.Secondary
-    #         }
-            
-    #         # Show memory usage as a progress bar
-    #         $memBar = Show-ProgressBar -Percent $metrics.Memory.Usage -Length 15 -Label "RAM"
-    #         Write-Host "└─ $memBar ($($metrics.Memory.Total) GB Total)" -ForegroundColor $ThemeColors.Secondary
-            
-    #         # Show disk usage as a progress bar
-    #         $diskBar = Show-ProgressBar -Percent $metrics.Disk.Usage -Length 15 -Label "Disk"
-    #         Write-Host "└─ $diskBar ($($metrics.Disk.FreeSpace)GB free of $($metrics.Disk.TotalSpace)GB)" -ForegroundColor $ThemeColors.Secondary
-            
-    #         Write-Host "└─ PowerShell: $($metrics.PowerShell)" -ForegroundColor $ThemeColors.Secondary
-    #         Write-Host "└─ Session Time: $($metrics.SessionDuration) minutes" -ForegroundColor $ThemeColors.Secondary
-    #     }
-    # }
     
     # Display weather with cyberpunk style
     $weather = Get-WeatherInfo

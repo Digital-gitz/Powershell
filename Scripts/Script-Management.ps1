@@ -1,10 +1,10 @@
-# Script-Managment.ps1
+# Script-Management.ps1
 
 # Initialize configuration path
 $ConfigPath = Join-Path -Path $PSScriptRoot -ChildPath '..\config.psd1'
 
 # Load configuration file
-function Load-Configuration {
+function Import-Configuration {
     if (Test-Path $ConfigPath) {
         try {
             # Import the configuration file directly
@@ -17,27 +17,29 @@ function Load-Configuration {
             
             Write-Host "Configuration loaded successfully" -ForegroundColor Green
             return $config
-        } catch {
+        }
+        catch {
             Write-Warning "Failed to load configuration: $_"
         }
-    } else {
+    }
+    else {
         Write-Warning "Configuration file not found at: $ConfigPath"
     }
 
     # Return default configuration if loading fails
     return @{
-        CommonPaths = @{
+        CommonPaths     = @{
             PowerShell = $PSScriptRoot
-            Scripts = Join-Path $PSScriptRoot "Scripts"
-            Documents = [Environment]::GetFolderPath('MyDocuments')
+            Scripts    = Join-Path $PSScriptRoot "Scripts"
+            Documents  = [Environment]::GetFolderPath('MyDocuments')
         }
-        UrlCollections = @{}
+        UrlCollections  = @{}
         RequiredModules = @()
-        PSReadLine = @{
-            ShowToolTips = $true
-            PredictionSource = "History"
+        PSReadLine      = @{
+            ShowToolTips        = $true
+            PredictionSource    = "History"
             PredictionViewStyle = "ListView"
-            EditMode = "Windows"
+            EditMode            = "Windows"
         }
     }
 }
@@ -67,7 +69,8 @@ function Update-CustomScripts {
         
         try {
             Invoke-WebRequest -Uri $zipUrl -OutFile $zipFile -ErrorAction Stop
-        } catch {
+        }
+        catch {
             Write-Error "Failed to download from $zipUrl`: $_"
             return
         }
@@ -149,10 +152,12 @@ function Update-CustomScripts {
                     Copy-Item -Path $file.FullName -Destination $destinationPath -Force
                     Write-Host "Updated: $relativePath" -ForegroundColor Green
                     $updatedCount++
-                } else {
+                }
+                else {
                     Write-Host "Skipped (no changes): $relativePath" -ForegroundColor DarkGray
                 }
-            } catch {
+            }
+            catch {
                 Write-Host "Error updating $relativePath`: $_" -ForegroundColor Red
                 $errorCount++
             }
@@ -169,9 +174,11 @@ function Update-CustomScripts {
         New-Item -Path $backupDir -ItemType Directory -Force | Out-Null
         
         Write-Host "`nBackup created at: $backupDir" -ForegroundColor Cyan
-    } catch {
+    }
+    catch {
         Write-Error "Unexpected error during script update: $_"
-    } finally {
+    }
+    finally {
         # Clean up temporary directory
         if (Test-Path $tempDir) {
             Remove-Item -Path $tempDir -Recurse -Force
@@ -201,10 +208,12 @@ function global:Import-CustomScript {
                 $Global:LoadedScripts.Add($scriptName) | Out-Null
                 Write-Verbose "Imported script: $Name"
             }
-        } else {
+        }
+        else {
             Write-Warning "Script not found: $scriptPath"
         }
-    } catch {
+    }
+    catch {
         Write-Warning "Failed to load script: $Name - $_"
     }
 }
@@ -215,7 +224,7 @@ if (-not (Test-Path Variable:Global:LoadedScripts)) {
 }
 
 # Load configuration
-$Global:Config = Load-Configuration
+$Global:Config = Import-Configuration
 
 # Initialize paths from config with variable expansion
 $Global:CommonPaths = @{}

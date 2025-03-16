@@ -2,7 +2,8 @@
     "recommendations": [
     "adamwojcikit.pnp-powershell-extension", 
     "ms-vscode.powershell",
-    "dbaeumer.vscode-eslint",
+    "tobysmith568.run-in-powershell",
+    "dbaeumer.vscode-eslint"
 ]
   }
   

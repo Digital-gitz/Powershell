@@ -29,20 +29,21 @@ $scriptPaths = @(
     "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Utility-Functions.ps1",
     "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Module-Management.ps1",
     "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Package-Management.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Initialize-PSReadLine.ps1",
+    # "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Initialize-PSReadLine.ps1"
     "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\URL-Commands.ps1",
     "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\winget-install.ps1",
     "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Notes-Function.ps1"
 )
 
 # Load Script-handler first
-. "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Script-Managment.ps1"
+. "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Script-Management.ps1"
 
 # Then load other scripts
 foreach ($script in $scriptPaths) {
     if (Test-Path $script) {
         . $script
-    } else {
+    }
+    else {
         Write-Warning "Script not found: $script"
     }
 }
@@ -55,22 +56,23 @@ $Config = try {
     if ($configData -isnot [hashtable]) { throw "Configuration must be a hashtable" }
     Write-Host "Configuration loaded successfully" -ForegroundColor Green
     $configData
-} catch {
+}
+catch {
     Write-Warning "Failed to load configuration: $_"
     # Default configuration
     @{
-        CommonPaths = @{
+        CommonPaths     = @{
             PowerShell = $PSScriptRoot
-            Scripts = Join-Path $PSScriptRoot "Scripts"
-            Documents = [Environment]::GetFolderPath('MyDocuments')
+            Scripts    = Join-Path $PSScriptRoot "Scripts"
+            Documents  = [Environment]::GetFolderPath('MyDocuments')
         }
-        UrlCollections = @{}
+        UrlCollections  = @{}
         RequiredModules = @()
-        PSReadLine = @{
-            ShowToolTips = $true
-            PredictionSource = "History"
+        PSReadLine      = @{
+            ShowToolTips        = $true
+            PredictionSource    = "History"
             PredictionViewStyle = "ListView"
-            EditMode = "Windows"
+            EditMode            = "Windows"
         }
     }
 }
@@ -91,12 +93,12 @@ $CommonPaths.Scripts ??= Join-Path $CommonPaths.PowerShell "Scripts"
 $CommonPaths.Documents ??= [Environment]::GetFolderPath('MyDocuments')
 
 # Set working directory
-try {
-    Set-Location $CommonPaths.PowerShell
-} catch {
-    Write-Warning "Failed to set location to PowerShell directory: $_"
-    Set-Location $HOME
-}
+# try {
+#     Set-Location $CommonPaths.PowerShell
+# } catch {
+#     Write-Warning "Failed to set location to PowerShell directory: $_"
+#     Set-Location $HOME
+# }
 
 # Admin check
 if ([Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -113,7 +115,7 @@ Import-Module -Name Terminal-Icons
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnosterplus.omp.json" | Invoke-Expression
 #region Aliases
 #Aliases for shorter commands
-Set-Alias -Name 'aisearch' -Value 'Open-AiSearch'
+Set-Alias -Name 'ai-search' -Value 'Open-AiSearch'
 Set-Alias -Name 'google-core' -Value 'Open-GoogleCore'
 Set-Alias -Name 'google-productivity' -Value 'Open-GoogleProductivity'
 Set-Alias -Name 'google-media' -Value 'Open-GoogleMedia'
@@ -125,3 +127,19 @@ Set-Alias -Name home -Value Set-HomeLocation
 # Set basic aliases
 Set-Alias -Name clr -Value Clear-Host
 Set-Alias -Name reload -Value Update-PowerShellProfile 
+function Show-LLMConfig {
+    Write-Output "/agent config openai-gpt"
+}
+Set-Alias -Name llm-config -Value Show-LLMConfig
+
+
+Set-Alias -Name cursL -Value  "cursor --list-extensions" 
+Set-Alias -Name cursI -Value  "cursor --install-extension" 
+Set-Alias -Name cursU -Value  "cursor --uninstall-extension"
+Set-Alias -Name cursS -Value  "cursor --search-extensions"
+Set-Alias -Name cursR -Value  "cursor --reload"
+Set-Alias -Name cursH -Value  "cursor --help"
+Set-Alias -Name cursV -Value  "cursor --version"
+Set-Alias -Name cursC -Value  "cursor --clear-global-storage"
+
+

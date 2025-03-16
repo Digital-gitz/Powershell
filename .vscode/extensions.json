@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+    "adamwojcikit.pnp-powershell-extension", 
+    "ms-vscode.powershell",
+    "dbaeumer.vscode-eslint",
+]
+  }
+  

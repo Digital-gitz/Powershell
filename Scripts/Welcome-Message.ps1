@@ -1,3 +1,6 @@
+# Initialize the start time before any operations
+$startTime = Get-Date
+
 # Load Profile Commands script
 $profileCommandsPath = Join-Path $PSScriptRoot "Profile-Commands.ps1"
 if (Test-Path $profileCommandsPath) {

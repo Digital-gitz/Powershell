@@ -86,90 +86,126 @@ function Remove-UnusedModules {
         Write-Host "No unused modules found." -ForegroundColor Green
     }
 }
-function Update-PowerShellModule {
+
+
+function Update-PowerShellModules {
     [CmdletBinding()]
     param(
-        [Parameter(Position = 0)]
-        [string]$Name,
+        [Parameter(Mandatory=$false)]
+        [string[]]$ModuleNames = $Config.RequiredModules.Name,
         
-        [Parameter()]
-        [switch]$All,
+        [Parameter(Mandatory=$false)]
+        [switch]$AutoInstall,
         
-        [Parameter()]
-        [switch]$WhatIf
+        [Parameter(Mandatory=$false)]
+        [switch]$UpdateExisting
     )
     
-    if (-not $All -and -not $Name) {
-        Write-Error "Either specify a module name or use -All to update all modules"
+    if (-not $ModuleNames -or $ModuleNames.Count -eq 0) {
+        Write-Warning "No modules specified for installation/update"
         return
     }
     
-    try {
-        if ($All) {
-            $modules = Get-InstalledModule
-            Write-Host "Checking for updates to $($modules.Count) installed modules..." -ForegroundColor Yellow
-            
-            $updatableModules = @()
-            foreach ($module in $modules) {
-                try {
-                    $online = Find-Module -Name $module.Name -ErrorAction SilentlyContinue
-                    if ($online.Version -gt $module.Version) {
-                        $updatableModules += [PSCustomObject]@{
-                            Name = $module.Name
-                            CurrentVersion = $module.Version
-                            NewVersion = $online.Version
-                        }
-                    }
-                } catch {
-                    Write-Warning "Could not check updates for $($module.Name): $_"
-                }
-            }
-            
-            if (-not $updatableModules) {
-                Write-Host "All modules are up to date!" -ForegroundColor Green
-                return
-            }
-            
-            if ($WhatIf) {
-                Write-Host "Found $($updatableModules.Count) modules with available updates:" -ForegroundColor Cyan
-                $updatableModules | ForEach-Object {
-                    Write-Host "- $($_.Name): $($_.CurrentVersion) → $($_.NewVersion)" -ForegroundColor Yellow
-                }
-                return
-            }
-            
-            foreach ($module in $updatableModules) {
-                Write-Host "Updating $($module.Name) from $($module.CurrentVersion) to $($module.NewVersion)..." -ForegroundColor Cyan
-                try {
-                    Update-Module -Name $module.Name -Force -ErrorAction Stop
-                    Write-Host "  ✓ Updated successfully" -ForegroundColor Green
-                } catch {
-                    Write-Host "  ✗ Failed to update: $_" -ForegroundColor Red
-                }
-            }
-        } else {
-            $module = Get-InstalledModule -Name $Name -ErrorAction SilentlyContinue
-            if (-not $module) {
-                Write-Error "Module '$Name' is not installed"
-                return
-            }
-            
-            try {
-                $online = Find-Module -Name $Name -ErrorAction Stop
-                if ($online.Version -gt $module.Version) {
-                    Write-Host "Updating $Name from $($module.Version) to $($online.Version)..." -ForegroundColor Cyan
-                    Update-Module -Name $Name -Force -ErrorAction Stop
-                    Write-Host "Module updated successfully" -ForegroundColor Green
-                } else {
-                    Write-Host "Module '$Name' is already up to date (version $($module.Version))" -ForegroundColor Green
-                }
-            } catch {
-                Write-Error "Failed to update module '$Name': $_"
+    $results = @{
+        Installed = @()
+        Updated = @()
+        Failed = @()
+        Skipped = @()
+    }
+    
+    foreach ($moduleName in $ModuleNames) {
+        $moduleInfo = $null
+        
+        # Find module info if it exists in config
+        if ($Config.RequiredModules) {
+            $moduleInfo = $Config.RequiredModules | Where-Object { 
+                ($_ -is [string] -and $_ -eq $moduleName) -or
+                ($_ -is [hashtable] -and $_.Name -eq $moduleName)
             }
         }
-    } catch {
-        Write-Error "An error occurred: $_"
+        
+        $minVersion = $null
+        if ($moduleInfo -is [hashtable] -and $moduleInfo.MinimumVersion) {
+            $minVersion = $moduleInfo.MinimumVersion
+        }
+        
+        # Check if module is installed
+        $installedModule = Get-Module -Name $moduleName -ListAvailable
+        
+        if (-not $installedModule) {
+            if ($AutoInstall) {
+                try {
+                    Write-Host "Installing module: $moduleName" -ForegroundColor Cyan -NoNewline
+                    
+                    $installParams = @{
+                        Name = $moduleName
+                        Scope = "CurrentUser"
+                        Force = $true
+                        ErrorAction = "Stop"
+                    }
+                    
+                    if ($minVersion) {
+                        $installParams.MinimumVersion = $minVersion
+                    }
+                    
+                    Install-Module @installParams
+                    Write-Host " - Installed!" -ForegroundColor Green
+                    $results.Installed += $moduleName
+                }
+                catch {
+                    Write-Host " - Failed!" -ForegroundColor Red
+                    Write-Warning "Failed to install module $moduleName`: $_"
+                    $results.Failed += @{
+                        Name = $moduleName
+                        Error = $_.Exception.Message
+                    }
+                }
+            }
+            else {
+                Write-Warning "Module '$moduleName' is not installed. Use -AutoInstall to install it."
+                $results.Skipped += $moduleName
+            }
+        }
+        elseif ($UpdateExisting) {
+            try {
+                $currentVersion = ($installedModule | Sort-Object Version -Descending | Select-Object -First 1).Version
+                
+                Write-Host "Checking for updates: $moduleName v$currentVersion" -ForegroundColor Cyan -NoNewline
+                
+                $onlineModule = Find-Module -Name $moduleName -ErrorAction Stop
+                
+                if ($onlineModule.Version -gt $currentVersion) {
+                    Write-Host " - Updating to v$($onlineModule.Version)" -ForegroundColor Yellow
+                    
+                    Update-Module -Name $moduleName -Force -ErrorAction Stop
+                    $results.Updated += @{
+                        Name = $moduleName
+                        OldVersion = $currentVersion
+                        NewVersion = $onlineModule.Version
+                    }
+                }
+                else {
+                    Write-Host " - Up to date!" -ForegroundColor Green
+                    $results.Skipped += $moduleName
+                }
+            }
+            catch {
+                Write-Host " - Update failed!" -ForegroundColor Red
+                Write-Warning "Failed to update module $moduleName`: $_"
+                $results.Failed += @{
+                    Name = $moduleName
+                    Error = $_.Exception.Message
+                }
+            }
+        }
     }
+    
+    return $results
+}
+
+# Auto-update modules if specified in config
+if ($Config.AutoUpdateModules -eq $true) {
+    Update-PowerShellModules -AutoInstall -UpdateExisting
 }
 
 function Initialize-EdgeDriver {

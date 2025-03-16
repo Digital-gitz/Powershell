@@ -59,3 +59,6 @@ function Initialize-OhMyPosh {
         Write-Host "For troubleshooting, visit: https://ohmyposh.dev/docs/installation/troubleshooting" -ForegroundColor Yellow
     }
 }
+
+# Call the function with auto-install option
+# Initialize-OhMyPosh -AutoInstall

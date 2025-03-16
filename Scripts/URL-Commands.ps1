@@ -69,7 +69,8 @@ function Get-UrlCollection {
 # URL opening functions
 function gally { Start-Process "https://www.powershellgallery.com/" }
 function ythistory { Start-Process "https://www.youtube.com/feed/history" }
-function ai { 
+
+function llm { 
     $urls = Get-UrlCollection -Category "AI" -Subcategory "LLM"
     if ($urls) {
         Open-Urls -Urls $urls -Message "Opening AI/LLM sites" 
@@ -78,7 +79,7 @@ function ai {
     }
 }
 
-function aidev { 
+function Open-AiPKGsearch { 
     $urls = Get-UrlCollection -Category "AI" -Subcategory "AiPackages"
     if ($urls) {
         Open-Urls -Urls $urls -Message "Opening AI development sites" 

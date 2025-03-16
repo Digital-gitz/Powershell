@@ -1,15 +1,221 @@
 @{
-    # Common paths configuration
-    CommonPaths = @{
-        PowerShell = '$PSScriptRoot'  # Will be evaluated later
-        Scripts = '$PSScriptRoot\Scripts'  # Will be evaluated later
-        Documents = '$([Environment]::GetFolderPath("MyDocuments"))'  # Will be evaluated later
+    # Core Configuration
+    CoreSettings = @{
+        DefaultEditor = 'code'
+        DefaultBrowser = (Get-ItemProperty HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice).ProgId
+        DefaultTerminal = 'wt'
+        ThemeName = "minimal"
+        EnableLogging = $true
+        CacheEnabled = $true
+        AsyncLoading = $true
+        DefaultShell = "pwsh"
+        LogPath = Join-Path $PSScriptRoot 'Logs'
+        BackupPath = Join-Path $PSScriptRoot 'Backups'
+        UpdateCheckInterval = 7 # days
     }
 
+    # Required modules with categories
+    RequiredModules = @{
+        Shell = @(
+            @{Name = 'PSReadLine'; Purpose = 'Enhanced command line editing'},
+            @{Name = 'Terminal-Icons'; Purpose = 'File and folder icons'},
+            @{Name = 'z'; Purpose = 'Directory jumping'},
+            @{Name = 'lolcat'; Purpose = 'Powershell port of the lolcat'}
+        )
+        Development = @(
+            @{Name = 'posh-git'; Purpose = 'Git integration'},
+            @{Name = 'GitIgnores'; Purpose = 'Git ignore templates'},
+            # @{Name = 'PSScriptAnalyzer'; Purpose = 'Script linting and analysis'},
+            @{Name = 'Pester'; Purpose = 'Testing framework'}
+        )
+        Cloud = @(
+            # @{Name = 'AWS.Tools.Common'; Purpose = 'AWS CLI integration'},
+            # @{Name = 'Az'; Purpose = 'Azure PowerShell'},
+            @{Name = 'GoogleCloud'; Purpose = 'Google Cloud Platform tools'}
+        )
+        DataManagement = @(
+            @{Name = 'ImportExcel'; Purpose = 'Excel manipulation'},
+            @{Name = 'dbatools'; Purpose = 'SQL Server management'}
+            # @{Name = 'PSMongoDB'; Purpose = 'MongoDB tools'}
+        )
+        Security = @(
+            @{Name = 'PSPGP'; Purpose = 'PGP functionality in PowerShell'},
+            @{Name = 'SecretManagement'; Purpose = 'Secure secret storage'},
+            @{Name = 'PSWSMan'; Purpose = 'WS-Management security'}
+        )
+        PackageManagement = @(
+            @{Name = 'PackageManagement'; Purpose = 'Package management'},
+            @{Name = 'PowerShellGet'; Purpose = 'PowerShell module management'},
+            @{Name = 'Chocolatey'; Purpose = 'Windows package manager'}
+        )
+    }
 
+    # Common paths configuration with expanded locations
+    CommonPaths = @{
+        Home = [Environment]::GetFolderPath('UserProfile')
+        Documents = [Environment]::GetFolderPath('MyDocuments')
+        Desktop = [Environment]::GetFolderPath('Desktop')
+        Downloads = Join-Path ([Environment]::GetFolderPath('UserProfile')) 'Downloads'
+        Pictures = [Environment]::GetFolderPath('MyPictures')
+        PowerShell = $PSScriptRoot
+        Scripts = Join-Path $PSScriptRoot 'Scripts'
+        Modules = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'PowerShell\Modules'
+        Logs = Join-Path $PSScriptRoot 'Logs'
+        Backups = Join-Path $PSScriptRoot 'Backups'
+        Projects = Join-Path ([Environment]::GetFolderPath('UserProfile')) 'Projects'
+        Work = Join-Path ([Environment]::GetFolderPath('UserProfile')) 'Work'
+        Temp = [System.IO.Path]::GetTempPath()
+        GitHub = Join-Path ([Environment]::GetFolderPath('UserProfile')) 'GitHub'
+    }
+      # Expanded CustomScripts with categories
+      CustomScripts = @{
+        Development = @(
+            @{
+                Name = 'Install-OrUpdateModule.ps1'
+                Purpose = 'Install or update module functions'
+                Path = Join-Path $PSScriptRoot 'Scripts\Development\Install-OrUpdateModule.ps1'
+            }
+            @{Name = 'GitHub.ps1'; Purpose = 'GitHub integration functions'},
+            @{Name = 'DevEnvironmentSetup.ps1'; Purpose = 'Development environment setup'}
+        )
+        System = @(
+            @{
+                Name = 'SystemInfo.ps1'
+                Purpose = 'System information functions'
+                Path = Join-Path $PSScriptRoot 'Scripts\System\SystemInfo.ps1'
+            }
+            @{Name = 'NetworkTools.ps1'; Purpose = 'Network diagnostics'},
+            @{Name = 'Security.ps1'; Purpose = 'Security utilities'},
+            @{Name = 'winfetch-pro.ps1'; Purpose = 'System information utility'}
+        )
+        Utilities = @(
+            @{Name = 'Navigation.ps1'; Purpose = 'Navigation functions'},
+            @{Name = 'FileManagement.ps1'; Purpose = 'File management utilities'},
+            @{Name = 'Backup.ps1'; Purpose = 'Automated backup utilities'},
+            @{Name = 'UtilityFunctions.aiUpdate.ps1'; Purpose = 'General utility functions'}
+        )
+        Media = @(
+            @{Name = 'PNGtoVECTOR.ps1'; Purpose = 'PNG conversion utilities'},
+            @{Name = 'MediaProcessing.ps1'; Purpose = 'Media file processing'},
+            @{Name = 'ImageOptimization.ps1'; Purpose = 'Image optimization tools'}
+        )
+    }
+
+    # Winget packages organized by category
+    WingetPackages = @{
+        # Shell and Terminal
+        ShellAndTerminal = @(
+            @{ Id = "JanDeDobbeleer.OhMyPosh" },
+            @{ Id = "Microsoft.PowerShell" },
+            @{ Id = "Microsoft.WindowsTerminal" },
+            @{ Id = "Zeit.Hyper" },
+            @{ Id = "Nushell.Nushell" },
+            @{ Id = "wez.wezterm" }, # New: Modern terminal
+            @{ Id = "AlacrittyOrg.Alacritty" } # New: GPU-accelerated terminal
+        )
+        # Development Tools
+        DevelopmentTools = @(
+            @{ Id = "Microsoft.VisualStudioCode" },
+            @{ Id = "Neovim.Neovim" },
+            @{ Id = "vim.vim" },
+            @{ Id = "GitHub.cli" },
+            @{ Id = "Microsoft.Git" },
+            @{ Id = "Docker.DockerDesktop" },
+            @{ Id = "Microsoft.NuGet" },
+            @{ Id = "Insomnia.Insomnia" },
+            @{ Id = "Postman.Postman" }, # New: API testing
+            @{ Id = "Microsoft.PowerToys" },
+            @{ Id = "zyedidia.micro" },
+            @{ Id = "JetBrains.Toolbox" }, # New: JetBrains IDE manager
+            @{ Id = "AdoptOpenJDK.OpenJDK.16" } # New: Java Development Kit
+        )
+        # Programming Languages
+        ProgrammingLanguages = @(
+            @{ Id = "Python.Python.3.12"; Scope = "machine" },
+            @{ Id = "GoLang.Go" },
+            @{ Id = "OpenJS.NodeJS.LTS"; Scope = "machine" },
+            @{ Id = "Rustlang.Rustup" },
+            @{ Id = "Microsoft.DotNet.SDK.7" }, # New: .NET SDK
+            @{ Id = "Anaconda.Miniconda3" },
+            @{ Id = "PHP.PHP.8.2" } # New: PHP runtime
+        )
+        # Productivity
+        Productivity = @(
+            @{ Id = "Obsidian.Obsidian" },
+            @{ Id = "Notion.Notion" }, # New: All-in-one workspace
+            @{ Id = "Anysphere.Cursor" },
+            @{ Id = "voidtools.Everything" },
+            @{ Id = "Figma.Figma" },
+            @{ Id = "Figma.FigmaAgent" },
+            @{ Id = "7zip.7zip" },
+            @{ Id = "SumatraPDF.SumatraPDF" },
+            @{ Id = "RevoUninstaller.RevoUninstaller" },
+            @{ Id = "File-New-Project.EarTrumpet" }, # New: Volume control
+            @{ Id = "Lexikos.AutoHotkey" } # New: Automation tool
+        )
+        # Creative Tools
+        CreativeTools = @(
+            @{ Id = "Inkscape.Inkscape" },
+            @{ Id = "BlenderFoundation.Blender" },
+            @{ Id = "GIMP.GIMP" }, # New: Image editor
+            @{ Id = "Audacity.Audacity" } # New: Audio editor
+        )
+        # System Utilities
+        SystemUtilities = @(
+            @{ Id = "9PCKT2B7DZMW" }, # TranslucentTB
+            @{ Id = "Rufus.Rufus" },
+            @{ Id = "KeePassXCTeam.KeePassXC" },
+            @{ Id = "GNU.Wget2" },
+            @{ Id = "hpjansson.Chafa" },
+            @{ Id = "WinDirStat.WinDirStat" }, # New: Disk usage analyzer
+            @{ Id = "Microsoft.Sysinternals.ProcessExplorer" }, # New: Advanced task manager
+            @{ Id = "CrystalRich.LockHunter" } # New: File unlocker
+        )
+        # Media
+        Media = @(
+            @{ Id = "mpvnet.mpvnet" },
+            @{ Id = "VideoLAN.VLC" } # New: Media player
+        )
+        # Gaming
+        Gaming = @(
+            @{ Id = "Valve.Steam" },
+            @{ Id = "Valve.SteamCMD" },
+            @{ Id = "Odamex.Odamex" },
+            @{ Id = "GodotEngine.GodotEngine" },
+            @{ Id = "SteelSeries.GG" },
+            @{ Id = "EpicGames.EpicGamesLauncher" } # New: Epic Games
+        )
+        # Communication
+        Communication = @(
+            @{ Id = "Discord.Discord" }, # New: Communication platform
+            @{ Id = "SlackTechnologies.Slack" }, # New: Team communication
+            @{ Id = "Microsoft.Teams" } # New: Microsoft Teams
+        )
+        # Browsers
+        Browsers = @(
+            @{ Id = "Microsoft.Edge" },
+            @{ Id = "Google.Chrome" },
+            @{ Id = "Mozilla.Firefox" }
+        )
+        # Other
+        Other = @(
+            @{ Id = "Reddit.Reddit" },
+            @{ Id = "achannarasappa.ticker" },
+            @{ Id = "Elgato.StreamDeck" }
+        )
+        # Downloading
+        Downloading = @(
+            @{ Id = "qBittorrent.qBittorrent" }
+        )
+        # Database
+        Database = @(
+            @{ Id = "Oracle.MySQL" }
+        )
+    }
     
-    # URL collections for various functions
+    # Expanded URL collections with better organization
     UrlCollections = @{
+        # AI & LLM Resources
         AI = @{
             LLM = @(
                 "https://chatgpt.com/",
@@ -19,7 +225,6 @@
                 "https://gemini.google.com/app?hl=en-GB", 
                 "https://chat.deepseek.com/",
                 "https://x.com/i/grok",
-                "https://you.com/",
                 "https://pi.ai/" # New: Pi assistant
             )
             AiPackages = @(
@@ -34,9 +239,6 @@
                 "https://www.phind.com/",
                 "https://kagi.com/", # New: AI-powered search
                 "https://www.consensus.app/" # New: Scientific search
-            )
-            AiArt = @(
-                "https://anything.world/"
             )
         }
 
@@ -92,7 +294,6 @@
                 "https://docs.microsoft.com/en-us/powershell/",
                 "https://developer.mozilla.org/",
                 "https://kubernetes.io/docs/",
-                "https://docs.cursor.com/get-started/welcome",
                 "https://docs.aws.amazon.com/"
             )
             GitSites = @(
@@ -387,39 +588,155 @@
         }
     }
 
-    # Required PowerShell modules
-    RequiredModules = @(
-        @{
-            Name = "PSReadLine"
-            Purpose = "Enhanced command line editing"
-        }
-        @{
-            Name = "Terminal-Icons"
-            Purpose = "Add file and folder icons to terminal"
-        }
-    )
-
-    # PSReadLine configuration
+    # PSReadLine configuration with consistent formatting
     PSReadLine = @{
         ShowToolTips = $true
-        PredictionSource = "History"
+        PredictionSource = 'HistoryAndPlugin'
         PredictionViewStyle = "ListView"
-        EditMode = "Windows"
+        EditMode = 'Windows'
+        HistorySearchCursorMovesToEnd = $true
+        MaximumHistoryCount = 10000
+        HistoryNoDuplicates = $true
+        Colors = @{
+            Command = 'Cyan'
+            Parameter = 'DarkCyan'
+            Operator = 'Yellow'
+            Variable = 'Magenta'
+            String = 'DarkGreen'
+            Comment = 'DarkGray'
+            Error = 'Red'
+            Selection = 'DarkBlue'
+            Keyword = 'DarkYellow'
+            Member = 'DarkMagenta'
+        }
+        KeyBindings = @{
+            'Ctrl+Spacebar' = 'MenuComplete'
+            'Ctrl+A' = 'BeginningOfLine'
+            'Ctrl+E' = 'EndOfLine'
+            'Ctrl+R' = 'ReverseSearchHistory'
+            'Ctrl+Alt+R' = 'HistorySearchBackward'
+            'Ctrl+S' = 'ForwardSearchHistory'
+            'Ctrl+D' = 'DeleteChar'
+            'Ctrl+K' = 'KillLine'
+            'Ctrl+U' = 'BackwardKillLine'
+            'Ctrl+W' = 'BackwardKillWord'
+            'Ctrl+Y' = 'Yank'
+            'Ctrl+Z' = 'Undo'
+        }
     }
 
-    # Winget package configuration
-    WingetPackages = @(
-        @{
-            Id = "Microsoft.PowerShell"
-            Scope = "machine"
+    # Environment Variables
+    EnvironmentVariables = @{
+        EDITOR = 'code'
+        BROWSER = 'chrome'
+    }
+
+    # Aliases with consistent formatting
+    Aliases = @{
+        ll = 'Get-ChildItem'
+        gs = 'git status'
+    }
+
+    # Profile Script
+    ProfileScript = @{
+        Path = '$PROFILE'
+        Purpose = 'PowerShell profile configuration'
+    }
+
+    OhMyPosh = @{
+        EnableCache = $true
+        Theme = "minimal"
+        AsyncLoad = $true
+        UpdateCheck = $true
+        SegmentsToDisable = @(
+            "git_status"
+            "node"
+        )
+        CustomSegments = @{
+            time = @{
+                style = "plain"
+                format = "[$time]"
+            }
+            battery = @{
+                display_charging = $true
+                display_percentage = $true
+            }
+            cloud = @{
+                display_env = $true
+                display_profile = $true
+            }
         }
-        @{
-            Id = "Microsoft.VisualStudioCode"
-            Scope = "user"
+        Colors = @{
+            primary = "#FF479C"
+            secondary = "#FF9640"
+            accent = "#00897b"
         }
-        @{
-            Id = "Git.Git"
-            Scope = "machine"
+    }
+
+    # New: Performance Optimization Settings
+    Performance = @{
+        InitialMemoryLimit = 2GB
+        MaxMemoryLimit = 4GB
+        ThreadLimit = 16
+        GarbageCollection = @{
+            Aggressive = $false
+            Interval = 300 # seconds
         }
-    )
+        ModuleAutoLoading = $true
+        ProfileOptimization = $true
+    }
+
+    # Add new section for Terminal Integration
+    TerminalIntegration = @{
+        WindowsTerminal = @{
+            ConfigPath = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json'
+            DefaultProfile = 'PowerShell'
+            ColorScheme = 'One Half Dark'
+            FontFace = 'CaskaydiaCove NF'
+            FontSize = 12
+            UseAcrylic = $true
+            AcrylicOpacity = 0.8
+        }
+    }
+
+    # Add new section for Git Configuration
+    GitConfiguration = @{
+        DefaultBranch = 'main'
+        User = @{
+            Name = $env:USERNAME
+            Email = ''  # Fill in your email
+        }
+        Core = @{
+            Editor = 'code --wait'
+            AutoCRLF = 'true'
+            Safecrlf = 'warn'
+        }
+        Aliases = @{
+            st = 'status'
+            co = 'checkout'
+            br = 'branch'
+            ci = 'commit'
+            df = 'diff'
+            lg = 'log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+        }
+    }
+
+    # Add new section for Security Settings
+    SecuritySettings = @{
+        ExecutionPolicy = 'RemoteSigned'
+        TLS = @{
+            DefaultVersion = 'Tls12'
+            EnableStrongCrypto = $true
+        }
+        Proxy = @{
+            Enabled = $false
+            Address = ''
+            Credentials = $null
+        }
+        Logging = @{
+            EnableScriptBlockLogging = $true
+            EnableTranscription = $true
+            TranscriptionPath = Join-Path $PSScriptRoot 'Logs\Transcripts'
+        }
+    }
 }

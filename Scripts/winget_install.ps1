@@ -1,3 +1,82 @@
+
+Start-Process "https://winget.run/"
+Start-Process "https://github.com/microsoft/winget-pkgs/tree/master"
+winget install --help
+winget install -e --id IronmanSoftware.PowerShellUniversal --silent --accept-package-agreements --accept-source-agreements &&
+winget install -e --id JanDeDobbeleer.OhMyPosh  --silent --accept-package-agreements --accept-source-agreements &&
+winget install TranslucentTB --silent --accept-package-agreements --accept-source-agreements &&
+winget install Microsoft.PowerShell.Preview --silent --accept-package-agreements --accept-source-agreements &&
+winget install Microsoft.WindowsTerminal.Canary --silent --accept-package-agreements --accept-source-agreements &&
+winget install Microsoft.DirectX --silent --accept-package-agreements --accept-source-agreements &&
+winget install -e --id Python.Python.3.12 --scope machine --silent --accept-package-agreements --accept-source-agreements &&
+winget install Rufus.Rufus --silent --accept-package-agreements --accept-source-agreements &&
+winget install RevoUninstaller.RevoUninstaller --silent --accept-package-agreements --accept-source-agreements &&
+winget install Anysphere.Cursor --silent --accept-package-agreements --accept-source-agreements &&
+winget install Everything  --silent --accept-package-agreements --accept-source-agreements &&
+winget install KeePassXCTeam.KeePassXC --silent --accept-package-agreements --accept-source-agreements &&
+winget install Apple.iCloud --silent --accept-package-agreements --accept-source-agreements &&
+winget install voidtools.Everything --silent --accept-package-agreements --accept-source-agreements &&
+winget install Inkscape  --silent --accept-package-agreements --accept-source-agreements &&
+winget install Microsoft.PowerToys --silent --accept-package-agreements --accept-source-agreements &&
+winget install mpv.net --silent --accept-package-agreements --accept-source-agreements &&
+winget install streamdeck --silent --accept-package-agreements --accept-source-agreements &&
+winget install reddit --silent --accept-package-agreements --accept-source-agreements &&
+winget install BlenderFoundation.Blender --silent --accept-package-agreements --accept-source-agreements &&
+winget install --id Valve.Steam --id SteamCMD --silent --accept-package-agreements --accept-source-agreements &&
+winget install --id Hyper --silent --accept-package-agreements --accept-source-agreements &&
+winget install --id GoLang.Go --accept-package-agreements --accept-source-agreements &&
+winget install --id OpenJS.NodeJS --accept-package-agreements --accept-source-agreements &&
+winget install -e --id NodeJS.Node.LTS --scope machine
+winget install -e --id Rustlang.Rustup --accept-package-agreements --accept-source-agreements &&
+winget install --id Odamex.Odamex  --accept-package-agreements --accept-source-agreements &&
+winget install --id  GodotEngine.GodotEngine  --accept-package-agreements --accept-source-agreements &&
+#? GoDot steam?
+winget install -e --id GNU.Wget2 --accept-package-agreements --accept-source-agreements 
+
+# TEXT READER'S & EDITOR'S 
+winget install --id  Neovim.Neovim --accept-package-agreements --accept-source-agreements &&
+#Start-Process  "https://neovim.io/"
+#Start-Process  "https://github.com/neovim/neovim/blob/master/INSTALL.md"
+#Start-Process  "https://www.lunarvim.org/docs/installation"
+winget install iA.iAWriter    --silent --accept-package-agreements --accept-source-agreements &&
+# Start-Process "https://ia.net/writer/support/basics/markdown-guide"
+ winget install --id  SumatraPDF.SumatraPDF  --silent --accept-package-agreements --accept-source-agreements 
+#GRAPHICS
+
+#Hardware
+winget install -e --id SteelSeries.SteelSeriesEngine --silent --accept-package-agreements --accept-source-agreements
+
+#programing Interface
+winget install -e --id  Anaconda.Miniconda3  --silent --accept-package-agreements --accept-source-agreements
+
+#CLI
+winget install -e --id Nushell.Nushell --silent --accept-package-agreements --accept-source-agreements
+winget install --id GitHub.cli
+#Start-Process "https://cli.github.com/"
+winget install --id Microsoft.Git
+winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown to see all results.
+winget install vim.vim.nightly --silent --accept-package-agreements --accept-source-agreements &&
+#terminal
+winget install hpjansson.Chafa --silent --accept-package-agreements --accept-source-agreements  
+
+
+
+#Windows-terminal  
+winget install -e --id  Microsoft.WindowsTerminal --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShell --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShellCore --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShellPreview --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id  Microsoft.PowerShellUniversal --silent --accept-package-agreements --accept-source-agreements
+#Windows-terminal based Apps 
+winget install -e --id achannarasappa.ticker --silent --accept-package-agreements --accept-source-agreements
+
+
+#programs 
+winget install -e --id Figma.Figma --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id Figma.FigmaAgent --silent --accept-package-agreements --accept-source-agreements
+
+
+
 # Open web pages for reference
 Start-Process "https://winget.run/"
 Start-Process "https://github.com/microsoft/winget-pkgs/tree/master"
@@ -81,9 +160,14 @@ winget install -e --id Insomnia.Insomnia --silent --accept-package-agreements --
 winget upgrade --all --silent --accept-package-agreements --accept-source-agreements --include-unknown
 
 
+# Database
+winget install -e --id  Oracle.MySQLShell --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id Microsoft.SQLServerManagementStudio --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id Oracle.MySQL --silent --accept-package-agreements --accept-source-agreements
+winget install -e --id Microsoft.AzureDataStudio --silent --accept-package-agreements --accept-source-agreements
 
 
-@{ Id = "Microsoft.DirectX" },
+# @{ Id = "Microsoft.DirectX" },
 Python.Python.3.12
 RevoUninstaller.RevoUninstaller
 voidtools.Everything
@@ -100,3 +184,93 @@ SteelSeries.GG
 Nushell.Nushell
 vim.vim
 Docker.DockerDesktop
+
+function winrun {
+    [CmdletBinding()]
+    param()
+    
+    try {
+        # Verify and import Selenium module
+        if (-not (Get-Module -Name Selenium -ListAvailable)) {
+            throw "Selenium module is not installed. Please run 'Install-Module -Name Selenium' first."
+        }
+
+        # Force import the module to ensure fresh state
+        Import-Module Selenium -Force -ErrorAction Stop
+
+        # Setup WebDriver path
+        $driverPath = Join-Path $env:USERPROFILE "WebDrivers"
+        if (-not (Test-Path $driverPath)) {
+            New-Item -ItemType Directory -Path $driverPath -Force | Out-Null
+        }
+
+        # Clean up old WebDriver if it exists
+        $oldDriver = Join-Path (Get-Module Selenium).ModuleBase "assemblies\MicrosoftWebDriver.exe"
+        if (Test-Path $oldDriver) {
+            Remove-Item $oldDriver -Force
+        }
+
+        # Get Edge version and download matching driver
+        $edgeDriver = Join-Path $driverPath "msedgedriver.exe"
+        try {
+            # Use version 134.0.3124.51 to match your Edge version
+            $driverVersion = "134.0.3124.51"
+            $driverUrl = "https://msedgedriver.azureedge.net/$driverVersion/edgedriver_win64.zip"
+            $zipPath = Join-Path $driverPath "edgedriver.zip"
+            
+            # Remove existing driver
+            if (Test-Path $edgeDriver) {
+                Remove-Item $edgeDriver -Force
+            }
+            
+            Write-Host "Downloading Edge WebDriver version $driverVersion..."
+            [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+            Invoke-WebRequest -Uri $driverUrl -OutFile $zipPath -UseBasicParsing
+            
+            Write-Host "Extracting Edge WebDriver..."
+            Expand-Archive -Path $zipPath -DestinationPath $driverPath -Force
+            Remove-Item $zipPath -Force
+            
+            # Add driver path to environment
+            if (-not ($env:PATH -split ';' -contains $driverPath)) {
+                $env:PATH = "$driverPath;$env:PATH"
+            }
+            
+        } catch {
+            Write-Warning "Failed to download Edge WebDriver: $_"
+            Write-Host "Please download the appropriate WebDriver manually from:"
+            Write-Host "https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/"
+            throw
+        }
+
+        # Load WebDriver assembly
+        $seleniumModule = Get-Module Selenium
+        $webDriverPath = Join-Path $seleniumModule.ModuleBase "assemblies\WebDriver.dll"
+        Add-Type -Path $webDriverPath -ErrorAction Stop
+
+        # Initialize Edge driver
+        Write-Host "Initializing Edge WebDriver..."
+        $driver = Start-SeEdge -StartURL "https://winget.run/" -ErrorAction Stop
+        Start-Sleep -Seconds 2  # Increased pause to ensure driver is ready
+        
+        # Wait for and find the search box with increased timeout
+        Write-Host "Waiting for page to load..."
+        $searchBox = Find-SeElement -Driver $driver -Wait -Timeout 20 -By CssSelector -Selection 'input[type="text"]' -ErrorAction Stop
+        
+        if ($searchBox) {
+            Invoke-SeClick -Element $searchBox -ErrorAction Stop
+            Write-Host "Successfully loaded winget.run" -ForegroundColor Green
+        } else {
+            throw "Could not find search box element"
+        }
+    } catch {
+        Write-Error "Failed to start winget.run: $_"
+        if ($driver) {
+            try {
+                Stop-SeDriver -Driver $driver
+            } catch {
+                Write-Warning "Failed to close browser driver: $_"
+            }
+        }
+    }
+}

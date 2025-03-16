@@ -188,6 +188,47 @@ function Update-AllInstalledPackages {
     }
 }
 
+
+function Search-WingetPackage {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory = $true)][string]$Query
+    )
+    
+    # Run winget search and capture the output
+    $searchResults = winget search $Query
+
+    # Check if there are any results
+    if ($searchResults -match "No package found") {
+        Write-Host "No packages found matching '$Query'." -ForegroundColor Red
+        return
+    }
+
+    # Display the results with color
+    Write-Host "Search Results for '$Query':" -ForegroundColor Cyan
+    foreach ($line in $searchResults) {
+        if ($line -match "Name") {
+            # Header line (bold and colored)
+            Write-Host $line -ForegroundColor Yellow
+        } elseif ($line -match "\S") {
+            # Data line (split into columns and color-coded)
+            $columns = $line -split "\s{2,}" # Split by 2 or more spaces
+            if ($columns.Count -ge 5) {
+                Write-Host $columns[0].PadRight(30) -NoNewline -ForegroundColor Green # Name
+                Write-Host $columns[1].PadRight(20) -NoNewline -ForegroundColor Blue  # Id
+                Write-Host $columns[2].PadRight(15) -NoNewline -ForegroundColor Magenta # Version
+                Write-Host $columns[3].PadRight(15) -NoNewline -ForegroundColor Cyan # Match
+                Write-Host $columns[4] -ForegroundColor Gray # Source
+            }
+        }
+    }
+}
+
+# Create the alias
+Set-Alias -Name wingets -Value Search-WingetPackage
+
+
+
 # Function to open reference URLs
 function Open-WingetReferences {
     [CmdletBinding()]

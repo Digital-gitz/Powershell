@@ -22,3 +22,9 @@ node_modules/
 # Custom AWS token or secret files
 aws_tokens.txt
 secrets/
+
+# Ignore all files in the winget-install directory
+winget-install/
+
+# Ignore config.psd1
+config.psd1

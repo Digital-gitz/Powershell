@@ -1,38 +1,92 @@
+function Test-WebsiteConnection {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Url
+    )
 
-$url = Read-Host "Enter the URL to query"
-$web = New-Object Net.WebClient
-$web | Get-Member
-	
-$web.DownloadString("$url")
-
-#get size of website in bytes
-$size = $web.DownloadString("$url").Length
-Write-Host "Size of website: $size bytes"
-"{0} bytes" -f ($web.DownloadString("$url")).length.toString("###,###,##0")
-
-
-#continue to attempt a connection until it is able to do so,
-Begin {
     $web = New-Object System.Net.WebClient
     $flag = $false
-    }
-Process {
-    While ($flag -eq $false) {
-        Try {
-            $web.DownloadString("https://hereisasite.net")
-            $flag = $True
-            }
-        Catch {
-            Write-host -fore Red -nonewline "Access down..."
-            }
+
+    while ($flag -eq $false) {
+        try {
+            $web.DownloadString($Url)
+            $flag = $true
+            Write-Host -ForegroundColor Green "Access successful!"
         }
-    }    
-End {
-    Write-Host -fore Green "Access is back"
+        catch {
+            Write-Host -ForegroundColor Red "Access failed. Retrying in 5 seconds..."
+            Start-Sleep -Seconds 5
+        }
+    }
+}
+
+function Get-WebsiteInfo {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Url
+    )
+
+    try {
+        $web = New-Object System.Net.WebClient
+        $content = $web.DownloadString($Url)
+        $size = $content.Length
+        
+        Write-Host "`nWebsite Information:"
+        Write-Host "-------------------"
+        Write-Host "URL: $Url"
+        Write-Host "Size: {0} bytes" -f $size.ToString("###,###,##0")
+        
+        return $content
+    }
+    catch {
+        Write-Host -ForegroundColor Red "Error accessing website: $_"
+        return $null
+    }
+}
+
+function Invoke-WebsiteQuery {
+    Write-Host "Website Query Tool"
+    Write-Host "================="
+
+    $url = Read-Host "Enter the URL to query (e.g., https://example.com)"
+
+    # Get website information
+    $content = Get-WebsiteInfo -Url $url
+
+    if ($content) {
+        $monitor = Read-Host "Would you like to monitor this website for availability? (Y/N)"
+        if ($monitor -eq 'Y') {
+            Test-WebsiteConnection -Url $url
+        }
     }
 
-    #Net.WebRequest
+    Write-Host "`nScript completed."
+}
+
+function Test-WebsiteAvailability {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Url
+    )
+
+    $web = New-Object System.Net.WebClient
+    $isAvailable = $false
+
+    Write-Host "Monitoring website availability..."
     
-2
-$webRequest = [net.WebRequest]::Create("$url;")
-$webRequest | gm
+    while (-not $isAvailable) {
+        try {
+            $web.DownloadString($Url)
+            $isAvailable = $true
+            Write-Host -ForegroundColor Green "Website is now accessible!"
+        }
+        catch {
+            Write-Host -ForegroundColor Red -NoNewline "Website is down... "
+            Start-Sleep -Seconds 5
+        }
+    }
+}
+
+# Example usage:
+# Test-WebsiteAvailability -Url "https://example.com"
+# Invoke-WebsiteQuery

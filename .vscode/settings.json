@@ -1,0 +1,23 @@
+{
+
+],
+"workbench.colorTheme": "PowerShell ISE",
+"editor.fontSize": 14,
+"editor.fontFamily": "Consolas",
+"editor.fontWeight": "normal",
+"editor.fontLigatures": false,
+"editor.tabSize": 4,
+"editor.insertSpaces": true,
+    "editor.minimap.enabled": true,
+    "editor.lineHeight": 20,
+    "editor.tabCompletion": "on",
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 120,
+    "editor.wordWrapMode": "wordWrapAndWrap",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnSaveOptions": {
+        "tabSize": 4,
+        "insertSpaces": true
+    }
+}

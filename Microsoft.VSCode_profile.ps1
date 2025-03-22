@@ -1,145 +1,146 @@
-# Microsoft.PowerShell_profile.ps1
-
 #region Script Configuration
 <#
 .SYNOPSIS
-Enhanced PowerShell profile script with improved organization and functionality.
+Optimized PowerShell profile script with essential functionality.
 
 .DESCRIPTION
-A comprehensive PowerShell profile that provides:
+A streamlined PowerShell profile that provides:
 - Custom prompt and console customization
 - Utility functions and aliases
 - Module management and environment setup
-- Directory navigation shortcuts
-- GitHub integration
+- Enhanced error handling and logging
+- Performance optimization
+- Improved script loading with dependency management
+- Better error recovery and fallback mechanisms
 
 .NOTES
 Author: Svyatoslav Oleg Russkiy
-Last Updated: 2025
-Version: 2.0
+Version: 4.0
 #>
 
-# Execute each script individually
-$scriptPaths = @(
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Initialize-OhMyPosh.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\ConfigValidation.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\winfetch-pro.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\profile-Metrics.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Welcome-Message.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Utility-Functions.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Module-Management.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Package-Management.ps1",
-    # "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Initialize-PSReadLine.ps1"
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\URL-Commands.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\winget-install.ps1",
-    "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Notes-Function.ps1"
-)
+# Start timing the profile load
+$profileLoadTime = [System.Diagnostics.Stopwatch]::StartNew()
 
-# Load Script-handler first
-. "C:\Users\Digital_Russkiy\Documents\PowerShell\Scripts\Script-Management.ps1"
+#region Initialization
+$ErrorActionPreference = 'Continue'
+$scriptsDir = Join-Path $PSScriptRoot "Scripts"
+$coreDir = Join-Path $scriptsDir "Core"
 
-# Then load other scripts
-foreach ($script in $scriptPaths) {
-    if (Test-Path $script) {
-        . $script
+# Load core modules first
+. (Join-Path $coreDir "Logging.ps1")
+. (Join-Path $coreDir "Configuration.ps1")
+. (Join-Path $coreDir "ScriptLoading.ps1")
+. (Join-Path $coreDir "Aliases.ps1")
+
+# Set up environment
+$env:PATH = @($env:PATH, "C:\Users\Digital_Russkiy\AppData\Local\Microsoft\PowerToys\PowerToys Run", (Get-CommonPaths).Scripts) -join ";"
+$isAdmin = [Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if ($isAdmin) { Write-Log "PowerShell is running with Administrator privileges" -Level 'Warning' }
+
+# Load required modules
+$config = Get-Configuration
+foreach ($module in $config.RequiredModules) {
+    try {
+        $sw = [System.Diagnostics.Stopwatch]::StartNew()
+        $installedModule = Get-Module -Name $module.Name -ListAvailable
+        if (-not $installedModule) {
+            Write-Log "Installing module: $($module.Name)" -Level 'Info'
+            Install-Module -Name $module.Name -Force -Scope ($module.Scope ?? 'CurrentUser') -ErrorAction Stop
+        }
+        Import-Module -Name $module.Name -Force -ErrorAction Stop
+        $sw.Stop()
+        $performanceMetrics.ModuleLoadTimes[$module.Name] = $sw.ElapsedMilliseconds
+        Write-Log "Imported module: $($module.Name) in $($sw.ElapsedMilliseconds)ms" -Level 'Success'
     }
-    else {
-        Write-Warning "Script not found: $script"
+    catch {
+        Write-Log "Error managing module $($module.Name) : $_" -Level 'Error'
     }
 }
 
-$ConfigPath = Join-Path -Path $PSScriptRoot -ChildPath 'config.psd1'
+# Configure PSReadLine
+if (Get-Module -Name PSReadLine) {
+    try {
+        Set-PSReadLineOption -ShowToolTips:$config.PSReadLine.ShowToolTips
+        Set-PSReadLineOption -PredictionSource $config.PSReadLine.PredictionSource
+        Set-PSReadLineOption -PredictionViewStyle $config.PSReadLine.PredictionViewStyle
+        Set-PSReadLineOption -EditMode $config.PSReadLine.EditMode
+        Set-PSReadLineOption -HistorySavePath $config.PSReadLine.HistorySavePath
+        Set-PSReadLineOption -HistorySaveStyle $config.PSReadLine.HistorySaveStyle
 
-# Load configuration file
-$Config = try {
-    $configData = Import-PowerShellDataFile -Path $ConfigPath -ErrorAction Stop
-    if ($configData -isnot [hashtable]) { throw "Configuration must be a hashtable" }
-    Write-Host "Configuration loaded successfully" -ForegroundColor Green
-    $configData
+        Set-PSReadLineKeyHandler -Key Tab -Function Complete
+        Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+        Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+        Write-Log "PSReadLine configured successfully" -Level 'Success'
+    }
+    catch {
+        Write-Log "Error configuring PSReadLine: $_" -Level 'Error'
+    }
+}
+
+# Initialize Oh My Posh with fallback
+try {
+    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnosterplus.omp.json" | Invoke-Expression
+    Write-Log "Oh My Posh initialized successfully" -Level 'Success'
 }
 catch {
-    Write-Warning "Failed to load configuration: $_"
-    # Default configuration
-    @{
-        CommonPaths     = @{
-            PowerShell = $PSScriptRoot
-            Scripts    = Join-Path $PSScriptRoot "Scripts"
-            Documents  = [Environment]::GetFolderPath('MyDocuments')
+    Write-Log "Failed to initialize Oh My Posh: $_" -Level 'Error'
+    function prompt {
+        $currentLocation = Get-Location
+        $adminIndicator = if ($isAdmin) { "[ADMIN] " } else { "" }
+        $gitBranch = if (Get-Command -Name git -ErrorAction SilentlyContinue) { 
+            " [" + (git branch --show-current) + "]" 
         }
-        UrlCollections  = @{}
-        RequiredModules = @()
-        PSReadLine      = @{
-            ShowToolTips        = $true
-            PredictionSource    = "History"
-            PredictionViewStyle = "ListView"
-            EditMode            = "Windows"
-        }
+        else { "" }
+        Write-Host "$adminIndicator" -NoNewline -ForegroundColor Red
+        Write-Host "PS " -NoNewline -ForegroundColor Blue
+        Write-Host "$($currentLocation)" -NoNewline -ForegroundColor Yellow
+        Write-Host "$gitBranch" -NoNewline -ForegroundColor Green
+        return "> "
     }
 }
 
-# Initialize paths 
-$CommonPaths = @{}
-foreach ($key in $Config.CommonPaths.Keys) {
-    $pathValue = $Config.CommonPaths[$key]
-    if ($pathValue -is [string]) {
-        $pathValue = $ExecutionContext.InvokeCommand.ExpandString($pathValue)
+# Load all scripts
+Import-AllScripts
+
+# Set up aliases
+Set-ProfileAliases
+
+# Profile load completion and performance reporting
+$profileLoadTime.Stop()
+$performanceMetrics.TotalLoadTime = $profileLoadTime.ElapsedMilliseconds
+
+Write-Log "Profile loaded in $($profileLoadTime.ElapsedMilliseconds)ms" -Level 'Success'
+Write-Log "Script load times:" -Level 'Debug'
+$performanceMetrics.ScriptLoadTimes.GetEnumerator() | ForEach-Object {
+    Write-Log "  $($_.Key): $($_.Value)ms" -Level 'Debug' -NoConsole
+}
+Write-Log "Module load times:" -Level 'Debug'
+$performanceMetrics.ModuleLoadTimes.GetEnumerator() | ForEach-Object {
+    Write-Log "  $($_.Key): $($_.Value)ms" -Level 'Debug' -NoConsole
+}
+
+# Display welcome information
+try {
+    if (Get-Command -Name Get-ScriptsFunctions -ErrorAction SilentlyContinue) { 
+        Get-ScriptsFunctions 
     }
-    $CommonPaths[$key] = $pathValue
+    else {
+        Write-Log "Get-ScriptsFunctions command not found" -Level 'Warning'
+    }
+}
+catch {
+    Write-Log "Error executing Get-ScriptsFunctions: $_" -Level 'Error'
 }
 
-# Set fallbacks only if needed
-$CommonPaths.PowerShell ??= $PSScriptRoot
-$CommonPaths.Scripts ??= Join-Path $CommonPaths.PowerShell "Scripts"
-$CommonPaths.Documents ??= [Environment]::GetFolderPath('MyDocuments')
-
-# Set working directory
-# try {
-#     Set-Location $CommonPaths.PowerShell
-# } catch {
-#     Write-Warning "Failed to set location to PowerShell directory: $_"
-#     Set-Location $HOME
-# }
-
-# Admin check
-if ([Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Warning "PowerShell is running with Administrator privileges"
+try {
+    if (Get-Command -Name Show-Welcome -ErrorAction SilentlyContinue) { 
+        Show-Welcome -ShowSystemInfo -ShowCommands 
+    }
+    else {
+        Write-Log "Show-Welcome command not found" -Level 'Warning'
+    }
 }
-
-
-
-# ----WELCOME MESSAGE----
-Show-Welcome -ShowCommands 
-# ----END WELCOME MESSAGE----
-
-Import-Module -Name Terminal-Icons
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnosterplus.omp.json" | Invoke-Expression
-#region Aliases
-#Aliases for shorter commands
-Set-Alias -Name 'ai-search' -Value 'Open-AiSearch'
-Set-Alias -Name 'google-core' -Value 'Open-GoogleCore'
-Set-Alias -Name 'google-productivity' -Value 'Open-GoogleProductivity'
-Set-Alias -Name 'google-media' -Value 'Open-GoogleMedia'
-Set-Alias -Name clr -Value Clear-Host
-
-# Define function for home directory
-function Set-HomeLocation { Set-Location $HOME }
-Set-Alias -Name home -Value Set-HomeLocation
-# Set basic aliases
-Set-Alias -Name clr -Value Clear-Host
-Set-Alias -Name reload -Value Update-PowerShellProfile 
-function Show-LLMConfig {
-    Write-Output "/agent config openai-gpt"
+catch {
+    Write-Log "Error executing Show-Welcome: $_" -Level 'Error'
 }
-Set-Alias -Name llm-config -Value Show-LLMConfig
-
-
-Set-Alias -Name cursL -Value  "cursor --list-extensions" 
-Set-Alias -Name cursI -Value  "cursor --install-extension" 
-Set-Alias -Name cursU -Value  "cursor --uninstall-extension"
-Set-Alias -Name cursS -Value  "cursor --search-extensions"
-Set-Alias -Name cursR -Value  "cursor --reload"
-Set-Alias -Name cursH -Value  "cursor --help"
-Set-Alias -Name cursV -Value  "cursor --version"
-Set-Alias -Name cursC -Value  "cursor --clear-global-storage"
-
-
+#endregion Initialization

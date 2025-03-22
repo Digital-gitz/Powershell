@@ -3,6 +3,8 @@
 
 # Ingnore all .env files
 *.env
+# Ignore config.psd1
+config.psd1
 
 # Ignore all files in any directory named temp
 temp/
@@ -25,6 +27,3 @@ secrets/
 
 # Ignore all files in the winget-install directory
 winget-install/
-
-# Ignore config.psd1
-config.psd1

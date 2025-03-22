@@ -1,0 +1,147 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Zip</S>
+      <Version N="Version">0.3.2</Version>
+      <S N="Type">Module</S>
+      <S N="Description">PowerShell module for creating ZIP archives.</S>
+      <S N="Author">WebMD Health Services</S>
+      <Obj N="CompanyName" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>pshdo</S>
+          <S>webmd-health-services</S>
+          <S>DecoyJoe</S>
+        </LST>
+      </Obj>
+      <S N="Copyright">(c) 2018 WebMD Health Services. All rights reserved.</S>
+      <DT N="PublishedDate">2020-09-03T19:16:59-04:00</DT>
+      <Obj N="InstalledDate" RefId="2">
+        <DT>2025-03-17T14:34:32.677198-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="3">
+            <TN RefId="2">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">http://www.apache.org/licenses/LICENSE-2.0</URI>
+      <URI N="ProjectUri">https://github.com/webmd-health-services/Zip</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="4">
+        <TNRef RefId="1" />
+        <LST>
+          <S>zip</S>
+          <S>compression</S>
+          <S>PSModule</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSEdition_Core</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="5">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-ZipArchiveEntry</S>
+                <S>New-ZipArchive</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-ZipArchiveEntry</S>
+                <S>New-ZipArchive</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Fixed: Add-ZipArchiveEntry fails to add a file with a last write timestamp before 1980 January 1 0:00:00 (midnight) or later than 2107 December 31 23:59:59.</S>
+      <Obj N="Dependencies" RefId="9">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="10">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2018 WebMD Health Services. All rights reserved.</S>
+          <S N="description">PowerShell module for creating ZIP archives.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">* Fixed: Add-ZipArchiveEntry fails to add a file with a last write timestamp before 1980 January 1 0:00:00 (midnight) or later than 2107 December 31 23:59:59.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">74113</S>
+          <S N="downloadCount">106492</S>
+          <S N="packageSize">12616</S>
+          <S N="published">9/3/2020 7:16:59 PM -04:00</S>
+          <S N="created">9/3/2020 7:16:59 PM -04:00</S>
+          <S N="lastUpdated">3/17/2025 4:00:00 PM -04:00</S>
+          <S N="tags">zip compression PSModule PSEdition_Desktop PSEdition_Core PSFunction_Add-ZipArchiveEntry PSCommand_Add-ZipArchiveEntry PSFunction_New-ZipArchive PSCommand_New-ZipArchive PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-17T16:00:00Z</S>
+          <S N="NormalizedVersion">0.3.2</S>
+          <S N="Authors">WebMD Health Services</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Zip.nuspec|Zip.psd1|Zip.psm1|en-US\about_Zip.help.txt|Functions\Add-ZipArchiveEntry.ps1|Functions\New-ZipArchive.ps1|Functions\Use-CallerPreference.ps1</S>
+          <S N="GUID">707c599e-c7e0-4913-a4a4-6820e37f10e9</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="CompanyName">WebMD Health Services</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Zip\0.3.2</S>
+    </MS>
+  </Obj>
+</Objs>

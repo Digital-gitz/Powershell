@@ -1,4 +1,17 @@
 {
-    "workbench.colorTheme": "Powershell"
-    "editor.minimap.enabled": true
+    "workspace.workspaceFolders": [
+        {
+            "name": "Powershell",
+            "path": "C:\\Users\\Digital-gitz\\Documents\\Powershell"
+        }
+    ],
+    "workbench.colorTheme": "PowerShell ISE",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Consolas",
+    "editor.fontWeight": "normal",
+    "editor.fontLigatures": false,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+    
+    
 }

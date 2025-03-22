@@ -3,7 +3,8 @@
     "adamwojcikit.pnp-powershell-extension", 
     "ms-vscode.powershell",
     "tobysmith568.run-in-powershell",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "docnougat.powershell-commander"
 ]
   }
   

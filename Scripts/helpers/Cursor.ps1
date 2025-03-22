@@ -11,14 +11,19 @@ Add-Type @"
 "@
 
 $processName = "Cursor"  # Replace with your actual process name
-$process = Get-Process $processName -ErrorAction SilentlyContinue
+$processes = Get-Process $processName -ErrorAction SilentlyContinue
 
-if (-not $process) {
+if (-not $processes) {
     Start-Process "C:\Users\Digital_Russkiy\AppData\Local\Programs\cursor\Cursor.exe"  # Replace with actual path
     Start-Sleep -Milliseconds 500
-    $process = Get-Process $processName
+    $processes = Get-Process $processName
 }
 
+# Get the first process if multiple are found
+$process = $processes | Select-Object -First 1
+
 # Bring window to front
-[WindowHelper]::ShowWindow($process.MainWindowHandle, 9)  # 9 = SW_RESTORE
-[WindowHelper]::SetForegroundWindow($process.MainWindowHandle)
+if ($process.MainWindowHandle) {
+    [WindowHelper]::ShowWindow($process.MainWindowHandle, 9)  # 9 = SW_RESTORE
+    [WindowHelper]::SetForegroundWindow($process.MainWindowHandle)
+}

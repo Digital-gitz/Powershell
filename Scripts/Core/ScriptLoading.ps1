@@ -246,6 +246,10 @@ $scriptCategories = @{
         "cd-docs.ps1",
         "cd-downloads.ps1"
     )
+    # Networking scripts should be loaded without parallel processing
+    Networking     = @(
+        "URL-Funk.ps1"
+    )
     Development    = @(
         "GitHub.ps1",
         "githubCommands.ps1",
@@ -276,31 +280,12 @@ function Import-AllScripts {
     Write-Log "Loading Core scripts first..." -Level 'Info'
     Import-ScriptCategory -Category "Core" -Scripts $scriptCategories["Core"] -Parallel:$false
 
-    # Load modules from the module folder first
-    $modulePath = Join-Path $scriptsRoot "Modules"
-    if (Test-Path $modulePath) {
-        Write-Log "Loading modules from Modules directory..." -Level 'Info'
-        $moduleTimer = [System.Diagnostics.Stopwatch]::StartNew()
-        $modules = Get-ChildItem -Path $modulePath -Filter "*.psd1" -Recurse
-        foreach ($module in $modules) {
-            $singleModuleTimer = [System.Diagnostics.Stopwatch]::StartNew()
-            try {
-                Write-Log "Loading module: $($module.Name)" -Level 'Debug'
-                Import-Module $module.FullName -Force -ErrorAction Stop
-                $singleModuleTimer.Stop()
-                Write-Log "Successfully loaded module: $($module.Name) (${$singleModuleTimer.ElapsedMilliseconds}ms)" -Level 'Success'
-            }
-            catch {
-                $singleModuleTimer.Stop()
-                Write-Log "Failed to load module $($module.Name) : $_ (${$singleModuleTimer.ElapsedMilliseconds}ms)" -Level 'Error'
-            }
-        }
-        $moduleTimer.Stop()
-        Write-Log "Finished loading modules (${$moduleTimer.ElapsedMilliseconds}ms)" -Level 'Info'
-    }
+    # Load Networking scripts next, without parallel processing
+    Write-Log "Loading Networking scripts..." -Level 'Info'
+    Import-ScriptCategory -Category "Networking" -Scripts $scriptCategories["Networking"] -Parallel:$false
 
     # Load remaining scripts by category
-    foreach ($category in $scriptCategories.Keys | Where-Object { $_ -ne "Core" }) {
+    foreach ($category in $scriptCategories.Keys | Where-Object { $_ -notin @("Core", "Networking") }) {
         Write-Log "Loading $category scripts..." -Level 'Info'
         
         # Get dependencies for the category

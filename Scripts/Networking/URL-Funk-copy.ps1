@@ -88,5 +88,20 @@ if (-not (Get-Alias -Name llm -ErrorAction SilentlyContinue)) {
     New-Alias -Name llm -Value Open-LLMChat -Scope Global -Force
 }
 
+function chat-gpt { Start-Process "https://chatgpt.com/" }
+function claude { Start-Process "https://claude.ai/new" }
+function gemini { Start-Process "https://gemini.google.com/app?hl=en-GB" }
+function deepseek { Start-Process "https://chat.deepseek.com/" }
+function grok { Start-Process "https://x.com/i/grok" }
+function you { Start-Process "https://you.com/" }
+function pi { Start-Process "https://pi.ai/" }
+
 Write-Host "URL-Funk.ps1 loaded successfully!" -ForegroundColor Green
 Write-Host "Use 'Open-LLMChat' or 'llm' to open all LLM chat URLs" -ForegroundColor Cyan
+Write-Host "Use 'chat-gpt' to open ChatGPT" -ForegroundColor Cyan
+Write-Host "Use 'claude' to open Claude" -ForegroundColor Cyan
+Write-Host "Use 'gemini' to open Gemini" -ForegroundColor Cyan
+Write-Host "Use 'deepseek' to open DeepSeek" -ForegroundColor Cyan
+Write-Host "Use 'grok' to open Grok" -ForegroundColor Cyan
+Write-Host "Use 'you' to open You" -ForegroundColor Cyan
+Write-Host "Use 'pi' to open Pi" -ForegroundColor Cyan

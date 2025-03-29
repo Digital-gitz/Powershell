@@ -1,5 +1,4 @@
-# Utilities.ps1
-
+# Notes-Function.ps1
 function Note {
     [CmdletBinding()]
     param(

@@ -7,7 +7,6 @@ $defaultConfig = @{
         PowerShell = $PSScriptRoot
         Scripts    = Join-Path $PSScriptRoot ".."
         Documents  = [Environment]::GetFolderPath('MyDocuments')
-        Logs       = Join-Path $PSScriptRoot "..\..\logs"
     }
     RequiredModules = @(
         @{Name = 'Terminal-Icons'; Purpose = 'Directory and file icons'; Scope = 'CurrentUser' }
@@ -21,18 +20,6 @@ $defaultConfig = @{
         EditMode            = "Windows"
         HistorySavePath     = Join-Path $env:APPDATA "PowerShell\history"
         HistorySaveStyle    = "SaveIncrementally"
-    }
-    Performance     = @{
-        EnableModuleAutoload = $true
-        MaxHistoryCount      = 1000
-        EnableLogging        = $true
-        CacheScripts         = $true
-        ParallelLoading      = $true
-        ScriptDependencies   = @{
-            'Core'    = @('Config-Validation.ps1', 'Module-Management.ps1')
-            'UI'      = @('Initialize-OhMyPosh.ps1', 'Initialize-PSReadLine.ps1')
-            'Utility' = @('Utility-Functions.ps1', 'Script-Management.ps1')
-        }
     }
 }
 
@@ -54,29 +41,29 @@ $config = try {
                 $mergedConfig[$key] = $configData[$key]
             }
         }
-        
-        Write-Log "Configuration loaded successfully" -Level 'Success'
         $mergedConfig
     }
     else {
-        Write-Log "Configuration file not found, using defaults" -Level 'Warning'
         $defaultConfig
     }
 }
 catch {
-    Write-Log "Failed to load configuration: $_" -Level 'Warning'
-    Write-Log "Using default configuration" -Level 'Info'
+    Write-Host "Using default configuration" -ForegroundColor Yellow
     $defaultConfig
 }
 
-# Ensure Performance section exists
-if (-not $config.Performance) {
-    $config.Performance = $defaultConfig.Performance
+# Ensure PSReadLine settings are valid
+if (-not $config.PSReadLine) {
+    $config.PSReadLine = $defaultConfig.PSReadLine
 }
-
-# Ensure ScriptDependencies exists
-if (-not $config.Performance.ScriptDependencies) {
-    $config.Performance.ScriptDependencies = $defaultConfig.Performance.ScriptDependencies
+else {
+    # Validate and set default values for each PSReadLine setting
+    $config.PSReadLine.ShowToolTips = if ($config.PSReadLine.ShowToolTips -eq $null) { $true } else { $config.PSReadLine.ShowToolTips }
+    $config.PSReadLine.PredictionSource = if ($config.PSReadLine.PredictionSource -notin @("None", "History", "Plugin", "HistoryAndPlugin")) { "History" } else { $config.PSReadLine.PredictionSource }
+    $config.PSReadLine.PredictionViewStyle = if ($config.PSReadLine.PredictionViewStyle -notin @("InlineView", "ListView")) { "ListView" } else { $config.PSReadLine.PredictionViewStyle }
+    $config.PSReadLine.EditMode = if ($config.PSReadLine.EditMode -notin @("Windows", "Emacs", "Vi")) { "Windows" } else { $config.PSReadLine.EditMode }
+    $config.PSReadLine.HistorySavePath = if ([string]::IsNullOrEmpty($config.PSReadLine.HistorySavePath)) { $defaultConfig.PSReadLine.HistorySavePath } else { $config.PSReadLine.HistorySavePath }
+    $config.PSReadLine.HistorySaveStyle = if ($config.PSReadLine.HistorySaveStyle -notin @("SaveIncrementally", "SaveAtExit", "SaveNothing")) { "SaveIncrementally" } else { $config.PSReadLine.HistorySaveStyle }
 }
 
 # Initialize common paths and create necessary directories
@@ -87,10 +74,9 @@ foreach ($key in $config.CommonPaths.Keys) {
     if (-not (Test-Path $pathValue)) { 
         try {
             New-Item -ItemType Directory -Path $pathValue -Force | Out-Null
-            Write-Log "Created directory: $pathValue" -Level 'Success'
         }
         catch {
-            Write-Log "Failed to create directory $pathValue : $_" -Level 'Error'
+            Write-Host "Failed to create directory $pathValue" -ForegroundColor Red
         }
     }
 }
@@ -105,10 +91,9 @@ if (-not (Test-Path $historyPath)) {
         $rule = New-Object System.Security.AccessControl.FileSystemAccessRule($env:USERNAME, "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow")
         $acl.SetAccessRule($rule)
         Set-Acl $historyPath $acl
-        Write-Log "Created PSReadLine history directory: $historyPath" -Level 'Success'
     }
     catch {
-        Write-Log "Failed to create PSReadLine history directory $historyPath : $_" -Level 'Error'
+        Write-Host "Failed to create PSReadLine history directory" -ForegroundColor Red
     }
 }
 

@@ -19,6 +19,9 @@ Version: 4.0
 #>
 
 # Start timing the profile load
+# This creates a stopwatch object to measure how long it takes to load the PowerShell profile
+# The StartNew() method creates and starts the stopwatch immediately
+# The $profileLoadTime variable will be used later to report the total load time
 $profileLoadTime = [System.Diagnostics.Stopwatch]::StartNew()
 
 #region Initialization
@@ -56,7 +59,7 @@ foreach ($module in $config.RequiredModules) {
         Write-Log "Error managing module $($module.Name) : $_" -Level 'Error'
     }
 }
-
+curl terminal-stocks.dev/market-summary
 # Configure PSReadLine
 if (Get-Module -Name PSReadLine) {
     try {
@@ -142,5 +145,45 @@ try {
 }
 catch {
     Write-Log "Error executing Show-Welcome: $_" -Level 'Error'
+} 
+
+function restart {
+    Write-Host "`n🔄 Restarting PowerShell session..." -ForegroundColor Cyan
+    Clear-Host
+    . $PROFILE
+    Write-Host "✓ PowerShell session restarted successfully!" -ForegroundColor Green
 }
+
+function sleep {
+    Add-Type -TypeDefinition @"
+    using System;
+    using System.Runtime.InteropServices;
+
+    public class SleepHelper {
+        [DllImport("powrprof.dll", SetLastError = true)]
+        public static extern bool SetSuspendState(bool hibernate, bool forceCritical, bool disableWakeEvent);
+    }
+"@ -PassThru | Out-Null
+
+    [SleepHelper]::SetSuspendState($false, $true, $true)
+}
+
+# $global:PSColor = @{
+#     File = @{
+#         Default    = @{ Color = 'White' }
+#         Directory  = @{ Color = 'Cyan' }
+#         Hidden     = @{ Color = 'DarkGray'; Pattern = '^\.' } 
+#         Code       = @{ Color = 'Magenta'; Pattern = '\.(java|c|cpp|cs|js|css|html)$' }
+#         Executable = @{ Color = 'Red'; Pattern = '\.(exe|bat|cmd|py|pl|ps1|psm1|vbs|rb|reg)$' }
+#         Text       = @{ Color = 'Yellow'; Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown)$' }
+#         Compressed = @{ Color = 'Green'; Pattern = '\.(zip|tar|gz|rar|jar|war)$' }
+#     }
+# }
+
+
 #endregion Initialization
+# $env:Path = "C:\Users\Digital_Russkiy\.local\bin;$env:Path"
+# clear catch 
+# $env:PSModulePath  #get modpath 
+# Get-ChildItem $env:TEMP\NuGetScratch -Recurse -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force 
+# telnet mapscii.me   

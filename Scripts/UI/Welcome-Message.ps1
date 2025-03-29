@@ -1,5 +1,11 @@
 # Initialize the start time before any operations
 $startTime = Get-Date
+$curUser    = (Get-ChildItem Env:\USERNAME).Value
+$curComp    = (Get-ChildItem Env:\COMPUTERNAME).Value
+$pvmaj      = $Host.Version.Major
+$pvmin      = $Host.Version.Minor
+$psversion  = "$pvmaj.$pvmin"
+$identity   = "$curUser@$curComp"
 
 # Load Profile Commands script
 $profileCommandsPath = Join-Path $PSScriptRoot "Profile-Commands.ps1"
@@ -249,11 +255,13 @@ function global:Show-Welcome {
         [switch]$ShowCommands
     )
 
+    # Get console dimensions
     $consoleWidth = $Host.UI.RawUI.WindowSize.Width
     $bannerWidth = 68 # Width of the banner including borders
     $padding = [math]::Max(0, [math]::Floor(($consoleWidth - $bannerWidth) / 2))
     $indent = " " * $padding
-    
+
+    # Welcome banner text
     $welcomeText = @"
 
 $indent╔══════════════════════════════════════════════════════════════════╗
@@ -261,44 +269,61 @@ $indent║                  Welcome to PowerShell Profile                   ║
 $indent║                                                                  ║
 $indent║  Type 'Get-ScriptsFunctions' to see available custom functions   ║
 $indent║  Type 'Show-FunctionExecutionStats' to see performance metrics   ║
+$indent║                       Windows PowerShell                         ║
+$indent                        Version $psversion                         
+$indent              $identity
+$indent║                          Happy coding!                           ║
 $indent╚══════════════════════════════════════════════════════════════════╝
 "@
 
+    # Display welcome text
     Write-Host $welcomeText -ForegroundColor Cyan
 
+    # Display available functions in columns
     Write-Host "Available Custom Functions:" -ForegroundColor Green
     Write-Host "-------------------------" -ForegroundColor Green
-    
-    $functions = Get-ChildItem function: | Where-Object { $_.Source -eq "" } | Sort-Object Name
-    $columnWidth = 30
-    $consoleWidth = $Host.UI.RawUI.WindowSize.Width
-    $columnsPerRow = [math]::Floor($consoleWidth / $columnWidth)
-    
-    for ($i = 0; $i -lt $functions.Count; $i++) {
-        $functionName = $functions[$i].Name
-        $padding = " " * ($columnWidth - $functionName.Length)
+
+    # $functions = Get-ChildItem function: | Where-Object { $_.Source -eq "" } | Sort-Object Name
+    # $columnWidth = 30
+    # $columnsPerRow = [math]::Floor($consoleWidth / $columnWidth)
+
+    # for ($i = 0; $i -lt $functions.Count; $i++) {
+    #     $functionName = $functions[$i].Name
+    #     $functionPadding = " " * ($columnWidth - $functionName.Length)
+    #     Write-Host -NoNewline "  $functionName$functionPadding" -ForegroundColor Green
         
-        Write-Host -NoNewline "  $functionName$padding" -ForegroundColor Green
+    #     if (($i + 1) % $columnsPerRow -eq 0 -or $i -eq $functions.Count - 1) {
+    #         Write-Host ""
+    #     }
+    # }
+
+    # Display system info if requested
+    if ($ShowSystemInfo) {
+        Write-Host "`nSystem Information:" -ForegroundColor Yellow
+        $sysInfo = @{
+            "PowerShell Version" = $PSVersionTable.PSVersion
+            "OS"                 = [System.Environment]::OSVersion.VersionString
+            "User"               = [System.Environment]::UserName
+            "Computer"           = [System.Environment]::MachineName
+        }
         
-        if (($i + 1) % $columnsPerRow -eq 0 -or $i -eq $functions.Count - 1) {
-            Write-Host ""
+        foreach ($item in $sysInfo.GetEnumerator()) {
+            Write-Host "  $($item.Key): $($item.Value)"
         }
     }
 
-    if ($ShowSystemInfo) {
-        Write-Host "`nSystem Information:" -ForegroundColor Yellow
-        Write-Host "  PowerShell Version: $($PSVersionTable.PSVersion)"
-        Write-Host "  OS: $([System.Environment]::OSVersion.VersionString)"
-        Write-Host "  User: $([System.Environment]::UserName)"
-        Write-Host "  Computer: $([System.Environment]::MachineName)"
-    }
-
+    # Display quick commands if requested
     if ($ShowCommands) {
         Write-Host "`nQuick Commands:" -ForegroundColor Yellow
-        Write-Host "  reload  - Reload PowerShell profile"
-        Write-Host "  home    - Go to home directory"
-        Write-Host "  clr     - Clear screen"
-        Write-Host "  which   - Find command location"
+        $quickCommands = @{
+            "clr"     = "Clear screen"
+            "which"   = "Find command location"
+            "restart" = "Restart PowerShell session"
+        }
+        
+        foreach ($cmd in $quickCommands.GetEnumerator()) {
+            Write-Host "  $($cmd.Key.PadRight(8)) - $($cmd.Value)"
+        }
     }
 
     Write-Host ""

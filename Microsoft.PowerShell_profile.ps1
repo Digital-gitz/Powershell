@@ -1,149 +1,267 @@
 #region Script Configuration
 <#
 .SYNOPSIS
-Optimized PowerShell profile script with essential functionality.
+Enhanced PowerShell profile with modern features and utilities.
 
 .DESCRIPTION
-A streamlined PowerShell profile that provides:
-- Custom prompt and console customization
-- Utility functions and aliases
-- Module management and environment setup
-- Enhanced error handling and logging
-- Performance optimization
-- Improved script loading with dependency management
-- Better error recovery and fallback mechanisms
+A feature-rich PowerShell profile that provides:
+- Modern command-line experience with syntax highlighting
+- Smart command prediction and history
+- Git integration and custom prompt
+- Useful aliases and utility functions
+- Performance-optimized module loading
+- Enhanced error handling and command suggestions
 
 .NOTES
 Author: Svyatoslav Oleg Russkiy
-Version: 4.0
+Version: 4.3
 #>
-
-# Start timing the profile load
-$profileLoadTime = [System.Diagnostics.Stopwatch]::StartNew()
 
 #region Initialization
 $ErrorActionPreference = 'Continue'
 $scriptsDir = Join-Path $PSScriptRoot "Scripts"
 $coreDir = Join-Path $scriptsDir "Core"
 
-# Load core modules first
-. (Join-Path $coreDir "Logging.ps1")
+# Load core configuration
 . (Join-Path $coreDir "Configuration.ps1")
-. (Join-Path $coreDir "ScriptLoading.ps1")
-. (Join-Path $coreDir "Aliases.ps1")
 
 # Set up environment
-$env:PATH = @($env:PATH, "C:\Users\Digital_Russkiy\AppData\Local\Microsoft\PowerToys\PowerToys Run", (Get-CommonPaths).Scripts) -join ";"
-$isAdmin = [Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-if ($isAdmin) { Write-Log "PowerShell is running with Administrator privileges" -Level 'Warning' }
+$env:PATH = @(
+    $env:PATH,
+    "C:\Users\Digital_Russkiy\AppData\Local\Microsoft\PowerToys\PowerToys Run",
+    (Get-CommonPaths).Scripts,
+    "$HOME\.local\bin",
+    "$HOME\AppData\Local\Programs\Microsoft VS Code\bin"
+) -join ";"
 
-# Load required modules
-$config = Get-Configuration
-foreach ($module in $config.RequiredModules) {
+# Check for admin privileges
+$isAdmin = [Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if ($isAdmin) {
+    Write-Host "⚡ Running with administrator privileges" -ForegroundColor Yellow
+}
+
+# Function to safely load a module
+function Import-ModuleSafely {
+    param(
+        [string]$Name,
+        [string]$Scope = 'CurrentUser',
+        [string]$Purpose
+    )
+    
     try {
-        $sw = [System.Diagnostics.Stopwatch]::StartNew()
-        $installedModule = Get-Module -Name $module.Name -ListAvailable
-        if (-not $installedModule) {
-            Write-Log "Installing module: $($module.Name)" -Level 'Info'
-            Install-Module -Name $module.Name -Force -Scope ($module.Scope ?? 'CurrentUser') -ErrorAction Stop
+        # Check if module is already loaded
+        if (Get-Module -Name $Name) {
+            return
         }
-        Import-Module -Name $module.Name -Force -ErrorAction Stop
-        $sw.Stop()
-        $performanceMetrics.ModuleLoadTimes[$module.Name] = $sw.ElapsedMilliseconds
-        Write-Log "Imported module: $($module.Name) in $($sw.ElapsedMilliseconds)ms" -Level 'Success'
+
+        if (-not (Get-Module -Name $Name -ListAvailable)) {
+            Write-Host "Installing module $Name..." -ForegroundColor Cyan
+            Install-Module -Name $Name -Force -Scope $Scope
+        }
+        Import-Module -Name $Name -Force -DisableNameChecking
+        Write-Host "✓ Loaded $Name" -ForegroundColor Green
     }
     catch {
-        Write-Log "Error managing module $($module.Name) : $_" -Level 'Error'
+        Write-Host "✗ Failed to load ${Name} - $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
-# Configure PSReadLine
-if (Get-Module -Name PSReadLine) {
-    try {
-        Set-PSReadLineOption -ShowToolTips:$config.PSReadLine.ShowToolTips
-        Set-PSReadLineOption -PredictionSource $config.PSReadLine.PredictionSource
-        Set-PSReadLineOption -PredictionViewStyle $config.PSReadLine.PredictionViewStyle
-        Set-PSReadLineOption -EditMode $config.PSReadLine.EditMode
-        Set-PSReadLineOption -HistorySavePath $config.PSReadLine.HistorySavePath
-        Set-PSReadLineOption -HistorySaveStyle $config.PSReadLine.HistorySaveStyle
+# Load essential modules first
+$essentialModules = @(
+    @{Name = 'Terminal-Icons'; Purpose = 'Directory and file icons' }
+    @{Name = 'PSReadLine'; Purpose = 'Enhanced console experience' }
+    @{Name = 'posh-git'; Purpose = 'Git integration' }
+)
 
-        Set-PSReadLineKeyHandler -Key Tab -Function Complete
-        Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-        Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-        Write-Log "PSReadLine configured successfully" -Level 'Success'
-    }
-    catch {
-        Write-Log "Error configuring PSReadLine: $_" -Level 'Error'
+foreach ($module in $essentialModules) {
+    Import-ModuleSafely -Name $module.Name -Purpose $module.Purpose
+    if ($module.Name -eq 'posh-git') {
+        $env:POSHGIT_CYGWIN_WARNING = 'false'  # Suppress posh-git warning
     }
 }
 
 # Initialize Oh My Posh with fallback
 try {
     oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnosterplus.omp.json" | Invoke-Expression
-    Write-Log "Oh My Posh initialized successfully" -Level 'Success'
 }
 catch {
-    Write-Log "Failed to initialize Oh My Posh: $_" -Level 'Error'
     function prompt {
-        $currentLocation = Get-Location
-        $adminIndicator = if ($isAdmin) { "[ADMIN] " } else { "" }
-        $gitBranch = if (Get-Command -Name git -ErrorAction SilentlyContinue) { 
-            " [" + (git branch --show-current) + "]" 
+        $lastCommand = Get-History -Count 1
+        $lastCommandTime = if ($lastCommand) { 
+            $duration = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
+            " [$([math]::Round($duration.TotalMilliseconds))ms]"
         }
         else { "" }
-        Write-Host "$adminIndicator" -NoNewline -ForegroundColor Red
-        Write-Host "PS " -NoNewline -ForegroundColor Blue
-        Write-Host "$($currentLocation)" -NoNewline -ForegroundColor Yellow
+
+        $currentLocation = Get-Location
+        $adminIndicator = if ($isAdmin) { "[ADMIN] " } else { "" }
+        
+        # Cache git command check result
+        $gitCommand = Get-Command -Name git -ErrorAction SilentlyContinue
+        $gitBranch = if ($gitCommand) { 
+            $branch = git branch --show-current 2>$null
+            if ($branch) { " [$branch]" } else { "" }
+        }
+        else { "" }
+
+        Write-Host "`n$adminIndicator" -NoNewline -ForegroundColor Red
+        Write-Host "PS" -NoNewline -ForegroundColor Blue
+        Write-Host "$lastCommandTime" -NoNewline -ForegroundColor DarkGray
+        Write-Host " $($currentLocation)" -NoNewline -ForegroundColor Yellow
         Write-Host "$gitBranch" -NoNewline -ForegroundColor Green
-        return "> "
+        return "`n❯ "
     }
 }
 
-# Load all scripts
-Import-AllScripts
+# Configure PSReadLine
+if (Get-Module -Name PSReadLine) {
+    try {
+        # Basic options
+        $psReadLineConfig = $config.PSReadLine
 
-# Set up aliases
-Set-ProfileAliases
+        # Set basic options
+        Set-PSReadLineOption -ShowToolTips:$true
+        Set-PSReadLineOption -PredictionSource History
+        Set-PSReadLineOption -PredictionViewStyle ListView
+        Set-PSReadLineOption -EditMode Windows
+        
+        # Set history path if configured
+        if (-not [string]::IsNullOrEmpty($psReadLineConfig.HistorySavePath)) {
+            Set-PSReadLineOption -HistorySavePath $psReadLineConfig.HistorySavePath
+        }
+        
+        # Set history save style
+        Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
 
-# Profile load completion and performance reporting
-$profileLoadTime.Stop()
-$performanceMetrics.TotalLoadTime = $profileLoadTime.ElapsedMilliseconds
+        # Set colors for better visibility
+        Set-PSReadLineOption -Colors @{
+            Command          = 'Cyan'
+            Parameter        = 'DarkCyan'
+            InlinePrediction = 'DarkGray'
+            Operator         = 'DarkYellow'
+            String           = 'Green'
+            Number           = 'DarkGreen'
+            Member           = 'DarkYellow'
+            Type             = 'DarkBlue'
+            Variable         = 'DarkMagenta'
+            Comment          = 'DarkGray'
+        }
 
-Write-Log "Profile loaded in $($profileLoadTime.ElapsedMilliseconds)ms" -Level 'Success'
-Write-Log "Script load times:" -Level 'Debug'
-$performanceMetrics.ScriptLoadTimes.GetEnumerator() | ForEach-Object {
-    Write-Log "  $($_.Key): $($_.Value)ms" -Level 'Debug' -NoConsole
-}
-Write-Log "Module load times:" -Level 'Debug'
-$performanceMetrics.ModuleLoadTimes.GetEnumerator() | ForEach-Object {
-    Write-Log "  $($_.Key): $($_.Value)ms" -Level 'Debug' -NoConsole
-}
+        # Key handlers for better interaction
+        Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+        Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+        Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+        Set-PSReadLineKeyHandler -Key Ctrl+Spacebar -Function AcceptSuggestion
+        Set-PSReadLineKeyHandler -Key Alt+Enter -Function AcceptNextSuggestionWord
 
-
-# Display welcome information
-try {
-    # Initialize welcome message cache
-    if (Get-Command -Name Initialize-WelcomeCache -ErrorAction SilentlyContinue) {
-        Initialize-WelcomeCache
+        Write-Host "✓ PSReadLine configured successfully" -ForegroundColor Green
     }
+    catch {
+        Write-Host "✗ Error configuring PSReadLine - $($_.Exception.Message)" -ForegroundColor Red
+    }
+}
 
-    # Show available script functions
-    if (Get-Command -Name Get-ScriptsFunctions -ErrorAction SilentlyContinue) {
-        Get-ScriptsFunctions
+# Load script categories
+$scriptCategories = @{
+    Core           = @("Aliases.ps1")
+    FileManagement = @("bringVsCodeForeground.ps1")
+    Navigation     = @("cd-downloads.ps1")
+    Development    = @("Notes-Function.ps1")
+    UI             = @("winfetch-pro.ps1")
+    Networking     = @("LLM-Funk.ps1", "Shopping-Funk.ps1")
+}                               
+
+# Function to safely load a script
+function Import-ScriptSafely {
+    param(
+        [string]$Category,
+        [string]$ScriptName
+    )
+    
+    $scriptPath = Join-Path $scriptsDir $Category $ScriptName
+    if (Test-Path $scriptPath) {
+        try {
+            . $scriptPath
+            Write-Host "✓ Loaded $ScriptName" -ForegroundColor Green
+        }
+        catch {
+            Write-Host "✗ Failed to load ${ScriptName} - $($_.Exception.Message)" -ForegroundColor Red
+        }
     }
     else {
-        Write-Log "Get-ScriptsFunctions command not found" -Level 'Warning'
+        Write-Host "! Script not found: $ScriptName" -ForegroundColor Yellow
     }
+}
 
-    # Display welcome message with system info and commands
-    if (Get-Command -Name Show-Welcome -ErrorAction SilentlyContinue) {
-        Show-Welcome -ShowSystemInfo -ShowCommands
-    }
-    else {
-        Write-Log "Show-Welcome command not found" -Level 'Warning'
+# Load scripts in order
+$loadOrder = @("Core", "UI", "Networking", "Development", "Navigation", "FileManagement")
+foreach ($category in $loadOrder) {
+    if ($scriptCategories.ContainsKey($category)) {
+        foreach ($script in $scriptCategories[$category]) {
+            Import-ScriptSafely -Category $category -ScriptName $script
+        }
     }
 }
-catch {
-    Write-Log "Error displaying welcome information: $_" -Level 'Error'
+
+# Utility functions
+function market-sum {
+    Write-Host "`n📈 Getting market summary..." -ForegroundColor Cyan
+    try {
+        curl terminal-stocks.dev/market-summary
+    }
+    catch {
+        Write-Host "Failed to retrieve market summary: $($_.Exception.Message)" -ForegroundColor Red
+    }
+    Write-Host
 }
-#endregion Initialization
+
+function Get-CommandSuggestion {
+    param([string]$ErrorMessage)
+    
+    if ($ErrorMessage -match "The term '(.+)' is not recognized") {
+        $command = $matches[1]
+        $suggestions = Get-Command -ErrorAction SilentlyContinue | 
+        Where-Object Name -like "*$command*" |
+        Select-Object -First 3 Name
+        
+        if ($suggestions) {
+            Write-Host "`nDid you mean:" -ForegroundColor Yellow
+            $suggestions | ForEach-Object {
+                Write-Host "  • $($_.Name)" -ForegroundColor Cyan
+            }
+        }
+    }
+}
+
+function sleep {
+    Write-Host "`n💤 Putting computer to sleep..." -ForegroundColor Cyan
+    try {
+        Shutdown.exe -h
+    }
+    catch {
+        Write-Host "Failed to put computer to sleep: $($_.Exception.Message)" -ForegroundColor Red
+    }
+}
+
+
+
+
+# Error handling
+$ErrorView = 'ConciseView'
+$Global:Error.Clear()
+
+# Register error handler for command suggestions
+$ExecutionContext.InvokeCommand.CommandNotFoundAction = {
+    param($CommandName, $CommandLookupEventArgs)
+    Get-CommandSuggestion -ErrorMessage "The term '$CommandName' is not recognized"
+}
+
+# Function to restart PowerShell session
+function restart {
+    Write-Host "`n🔄 Restarting PowerShell session..." -ForegroundColor Cyan
+    Clear-Host
+    . $PROFILE
+    Write-Host "✓ PowerShell session restarted successfully!" -ForegroundColor Green
+}
+
+Write-Host "`n🚀 PowerShell profile loaded and ready!" -ForegroundColor Cyan

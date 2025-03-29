@@ -26,7 +26,7 @@
       <S N="Copyright">(c) Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2024-10-03T18:06:27-04:00</DT>
       <Obj N="InstalledDate" RefId="2">
-        <DT>2025-03-22T16:09:24.2504053-04:00</DT>
+        <DT>2025-03-22T18:55:08.3612698-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="3">
             <TN RefId="2">
@@ -57,32 +57,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Workflow</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="1" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="1" />
-              <LST>
-                <S>PSConsoleHostReadLine</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="8">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="1" />
               <LST>
                 <S>Get-PSReadLineKeyHandler</S>
@@ -93,6 +69,30 @@
                 <S>PSConsoleHostReadLine</S>
               </LST>
             </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="1" />
+              <LST>
+                <S>PSConsoleHostReadLine</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="7" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
@@ -129,15 +129,15 @@
           <S N="requireLicenseAcceptance">False</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">False</S>
-          <S N="versionDownloadCount">2531788</S>
-          <S N="downloadCount">6005900</S>
+          <S N="versionDownloadCount">2532142</S>
+          <S N="downloadCount">6006273</S>
           <S N="packageSize">247102</S>
           <S N="published">10/3/2024 6:06:27 PM -04:00</S>
           <S N="created">10/3/2024 6:06:27 PM -04:00</S>
-          <S N="lastUpdated">3/22/2025 8:00:00 PM -04:00</S>
+          <S N="lastUpdated">3/22/2025 10:50:00 PM -04:00</S>
           <S N="tags">PSModule PSCmdlet_Get-PSReadLineKeyHandler PSCommand_Get-PSReadLineKeyHandler PSCmdlet_Set-PSReadLineKeyHandler PSCommand_Set-PSReadLineKeyHandler PSCmdlet_Remove-PSReadLineKeyHandler PSCommand_Remove-PSReadLineKeyHandler PSCmdlet_Get-PSReadLineOption PSCommand_Get-PSReadLineOption PSCmdlet_Set-PSReadLineOption PSCommand_Set-PSReadLineOption PSIncludes_Cmdlet PSFunction_PSConsoleHostReadLine PSCommand_PSConsoleHostReadLine PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-22T20:00:00Z</S>
+          <S N="updated">2025-03-22T22:50:00Z</S>
           <S N="NormalizedVersion">2.3.6</S>
           <S N="Authors">Microsoft Corporation</S>
           <S N="IsPrerelease">false</S>

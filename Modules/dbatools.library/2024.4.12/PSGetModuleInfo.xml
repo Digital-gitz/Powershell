@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">dbatools.library</S>
-      <Version N="Version">2024.4.12</Version>
-      <S N="Type">Module</S>
+      <S N="Version">2024.4.12</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">The library that powers dbatools, the community module for SQL Server Pros</S>
       <S N="Author">the dbatools team</S>
-      <S N="CompanyName">chrissylemaire</S>
+      <S N="CompanyName">dbatools.io</S>
       <S N="Copyright">Copyright (c) 2024 by dbatools, licensed under MIT</S>
-      <DT N="PublishedDate">2024-04-12T15:43:22-04:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-01T20:29:01.0026665-05:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2024-04-12T15:43:22.32</DT>
+      <DT N="InstalledDate">2025-03-30T22:13:02.8526102-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://opensource.org/licenses/MIT</URI>
       <URI N="ProjectUri">https://dbatools.io/</URI>
       <URI N="IconUri">https://dbatools.io/logo.png</URI>
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -50,16 +45,30 @@
           <S>core</S>
           <S>smo</S>
           <S>PSModule</S>
+          <S>PSFunction_Get-DbatoolsLibraryPath</S>
+          <S>PSCommand_Get-DbatoolsLibraryPath</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
@@ -68,74 +77,42 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
-          <En>
-            <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-DbatoolsLibraryPath</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
-      <Nil N="ReleaseNotes" />
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes"></S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST />
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="9">
-        <TN RefId="4">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Copyright (c) 2024 by dbatools, licensed under MIT</S>
-          <S N="description">The library that powers dbatools, the community module for SQL Server Pros</S>
-          <S N="requireLicenseAcceptance">False</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">1467317</S>
-          <S N="downloadCount">2302910</S>
-          <S N="packageSize">57935364</S>
-          <S N="published">4/12/2024 3:43:22 PM -04:00</S>
-          <S N="created">4/12/2024 3:43:22 PM -04:00</S>
-          <S N="lastUpdated">3/2/2025 1:20:00 AM -05:00</S>
-          <S N="tags">sqlserver migrations sql dba databases mac linux core smo PSModule PSFunction_Get-DbatoolsLibraryPath PSCommand_Get-DbatoolsLibraryPath PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-02T01:20:00Z</S>
           <S N="NormalizedVersion">2024.4.12</S>
-          <S N="Authors">the dbatools team</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">dbatools.library.nuspec|core\lib\mac\Microsoft.SqlServer.TransactSql.ScriptDom.dll|desktop\lib\Microsoft.Data.SqlClient.SNI.x86.dll|desktop\lib\System.IO.Pipes.dll|dbatools.library.psd1|core\lib\mac\Microsoft.SqlServer.Types.dll|desktop\lib\Microsoft.Data.Tools.Schema.Sql.dll|desktop\lib\System.IO.UnmanagedMemoryStream.dll|dbatools.library.psm1|core\lib\mac\sqlpackage|desktop\lib\Microsoft.Data.Tools.Schema.Tasks.Sql.dll|desktop\lib\System.Linq.dll|LICENSE|core\lib\mac\sqlpackage.deps.json|desktop\lib\Microsoft.Data.Tools.Sql.BatchParser.dll|desktop\lib\System.Linq.Expressions.dll|core\lib\Azure.Core.dll|core\lib\mac\sqlpackage.dll|desktop\lib\Microsoft.Data.Tools.Utilities.dll|desktop\lib\System.Linq.Parallel.dll|core\lib\Azure.Identity.dll|core\lib\mac\sqlpackage.runtimeconfig.json|desktop\lib\Microsoft.Extensions.Caching.Abstractions.dll|desktop\lib\System.Linq.Queryable.dll|core\lib\dbatools.dll|core\lib\mac\System.Formats.Tar.dll|desktop\lib\Microsoft.Extensions.Caching.Memory.dll|desktop\lib\System.Memory.Data.dll|core\lib\dbatools.dll.config|core\lib\mac\System.IdentityModel.Tokens.Jwt.dll|desktop\lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll|desktop\lib\System.Memory.dll|core\lib\instapi160.dll|core\lib\mac\System.IO.Hashing.dll|desktop\lib\Microsoft.Extensions.Logging.Abstractions.dll|desktop\lib\System.Net.Http.dll|core\lib\Microsoft.AnalysisServices.Core.dll|core\lib\mac\System.Memory.Data.dll|desktop\lib\Microsoft.Extensions.Options.dll|desktop\lib\System.Net.NameResolution.dll|core\lib\Microsoft.AnalysisServices.dll|core\lib\mac\System.Resources.Extensions.dll|desktop\lib\Microsoft.Extensions.Primitives.dll|desktop\lib\System.Net.NetworkInformation.dll|core\lib\Microsoft.AnalysisServices.Runtime.Core.dll|core\lib\mac\System.Runtime.InteropServices.JavaScript.dll|desktop\lib\Microsoft.Identity.Client.dll|desktop\lib\System.Net.Ping.dll|core\lib\Microsoft.AnalysisServices.Runtime.Windows.dll|core\lib\mac\System.Security.Cryptography.dll|desktop\lib\Microsoft.Identity.Client.Extensions.Msal.dll|desktop\lib\System.Net.Primitives.dll|core\lib\Microsoft.AnalysisServices.SPClient.Interfaces.dll|core\lib\win\Azure.Core.dll|desktop\lib\Microsoft.IdentityModel.Abstractions.dll|desktop\lib\System.Net.Requests.dll|core\lib\Microsoft.AnalysisServices.Tabular.dll|core\lib\win\Azure.Identity.dll|desktop\lib\Microsoft.IdentityModel.JsonWebTokens.dll|desktop\lib\System.Net.Security.dll|core\lib\Microsoft.AnalysisServices.Tabular.Json.dll|core\lib\win\Azure.Security.KeyVault.Keys.dll|desktop\lib\Microsoft.IdentityModel.Logging.dll|desktop\lib\System.Net.Sockets.dll|core\lib\Microsoft.Build.dll|core\lib\win\Azure.Storage.Blobs.dll|desktop\lib\Microsoft.IdentityModel.Protocols.dll|desktop\lib\System.Net.WebHeaderCollection.dll|core\lib\Microsoft.Build.Framework.dll|core\lib\win\Azure.Storage.Common.dll|desktop\lib\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll|desktop\lib\System.Net.WebSockets.Client.dll|core\lib\Microsoft.Build.Utilities.Core.dll|core\lib\win\DacUnpack.exe|desktop\lib\Microsoft.IdentityModel.Tokens.dll|desktop\lib\System.Net.WebSockets.dll|core\lib\Microsoft.Data.SqlClient.dll|core\lib\win\Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll|desktop\lib\Microsoft.SqlServer.Assessment.dll|desktop\lib\System.Numerics.Vectors.dll|core\lib\Microsoft.Data.Tools.Schema.Sql.dll|core\lib\win\Microsoft.Data.SqlClient.dll|desktop\lib\Microsoft.SqlServer.Assessment.Types.dll|desktop\lib\System.ObjectModel.dll|core\lib\Microsoft.Data.Tools.Schema.Tasks.Sql.dll|core\lib\win\Microsoft.Data.SqlClient.SNI.arm64.dll|desktop\lib\Microsoft.SqlServer.ConnectionInfo.dll|desktop\lib\System.Reflection.dll|core\lib\Microsoft.Data.Tools.Sql.BatchParser.dll|core\lib\win\Microsoft.Data.SqlClient.SNI.x64.dll|desktop\lib\Microsoft.SqlServer.Dac.dll|desktop\lib\System.Reflection.Extensions.dll|core\lib\Microsoft.Data.Tools.Sql.DesignServices.dll|core\lib\win\Microsoft.Data.SqlClient.SNI.x86.dll|desktop\lib\Microsoft.SqlServer.Dac.Extensions.dll|desktop\lib\System.Reflection.Primitives.dll|core\lib\Microsoft.Data.Tools.Utilities.dll|core\lib\win\Microsoft.Data.Tools.Schema.Sql.dll|desktop\lib\Microsoft.SqlServer.DacAzureExtensions.dll|desktop\lib\System.Resources.Extensions.dll|core\lib\Microsoft.Identity.Client.dll|core\lib\win\Microsoft.Data.Tools.Utilities.dll|desktop\lib\Microsoft.SqlServer.Dmf.Common.dll|desktop\lib\System.Resources.Reader.dll|core\lib\Microsoft.Identity.Client.Extensions.Msal.dll|core\lib\win\Microsoft.Extensions.Caching.Abstractions.dll|desktop\lib\Microsoft.SqlServer.Dmf.dll|desktop\lib\System.Resources.ResourceManager.dll|core\lib\Microsoft.IdentityModel.Abstractions.dll|core\lib\win\Microsoft.Extensions.Caching.Memory.dll|desktop\lib\Microsoft.SqlServer.IntegrationServices.Common.ObjectModel.dll|desktop\lib\System.Resources.Writer.dll|core\lib\Microsoft.IdentityModel.JsonWebTokens.dll|core\lib\win\Microsoft.Extensions.DependencyInjection.Abstractions.dll|desktop\lib\Microsoft.SqlServer.Management.Assessment.dll|desktop\lib\System.Runtime.CompilerServices.Unsafe.dll|core\lib\Microsoft.IdentityModel.Logging.dll|core\lib\win\Microsoft.Extensions.Logging.Abstractions.dll|desktop\lib\Microsoft.SqlServer.Management.Collector.dll|desktop\lib\System.Runtime.CompilerServices.VisualC.dll|core\lib\Microsoft.IdentityModel.Protocols.dll|core\lib\win\Microsoft.Extensions.Options.dll|desktop\lib\Microsoft.SqlServer.Management.CollectorEnum.dll|desktop\lib\System.Runtime.dll|core\lib\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll|core\lib\win\Microsoft.Extensions.Primitives.dll|desktop\lib\Microsoft.SqlServer.Management.HadrData.dll|desktop\lib\System.Runtime.Extensions.dll|core\lib\Microsoft.IdentityModel.Tokens.dll|core\lib\win\Microsoft.Identity.Client.dll|desktop\lib\Microsoft.SqlServer.Management.HadrModel.dll|desktop\lib\System.Runtime.Handles.dll|core\lib\Microsoft.SqlServer.Assessment.dll|core\lib\win\Microsoft.Identity.Client.Extensions.Msal.dll|desktop\lib\Microsoft.SqlServer.Management.IntegrationServices.dll|desktop\lib\System.Runtime.InteropServices.dll|core\lib\Microsoft.SqlServer.Assessment.Types.dll|core\lib\win\Microsoft.IdentityModel.Abstractions.dll|desktop\lib\Microsoft.SqlServer.Management.IntegrationServicesEnum.dll|desktop\lib\System.Runtime.InteropServices.RuntimeInformation.dll|core\lib\Microsoft.SqlServer.ConnectionInfo.dll|core\lib\win\Microsoft.IdentityModel.JsonWebTokens.dll|desktop\lib\Microsoft.SqlServer.Management.RegisteredServers.dll|desktop\lib\System.Runtime.Numerics.dll|core\lib\Microsoft.SqlServer.Dac.dll|core\lib\win\Microsoft.IdentityModel.Logging.dll|desktop\lib\Microsoft.SqlServer.Management.Sdk.Sfc.dll|desktop\lib\System.Runtime.Serialization.Formatters.dll|core\lib\Microsoft.SqlServer.Dac.Extensions.dll|core\lib\win\Microsoft.IdentityModel.Protocols.dll|desktop\lib\Microsoft.SqlServer.Management.SqlScriptPublish.dll|desktop\lib\System.Runtime.Serialization.Json.dll|core\lib\Microsoft.SqlServer.Dmf.Common.dll|core\lib\win\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll|desktop\lib\Microsoft.SqlServer.Management.XEvent.dll|desktop\lib\System.Runtime.Serialization.Primitives.dll|core\lib\Microsoft.SqlServer.Dmf.dll|core\lib\win\Microsoft.IdentityModel.Tokens.dll|desktop\lib\Microsoft.SqlServer.Management.XEventDbScoped.dll|desktop\lib\System.Runtime.Serialization.Xml.dll|core\lib\Microsoft.SqlServer.Management.Assessment.dll|core\lib\win\Microsoft.SqlServer.Dac.dll|desktop\lib\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll|desktop\lib\System.Security.AccessControl.dll|core\lib\Microsoft.SqlServer.Management.Collector.dll|core\lib\win\Microsoft.SqlServer.Dac.Extensions.dll|desktop\lib\Microsoft.SqlServer.Management.XEventEnum.dll|desktop\lib\System.Security.Claims.dll|core\lib\Microsoft.SqlServer.Management.CollectorEnum.dll|core\lib\win\Microsoft.SqlServer.DacAzureExtensions.dll|desktop\lib\Microsoft.SqlServer.PolicyEnum.dll|desktop\lib\System.Security.Cryptography.Algorithms.dll|core\lib\Microsoft.SqlServer.Management.HadrData.dll|core\lib\win\Microsoft.SqlServer.Server.dll|desktop\lib\Microsoft.SqlServer.RegSvrEnum.dll|desktop\lib\System.Security.Cryptography.Csp.dll|core\lib\Microsoft.SqlServer.Management.HadrModel.dll|core\lib\win\Microsoft.SqlServer.TransactSql.ScriptDom.dll|desktop\lib\Microsoft.SqlServer.Replication.dll|desktop\lib\System.Security.Cryptography.Encoding.dll|core\lib\Microsoft.SqlServer.Management.RegisteredServers.dll|core\lib\win\Microsoft.SqlServer.Types.dll|desktop\lib\Microsoft.SqlServer.Rmo.dll|desktop\lib\System.Security.Cryptography.Primitives.dll|core\lib\Microsoft.SqlServer.Management.Sdk.Sfc.dll|core\lib\win\SqlPackage.exe|desktop\lib\Microsoft.SqlServer.Server.dll|desktop\lib\System.Security.Cryptography.ProtectedData.dll|core\lib\Microsoft.SqlServer.Management.SqlScriptPublish.dll|core\lib\win\SqlPackage.exe.config|desktop\lib\Microsoft.SqlServer.ServiceBrokerEnum.dll|desktop\lib\System.Security.Cryptography.X509Certificates.dll|core\lib\Microsoft.SqlServer.Management.XEvent.dll|core\lib\win\System.IdentityModel.Tokens.Jwt.dll|desktop\lib\Microsoft.SqlServer.Smo.dll|desktop\lib\System.Security.Permissions.dll|core\lib\Microsoft.SqlServer.Management.XEventDbScoped.dll|core\lib\win\System.IO.Hashing.dll|desktop\lib\Microsoft.SqlServer.Smo.Notebook.dll|desktop\lib\System.Security.Principal.dll|core\lib\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll|core\lib\win\System.Memory.Data.dll|desktop\lib\Microsoft.SqlServer.SmoExtended.dll|desktop\lib\System.Security.Principal.Windows.dll|core\lib\Microsoft.SqlServer.Management.XEventEnum.dll|core\lib\win\System.Resources.Extensions.dll|desktop\lib\Microsoft.SqlServer.SqlClrProvider.dll|desktop\lib\System.Security.SecureString.dll|core\lib\Microsoft.SqlServer.PolicyEnum.dll|core\lib\win-sqlclient\Microsoft.Data.SqlClient.dll|desktop\lib\Microsoft.SqlServer.SqlEnum.dll|desktop\lib\System.Text.Encoding.dll|core\lib\Microsoft.SqlServer.Replication.dll|core\lib\win-sqlclient\Microsoft.Data.SqlClient.SNI.dll|desktop\lib\Microsoft.SqlServer.SqlWmiManagement.dll|desktop\lib\System.Text.Encoding.Extensions.dll|core\lib\Microsoft.SqlServer.Rmo.dll|core\lib\win-sqlclient\Microsoft.Identity.Client.dll|desktop\lib\Microsoft.SqlServer.TransactSql.ScriptDom.dll|desktop\lib\System.Text.Encodings.Web.dll|core\lib\Microsoft.SqlServer.Server.dll|core\third-party\bogus\bogus.dll|desktop\lib\Microsoft.SqlServer.Types.dll|desktop\lib\System.Text.Json.dll|core\lib\Microsoft.SqlServer.ServiceBrokerEnum.dll|core\third-party\LumenWorks\LumenWorks.Framework.IO.dll|desktop\lib\Microsoft.SqlServer.WmiEnum.dll|desktop\lib\System.Text.RegularExpressions.dll|core\lib\Microsoft.SqlServer.Smo.dll|core\third-party\XESmartTarget\CommandLine.dll|desktop\lib\Microsoft.SqlServer.XEvent.XELite.dll|desktop\lib\System.Threading.dll|core\lib\Microsoft.SqlServer.Smo.Notebook.dll|core\third-party\XESmartTarget\CsvHelper.dll|desktop\lib\Microsoft.Win32.Primitives.dll|desktop\lib\System.Threading.Overlapped.dll|core\lib\Microsoft.SqlServer.SmoExtended.dll|core\third-party\XESmartTarget\DouglasCrockford.JsMin.dll|desktop\lib\msodbcsql17.dll|desktop\lib\System.Threading.Tasks.Dataflow.dll|core\lib\Microsoft.SqlServer.SqlEnum.dll|core\third-party\XESmartTarget\InfluxDB.Client.Core.dll|desktop\lib\netstandard.dll|desktop\lib\System.Threading.Tasks.dll|core\lib\Microsoft.SqlServer.SqlWmiManagement.dll|core\third-party\XESmartTarget\InfluxDB.Client.dll|desktop\lib\Newtonsoft.Json.dll|desktop\lib\System.Threading.Tasks.Extensions.dll|core\lib\Microsoft.SqlServer.TransactSql.ScriptDom.dll|core\third-party\XESmartTarget\JsonSubTypes.dll|desktop\lib\SqlPackage.exe|desktop\lib\System.Threading.Tasks.Parallel.dll|core\lib\Microsoft.SqlServer.Types.dll|core\third-party\XESmartTarget\Microsoft.SqlServer.BatchParser.dll|desktop\lib\SqlPackage.exe.config|desktop\lib\System.Threading.Thread.dll|core\lib\Microsoft.SqlServer.WmiEnum.dll|core\third-party\XESmartTarget\Microsoft.SqlServer.XE.Core.dll|desktop\lib\System.AppContext.dll|desktop\lib\System.Threading.ThreadPool.dll|core\lib\Microsoft.SqlServer.XEvent.XELite.dll|core\third-party\XESmartTarget\Microsoft.SqlServer.XEvent.Linq.dll|desktop\lib\System.Buffers.dll|desktop\lib\System.Threading.Timer.dll|core\lib\msodbcsql17.dll|core\third-party\XESmartTarget\netstandard.dll|desktop\lib\System.Collections.Concurrent.dll|desktop\lib\System.ValueTuple.dll|core\lib\sqlpackage|core\third-party\XESmartTarget\Newtonsoft.Json.dll|desktop\lib\System.Collections.dll|desktop\lib\System.Xml.ReaderWriter.dll|core\lib\sqlpackage.deps.json|core\third-party\XESmartTarget\NLog.dll|desktop\lib\System.Collections.NonGeneric.dll|desktop\lib\System.Xml.XDocument.dll|core\lib\sqlpackage.dll|core\third-party\XESmartTarget\NodaTime.dll|desktop\lib\System.Collections.Specialized.dll|desktop\lib\System.Xml.XmlDocument.dll|core\lib\sqlpackage.runtimeconfig.json|core\third-party\XESmartTarget\RestSharp.dll|desktop\lib\System.ComponentModel.Annotations.dll|desktop\lib\System.Xml.XmlSerializer.dll|core\lib\System.IdentityModel.Tokens.Jwt.dll|core\third-party\XESmartTarget\SmartFormat.dll|desktop\lib\System.ComponentModel.dll|desktop\lib\System.Xml.XPath.dll|core\lib\System.Memory.Data.dll|core\third-party\XESmartTarget\System.Buffers.dll|desktop\lib\System.ComponentModel.EventBasedAsync.dll|desktop\lib\System.Xml.XPath.XDocument.dll|core\lib\System.Resources.Extensions.dll|core\third-party\XESmartTarget\System.Collections.Immutable.dll|desktop\lib\System.ComponentModel.Primitives.dll|desktop\lib\x64\SqlServerSpatial160.dll|core\lib\mac\Azure.Core.dll|core\third-party\XESmartTarget\System.Configuration.ConfigurationManager.dll|desktop\lib\System.ComponentModel.TypeConverter.dll|desktop\lib\x86\SqlServerSpatial160.dll|core\lib\mac\Azure.Identity.dll|core\third-party\XESmartTarget\System.Memory.dll|desktop\lib\System.Configuration.ConfigurationManager.dll|desktop\third-party\bogus\bogus.dll|core\lib\mac\Azure.Security.KeyVault.Keys.dll|core\third-party\XESmartTarget\System.Numerics.Vectors.dll|desktop\lib\System.Console.dll|desktop\third-party\LumenWorks\LumenWorks.Framework.IO.dll|core\lib\mac\Azure.Storage.Blobs.dll|core\third-party\XESmartTarget\System.Reactive.dll|desktop\lib\System.Data.Common.dll|desktop\third-party\XESmartTarget\CommandLine.dll|core\lib\mac\Azure.Storage.Common.dll|core\third-party\XESmartTarget\System.Runtime.CompilerServices.Unsafe.dll|desktop\lib\System.Diagnostics.Contracts.dll|desktop\third-party\XESmartTarget\CsvHelper.dll|core\lib\mac\libclrgc.dylib|core\third-party\XESmartTarget\System.Threading.Tasks.Extensions.dll|desktop\lib\System.Diagnostics.Debug.dll|desktop\third-party\XESmartTarget\DouglasCrockford.JsMin.dll|core\lib\mac\libSystem.Security.Cryptography.Native.Apple.dylib|core\third-party\XESmartTarget\System.ValueTuple.dll|desktop\lib\System.Diagnostics.DiagnosticSource.dll|desktop\third-party\XESmartTarget\InfluxDB.Client.Core.dll|core\lib\mac\Microsoft.Build.dll|core\third-party\XESmartTarget\XESmartTarget.Core.dll|desktop\lib\System.Diagnostics.FileVersionInfo.dll|desktop\third-party\XESmartTarget\InfluxDB.Client.dll|core\lib\mac\Microsoft.Build.Framework.dll|desktop\lib\Azure.Core.dll|desktop\lib\System.Diagnostics.Process.dll|desktop\third-party\XESmartTarget\JsonSubTypes.dll|core\lib\mac\Microsoft.Build.Utilities.Core.dll|desktop\lib\Azure.Identity.dll|desktop\lib\System.Diagnostics.StackTrace.dll|desktop\third-party\XESmartTarget\Microsoft.SqlServer.BatchParser.dll|core\lib\mac\Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll|desktop\lib\Azure.Security.KeyVault.Keys.dll|desktop\lib\System.Diagnostics.TextWriterTraceListener.dll|desktop\third-party\XESmartTarget\Microsoft.SqlServer.XE.Core.dll|core\lib\mac\Microsoft.Data.SqlClient.dll|desktop\lib\Azure.Storage.Blobs.dll|desktop\lib\System.Diagnostics.Tools.dll|desktop\third-party\XESmartTarget\Microsoft.SqlServer.XEvent.Linq.dll|core\lib\mac\Microsoft.Data.Tools.Schema.Sql.dll|desktop\lib\Azure.Storage.Common.dll|desktop\lib\System.Diagnostics.TraceSource.dll|desktop\third-party\XESmartTarget\netstandard.dll|core\lib\mac\Microsoft.Data.Tools.Utilities.dll|desktop\lib\DacUnpack.exe|desktop\lib\System.Diagnostics.Tracing.dll|desktop\third-party\XESmartTarget\Newtonsoft.Json.dll|core\lib\mac\Microsoft.Extensions.Caching.Abstractions.dll|desktop\lib\dbatools.dll|desktop\lib\System.Drawing.Primitives.dll|desktop\third-party\XESmartTarget\NLog.dll|core\lib\mac\Microsoft.Extensions.Caching.Memory.dll|desktop\lib\dbatools.dll.config|desktop\lib\System.Dynamic.Runtime.dll|desktop\third-party\XESmartTarget\NodaTime.dll|core\lib\mac\Microsoft.Extensions.DependencyInjection.Abstractions.dll|desktop\lib\instapi160.dll|desktop\lib\System.Globalization.Calendars.dll|desktop\third-party\XESmartTarget\RestSharp.dll|core\lib\mac\Microsoft.Extensions.Logging.Abstractions.dll|desktop\lib\Microsoft.AnalysisServices.Core.dll|desktop\lib\System.Globalization.dll|desktop\third-party\XESmartTarget\SmartFormat.dll|core\lib\mac\Microsoft.Extensions.Options.dll|desktop\lib\Microsoft.AnalysisServices.dll|desktop\lib\System.Globalization.Extensions.dll|desktop\third-party\XESmartTarget\System.Buffers.dll|core\lib\mac\Microsoft.Extensions.Primitives.dll|desktop\lib\Microsoft.AnalysisServices.Runtime.Core.dll|desktop\lib\System.IdentityModel.Tokens.Jwt.dll|desktop\third-party\XESmartTarget\System.Collections.Immutable.dll|core\lib\mac\Microsoft.Identity.Client.dll|desktop\lib\Microsoft.AnalysisServices.Runtime.Windows.dll|desktop\lib\System.IO.Compression.dll|desktop\third-party\XESmartTarget\System.Configuration.ConfigurationManager.dll|core\lib\mac\Microsoft.Identity.Client.Extensions.Msal.dll|desktop\lib\Microsoft.AnalysisServices.SPClient.Interfaces.dll|desktop\lib\System.IO.Compression.ZipFile.dll|desktop\third-party\XESmartTarget\System.Memory.dll|core\lib\mac\Microsoft.IdentityModel.Abstractions.dll|desktop\lib\Microsoft.AnalysisServices.Tabular.dll|desktop\lib\System.IO.dll|desktop\third-party\XESmartTarget\System.Numerics.Vectors.dll|core\lib\mac\Microsoft.IdentityModel.JsonWebTokens.dll|desktop\lib\Microsoft.AnalysisServices.Tabular.Json.dll|desktop\lib\System.IO.FileSystem.AccessControl.dll|desktop\third-party\XESmartTarget\System.Reactive.dll|core\lib\mac\Microsoft.IdentityModel.Logging.dll|desktop\lib\Microsoft.ApplicationInsights.dll|desktop\lib\System.IO.FileSystem.dll|desktop\third-party\XESmartTarget\System.Runtime.CompilerServices.Unsafe.dll|core\lib\mac\Microsoft.IdentityModel.Protocols.dll|desktop\lib\Microsoft.Bcl.AsyncInterfaces.dll|desktop\lib\System.IO.FileSystem.DriveInfo.dll|desktop\third-party\XESmartTarget\System.Threading.Tasks.Extensions.dll|core\lib\mac\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll|desktop\lib\Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider.dll|desktop\lib\System.IO.FileSystem.Primitives.dll|desktop\third-party\XESmartTarget\System.ValueTuple.dll|core\lib\mac\Microsoft.IdentityModel.Tokens.dll|desktop\lib\Microsoft.Data.SqlClient.dll|desktop\lib\System.IO.FileSystem.Watcher.dll|desktop\third-party\XESmartTarget\XESmartTarget.Core.dll|core\lib\mac\Microsoft.SqlServer.Dac.dll|desktop\lib\Microsoft.Data.SqlClient.SNI.arm64.dll|desktop\lib\System.IO.Hashing.dll|third-party-licenses\sql-server-data-tools-license-terms-vs2017.txt|core\lib\mac\Microsoft.SqlServer.Dac.Extensions.dll|desktop\lib\Microsoft.Data.SqlClient.SNI.dll|desktop\lib\System.IO.IsolatedStorage.dll|third-party-licenses\sql-server-data-tools-license-terms.txt|core\lib\mac\Microsoft.SqlServer.DacAzureExtensions.dll|desktop\lib\Microsoft.Data.SqlClient.SNI.x64.dll|desktop\lib\System.IO.MemoryMappedFiles.dll|third-party-licenses\ThirdPartyNoticesDacFramework.rtf|core\lib\mac\Microsoft.SqlServer.Server.dll</S>
-          <S N="GUID">00b61a37-6c36-40d8-8865-ac0180288c84</S>
-          <S N="CompanyName">dbatools.io</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\dbatools.library\2024.4.12</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

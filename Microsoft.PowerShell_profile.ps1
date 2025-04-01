@@ -243,8 +243,29 @@ function sleep {
     }
 }
 
+function programs {
+    Write-Host "`nWMIC Installed Programs:" -ForegroundColor Cyan
+    wmic product get name | sort
 
+    Write-Host "`nWinget Installed Programs:" -ForegroundColor Cyan
+    winget list | Sort-Object -Property Name
 
+    Write-Host "`nChocolatey Installed Programs:" -ForegroundColor Cyan
+    if (Get-Command choco -ErrorAction SilentlyContinue) {
+        choco list --local-only | Sort-Object
+    }
+    else {
+        Write-Host "Chocolatey is not installed" -ForegroundColor Yellow
+    }
+
+    Write-Host "`nScoop Installed Programs:" -ForegroundColor Cyan
+    if (Get-Command scoop -ErrorAction SilentlyContinue) {
+        scoop list | Sort-Object
+    }
+    else {
+        Write-Host "Scoop is not installed" -ForegroundColor Yellow
+    }
+}
 
 # Error handling
 $ErrorView = 'ConciseView'

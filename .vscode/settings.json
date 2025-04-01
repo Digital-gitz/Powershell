@@ -1,7 +1,5 @@
 {
-
-],
-"workbench.colorTheme": "PowerShell ISE",
+"workbench.colorTheme": "Gruvbox Dark Medium",
 "editor.fontSize": 14,
 "editor.fontFamily": "Consolas",
 "editor.fontWeight": "normal",

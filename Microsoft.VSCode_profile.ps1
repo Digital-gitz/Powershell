@@ -168,6 +168,50 @@ function sleep {
     [SleepHelper]::SetSuspendState($false, $true, $true)
 }
 
+
+function programs {
+    Write-Host "`nWMIC Installed Programs:" -ForegroundColor Cyan
+    wmic product get name | sort
+
+    Write-Host "`nWinget Installed Programs:" -ForegroundColor Cyan
+    winget list | Sort-Object -Property Name
+
+    Write-Host "`nChocolatey Installed Programs:" -ForegroundColor Cyan
+    if (Get-Command choco -ErrorAction SilentlyContinue) {
+        choco list --local-only | Sort-Object
+    }
+    else {
+        Write-Host "Chocolatey is not installed" -ForegroundColor Yellow
+    }
+
+    Write-Host "`nScoop Installed Programs:" -ForegroundColor Cyan
+    if (Get-Command scoop -ErrorAction SilentlyContinue) {
+        scoop list | Sort-Object
+    }
+    else {
+        Write-Host "Scoop is not installed" -ForegroundColor Yellow
+    }
+}
+
+
+function global:tutanota {
+    Write-Host "Opening Tutanota..." -ForegroundColor Cyan
+    Start-Process "https://tutanota.com/"
+}
+function global:perplexity {
+    Write-Host "Opening Perplexity..." -ForegroundColor Cyan
+    Start-Process "https://perplexity.com/"
+}
+function global:retrodiffusion {
+    Write-Host "Opening Retrodiffusion..." -ForegroundColor Cyan
+    Start-Process "https://www.retrodiffusion.ai/app"
+}
+function global:nhentai {
+    Write-Host "Opening NHentai..." -ForegroundColor Cyan
+    Start-Process "https://nhentai.net/"
+}
+
+
 # $global:PSColor = @{
 #     File = @{
 #         Default    = @{ Color = 'White' }
@@ -187,3 +231,24 @@ function sleep {
 # $env:PSModulePath  #get modpath 
 # Get-ChildItem $env:TEMP\NuGetScratch -Recurse -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force 
 # telnet mapscii.me   
+
+#need to create a function that will set a new path given an input to a path  
+#[System.Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\vcpkg", [System.EnvironmentVariableTarget]::Machine)
+
+# function set-path {
+#     param (
+#         [Parameter(Mandatory = $true)]
+#         [string]$path
+#     )
+#     #check if the path is already in the Path
+#     if ($env:Path -notlike "*$path*") {
+#         $currentPath = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+#         $newPath = $currentPath + ";$path"
+#         [System.Environment]::SetEnvironmentVariable("Path", $newPath, [System.EnvironmentVariableTarget]::Machine)
+#     }
+#     else {
+#         Write-Host "Path already exists" -ForegroundColor Yellow
+#     }
+
+# }
+

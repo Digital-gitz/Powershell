@@ -8,6 +8,7 @@
 
 	"settings": {
 		"workbench.colorTheme": "PowerShell ISE",
+		
 		"terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
 		"terminal.integrated.shellArgs.windows": [
 			"-NoExit",

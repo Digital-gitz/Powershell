@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.SqlVirtualMachine</S>
-      <Version N="Version">2.4.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">2.4.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell: SqlVirtualMachine cmdlets</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:20:01-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:21:53.3015296-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:20:01.99</DT>
+      <DT N="InstalledDate">2025-05-12T14:56:00.7422637-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,16 +42,62 @@
           <S>SqlVirtualMachine</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSFunction_Assert-AzSqlVMEntraAuth</S>
+          <S>PSCommand_Assert-AzSqlVMEntraAuth</S>
+          <S>PSFunction_Get-AzAvailabilityGroupListener</S>
+          <S>PSCommand_Get-AzAvailabilityGroupListener</S>
+          <S>PSFunction_Get-AzSqlVM</S>
+          <S>PSCommand_Get-AzSqlVM</S>
+          <S>PSFunction_Get-AzSqlVMGroup</S>
+          <S>PSCommand_Get-AzSqlVMGroup</S>
+          <S>PSFunction_Invoke-AzRedeploySqlVM</S>
+          <S>PSCommand_Invoke-AzRedeploySqlVM</S>
+          <S>PSFunction_Invoke-AzSqlVMTroubleshoot</S>
+          <S>PSCommand_Invoke-AzSqlVMTroubleshoot</S>
+          <S>PSFunction_New-AzAvailabilityGroupListener</S>
+          <S>PSCommand_New-AzAvailabilityGroupListener</S>
+          <S>PSFunction_New-AzSqlVirtualMachineAgReplicaObject</S>
+          <S>PSCommand_New-AzSqlVirtualMachineAgReplicaObject</S>
+          <S>PSFunction_New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject</S>
+          <S>PSCommand_New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject</S>
+          <S>PSFunction_New-AzSqlVM</S>
+          <S>PSCommand_New-AzSqlVM</S>
+          <S>PSFunction_New-AzSqlVMGroup</S>
+          <S>PSCommand_New-AzSqlVMGroup</S>
+          <S>PSFunction_Remove-AzAvailabilityGroupListener</S>
+          <S>PSCommand_Remove-AzAvailabilityGroupListener</S>
+          <S>PSFunction_Remove-AzSqlVM</S>
+          <S>PSCommand_Remove-AzSqlVM</S>
+          <S>PSFunction_Remove-AzSqlVMGroup</S>
+          <S>PSCommand_Remove-AzSqlVMGroup</S>
+          <S>PSFunction_Start-AzSqlVMAssessment</S>
+          <S>PSCommand_Start-AzSqlVMAssessment</S>
+          <S>PSFunction_Update-AzSqlVM</S>
+          <S>PSCommand_Update-AzSqlVM</S>
+          <S>PSFunction_Update-AzSqlVMGroup</S>
+          <S>PSCommand_Update-AzSqlVMGroup</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
@@ -81,114 +122,98 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Assert-AzSqlVMEntraAuth</S>
-                <S>Get-AzAvailabilityGroupListener</S>
-                <S>Get-AzSqlVM</S>
-                <S>Get-AzSqlVMGroup</S>
-                <S>Invoke-AzRedeploySqlVM</S>
-                <S>Invoke-AzSqlVMTroubleshoot</S>
-                <S>New-AzAvailabilityGroupListener</S>
-                <S>New-AzSqlVirtualMachineAgReplicaObject</S>
-                <S>New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject</S>
-                <S>New-AzSqlVM</S>
-                <S>New-AzSqlVMGroup</S>
-                <S>Remove-AzAvailabilityGroupListener</S>
-                <S>Remove-AzSqlVM</S>
-                <S>Remove-AzSqlVMGroup</S>
-                <S>Start-AzSqlVMAssessment</S>
-                <S>Update-AzSqlVM</S>
-                <S>Update-AzSqlVMGroup</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell: SqlVirtualMachine cmdlets</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7022091</S>
-          <S N="downloadCount">106225587</S>
-          <S N="packageSize">661520</S>
-          <S N="published">1/14/2025 3:20:01 AM -05:00</S>
-          <S N="created">1/14/2025 3:20:01 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule SqlVirtualMachine PSEdition_Core PSEdition_Desktop PSFunction_Assert-AzSqlVMEntraAuth PSCommand_Assert-AzSqlVMEntraAuth PSFunction_Get-AzAvailabilityGroupListener PSCommand_Get-AzAvailabilityGroupListener PSFunction_Get-AzSqlVM PSCommand_Get-AzSqlVM PSFunction_Get-AzSqlVMGroup PSCommand_Get-AzSqlVMGroup PSFunction_Invoke-AzRedeploySqlVM PSCommand_Invoke-AzRedeploySqlVM PSFunction_Invoke-AzSqlVMTroubleshoot PSCommand_Invoke-AzSqlVMTroubleshoot PSFunction_New-AzAvailabilityGroupListener PSCommand_New-AzAvailabilityGroupListener PSFunction_New-AzSqlVirtualMachineAgReplicaObject PSCommand_New-AzSqlVirtualMachineAgReplicaObject PSFunction_New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject PSCommand_New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject PSFunction_New-AzSqlVM PSCommand_New-AzSqlVM PSFunction_New-AzSqlVMGroup PSCommand_New-AzSqlVMGroup PSFunction_Remove-AzAvailabilityGroupListener PSCommand_Remove-AzAvailabilityGroupListener PSFunction_Remove-AzSqlVM PSCommand_Remove-AzSqlVM PSFunction_Remove-AzSqlVMGroup PSCommand_Remove-AzSqlVMGroup PSFunction_Start-AzSqlVMAssessment PSCommand_Start-AzSqlVMAssessment PSFunction_Update-AzSqlVM PSCommand_Update-AzSqlVM PSFunction_Update-AzSqlVMGroup PSCommand_Update-AzSqlVMGroup PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:20:00Z</S>
           <S N="NormalizedVersion">2.4.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.SqlVirtualMachine.nuspec|SqlVirtualMachine.Autorest\custom\New-AzAvailabilityGroupListener.ps1|SqlVirtualMachine.Autorest\custom\New-AzSqlVM.ps1|SqlVirtualMachine.Autorest\custom\Update-AzSqlVM.ps1|SqlVirtualMachine.Autorest\custom\Update-AzSqlVMGroup.ps1|SqlVirtualMachine.Autorest\custom\autogen-model-cmdlets\New-AzSqlVirtualMachineAgReplicaObject.ps1|SqlVirtualMachine.Autorest\custom\autogen-model-cmdlets\New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject.ps1|SqlVirtualMachine.Autorest\exports\ProxyCmdletDefinitions.ps1|SqlVirtualMachine.Autorest\internal\Az.SqlVirtualMachine.internal.psm1|SqlVirtualMachine.Autorest\internal\ProxyCmdletDefinitions.ps1|SqlVirtualMachine.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|SqlVirtualMachine.Autorest\utils\Unprotect-SecureString.ps1|Az.SqlVirtualMachine.psm1|SqlVirtualMachine.Autorest\Az.SqlVirtualMachine.psm1|SqlVirtualMachine.Autorest\custom\Assert-AzSqlVMEntraAuth.ps1|SqlVirtualMachine.Autorest\custom\Az.SqlVirtualMachine.custom.psm1|Az.SqlVirtualMachine.psd1|SqlVirtualMachine.Autorest\Az.SqlVirtualMachine.format.ps1xml|SqlVirtualMachine.Autorest\bin\Az.SqlVirtualMachine.private.dll|.signature.p7s</S>
-          <S N="GUID">91832aaa-dc11-4583-8239-bce5fd531604</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.SqlVirtualMachine\2.4.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

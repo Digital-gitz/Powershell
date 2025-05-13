@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.ElasticSan</S>
-      <Version N="Version">1.2.1</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.2.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell: ElasticSan cmdlets</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:14:38-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:53.3006025-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:14:38.503</DT>
+      <DT N="InstalledDate">2025-04-01T23:04:36.3010078-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,9 +42,48 @@
           <S>ElasticSan</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSFunction_Add-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSCommand_Add-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSFunction_Get-AzElasticSan</S>
+          <S>PSCommand_Get-AzElasticSan</S>
+          <S>PSFunction_Get-AzElasticSanSkuList</S>
+          <S>PSCommand_Get-AzElasticSanSkuList</S>
+          <S>PSFunction_Get-AzElasticSanVolume</S>
+          <S>PSCommand_Get-AzElasticSanVolume</S>
+          <S>PSFunction_Get-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_Get-AzElasticSanVolumeGroup</S>
+          <S>PSFunction_Get-AzElasticSanVolumeSnapshot</S>
+          <S>PSCommand_Get-AzElasticSanVolumeSnapshot</S>
+          <S>PSFunction_New-AzElasticSan</S>
+          <S>PSCommand_New-AzElasticSan</S>
+          <S>PSFunction_New-AzElasticSanVirtualNetworkRuleObject</S>
+          <S>PSCommand_New-AzElasticSanVirtualNetworkRuleObject</S>
+          <S>PSFunction_New-AzElasticSanVolume</S>
+          <S>PSCommand_New-AzElasticSanVolume</S>
+          <S>PSFunction_New-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_New-AzElasticSanVolumeGroup</S>
+          <S>PSFunction_New-AzElasticSanVolumeSnapshot</S>
+          <S>PSCommand_New-AzElasticSanVolumeSnapshot</S>
+          <S>PSFunction_Remove-AzElasticSan</S>
+          <S>PSCommand_Remove-AzElasticSan</S>
+          <S>PSFunction_Remove-AzElasticSanVolume</S>
+          <S>PSCommand_Remove-AzElasticSanVolume</S>
+          <S>PSFunction_Remove-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_Remove-AzElasticSanVolumeGroup</S>
+          <S>PSFunction_Remove-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSCommand_Remove-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSFunction_Remove-AzElasticSanVolumeSnapshot</S>
+          <S>PSCommand_Remove-AzElasticSanVolumeSnapshot</S>
+          <S>PSFunction_Update-AzElasticSan</S>
+          <S>PSCommand_Update-AzElasticSan</S>
+          <S>PSFunction_Update-AzElasticSanVolume</S>
+          <S>PSCommand_Update-AzElasticSanVolume</S>
+          <S>PSFunction_Update-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_Update-AzElasticSanVolumeGroup</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
@@ -57,45 +91,33 @@
         <DCT>
           <En>
             <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzElasticSanVolumeGroupNetworkRule</S>
-                <S>Get-AzElasticSan</S>
-                <S>Get-AzElasticSanSkuList</S>
-                <S>Get-AzElasticSanVolume</S>
-                <S>Get-AzElasticSanVolumeGroup</S>
-                <S>Get-AzElasticSanVolumeSnapshot</S>
-                <S>New-AzElasticSan</S>
-                <S>New-AzElasticSanVirtualNetworkRuleObject</S>
-                <S>New-AzElasticSanVolume</S>
-                <S>New-AzElasticSanVolumeGroup</S>
-                <S>New-AzElasticSanVolumeSnapshot</S>
-                <S>Remove-AzElasticSan</S>
-                <S>Remove-AzElasticSanVolume</S>
-                <S>Remove-AzElasticSanVolumeGroup</S>
-                <S>Remove-AzElasticSanVolumeGroupNetworkRule</S>
-                <S>Remove-AzElasticSanVolumeSnapshot</S>
-                <S>Update-AzElasticSan</S>
-                <S>Update-AzElasticSanVolume</S>
-                <S>Update-AzElasticSanVolumeGroup</S>
-              </LST>
-            </Obj>
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">RoleCapability</S>
-            <Obj N="Value" RefId="6">
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
             <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzElasticSanVolumeGroupNetworkRule</S>
@@ -120,79 +142,84 @@
               </LST>
             </Obj>
           </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell: ElasticSan cmdlets</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6693169</S>
-          <S N="downloadCount">34267100</S>
-          <S N="packageSize">704044</S>
-          <S N="published">1/14/2025 3:14:38 AM -05:00</S>
-          <S N="created">1/14/2025 3:14:38 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule ElasticSan PSEdition_Core PSEdition_Desktop PSFunction_Add-AzElasticSanVolumeGroupNetworkRule PSCommand_Add-AzElasticSanVolumeGroupNetworkRule PSFunction_Get-AzElasticSan PSCommand_Get-AzElasticSan PSFunction_Get-AzElasticSanSkuList PSCommand_Get-AzElasticSanSkuList PSFunction_Get-AzElasticSanVolume PSCommand_Get-AzElasticSanVolume PSFunction_Get-AzElasticSanVolumeGroup PSCommand_Get-AzElasticSanVolumeGroup PSFunction_Get-AzElasticSanVolumeSnapshot PSCommand_Get-AzElasticSanVolumeSnapshot PSFunction_New-AzElasticSan PSCommand_New-AzElasticSan PSFunction_New-AzElasticSanVirtualNetworkRuleObject PSCommand_New-AzElasticSanVirtualNetworkRuleObject PSFunction_New-AzElasticSanVolume PSCommand_New-AzElasticSanVolume PSFunction_New-AzElasticSanVolumeGroup PSCommand_New-AzElasticSanVolumeGroup PSFunction_New-AzElasticSanVolumeSnapshot PSCommand_New-AzElasticSanVolumeSnapshot PSFunction_Remove-AzElasticSan PSCommand_Remove-AzElasticSan PSFunction_Remove-AzElasticSanVolume PSCommand_Remove-AzElasticSanVolume PSFunction_Remove-AzElasticSanVolumeGroup PSCommand_Remove-AzElasticSanVolumeGroup PSFunction_Remove-AzElasticSanVolumeGroupNetworkRule PSCommand_Remove-AzElasticSanVolumeGroupNetworkRule PSFunction_Remove-AzElasticSanVolumeSnapshot PSCommand_Remove-AzElasticSanVolumeSnapshot PSFunction_Update-AzElasticSan PSCommand_Update-AzElasticSan PSFunction_Update-AzElasticSanVolume PSCommand_Update-AzElasticSanVolume PSFunction_Update-AzElasticSanVolumeGroup PSCommand_Update-AzElasticSanVolumeGroup PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.2.1</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.ElasticSan.nuspec|ElasticSan.Autorest\bin\Az.ElasticSan.private.dll|ElasticSan.Autorest\custom\Add-AzElasticSanVolumeGroupNetworkRule.ps1|ElasticSan.Autorest\custom\Az.ElasticSan.custom.psm1|ElasticSan.Autorest\custom\IdentityUserAssignedIdentities.json.cs|ElasticSan.Autorest\custom\New-AzElasticSanVolumeGroup.ps1|ElasticSan.Autorest\custom\Remove-AzElasticSanVolumeGroupNetworkRule.ps1|ElasticSan.Autorest\custom\Update-AzElasticSanVolumeGroup.ps1|ElasticSan.Autorest\custom\autogen-model-cmdlets\New-AzElasticSanVirtualNetworkRuleObject.ps1|ElasticSan.Autorest\exports\ProxyCmdletDefinitions.ps1|ElasticSan.Autorest\internal\Az.ElasticSan.internal.psm1|ElasticSan.Autorest\internal\ProxyCmdletDefinitions.ps1|ElasticSan.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|ElasticSan.Autorest\utils\Unprotect-SecureString.ps1|Az.ElasticSan.psm1|ElasticSan.Autorest\Az.ElasticSan.psm1|Az.ElasticSan.psd1|ElasticSan.Autorest\Az.ElasticSan.format.ps1xml|.signature.p7s</S>
-          <S N="GUID">ed90c36c-f150-4ad2-96ae-57e0ebb0a376</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ElasticSan\1.2.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.DataBoxEdge</S>
-      <Version N="Version">1.2.1</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.2.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - DataBoxEdge service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on DataBoxEdge, please visit the following: https://learn.microsoft.com/en-us/azure/databox-online/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-03-04T04:14:13-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:38.7142096-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-03-04T04:14:13.75</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:28.2240297-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,32 +42,107 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCommand_Get-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeDevice</S>
+          <S>PSCommand_Get-AzDataBoxEdgeDevice</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeJob</S>
+          <S>PSCommand_Get-AzDataBoxEdgeJob</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeOrder</S>
+          <S>PSCommand_Get-AzDataBoxEdgeOrder</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeRole</S>
+          <S>PSCommand_Get-AzDataBoxEdgeRole</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeShare</S>
+          <S>PSCommand_Get-AzDataBoxEdgeShare</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeStorageAccount</S>
+          <S>PSCommand_Get-AzDataBoxEdgeStorageAccount</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCommand_Get-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCommand_Get-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeTrigger</S>
+          <S>PSCommand_Get-AzDataBoxEdgeTrigger</S>
+          <S>PSCmdlet_Get-AzDataBoxEdgeUser</S>
+          <S>PSCommand_Get-AzDataBoxEdgeUser</S>
+          <S>PSCmdlet_Invoke-AzDataBoxEdgeDevice</S>
+          <S>PSCommand_Invoke-AzDataBoxEdgeDevice</S>
+          <S>PSCmdlet_Invoke-AzDataBoxEdgeShare</S>
+          <S>PSCommand_Invoke-AzDataBoxEdgeShare</S>
+          <S>PSCmdlet_Invoke-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCommand_Invoke-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCommand_New-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeDevice</S>
+          <S>PSCommand_New-AzDataBoxEdgeDevice</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeOrder</S>
+          <S>PSCommand_New-AzDataBoxEdgeOrder</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeRole</S>
+          <S>PSCommand_New-AzDataBoxEdgeRole</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeShare</S>
+          <S>PSCommand_New-AzDataBoxEdgeShare</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeStorageAccount</S>
+          <S>PSCommand_New-AzDataBoxEdgeStorageAccount</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCommand_New-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCommand_New-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeTrigger</S>
+          <S>PSCommand_New-AzDataBoxEdgeTrigger</S>
+          <S>PSCmdlet_New-AzDataBoxEdgeUser</S>
+          <S>PSCommand_New-AzDataBoxEdgeUser</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeDevice</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeDevice</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeOrder</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeOrder</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeRole</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeRole</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeShare</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeShare</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeStorageAccount</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeStorageAccount</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeStorageContainer</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeTrigger</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeTrigger</S>
+          <S>PSCmdlet_Remove-AzDataBoxEdgeUser</S>
+          <S>PSCommand_Remove-AzDataBoxEdgeUser</S>
+          <S>PSCmdlet_Set-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCommand_Set-AzDataBoxEdgeBandwidthSchedule</S>
+          <S>PSCmdlet_Set-AzDataBoxEdgeRole</S>
+          <S>PSCommand_Set-AzDataBoxEdgeRole</S>
+          <S>PSCmdlet_Set-AzDataBoxEdgeShare</S>
+          <S>PSCommand_Set-AzDataBoxEdgeShare</S>
+          <S>PSCmdlet_Set-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCommand_Set-AzDataBoxEdgeStorageAccountCredential</S>
+          <S>PSCmdlet_Set-AzDataBoxEdgeUser</S>
+          <S>PSCommand_Set-AzDataBoxEdgeUser</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzDataBoxEdgeBandwidthSchedule</S>
@@ -118,12 +188,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzDataBoxEdgeBandwidthSchedule</S>
@@ -170,69 +244,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Removed 'Microsoft.Azure.Management.DataBoxEdge' Version '1.0.0' PackageReference</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.2</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.2</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.2, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.2</ToString>
+                    <Props>
+                      <Version N="Version">4.0.2.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.2</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">2</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.2, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - DataBoxEdge service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on DataBoxEdge, please visit the following: https://learn.microsoft.com/en-us/azure/databox-online/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Removed 'Microsoft.Azure.Management.DataBoxEdge' Version '1.0.0' PackageReference</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">612253</S>
-          <S N="downloadCount">108387590</S>
-          <S N="packageSize">272519</S>
-          <S N="published">3/4/2025 4:14:13 AM -05:00</S>
-          <S N="created">3/4/2025 4:14:13 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM DataBoxEdge PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzDataBoxEdgeBandwidthSchedule PSCommand_Get-AzDataBoxEdgeBandwidthSchedule PSCmdlet_Get-AzDataBoxEdgeDevice PSCommand_Get-AzDataBoxEdgeDevice PSCmdlet_Get-AzDataBoxEdgeJob PSCommand_Get-AzDataBoxEdgeJob PSCmdlet_Get-AzDataBoxEdgeOrder PSCommand_Get-AzDataBoxEdgeOrder PSCmdlet_Get-AzDataBoxEdgeRole PSCommand_Get-AzDataBoxEdgeRole PSCmdlet_Get-AzDataBoxEdgeShare PSCommand_Get-AzDataBoxEdgeShare PSCmdlet_Get-AzDataBoxEdgeStorageAccount PSCommand_Get-AzDataBoxEdgeStorageAccount PSCmdlet_Get-AzDataBoxEdgeStorageAccountCredential PSCommand_Get-AzDataBoxEdgeStorageAccountCredential PSCmdlet_Get-AzDataBoxEdgeStorageContainer PSCommand_Get-AzDataBoxEdgeStorageContainer PSCmdlet_Get-AzDataBoxEdgeTrigger PSCommand_Get-AzDataBoxEdgeTrigger PSCmdlet_Get-AzDataBoxEdgeUser PSCommand_Get-AzDataBoxEdgeUser PSCmdlet_Invoke-AzDataBoxEdgeDevice PSCommand_Invoke-AzDataBoxEdgeDevice PSCmdlet_Invoke-AzDataBoxEdgeShare PSCommand_Invoke-AzDataBoxEdgeShare PSCmdlet_Invoke-AzDataBoxEdgeStorageContainer PSCommand_Invoke-AzDataBoxEdgeStorageContainer PSCmdlet_New-AzDataBoxEdgeBandwidthSchedule PSCommand_New-AzDataBoxEdgeBandwidthSchedule PSCmdlet_New-AzDataBoxEdgeDevice PSCommand_New-AzDataBoxEdgeDevice PSCmdlet_New-AzDataBoxEdgeOrder PSCommand_New-AzDataBoxEdgeOrder PSCmdlet_New-AzDataBoxEdgeRole PSCommand_New-AzDataBoxEdgeRole PSCmdlet_New-AzDataBoxEdgeShare PSCommand_New-AzDataBoxEdgeShare PSCmdlet_New-AzDataBoxEdgeStorageAccount PSCommand_New-AzDataBoxEdgeStorageAccount PSCmdlet_New-AzDataBoxEdgeStorageAccountCredential PSCommand_New-AzDataBoxEdgeStorageAccountCredential PSCmdlet_New-AzDataBoxEdgeStorageContainer PSCommand_New-AzDataBoxEdgeStorageContainer PSCmdlet_New-AzDataBoxEdgeTrigger PSCommand_New-AzDataBoxEdgeTrigger PSCmdlet_New-AzDataBoxEdgeUser PSCommand_New-AzDataBoxEdgeUser PSCmdlet_Remove-AzDataBoxEdgeBandwidthSchedule PSCommand_Remove-AzDataBoxEdgeBandwidthSchedule PSCmdlet_Remove-AzDataBoxEdgeDevice PSCommand_Remove-AzDataBoxEdgeDevice PSCmdlet_Remove-AzDataBoxEdgeOrder PSCommand_Remove-AzDataBoxEdgeOrder PSCmdlet_Remove-AzDataBoxEdgeRole PSCommand_Remove-AzDataBoxEdgeRole PSCmdlet_Remove-AzDataBoxEdgeShare PSCommand_Remove-AzDataBoxEdgeShare PSCmdlet_Remove-AzDataBoxEdgeStorageAccount PSCommand_Remove-AzDataBoxEdgeStorageAccount PSCmdlet_Remove-AzDataBoxEdgeStorageAccountCredential PSCommand_Remove-AzDataBoxEdgeStorageAccountCredential PSCmdlet_Remove-AzDataBoxEdgeStorageContainer PSCommand_Remove-AzDataBoxEdgeStorageContainer PSCmdlet_Remove-AzDataBoxEdgeTrigger PSCommand_Remove-AzDataBoxEdgeTrigger PSCmdlet_Remove-AzDataBoxEdgeUser PSCommand_Remove-AzDataBoxEdgeUser PSCmdlet_Set-AzDataBoxEdgeBandwidthSchedule PSCommand_Set-AzDataBoxEdgeBandwidthSchedule PSCmdlet_Set-AzDataBoxEdgeRole PSCommand_Set-AzDataBoxEdgeRole PSCmdlet_Set-AzDataBoxEdgeShare PSCommand_Set-AzDataBoxEdgeShare PSCmdlet_Set-AzDataBoxEdgeStorageAccountCredential PSCommand_Set-AzDataBoxEdgeStorageAccountCredential PSCmdlet_Set-AzDataBoxEdgeUser PSCommand_Set-AzDataBoxEdgeUser PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.2.1</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.DataBoxEdge.nuspec|Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll|Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml|Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.generated.format.ps1xml|Microsoft.Azure.PowerShell.DataBoxEdge.Management.Sdk.dll|Az.DataBoxEdge.psd1|Az.DataBoxEdge.psm1|.signature.p7s</S>
-          <S N="GUID">3c11ef12-c79f-45fe-acdf-a2c784d99c97</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DataBoxEdge\1.2.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

@@ -169,6 +169,16 @@ function sleep {
 }
 
 
+function global:clipStudio_web {
+    Write-Host "Opening Clip Studio..." -ForegroundColor Cyan
+    Start-Process "https://www.clipstudio.net/en"
+}
+
+function global:clipStudio {
+    Write-Host "Opening Clip Studio Paint..." -ForegroundColor Cyan
+    Start-Process "C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP STUDIO\CLIPStudio.exe"
+}
+
 function programs {
     Write-Host "`nWMIC Installed Programs:" -ForegroundColor Cyan
     wmic product get name | sort
@@ -194,22 +204,6 @@ function programs {
 }
 
 
-function global:tutanota {
-    Write-Host "Opening Tutanota..." -ForegroundColor Cyan
-    Start-Process "https://tutanota.com/"
-}
-function global:perplexity {
-    Write-Host "Opening Perplexity..." -ForegroundColor Cyan
-    Start-Process "https://perplexity.com/"
-}
-function global:retrodiffusion {
-    Write-Host "Opening Retrodiffusion..." -ForegroundColor Cyan
-    Start-Process "https://www.retrodiffusion.ai/app"
-}
-function global:nhentai {
-    Write-Host "Opening NHentai..." -ForegroundColor Cyan
-    Start-Process "https://nhentai.net/"
-}
 
 
 # $global:PSColor = @{

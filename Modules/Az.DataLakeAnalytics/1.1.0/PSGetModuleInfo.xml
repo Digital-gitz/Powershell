@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.DataLakeAnalytics</S>
-      <Version N="Version">1.1.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.1.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Data Lake Analytics in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Data Lake Analytics, please visit the following: https://learn.microsoft.com/azure/data-lake-analytics/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:13:29-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:42.4022429-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:13:29.043</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:29.5462387-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -48,32 +43,91 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCommand_Add-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCmdlet_Add-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCommand_Add-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsAccount</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsAccount</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsCatalogItem</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsCatalogItem</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsCatalogItemAclEntry</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsCatalogItemAclEntry</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsJob</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsJob</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsJobPipeline</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsJobPipeline</S>
+          <S>PSCmdlet_Get-AzDataLakeAnalyticsJobRecurrence</S>
+          <S>PSCommand_Get-AzDataLakeAnalyticsJobRecurrence</S>
+          <S>PSCmdlet_New-AzDataLakeAnalyticsAccount</S>
+          <S>PSCommand_New-AzDataLakeAnalyticsAccount</S>
+          <S>PSCmdlet_New-AzDataLakeAnalyticsCatalogCredential</S>
+          <S>PSCommand_New-AzDataLakeAnalyticsCatalogCredential</S>
+          <S>PSCmdlet_New-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCommand_New-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCmdlet_Remove-AzDataLakeAnalyticsAccount</S>
+          <S>PSCommand_Remove-AzDataLakeAnalyticsAccount</S>
+          <S>PSCmdlet_Remove-AzDataLakeAnalyticsCatalogCredential</S>
+          <S>PSCommand_Remove-AzDataLakeAnalyticsCatalogCredential</S>
+          <S>PSCmdlet_Remove-AzDataLakeAnalyticsCatalogItemAclEntry</S>
+          <S>PSCommand_Remove-AzDataLakeAnalyticsCatalogItemAclEntry</S>
+          <S>PSCmdlet_Remove-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCommand_Remove-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCmdlet_Remove-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCommand_Remove-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCmdlet_Remove-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCommand_Remove-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCmdlet_Set-AzDataLakeAnalyticsAccount</S>
+          <S>PSCommand_Set-AzDataLakeAnalyticsAccount</S>
+          <S>PSCmdlet_Set-AzDataLakeAnalyticsCatalogCredential</S>
+          <S>PSCommand_Set-AzDataLakeAnalyticsCatalogCredential</S>
+          <S>PSCmdlet_Set-AzDataLakeAnalyticsCatalogItemAclEntry</S>
+          <S>PSCommand_Set-AzDataLakeAnalyticsCatalogItemAclEntry</S>
+          <S>PSCmdlet_Set-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCommand_Set-AzDataLakeAnalyticsDataSource</S>
+          <S>PSCmdlet_Set-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCommand_Set-AzDataLakeAnalyticsFirewallRule</S>
+          <S>PSCmdlet_Stop-AzDataLakeAnalyticsJob</S>
+          <S>PSCommand_Stop-AzDataLakeAnalyticsJob</S>
+          <S>PSCmdlet_Submit-AzDataLakeAnalyticsJob</S>
+          <S>PSCommand_Submit-AzDataLakeAnalyticsJob</S>
+          <S>PSCmdlet_Test-AzDataLakeAnalyticsAccount</S>
+          <S>PSCommand_Test-AzDataLakeAnalyticsAccount</S>
+          <S>PSCmdlet_Test-AzDataLakeAnalyticsCatalogItem</S>
+          <S>PSCommand_Test-AzDataLakeAnalyticsCatalogItem</S>
+          <S>PSCmdlet_Update-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCommand_Update-AzDataLakeAnalyticsComputePolicy</S>
+          <S>PSCmdlet_Wait-AzDataLakeAnalyticsJob</S>
+          <S>PSCommand_Wait-AzDataLakeAnalyticsJob</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzDataLakeAnalyticsDataSource</S>
@@ -111,12 +165,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzDataLakeAnalyticsDataSource</S>
@@ -155,69 +213,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Data Lake Analytics in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Data Lake Analytics, please visit the following: https://learn.microsoft.com/azure/data-lake-analytics/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6930867</S>
-          <S N="downloadCount">112362917</S>
-          <S N="packageSize">314524</S>
-          <S N="published">1/14/2025 3:13:29 AM -05:00</S>
-          <S N="created">1/14/2025 3:13:29 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM DataLake Analytics PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzDataLakeAnalyticsDataSource PSCommand_Add-AzDataLakeAnalyticsDataSource PSCmdlet_Add-AzDataLakeAnalyticsFirewallRule PSCommand_Add-AzDataLakeAnalyticsFirewallRule PSCmdlet_Get-AzDataLakeAnalyticsAccount PSCommand_Get-AzDataLakeAnalyticsAccount PSCmdlet_Get-AzDataLakeAnalyticsCatalogItem PSCommand_Get-AzDataLakeAnalyticsCatalogItem PSCmdlet_Get-AzDataLakeAnalyticsCatalogItemAclEntry PSCommand_Get-AzDataLakeAnalyticsCatalogItemAclEntry PSCmdlet_Get-AzDataLakeAnalyticsComputePolicy PSCommand_Get-AzDataLakeAnalyticsComputePolicy PSCmdlet_Get-AzDataLakeAnalyticsDataSource PSCommand_Get-AzDataLakeAnalyticsDataSource PSCmdlet_Get-AzDataLakeAnalyticsFirewallRule PSCommand_Get-AzDataLakeAnalyticsFirewallRule PSCmdlet_Get-AzDataLakeAnalyticsJob PSCommand_Get-AzDataLakeAnalyticsJob PSCmdlet_Get-AzDataLakeAnalyticsJobPipeline PSCommand_Get-AzDataLakeAnalyticsJobPipeline PSCmdlet_Get-AzDataLakeAnalyticsJobRecurrence PSCommand_Get-AzDataLakeAnalyticsJobRecurrence PSCmdlet_New-AzDataLakeAnalyticsAccount PSCommand_New-AzDataLakeAnalyticsAccount PSCmdlet_New-AzDataLakeAnalyticsCatalogCredential PSCommand_New-AzDataLakeAnalyticsCatalogCredential PSCmdlet_New-AzDataLakeAnalyticsComputePolicy PSCommand_New-AzDataLakeAnalyticsComputePolicy PSCmdlet_Remove-AzDataLakeAnalyticsAccount PSCommand_Remove-AzDataLakeAnalyticsAccount PSCmdlet_Remove-AzDataLakeAnalyticsCatalogCredential PSCommand_Remove-AzDataLakeAnalyticsCatalogCredential PSCmdlet_Remove-AzDataLakeAnalyticsCatalogItemAclEntry PSCommand_Remove-AzDataLakeAnalyticsCatalogItemAclEntry PSCmdlet_Remove-AzDataLakeAnalyticsComputePolicy PSCommand_Remove-AzDataLakeAnalyticsComputePolicy PSCmdlet_Remove-AzDataLakeAnalyticsDataSource PSCommand_Remove-AzDataLakeAnalyticsDataSource PSCmdlet_Remove-AzDataLakeAnalyticsFirewallRule PSCommand_Remove-AzDataLakeAnalyticsFirewallRule PSCmdlet_Set-AzDataLakeAnalyticsAccount PSCommand_Set-AzDataLakeAnalyticsAccount PSCmdlet_Set-AzDataLakeAnalyticsCatalogCredential PSCommand_Set-AzDataLakeAnalyticsCatalogCredential PSCmdlet_Set-AzDataLakeAnalyticsCatalogItemAclEntry PSCommand_Set-AzDataLakeAnalyticsCatalogItemAclEntry PSCmdlet_Set-AzDataLakeAnalyticsDataSource PSCommand_Set-AzDataLakeAnalyticsDataSource PSCmdlet_Set-AzDataLakeAnalyticsFirewallRule PSCommand_Set-AzDataLakeAnalyticsFirewallRule PSCmdlet_Stop-AzDataLakeAnalyticsJob PSCommand_Stop-AzDataLakeAnalyticsJob PSCmdlet_Submit-AzDataLakeAnalyticsJob PSCommand_Submit-AzDataLakeAnalyticsJob PSCmdlet_Test-AzDataLakeAnalyticsAccount PSCommand_Test-AzDataLakeAnalyticsAccount PSCmdlet_Test-AzDataLakeAnalyticsCatalogItem PSCommand_Test-AzDataLakeAnalyticsCatalogItem PSCmdlet_Update-AzDataLakeAnalyticsComputePolicy PSCommand_Update-AzDataLakeAnalyticsComputePolicy PSCmdlet_Wait-AzDataLakeAnalyticsJob PSCommand_Wait-AzDataLakeAnalyticsJob PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.1.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.DataLakeAnalytics.nuspec|Az.DataLakeAnalytics.psd1|Az.DataLakeAnalytics.psm1|DataLakeAnalytics.format.ps1xml|Microsoft.Azure.Management.DataLake.Analytics.dll|Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll|Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml|.signature.p7s</S>
-          <S N="GUID">89eceb4f-9916-4ec5-8499-d5cca97a9cae</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DataLakeAnalytics\1.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

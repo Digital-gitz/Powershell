@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.Automation</S>
-      <Version N="Version">1.11.1</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.11.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Automation service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Automation, please visit the following: https://learn.microsoft.com/azure/automation/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-02-11T02:17:49-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:20.9264983-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-02-11T02:17:49.31</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:22.1178407-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,32 +42,229 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Export-AzAutomationDscConfiguration</S>
+          <S>PSCommand_Export-AzAutomationDscConfiguration</S>
+          <S>PSCmdlet_Export-AzAutomationDscNodeReportContent</S>
+          <S>PSCommand_Export-AzAutomationDscNodeReportContent</S>
+          <S>PSCmdlet_Export-AzAutomationRunbook</S>
+          <S>PSCommand_Export-AzAutomationRunbook</S>
+          <S>PSCmdlet_Get-AzAutomationAccount</S>
+          <S>PSCommand_Get-AzAutomationAccount</S>
+          <S>PSCmdlet_Get-AzAutomationCertificate</S>
+          <S>PSCommand_Get-AzAutomationCertificate</S>
+          <S>PSCmdlet_Get-AzAutomationConnection</S>
+          <S>PSCommand_Get-AzAutomationConnection</S>
+          <S>PSCmdlet_Get-AzAutomationCredential</S>
+          <S>PSCommand_Get-AzAutomationCredential</S>
+          <S>PSCmdlet_Get-AzAutomationDscCompilationJob</S>
+          <S>PSCommand_Get-AzAutomationDscCompilationJob</S>
+          <S>PSCmdlet_Get-AzAutomationDscCompilationJobOutput</S>
+          <S>PSCommand_Get-AzAutomationDscCompilationJobOutput</S>
+          <S>PSCmdlet_Get-AzAutomationDscConfiguration</S>
+          <S>PSCommand_Get-AzAutomationDscConfiguration</S>
+          <S>PSCmdlet_Get-AzAutomationDscNode</S>
+          <S>PSCommand_Get-AzAutomationDscNode</S>
+          <S>PSCmdlet_Get-AzAutomationDscNodeConfiguration</S>
+          <S>PSCommand_Get-AzAutomationDscNodeConfiguration</S>
+          <S>PSCmdlet_Get-AzAutomationDscNodeConfigurationDeployment</S>
+          <S>PSCommand_Get-AzAutomationDscNodeConfigurationDeployment</S>
+          <S>PSCmdlet_Get-AzAutomationDscNodeConfigurationDeploymentSchedule</S>
+          <S>PSCommand_Get-AzAutomationDscNodeConfigurationDeploymentSchedule</S>
+          <S>PSCmdlet_Get-AzAutomationDscNodeReport</S>
+          <S>PSCommand_Get-AzAutomationDscNodeReport</S>
+          <S>PSCmdlet_Get-AzAutomationDscOnboardingMetaconfig</S>
+          <S>PSCommand_Get-AzAutomationDscOnboardingMetaconfig</S>
+          <S>PSCmdlet_Get-AzAutomationHybridRunbookWorker</S>
+          <S>PSCommand_Get-AzAutomationHybridRunbookWorker</S>
+          <S>PSCmdlet_Get-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCommand_Get-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCmdlet_Get-AzAutomationHybridWorkerGroup</S>
+          <S>PSCommand_Get-AzAutomationHybridWorkerGroup</S>
+          <S>PSCmdlet_Get-AzAutomationJob</S>
+          <S>PSCommand_Get-AzAutomationJob</S>
+          <S>PSCmdlet_Get-AzAutomationJobOutput</S>
+          <S>PSCommand_Get-AzAutomationJobOutput</S>
+          <S>PSCmdlet_Get-AzAutomationJobOutputRecord</S>
+          <S>PSCommand_Get-AzAutomationJobOutputRecord</S>
+          <S>PSCmdlet_Get-AzAutomationModule</S>
+          <S>PSCommand_Get-AzAutomationModule</S>
+          <S>PSCmdlet_Get-AzAutomationPython3Package</S>
+          <S>PSCommand_Get-AzAutomationPython3Package</S>
+          <S>PSCmdlet_Get-AzAutomationRegistrationInfo</S>
+          <S>PSCommand_Get-AzAutomationRegistrationInfo</S>
+          <S>PSCmdlet_Get-AzAutomationRunbook</S>
+          <S>PSCommand_Get-AzAutomationRunbook</S>
+          <S>PSCmdlet_Get-AzAutomationSchedule</S>
+          <S>PSCommand_Get-AzAutomationSchedule</S>
+          <S>PSCmdlet_Get-AzAutomationScheduledRunbook</S>
+          <S>PSCommand_Get-AzAutomationScheduledRunbook</S>
+          <S>PSCmdlet_Get-AzAutomationSoftwareUpdateConfiguration</S>
+          <S>PSCommand_Get-AzAutomationSoftwareUpdateConfiguration</S>
+          <S>PSCmdlet_Get-AzAutomationSoftwareUpdateMachineRun</S>
+          <S>PSCommand_Get-AzAutomationSoftwareUpdateMachineRun</S>
+          <S>PSCmdlet_Get-AzAutomationSoftwareUpdateRun</S>
+          <S>PSCommand_Get-AzAutomationSoftwareUpdateRun</S>
+          <S>PSCmdlet_Get-AzAutomationSourceControl</S>
+          <S>PSCommand_Get-AzAutomationSourceControl</S>
+          <S>PSCmdlet_Get-AzAutomationSourceControlSyncJob</S>
+          <S>PSCommand_Get-AzAutomationSourceControlSyncJob</S>
+          <S>PSCmdlet_Get-AzAutomationSourceControlSyncJobOutput</S>
+          <S>PSCommand_Get-AzAutomationSourceControlSyncJobOutput</S>
+          <S>PSCmdlet_Get-AzAutomationVariable</S>
+          <S>PSCommand_Get-AzAutomationVariable</S>
+          <S>PSCmdlet_Get-AzAutomationWebhook</S>
+          <S>PSCommand_Get-AzAutomationWebhook</S>
+          <S>PSCmdlet_Import-AzAutomationDscConfiguration</S>
+          <S>PSCommand_Import-AzAutomationDscConfiguration</S>
+          <S>PSCmdlet_Import-AzAutomationDscNodeConfiguration</S>
+          <S>PSCommand_Import-AzAutomationDscNodeConfiguration</S>
+          <S>PSCmdlet_Import-AzAutomationRunbook</S>
+          <S>PSCommand_Import-AzAutomationRunbook</S>
+          <S>PSCmdlet_Move-AzAutomationHybridRunbookWorker</S>
+          <S>PSCommand_Move-AzAutomationHybridRunbookWorker</S>
+          <S>PSCmdlet_New-AzAutomationAccount</S>
+          <S>PSCommand_New-AzAutomationAccount</S>
+          <S>PSCmdlet_New-AzAutomationCertificate</S>
+          <S>PSCommand_New-AzAutomationCertificate</S>
+          <S>PSCmdlet_New-AzAutomationConnection</S>
+          <S>PSCommand_New-AzAutomationConnection</S>
+          <S>PSCmdlet_New-AzAutomationCredential</S>
+          <S>PSCommand_New-AzAutomationCredential</S>
+          <S>PSCmdlet_New-AzAutomationHybridRunbookWorker</S>
+          <S>PSCommand_New-AzAutomationHybridRunbookWorker</S>
+          <S>PSCmdlet_New-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCommand_New-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCmdlet_New-AzAutomationKey</S>
+          <S>PSCommand_New-AzAutomationKey</S>
+          <S>PSCmdlet_New-AzAutomationModule</S>
+          <S>PSCommand_New-AzAutomationModule</S>
+          <S>PSCmdlet_New-AzAutomationPython3Package</S>
+          <S>PSCommand_New-AzAutomationPython3Package</S>
+          <S>PSCmdlet_New-AzAutomationRunbook</S>
+          <S>PSCommand_New-AzAutomationRunbook</S>
+          <S>PSCmdlet_New-AzAutomationSchedule</S>
+          <S>PSCommand_New-AzAutomationSchedule</S>
+          <S>PSCmdlet_New-AzAutomationSoftwareUpdateConfiguration</S>
+          <S>PSCommand_New-AzAutomationSoftwareUpdateConfiguration</S>
+          <S>PSCmdlet_New-AzAutomationSourceControl</S>
+          <S>PSCommand_New-AzAutomationSourceControl</S>
+          <S>PSCmdlet_New-AzAutomationUpdateManagementAzureQuery</S>
+          <S>PSCommand_New-AzAutomationUpdateManagementAzureQuery</S>
+          <S>PSCmdlet_New-AzAutomationVariable</S>
+          <S>PSCommand_New-AzAutomationVariable</S>
+          <S>PSCmdlet_New-AzAutomationWebhook</S>
+          <S>PSCommand_New-AzAutomationWebhook</S>
+          <S>PSCmdlet_Publish-AzAutomationRunbook</S>
+          <S>PSCommand_Publish-AzAutomationRunbook</S>
+          <S>PSCmdlet_Register-AzAutomationDscNode</S>
+          <S>PSCommand_Register-AzAutomationDscNode</S>
+          <S>PSCmdlet_Register-AzAutomationScheduledRunbook</S>
+          <S>PSCommand_Register-AzAutomationScheduledRunbook</S>
+          <S>PSCmdlet_Remove-AzAutomationAccount</S>
+          <S>PSCommand_Remove-AzAutomationAccount</S>
+          <S>PSCmdlet_Remove-AzAutomationCertificate</S>
+          <S>PSCommand_Remove-AzAutomationCertificate</S>
+          <S>PSCmdlet_Remove-AzAutomationConnection</S>
+          <S>PSCommand_Remove-AzAutomationConnection</S>
+          <S>PSCmdlet_Remove-AzAutomationConnectionType</S>
+          <S>PSCommand_Remove-AzAutomationConnectionType</S>
+          <S>PSCmdlet_Remove-AzAutomationCredential</S>
+          <S>PSCommand_Remove-AzAutomationCredential</S>
+          <S>PSCmdlet_Remove-AzAutomationDscConfiguration</S>
+          <S>PSCommand_Remove-AzAutomationDscConfiguration</S>
+          <S>PSCmdlet_Remove-AzAutomationDscNodeConfiguration</S>
+          <S>PSCommand_Remove-AzAutomationDscNodeConfiguration</S>
+          <S>PSCmdlet_Remove-AzAutomationHybridRunbookWorker</S>
+          <S>PSCommand_Remove-AzAutomationHybridRunbookWorker</S>
+          <S>PSCmdlet_Remove-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCommand_Remove-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCmdlet_Remove-AzAutomationHybridWorkerGroup</S>
+          <S>PSCommand_Remove-AzAutomationHybridWorkerGroup</S>
+          <S>PSCmdlet_Remove-AzAutomationModule</S>
+          <S>PSCommand_Remove-AzAutomationModule</S>
+          <S>PSCmdlet_Remove-AzAutomationPython3Package</S>
+          <S>PSCommand_Remove-AzAutomationPython3Package</S>
+          <S>PSCmdlet_Remove-AzAutomationRunbook</S>
+          <S>PSCommand_Remove-AzAutomationRunbook</S>
+          <S>PSCmdlet_Remove-AzAutomationSchedule</S>
+          <S>PSCommand_Remove-AzAutomationSchedule</S>
+          <S>PSCmdlet_Remove-AzAutomationSoftwareUpdateConfiguration</S>
+          <S>PSCommand_Remove-AzAutomationSoftwareUpdateConfiguration</S>
+          <S>PSCmdlet_Remove-AzAutomationSourceControl</S>
+          <S>PSCommand_Remove-AzAutomationSourceControl</S>
+          <S>PSCmdlet_Remove-AzAutomationVariable</S>
+          <S>PSCommand_Remove-AzAutomationVariable</S>
+          <S>PSCmdlet_Remove-AzAutomationWebhook</S>
+          <S>PSCommand_Remove-AzAutomationWebhook</S>
+          <S>PSCmdlet_Resume-AzAutomationJob</S>
+          <S>PSCommand_Resume-AzAutomationJob</S>
+          <S>PSCmdlet_Set-AzAutomationAccount</S>
+          <S>PSCommand_Set-AzAutomationAccount</S>
+          <S>PSCmdlet_Set-AzAutomationCertificate</S>
+          <S>PSCommand_Set-AzAutomationCertificate</S>
+          <S>PSCmdlet_Set-AzAutomationConnectionFieldValue</S>
+          <S>PSCommand_Set-AzAutomationConnectionFieldValue</S>
+          <S>PSCmdlet_Set-AzAutomationCredential</S>
+          <S>PSCommand_Set-AzAutomationCredential</S>
+          <S>PSCmdlet_Set-AzAutomationDscNode</S>
+          <S>PSCommand_Set-AzAutomationDscNode</S>
+          <S>PSCmdlet_Set-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCommand_Set-AzAutomationHybridRunbookWorkerGroup</S>
+          <S>PSCmdlet_Set-AzAutomationModule</S>
+          <S>PSCommand_Set-AzAutomationModule</S>
+          <S>PSCmdlet_Set-AzAutomationPython3Package</S>
+          <S>PSCommand_Set-AzAutomationPython3Package</S>
+          <S>PSCmdlet_Set-AzAutomationRunbook</S>
+          <S>PSCommand_Set-AzAutomationRunbook</S>
+          <S>PSCmdlet_Set-AzAutomationSchedule</S>
+          <S>PSCommand_Set-AzAutomationSchedule</S>
+          <S>PSCmdlet_Set-AzAutomationVariable</S>
+          <S>PSCommand_Set-AzAutomationVariable</S>
+          <S>PSCmdlet_Set-AzAutomationWebhook</S>
+          <S>PSCommand_Set-AzAutomationWebhook</S>
+          <S>PSCmdlet_Start-AzAutomationDscCompilationJob</S>
+          <S>PSCommand_Start-AzAutomationDscCompilationJob</S>
+          <S>PSCmdlet_Start-AzAutomationDscNodeConfigurationDeployment</S>
+          <S>PSCommand_Start-AzAutomationDscNodeConfigurationDeployment</S>
+          <S>PSCmdlet_Start-AzAutomationRunbook</S>
+          <S>PSCommand_Start-AzAutomationRunbook</S>
+          <S>PSCmdlet_Start-AzAutomationSourceControlSyncJob</S>
+          <S>PSCommand_Start-AzAutomationSourceControlSyncJob</S>
+          <S>PSCmdlet_Stop-AzAutomationDscNodeConfigurationDeployment</S>
+          <S>PSCommand_Stop-AzAutomationDscNodeConfigurationDeployment</S>
+          <S>PSCmdlet_Stop-AzAutomationJob</S>
+          <S>PSCommand_Stop-AzAutomationJob</S>
+          <S>PSCmdlet_Suspend-AzAutomationJob</S>
+          <S>PSCommand_Suspend-AzAutomationJob</S>
+          <S>PSCmdlet_Unregister-AzAutomationDscNode</S>
+          <S>PSCommand_Unregister-AzAutomationDscNode</S>
+          <S>PSCmdlet_Unregister-AzAutomationScheduledRunbook</S>
+          <S>PSCommand_Unregister-AzAutomationScheduledRunbook</S>
+          <S>PSCmdlet_Update-AzAutomationSourceControl</S>
+          <S>PSCommand_Update-AzAutomationSourceControl</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Export-AzAutomationDscConfiguration</S>
@@ -179,12 +371,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Export-AzAutomationDscConfiguration</S>
@@ -292,69 +488,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
-      <S N="ReleaseNotes">* Fixed Bug: Start-AzAutomationRunbook throws object reference error when the automation account is not available in the subscription</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Fixed Bug: Start-AzAutomationRunbook throws object reference error when the automation account is not available in the subscription </S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.2</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.2</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.2, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.2</ToString>
+                    <Props>
+                      <Version N="Version">4.0.2.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.2</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">2</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.2, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Automation service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Automation, please visit the following: https://learn.microsoft.com/azure/automation/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Fixed Bug: Start-AzAutomationRunbook throws object reference error when the automation account is not available in the subscription</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">3212714</S>
-          <S N="downloadCount">117650128</S>
-          <S N="packageSize">508994</S>
-          <S N="published">2/11/2025 2:17:49 AM -05:00</S>
-          <S N="created">2/11/2025 2:17:49 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM Automation PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Export-AzAutomationDscConfiguration PSCommand_Export-AzAutomationDscConfiguration PSCmdlet_Export-AzAutomationDscNodeReportContent PSCommand_Export-AzAutomationDscNodeReportContent PSCmdlet_Export-AzAutomationRunbook PSCommand_Export-AzAutomationRunbook PSCmdlet_Get-AzAutomationAccount PSCommand_Get-AzAutomationAccount PSCmdlet_Get-AzAutomationCertificate PSCommand_Get-AzAutomationCertificate PSCmdlet_Get-AzAutomationConnection PSCommand_Get-AzAutomationConnection PSCmdlet_Get-AzAutomationCredential PSCommand_Get-AzAutomationCredential PSCmdlet_Get-AzAutomationDscCompilationJob PSCommand_Get-AzAutomationDscCompilationJob PSCmdlet_Get-AzAutomationDscCompilationJobOutput PSCommand_Get-AzAutomationDscCompilationJobOutput PSCmdlet_Get-AzAutomationDscConfiguration PSCommand_Get-AzAutomationDscConfiguration PSCmdlet_Get-AzAutomationDscNode PSCommand_Get-AzAutomationDscNode PSCmdlet_Get-AzAutomationDscNodeConfiguration PSCommand_Get-AzAutomationDscNodeConfiguration PSCmdlet_Get-AzAutomationDscNodeConfigurationDeployment PSCommand_Get-AzAutomationDscNodeConfigurationDeployment PSCmdlet_Get-AzAutomationDscNodeConfigurationDeploymentSchedule PSCommand_Get-AzAutomationDscNodeConfigurationDeploymentSchedule PSCmdlet_Get-AzAutomationDscNodeReport PSCommand_Get-AzAutomationDscNodeReport PSCmdlet_Get-AzAutomationDscOnboardingMetaconfig PSCommand_Get-AzAutomationDscOnboardingMetaconfig PSCmdlet_Get-AzAutomationHybridRunbookWorker PSCommand_Get-AzAutomationHybridRunbookWorker PSCmdlet_Get-AzAutomationHybridRunbookWorkerGroup PSCommand_Get-AzAutomationHybridRunbookWorkerGroup PSCmdlet_Get-AzAutomationHybridWorkerGroup PSCommand_Get-AzAutomationHybridWorkerGroup PSCmdlet_Get-AzAutomationJob PSCommand_Get-AzAutomationJob PSCmdlet_Get-AzAutomationJobOutput PSCommand_Get-AzAutomationJobOutput PSCmdlet_Get-AzAutomationJobOutputRecord PSCommand_Get-AzAutomationJobOutputRecord PSCmdlet_Get-AzAutomationModule PSCommand_Get-AzAutomationModule PSCmdlet_Get-AzAutomationPython3Package PSCommand_Get-AzAutomationPython3Package PSCmdlet_Get-AzAutomationRegistrationInfo PSCommand_Get-AzAutomationRegistrationInfo PSCmdlet_Get-AzAutomationRunbook PSCommand_Get-AzAutomationRunbook PSCmdlet_Get-AzAutomationSchedule PSCommand_Get-AzAutomationSchedule PSCmdlet_Get-AzAutomationScheduledRunbook PSCommand_Get-AzAutomationScheduledRunbook PSCmdlet_Get-AzAutomationSoftwareUpdateConfiguration PSCommand_Get-AzAutomationSoftwareUpdateConfiguration PSCmdlet_Get-AzAutomationSoftwareUpdateMachineRun PSCommand_Get-AzAutomationSoftwareUpdateMachineRun PSCmdlet_Get-AzAutomationSoftwareUpdateRun PSCommand_Get-AzAutomationSoftwareUpdateRun PSCmdlet_Get-AzAutomationSourceControl PSCommand_Get-AzAutomationSourceControl PSCmdlet_Get-AzAutomationSourceControlSyncJob PSCommand_Get-AzAutomationSourceControlSyncJob PSCmdlet_Get-AzAutomationSourceControlSyncJobOutput PSCommand_Get-AzAutomationSourceControlSyncJobOutput PSCmdlet_Get-AzAutomationVariable PSCommand_Get-AzAutomationVariable PSCmdlet_Get-AzAutomationWebhook PSCommand_Get-AzAutomationWebhook PSCmdlet_Import-AzAutomationDscConfiguration PSCommand_Import-AzAutomationDscConfiguration PSCmdlet_Import-AzAutomationDscNodeConfiguration PSCommand_Import-AzAutomationDscNodeConfiguration PSCmdlet_Import-AzAutomationRunbook PSCommand_Import-AzAutomationRunbook PSCmdlet_Move-AzAutomationHybridRunbookWorker PSCommand_Move-AzAutomationHybridRunbookWorker PSCmdlet_New-AzAutomationAccount PSCommand_New-AzAutomationAccount PSCmdlet_New-AzAutomationCertificate PSCommand_New-AzAutomationCertificate PSCmdlet_New-AzAutomationConnection PSCommand_New-AzAutomationConnection PSCmdlet_New-AzAutomationCredential PSCommand_New-AzAutomationCredential PSCmdlet_New-AzAutomationHybridRunbookWorker PSCommand_New-AzAutomationHybridRunbookWorker PSCmdlet_New-AzAutomationHybridRunbookWorkerGroup PSCommand_New-AzAutomationHybridRunbookWorkerGroup PSCmdlet_New-AzAutomationKey PSCommand_New-AzAutomationKey PSCmdlet_New-AzAutomationModule PSCommand_New-AzAutomationModule PSCmdlet_New-AzAutomationPython3Package PSCommand_New-AzAutomationPython3Package PSCmdlet_New-AzAutomationRunbook PSCommand_New-AzAutomationRunbook PSCmdlet_New-AzAutomationSchedule PSCommand_New-AzAutomationSchedule PSCmdlet_New-AzAutomationSoftwareUpdateConfiguration PSCommand_New-AzAutomationSoftwareUpdateConfiguration PSCmdlet_New-AzAutomationSourceControl PSCommand_New-AzAutomationSourceControl PSCmdlet_New-AzAutomationUpdateManagementAzureQuery PSCommand_New-AzAutomationUpdateManagementAzureQuery PSCmdlet_New-AzAutomationVariable PSCommand_New-AzAutomationVariable PSCmdlet_New-AzAutomationWebhook PSCommand_New-AzAutomationWebhook PSCmdlet_Publish-AzAutomationRunbook PSCommand_Publish-AzAutomationRunbook PSCmdlet_Register-AzAutomationDscNode PSCommand_Register-AzAutomationDscNode PSCmdlet_Register-AzAutomationScheduledRunbook PSCommand_Register-AzAutomationScheduledRunbook PSCmdlet_Remove-AzAutomationAccount PSCommand_Remove-AzAutomationAccount PSCmdlet_Remove-AzAutomationCertificate PSCommand_Remove-AzAutomationCertificate PSCmdlet_Remove-AzAutomationConnection PSCommand_Remove-AzAutomationConnection PSCmdlet_Remove-AzAutomationConnectionType PSCommand_Remove-AzAutomationConnectionType PSCmdlet_Remove-AzAutomationCredential PSCommand_Remove-AzAutomationCredential PSCmdlet_Remove-AzAutomationDscConfiguration PSCommand_Remove-AzAutomationDscConfiguration PSCmdlet_Remove-AzAutomationDscNodeConfiguration PSCommand_Remove-AzAutomationDscNodeConfiguration PSCmdlet_Remove-AzAutomationHybridRunbookWorker PSCommand_Remove-AzAutomationHybridRunbookWorker PSCmdlet_Remove-AzAutomationHybridRunbookWorkerGroup PSCommand_Remove-AzAutomationHybridRunbookWorkerGroup PSCmdlet_Remove-AzAutomationHybridWorkerGroup PSCommand_Remove-AzAutomationHybridWorkerGroup PSCmdlet_Remove-AzAutomationModule PSCommand_Remove-AzAutomationModule PSCmdlet_Remove-AzAutomationPython3Package PSCommand_Remove-AzAutomationPython3Package PSCmdlet_Remove-AzAutomationRunbook PSCommand_Remove-AzAutomationRunbook PSCmdlet_Remove-AzAutomationSchedule PSCommand_Remove-AzAutomationSchedule PSCmdlet_Remove-AzAutomationSoftwareUpdateConfiguration PSCommand_Remove-AzAutomationSoftwareUpdateConfiguration PSCmdlet_Remove-AzAutomationSourceControl PSCommand_Remove-AzAutomationSourceControl PSCmdlet_Remove-AzAutomationVariable PSCommand_Remove-AzAutomationVariable PSCmdlet_Remove-AzAutomationWebhook PSCommand_Remove-AzAutomationWebhook PSCmdlet_Resume-AzAutomationJob PSCommand_Resume-AzAutomationJob PSCmdlet_Set-AzAutomationAccount PSCommand_Set-AzAutomationAccount PSCmdlet_Set-AzAutomationCertificate PSCommand_Set-AzAutomationCertificate PSCmdlet_Set-AzAutomationConnectionFieldValue PSCommand_Set-AzAutomationConnectionFieldValue PSCmdlet_Set-AzAutomationCredential PSCommand_Set-AzAutomationCredential PSCmdlet_Set-AzAutomationDscNode PSCommand_Set-AzAutomationDscNode PSCmdlet_Set-AzAutomationHybridRunbookWorkerGroup PSCommand_Set-AzAutomationHybridRunbookWorkerGroup PSCmdlet_Set-AzAutomationModule PSCommand_Set-AzAutomationModule PSCmdlet_Set-AzAutomationPython3Package PSCommand_Set-AzAutomationPython3Package PSCmdlet_Set-AzAutomationRunbook PSCommand_Set-AzAutomationRunbook PSCmdlet_Set-AzAutomationSchedule PSCommand_Set-AzAutomationSchedule PSCmdlet_Set-AzAutomationVariable PSCommand_Set-AzAutomationVariable PSCmdlet_Set-AzAutomationWebhook PSCommand_Set-AzAutomationWebhook PSCmdlet_Start-AzAutomationDscCompilationJob PSCommand_Start-AzAutomationDscCompilationJob PSCmdlet_Start-AzAutomationDscNodeConfigurationDeployment PSCommand_Start-AzAutomationDscNodeConfigurationDeployment PSCmdlet_Start-AzAutomationRunbook PSCommand_Start-AzAutomationRunbook PSCmdlet_Start-AzAutomationSourceControlSyncJob PSCommand_Start-AzAutomationSourceControlSyncJob PSCmdlet_Stop-AzAutomationDscNodeConfigurationDeployment PSCommand_Stop-AzAutomationDscNodeConfigurationDeployment PSCmdlet_Stop-AzAutomationJob PSCommand_Stop-AzAutomationJob PSCmdlet_Suspend-AzAutomationJob PSCommand_Suspend-AzAutomationJob PSCmdlet_Unregister-AzAutomationDscNode PSCommand_Unregister-AzAutomationDscNode PSCmdlet_Unregister-AzAutomationScheduledRunbook PSCommand_Unregister-AzAutomationScheduledRunbook PSCmdlet_Update-AzAutomationSourceControl PSCommand_Update-AzAutomationSourceControl PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.11.1</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.Automation.nuspec|Automation.format.ps1xml|Az.Automation.psd1|Az.Automation.psm1|Microsoft.Azure.PowerShell.Automation.Management.Sdk.dll|Microsoft.Azure.PowerShell.Cmdlets.Automation.dll|Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml|.signature.p7s</S>
-          <S N="GUID">ef36c942-4a71-4e19-9450-05a35843deb6</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Automation\1.11.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

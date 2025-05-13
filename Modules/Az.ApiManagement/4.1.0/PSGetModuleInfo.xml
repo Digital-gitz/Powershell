@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.ApiManagement</S>
-      <Version N="Version">4.1.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">4.1.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Api Management service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information Api Management, please visit the following: https://learn.microsoft.com/azure/api-management/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:10:52-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:12.4607415-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:10:52.773</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:18.6706375-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,32 +42,305 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-AzApiManagementApiToGateway</S>
+          <S>PSCommand_Add-AzApiManagementApiToGateway</S>
+          <S>PSCmdlet_Add-AzApiManagementApiToProduct</S>
+          <S>PSCommand_Add-AzApiManagementApiToProduct</S>
+          <S>PSCmdlet_Add-AzApiManagementProductToGroup</S>
+          <S>PSCommand_Add-AzApiManagementProductToGroup</S>
+          <S>PSCmdlet_Add-AzApiManagementRegion</S>
+          <S>PSCommand_Add-AzApiManagementRegion</S>
+          <S>PSCmdlet_Add-AzApiManagementUserToGroup</S>
+          <S>PSCommand_Add-AzApiManagementUserToGroup</S>
+          <S>PSCmdlet_Backup-AzApiManagement</S>
+          <S>PSCommand_Backup-AzApiManagement</S>
+          <S>PSCmdlet_Export-AzApiManagementApi</S>
+          <S>PSCommand_Export-AzApiManagementApi</S>
+          <S>PSCmdlet_Get-AzApiManagement</S>
+          <S>PSCommand_Get-AzApiManagement</S>
+          <S>PSCmdlet_Get-AzApiManagementApi</S>
+          <S>PSCommand_Get-AzApiManagementApi</S>
+          <S>PSCmdlet_Get-AzApiManagementApiRelease</S>
+          <S>PSCommand_Get-AzApiManagementApiRelease</S>
+          <S>PSCmdlet_Get-AzApiManagementApiRevision</S>
+          <S>PSCommand_Get-AzApiManagementApiRevision</S>
+          <S>PSCmdlet_Get-AzApiManagementApiSchema</S>
+          <S>PSCommand_Get-AzApiManagementApiSchema</S>
+          <S>PSCmdlet_Get-AzApiManagementApiVersionSet</S>
+          <S>PSCommand_Get-AzApiManagementApiVersionSet</S>
+          <S>PSCmdlet_Get-AzApiManagementAuthorizationServer</S>
+          <S>PSCommand_Get-AzApiManagementAuthorizationServer</S>
+          <S>PSCmdlet_Get-AzApiManagementAuthorizationServerClientSecret</S>
+          <S>PSCommand_Get-AzApiManagementAuthorizationServerClientSecret</S>
+          <S>PSCmdlet_Get-AzApiManagementBackend</S>
+          <S>PSCommand_Get-AzApiManagementBackend</S>
+          <S>PSCmdlet_Get-AzApiManagementCache</S>
+          <S>PSCommand_Get-AzApiManagementCache</S>
+          <S>PSCmdlet_Get-AzApiManagementCertificate</S>
+          <S>PSCommand_Get-AzApiManagementCertificate</S>
+          <S>PSCmdlet_Get-AzApiManagementDiagnostic</S>
+          <S>PSCommand_Get-AzApiManagementDiagnostic</S>
+          <S>PSCmdlet_Get-AzApiManagementGateway</S>
+          <S>PSCommand_Get-AzApiManagementGateway</S>
+          <S>PSCmdlet_Get-AzApiManagementGatewayHostnameConfiguration</S>
+          <S>PSCommand_Get-AzApiManagementGatewayHostnameConfiguration</S>
+          <S>PSCmdlet_Get-AzApiManagementGatewayKey</S>
+          <S>PSCommand_Get-AzApiManagementGatewayKey</S>
+          <S>PSCmdlet_Get-AzApiManagementGroup</S>
+          <S>PSCommand_Get-AzApiManagementGroup</S>
+          <S>PSCmdlet_Get-AzApiManagementIdentityProvider</S>
+          <S>PSCommand_Get-AzApiManagementIdentityProvider</S>
+          <S>PSCmdlet_Get-AzApiManagementIdentityProviderClientSecret</S>
+          <S>PSCommand_Get-AzApiManagementIdentityProviderClientSecret</S>
+          <S>PSCmdlet_Get-AzApiManagementLogger</S>
+          <S>PSCommand_Get-AzApiManagementLogger</S>
+          <S>PSCmdlet_Get-AzApiManagementNamedValue</S>
+          <S>PSCommand_Get-AzApiManagementNamedValue</S>
+          <S>PSCmdlet_Get-AzApiManagementNamedValueSecretValue</S>
+          <S>PSCommand_Get-AzApiManagementNamedValueSecretValue</S>
+          <S>PSCmdlet_Get-AzApiManagementNetworkStatus</S>
+          <S>PSCommand_Get-AzApiManagementNetworkStatus</S>
+          <S>PSCmdlet_Get-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCommand_Get-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCmdlet_Get-AzApiManagementOpenIdConnectProviderClientSecret</S>
+          <S>PSCommand_Get-AzApiManagementOpenIdConnectProviderClientSecret</S>
+          <S>PSCmdlet_Get-AzApiManagementOperation</S>
+          <S>PSCommand_Get-AzApiManagementOperation</S>
+          <S>PSCmdlet_Get-AzApiManagementPolicy</S>
+          <S>PSCommand_Get-AzApiManagementPolicy</S>
+          <S>PSCmdlet_Get-AzApiManagementProduct</S>
+          <S>PSCommand_Get-AzApiManagementProduct</S>
+          <S>PSCmdlet_Get-AzApiManagementSsoToken</S>
+          <S>PSCommand_Get-AzApiManagementSsoToken</S>
+          <S>PSCmdlet_Get-AzApiManagementSubscription</S>
+          <S>PSCommand_Get-AzApiManagementSubscription</S>
+          <S>PSCmdlet_Get-AzApiManagementSubscriptionKey</S>
+          <S>PSCommand_Get-AzApiManagementSubscriptionKey</S>
+          <S>PSCmdlet_Get-AzApiManagementTenantAccess</S>
+          <S>PSCommand_Get-AzApiManagementTenantAccess</S>
+          <S>PSCmdlet_Get-AzApiManagementTenantAccessSecret</S>
+          <S>PSCommand_Get-AzApiManagementTenantAccessSecret</S>
+          <S>PSCmdlet_Get-AzApiManagementTenantGitAccess</S>
+          <S>PSCommand_Get-AzApiManagementTenantGitAccess</S>
+          <S>PSCmdlet_Get-AzApiManagementTenantGitAccessSecret</S>
+          <S>PSCommand_Get-AzApiManagementTenantGitAccessSecret</S>
+          <S>PSCmdlet_Get-AzApiManagementTenantSyncState</S>
+          <S>PSCommand_Get-AzApiManagementTenantSyncState</S>
+          <S>PSCmdlet_Get-AzApiManagementUser</S>
+          <S>PSCommand_Get-AzApiManagementUser</S>
+          <S>PSCmdlet_Get-AzApiManagementUserSsoUrl</S>
+          <S>PSCommand_Get-AzApiManagementUserSsoUrl</S>
+          <S>PSCmdlet_Import-AzApiManagementApi</S>
+          <S>PSCommand_Import-AzApiManagementApi</S>
+          <S>PSCmdlet_New-AzApiManagement</S>
+          <S>PSCommand_New-AzApiManagement</S>
+          <S>PSCmdlet_New-AzApiManagementApi</S>
+          <S>PSCommand_New-AzApiManagementApi</S>
+          <S>PSCmdlet_New-AzApiManagementApiRelease</S>
+          <S>PSCommand_New-AzApiManagementApiRelease</S>
+          <S>PSCmdlet_New-AzApiManagementApiRevision</S>
+          <S>PSCommand_New-AzApiManagementApiRevision</S>
+          <S>PSCmdlet_New-AzApiManagementApiSchema</S>
+          <S>PSCommand_New-AzApiManagementApiSchema</S>
+          <S>PSCmdlet_New-AzApiManagementApiVersionSet</S>
+          <S>PSCommand_New-AzApiManagementApiVersionSet</S>
+          <S>PSCmdlet_New-AzApiManagementAuthorizationServer</S>
+          <S>PSCommand_New-AzApiManagementAuthorizationServer</S>
+          <S>PSCmdlet_New-AzApiManagementBackend</S>
+          <S>PSCommand_New-AzApiManagementBackend</S>
+          <S>PSCmdlet_New-AzApiManagementBackendCredential</S>
+          <S>PSCommand_New-AzApiManagementBackendCredential</S>
+          <S>PSCmdlet_New-AzApiManagementBackendProxy</S>
+          <S>PSCommand_New-AzApiManagementBackendProxy</S>
+          <S>PSCmdlet_New-AzApiManagementBackendServiceFabric</S>
+          <S>PSCommand_New-AzApiManagementBackendServiceFabric</S>
+          <S>PSCmdlet_New-AzApiManagementCache</S>
+          <S>PSCommand_New-AzApiManagementCache</S>
+          <S>PSCmdlet_New-AzApiManagementCertificate</S>
+          <S>PSCommand_New-AzApiManagementCertificate</S>
+          <S>PSCmdlet_New-AzApiManagementContext</S>
+          <S>PSCommand_New-AzApiManagementContext</S>
+          <S>PSCmdlet_New-AzApiManagementCustomHostnameConfiguration</S>
+          <S>PSCommand_New-AzApiManagementCustomHostnameConfiguration</S>
+          <S>PSCmdlet_New-AzApiManagementDiagnostic</S>
+          <S>PSCommand_New-AzApiManagementDiagnostic</S>
+          <S>PSCmdlet_New-AzApiManagementGateway</S>
+          <S>PSCommand_New-AzApiManagementGateway</S>
+          <S>PSCmdlet_New-AzApiManagementGatewayHostnameConfiguration</S>
+          <S>PSCommand_New-AzApiManagementGatewayHostnameConfiguration</S>
+          <S>PSCmdlet_New-AzApiManagementGroup</S>
+          <S>PSCommand_New-AzApiManagementGroup</S>
+          <S>PSCmdlet_New-AzApiManagementHttpMessageDiagnostic</S>
+          <S>PSCommand_New-AzApiManagementHttpMessageDiagnostic</S>
+          <S>PSCmdlet_New-AzApiManagementIdentityProvider</S>
+          <S>PSCommand_New-AzApiManagementIdentityProvider</S>
+          <S>PSCmdlet_New-AzApiManagementKeyVaultObject</S>
+          <S>PSCommand_New-AzApiManagementKeyVaultObject</S>
+          <S>PSCmdlet_New-AzApiManagementLogger</S>
+          <S>PSCommand_New-AzApiManagementLogger</S>
+          <S>PSCmdlet_New-AzApiManagementNamedValue</S>
+          <S>PSCommand_New-AzApiManagementNamedValue</S>
+          <S>PSCmdlet_New-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCommand_New-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCmdlet_New-AzApiManagementOperation</S>
+          <S>PSCommand_New-AzApiManagementOperation</S>
+          <S>PSCmdlet_New-AzApiManagementPipelineDiagnosticSetting</S>
+          <S>PSCommand_New-AzApiManagementPipelineDiagnosticSetting</S>
+          <S>PSCmdlet_New-AzApiManagementProduct</S>
+          <S>PSCommand_New-AzApiManagementProduct</S>
+          <S>PSCmdlet_New-AzApiManagementRegion</S>
+          <S>PSCommand_New-AzApiManagementRegion</S>
+          <S>PSCmdlet_New-AzApiManagementResourceLocationObject</S>
+          <S>PSCommand_New-AzApiManagementResourceLocationObject</S>
+          <S>PSCmdlet_New-AzApiManagementSamplingSetting</S>
+          <S>PSCommand_New-AzApiManagementSamplingSetting</S>
+          <S>PSCmdlet_New-AzApiManagementSslSetting</S>
+          <S>PSCommand_New-AzApiManagementSslSetting</S>
+          <S>PSCmdlet_New-AzApiManagementSubscription</S>
+          <S>PSCommand_New-AzApiManagementSubscription</S>
+          <S>PSCmdlet_New-AzApiManagementSystemCertificate</S>
+          <S>PSCommand_New-AzApiManagementSystemCertificate</S>
+          <S>PSCmdlet_New-AzApiManagementUser</S>
+          <S>PSCommand_New-AzApiManagementUser</S>
+          <S>PSCmdlet_New-AzApiManagementUserToken</S>
+          <S>PSCommand_New-AzApiManagementUserToken</S>
+          <S>PSCmdlet_New-AzApiManagementVirtualNetwork</S>
+          <S>PSCommand_New-AzApiManagementVirtualNetwork</S>
+          <S>PSCmdlet_Publish-AzApiManagementTenantGitConfiguration</S>
+          <S>PSCommand_Publish-AzApiManagementTenantGitConfiguration</S>
+          <S>PSCmdlet_Remove-AzApiManagement</S>
+          <S>PSCommand_Remove-AzApiManagement</S>
+          <S>PSCmdlet_Remove-AzApiManagementApi</S>
+          <S>PSCommand_Remove-AzApiManagementApi</S>
+          <S>PSCmdlet_Remove-AzApiManagementApiFromGateway</S>
+          <S>PSCommand_Remove-AzApiManagementApiFromGateway</S>
+          <S>PSCmdlet_Remove-AzApiManagementApiFromProduct</S>
+          <S>PSCommand_Remove-AzApiManagementApiFromProduct</S>
+          <S>PSCmdlet_Remove-AzApiManagementApiRelease</S>
+          <S>PSCommand_Remove-AzApiManagementApiRelease</S>
+          <S>PSCmdlet_Remove-AzApiManagementApiRevision</S>
+          <S>PSCommand_Remove-AzApiManagementApiRevision</S>
+          <S>PSCmdlet_Remove-AzApiManagementApiSchema</S>
+          <S>PSCommand_Remove-AzApiManagementApiSchema</S>
+          <S>PSCmdlet_Remove-AzApiManagementApiVersionSet</S>
+          <S>PSCommand_Remove-AzApiManagementApiVersionSet</S>
+          <S>PSCmdlet_Remove-AzApiManagementAuthorizationServer</S>
+          <S>PSCommand_Remove-AzApiManagementAuthorizationServer</S>
+          <S>PSCmdlet_Remove-AzApiManagementBackend</S>
+          <S>PSCommand_Remove-AzApiManagementBackend</S>
+          <S>PSCmdlet_Remove-AzApiManagementCache</S>
+          <S>PSCommand_Remove-AzApiManagementCache</S>
+          <S>PSCmdlet_Remove-AzApiManagementCertificate</S>
+          <S>PSCommand_Remove-AzApiManagementCertificate</S>
+          <S>PSCmdlet_Remove-AzApiManagementDiagnostic</S>
+          <S>PSCommand_Remove-AzApiManagementDiagnostic</S>
+          <S>PSCmdlet_Remove-AzApiManagementGateway</S>
+          <S>PSCommand_Remove-AzApiManagementGateway</S>
+          <S>PSCmdlet_Remove-AzApiManagementGatewayHostnameConfiguration</S>
+          <S>PSCommand_Remove-AzApiManagementGatewayHostnameConfiguration</S>
+          <S>PSCmdlet_Remove-AzApiManagementGroup</S>
+          <S>PSCommand_Remove-AzApiManagementGroup</S>
+          <S>PSCmdlet_Remove-AzApiManagementIdentityProvider</S>
+          <S>PSCommand_Remove-AzApiManagementIdentityProvider</S>
+          <S>PSCmdlet_Remove-AzApiManagementLogger</S>
+          <S>PSCommand_Remove-AzApiManagementLogger</S>
+          <S>PSCmdlet_Remove-AzApiManagementNamedValue</S>
+          <S>PSCommand_Remove-AzApiManagementNamedValue</S>
+          <S>PSCmdlet_Remove-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCommand_Remove-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCmdlet_Remove-AzApiManagementOperation</S>
+          <S>PSCommand_Remove-AzApiManagementOperation</S>
+          <S>PSCmdlet_Remove-AzApiManagementPolicy</S>
+          <S>PSCommand_Remove-AzApiManagementPolicy</S>
+          <S>PSCmdlet_Remove-AzApiManagementProduct</S>
+          <S>PSCommand_Remove-AzApiManagementProduct</S>
+          <S>PSCmdlet_Remove-AzApiManagementProductFromGroup</S>
+          <S>PSCommand_Remove-AzApiManagementProductFromGroup</S>
+          <S>PSCmdlet_Remove-AzApiManagementRegion</S>
+          <S>PSCommand_Remove-AzApiManagementRegion</S>
+          <S>PSCmdlet_Remove-AzApiManagementSubscription</S>
+          <S>PSCommand_Remove-AzApiManagementSubscription</S>
+          <S>PSCmdlet_Remove-AzApiManagementUser</S>
+          <S>PSCommand_Remove-AzApiManagementUser</S>
+          <S>PSCmdlet_Remove-AzApiManagementUserFromGroup</S>
+          <S>PSCommand_Remove-AzApiManagementUserFromGroup</S>
+          <S>PSCmdlet_Restore-AzApiManagement</S>
+          <S>PSCommand_Restore-AzApiManagement</S>
+          <S>PSCmdlet_Save-AzApiManagementTenantGitConfiguration</S>
+          <S>PSCommand_Save-AzApiManagementTenantGitConfiguration</S>
+          <S>PSCmdlet_Set-AzApiManagement</S>
+          <S>PSCommand_Set-AzApiManagement</S>
+          <S>PSCmdlet_Set-AzApiManagementApi</S>
+          <S>PSCommand_Set-AzApiManagementApi</S>
+          <S>PSCmdlet_Set-AzApiManagementApiRevision</S>
+          <S>PSCommand_Set-AzApiManagementApiRevision</S>
+          <S>PSCmdlet_Set-AzApiManagementApiSchema</S>
+          <S>PSCommand_Set-AzApiManagementApiSchema</S>
+          <S>PSCmdlet_Set-AzApiManagementApiVersionSet</S>
+          <S>PSCommand_Set-AzApiManagementApiVersionSet</S>
+          <S>PSCmdlet_Set-AzApiManagementAuthorizationServer</S>
+          <S>PSCommand_Set-AzApiManagementAuthorizationServer</S>
+          <S>PSCmdlet_Set-AzApiManagementBackend</S>
+          <S>PSCommand_Set-AzApiManagementBackend</S>
+          <S>PSCmdlet_Set-AzApiManagementCertificate</S>
+          <S>PSCommand_Set-AzApiManagementCertificate</S>
+          <S>PSCmdlet_Set-AzApiManagementDiagnostic</S>
+          <S>PSCommand_Set-AzApiManagementDiagnostic</S>
+          <S>PSCmdlet_Set-AzApiManagementGroup</S>
+          <S>PSCommand_Set-AzApiManagementGroup</S>
+          <S>PSCmdlet_Set-AzApiManagementIdentityProvider</S>
+          <S>PSCommand_Set-AzApiManagementIdentityProvider</S>
+          <S>PSCmdlet_Set-AzApiManagementLogger</S>
+          <S>PSCommand_Set-AzApiManagementLogger</S>
+          <S>PSCmdlet_Set-AzApiManagementNamedValue</S>
+          <S>PSCommand_Set-AzApiManagementNamedValue</S>
+          <S>PSCmdlet_Set-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCommand_Set-AzApiManagementOpenIdConnectProvider</S>
+          <S>PSCmdlet_Set-AzApiManagementOperation</S>
+          <S>PSCommand_Set-AzApiManagementOperation</S>
+          <S>PSCmdlet_Set-AzApiManagementPolicy</S>
+          <S>PSCommand_Set-AzApiManagementPolicy</S>
+          <S>PSCmdlet_Set-AzApiManagementProduct</S>
+          <S>PSCommand_Set-AzApiManagementProduct</S>
+          <S>PSCmdlet_Set-AzApiManagementSubscription</S>
+          <S>PSCommand_Set-AzApiManagementSubscription</S>
+          <S>PSCmdlet_Set-AzApiManagementTenantAccess</S>
+          <S>PSCommand_Set-AzApiManagementTenantAccess</S>
+          <S>PSCmdlet_Set-AzApiManagementUser</S>
+          <S>PSCommand_Set-AzApiManagementUser</S>
+          <S>PSCmdlet_Sync-AzApiManagementKeyVaultSecret</S>
+          <S>PSCommand_Sync-AzApiManagementKeyVaultSecret</S>
+          <S>PSCmdlet_Update-AzApiManagementApiRelease</S>
+          <S>PSCommand_Update-AzApiManagementApiRelease</S>
+          <S>PSCmdlet_Update-AzApiManagementCache</S>
+          <S>PSCommand_Update-AzApiManagementCache</S>
+          <S>PSCmdlet_Update-AzApiManagementGateway</S>
+          <S>PSCommand_Update-AzApiManagementGateway</S>
+          <S>PSCmdlet_Update-AzApiManagementRegion</S>
+          <S>PSCommand_Update-AzApiManagementRegion</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzApiManagementApiToGateway</S>
@@ -217,12 +485,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzApiManagementApiToGateway</S>
@@ -368,69 +640,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Fixed model creation parameters of ApiCreateOrUpdateParameter, ProductContract, SubscriptionCreateParameters, GroupCreateParameters, OpenidConnectProviderContract, IdentityProviderCreateContract, BackendContract, CacheContract and DiagnosticContract with [#26672].</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Api Management service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information Api Management, please visit the following: https://learn.microsoft.com/azure/api-management/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Fixed model creation parameters of ApiCreateOrUpdateParameter, ProductContract, SubscriptionCreateParameters, GroupCreateParameters, OpenidConnectProviderContract, IdentityProviderCreateContract, BackendContract, CacheContract and DiagnosticContract with [#26672].</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7382644</S>
-          <S N="downloadCount">117883699</S>
-          <S N="packageSize">1336092</S>
-          <S N="published">1/14/2025 3:10:52 AM -05:00</S>
-          <S N="created">1/14/2025 3:10:52 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM ApiManagement PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzApiManagementApiToGateway PSCommand_Add-AzApiManagementApiToGateway PSCmdlet_Add-AzApiManagementApiToProduct PSCommand_Add-AzApiManagementApiToProduct PSCmdlet_Add-AzApiManagementProductToGroup PSCommand_Add-AzApiManagementProductToGroup PSCmdlet_Add-AzApiManagementRegion PSCommand_Add-AzApiManagementRegion PSCmdlet_Add-AzApiManagementUserToGroup PSCommand_Add-AzApiManagementUserToGroup PSCmdlet_Backup-AzApiManagement PSCommand_Backup-AzApiManagement PSCmdlet_Export-AzApiManagementApi PSCommand_Export-AzApiManagementApi PSCmdlet_Get-AzApiManagement PSCommand_Get-AzApiManagement PSCmdlet_Get-AzApiManagementApi PSCommand_Get-AzApiManagementApi PSCmdlet_Get-AzApiManagementApiRelease PSCommand_Get-AzApiManagementApiRelease PSCmdlet_Get-AzApiManagementApiRevision PSCommand_Get-AzApiManagementApiRevision PSCmdlet_Get-AzApiManagementApiSchema PSCommand_Get-AzApiManagementApiSchema PSCmdlet_Get-AzApiManagementApiVersionSet PSCommand_Get-AzApiManagementApiVersionSet PSCmdlet_Get-AzApiManagementAuthorizationServer PSCommand_Get-AzApiManagementAuthorizationServer PSCmdlet_Get-AzApiManagementAuthorizationServerClientSecret PSCommand_Get-AzApiManagementAuthorizationServerClientSecret PSCmdlet_Get-AzApiManagementBackend PSCommand_Get-AzApiManagementBackend PSCmdlet_Get-AzApiManagementCache PSCommand_Get-AzApiManagementCache PSCmdlet_Get-AzApiManagementCertificate PSCommand_Get-AzApiManagementCertificate PSCmdlet_Get-AzApiManagementDiagnostic PSCommand_Get-AzApiManagementDiagnostic PSCmdlet_Get-AzApiManagementGateway PSCommand_Get-AzApiManagementGateway PSCmdlet_Get-AzApiManagementGatewayHostnameConfiguration PSCommand_Get-AzApiManagementGatewayHostnameConfiguration PSCmdlet_Get-AzApiManagementGatewayKey PSCommand_Get-AzApiManagementGatewayKey PSCmdlet_Get-AzApiManagementGroup PSCommand_Get-AzApiManagementGroup PSCmdlet_Get-AzApiManagementIdentityProvider PSCommand_Get-AzApiManagementIdentityProvider PSCmdlet_Get-AzApiManagementIdentityProviderClientSecret PSCommand_Get-AzApiManagementIdentityProviderClientSecret PSCmdlet_Get-AzApiManagementLogger PSCommand_Get-AzApiManagementLogger PSCmdlet_Get-AzApiManagementNamedValue PSCommand_Get-AzApiManagementNamedValue PSCmdlet_Get-AzApiManagementNamedValueSecretValue PSCommand_Get-AzApiManagementNamedValueSecretValue PSCmdlet_Get-AzApiManagementNetworkStatus PSCommand_Get-AzApiManagementNetworkStatus PSCmdlet_Get-AzApiManagementOpenIdConnectProvider PSCommand_Get-AzApiManagementOpenIdConnectProvider PSCmdlet_Get-AzApiManagementOpenIdConnectProviderClientSecret PSCommand_Get-AzApiManagementOpenIdConnectProviderClientSecret PSCmdlet_Get-AzApiManagementOperation PSCommand_Get-AzApiManagementOperation PSCmdlet_Get-AzApiManagementPolicy PSCommand_Get-AzApiManagementPolicy PSCmdlet_Get-AzApiManagementProduct PSCommand_Get-AzApiManagementProduct PSCmdlet_Get-AzApiManagementSsoToken PSCommand_Get-AzApiManagementSsoToken PSCmdlet_Get-AzApiManagementSubscription PSCommand_Get-AzApiManagementSubscription PSCmdlet_Get-AzApiManagementSubscriptionKey PSCommand_Get-AzApiManagementSubscriptionKey PSCmdlet_Get-AzApiManagementTenantAccess PSCommand_Get-AzApiManagementTenantAccess PSCmdlet_Get-AzApiManagementTenantAccessSecret PSCommand_Get-AzApiManagementTenantAccessSecret PSCmdlet_Get-AzApiManagementTenantGitAccess PSCommand_Get-AzApiManagementTenantGitAccess PSCmdlet_Get-AzApiManagementTenantGitAccessSecret PSCommand_Get-AzApiManagementTenantGitAccessSecret PSCmdlet_Get-AzApiManagementTenantSyncState PSCommand_Get-AzApiManagementTenantSyncState PSCmdlet_Get-AzApiManagementUser PSCommand_Get-AzApiManagementUser PSCmdlet_Get-AzApiManagementUserSsoUrl PSCommand_Get-AzApiManagementUserSsoUrl PSCmdlet_Import-AzApiManagementApi PSCommand_Import-AzApiManagementApi PSCmdlet_New-AzApiManagement PSCommand_New-AzApiManagement PSCmdlet_New-AzApiManagementApi PSCommand_New-AzApiManagementApi PSCmdlet_New-AzApiManagementApiRelease PSCommand_New-AzApiManagementApiRelease PSCmdlet_New-AzApiManagementApiRevision PSCommand_New-AzApiManagementApiRevision PSCmdlet_New-AzApiManagementApiSchema PSCommand_New-AzApiManagementApiSchema PSCmdlet_New-AzApiManagementApiVersionSet PSCommand_New-AzApiManagementApiVersionSet PSCmdlet_New-AzApiManagementAuthorizationServer PSCommand_New-AzApiManagementAuthorizationServer PSCmdlet_New-AzApiManagementBackend PSCommand_New-AzApiManagementBackend PSCmdlet_New-AzApiManagementBackendCredential PSCommand_New-AzApiManagementBackendCredential PSCmdlet_New-AzApiManagementBackendProxy PSCommand_New-AzApiManagementBackendProxy PSCmdlet_New-AzApiManagementBackendServiceFabric PSCommand_New-AzApiManagementBackendServiceFabric PSCmdlet_New-AzApiManagementCache PSCommand_New-AzApiManagementCache PSCmdlet_New-AzApiManagementCertificate PSCommand_New-AzApiManagementCertificate PSCmdlet_New-AzApiManagementContext PSCommand_New-AzApiManagementContext PSCmdlet_New-AzApiManagementCustomHostnameConfiguration PSCommand_New-AzApiManagementCustomHostnameConfiguration PSCmdlet_New-AzApiManagementDiagnostic PSCommand_New-AzApiManagementDiagnostic PSCmdlet_New-AzApiManagementGateway PSCommand_New-AzApiManagementGateway PSCmdlet_New-AzApiManagementGatewayHostnameConfiguration PSCommand_New-AzApiManagementGatewayHostnameConfiguration PSCmdlet_New-AzApiManagementGroup PSCommand_New-AzApiManagementGroup PSCmdlet_New-AzApiManagementHttpMessageDiagnostic PSCommand_New-AzApiManagementHttpMessageDiagnostic PSCmdlet_New-AzApiManagementIdentityProvider PSCommand_New-AzApiManagementIdentityProvider PSCmdlet_New-AzApiManagementKeyVaultObject PSCommand_New-AzApiManagementKeyVaultObject PSCmdlet_New-AzApiManagementLogger PSCommand_New-AzApiManagementLogger PSCmdlet_New-AzApiManagementNamedValue PSCommand_New-AzApiManagementNamedValue PSCmdlet_New-AzApiManagementOpenIdConnectProvider PSCommand_New-AzApiManagementOpenIdConnectProvider PSCmdlet_New-AzApiManagementOperation PSCommand_New-AzApiManagementOperation PSCmdlet_New-AzApiManagementPipelineDiagnosticSetting PSCommand_New-AzApiManagementPipelineDiagnosticSetting PSCmdlet_New-AzApiManagementProduct PSCommand_New-AzApiManagementProduct PSCmdlet_New-AzApiManagementRegion PSCommand_New-AzApiManagementRegion PSCmdlet_New-AzApiManagementResourceLocationObject PSCommand_New-AzApiManagementResourceLocationObject PSCmdlet_New-AzApiManagementSamplingSetting PSCommand_New-AzApiManagementSamplingSetting PSCmdlet_New-AzApiManagementSslSetting PSCommand_New-AzApiManagementSslSetting PSCmdlet_New-AzApiManagementSubscription PSCommand_New-AzApiManagementSubscription PSCmdlet_New-AzApiManagementSystemCertificate PSCommand_New-AzApiManagementSystemCertificate PSCmdlet_New-AzApiManagementUser PSCommand_New-AzApiManagementUser PSCmdlet_New-AzApiManagementUserToken PSCommand_New-AzApiManagementUserToken PSCmdlet_New-AzApiManagementVirtualNetwork PSCommand_New-AzApiManagementVirtualNetwork PSCmdlet_Publish-AzApiManagementTenantGitConfiguration PSCommand_Publish-AzApiManagementTenantGitConfiguration PSCmdlet_Remove-AzApiManagement PSCommand_Remove-AzApiManagement PSCmdlet_Remove-AzApiManagementApi PSCommand_Remove-AzApiManagementApi PSCmdlet_Remove-AzApiManagementApiFromGateway PSCommand_Remove-AzApiManagementApiFromGateway PSCmdlet_Remove-AzApiManagementApiFromProduct PSCommand_Remove-AzApiManagementApiFromProduct PSCmdlet_Remove-AzApiManagementApiRelease PSCommand_Remove-AzApiManagementApiRelease PSCmdlet_Remove-AzApiManagementApiRevision PSCommand_Remove-AzApiManagementApiRevision PSCmdlet_Remove-AzApiManagementApiSchema PSCommand_Remove-AzApiManagementApiSchema PSCmdlet_Remove-AzApiManagementApiVersionSet PSCommand_Remove-AzApiManagementApiVersionSet PSCmdlet_Remove-AzApiManagementAuthorizationServer PSCommand_Remove-AzApiManagementAuthorizationServer PSCmdlet_Remove-AzApiManagementBackend PSCommand_Remove-AzApiManagementBackend PSCmdlet_Remove-AzApiManagementCache PSCommand_Remove-AzApiManagementCache PSCmdlet_Remove-AzApiManagementCertificate PSCommand_Remove-AzApiManagementCertificate PSCmdlet_Remove-AzApiManagementDiagnostic PSCommand_Remove-AzApiManagementDiagnostic PSCmdlet_Remove-AzApiManagementGateway PSCommand_Remove-AzApiManagementGateway PSCmdlet_Remove-AzApiManagementGatewayHostnameConfiguration PSCommand_Remove-AzApiManagementGatewayHostnameConfiguration PSCmdlet_Remove-AzApiManagementGroup PSCommand_Remove-AzApiManagementGroup PSCmdlet_Remove-AzApiManagementIdentityProvider PSCommand_Remove-AzApiManagementIdentityProvider PSCmdlet_Remove-AzApiManagementLogger PSCommand_Remove-AzApiManagementLogger PSCmdlet_Remove-AzApiManagementNamedValue PSCommand_Remove-AzApiManagementNamedValue PSCmdlet_Remove-AzApiManagementOpenIdConnectProvider PSCommand_Remove-AzApiManagementOpenIdConnectProvider PSCmdlet_Remove-AzApiManagementOperation PSCommand_Remove-AzApiManagementOperation PSCmdlet_Remove-AzApiManagementPolicy PSCommand_Remove-AzApiManagementPolicy PSCmdlet_Remove-AzApiManagementProduct PSCommand_Remove-AzApiManagementProduct PSCmdlet_Remove-AzApiManagementProductFromGroup PSCommand_Remove-AzApiManagementProductFromGroup PSCmdlet_Remove-AzApiManagementRegion PSCommand_Remove-AzApiManagementRegion PSCmdlet_Remove-AzApiManagementSubscription PSCommand_Remove-AzApiManagementSubscription PSCmdlet_Remove-AzApiManagementUser PSCommand_Remove-AzApiManagementUser PSCmdlet_Remove-AzApiManagementUserFromGroup PSCommand_Remove-AzApiManagementUserFromGroup PSCmdlet_Restore-AzApiManagement PSCommand_Restore-AzApiManagement PSCmdlet_Save-AzApiManagementTenantGitConfiguration PSCommand_Save-AzApiManagementTenantGitConfiguration PSCmdlet_Set-AzApiManagement PSCommand_Set-AzApiManagement PSCmdlet_Set-AzApiManagementApi PSCommand_Set-AzApiManagementApi PSCmdlet_Set-AzApiManagementApiRevision PSCommand_Set-AzApiManagementApiRevision PSCmdlet_Set-AzApiManagementApiSchema PSCommand_Set-AzApiManagementApiSchema PSCmdlet_Set-AzApiManagementApiVersionSet PSCommand_Set-AzApiManagementApiVersionSet PSCmdlet_Set-AzApiManagementAuthorizationServer PSCommand_Set-AzApiManagementAuthorizationServer PSCmdlet_Set-AzApiManagementBackend PSCommand_Set-AzApiManagementBackend PSCmdlet_Set-AzApiManagementCertificate PSCommand_Set-AzApiManagementCertificate PSCmdlet_Set-AzApiManagementDiagnostic PSCommand_Set-AzApiManagementDiagnostic PSCmdlet_Set-AzApiManagementGroup PSCommand_Set-AzApiManagementGroup PSCmdlet_Set-AzApiManagementIdentityProvider PSCommand_Set-AzApiManagementIdentityProvider PSCmdlet_Set-AzApiManagementLogger PSCommand_Set-AzApiManagementLogger PSCmdlet_Set-AzApiManagementNamedValue PSCommand_Set-AzApiManagementNamedValue PSCmdlet_Set-AzApiManagementOpenIdConnectProvider PSCommand_Set-AzApiManagementOpenIdConnectProvider PSCmdlet_Set-AzApiManagementOperation PSCommand_Set-AzApiManagementOperation PSCmdlet_Set-AzApiManagementPolicy PSCommand_Set-AzApiManagementPolicy PSCmdlet_Set-AzApiManagementProduct PSCommand_Set-AzApiManagementProduct PSCmdlet_Set-AzApiManagementSubscription PSCommand_Set-AzApiManagementSubscription PSCmdlet_Set-AzApiManagementTenantAccess PSCommand_Set-AzApiManagementTenantAccess PSCmdlet_Set-AzApiManagementUser PSCommand_Set-AzApiManagementUser PSCmdlet_Sync-AzApiManagementKeyVaultSecret PSCommand_Sync-AzApiManagementKeyVaultSecret PSCmdlet_Update-AzApiManagementApiRelease PSCommand_Update-AzApiManagementApiRelease PSCmdlet_Update-AzApiManagementCache PSCommand_Update-AzApiManagementCache PSCmdlet_Update-AzApiManagementGateway PSCommand_Update-AzApiManagementGateway PSCmdlet_Update-AzApiManagementRegion PSCommand_Update-AzApiManagementRegion PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">4.1.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.ApiManagement.nuspec|Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml|Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.generated.format.ps1xml|Microsoft.WindowsAzure.Storage.dll|Az.ApiManagement.psd1|Az.ApiManagement.psm1|Microsoft.Azure.PowerShell.ApiManagement.Management.Sdk.dll|Microsoft.Azure.PowerShell.AutoMapper.dll|Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll|Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml|Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.generated.format.ps1xml|Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll|.signature.p7s</S>
-          <S N="GUID">4f58d643-631f-4d13-a205-15292af40748</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ApiManagement\4.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.RedisCache</S>
-      <Version N="Version">1.11.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.11.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Redis Cache service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Redis Cache, please visit the following: RedisCache: https://learn.microsoft.com/azure/azure-cache-for-redis/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:18:54-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:21:36.0953218-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:18:54.237</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:50.8979348-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -48,32 +43,85 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Export-AzRedisCache</S>
+          <S>PSCommand_Export-AzRedisCache</S>
+          <S>PSCmdlet_Get-AzRedisCache</S>
+          <S>PSCommand_Get-AzRedisCache</S>
+          <S>PSCmdlet_Get-AzRedisCacheFirewallRule</S>
+          <S>PSCommand_Get-AzRedisCacheFirewallRule</S>
+          <S>PSCmdlet_Get-AzRedisCacheKey</S>
+          <S>PSCommand_Get-AzRedisCacheKey</S>
+          <S>PSCmdlet_Get-AzRedisCacheLink</S>
+          <S>PSCommand_Get-AzRedisCacheLink</S>
+          <S>PSCmdlet_Get-AzRedisCachePatchSchedule</S>
+          <S>PSCommand_Get-AzRedisCachePatchSchedule</S>
+          <S>PSCmdlet_Import-AzRedisCache</S>
+          <S>PSCommand_Import-AzRedisCache</S>
+          <S>PSCmdlet_New-AzRedisCache</S>
+          <S>PSCommand_New-AzRedisCache</S>
+          <S>PSCmdlet_New-AzRedisCacheFirewallRule</S>
+          <S>PSCommand_New-AzRedisCacheFirewallRule</S>
+          <S>PSCmdlet_New-AzRedisCacheKey</S>
+          <S>PSCommand_New-AzRedisCacheKey</S>
+          <S>PSCmdlet_New-AzRedisCacheLink</S>
+          <S>PSCommand_New-AzRedisCacheLink</S>
+          <S>PSCmdlet_New-AzRedisCachePatchSchedule</S>
+          <S>PSCommand_New-AzRedisCachePatchSchedule</S>
+          <S>PSCmdlet_New-AzRedisCacheScheduleEntry</S>
+          <S>PSCommand_New-AzRedisCacheScheduleEntry</S>
+          <S>PSCmdlet_Remove-AzRedisCache</S>
+          <S>PSCommand_Remove-AzRedisCache</S>
+          <S>PSCmdlet_Remove-AzRedisCacheDiagnostic</S>
+          <S>PSCommand_Remove-AzRedisCacheDiagnostic</S>
+          <S>PSCmdlet_Remove-AzRedisCacheFirewallRule</S>
+          <S>PSCommand_Remove-AzRedisCacheFirewallRule</S>
+          <S>PSCmdlet_Remove-AzRedisCacheLink</S>
+          <S>PSCommand_Remove-AzRedisCacheLink</S>
+          <S>PSCmdlet_Remove-AzRedisCachePatchSchedule</S>
+          <S>PSCommand_Remove-AzRedisCachePatchSchedule</S>
+          <S>PSCmdlet_Reset-AzRedisCache</S>
+          <S>PSCommand_Reset-AzRedisCache</S>
+          <S>PSCmdlet_Set-AzRedisCache</S>
+          <S>PSCommand_Set-AzRedisCache</S>
+          <S>PSCmdlet_Set-AzRedisCacheDiagnostic</S>
+          <S>PSCommand_Set-AzRedisCacheDiagnostic</S>
+          <S>PSCmdlet_Get-AzRedisCacheAccessPolicy</S>
+          <S>PSCommand_Get-AzRedisCacheAccessPolicy</S>
+          <S>PSCmdlet_New-AzRedisCacheAccessPolicy</S>
+          <S>PSCommand_New-AzRedisCacheAccessPolicy</S>
+          <S>PSCmdlet_Remove-AzRedisCacheAccessPolicy</S>
+          <S>PSCommand_Remove-AzRedisCacheAccessPolicy</S>
+          <S>PSCmdlet_Get-AzRedisCacheAccessPolicyAssignment</S>
+          <S>PSCommand_Get-AzRedisCacheAccessPolicyAssignment</S>
+          <S>PSCmdlet_New-AzRedisCacheAccessPolicyAssignment</S>
+          <S>PSCommand_New-AzRedisCacheAccessPolicyAssignment</S>
+          <S>PSCmdlet_Remove-AzRedisCacheAccessPolicyAssignment</S>
+          <S>PSCommand_Remove-AzRedisCacheAccessPolicyAssignment</S>
+          <S>PSCmdlet_Clear-AzRedisCache</S>
+          <S>PSCommand_Clear-AzRedisCache</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Export-AzRedisCache</S>
@@ -108,12 +156,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Export-AzRedisCache</S>
@@ -149,69 +201,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Added support for choosing Zonal Allocation Policy</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Redis Cache service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Redis Cache, please visit the following: RedisCache: https://learn.microsoft.com/azure/azure-cache-for-redis/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Added support for choosing Zonal Allocation Policy</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7057794</S>
-          <S N="downloadCount">111037891</S>
-          <S N="packageSize">271633</S>
-          <S N="published">1/14/2025 3:18:54 AM -05:00</S>
-          <S N="created">1/14/2025 3:18:54 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM Redis Cache PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Export-AzRedisCache PSCommand_Export-AzRedisCache PSCmdlet_Get-AzRedisCache PSCommand_Get-AzRedisCache PSCmdlet_Get-AzRedisCacheFirewallRule PSCommand_Get-AzRedisCacheFirewallRule PSCmdlet_Get-AzRedisCacheKey PSCommand_Get-AzRedisCacheKey PSCmdlet_Get-AzRedisCacheLink PSCommand_Get-AzRedisCacheLink PSCmdlet_Get-AzRedisCachePatchSchedule PSCommand_Get-AzRedisCachePatchSchedule PSCmdlet_Import-AzRedisCache PSCommand_Import-AzRedisCache PSCmdlet_New-AzRedisCache PSCommand_New-AzRedisCache PSCmdlet_New-AzRedisCacheFirewallRule PSCommand_New-AzRedisCacheFirewallRule PSCmdlet_New-AzRedisCacheKey PSCommand_New-AzRedisCacheKey PSCmdlet_New-AzRedisCacheLink PSCommand_New-AzRedisCacheLink PSCmdlet_New-AzRedisCachePatchSchedule PSCommand_New-AzRedisCachePatchSchedule PSCmdlet_New-AzRedisCacheScheduleEntry PSCommand_New-AzRedisCacheScheduleEntry PSCmdlet_Remove-AzRedisCache PSCommand_Remove-AzRedisCache PSCmdlet_Remove-AzRedisCacheDiagnostic PSCommand_Remove-AzRedisCacheDiagnostic PSCmdlet_Remove-AzRedisCacheFirewallRule PSCommand_Remove-AzRedisCacheFirewallRule PSCmdlet_Remove-AzRedisCacheLink PSCommand_Remove-AzRedisCacheLink PSCmdlet_Remove-AzRedisCachePatchSchedule PSCommand_Remove-AzRedisCachePatchSchedule PSCmdlet_Reset-AzRedisCache PSCommand_Reset-AzRedisCache PSCmdlet_Set-AzRedisCache PSCommand_Set-AzRedisCache PSCmdlet_Set-AzRedisCacheDiagnostic PSCommand_Set-AzRedisCacheDiagnostic PSCmdlet_Get-AzRedisCacheAccessPolicy PSCommand_Get-AzRedisCacheAccessPolicy PSCmdlet_New-AzRedisCacheAccessPolicy PSCommand_New-AzRedisCacheAccessPolicy PSCmdlet_Remove-AzRedisCacheAccessPolicy PSCommand_Remove-AzRedisCacheAccessPolicy PSCmdlet_Get-AzRedisCacheAccessPolicyAssignment PSCommand_Get-AzRedisCacheAccessPolicyAssignment PSCmdlet_New-AzRedisCacheAccessPolicyAssignment PSCommand_New-AzRedisCacheAccessPolicyAssignment PSCmdlet_Remove-AzRedisCacheAccessPolicyAssignment PSCommand_Remove-AzRedisCacheAccessPolicyAssignment PSCmdlet_Clear-AzRedisCache PSCommand_Clear-AzRedisCache PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.11.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.RedisCache.nuspec|Az.RedisCache.psd1|Az.RedisCache.psm1|Microsoft.Azure.Insights.dll|Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll|Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml|Microsoft.Azure.PowerShell.RedisCache.Management.Sdk.dll|RedisCache.format.ps1xml|.signature.p7s</S>
-          <S N="GUID">66466448-cfe3-4897-9956-b37a536c1603</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.RedisCache\1.11.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

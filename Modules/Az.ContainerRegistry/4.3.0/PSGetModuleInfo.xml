@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.ContainerRegistry</S>
-      <Version N="Version">4.3.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">4.3.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Container Registry service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Container Registry, please visit the following: https://learn.microsoft.com/azure/container-registry/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:12:49-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:35.697641-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:12:49.833</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:27.2480251-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -48,76 +43,130 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Connect-AzContainerRegistry</S>
+          <S>PSCommand_Connect-AzContainerRegistry</S>
+          <S>PSCmdlet_Get-AzContainerRegistryManifest</S>
+          <S>PSCommand_Get-AzContainerRegistryManifest</S>
+          <S>PSCmdlet_Get-AzContainerRegistryRepository</S>
+          <S>PSCommand_Get-AzContainerRegistryRepository</S>
+          <S>PSCmdlet_Get-AzContainerRegistryTag</S>
+          <S>PSCommand_Get-AzContainerRegistryTag</S>
+          <S>PSCmdlet_Remove-AzContainerRegistryManifest</S>
+          <S>PSCommand_Remove-AzContainerRegistryManifest</S>
+          <S>PSCmdlet_Remove-AzContainerRegistryRepository</S>
+          <S>PSCommand_Remove-AzContainerRegistryRepository</S>
+          <S>PSCmdlet_Remove-AzContainerRegistryTag</S>
+          <S>PSCommand_Remove-AzContainerRegistryTag</S>
+          <S>PSCmdlet_Update-AzContainerRegistryManifest</S>
+          <S>PSCommand_Update-AzContainerRegistryManifest</S>
+          <S>PSCmdlet_Update-AzContainerRegistryRepository</S>
+          <S>PSCommand_Update-AzContainerRegistryRepository</S>
+          <S>PSCmdlet_Update-AzContainerRegistryTag</S>
+          <S>PSCommand_Update-AzContainerRegistryTag</S>
+          <S>PSIncludes_Cmdlet</S>
+          <S>PSFunction_Get-AzContainerRegistry</S>
+          <S>PSCommand_Get-AzContainerRegistry</S>
+          <S>PSFunction_Get-AzContainerRegistryAgentPool</S>
+          <S>PSCommand_Get-AzContainerRegistryAgentPool</S>
+          <S>PSFunction_Get-AzContainerRegistryAgentPoolQueueStatus</S>
+          <S>PSCommand_Get-AzContainerRegistryAgentPoolQueueStatus</S>
+          <S>PSFunction_Get-AzContainerRegistryCredential</S>
+          <S>PSCommand_Get-AzContainerRegistryCredential</S>
+          <S>PSFunction_Get-AzContainerRegistryExportPipeline</S>
+          <S>PSCommand_Get-AzContainerRegistryExportPipeline</S>
+          <S>PSFunction_Get-AzContainerRegistryImportPipeline</S>
+          <S>PSCommand_Get-AzContainerRegistryImportPipeline</S>
+          <S>PSFunction_Get-AzContainerRegistryReplication</S>
+          <S>PSCommand_Get-AzContainerRegistryReplication</S>
+          <S>PSFunction_Get-AzContainerRegistryScopeMap</S>
+          <S>PSCommand_Get-AzContainerRegistryScopeMap</S>
+          <S>PSFunction_Get-AzContainerRegistryToken</S>
+          <S>PSCommand_Get-AzContainerRegistryToken</S>
+          <S>PSFunction_Get-AzContainerRegistryUsage</S>
+          <S>PSCommand_Get-AzContainerRegistryUsage</S>
+          <S>PSFunction_Get-AzContainerRegistryWebhook</S>
+          <S>PSCommand_Get-AzContainerRegistryWebhook</S>
+          <S>PSFunction_Get-AzContainerRegistryWebhookCallbackConfig</S>
+          <S>PSCommand_Get-AzContainerRegistryWebhookCallbackConfig</S>
+          <S>PSFunction_Get-AzContainerRegistryWebhookEvent</S>
+          <S>PSCommand_Get-AzContainerRegistryWebhookEvent</S>
+          <S>PSFunction_Import-AzContainerRegistryImage</S>
+          <S>PSCommand_Import-AzContainerRegistryImage</S>
+          <S>PSFunction_New-AzContainerRegistry</S>
+          <S>PSCommand_New-AzContainerRegistry</S>
+          <S>PSFunction_New-AzContainerRegistryAgentPool</S>
+          <S>PSCommand_New-AzContainerRegistryAgentPool</S>
+          <S>PSFunction_New-AzContainerRegistryCredentials</S>
+          <S>PSCommand_New-AzContainerRegistryCredentials</S>
+          <S>PSFunction_New-AzContainerRegistryExportPipeline</S>
+          <S>PSCommand_New-AzContainerRegistryExportPipeline</S>
+          <S>PSFunction_New-AzContainerRegistryImportPipeline</S>
+          <S>PSCommand_New-AzContainerRegistryImportPipeline</S>
+          <S>PSFunction_New-AzContainerRegistryIPRuleObject</S>
+          <S>PSCommand_New-AzContainerRegistryIPRuleObject</S>
+          <S>PSFunction_New-AzContainerRegistryReplication</S>
+          <S>PSCommand_New-AzContainerRegistryReplication</S>
+          <S>PSFunction_New-AzContainerRegistryScopeMap</S>
+          <S>PSCommand_New-AzContainerRegistryScopeMap</S>
+          <S>PSFunction_New-AzContainerRegistryToken</S>
+          <S>PSCommand_New-AzContainerRegistryToken</S>
+          <S>PSFunction_New-AzContainerRegistryWebhook</S>
+          <S>PSCommand_New-AzContainerRegistryWebhook</S>
+          <S>PSFunction_Remove-AzContainerRegistry</S>
+          <S>PSCommand_Remove-AzContainerRegistry</S>
+          <S>PSFunction_Remove-AzContainerRegistryAgentPool</S>
+          <S>PSCommand_Remove-AzContainerRegistryAgentPool</S>
+          <S>PSFunction_Remove-AzContainerRegistryExportPipeline</S>
+          <S>PSCommand_Remove-AzContainerRegistryExportPipeline</S>
+          <S>PSFunction_Remove-AzContainerRegistryImportPipeline</S>
+          <S>PSCommand_Remove-AzContainerRegistryImportPipeline</S>
+          <S>PSFunction_Remove-AzContainerRegistryReplication</S>
+          <S>PSCommand_Remove-AzContainerRegistryReplication</S>
+          <S>PSFunction_Remove-AzContainerRegistryScopeMap</S>
+          <S>PSCommand_Remove-AzContainerRegistryScopeMap</S>
+          <S>PSFunction_Remove-AzContainerRegistryToken</S>
+          <S>PSCommand_Remove-AzContainerRegistryToken</S>
+          <S>PSFunction_Remove-AzContainerRegistryWebhook</S>
+          <S>PSCommand_Remove-AzContainerRegistryWebhook</S>
+          <S>PSFunction_Test-AzContainerRegistryNameAvailability</S>
+          <S>PSCommand_Test-AzContainerRegistryNameAvailability</S>
+          <S>PSFunction_Test-AzContainerRegistryWebhook</S>
+          <S>PSCommand_Test-AzContainerRegistryWebhook</S>
+          <S>PSFunction_Update-AzContainerRegistry</S>
+          <S>PSCommand_Update-AzContainerRegistry</S>
+          <S>PSFunction_Update-AzContainerRegistryAgentPool</S>
+          <S>PSCommand_Update-AzContainerRegistryAgentPool</S>
+          <S>PSFunction_Update-AzContainerRegistryCredential</S>
+          <S>PSCommand_Update-AzContainerRegistryCredential</S>
+          <S>PSFunction_Update-AzContainerRegistryScopeMap</S>
+          <S>PSCommand_Update-AzContainerRegistryScopeMap</S>
+          <S>PSFunction_Update-AzContainerRegistryToken</S>
+          <S>PSCommand_Update-AzContainerRegistryToken</S>
+          <S>PSFunction_Update-AzContainerRegistryWebhook</S>
+          <S>PSCommand_Update-AzContainerRegistryWebhook</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzContainerRegistry</S>
-                <S>Get-AzContainerRegistryAgentPool</S>
-                <S>Get-AzContainerRegistryAgentPoolQueueStatus</S>
-                <S>Get-AzContainerRegistryCredential</S>
-                <S>Get-AzContainerRegistryExportPipeline</S>
-                <S>Get-AzContainerRegistryImportPipeline</S>
-                <S>Get-AzContainerRegistryReplication</S>
-                <S>Get-AzContainerRegistryScopeMap</S>
-                <S>Get-AzContainerRegistryToken</S>
-                <S>Get-AzContainerRegistryUsage</S>
-                <S>Get-AzContainerRegistryWebhook</S>
-                <S>Get-AzContainerRegistryWebhookCallbackConfig</S>
-                <S>Get-AzContainerRegistryWebhookEvent</S>
-                <S>Import-AzContainerRegistryImage</S>
-                <S>New-AzContainerRegistry</S>
-                <S>New-AzContainerRegistryAgentPool</S>
-                <S>New-AzContainerRegistryCredentials</S>
-                <S>New-AzContainerRegistryExportPipeline</S>
-                <S>New-AzContainerRegistryImportPipeline</S>
-                <S>New-AzContainerRegistryIPRuleObject</S>
-                <S>New-AzContainerRegistryReplication</S>
-                <S>New-AzContainerRegistryScopeMap</S>
-                <S>New-AzContainerRegistryToken</S>
-                <S>New-AzContainerRegistryWebhook</S>
-                <S>Remove-AzContainerRegistry</S>
-                <S>Remove-AzContainerRegistryAgentPool</S>
-                <S>Remove-AzContainerRegistryExportPipeline</S>
-                <S>Remove-AzContainerRegistryImportPipeline</S>
-                <S>Remove-AzContainerRegistryReplication</S>
-                <S>Remove-AzContainerRegistryScopeMap</S>
-                <S>Remove-AzContainerRegistryToken</S>
-                <S>Remove-AzContainerRegistryWebhook</S>
-                <S>Test-AzContainerRegistryNameAvailability</S>
-                <S>Test-AzContainerRegistryWebhook</S>
-                <S>Update-AzContainerRegistry</S>
-                <S>Update-AzContainerRegistryAgentPool</S>
-                <S>Update-AzContainerRegistryCredential</S>
-                <S>Update-AzContainerRegistryScopeMap</S>
-                <S>Update-AzContainerRegistryToken</S>
-                <S>Update-AzContainerRegistryWebhook</S>
-              </LST>
-            </Obj>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Obj N="Value" RefId="6">
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Connect-AzContainerRegistry</S>
@@ -174,12 +223,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="8">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Connect-AzContainerRegistry</S>
@@ -197,69 +250,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Upgraded Azure.Core to 1.44.1.</S>
-      <Obj N="Dependencies" RefId="9">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="10">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="11">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Container Registry service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Container Registry, please visit the following: https://learn.microsoft.com/azure/container-registry/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package._x000D__x000A_* Upgraded Azure.Core to 1.44.1.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7226138</S>
-          <S N="downloadCount">113750664</S>
-          <S N="packageSize">1639766</S>
-          <S N="published">1/14/2025 3:12:49 AM -05:00</S>
-          <S N="created">1/14/2025 3:12:49 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM Registry ContainerRegistry PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Connect-AzContainerRegistry PSCommand_Connect-AzContainerRegistry PSCmdlet_Get-AzContainerRegistryManifest PSCommand_Get-AzContainerRegistryManifest PSCmdlet_Get-AzContainerRegistryRepository PSCommand_Get-AzContainerRegistryRepository PSCmdlet_Get-AzContainerRegistryTag PSCommand_Get-AzContainerRegistryTag PSCmdlet_Remove-AzContainerRegistryManifest PSCommand_Remove-AzContainerRegistryManifest PSCmdlet_Remove-AzContainerRegistryRepository PSCommand_Remove-AzContainerRegistryRepository PSCmdlet_Remove-AzContainerRegistryTag PSCommand_Remove-AzContainerRegistryTag PSCmdlet_Update-AzContainerRegistryManifest PSCommand_Update-AzContainerRegistryManifest PSCmdlet_Update-AzContainerRegistryRepository PSCommand_Update-AzContainerRegistryRepository PSCmdlet_Update-AzContainerRegistryTag PSCommand_Update-AzContainerRegistryTag PSIncludes_Cmdlet PSFunction_Get-AzContainerRegistry PSCommand_Get-AzContainerRegistry PSFunction_Get-AzContainerRegistryAgentPool PSCommand_Get-AzContainerRegistryAgentPool PSFunction_Get-AzContainerRegistryAgentPoolQueueStatus PSCommand_Get-AzContainerRegistryAgentPoolQueueStatus PSFunction_Get-AzContainerRegistryCredential PSCommand_Get-AzContainerRegistryCredential PSFunction_Get-AzContainerRegistryExportPipeline PSCommand_Get-AzContainerRegistryExportPipeline PSFunction_Get-AzContainerRegistryImportPipeline PSCommand_Get-AzContainerRegistryImportPipeline PSFunction_Get-AzContainerRegistryReplication PSCommand_Get-AzContainerRegistryReplication PSFunction_Get-AzContainerRegistryScopeMap PSCommand_Get-AzContainerRegistryScopeMap PSFunction_Get-AzContainerRegistryToken PSCommand_Get-AzContainerRegistryToken PSFunction_Get-AzContainerRegistryUsage PSCommand_Get-AzContainerRegistryUsage PSFunction_Get-AzContainerRegistryWebhook PSCommand_Get-AzContainerRegistryWebhook PSFunction_Get-AzContainerRegistryWebhookCallbackConfig PSCommand_Get-AzContainerRegistryWebhookCallbackConfig PSFunction_Get-AzContainerRegistryWebhookEvent PSCommand_Get-AzContainerRegistryWebhookEvent PSFunction_Import-AzContainerRegistryImage PSCommand_Import-AzContainerRegistryImage PSFunction_New-AzContainerRegistry PSCommand_New-AzContainerRegistry PSFunction_New-AzContainerRegistryAgentPool PSCommand_New-AzContainerRegistryAgentPool PSFunction_New-AzContainerRegistryCredentials PSCommand_New-AzContainerRegistryCredentials PSFunction_New-AzContainerRegistryExportPipeline PSCommand_New-AzContainerRegistryExportPipeline PSFunction_New-AzContainerRegistryImportPipeline PSCommand_New-AzContainerRegistryImportPipeline PSFunction_New-AzContainerRegistryIPRuleObject PSCommand_New-AzContainerRegistryIPRuleObject PSFunction_New-AzContainerRegistryReplication PSCommand_New-AzContainerRegistryReplication PSFunction_New-AzContainerRegistryScopeMap PSCommand_New-AzContainerRegistryScopeMap PSFunction_New-AzContainerRegistryToken PSCommand_New-AzContainerRegistryToken PSFunction_New-AzContainerRegistryWebhook PSCommand_New-AzContainerRegistryWebhook PSFunction_Remove-AzContainerRegistry PSCommand_Remove-AzContainerRegistry PSFunction_Remove-AzContainerRegistryAgentPool PSCommand_Remove-AzContainerRegistryAgentPool PSFunction_Remove-AzContainerRegistryExportPipeline PSCommand_Remove-AzContainerRegistryExportPipeline PSFunction_Remove-AzContainerRegistryImportPipeline PSCommand_Remove-AzContainerRegistryImportPipeline PSFunction_Remove-AzContainerRegistryReplication PSCommand_Remove-AzContainerRegistryReplication PSFunction_Remove-AzContainerRegistryScopeMap PSCommand_Remove-AzContainerRegistryScopeMap PSFunction_Remove-AzContainerRegistryToken PSCommand_Remove-AzContainerRegistryToken PSFunction_Remove-AzContainerRegistryWebhook PSCommand_Remove-AzContainerRegistryWebhook PSFunction_Test-AzContainerRegistryNameAvailability PSCommand_Test-AzContainerRegistryNameAvailability PSFunction_Test-AzContainerRegistryWebhook PSCommand_Test-AzContainerRegistryWebhook PSFunction_Update-AzContainerRegistry PSCommand_Update-AzContainerRegistry PSFunction_Update-AzContainerRegistryAgentPool PSCommand_Update-AzContainerRegistryAgentPool PSFunction_Update-AzContainerRegistryCredential PSCommand_Update-AzContainerRegistryCredential PSFunction_Update-AzContainerRegistryScopeMap PSCommand_Update-AzContainerRegistryScopeMap PSFunction_Update-AzContainerRegistryToken PSCommand_Update-AzContainerRegistryToken PSFunction_Update-AzContainerRegistryWebhook PSCommand_Update-AzContainerRegistryWebhook PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">4.3.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.ContainerRegistry.nuspec|ContainerRegistry.Autorest\custom\Get-AzContainerRegistryWebhook.ps1|ContainerRegistry.Autorest\custom\New-AzContainerRegistryCredentials.ps1|ContainerRegistry.Autorest\custom\New-AzContainerRegistryWebhook.ps1|ContainerRegistry.Autorest\custom\Test-AzContainerRegistryWebhook.ps1|ContainerRegistry.Autorest\custom\autogen-model-cmdlets\New-AzContainerRegistryIPRuleObject.ps1|ContainerRegistry.Autorest\internal\Az.ContainerRegistry.internal.psm1|ContainerRegistry.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|ContainerRegistry.Autorest\utils\Unprotect-SecureString.ps1|Az.ContainerRegistry.psm1|ContainerRegistry.format.ps1xml|Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll|ContainerRegistry.Autorest\Az.ContainerRegistry.format.ps1xml|ContainerRegistry.Autorest\bin\Az.ContainerRegistry.private.dll|ContainerRegistry.Autorest\custom\Credential.cs|ContainerRegistry.Autorest\custom\Get-AzContainerRegistryCredential.ps1|ContainerRegistry.Autorest\custom\Get-AzContainerRegistryWebhookEvent.ps1|ContainerRegistry.Autorest\custom\New-AzContainerRegistryReplication.ps1|ContainerRegistry.Autorest\custom\Registry.cs|ContainerRegistry.Autorest\custom\Update-AzContainerRegistryCredential.ps1|ContainerRegistry.Autorest\exports\ProxyCmdletDefinitions.ps1|ContainerRegistry.Autorest\internal\ProxyCmdletDefinitions.ps1|Az.ContainerRegistry.psd1|Azure.Containers.ContainerRegistry.dll|Microsoft.Azure.ContainerRegistry.dll|Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.dll-Help.xml|ContainerRegistry.Autorest\Az.ContainerRegistry.psm1|ContainerRegistry.Autorest\custom\Az.ContainerRegistry.custom.psm1|ContainerRegistry.Autorest\custom\Get-AzContainerRegistry.ps1|ContainerRegistry.Autorest\custom\Get-AzContainerRegistryReplication.ps1|.signature.p7s</S>
-          <S N="GUID">11a1f96b-f261-4be1-8e1e-1613eedddacc</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ContainerRegistry\4.3.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

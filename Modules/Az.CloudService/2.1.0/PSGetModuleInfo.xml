@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.CloudService</S>
-      <Version N="Version">2.1.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">2.1.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell: CloudService cmdlets</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:12:02-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:27.7535735-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:12:02.333</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:24.2147951-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,16 +42,88 @@
           <S>CloudService</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSFunction_Get-AzCloudService</S>
+          <S>PSCommand_Get-AzCloudService</S>
+          <S>PSFunction_Get-AzCloudServiceInstanceView</S>
+          <S>PSCommand_Get-AzCloudServiceInstanceView</S>
+          <S>PSFunction_Get-AzCloudServiceNetworkInterface</S>
+          <S>PSCommand_Get-AzCloudServiceNetworkInterface</S>
+          <S>PSFunction_Get-AzCloudServiceOSFamily</S>
+          <S>PSCommand_Get-AzCloudServiceOSFamily</S>
+          <S>PSFunction_Get-AzCloudServiceOSVersion</S>
+          <S>PSCommand_Get-AzCloudServiceOSVersion</S>
+          <S>PSFunction_Get-AzCloudServicePublicIPAddress</S>
+          <S>PSCommand_Get-AzCloudServicePublicIPAddress</S>
+          <S>PSFunction_Get-AzCloudServiceRoleInstance</S>
+          <S>PSCommand_Get-AzCloudServiceRoleInstance</S>
+          <S>PSFunction_Get-AzCloudServiceRoleInstanceRemoteDesktopFile</S>
+          <S>PSCommand_Get-AzCloudServiceRoleInstanceRemoteDesktopFile</S>
+          <S>PSFunction_Get-AzCloudServiceRoleInstanceView</S>
+          <S>PSCommand_Get-AzCloudServiceRoleInstanceView</S>
+          <S>PSFunction_Invoke-AzCloudServiceRebuild</S>
+          <S>PSCommand_Invoke-AzCloudServiceRebuild</S>
+          <S>PSFunction_Invoke-AzCloudServiceReimage</S>
+          <S>PSCommand_Invoke-AzCloudServiceReimage</S>
+          <S>PSFunction_Invoke-AzCloudServiceRoleInstanceRebuild</S>
+          <S>PSCommand_Invoke-AzCloudServiceRoleInstanceRebuild</S>
+          <S>PSFunction_Invoke-AzCloudServiceRoleInstanceReimage</S>
+          <S>PSCommand_Invoke-AzCloudServiceRoleInstanceReimage</S>
+          <S>PSFunction_New-AzCloudService</S>
+          <S>PSCommand_New-AzCloudService</S>
+          <S>PSFunction_New-AzCloudServiceDiagnosticsExtension</S>
+          <S>PSCommand_New-AzCloudServiceDiagnosticsExtension</S>
+          <S>PSFunction_New-AzCloudServiceExtensionObject</S>
+          <S>PSCommand_New-AzCloudServiceExtensionObject</S>
+          <S>PSFunction_New-AzCloudServiceLoadBalancerConfigurationObject</S>
+          <S>PSCommand_New-AzCloudServiceLoadBalancerConfigurationObject</S>
+          <S>PSFunction_New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject</S>
+          <S>PSCommand_New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject</S>
+          <S>PSFunction_New-AzCloudServiceRemoteDesktopExtensionObject</S>
+          <S>PSCommand_New-AzCloudServiceRemoteDesktopExtensionObject</S>
+          <S>PSFunction_New-AzCloudServiceRoleProfilePropertiesObject</S>
+          <S>PSCommand_New-AzCloudServiceRoleProfilePropertiesObject</S>
+          <S>PSFunction_New-AzCloudServiceVaultSecretGroupObject</S>
+          <S>PSCommand_New-AzCloudServiceVaultSecretGroupObject</S>
+          <S>PSFunction_Remove-AzCloudService</S>
+          <S>PSCommand_Remove-AzCloudService</S>
+          <S>PSFunction_Remove-AzCloudServiceRoleInstance</S>
+          <S>PSCommand_Remove-AzCloudServiceRoleInstance</S>
+          <S>PSFunction_Restart-AzCloudService</S>
+          <S>PSCommand_Restart-AzCloudService</S>
+          <S>PSFunction_Restart-AzCloudServiceRoleInstance</S>
+          <S>PSCommand_Restart-AzCloudServiceRoleInstance</S>
+          <S>PSFunction_Set-AzCloudServiceUpdateDomain</S>
+          <S>PSCommand_Set-AzCloudServiceUpdateDomain</S>
+          <S>PSFunction_Start-AzCloudService</S>
+          <S>PSCommand_Start-AzCloudService</S>
+          <S>PSFunction_Stop-AzCloudService</S>
+          <S>PSCommand_Stop-AzCloudService</S>
+          <S>PSFunction_Switch-AzCloudService</S>
+          <S>PSCommand_Switch-AzCloudService</S>
+          <S>PSFunction_Update-AzCloudService</S>
+          <S>PSCommand_Update-AzCloudService</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
@@ -94,127 +161,98 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzCloudService</S>
-                <S>Get-AzCloudServiceInstanceView</S>
-                <S>Get-AzCloudServiceNetworkInterface</S>
-                <S>Get-AzCloudServiceOSFamily</S>
-                <S>Get-AzCloudServiceOSVersion</S>
-                <S>Get-AzCloudServicePublicIPAddress</S>
-                <S>Get-AzCloudServiceRoleInstance</S>
-                <S>Get-AzCloudServiceRoleInstanceRemoteDesktopFile</S>
-                <S>Get-AzCloudServiceRoleInstanceView</S>
-                <S>Invoke-AzCloudServiceRebuild</S>
-                <S>Invoke-AzCloudServiceReimage</S>
-                <S>Invoke-AzCloudServiceRoleInstanceRebuild</S>
-                <S>Invoke-AzCloudServiceRoleInstanceReimage</S>
-                <S>New-AzCloudService</S>
-                <S>New-AzCloudServiceDiagnosticsExtension</S>
-                <S>New-AzCloudServiceExtensionObject</S>
-                <S>New-AzCloudServiceLoadBalancerConfigurationObject</S>
-                <S>New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject</S>
-                <S>New-AzCloudServiceRemoteDesktopExtensionObject</S>
-                <S>New-AzCloudServiceRoleProfilePropertiesObject</S>
-                <S>New-AzCloudServiceVaultSecretGroupObject</S>
-                <S>Remove-AzCloudService</S>
-                <S>Remove-AzCloudServiceRoleInstance</S>
-                <S>Restart-AzCloudService</S>
-                <S>Restart-AzCloudServiceRoleInstance</S>
-                <S>Set-AzCloudServiceUpdateDomain</S>
-                <S>Start-AzCloudService</S>
-                <S>Stop-AzCloudService</S>
-                <S>Switch-AzCloudService</S>
-                <S>Update-AzCloudService</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell: CloudService cmdlets</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7067342</S>
-          <S N="downloadCount">80919728</S>
-          <S N="packageSize">926983</S>
-          <S N="published">1/14/2025 3:12:02 AM -05:00</S>
-          <S N="created">1/14/2025 3:12:02 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule CloudService PSEdition_Core PSEdition_Desktop PSFunction_Get-AzCloudService PSCommand_Get-AzCloudService PSFunction_Get-AzCloudServiceInstanceView PSCommand_Get-AzCloudServiceInstanceView PSFunction_Get-AzCloudServiceNetworkInterface PSCommand_Get-AzCloudServiceNetworkInterface PSFunction_Get-AzCloudServiceOSFamily PSCommand_Get-AzCloudServiceOSFamily PSFunction_Get-AzCloudServiceOSVersion PSCommand_Get-AzCloudServiceOSVersion PSFunction_Get-AzCloudServicePublicIPAddress PSCommand_Get-AzCloudServicePublicIPAddress PSFunction_Get-AzCloudServiceRoleInstance PSCommand_Get-AzCloudServiceRoleInstance PSFunction_Get-AzCloudServiceRoleInstanceRemoteDesktopFile PSCommand_Get-AzCloudServiceRoleInstanceRemoteDesktopFile PSFunction_Get-AzCloudServiceRoleInstanceView PSCommand_Get-AzCloudServiceRoleInstanceView PSFunction_Invoke-AzCloudServiceRebuild PSCommand_Invoke-AzCloudServiceRebuild PSFunction_Invoke-AzCloudServiceReimage PSCommand_Invoke-AzCloudServiceReimage PSFunction_Invoke-AzCloudServiceRoleInstanceRebuild PSCommand_Invoke-AzCloudServiceRoleInstanceRebuild PSFunction_Invoke-AzCloudServiceRoleInstanceReimage PSCommand_Invoke-AzCloudServiceRoleInstanceReimage PSFunction_New-AzCloudService PSCommand_New-AzCloudService PSFunction_New-AzCloudServiceDiagnosticsExtension PSCommand_New-AzCloudServiceDiagnosticsExtension PSFunction_New-AzCloudServiceExtensionObject PSCommand_New-AzCloudServiceExtensionObject PSFunction_New-AzCloudServiceLoadBalancerConfigurationObject PSCommand_New-AzCloudServiceLoadBalancerConfigurationObject PSFunction_New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject PSCommand_New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject PSFunction_New-AzCloudServiceRemoteDesktopExtensionObject PSCommand_New-AzCloudServiceRemoteDesktopExtensionObject PSFunction_New-AzCloudServiceRoleProfilePropertiesObject PSCommand_New-AzCloudServiceRoleProfilePropertiesObject PSFunction_New-AzCloudServiceVaultSecretGroupObject PSCommand_New-AzCloudServiceVaultSecretGroupObject PSFunction_Remove-AzCloudService PSCommand_Remove-AzCloudService PSFunction_Remove-AzCloudServiceRoleInstance PSCommand_Remove-AzCloudServiceRoleInstance PSFunction_Restart-AzCloudService PSCommand_Restart-AzCloudService PSFunction_Restart-AzCloudServiceRoleInstance PSCommand_Restart-AzCloudServiceRoleInstance PSFunction_Set-AzCloudServiceUpdateDomain PSCommand_Set-AzCloudServiceUpdateDomain PSFunction_Start-AzCloudService PSCommand_Start-AzCloudService PSFunction_Stop-AzCloudService PSCommand_Stop-AzCloudService PSFunction_Switch-AzCloudService PSCommand_Switch-AzCloudService PSFunction_Update-AzCloudService PSCommand_Update-AzCloudService PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.CloudService.nuspec|CloudService.Autorest\custom\Az.CloudService.custom.psm1|CloudService.Autorest\custom\New-AzCloudServiceDiagnosticsExtension.ps1|CloudService.Autorest\custom\New-AzCloudServiceLoadBalancerConfigurationObject.ps1|CloudService.Autorest\custom\New-AzCloudServiceRemoteDesktopExtensionObject.ps1|CloudService.Autorest\custom\New-AzCloudServiceVaultSecretGroupObject.ps1|CloudService.Autorest\custom\Serialization\CloudService.cs|CloudService.Autorest\custom\Serialization\CloudServiceVaultCertificate.cs|CloudService.Autorest\custom\Serialization\RoleInstanceTags.cs|CloudService.Autorest\custom\Serialization\StatusCodeCount.cs|CloudService.Autorest\exports\ProxyCmdletDefinitions.ps1|CloudService.Autorest\internal\Az.CloudService.internal.psm1|CloudService.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|CloudService.Autorest\utils\Unprotect-SecureString.ps1|Az.CloudService.psm1|CloudService.Autorest\Az.CloudService.psm1|CloudService.Autorest\custom\New-AzCloudService.ps1|CloudService.Autorest\custom\New-AzCloudServiceExtensionObject.ps1|CloudService.Autorest\custom\New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject.ps1|CloudService.Autorest\custom\New-AzCloudServiceRoleProfilePropertiesObject.ps1|CloudService.Autorest\custom\Switch-AzCloudService.ps1|CloudService.Autorest\custom\Serialization\CloudServiceTags.cs|CloudService.Autorest\custom\Serialization\ResourceInstanceViewStatus.cs|Az.CloudService.psd1|CloudService.Autorest\Az.CloudService.format.ps1xml|CloudService.Autorest\bin\Az.CloudService.private.dll|.signature.p7s</S>
-          <S N="GUID">a41eb61d-c5a1-4e9b-81a7-b8905fff7f2c</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.CloudService\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

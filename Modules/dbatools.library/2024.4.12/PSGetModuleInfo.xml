@@ -22,7 +22,7 @@
       <S N="CompanyName">dbatools.io</S>
       <S N="Copyright">Copyright (c) 2024 by dbatools, licensed under MIT</S>
       <DT N="PublishedDate">2024-04-12T15:43:22.32</DT>
-      <DT N="InstalledDate">2025-03-30T22:13:02.8526102-04:00</DT>
+      <DT N="InstalledDate">2025-05-12T15:01:58.2192155-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://opensource.org/licenses/MIT</URI>
@@ -81,15 +81,15 @@
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Workflow</S>
-            <Nil N="Value" />
-          </En>
-          <En>
             <S N="Key">DscResource</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
         </DCT>
       </Obj>

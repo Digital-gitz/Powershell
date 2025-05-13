@@ -26,13 +26,20 @@ $coreDir = Join-Path $scriptsDir "Core"
 . (Join-Path $coreDir "Configuration.ps1")
 
 # Set up environment
-$env:PATH = @(
-    $env:PATH,
+$pathsToAdd = @(
     "C:\Users\Digital_Russkiy\AppData\Local\Microsoft\PowerToys\PowerToys Run",
     (Get-CommonPaths).Scripts,
     "$HOME\.local\bin",
     "$HOME\AppData\Local\Programs\Microsoft VS Code\bin"
-) -join ";"
+)
+
+$newPaths = $pathsToAdd | Where-Object { 
+    Test-Path $_ 
+} | ForEach-Object {
+    (Resolve-Path $_).Path
+}
+
+$env:PATH = ($env:PATH.Split(';') + $newPaths | Select-Object -Unique) -join ";"
 
 # Check for admin privileges
 $isAdmin = [Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
@@ -45,7 +52,8 @@ function Import-ModuleSafely {
     param(
         [string]$Name,
         [string]$Scope = 'CurrentUser',
-        [string]$Purpose
+        [string]$Purpose,
+        [string]$MinimumVersion
     )
     
     try {
@@ -56,7 +64,15 @@ function Import-ModuleSafely {
 
         if (-not (Get-Module -Name $Name -ListAvailable)) {
             Write-Host "Installing module $Name..." -ForegroundColor Cyan
-            Install-Module -Name $Name -Force -Scope $Scope
+            $params = @{
+                Name  = $Name
+                Force = $true
+                Scope = $Scope
+            }
+            if ($MinimumVersion) {
+                $params['MinimumVersion'] = $MinimumVersion
+            }
+            Install-Module @params
         }
         Import-Module -Name $Name -Force -DisableNameChecking
         Write-Host "✓ Loaded $Name" -ForegroundColor Green
@@ -82,7 +98,14 @@ foreach ($module in $essentialModules) {
 
 # Initialize Oh My Posh with fallback
 try {
-    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnosterplus.omp.json" | Invoke-Expression
+    $themeFile = "$env:POSH_THEMES_PATH\agnosterplus.omp.json"
+    if (Test-Path $themeFile) {
+        oh-my-posh init pwsh --config $themeFile | Invoke-Expression
+    }
+    else {
+        Write-Host "⚠️ Oh My Posh theme file not found: $themeFile" -ForegroundColor Yellow
+        throw "Theme file not found"
+    }
 }
 catch {
     function prompt {
@@ -168,19 +191,22 @@ $scriptCategories = @{
     Navigation     = @("cd-downloads.ps1")
     Development    = @("Notes-Function.ps1")
     UI             = @("winfetch-pro.ps1")
-    Networking     = @("LLM-Funk.ps1", "Shopping-Funk.ps1")
+    Networking     = @("NetworkingTools.ps1")
+    URL            = @("LLM-Funk.ps1", "Shopping-Funk.ps1")
 }                               
 
 # Function to safely load a script
 function Import-ScriptSafely {
     param(
         [string]$Category,
-        [string]$ScriptName
+        [string]$ScriptName,
+        [int]$TimeoutSeconds = 10
     )
     
     $scriptPath = Join-Path $scriptsDir $Category $ScriptName
     if (Test-Path $scriptPath) {
         try {
+            # Dot source the script directly instead of using jobs
             . $scriptPath
             Write-Host "✓ Loaded $ScriptName" -ForegroundColor Green
         }
@@ -194,25 +220,21 @@ function Import-ScriptSafely {
 }
 
 # Load scripts in order
-$loadOrder = @("Core", "UI", "Networking", "Development", "Navigation", "FileManagement")
+$loadOrder = @(
+    "Core", 
+    "UI",
+    "Networking",
+    "URL",
+    "Development", 
+    "Navigation",
+    "FileManagement"
+)
 foreach ($category in $loadOrder) {
     if ($scriptCategories.ContainsKey($category)) {
         foreach ($script in $scriptCategories[$category]) {
             Import-ScriptSafely -Category $category -ScriptName $script
         }
     }
-}
-
-# Utility functions
-function market-sum {
-    Write-Host "`n📈 Getting market summary..." -ForegroundColor Cyan
-    try {
-        curl terminal-stocks.dev/market-summary
-    }
-    catch {
-        Write-Host "Failed to retrieve market summary: $($_.Exception.Message)" -ForegroundColor Red
-    }
-    Write-Host
 }
 
 function Get-CommandSuggestion {
@@ -285,4 +307,93 @@ function restart {
     Write-Host "✓ PowerShell session restarted successfully!" -ForegroundColor Green
 }
 
+$profileLoadStart = Get-Date
+
 Write-Host "`n🚀 PowerShell profile loaded and ready!" -ForegroundColor Cyan
+
+$loadTime = (Get-Date) - $profileLoadStart
+Write-Host "`n🚀 PowerShell profile loaded in $([math]::Round($loadTime.TotalMilliseconds))ms!" -ForegroundColor Cyan
+
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+
+# Check if Node.js is installed
+if (Get-Command node -ErrorAction SilentlyContinue) {
+    Write-Host "Node.js is installed" -ForegroundColor Green
+}
+else {
+    Write-Host "Node.js is not installed" -ForegroundColor Red
+}
+
+
+function global:tabMate {
+    Write-Host "Opening Clip Studio Tab Mate..." -ForegroundColor Cyan
+    Start-Process "https://www.clipstudio.net/promotion/tabmate/en"
+}
+
+function global:clipStudio_web {
+    Write-Host "Opening Clip Studio..." -ForegroundColor Cyan
+    Start-Process "https://www.clipstudio.net/en"
+}
+
+function global:clipStudio {
+    Write-Host "Opening Clip Studio Paint..." -ForegroundColor Cyan
+    Start-Process "C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP STUDIO\CLIPStudio.exe"
+}
+
+function global:edit_powershell_profile {
+    Write-Host "Opening PowerShell Profile..." -ForegroundColor Cyan
+    
+    # Define paths
+    $profilePath = $PROFILE
+    $profileDir = Split-Path $profilePath -Parent
+    
+    # Test GitHub connectivity and open repo if available
+    try {
+        $null = Invoke-WebRequest -Uri "https://github.com" -UseBasicParsing -TimeoutSec 5
+        Start-Process "https://github.com/Digital-gitz/PowerShell"
+    }
+    catch {
+        Write-Warning "Could not connect to GitHub. Please check your internet connection."
+    }
+
+    # Change to PowerShell directory
+    if (Test-Path $profileDir) {
+        Set-Location $profileDir
+    }
+    else {
+        Write-Warning "PowerShell profile directory not found at: $profileDir"
+    }
+
+    # Open in editor
+    if (Get-Command cursor -ErrorAction SilentlyContinue) {
+        Start-Process "cursor" -ArgumentList $profileDir
+    }
+    else {
+        Write-Warning "Cursor editor not found. Please ensure it is installed and in your PATH."
+    }
+}
+
+
+# function global:powershell_profile {
+#     Write-Host "Opening PowerShell Profile..." -ForegroundColor Cyan
+    
+#     # Check if VS Code workspace file exists
+#     $workspacePath = Join-Path $PSScriptRoot ".vscode\PowerShell.code-workspace"
+#     if (Test-Path $workspacePath) {
+#         Start-Process "code" -ArgumentList $workspacePath
+#     }
+#     else {
+#         Write-Warning "VS Code workspace file not found at: $workspacePath"
+#         # Fallback to opening the profile directly
+#         code $PROFILE
+#     }
+
+#     # Test GitHub connectivity and open repo
+#     try {
+#         $null = Invoke-WebRequest -Uri "https://github.com" -UseBasicParsing -TimeoutSec 5
+#         Start-Process "https://github.com/Digital-gitz/PowerShell"
+#     }
+#     catch {
+#         Write-Warning "Could not connect to GitHub. Please check your internet connection."
+#     }
+# }

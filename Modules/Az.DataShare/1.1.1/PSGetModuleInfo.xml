@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.DataShare</S>
-      <Version N="Version">1.1.1</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.1.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - DataShare service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-03-04T04:14:42-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:46.1299999-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-03-04T04:14:42.657</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:31.0247491-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,32 +42,101 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Get-AzDataShare</S>
+          <S>PSCommand_Get-AzDataShare</S>
+          <S>PSCmdlet_Get-AzDataShareAccount</S>
+          <S>PSCommand_Get-AzDataShareAccount</S>
+          <S>PSCmdlet_Get-AzDataShareDataSet</S>
+          <S>PSCommand_Get-AzDataShareDataSet</S>
+          <S>PSCmdlet_Get-AzDataShareDataSetMapping</S>
+          <S>PSCommand_Get-AzDataShareDataSetMapping</S>
+          <S>PSCmdlet_Get-AzDataShareInvitation</S>
+          <S>PSCommand_Get-AzDataShareInvitation</S>
+          <S>PSCmdlet_Get-AzDataShareProviderShareSubscription</S>
+          <S>PSCommand_Get-AzDataShareProviderShareSubscription</S>
+          <S>PSCmdlet_Get-AzDataShareReceivedInvitation</S>
+          <S>PSCommand_Get-AzDataShareReceivedInvitation</S>
+          <S>PSCmdlet_Get-AzDataShareSourceDataSet</S>
+          <S>PSCommand_Get-AzDataShareSourceDataSet</S>
+          <S>PSCmdlet_Get-AzDataShareSubscription</S>
+          <S>PSCommand_Get-AzDataShareSubscription</S>
+          <S>PSCmdlet_Get-AzDataShareSubscriptionSynchronization</S>
+          <S>PSCommand_Get-AzDataShareSubscriptionSynchronization</S>
+          <S>PSCmdlet_Get-AzDataShareSubscriptionSynchronizationDetail</S>
+          <S>PSCommand_Get-AzDataShareSubscriptionSynchronizationDetail</S>
+          <S>PSCmdlet_Get-AzDataShareSynchronization</S>
+          <S>PSCommand_Get-AzDataShareSynchronization</S>
+          <S>PSCmdlet_Get-AzDataShareSynchronizationDetail</S>
+          <S>PSCommand_Get-AzDataShareSynchronizationDetail</S>
+          <S>PSCmdlet_Get-AzDataShareSynchronizationSetting</S>
+          <S>PSCommand_Get-AzDataShareSynchronizationSetting</S>
+          <S>PSCmdlet_Get-AzDataShareTrigger</S>
+          <S>PSCommand_Get-AzDataShareTrigger</S>
+          <S>PSCmdlet_Grant-AzDataShareSubscriptionAccess</S>
+          <S>PSCommand_Grant-AzDataShareSubscriptionAccess</S>
+          <S>PSCmdlet_New-AzDataShare</S>
+          <S>PSCommand_New-AzDataShare</S>
+          <S>PSCmdlet_New-AzDataShareAccount</S>
+          <S>PSCommand_New-AzDataShareAccount</S>
+          <S>PSCmdlet_New-AzDataShareDataSet</S>
+          <S>PSCommand_New-AzDataShareDataSet</S>
+          <S>PSCmdlet_New-AzDataShareDataSetMapping</S>
+          <S>PSCommand_New-AzDataShareDataSetMapping</S>
+          <S>PSCmdlet_New-AzDataShareInvitation</S>
+          <S>PSCommand_New-AzDataShareInvitation</S>
+          <S>PSCmdlet_New-AzDataShareSubscription</S>
+          <S>PSCommand_New-AzDataShareSubscription</S>
+          <S>PSCmdlet_New-AzDataShareSynchronizationSetting</S>
+          <S>PSCommand_New-AzDataShareSynchronizationSetting</S>
+          <S>PSCmdlet_New-AzDataShareTrigger</S>
+          <S>PSCommand_New-AzDataShareTrigger</S>
+          <S>PSCmdlet_Remove-AzDataShare</S>
+          <S>PSCommand_Remove-AzDataShare</S>
+          <S>PSCmdlet_Remove-AzDataShareAccount</S>
+          <S>PSCommand_Remove-AzDataShareAccount</S>
+          <S>PSCmdlet_Remove-AzDataShareDataSet</S>
+          <S>PSCommand_Remove-AzDataShareDataSet</S>
+          <S>PSCmdlet_Remove-AzDataShareDataSetMapping</S>
+          <S>PSCommand_Remove-AzDataShareDataSetMapping</S>
+          <S>PSCmdlet_Remove-AzDataShareInvitation</S>
+          <S>PSCommand_Remove-AzDataShareInvitation</S>
+          <S>PSCmdlet_Remove-AzDataShareSubscription</S>
+          <S>PSCommand_Remove-AzDataShareSubscription</S>
+          <S>PSCmdlet_Remove-AzDataShareSynchronizationSetting</S>
+          <S>PSCommand_Remove-AzDataShareSynchronizationSetting</S>
+          <S>PSCmdlet_Remove-AzDataShareTrigger</S>
+          <S>PSCommand_Remove-AzDataShareTrigger</S>
+          <S>PSCmdlet_Revoke-AzDataShareSubscriptionAccess</S>
+          <S>PSCommand_Revoke-AzDataShareSubscriptionAccess</S>
+          <S>PSCmdlet_Set-AzDataShare</S>
+          <S>PSCommand_Set-AzDataShare</S>
+          <S>PSCmdlet_Start-AzDataShareSubscriptionSynchronization</S>
+          <S>PSCommand_Start-AzDataShareSubscriptionSynchronization</S>
+          <S>PSCmdlet_Stop-AzDataShareSubscriptionSynchronization</S>
+          <S>PSCommand_Stop-AzDataShareSubscriptionSynchronization</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzDataShare</S>
@@ -115,12 +179,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzDataShare</S>
@@ -164,69 +232,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Removed 'Microsoft.Azure.Management.DataShare' Version '1.0.1' PackageReference</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.2</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.2</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.2, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.2</ToString>
+                    <Props>
+                      <Version N="Version">4.0.2.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.2</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">2</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.2, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - DataShare service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Removed 'Microsoft.Azure.Management.DataShare' Version '1.0.1' PackageReference</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">610885</S>
-          <S N="downloadCount">102958750</S>
-          <S N="packageSize">223355</S>
-          <S N="published">3/4/2025 4:14:42 AM -05:00</S>
-          <S N="created">3/4/2025 4:14:42 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM DataShare PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzDataShare PSCommand_Get-AzDataShare PSCmdlet_Get-AzDataShareAccount PSCommand_Get-AzDataShareAccount PSCmdlet_Get-AzDataShareDataSet PSCommand_Get-AzDataShareDataSet PSCmdlet_Get-AzDataShareDataSetMapping PSCommand_Get-AzDataShareDataSetMapping PSCmdlet_Get-AzDataShareInvitation PSCommand_Get-AzDataShareInvitation PSCmdlet_Get-AzDataShareProviderShareSubscription PSCommand_Get-AzDataShareProviderShareSubscription PSCmdlet_Get-AzDataShareReceivedInvitation PSCommand_Get-AzDataShareReceivedInvitation PSCmdlet_Get-AzDataShareSourceDataSet PSCommand_Get-AzDataShareSourceDataSet PSCmdlet_Get-AzDataShareSubscription PSCommand_Get-AzDataShareSubscription PSCmdlet_Get-AzDataShareSubscriptionSynchronization PSCommand_Get-AzDataShareSubscriptionSynchronization PSCmdlet_Get-AzDataShareSubscriptionSynchronizationDetail PSCommand_Get-AzDataShareSubscriptionSynchronizationDetail PSCmdlet_Get-AzDataShareSynchronization PSCommand_Get-AzDataShareSynchronization PSCmdlet_Get-AzDataShareSynchronizationDetail PSCommand_Get-AzDataShareSynchronizationDetail PSCmdlet_Get-AzDataShareSynchronizationSetting PSCommand_Get-AzDataShareSynchronizationSetting PSCmdlet_Get-AzDataShareTrigger PSCommand_Get-AzDataShareTrigger PSCmdlet_Grant-AzDataShareSubscriptionAccess PSCommand_Grant-AzDataShareSubscriptionAccess PSCmdlet_New-AzDataShare PSCommand_New-AzDataShare PSCmdlet_New-AzDataShareAccount PSCommand_New-AzDataShareAccount PSCmdlet_New-AzDataShareDataSet PSCommand_New-AzDataShareDataSet PSCmdlet_New-AzDataShareDataSetMapping PSCommand_New-AzDataShareDataSetMapping PSCmdlet_New-AzDataShareInvitation PSCommand_New-AzDataShareInvitation PSCmdlet_New-AzDataShareSubscription PSCommand_New-AzDataShareSubscription PSCmdlet_New-AzDataShareSynchronizationSetting PSCommand_New-AzDataShareSynchronizationSetting PSCmdlet_New-AzDataShareTrigger PSCommand_New-AzDataShareTrigger PSCmdlet_Remove-AzDataShare PSCommand_Remove-AzDataShare PSCmdlet_Remove-AzDataShareAccount PSCommand_Remove-AzDataShareAccount PSCmdlet_Remove-AzDataShareDataSet PSCommand_Remove-AzDataShareDataSet PSCmdlet_Remove-AzDataShareDataSetMapping PSCommand_Remove-AzDataShareDataSetMapping PSCmdlet_Remove-AzDataShareInvitation PSCommand_Remove-AzDataShareInvitation PSCmdlet_Remove-AzDataShareSubscription PSCommand_Remove-AzDataShareSubscription PSCmdlet_Remove-AzDataShareSynchronizationSetting PSCommand_Remove-AzDataShareSynchronizationSetting PSCmdlet_Remove-AzDataShareTrigger PSCommand_Remove-AzDataShareTrigger PSCmdlet_Revoke-AzDataShareSubscriptionAccess PSCommand_Revoke-AzDataShareSubscriptionAccess PSCmdlet_Set-AzDataShare PSCommand_Set-AzDataShare PSCmdlet_Start-AzDataShareSubscriptionSynchronization PSCommand_Start-AzDataShareSubscriptionSynchronization PSCmdlet_Stop-AzDataShareSubscriptionSynchronization PSCommand_Stop-AzDataShareSubscriptionSynchronization PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.1.1</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.DataShare.nuspec|Az.DataShare.psd1|Az.DataShare.psm1|Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll|Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml|Microsoft.Azure.PowerShell.DataShare.Management.Sdk.dll|.signature.p7s</S>
-          <S N="GUID">91832aaa-dc11-4583-8239-bce5fd531604</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DataShare\1.1.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

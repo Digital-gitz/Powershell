@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.MachineLearningServices</S>
-      <Version N="Version">1.2.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.2.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell: MachineLearningServices cmdlets</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:16:24-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:21:10.4735673-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:16:24.327</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:41.2129921-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,16 +42,304 @@
           <S>MachineLearningServices</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSFunction_Get-AzMLServiceQuota</S>
+          <S>PSCommand_Get-AzMLServiceQuota</S>
+          <S>PSFunction_Get-AzMLServiceUsage</S>
+          <S>PSCommand_Get-AzMLServiceUsage</S>
+          <S>PSFunction_Get-AzMLServiceVMSize</S>
+          <S>PSCommand_Get-AzMLServiceVMSize</S>
+          <S>PSFunction_Get-AzMLWorkspace</S>
+          <S>PSCommand_Get-AzMLWorkspace</S>
+          <S>PSFunction_Get-AzMLWorkspaceBatchDeployment</S>
+          <S>PSCommand_Get-AzMLWorkspaceBatchDeployment</S>
+          <S>PSFunction_Get-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSCommand_Get-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSFunction_Get-AzMLWorkspaceCodeVersion</S>
+          <S>PSCommand_Get-AzMLWorkspaceCodeVersion</S>
+          <S>PSFunction_Get-AzMLWorkspaceComponentContainer</S>
+          <S>PSCommand_Get-AzMLWorkspaceComponentContainer</S>
+          <S>PSFunction_Get-AzMLWorkspaceComponentVersion</S>
+          <S>PSCommand_Get-AzMLWorkspaceComponentVersion</S>
+          <S>PSFunction_Get-AzMLWorkspaceCompute</S>
+          <S>PSCommand_Get-AzMLWorkspaceCompute</S>
+          <S>PSFunction_Get-AzMLWorkspaceComputeKey</S>
+          <S>PSCommand_Get-AzMLWorkspaceComputeKey</S>
+          <S>PSFunction_Get-AzMLWorkspaceComputeNode</S>
+          <S>PSCommand_Get-AzMLWorkspaceComputeNode</S>
+          <S>PSFunction_Get-AzMLWorkspaceConnection</S>
+          <S>PSCommand_Get-AzMLWorkspaceConnection</S>
+          <S>PSFunction_Get-AzMLWorkspaceDataContainer</S>
+          <S>PSCommand_Get-AzMLWorkspaceDataContainer</S>
+          <S>PSFunction_Get-AzMLWorkspaceDatastore</S>
+          <S>PSCommand_Get-AzMLWorkspaceDatastore</S>
+          <S>PSFunction_Get-AzMLWorkspaceDatastoreSecret</S>
+          <S>PSCommand_Get-AzMLWorkspaceDatastoreSecret</S>
+          <S>PSFunction_Get-AzMLWorkspaceDataVersion</S>
+          <S>PSCommand_Get-AzMLWorkspaceDataVersion</S>
+          <S>PSFunction_Get-AzMLWorkspaceEnvironmentContainer</S>
+          <S>PSCommand_Get-AzMLWorkspaceEnvironmentContainer</S>
+          <S>PSFunction_Get-AzMLWorkspaceEnvironmentVersion</S>
+          <S>PSCommand_Get-AzMLWorkspaceEnvironmentVersion</S>
+          <S>PSFunction_Get-AzMLWorkspaceFeature</S>
+          <S>PSCommand_Get-AzMLWorkspaceFeature</S>
+          <S>PSFunction_Get-AzMLWorkspaceJob</S>
+          <S>PSCommand_Get-AzMLWorkspaceJob</S>
+          <S>PSFunction_Get-AzMLWorkspaceKey</S>
+          <S>PSCommand_Get-AzMLWorkspaceKey</S>
+          <S>PSFunction_Get-AzMLWorkspaceModelContainer</S>
+          <S>PSCommand_Get-AzMLWorkspaceModelContainer</S>
+          <S>PSFunction_Get-AzMLWorkspaceModelVersion</S>
+          <S>PSCommand_Get-AzMLWorkspaceModelVersion</S>
+          <S>PSFunction_Get-AzMLWorkspaceNotebookAccessToken</S>
+          <S>PSCommand_Get-AzMLWorkspaceNotebookAccessToken</S>
+          <S>PSFunction_Get-AzMLWorkspaceNotebookKey</S>
+          <S>PSCommand_Get-AzMLWorkspaceNotebookKey</S>
+          <S>PSFunction_Get-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSCommand_Get-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSFunction_Get-AzMLWorkspaceOnlineDeploymentLog</S>
+          <S>PSCommand_Get-AzMLWorkspaceOnlineDeploymentLog</S>
+          <S>PSFunction_Get-AzMLWorkspaceOnlineDeploymentSku</S>
+          <S>PSCommand_Get-AzMLWorkspaceOnlineDeploymentSku</S>
+          <S>PSFunction_Get-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSCommand_Get-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSFunction_Get-AzMLWorkspaceOnlineEndpointKey</S>
+          <S>PSCommand_Get-AzMLWorkspaceOnlineEndpointKey</S>
+          <S>PSFunction_Get-AzMLWorkspaceOnlineEndpointToken</S>
+          <S>PSCommand_Get-AzMLWorkspaceOnlineEndpointToken</S>
+          <S>PSFunction_Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint</S>
+          <S>PSCommand_Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint</S>
+          <S>PSFunction_Get-AzMLWorkspaceStorageAccountKey</S>
+          <S>PSCommand_Get-AzMLWorkspaceStorageAccountKey</S>
+          <S>PSFunction_Invoke-AzMLWorkspaceDiagnose</S>
+          <S>PSCommand_Invoke-AzMLWorkspaceDiagnose</S>
+          <S>PSFunction_Invoke-AzMLWorkspaceNotebook</S>
+          <S>PSCommand_Invoke-AzMLWorkspaceNotebook</S>
+          <S>PSFunction_New-AzMLWorkspace</S>
+          <S>PSCommand_New-AzMLWorkspace</S>
+          <S>PSFunction_New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceAksObject</S>
+          <S>PSCommand_New-AzMLWorkspaceAksObject</S>
+          <S>PSFunction_New-AzMLWorkspaceAmlComputeObject</S>
+          <S>PSCommand_New-AzMLWorkspaceAmlComputeObject</S>
+          <S>PSFunction_New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceBatchDeployment</S>
+          <S>PSCommand_New-AzMLWorkspaceBatchDeployment</S>
+          <S>PSFunction_New-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSCommand_New-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSFunction_New-AzMLWorkspaceCodeVersion</S>
+          <S>PSCommand_New-AzMLWorkspaceCodeVersion</S>
+          <S>PSFunction_New-AzMLWorkspaceCommandJobObject</S>
+          <S>PSCommand_New-AzMLWorkspaceCommandJobObject</S>
+          <S>PSFunction_New-AzMLWorkspaceComponentContainer</S>
+          <S>PSCommand_New-AzMLWorkspaceComponentContainer</S>
+          <S>PSFunction_New-AzMLWorkspaceComponentVersion</S>
+          <S>PSCommand_New-AzMLWorkspaceComponentVersion</S>
+          <S>PSFunction_New-AzMLWorkspaceCompute</S>
+          <S>PSCommand_New-AzMLWorkspaceCompute</S>
+          <S>PSFunction_New-AzMLWorkspaceComputeInstanceObject</S>
+          <S>PSCommand_New-AzMLWorkspaceComputeInstanceObject</S>
+          <S>PSFunction_New-AzMLWorkspaceComputeStartStopScheduleObject</S>
+          <S>PSCommand_New-AzMLWorkspaceComputeStartStopScheduleObject</S>
+          <S>PSFunction_New-AzMLWorkspaceConnection</S>
+          <S>PSCommand_New-AzMLWorkspaceConnection</S>
+          <S>PSFunction_New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceCustomModelJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceCustomModelJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceCustomModelJobOutputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceCustomModelJobOutputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatabricksObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatabricksObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDataContainer</S>
+          <S>PSCommand_New-AzMLWorkspaceDataContainer</S>
+          <S>PSFunction_New-AzMLWorkspaceDataFactoryObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDataFactoryObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDataLakeAnalyticsObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDataLakeAnalyticsObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDataPathAssetReferenceObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDataPathAssetReferenceObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastore</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastore</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreBlobObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreBlobObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreCredentialObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreCredentialObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreDataLakeGen1Object</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreDataLakeGen1Object</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreDataLakeGen2Object</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreDataLakeGen2Object</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreFileObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreFileObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreKeyCredentialObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreKeyCredentialObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreNoneCredentialObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreNoneCredentialObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreSasCredentialObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreSasCredentialObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject</S>
+          <S>PSCommand_New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject</S>
+          <S>PSFunction_New-AzMLWorkspaceDataVersion</S>
+          <S>PSCommand_New-AzMLWorkspaceDataVersion</S>
+          <S>PSFunction_New-AzMLWorkspaceEnvironmentVersion</S>
+          <S>PSCommand_New-AzMLWorkspaceEnvironmentVersion</S>
+          <S>PSFunction_New-AzMLWorkspaceHDInsightObject</S>
+          <S>PSCommand_New-AzMLWorkspaceHDInsightObject</S>
+          <S>PSFunction_New-AzMLWorkspaceIdAssetReferenceObject</S>
+          <S>PSCommand_New-AzMLWorkspaceIdAssetReferenceObject</S>
+          <S>PSFunction_New-AzMLWorkspaceJob</S>
+          <S>PSCommand_New-AzMLWorkspaceJob</S>
+          <S>PSFunction_New-AzMLWorkspaceJobServiceObject</S>
+          <S>PSCommand_New-AzMLWorkspaceJobServiceObject</S>
+          <S>PSFunction_New-AzMLWorkspaceKubernetesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceKubernetesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceLiteralJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceLiteralJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceMLFlowModelJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceMLFlowModelJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceMLFlowModelJobOutputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceMLFlowModelJobOutputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceMLTableJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceMLTableJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceMLTableJobOutputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceMLTableJobOutputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceModelContainer</S>
+          <S>PSCommand_New-AzMLWorkspaceModelContainer</S>
+          <S>PSFunction_New-AzMLWorkspaceModelVersion</S>
+          <S>PSCommand_New-AzMLWorkspaceModelVersion</S>
+          <S>PSFunction_New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSCommand_New-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSFunction_New-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSCommand_New-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSFunction_New-AzMLWorkspaceOnlineEndpointKey</S>
+          <S>PSCommand_New-AzMLWorkspaceOnlineEndpointKey</S>
+          <S>PSFunction_New-AzMLWorkspaceOutputPathAssetReferenceObject</S>
+          <S>PSCommand_New-AzMLWorkspaceOutputPathAssetReferenceObject</S>
+          <S>PSFunction_New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspacePipelineJobObject</S>
+          <S>PSCommand_New-AzMLWorkspacePipelineJobObject</S>
+          <S>PSFunction_New-AzMLWorkspaceQuotaPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceQuotaPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceSharedPrivateLinkResourceObject</S>
+          <S>PSCommand_New-AzMLWorkspaceSharedPrivateLinkResourceObject</S>
+          <S>PSFunction_New-AzMLWorkspaceSweepJobObject</S>
+          <S>PSCommand_New-AzMLWorkspaceSweepJobObject</S>
+          <S>PSFunction_New-AzMLWorkspaceSynapseSparkObject</S>
+          <S>PSCommand_New-AzMLWorkspaceSynapseSparkObject</S>
+          <S>PSFunction_New-AzMLWorkspaceTritonModelJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceTritonModelJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceTritonModelJobOutputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceTritonModelJobOutputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceUriFileJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceUriFileJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceUriFileJobOutputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceUriFileJobOutputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceUriFolderJobInputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceUriFolderJobInputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceUriFolderJobOutputObject</S>
+          <S>PSCommand_New-AzMLWorkspaceUriFolderJobOutputObject</S>
+          <S>PSFunction_New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSCommand_New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject</S>
+          <S>PSFunction_New-AzMLWorkspaceVirtualMachineObject</S>
+          <S>PSCommand_New-AzMLWorkspaceVirtualMachineObject</S>
+          <S>PSFunction_Remove-AzMLWorkspace</S>
+          <S>PSCommand_Remove-AzMLWorkspace</S>
+          <S>PSFunction_Remove-AzMLWorkspaceBatchDeployment</S>
+          <S>PSCommand_Remove-AzMLWorkspaceBatchDeployment</S>
+          <S>PSFunction_Remove-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSCommand_Remove-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSFunction_Remove-AzMLWorkspaceCodeVersion</S>
+          <S>PSCommand_Remove-AzMLWorkspaceCodeVersion</S>
+          <S>PSFunction_Remove-AzMLWorkspaceComponentContainer</S>
+          <S>PSCommand_Remove-AzMLWorkspaceComponentContainer</S>
+          <S>PSFunction_Remove-AzMLWorkspaceComponentVersion</S>
+          <S>PSCommand_Remove-AzMLWorkspaceComponentVersion</S>
+          <S>PSFunction_Remove-AzMLWorkspaceCompute</S>
+          <S>PSCommand_Remove-AzMLWorkspaceCompute</S>
+          <S>PSFunction_Remove-AzMLWorkspaceConnection</S>
+          <S>PSCommand_Remove-AzMLWorkspaceConnection</S>
+          <S>PSFunction_Remove-AzMLWorkspaceDataContainer</S>
+          <S>PSCommand_Remove-AzMLWorkspaceDataContainer</S>
+          <S>PSFunction_Remove-AzMLWorkspaceDatastore</S>
+          <S>PSCommand_Remove-AzMLWorkspaceDatastore</S>
+          <S>PSFunction_Remove-AzMLWorkspaceDataVersion</S>
+          <S>PSCommand_Remove-AzMLWorkspaceDataVersion</S>
+          <S>PSFunction_Remove-AzMLWorkspaceEnvironmentContainer</S>
+          <S>PSCommand_Remove-AzMLWorkspaceEnvironmentContainer</S>
+          <S>PSFunction_Remove-AzMLWorkspaceEnvironmentVersion</S>
+          <S>PSCommand_Remove-AzMLWorkspaceEnvironmentVersion</S>
+          <S>PSFunction_Remove-AzMLWorkspaceJob</S>
+          <S>PSCommand_Remove-AzMLWorkspaceJob</S>
+          <S>PSFunction_Remove-AzMLWorkspaceModelContainer</S>
+          <S>PSCommand_Remove-AzMLWorkspaceModelContainer</S>
+          <S>PSFunction_Remove-AzMLWorkspaceModelVersion</S>
+          <S>PSCommand_Remove-AzMLWorkspaceModelVersion</S>
+          <S>PSFunction_Remove-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSCommand_Remove-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSFunction_Remove-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSCommand_Remove-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSFunction_Restart-AzMLWorkspaceCompute</S>
+          <S>PSCommand_Restart-AzMLWorkspaceCompute</S>
+          <S>PSFunction_Start-AzMLWorkspaceCompute</S>
+          <S>PSCommand_Start-AzMLWorkspaceCompute</S>
+          <S>PSFunction_Stop-AzMLWorkspaceCompute</S>
+          <S>PSCommand_Stop-AzMLWorkspaceCompute</S>
+          <S>PSFunction_Stop-AzMLWorkspaceJob</S>
+          <S>PSCommand_Stop-AzMLWorkspaceJob</S>
+          <S>PSFunction_Sync-AzMLWorkspaceKey</S>
+          <S>PSCommand_Sync-AzMLWorkspaceKey</S>
+          <S>PSFunction_Update-AzMLServiceQuota</S>
+          <S>PSCommand_Update-AzMLServiceQuota</S>
+          <S>PSFunction_Update-AzMLWorkspace</S>
+          <S>PSCommand_Update-AzMLWorkspace</S>
+          <S>PSFunction_Update-AzMLWorkspaceBatchDeployment</S>
+          <S>PSCommand_Update-AzMLWorkspaceBatchDeployment</S>
+          <S>PSFunction_Update-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSCommand_Update-AzMLWorkspaceBatchEndpoint</S>
+          <S>PSFunction_Update-AzMLWorkspaceCompute</S>
+          <S>PSCommand_Update-AzMLWorkspaceCompute</S>
+          <S>PSFunction_Update-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSCommand_Update-AzMLWorkspaceOnlineDeployment</S>
+          <S>PSFunction_Update-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSCommand_Update-AzMLWorkspaceOnlineEndpoint</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
@@ -202,235 +485,98 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzMLServiceQuota</S>
-                <S>Get-AzMLServiceUsage</S>
-                <S>Get-AzMLServiceVMSize</S>
-                <S>Get-AzMLWorkspace</S>
-                <S>Get-AzMLWorkspaceBatchDeployment</S>
-                <S>Get-AzMLWorkspaceBatchEndpoint</S>
-                <S>Get-AzMLWorkspaceCodeVersion</S>
-                <S>Get-AzMLWorkspaceComponentContainer</S>
-                <S>Get-AzMLWorkspaceComponentVersion</S>
-                <S>Get-AzMLWorkspaceCompute</S>
-                <S>Get-AzMLWorkspaceComputeKey</S>
-                <S>Get-AzMLWorkspaceComputeNode</S>
-                <S>Get-AzMLWorkspaceConnection</S>
-                <S>Get-AzMLWorkspaceDataContainer</S>
-                <S>Get-AzMLWorkspaceDatastore</S>
-                <S>Get-AzMLWorkspaceDatastoreSecret</S>
-                <S>Get-AzMLWorkspaceDataVersion</S>
-                <S>Get-AzMLWorkspaceEnvironmentContainer</S>
-                <S>Get-AzMLWorkspaceEnvironmentVersion</S>
-                <S>Get-AzMLWorkspaceFeature</S>
-                <S>Get-AzMLWorkspaceJob</S>
-                <S>Get-AzMLWorkspaceKey</S>
-                <S>Get-AzMLWorkspaceModelContainer</S>
-                <S>Get-AzMLWorkspaceModelVersion</S>
-                <S>Get-AzMLWorkspaceNotebookAccessToken</S>
-                <S>Get-AzMLWorkspaceNotebookKey</S>
-                <S>Get-AzMLWorkspaceOnlineDeployment</S>
-                <S>Get-AzMLWorkspaceOnlineDeploymentLog</S>
-                <S>Get-AzMLWorkspaceOnlineDeploymentSku</S>
-                <S>Get-AzMLWorkspaceOnlineEndpoint</S>
-                <S>Get-AzMLWorkspaceOnlineEndpointKey</S>
-                <S>Get-AzMLWorkspaceOnlineEndpointToken</S>
-                <S>Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint</S>
-                <S>Get-AzMLWorkspaceStorageAccountKey</S>
-                <S>Invoke-AzMLWorkspaceDiagnose</S>
-                <S>Invoke-AzMLWorkspaceNotebook</S>
-                <S>New-AzMLWorkspace</S>
-                <S>New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceAksObject</S>
-                <S>New-AzMLWorkspaceAmlComputeObject</S>
-                <S>New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceBatchDeployment</S>
-                <S>New-AzMLWorkspaceBatchEndpoint</S>
-                <S>New-AzMLWorkspaceCodeVersion</S>
-                <S>New-AzMLWorkspaceCommandJobObject</S>
-                <S>New-AzMLWorkspaceComponentContainer</S>
-                <S>New-AzMLWorkspaceComponentVersion</S>
-                <S>New-AzMLWorkspaceCompute</S>
-                <S>New-AzMLWorkspaceComputeInstanceObject</S>
-                <S>New-AzMLWorkspaceComputeStartStopScheduleObject</S>
-                <S>New-AzMLWorkspaceConnection</S>
-                <S>New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceCustomModelJobInputObject</S>
-                <S>New-AzMLWorkspaceCustomModelJobOutputObject</S>
-                <S>New-AzMLWorkspaceDatabricksObject</S>
-                <S>New-AzMLWorkspaceDataContainer</S>
-                <S>New-AzMLWorkspaceDataFactoryObject</S>
-                <S>New-AzMLWorkspaceDataLakeAnalyticsObject</S>
-                <S>New-AzMLWorkspaceDataPathAssetReferenceObject</S>
-                <S>New-AzMLWorkspaceDatastore</S>
-                <S>New-AzMLWorkspaceDatastoreBlobObject</S>
-                <S>New-AzMLWorkspaceDatastoreCredentialObject</S>
-                <S>New-AzMLWorkspaceDatastoreDataLakeGen1Object</S>
-                <S>New-AzMLWorkspaceDatastoreDataLakeGen2Object</S>
-                <S>New-AzMLWorkspaceDatastoreFileObject</S>
-                <S>New-AzMLWorkspaceDatastoreKeyCredentialObject</S>
-                <S>New-AzMLWorkspaceDatastoreNoneCredentialObject</S>
-                <S>New-AzMLWorkspaceDatastoreSasCredentialObject</S>
-                <S>New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject</S>
-                <S>New-AzMLWorkspaceDataVersion</S>
-                <S>New-AzMLWorkspaceEnvironmentVersion</S>
-                <S>New-AzMLWorkspaceHDInsightObject</S>
-                <S>New-AzMLWorkspaceIdAssetReferenceObject</S>
-                <S>New-AzMLWorkspaceJob</S>
-                <S>New-AzMLWorkspaceJobServiceObject</S>
-                <S>New-AzMLWorkspaceKubernetesObject</S>
-                <S>New-AzMLWorkspaceLiteralJobInputObject</S>
-                <S>New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceMLFlowModelJobInputObject</S>
-                <S>New-AzMLWorkspaceMLFlowModelJobOutputObject</S>
-                <S>New-AzMLWorkspaceMLTableJobInputObject</S>
-                <S>New-AzMLWorkspaceMLTableJobOutputObject</S>
-                <S>New-AzMLWorkspaceModelContainer</S>
-                <S>New-AzMLWorkspaceModelVersion</S>
-                <S>New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceOnlineDeployment</S>
-                <S>New-AzMLWorkspaceOnlineEndpoint</S>
-                <S>New-AzMLWorkspaceOnlineEndpointKey</S>
-                <S>New-AzMLWorkspaceOutputPathAssetReferenceObject</S>
-                <S>New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspacePipelineJobObject</S>
-                <S>New-AzMLWorkspaceQuotaPropertiesObject</S>
-                <S>New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceSharedPrivateLinkResourceObject</S>
-                <S>New-AzMLWorkspaceSweepJobObject</S>
-                <S>New-AzMLWorkspaceSynapseSparkObject</S>
-                <S>New-AzMLWorkspaceTritonModelJobInputObject</S>
-                <S>New-AzMLWorkspaceTritonModelJobOutputObject</S>
-                <S>New-AzMLWorkspaceUriFileJobInputObject</S>
-                <S>New-AzMLWorkspaceUriFileJobOutputObject</S>
-                <S>New-AzMLWorkspaceUriFolderJobInputObject</S>
-                <S>New-AzMLWorkspaceUriFolderJobOutputObject</S>
-                <S>New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject</S>
-                <S>New-AzMLWorkspaceVirtualMachineObject</S>
-                <S>Remove-AzMLWorkspace</S>
-                <S>Remove-AzMLWorkspaceBatchDeployment</S>
-                <S>Remove-AzMLWorkspaceBatchEndpoint</S>
-                <S>Remove-AzMLWorkspaceCodeVersion</S>
-                <S>Remove-AzMLWorkspaceComponentContainer</S>
-                <S>Remove-AzMLWorkspaceComponentVersion</S>
-                <S>Remove-AzMLWorkspaceCompute</S>
-                <S>Remove-AzMLWorkspaceConnection</S>
-                <S>Remove-AzMLWorkspaceDataContainer</S>
-                <S>Remove-AzMLWorkspaceDatastore</S>
-                <S>Remove-AzMLWorkspaceDataVersion</S>
-                <S>Remove-AzMLWorkspaceEnvironmentContainer</S>
-                <S>Remove-AzMLWorkspaceEnvironmentVersion</S>
-                <S>Remove-AzMLWorkspaceJob</S>
-                <S>Remove-AzMLWorkspaceModelContainer</S>
-                <S>Remove-AzMLWorkspaceModelVersion</S>
-                <S>Remove-AzMLWorkspaceOnlineDeployment</S>
-                <S>Remove-AzMLWorkspaceOnlineEndpoint</S>
-                <S>Restart-AzMLWorkspaceCompute</S>
-                <S>Start-AzMLWorkspaceCompute</S>
-                <S>Stop-AzMLWorkspaceCompute</S>
-                <S>Stop-AzMLWorkspaceJob</S>
-                <S>Sync-AzMLWorkspaceKey</S>
-                <S>Update-AzMLServiceQuota</S>
-                <S>Update-AzMLWorkspace</S>
-                <S>Update-AzMLWorkspaceBatchDeployment</S>
-                <S>Update-AzMLWorkspaceBatchEndpoint</S>
-                <S>Update-AzMLWorkspaceCompute</S>
-                <S>Update-AzMLWorkspaceOnlineDeployment</S>
-                <S>Update-AzMLWorkspaceOnlineEndpoint</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell: MachineLearningServices cmdlets</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6701532</S>
-          <S N="downloadCount">48351728</S>
-          <S N="packageSize">3380860</S>
-          <S N="published">1/14/2025 3:16:24 AM -05:00</S>
-          <S N="created">1/14/2025 3:16:24 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule MachineLearningServices PSEdition_Core PSEdition_Desktop PSFunction_Get-AzMLServiceQuota PSCommand_Get-AzMLServiceQuota PSFunction_Get-AzMLServiceUsage PSCommand_Get-AzMLServiceUsage PSFunction_Get-AzMLServiceVMSize PSCommand_Get-AzMLServiceVMSize PSFunction_Get-AzMLWorkspace PSCommand_Get-AzMLWorkspace PSFunction_Get-AzMLWorkspaceBatchDeployment PSCommand_Get-AzMLWorkspaceBatchDeployment PSFunction_Get-AzMLWorkspaceBatchEndpoint PSCommand_Get-AzMLWorkspaceBatchEndpoint PSFunction_Get-AzMLWorkspaceCodeVersion PSCommand_Get-AzMLWorkspaceCodeVersion PSFunction_Get-AzMLWorkspaceComponentContainer PSCommand_Get-AzMLWorkspaceComponentContainer PSFunction_Get-AzMLWorkspaceComponentVersion PSCommand_Get-AzMLWorkspaceComponentVersion PSFunction_Get-AzMLWorkspaceCompute PSCommand_Get-AzMLWorkspaceCompute PSFunction_Get-AzMLWorkspaceComputeKey PSCommand_Get-AzMLWorkspaceComputeKey PSFunction_Get-AzMLWorkspaceComputeNode PSCommand_Get-AzMLWorkspaceComputeNode PSFunction_Get-AzMLWorkspaceConnection PSCommand_Get-AzMLWorkspaceConnection PSFunction_Get-AzMLWorkspaceDataContainer PSCommand_Get-AzMLWorkspaceDataContainer PSFunction_Get-AzMLWorkspaceDatastore PSCommand_Get-AzMLWorkspaceDatastore PSFunction_Get-AzMLWorkspaceDatastoreSecret PSCommand_Get-AzMLWorkspaceDatastoreSecret PSFunction_Get-AzMLWorkspaceDataVersion PSCommand_Get-AzMLWorkspaceDataVersion PSFunction_Get-AzMLWorkspaceEnvironmentContainer PSCommand_Get-AzMLWorkspaceEnvironmentContainer PSFunction_Get-AzMLWorkspaceEnvironmentVersion PSCommand_Get-AzMLWorkspaceEnvironmentVersion PSFunction_Get-AzMLWorkspaceFeature PSCommand_Get-AzMLWorkspaceFeature PSFunction_Get-AzMLWorkspaceJob PSCommand_Get-AzMLWorkspaceJob PSFunction_Get-AzMLWorkspaceKey PSCommand_Get-AzMLWorkspaceKey PSFunction_Get-AzMLWorkspaceModelContainer PSCommand_Get-AzMLWorkspaceModelContainer PSFunction_Get-AzMLWorkspaceModelVersion PSCommand_Get-AzMLWorkspaceModelVersion PSFunction_Get-AzMLWorkspaceNotebookAccessToken PSCommand_Get-AzMLWorkspaceNotebookAccessToken PSFunction_Get-AzMLWorkspaceNotebookKey PSCommand_Get-AzMLWorkspaceNotebookKey PSFunction_Get-AzMLWorkspaceOnlineDeployment PSCommand_Get-AzMLWorkspaceOnlineDeployment PSFunction_Get-AzMLWorkspaceOnlineDeploymentLog PSCommand_Get-AzMLWorkspaceOnlineDeploymentLog PSFunction_Get-AzMLWorkspaceOnlineDeploymentSku PSCommand_Get-AzMLWorkspaceOnlineDeploymentSku PSFunction_Get-AzMLWorkspaceOnlineEndpoint PSCommand_Get-AzMLWorkspaceOnlineEndpoint PSFunction_Get-AzMLWorkspaceOnlineEndpointKey PSCommand_Get-AzMLWorkspaceOnlineEndpointKey PSFunction_Get-AzMLWorkspaceOnlineEndpointToken PSCommand_Get-AzMLWorkspaceOnlineEndpointToken PSFunction_Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint PSCommand_Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint PSFunction_Get-AzMLWorkspaceStorageAccountKey PSCommand_Get-AzMLWorkspaceStorageAccountKey PSFunction_Invoke-AzMLWorkspaceDiagnose PSCommand_Invoke-AzMLWorkspaceDiagnose PSFunction_Invoke-AzMLWorkspaceNotebook PSCommand_Invoke-AzMLWorkspaceNotebook PSFunction_New-AzMLWorkspace PSCommand_New-AzMLWorkspace PSFunction_New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceAksObject PSCommand_New-AzMLWorkspaceAksObject PSFunction_New-AzMLWorkspaceAmlComputeObject PSCommand_New-AzMLWorkspaceAmlComputeObject PSFunction_New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceBatchDeployment PSCommand_New-AzMLWorkspaceBatchDeployment PSFunction_New-AzMLWorkspaceBatchEndpoint PSCommand_New-AzMLWorkspaceBatchEndpoint PSFunction_New-AzMLWorkspaceCodeVersion PSCommand_New-AzMLWorkspaceCodeVersion PSFunction_New-AzMLWorkspaceCommandJobObject PSCommand_New-AzMLWorkspaceCommandJobObject PSFunction_New-AzMLWorkspaceComponentContainer PSCommand_New-AzMLWorkspaceComponentContainer PSFunction_New-AzMLWorkspaceComponentVersion PSCommand_New-AzMLWorkspaceComponentVersion PSFunction_New-AzMLWorkspaceCompute PSCommand_New-AzMLWorkspaceCompute PSFunction_New-AzMLWorkspaceComputeInstanceObject PSCommand_New-AzMLWorkspaceComputeInstanceObject PSFunction_New-AzMLWorkspaceComputeStartStopScheduleObject PSCommand_New-AzMLWorkspaceComputeStartStopScheduleObject PSFunction_New-AzMLWorkspaceConnection PSCommand_New-AzMLWorkspaceConnection PSFunction_New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceCustomModelJobInputObject PSCommand_New-AzMLWorkspaceCustomModelJobInputObject PSFunction_New-AzMLWorkspaceCustomModelJobOutputObject PSCommand_New-AzMLWorkspaceCustomModelJobOutputObject PSFunction_New-AzMLWorkspaceDatabricksObject PSCommand_New-AzMLWorkspaceDatabricksObject PSFunction_New-AzMLWorkspaceDataContainer PSCommand_New-AzMLWorkspaceDataContainer PSFunction_New-AzMLWorkspaceDataFactoryObject PSCommand_New-AzMLWorkspaceDataFactoryObject PSFunction_New-AzMLWorkspaceDataLakeAnalyticsObject PSCommand_New-AzMLWorkspaceDataLakeAnalyticsObject PSFunction_New-AzMLWorkspaceDataPathAssetReferenceObject PSCommand_New-AzMLWorkspaceDataPathAssetReferenceObject PSFunction_New-AzMLWorkspaceDatastore PSCommand_New-AzMLWorkspaceDatastore PSFunction_New-AzMLWorkspaceDatastoreBlobObject PSCommand_New-AzMLWorkspaceDatastoreBlobObject PSFunction_New-AzMLWorkspaceDatastoreCredentialObject PSCommand_New-AzMLWorkspaceDatastoreCredentialObject PSFunction_New-AzMLWorkspaceDatastoreDataLakeGen1Object PSCommand_New-AzMLWorkspaceDatastoreDataLakeGen1Object PSFunction_New-AzMLWorkspaceDatastoreDataLakeGen2Object PSCommand_New-AzMLWorkspaceDatastoreDataLakeGen2Object PSFunction_New-AzMLWorkspaceDatastoreFileObject PSCommand_New-AzMLWorkspaceDatastoreFileObject PSFunction_New-AzMLWorkspaceDatastoreKeyCredentialObject PSCommand_New-AzMLWorkspaceDatastoreKeyCredentialObject PSFunction_New-AzMLWorkspaceDatastoreNoneCredentialObject PSCommand_New-AzMLWorkspaceDatastoreNoneCredentialObject PSFunction_New-AzMLWorkspaceDatastoreSasCredentialObject PSCommand_New-AzMLWorkspaceDatastoreSasCredentialObject PSFunction_New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject PSCommand_New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject PSFunction_New-AzMLWorkspaceDataVersion PSCommand_New-AzMLWorkspaceDataVersion PSFunction_New-AzMLWorkspaceEnvironmentVersion PSCommand_New-AzMLWorkspaceEnvironmentVersion PSFunction_New-AzMLWorkspaceHDInsightObject PSCommand_New-AzMLWorkspaceHDInsightObject PSFunction_New-AzMLWorkspaceIdAssetReferenceObject PSCommand_New-AzMLWorkspaceIdAssetReferenceObject PSFunction_New-AzMLWorkspaceJob PSCommand_New-AzMLWorkspaceJob PSFunction_New-AzMLWorkspaceJobServiceObject PSCommand_New-AzMLWorkspaceJobServiceObject PSFunction_New-AzMLWorkspaceKubernetesObject PSCommand_New-AzMLWorkspaceKubernetesObject PSFunction_New-AzMLWorkspaceLiteralJobInputObject PSCommand_New-AzMLWorkspaceLiteralJobInputObject PSFunction_New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceMLFlowModelJobInputObject PSCommand_New-AzMLWorkspaceMLFlowModelJobInputObject PSFunction_New-AzMLWorkspaceMLFlowModelJobOutputObject PSCommand_New-AzMLWorkspaceMLFlowModelJobOutputObject PSFunction_New-AzMLWorkspaceMLTableJobInputObject PSCommand_New-AzMLWorkspaceMLTableJobInputObject PSFunction_New-AzMLWorkspaceMLTableJobOutputObject PSCommand_New-AzMLWorkspaceMLTableJobOutputObject PSFunction_New-AzMLWorkspaceModelContainer PSCommand_New-AzMLWorkspaceModelContainer PSFunction_New-AzMLWorkspaceModelVersion PSCommand_New-AzMLWorkspaceModelVersion PSFunction_New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceOnlineDeployment PSCommand_New-AzMLWorkspaceOnlineDeployment PSFunction_New-AzMLWorkspaceOnlineEndpoint PSCommand_New-AzMLWorkspaceOnlineEndpoint PSFunction_New-AzMLWorkspaceOnlineEndpointKey PSCommand_New-AzMLWorkspaceOnlineEndpointKey PSFunction_New-AzMLWorkspaceOutputPathAssetReferenceObject PSCommand_New-AzMLWorkspaceOutputPathAssetReferenceObject PSFunction_New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspacePipelineJobObject PSCommand_New-AzMLWorkspacePipelineJobObject PSFunction_New-AzMLWorkspaceQuotaPropertiesObject PSCommand_New-AzMLWorkspaceQuotaPropertiesObject PSFunction_New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceSharedPrivateLinkResourceObject PSCommand_New-AzMLWorkspaceSharedPrivateLinkResourceObject PSFunction_New-AzMLWorkspaceSweepJobObject PSCommand_New-AzMLWorkspaceSweepJobObject PSFunction_New-AzMLWorkspaceSynapseSparkObject PSCommand_New-AzMLWorkspaceSynapseSparkObject PSFunction_New-AzMLWorkspaceTritonModelJobInputObject PSCommand_New-AzMLWorkspaceTritonModelJobInputObject PSFunction_New-AzMLWorkspaceTritonModelJobOutputObject PSCommand_New-AzMLWorkspaceTritonModelJobOutputObject PSFunction_New-AzMLWorkspaceUriFileJobInputObject PSCommand_New-AzMLWorkspaceUriFileJobInputObject PSFunction_New-AzMLWorkspaceUriFileJobOutputObject PSCommand_New-AzMLWorkspaceUriFileJobOutputObject PSFunction_New-AzMLWorkspaceUriFolderJobInputObject PSCommand_New-AzMLWorkspaceUriFolderJobInputObject PSFunction_New-AzMLWorkspaceUriFolderJobOutputObject PSCommand_New-AzMLWorkspaceUriFolderJobOutputObject PSFunction_New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject PSCommand_New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject PSFunction_New-AzMLWorkspaceVirtualMachineObject PSCommand_New-AzMLWorkspaceVirtualMachineObject PSFunction_Remove-AzMLWorkspace PSCommand_Remove-AzMLWorkspace PSFunction_Remove-AzMLWorkspaceBatchDeployment PSCommand_Remove-AzMLWorkspaceBatchDeployment PSFunction_Remove-AzMLWorkspaceBatchEndpoint PSCommand_Remove-AzMLWorkspaceBatchEndpoint PSFunction_Remove-AzMLWorkspaceCodeVersion PSCommand_Remove-AzMLWorkspaceCodeVersion PSFunction_Remove-AzMLWorkspaceComponentContainer PSCommand_Remove-AzMLWorkspaceComponentContainer PSFunction_Remove-AzMLWorkspaceComponentVersion PSCommand_Remove-AzMLWorkspaceComponentVersion PSFunction_Remove-AzMLWorkspaceCompute PSCommand_Remove-AzMLWorkspaceCompute PSFunction_Remove-AzMLWorkspaceConnection PSCommand_Remove-AzMLWorkspaceConnection PSFunction_Remove-AzMLWorkspaceDataContainer PSCommand_Remove-AzMLWorkspaceDataContainer PSFunction_Remove-AzMLWorkspaceDatastore PSCommand_Remove-AzMLWorkspaceDatastore PSFunction_Remove-AzMLWorkspaceDataVersion PSCommand_Remove-AzMLWorkspaceDataVersion PSFunction_Remove-AzMLWorkspaceEnvironmentContainer PSCommand_Remove-AzMLWorkspaceEnvironmentContainer PSFunction_Remove-AzMLWorkspaceEnvironmentVersion PSCommand_Remove-AzMLWorkspaceEnvironmentVersion PSFunction_Remove-AzMLWorkspaceJob PSCommand_Remove-AzMLWorkspaceJob PSFunction_Remove-AzMLWorkspaceModelContainer PSCommand_Remove-AzMLWorkspaceModelContainer PSFunction_Remove-AzMLWorkspaceModelVersion PSCommand_Remove-AzMLWorkspaceModelVersion PSFunction_Remove-AzMLWorkspaceOnlineDeployment PSCommand_Remove-AzMLWorkspaceOnlineDeployment PSFunction_Remove-AzMLWorkspaceOnlineEndpoint PSCommand_Remove-AzMLWorkspaceOnlineEndpoint PSFunction_Restart-AzMLWorkspaceCompute PSCommand_Restart-AzMLWorkspaceCompute PSFunction_Start-AzMLWorkspaceCompute PSCommand_Start-AzMLWorkspaceCompute PSFunction_Stop-AzMLWorkspaceCompute PSCommand_Stop-AzMLWorkspaceCompute PSFunction_Stop-AzMLWorkspaceJob PSCommand_Stop-AzMLWorkspaceJob PSFunction_Sync-AzMLWorkspaceKey PSCommand_Sync-AzMLWorkspaceKey PSFunction_Update-AzMLServiceQuota PSCommand_Update-AzMLServiceQuota PSFunction_Update-AzMLWorkspace PSCommand_Update-AzMLWorkspace PSFunction_Update-AzMLWorkspaceBatchDeployment PSCommand_Update-AzMLWorkspaceBatchDeployment PSFunction_Update-AzMLWorkspaceBatchEndpoint PSCommand_Update-AzMLWorkspaceBatchEndpoint PSFunction_Update-AzMLWorkspaceCompute PSCommand_Update-AzMLWorkspaceCompute PSFunction_Update-AzMLWorkspaceOnlineDeployment PSCommand_Update-AzMLWorkspaceOnlineDeployment PSFunction_Update-AzMLWorkspaceOnlineEndpoint PSCommand_Update-AzMLWorkspaceOnlineEndpoint PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.2.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.MachineLearningServices.nuspec|MachineLearningServices.Autorest\bin\Az.MachineLearningServices.private.dll|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceAksObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkSpaceConnection.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDataLakeAnalyticsObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreDataLakeGen1Object.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreNoneCredentialObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceIdAssetReferenceObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceQuotaPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceSynapseSparkObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceCustomModelJobInputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceMLFlowModelJobInputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceSharedPrivateLinkResourceObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceUriFileJobOutputObject.ps1|MachineLearningServices.Autorest\internal\Az.MachineLearningServices.internal.psm1|Az.MachineLearningServices.psd1|MachineLearningServices.Autorest\custom\Az.MachineLearningServices.custom.psm1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceAmlComputeObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDataPathAssetReferenceObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreDataLakeGen2Object.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreSasCredentialObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceKubernetesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceOutputPathAssetReferenceObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceCustomModelJobOutputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceMLFlowModelJobOutputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceTritonModelJobInputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceUriFolderJobInputObject.ps1|MachineLearningServices.Autorest\internal\ProxyCmdletDefinitions.ps1|Az.MachineLearningServices.psm1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatabricksObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreBlobObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreFileObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceVirtualMachineObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceJobServiceObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceMLTableJobInputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceTritonModelJobOutputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceUriFolderJobOutputObject.ps1|MachineLearningServices.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|MachineLearningServices.Autorest\Az.MachineLearningServices.format.ps1xml|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceCommandJobObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDataFactoryObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreCredentialObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceDatastoreKeyCredentialObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceHDInsightObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspacePipelineJobObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceSweepJobObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceComputeStartStopScheduleObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceLiteralJobInputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceMLTableJobOutputObject.ps1|MachineLearningServices.Autorest\custom\autogen-model-cmdlets\New-AzMLWorkspaceUriFileJobInputObject.ps1|MachineLearningServices.Autorest\exports\ProxyCmdletDefinitions.ps1|MachineLearningServices.Autorest\utils\Unprotect-SecureString.ps1|MachineLearningServices.Autorest\Az.MachineLearningServices.psm1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject.ps1|MachineLearningServices.Autorest\custom\New-AzMLWorkspaceComputeInstanceObject.ps1|.signature.p7s</S>
-          <S N="GUID">56293047-9014-4c88-96b7-98b69c3b687d</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.MachineLearningServices\1.2.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

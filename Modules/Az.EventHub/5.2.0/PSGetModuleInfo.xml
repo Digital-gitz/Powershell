@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.EventHub</S>
-      <Version N="Version">5.2.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">5.2.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Event Hubs service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Event Hubs, please visit the following: https://learn.microsoft.com/azure/event-hubs/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-02-11T02:21:59-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:56.4145939-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-02-11T02:21:59.313</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:35.0379083-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,84 +42,128 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_New-AzEventHubAuthorizationRuleSASToken</S>
+          <S>PSCommand_New-AzEventHubAuthorizationRuleSASToken</S>
+          <S>PSIncludes_Cmdlet</S>
+          <S>PSFunction_Approve-AzEventHubPrivateEndpointConnection</S>
+          <S>PSCommand_Approve-AzEventHubPrivateEndpointConnection</S>
+          <S>PSFunction_Deny-AzEventHubPrivateEndpointConnection</S>
+          <S>PSCommand_Deny-AzEventHubPrivateEndpointConnection</S>
+          <S>PSFunction_Get-AzEventHub</S>
+          <S>PSCommand_Get-AzEventHub</S>
+          <S>PSFunction_Get-AzEventHubApplicationGroup</S>
+          <S>PSCommand_Get-AzEventHubApplicationGroup</S>
+          <S>PSFunction_Get-AzEventHubAuthorizationRule</S>
+          <S>PSCommand_Get-AzEventHubAuthorizationRule</S>
+          <S>PSFunction_Get-AzEventHubCluster</S>
+          <S>PSCommand_Get-AzEventHubCluster</S>
+          <S>PSFunction_Get-AzEventHubClusterNamespace</S>
+          <S>PSCommand_Get-AzEventHubClusterNamespace</S>
+          <S>PSFunction_Get-AzEventHubClustersAvailableRegion</S>
+          <S>PSCommand_Get-AzEventHubClustersAvailableRegion</S>
+          <S>PSFunction_Get-AzEventHubConsumerGroup</S>
+          <S>PSCommand_Get-AzEventHubConsumerGroup</S>
+          <S>PSFunction_Get-AzEventHubGeoDRConfiguration</S>
+          <S>PSCommand_Get-AzEventHubGeoDRConfiguration</S>
+          <S>PSFunction_Get-AzEventHubKey</S>
+          <S>PSCommand_Get-AzEventHubKey</S>
+          <S>PSFunction_Get-AzEventHubNamespace</S>
+          <S>PSCommand_Get-AzEventHubNamespace</S>
+          <S>PSFunction_Get-AzEventHubNetworkRuleSet</S>
+          <S>PSCommand_Get-AzEventHubNetworkRuleSet</S>
+          <S>PSFunction_Get-AzEventHubPrivateEndpointConnection</S>
+          <S>PSCommand_Get-AzEventHubPrivateEndpointConnection</S>
+          <S>PSFunction_Get-AzEventHubPrivateLink</S>
+          <S>PSCommand_Get-AzEventHubPrivateLink</S>
+          <S>PSFunction_Get-AzEventHubSchemaGroup</S>
+          <S>PSCommand_Get-AzEventHubSchemaGroup</S>
+          <S>PSFunction_New-AzEventHub</S>
+          <S>PSCommand_New-AzEventHub</S>
+          <S>PSFunction_New-AzEventHubApplicationGroup</S>
+          <S>PSCommand_New-AzEventHubApplicationGroup</S>
+          <S>PSFunction_New-AzEventHubAuthorizationRule</S>
+          <S>PSCommand_New-AzEventHubAuthorizationRule</S>
+          <S>PSFunction_New-AzEventHubCluster</S>
+          <S>PSCommand_New-AzEventHubCluster</S>
+          <S>PSFunction_New-AzEventHubConsumerGroup</S>
+          <S>PSCommand_New-AzEventHubConsumerGroup</S>
+          <S>PSFunction_New-AzEventHubGeoDRConfiguration</S>
+          <S>PSCommand_New-AzEventHubGeoDRConfiguration</S>
+          <S>PSFunction_New-AzEventHubIPRuleConfig</S>
+          <S>PSCommand_New-AzEventHubIPRuleConfig</S>
+          <S>PSFunction_New-AzEventHubKey</S>
+          <S>PSCommand_New-AzEventHubKey</S>
+          <S>PSFunction_New-AzEventHubKeyVaultPropertiesObject</S>
+          <S>PSCommand_New-AzEventHubKeyVaultPropertiesObject</S>
+          <S>PSFunction_New-AzEventHubNamespace</S>
+          <S>PSCommand_New-AzEventHubNamespace</S>
+          <S>PSFunction_New-AzEventHubSchemaGroup</S>
+          <S>PSCommand_New-AzEventHubSchemaGroup</S>
+          <S>PSFunction_New-AzEventHubThrottlingPolicyConfig</S>
+          <S>PSCommand_New-AzEventHubThrottlingPolicyConfig</S>
+          <S>PSFunction_New-AzEventHubVirtualNetworkRuleConfig</S>
+          <S>PSCommand_New-AzEventHubVirtualNetworkRuleConfig</S>
+          <S>PSFunction_Remove-AzEventHub</S>
+          <S>PSCommand_Remove-AzEventHub</S>
+          <S>PSFunction_Remove-AzEventHubApplicationGroup</S>
+          <S>PSCommand_Remove-AzEventHubApplicationGroup</S>
+          <S>PSFunction_Remove-AzEventHubAuthorizationRule</S>
+          <S>PSCommand_Remove-AzEventHubAuthorizationRule</S>
+          <S>PSFunction_Remove-AzEventHubCluster</S>
+          <S>PSCommand_Remove-AzEventHubCluster</S>
+          <S>PSFunction_Remove-AzEventHubConsumerGroup</S>
+          <S>PSCommand_Remove-AzEventHubConsumerGroup</S>
+          <S>PSFunction_Remove-AzEventHubGeoDRConfiguration</S>
+          <S>PSCommand_Remove-AzEventHubGeoDRConfiguration</S>
+          <S>PSFunction_Remove-AzEventHubNamespace</S>
+          <S>PSCommand_Remove-AzEventHubNamespace</S>
+          <S>PSFunction_Remove-AzEventHubPrivateEndpointConnection</S>
+          <S>PSCommand_Remove-AzEventHubPrivateEndpointConnection</S>
+          <S>PSFunction_Remove-AzEventHubSchemaGroup</S>
+          <S>PSCommand_Remove-AzEventHubSchemaGroup</S>
+          <S>PSFunction_Set-AzEventHub</S>
+          <S>PSCommand_Set-AzEventHub</S>
+          <S>PSFunction_Set-AzEventHubApplicationGroup</S>
+          <S>PSCommand_Set-AzEventHubApplicationGroup</S>
+          <S>PSFunction_Set-AzEventHubAuthorizationRule</S>
+          <S>PSCommand_Set-AzEventHubAuthorizationRule</S>
+          <S>PSFunction_Set-AzEventHubCluster</S>
+          <S>PSCommand_Set-AzEventHubCluster</S>
+          <S>PSFunction_Set-AzEventHubConsumerGroup</S>
+          <S>PSCommand_Set-AzEventHubConsumerGroup</S>
+          <S>PSFunction_Set-AzEventHubGeoDRConfigurationBreakPair</S>
+          <S>PSCommand_Set-AzEventHubGeoDRConfigurationBreakPair</S>
+          <S>PSFunction_Set-AzEventHubGeoDRConfigurationFailOver</S>
+          <S>PSCommand_Set-AzEventHubGeoDRConfigurationFailOver</S>
+          <S>PSFunction_Set-AzEventHubNamespace</S>
+          <S>PSCommand_Set-AzEventHubNamespace</S>
+          <S>PSFunction_Set-AzEventHubNetworkRuleSet</S>
+          <S>PSCommand_Set-AzEventHubNetworkRuleSet</S>
+          <S>PSFunction_Test-AzEventHubName</S>
+          <S>PSCommand_Test-AzEventHubName</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Approve-AzEventHubPrivateEndpointConnection</S>
-                <S>Deny-AzEventHubPrivateEndpointConnection</S>
-                <S>Get-AzEventHub</S>
-                <S>Get-AzEventHubApplicationGroup</S>
-                <S>Get-AzEventHubAuthorizationRule</S>
-                <S>Get-AzEventHubCluster</S>
-                <S>Get-AzEventHubClusterNamespace</S>
-                <S>Get-AzEventHubClustersAvailableRegion</S>
-                <S>Get-AzEventHubConsumerGroup</S>
-                <S>Get-AzEventHubGeoDRConfiguration</S>
-                <S>Get-AzEventHubKey</S>
-                <S>Get-AzEventHubNamespace</S>
-                <S>Get-AzEventHubNetworkRuleSet</S>
-                <S>Get-AzEventHubPrivateEndpointConnection</S>
-                <S>Get-AzEventHubPrivateLink</S>
-                <S>Get-AzEventHubSchemaGroup</S>
-                <S>New-AzEventHub</S>
-                <S>New-AzEventHubApplicationGroup</S>
-                <S>New-AzEventHubAuthorizationRule</S>
-                <S>New-AzEventHubCluster</S>
-                <S>New-AzEventHubConsumerGroup</S>
-                <S>New-AzEventHubGeoDRConfiguration</S>
-                <S>New-AzEventHubIPRuleConfig</S>
-                <S>New-AzEventHubKey</S>
-                <S>New-AzEventHubKeyVaultPropertiesObject</S>
-                <S>New-AzEventHubNamespace</S>
-                <S>New-AzEventHubSchemaGroup</S>
-                <S>New-AzEventHubThrottlingPolicyConfig</S>
-                <S>New-AzEventHubVirtualNetworkRuleConfig</S>
-                <S>Remove-AzEventHub</S>
-                <S>Remove-AzEventHubApplicationGroup</S>
-                <S>Remove-AzEventHubAuthorizationRule</S>
-                <S>Remove-AzEventHubCluster</S>
-                <S>Remove-AzEventHubConsumerGroup</S>
-                <S>Remove-AzEventHubGeoDRConfiguration</S>
-                <S>Remove-AzEventHubNamespace</S>
-                <S>Remove-AzEventHubPrivateEndpointConnection</S>
-                <S>Remove-AzEventHubSchemaGroup</S>
-                <S>Set-AzEventHub</S>
-                <S>Set-AzEventHubApplicationGroup</S>
-                <S>Set-AzEventHubAuthorizationRule</S>
-                <S>Set-AzEventHubCluster</S>
-                <S>Set-AzEventHubConsumerGroup</S>
-                <S>Set-AzEventHubGeoDRConfigurationBreakPair</S>
-                <S>Set-AzEventHubGeoDRConfigurationFailOver</S>
-                <S>Set-AzEventHubNamespace</S>
-                <S>Set-AzEventHubNetworkRuleSet</S>
-                <S>Test-AzEventHubName</S>
-              </LST>
-            </Obj>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Obj N="Value" RefId="6">
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>New-AzEventHubAuthorizationRuleSASToken</S>
@@ -180,12 +219,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="8">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>New-AzEventHubAuthorizationRuleSASToken</S>
@@ -194,69 +237,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">*  Added parameter 'MinCompactionLagInMin', 'TimestampType' and 'UserMetadata' to cmdlets 'New-AzEventHub' and 'Set-AzEventHub'_x000D__x000A_*  Supported 'DelectorCompact' policy in parameter 'Cleanup-policy' of cmdlet 'new-AzEventhub'</S>
-      <Obj N="Dependencies" RefId="9">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="10">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.2</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.2</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.2, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.2</ToString>
+                    <Props>
+                      <Version N="Version">4.0.2.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.2</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">2</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.2, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="11">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Event Hubs service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Event Hubs, please visit the following: https://learn.microsoft.com/azure/event-hubs/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">*  Added parameter 'MinCompactionLagInMin', 'TimestampType' and 'UserMetadata' to cmdlets 'New-AzEventHub' and 'Set-AzEventHub'_x000D__x000A_*  Supported 'DelectorCompact' policy in parameter 'Cleanup-policy' of cmdlet 'new-AzEventhub'</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">3183100</S>
-          <S N="downloadCount">113813053</S>
-          <S N="packageSize">1427112</S>
-          <S N="published">2/11/2025 2:21:59 AM -05:00</S>
-          <S N="created">2/11/2025 2:21:59 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM EventHub PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_New-AzEventHubAuthorizationRuleSASToken PSCommand_New-AzEventHubAuthorizationRuleSASToken PSIncludes_Cmdlet PSFunction_Approve-AzEventHubPrivateEndpointConnection PSCommand_Approve-AzEventHubPrivateEndpointConnection PSFunction_Deny-AzEventHubPrivateEndpointConnection PSCommand_Deny-AzEventHubPrivateEndpointConnection PSFunction_Get-AzEventHub PSCommand_Get-AzEventHub PSFunction_Get-AzEventHubApplicationGroup PSCommand_Get-AzEventHubApplicationGroup PSFunction_Get-AzEventHubAuthorizationRule PSCommand_Get-AzEventHubAuthorizationRule PSFunction_Get-AzEventHubCluster PSCommand_Get-AzEventHubCluster PSFunction_Get-AzEventHubClusterNamespace PSCommand_Get-AzEventHubClusterNamespace PSFunction_Get-AzEventHubClustersAvailableRegion PSCommand_Get-AzEventHubClustersAvailableRegion PSFunction_Get-AzEventHubConsumerGroup PSCommand_Get-AzEventHubConsumerGroup PSFunction_Get-AzEventHubGeoDRConfiguration PSCommand_Get-AzEventHubGeoDRConfiguration PSFunction_Get-AzEventHubKey PSCommand_Get-AzEventHubKey PSFunction_Get-AzEventHubNamespace PSCommand_Get-AzEventHubNamespace PSFunction_Get-AzEventHubNetworkRuleSet PSCommand_Get-AzEventHubNetworkRuleSet PSFunction_Get-AzEventHubPrivateEndpointConnection PSCommand_Get-AzEventHubPrivateEndpointConnection PSFunction_Get-AzEventHubPrivateLink PSCommand_Get-AzEventHubPrivateLink PSFunction_Get-AzEventHubSchemaGroup PSCommand_Get-AzEventHubSchemaGroup PSFunction_New-AzEventHub PSCommand_New-AzEventHub PSFunction_New-AzEventHubApplicationGroup PSCommand_New-AzEventHubApplicationGroup PSFunction_New-AzEventHubAuthorizationRule PSCommand_New-AzEventHubAuthorizationRule PSFunction_New-AzEventHubCluster PSCommand_New-AzEventHubCluster PSFunction_New-AzEventHubConsumerGroup PSCommand_New-AzEventHubConsumerGroup PSFunction_New-AzEventHubGeoDRConfiguration PSCommand_New-AzEventHubGeoDRConfiguration PSFunction_New-AzEventHubIPRuleConfig PSCommand_New-AzEventHubIPRuleConfig PSFunction_New-AzEventHubKey PSCommand_New-AzEventHubKey PSFunction_New-AzEventHubKeyVaultPropertiesObject PSCommand_New-AzEventHubKeyVaultPropertiesObject PSFunction_New-AzEventHubNamespace PSCommand_New-AzEventHubNamespace PSFunction_New-AzEventHubSchemaGroup PSCommand_New-AzEventHubSchemaGroup PSFunction_New-AzEventHubThrottlingPolicyConfig PSCommand_New-AzEventHubThrottlingPolicyConfig PSFunction_New-AzEventHubVirtualNetworkRuleConfig PSCommand_New-AzEventHubVirtualNetworkRuleConfig PSFunction_Remove-AzEventHub PSCommand_Remove-AzEventHub PSFunction_Remove-AzEventHubApplicationGroup PSCommand_Remove-AzEventHubApplicationGroup PSFunction_Remove-AzEventHubAuthorizationRule PSCommand_Remove-AzEventHubAuthorizationRule PSFunction_Remove-AzEventHubCluster PSCommand_Remove-AzEventHubCluster PSFunction_Remove-AzEventHubConsumerGroup PSCommand_Remove-AzEventHubConsumerGroup PSFunction_Remove-AzEventHubGeoDRConfiguration PSCommand_Remove-AzEventHubGeoDRConfiguration PSFunction_Remove-AzEventHubNamespace PSCommand_Remove-AzEventHubNamespace PSFunction_Remove-AzEventHubPrivateEndpointConnection PSCommand_Remove-AzEventHubPrivateEndpointConnection PSFunction_Remove-AzEventHubSchemaGroup PSCommand_Remove-AzEventHubSchemaGroup PSFunction_Set-AzEventHub PSCommand_Set-AzEventHub PSFunction_Set-AzEventHubApplicationGroup PSCommand_Set-AzEventHubApplicationGroup PSFunction_Set-AzEventHubAuthorizationRule PSCommand_Set-AzEventHubAuthorizationRule PSFunction_Set-AzEventHubCluster PSCommand_Set-AzEventHubCluster PSFunction_Set-AzEventHubConsumerGroup PSCommand_Set-AzEventHubConsumerGroup PSFunction_Set-AzEventHubGeoDRConfigurationBreakPair PSCommand_Set-AzEventHubGeoDRConfigurationBreakPair PSFunction_Set-AzEventHubGeoDRConfigurationFailOver PSCommand_Set-AzEventHubGeoDRConfigurationFailOver PSFunction_Set-AzEventHubNamespace PSCommand_Set-AzEventHubNamespace PSFunction_Set-AzEventHubNetworkRuleSet PSCommand_Set-AzEventHubNetworkRuleSet PSFunction_Test-AzEventHubName PSCommand_Test-AzEventHubName PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">5.2.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.EventHub.nuspec|EventHub.format.ps1xml|Microsoft.Azure.PowerShell.EventHub.Management.Sdk.dll|EventHub.Autorest\bin\Az.EventHub.private.dll|EventHub.Autorest\custom\Deny-AzEventHubPrivateEndpointConnection.ps1|EventHub.Autorest\custom\New-AzEventHubAuthorizationRule.ps1|EventHub.Autorest\custom\New-AzEventHubNamespace.ps1|EventHub.Autorest\custom\New-AzEventHubVirtualNetworkRuleConfig.ps1|EventHub.Autorest\custom\Set-AzEventHub.ps1|EventHub.Autorest\custom\Set-AzEventHubAuthorizationRule.ps1|EventHub.Autorest\custom\Set-AzEventHubConsumerGroup.ps1|EventHub.Autorest\custom\Set-AzEventHubGeoDRConfigurationFailOver.ps1|EventHub.Autorest\custom\Set-AzEventHubNetworkRuleSet.ps1|EventHub.Autorest\custom\autogen-model-cmdlets\New-AzEventHubKeyVaultPropertiesObject.ps1|EventHub.Autorest\internal\Az.EventHub.internal.psm1|EventHub.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|Az.EventHub.psd1|Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll|EventHub.Autorest\Az.EventHub.format.ps1xml|EventHub.Autorest\custom\Approve-AzEventHubPrivateEndpointConnection.ps1|EventHub.Autorest\custom\Get-AzEventHubAuthorizationRule.ps1|EventHub.Autorest\custom\New-AzEventHubIPRuleConfig.ps1|EventHub.Autorest\custom\New-AzEventHubThrottlingPolicyConfig.ps1|EventHub.Autorest\custom\Remove-AzEventHubAuthorizationRule.ps1|EventHub.Autorest\custom\Set-AzEventHubApplicationGroup.ps1|EventHub.Autorest\custom\Set-AzEventHubCluster.ps1|EventHub.Autorest\custom\Set-AzEventHubGeoDRConfigurationBreakPair.ps1|EventHub.Autorest\custom\Set-AzEventHubNamespace.ps1|EventHub.Autorest\custom\Test-AzEventHubName.ps1|EventHub.Autorest\exports\ProxyCmdletDefinitions.ps1|EventHub.Autorest\internal\ProxyCmdletDefinitions.ps1|EventHub.Autorest\utils\Unprotect-SecureString.ps1|Az.EventHub.psm1|Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml|EventHub.Autorest\Az.EventHub.psm1|EventHub.Autorest\custom\Az.EventHub.custom.psm1|EventHub.Autorest\custom\Get-AzEventHubKey.ps1|EventHub.Autorest\custom\New-AzEventHubKey.ps1|.signature.p7s</S>
-          <S N="GUID">d1fc588c-f6f1-4c18-968b-94c7c1ee695d</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.EventHub\5.2.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

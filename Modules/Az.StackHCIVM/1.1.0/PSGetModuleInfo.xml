@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.StackHCIVM</S>
-      <Version N="Version">1.1.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.1.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell: StackHCIVM cmdlets</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:20:11-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:21:55.42862-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:20:11.657</DT>
+      <DT N="InstalledDate">2025-05-12T14:56:02.0147477-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,16 +42,90 @@
           <S>StackHCIVM</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSFunction_Add-AzStackHCIVMVirtualMachineDataDisk</S>
+          <S>PSCommand_Add-AzStackHCIVMVirtualMachineDataDisk</S>
+          <S>PSFunction_Add-AzStackHCIVMVirtualMachineNetworkInterface</S>
+          <S>PSCommand_Add-AzStackHCIVMVirtualMachineNetworkInterface</S>
+          <S>PSFunction_Get-AzStackHCIVMImage</S>
+          <S>PSCommand_Get-AzStackHCIVMImage</S>
+          <S>PSFunction_Get-AzStackHCIVMLogicalNetwork</S>
+          <S>PSCommand_Get-AzStackHCIVMLogicalNetwork</S>
+          <S>PSFunction_Get-AzStackHCIVMNetworkInterface</S>
+          <S>PSCommand_Get-AzStackHCIVMNetworkInterface</S>
+          <S>PSFunction_Get-AzStackHCIVMStoragePath</S>
+          <S>PSCommand_Get-AzStackHCIVMStoragePath</S>
+          <S>PSFunction_Get-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSCommand_Get-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSFunction_Get-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_Get-AzStackHCIVMVirtualMachine</S>
+          <S>PSFunction_New-AzStackHCIVMImage</S>
+          <S>PSCommand_New-AzStackHCIVMImage</S>
+          <S>PSFunction_New-AzStackHCIVMLogicalNetwork</S>
+          <S>PSCommand_New-AzStackHCIVMLogicalNetwork</S>
+          <S>PSFunction_New-AzStackHCIVMNetworkInterface</S>
+          <S>PSCommand_New-AzStackHCIVMNetworkInterface</S>
+          <S>PSFunction_New-AzStackHCIVMStoragePath</S>
+          <S>PSCommand_New-AzStackHCIVMStoragePath</S>
+          <S>PSFunction_New-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSCommand_New-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSFunction_New-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_New-AzStackHCIVMVirtualMachine</S>
+          <S>PSFunction_Remove-AzStackHCIVMImage</S>
+          <S>PSCommand_Remove-AzStackHCIVMImage</S>
+          <S>PSFunction_Remove-AzStackHCIVMLogicalNetwork</S>
+          <S>PSCommand_Remove-AzStackHCIVMLogicalNetwork</S>
+          <S>PSFunction_Remove-AzStackHCIVMNetworkInterface</S>
+          <S>PSCommand_Remove-AzStackHCIVMNetworkInterface</S>
+          <S>PSFunction_Remove-AzStackHCIVMStoragePath</S>
+          <S>PSCommand_Remove-AzStackHCIVMStoragePath</S>
+          <S>PSFunction_Remove-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSCommand_Remove-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSFunction_Remove-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_Remove-AzStackHCIVMVirtualMachine</S>
+          <S>PSFunction_Remove-AzStackHCIVMVirtualMachineDataDisk</S>
+          <S>PSCommand_Remove-AzStackHCIVMVirtualMachineDataDisk</S>
+          <S>PSFunction_Remove-AzStackHCIVMVirtualMachineNetworkInterface</S>
+          <S>PSCommand_Remove-AzStackHCIVMVirtualMachineNetworkInterface</S>
+          <S>PSFunction_Restart-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_Restart-AzStackHCIVMVirtualMachine</S>
+          <S>PSFunction_Start-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_Start-AzStackHCIVMVirtualMachine</S>
+          <S>PSFunction_Stop-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_Stop-AzStackHCIVMVirtualMachine</S>
+          <S>PSFunction_Update-AzStackHCIVMImage</S>
+          <S>PSCommand_Update-AzStackHCIVMImage</S>
+          <S>PSFunction_Update-AzStackHCIVMLogicalNetwork</S>
+          <S>PSCommand_Update-AzStackHCIVMLogicalNetwork</S>
+          <S>PSFunction_Update-AzStackHCIVMNetworkInterface</S>
+          <S>PSCommand_Update-AzStackHCIVMNetworkInterface</S>
+          <S>PSFunction_Update-AzStackHCIVMStoragePath</S>
+          <S>PSCommand_Update-AzStackHCIVMStoragePath</S>
+          <S>PSFunction_Update-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSCommand_Update-AzStackHCIVMVirtualHardDisk</S>
+          <S>PSFunction_Update-AzStackHCIVMVirtualMachine</S>
+          <S>PSCommand_Update-AzStackHCIVMVirtualMachine</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
@@ -95,128 +164,98 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzStackHCIVMVirtualMachineDataDisk</S>
-                <S>Add-AzStackHCIVMVirtualMachineNetworkInterface</S>
-                <S>Get-AzStackHCIVMImage</S>
-                <S>Get-AzStackHCIVMLogicalNetwork</S>
-                <S>Get-AzStackHCIVMNetworkInterface</S>
-                <S>Get-AzStackHCIVMStoragePath</S>
-                <S>Get-AzStackHCIVMVirtualHardDisk</S>
-                <S>Get-AzStackHCIVMVirtualMachine</S>
-                <S>New-AzStackHCIVMImage</S>
-                <S>New-AzStackHCIVMLogicalNetwork</S>
-                <S>New-AzStackHCIVMNetworkInterface</S>
-                <S>New-AzStackHCIVMStoragePath</S>
-                <S>New-AzStackHCIVMVirtualHardDisk</S>
-                <S>New-AzStackHCIVMVirtualMachine</S>
-                <S>Remove-AzStackHCIVMImage</S>
-                <S>Remove-AzStackHCIVMLogicalNetwork</S>
-                <S>Remove-AzStackHCIVMNetworkInterface</S>
-                <S>Remove-AzStackHCIVMStoragePath</S>
-                <S>Remove-AzStackHCIVMVirtualHardDisk</S>
-                <S>Remove-AzStackHCIVMVirtualMachine</S>
-                <S>Remove-AzStackHCIVMVirtualMachineDataDisk</S>
-                <S>Remove-AzStackHCIVMVirtualMachineNetworkInterface</S>
-                <S>Restart-AzStackHCIVMVirtualMachine</S>
-                <S>Start-AzStackHCIVMVirtualMachine</S>
-                <S>Stop-AzStackHCIVMVirtualMachine</S>
-                <S>Update-AzStackHCIVMImage</S>
-                <S>Update-AzStackHCIVMLogicalNetwork</S>
-                <S>Update-AzStackHCIVMNetworkInterface</S>
-                <S>Update-AzStackHCIVMStoragePath</S>
-                <S>Update-AzStackHCIVMVirtualHardDisk</S>
-                <S>Update-AzStackHCIVMVirtualMachine</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell: StackHCIVM cmdlets</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">6519644</S>
-          <S N="downloadCount">33724708</S>
-          <S N="packageSize">1634276</S>
-          <S N="published">1/14/2025 3:20:11 AM -05:00</S>
-          <S N="created">1/14/2025 3:20:11 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:20:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule StackHCIVM PSEdition_Core PSEdition_Desktop PSFunction_Add-AzStackHCIVMVirtualMachineDataDisk PSCommand_Add-AzStackHCIVMVirtualMachineDataDisk PSFunction_Add-AzStackHCIVMVirtualMachineNetworkInterface PSCommand_Add-AzStackHCIVMVirtualMachineNetworkInterface PSFunction_Get-AzStackHCIVMImage PSCommand_Get-AzStackHCIVMImage PSFunction_Get-AzStackHCIVMLogicalNetwork PSCommand_Get-AzStackHCIVMLogicalNetwork PSFunction_Get-AzStackHCIVMNetworkInterface PSCommand_Get-AzStackHCIVMNetworkInterface PSFunction_Get-AzStackHCIVMStoragePath PSCommand_Get-AzStackHCIVMStoragePath PSFunction_Get-AzStackHCIVMVirtualHardDisk PSCommand_Get-AzStackHCIVMVirtualHardDisk PSFunction_Get-AzStackHCIVMVirtualMachine PSCommand_Get-AzStackHCIVMVirtualMachine PSFunction_New-AzStackHCIVMImage PSCommand_New-AzStackHCIVMImage PSFunction_New-AzStackHCIVMLogicalNetwork PSCommand_New-AzStackHCIVMLogicalNetwork PSFunction_New-AzStackHCIVMNetworkInterface PSCommand_New-AzStackHCIVMNetworkInterface PSFunction_New-AzStackHCIVMStoragePath PSCommand_New-AzStackHCIVMStoragePath PSFunction_New-AzStackHCIVMVirtualHardDisk PSCommand_New-AzStackHCIVMVirtualHardDisk PSFunction_New-AzStackHCIVMVirtualMachine PSCommand_New-AzStackHCIVMVirtualMachine PSFunction_Remove-AzStackHCIVMImage PSCommand_Remove-AzStackHCIVMImage PSFunction_Remove-AzStackHCIVMLogicalNetwork PSCommand_Remove-AzStackHCIVMLogicalNetwork PSFunction_Remove-AzStackHCIVMNetworkInterface PSCommand_Remove-AzStackHCIVMNetworkInterface PSFunction_Remove-AzStackHCIVMStoragePath PSCommand_Remove-AzStackHCIVMStoragePath PSFunction_Remove-AzStackHCIVMVirtualHardDisk PSCommand_Remove-AzStackHCIVMVirtualHardDisk PSFunction_Remove-AzStackHCIVMVirtualMachine PSCommand_Remove-AzStackHCIVMVirtualMachine PSFunction_Remove-AzStackHCIVMVirtualMachineDataDisk PSCommand_Remove-AzStackHCIVMVirtualMachineDataDisk PSFunction_Remove-AzStackHCIVMVirtualMachineNetworkInterface PSCommand_Remove-AzStackHCIVMVirtualMachineNetworkInterface PSFunction_Restart-AzStackHCIVMVirtualMachine PSCommand_Restart-AzStackHCIVMVirtualMachine PSFunction_Start-AzStackHCIVMVirtualMachine PSCommand_Start-AzStackHCIVMVirtualMachine PSFunction_Stop-AzStackHCIVMVirtualMachine PSCommand_Stop-AzStackHCIVMVirtualMachine PSFunction_Update-AzStackHCIVMImage PSCommand_Update-AzStackHCIVMImage PSFunction_Update-AzStackHCIVMLogicalNetwork PSCommand_Update-AzStackHCIVMLogicalNetwork PSFunction_Update-AzStackHCIVMNetworkInterface PSCommand_Update-AzStackHCIVMNetworkInterface PSFunction_Update-AzStackHCIVMStoragePath PSCommand_Update-AzStackHCIVMStoragePath PSFunction_Update-AzStackHCIVMVirtualHardDisk PSCommand_Update-AzStackHCIVMVirtualHardDisk PSFunction_Update-AzStackHCIVMVirtualMachine PSCommand_Update-AzStackHCIVMVirtualMachine PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:20:00Z</S>
           <S N="NormalizedVersion">1.1.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.StackHCIVM.nuspec|StackHCIVM.Autorest\custom\Update-AzStackHCIVMLogicalNetwork_ByResourceId.ps1|StackHCIVM.Autorest\custom\Update-AzStackHCIVMVirtualHardDisk_ByResourceId.ps1|StackHCIVM.Autorest\custom\utilities\RegExValidations.ps1|StackHCIVM.Autorest\internal\Az.StackHCIVM.internal.psm1|StackHCIVM.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|StackHCIVM.Autorest\Az.StackHCIVM.format.ps1xml|StackHCIVM.Autorest\custom\Add-AzStackHCIVMVirtualMachineDataDisk.ps1|StackHCIVM.Autorest\custom\Get-AzStackHCIVmImage.ps1|StackHCIVM.Autorest\custom\Get-AzStackHCIVMStoragePath_ByResourceId.ps1|StackHCIVM.Autorest\custom\New-AzStackHCIVMImage.ps1|StackHCIVM.Autorest\custom\New-AzStackHCIVMStoragePath_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHCIVMImage.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHciVMStoragePath_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHCIVMVirtualMachineNetworkInterface.ps1|StackHCIVM.Autorest\custom\Start-AzStackHCIVMVirtualMachine_New.ps1|StackHCIVM.Autorest\custom\Update-AzStackHCIVMNetworkInterface_ByResourceId.ps1|StackHCIVM.Autorest\custom\Update-AzStackHCIVMVirtualMachine_New.ps1|StackHCIVM.Autorest\custom\utilities\VirtualNetworkValidations.ps1|StackHCIVM.Autorest\internal\ProxyCmdletDefinitions.ps1|StackHCIVM.Autorest\utils\Unprotect-SecureString.ps1|Az.StackHCIVM.psd1|StackHCIVM.Autorest\Az.StackHCIVM.psm1|StackHCIVM.Autorest\custom\Add-AzStackHCIVMVirtualMachineNetworkInterface.ps1|StackHCIVM.Autorest\custom\Get-AzStackHCIVmLogicalNetwork_ByResourceId2.ps1|StackHCIVM.Autorest\custom\Get-AzStackHCIVMVirtualHardDisk_ByResourceId.ps1|StackHCIVM.Autorest\custom\New-AzStackHCIVMLogicalNetwork_New.ps1|StackHCIVM.Autorest\custom\New-AzStackHCIVMVirtualHardDisk_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHciVMLogicalNetwork_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHCIVmVirtualHardDisk_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHCIVmVirtualMachine_New.ps1|StackHCIVM.Autorest\custom\Stop-AzStackHCIVMVirtualMachine_New.ps1|StackHCIVM.Autorest\custom\Update-AzStackHCIVMStoragePath_ByResourceId.ps1|StackHCIVM.Autorest\custom\utilities\NetworkInterfaceValidations.ps1|StackHCIVM.Autorest\exports\ProxyCmdletDefinitions.ps1|Az.StackHCIVM.psm1|StackHCIVM.Autorest\bin\Az.StackHCIVM.private.dll|StackHCIVM.Autorest\custom\Az.StackHCIVM.custom.psm1|StackHCIVM.Autorest\custom\Get-AzStackHCIVMNetworkInterface_ByResourceId.ps1|StackHCIVM.Autorest\custom\Get-AzStackHCIVMVirtualMachine.ps1|StackHCIVM.Autorest\custom\New-AzStackHCIVMNetworkInterface_New.ps1|StackHCIVM.Autorest\custom\New-AzStackHCIVMVirtualMachine_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHciVMNetworkInterface_New.ps1|StackHCIVM.Autorest\custom\Remove-AzStackHCIVMVirtualMachineDataDisk.ps1|StackHCIVM.Autorest\custom\Restart-AzStackHCIVMVirtualMachine_New.ps1|StackHCIVM.Autorest\custom\Update-AzStackHCIVMImage.ps1|.signature.p7s</S>
-          <S N="GUID">accceef6-8113-453a-a31c-4f2ce57893d6</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.StackHCIVM\1.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

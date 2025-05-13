@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.DesktopVirtualization</S>
-      <Version N="Version">5.4.1</Version>
-      <S N="Type">Module</S>
+      <S N="Version">5.4.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell: DesktopVirtualization cmdlets</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:13:49-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:46.9511243-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:13:49.397</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:31.5200327-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,16 +42,142 @@
           <S>DesktopVirtualization</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSFunction_Disconnect-AzWvdUserSession</S>
+          <S>PSCommand_Disconnect-AzWvdUserSession</S>
+          <S>PSFunction_Expand-AzWvdMsixImage</S>
+          <S>PSCommand_Expand-AzWvdMsixImage</S>
+          <S>PSFunction_Get-AzWvdAppAttachPackage</S>
+          <S>PSCommand_Get-AzWvdAppAttachPackage</S>
+          <S>PSFunction_Get-AzWvdApplication</S>
+          <S>PSCommand_Get-AzWvdApplication</S>
+          <S>PSFunction_Get-AzWvdApplicationGroup</S>
+          <S>PSCommand_Get-AzWvdApplicationGroup</S>
+          <S>PSFunction_Get-AzWvdDesktop</S>
+          <S>PSCommand_Get-AzWvdDesktop</S>
+          <S>PSFunction_Get-AzWvdHostPool</S>
+          <S>PSCommand_Get-AzWvdHostPool</S>
+          <S>PSFunction_Get-AzWvdHostPoolRegistrationToken</S>
+          <S>PSCommand_Get-AzWvdHostPoolRegistrationToken</S>
+          <S>PSFunction_Get-AzWvdMsixPackage</S>
+          <S>PSCommand_Get-AzWvdMsixPackage</S>
+          <S>PSFunction_Get-AzWvdPrivateEndpointConnection</S>
+          <S>PSCommand_Get-AzWvdPrivateEndpointConnection</S>
+          <S>PSFunction_Get-AzWvdPrivateLinkResource</S>
+          <S>PSCommand_Get-AzWvdPrivateLinkResource</S>
+          <S>PSFunction_Get-AzWvdRegistrationInfo</S>
+          <S>PSCommand_Get-AzWvdRegistrationInfo</S>
+          <S>PSFunction_Get-AzWvdScalingPlan</S>
+          <S>PSCommand_Get-AzWvdScalingPlan</S>
+          <S>PSFunction_Get-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSCommand_Get-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSFunction_Get-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSCommand_Get-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSFunction_Get-AzWvdSessionHost</S>
+          <S>PSCommand_Get-AzWvdSessionHost</S>
+          <S>PSFunction_Get-AzWvdStartMenuItem</S>
+          <S>PSCommand_Get-AzWvdStartMenuItem</S>
+          <S>PSFunction_Get-AzWvdUserSession</S>
+          <S>PSCommand_Get-AzWvdUserSession</S>
+          <S>PSFunction_Get-AzWvdWorkspace</S>
+          <S>PSCommand_Get-AzWvdWorkspace</S>
+          <S>PSFunction_Import-AzWvdAppAttachPackageInfo</S>
+          <S>PSCommand_Import-AzWvdAppAttachPackageInfo</S>
+          <S>PSFunction_New-AzWvdAppAttachPackage</S>
+          <S>PSCommand_New-AzWvdAppAttachPackage</S>
+          <S>PSFunction_New-AzWvdApplication</S>
+          <S>PSCommand_New-AzWvdApplication</S>
+          <S>PSFunction_New-AzWvdApplicationGroup</S>
+          <S>PSCommand_New-AzWvdApplicationGroup</S>
+          <S>PSFunction_New-AzWvdHostPool</S>
+          <S>PSCommand_New-AzWvdHostPool</S>
+          <S>PSFunction_New-AzWvdMsixPackage</S>
+          <S>PSCommand_New-AzWvdMsixPackage</S>
+          <S>PSFunction_New-AzWvdRegistrationInfo</S>
+          <S>PSCommand_New-AzWvdRegistrationInfo</S>
+          <S>PSFunction_New-AzWvdScalingPlan</S>
+          <S>PSCommand_New-AzWvdScalingPlan</S>
+          <S>PSFunction_New-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSCommand_New-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSFunction_New-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSCommand_New-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSFunction_New-AzWvdWorkspace</S>
+          <S>PSCommand_New-AzWvdWorkspace</S>
+          <S>PSFunction_Register-AzWvdApplicationGroup</S>
+          <S>PSCommand_Register-AzWvdApplicationGroup</S>
+          <S>PSFunction_Remove-AzWvdAppAttachPackage</S>
+          <S>PSCommand_Remove-AzWvdAppAttachPackage</S>
+          <S>PSFunction_Remove-AzWvdApplication</S>
+          <S>PSCommand_Remove-AzWvdApplication</S>
+          <S>PSFunction_Remove-AzWvdApplicationGroup</S>
+          <S>PSCommand_Remove-AzWvdApplicationGroup</S>
+          <S>PSFunction_Remove-AzWvdHostPool</S>
+          <S>PSCommand_Remove-AzWvdHostPool</S>
+          <S>PSFunction_Remove-AzWvdMsixPackage</S>
+          <S>PSCommand_Remove-AzWvdMsixPackage</S>
+          <S>PSFunction_Remove-AzWvdPrivateEndpointConnection</S>
+          <S>PSCommand_Remove-AzWvdPrivateEndpointConnection</S>
+          <S>PSFunction_Remove-AzWvdRegistrationInfo</S>
+          <S>PSCommand_Remove-AzWvdRegistrationInfo</S>
+          <S>PSFunction_Remove-AzWvdScalingPlan</S>
+          <S>PSCommand_Remove-AzWvdScalingPlan</S>
+          <S>PSFunction_Remove-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSCommand_Remove-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSFunction_Remove-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSCommand_Remove-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSFunction_Remove-AzWvdSessionHost</S>
+          <S>PSCommand_Remove-AzWvdSessionHost</S>
+          <S>PSFunction_Remove-AzWvdUserSession</S>
+          <S>PSCommand_Remove-AzWvdUserSession</S>
+          <S>PSFunction_Remove-AzWvdWorkspace</S>
+          <S>PSCommand_Remove-AzWvdWorkspace</S>
+          <S>PSFunction_Send-AzWvdUserSessionMessage</S>
+          <S>PSCommand_Send-AzWvdUserSessionMessage</S>
+          <S>PSFunction_Unregister-AzWvdApplicationGroup</S>
+          <S>PSCommand_Unregister-AzWvdApplicationGroup</S>
+          <S>PSFunction_Update-AzWvdAppAttachPackage</S>
+          <S>PSCommand_Update-AzWvdAppAttachPackage</S>
+          <S>PSFunction_Update-AzWvdApplication</S>
+          <S>PSCommand_Update-AzWvdApplication</S>
+          <S>PSFunction_Update-AzWvdApplicationGroup</S>
+          <S>PSCommand_Update-AzWvdApplicationGroup</S>
+          <S>PSFunction_Update-AzWvdDesktop</S>
+          <S>PSCommand_Update-AzWvdDesktop</S>
+          <S>PSFunction_Update-AzWvdHostPool</S>
+          <S>PSCommand_Update-AzWvdHostPool</S>
+          <S>PSFunction_Update-AzWvdMsixPackage</S>
+          <S>PSCommand_Update-AzWvdMsixPackage</S>
+          <S>PSFunction_Update-AzWvdScalingPlan</S>
+          <S>PSCommand_Update-AzWvdScalingPlan</S>
+          <S>PSFunction_Update-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSCommand_Update-AzWvdScalingPlanPersonalSchedule</S>
+          <S>PSFunction_Update-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSCommand_Update-AzWvdScalingPlanPooledSchedule</S>
+          <S>PSFunction_Update-AzWvdSessionHost</S>
+          <S>PSCommand_Update-AzWvdSessionHost</S>
+          <S>PSFunction_Update-AzWvdWorkspace</S>
+          <S>PSCommand_Update-AzWvdWorkspace</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
             <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
@@ -121,154 +242,98 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Disconnect-AzWvdUserSession</S>
-                <S>Expand-AzWvdMsixImage</S>
-                <S>Get-AzWvdAppAttachPackage</S>
-                <S>Get-AzWvdApplication</S>
-                <S>Get-AzWvdApplicationGroup</S>
-                <S>Get-AzWvdDesktop</S>
-                <S>Get-AzWvdHostPool</S>
-                <S>Get-AzWvdHostPoolRegistrationToken</S>
-                <S>Get-AzWvdMsixPackage</S>
-                <S>Get-AzWvdPrivateEndpointConnection</S>
-                <S>Get-AzWvdPrivateLinkResource</S>
-                <S>Get-AzWvdRegistrationInfo</S>
-                <S>Get-AzWvdScalingPlan</S>
-                <S>Get-AzWvdScalingPlanPersonalSchedule</S>
-                <S>Get-AzWvdScalingPlanPooledSchedule</S>
-                <S>Get-AzWvdSessionHost</S>
-                <S>Get-AzWvdStartMenuItem</S>
-                <S>Get-AzWvdUserSession</S>
-                <S>Get-AzWvdWorkspace</S>
-                <S>Import-AzWvdAppAttachPackageInfo</S>
-                <S>New-AzWvdAppAttachPackage</S>
-                <S>New-AzWvdApplication</S>
-                <S>New-AzWvdApplicationGroup</S>
-                <S>New-AzWvdHostPool</S>
-                <S>New-AzWvdMsixPackage</S>
-                <S>New-AzWvdRegistrationInfo</S>
-                <S>New-AzWvdScalingPlan</S>
-                <S>New-AzWvdScalingPlanPersonalSchedule</S>
-                <S>New-AzWvdScalingPlanPooledSchedule</S>
-                <S>New-AzWvdWorkspace</S>
-                <S>Register-AzWvdApplicationGroup</S>
-                <S>Remove-AzWvdAppAttachPackage</S>
-                <S>Remove-AzWvdApplication</S>
-                <S>Remove-AzWvdApplicationGroup</S>
-                <S>Remove-AzWvdHostPool</S>
-                <S>Remove-AzWvdMsixPackage</S>
-                <S>Remove-AzWvdPrivateEndpointConnection</S>
-                <S>Remove-AzWvdRegistrationInfo</S>
-                <S>Remove-AzWvdScalingPlan</S>
-                <S>Remove-AzWvdScalingPlanPersonalSchedule</S>
-                <S>Remove-AzWvdScalingPlanPooledSchedule</S>
-                <S>Remove-AzWvdSessionHost</S>
-                <S>Remove-AzWvdUserSession</S>
-                <S>Remove-AzWvdWorkspace</S>
-                <S>Send-AzWvdUserSessionMessage</S>
-                <S>Unregister-AzWvdApplicationGroup</S>
-                <S>Update-AzWvdAppAttachPackage</S>
-                <S>Update-AzWvdApplication</S>
-                <S>Update-AzWvdApplicationGroup</S>
-                <S>Update-AzWvdDesktop</S>
-                <S>Update-AzWvdHostPool</S>
-                <S>Update-AzWvdMsixPackage</S>
-                <S>Update-AzWvdScalingPlan</S>
-                <S>Update-AzWvdScalingPlanPersonalSchedule</S>
-                <S>Update-AzWvdScalingPlanPooledSchedule</S>
-                <S>Update-AzWvdSessionHost</S>
-                <S>Update-AzWvdWorkspace</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell: DesktopVirtualization cmdlets</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7275420</S>
-          <S N="downloadCount">105255473</S>
-          <S N="packageSize">1396910</S>
-          <S N="published">1/14/2025 3:13:49 AM -05:00</S>
-          <S N="created">1/14/2025 3:13:49 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM PSModule DesktopVirtualization PSEdition_Core PSEdition_Desktop PSFunction_Disconnect-AzWvdUserSession PSCommand_Disconnect-AzWvdUserSession PSFunction_Expand-AzWvdMsixImage PSCommand_Expand-AzWvdMsixImage PSFunction_Get-AzWvdAppAttachPackage PSCommand_Get-AzWvdAppAttachPackage PSFunction_Get-AzWvdApplication PSCommand_Get-AzWvdApplication PSFunction_Get-AzWvdApplicationGroup PSCommand_Get-AzWvdApplicationGroup PSFunction_Get-AzWvdDesktop PSCommand_Get-AzWvdDesktop PSFunction_Get-AzWvdHostPool PSCommand_Get-AzWvdHostPool PSFunction_Get-AzWvdHostPoolRegistrationToken PSCommand_Get-AzWvdHostPoolRegistrationToken PSFunction_Get-AzWvdMsixPackage PSCommand_Get-AzWvdMsixPackage PSFunction_Get-AzWvdPrivateEndpointConnection PSCommand_Get-AzWvdPrivateEndpointConnection PSFunction_Get-AzWvdPrivateLinkResource PSCommand_Get-AzWvdPrivateLinkResource PSFunction_Get-AzWvdRegistrationInfo PSCommand_Get-AzWvdRegistrationInfo PSFunction_Get-AzWvdScalingPlan PSCommand_Get-AzWvdScalingPlan PSFunction_Get-AzWvdScalingPlanPersonalSchedule PSCommand_Get-AzWvdScalingPlanPersonalSchedule PSFunction_Get-AzWvdScalingPlanPooledSchedule PSCommand_Get-AzWvdScalingPlanPooledSchedule PSFunction_Get-AzWvdSessionHost PSCommand_Get-AzWvdSessionHost PSFunction_Get-AzWvdStartMenuItem PSCommand_Get-AzWvdStartMenuItem PSFunction_Get-AzWvdUserSession PSCommand_Get-AzWvdUserSession PSFunction_Get-AzWvdWorkspace PSCommand_Get-AzWvdWorkspace PSFunction_Import-AzWvdAppAttachPackageInfo PSCommand_Import-AzWvdAppAttachPackageInfo PSFunction_New-AzWvdAppAttachPackage PSCommand_New-AzWvdAppAttachPackage PSFunction_New-AzWvdApplication PSCommand_New-AzWvdApplication PSFunction_New-AzWvdApplicationGroup PSCommand_New-AzWvdApplicationGroup PSFunction_New-AzWvdHostPool PSCommand_New-AzWvdHostPool PSFunction_New-AzWvdMsixPackage PSCommand_New-AzWvdMsixPackage PSFunction_New-AzWvdRegistrationInfo PSCommand_New-AzWvdRegistrationInfo PSFunction_New-AzWvdScalingPlan PSCommand_New-AzWvdScalingPlan PSFunction_New-AzWvdScalingPlanPersonalSchedule PSCommand_New-AzWvdScalingPlanPersonalSchedule PSFunction_New-AzWvdScalingPlanPooledSchedule PSCommand_New-AzWvdScalingPlanPooledSchedule PSFunction_New-AzWvdWorkspace PSCommand_New-AzWvdWorkspace PSFunction_Register-AzWvdApplicationGroup PSCommand_Register-AzWvdApplicationGroup PSFunction_Remove-AzWvdAppAttachPackage PSCommand_Remove-AzWvdAppAttachPackage PSFunction_Remove-AzWvdApplication PSCommand_Remove-AzWvdApplication PSFunction_Remove-AzWvdApplicationGroup PSCommand_Remove-AzWvdApplicationGroup PSFunction_Remove-AzWvdHostPool PSCommand_Remove-AzWvdHostPool PSFunction_Remove-AzWvdMsixPackage PSCommand_Remove-AzWvdMsixPackage PSFunction_Remove-AzWvdPrivateEndpointConnection PSCommand_Remove-AzWvdPrivateEndpointConnection PSFunction_Remove-AzWvdRegistrationInfo PSCommand_Remove-AzWvdRegistrationInfo PSFunction_Remove-AzWvdScalingPlan PSCommand_Remove-AzWvdScalingPlan PSFunction_Remove-AzWvdScalingPlanPersonalSchedule PSCommand_Remove-AzWvdScalingPlanPersonalSchedule PSFunction_Remove-AzWvdScalingPlanPooledSchedule PSCommand_Remove-AzWvdScalingPlanPooledSchedule PSFunction_Remove-AzWvdSessionHost PSCommand_Remove-AzWvdSessionHost PSFunction_Remove-AzWvdUserSession PSCommand_Remove-AzWvdUserSession PSFunction_Remove-AzWvdWorkspace PSCommand_Remove-AzWvdWorkspace PSFunction_Send-AzWvdUserSessionMessage PSCommand_Send-AzWvdUserSessionMessage PSFunction_Unregister-AzWvdApplicationGroup PSCommand_Unregister-AzWvdApplicationGroup PSFunction_Update-AzWvdAppAttachPackage PSCommand_Update-AzWvdAppAttachPackage PSFunction_Update-AzWvdApplication PSCommand_Update-AzWvdApplication PSFunction_Update-AzWvdApplicationGroup PSCommand_Update-AzWvdApplicationGroup PSFunction_Update-AzWvdDesktop PSCommand_Update-AzWvdDesktop PSFunction_Update-AzWvdHostPool PSCommand_Update-AzWvdHostPool PSFunction_Update-AzWvdMsixPackage PSCommand_Update-AzWvdMsixPackage PSFunction_Update-AzWvdScalingPlan PSCommand_Update-AzWvdScalingPlan PSFunction_Update-AzWvdScalingPlanPersonalSchedule PSCommand_Update-AzWvdScalingPlanPersonalSchedule PSFunction_Update-AzWvdScalingPlanPooledSchedule PSCommand_Update-AzWvdScalingPlanPooledSchedule PSFunction_Update-AzWvdSessionHost PSCommand_Update-AzWvdSessionHost PSFunction_Update-AzWvdWorkspace PSCommand_Update-AzWvdWorkspace PSIncludes_Function</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">5.4.1</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.DesktopVirtualization.nuspec|DesktopVirtualization.Autorest\custom\Az.DesktopVirtualization.custom.psm1|DesktopVirtualization.Autorest\custom\New-AzWvdAppAttachPackage_ImageObject.ps1|DesktopVirtualization.Autorest\custom\New-AzWvdHostPool_FullScenarioCreate.ps1|DesktopVirtualization.Autorest\custom\New-AzWvdMsixpackage_PackageAlias.ps1|DesktopVirtualization.Autorest\custom\New-AzWvdRegistrationInfo.ps1|DesktopVirtualization.Autorest\custom\Register-AzWvdApplicationGroup.ps1|DesktopVirtualization.Autorest\custom\Remove-AzWvdRegistrationInfo.ps1|DesktopVirtualization.Autorest\custom\Unregister-AzWvdApplicationGroup.ps1|DesktopVirtualization.Autorest\custom\Update-AzWvdAppAttachPackage_ImageObject.ps1|DesktopVirtualization.Autorest\exports\ProxyCmdletDefinitions.ps1|DesktopVirtualization.Autorest\internal\Az.DesktopVirtualization.internal.psm1|DesktopVirtualization.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|DesktopVirtualization.Autorest\utils\Unprotect-SecureString.ps1|Az.DesktopVirtualization.psm1|DesktopVirtualization.Autorest\Az.DesktopVirtualization.psm1|DesktopVirtualization.Autorest\custom\Get-AzWvdRegistrationInfo.ps1|DesktopVirtualization.Autorest\custom\New-AzWvdApplication_AppAlias.ps1|Az.DesktopVirtualization.psd1|DesktopVirtualization.Autorest\Az.DesktopVirtualization.format.ps1xml|DesktopVirtualization.Autorest\bin\Az.DesktopVirtualization.private.dll|.signature.p7s</S>
-          <S N="GUID">4cbade8e-48e0-42f8-a847-7872d0006d54</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.DesktopVirtualization\5.4.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

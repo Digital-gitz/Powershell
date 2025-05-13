@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.PolicyInsights</S>
-      <Version N="Version">1.7.1</Version>
-      <S N="Type">Module</S>
+      <S N="Version">1.7.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Azure Policy Insights cmdlets for Windows PowerShell and PowerShell Core. Allows querying policy evaluation events and compliance states._x000D__x000A__x000D__x000A_For more information on Policy Insights, please visit the following: https://learn.microsoft.com/azure/governance/policy/overview</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-03-04T04:19:57-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:21:30.6627216-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-03-04T04:19:57.767</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:48.6452834-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -53,32 +48,55 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Get-AzPolicyAttestation</S>
+          <S>PSCommand_Get-AzPolicyAttestation</S>
+          <S>PSCmdlet_Get-AzPolicyEvent</S>
+          <S>PSCommand_Get-AzPolicyEvent</S>
+          <S>PSCmdlet_Get-AzPolicyMetadata</S>
+          <S>PSCommand_Get-AzPolicyMetadata</S>
+          <S>PSCmdlet_Get-AzPolicyRemediation</S>
+          <S>PSCommand_Get-AzPolicyRemediation</S>
+          <S>PSCmdlet_Get-AzPolicyState</S>
+          <S>PSCommand_Get-AzPolicyState</S>
+          <S>PSCmdlet_Get-AzPolicyStateSummary</S>
+          <S>PSCommand_Get-AzPolicyStateSummary</S>
+          <S>PSCmdlet_New-AzPolicyAttestation</S>
+          <S>PSCommand_New-AzPolicyAttestation</S>
+          <S>PSCmdlet_Remove-AzPolicyAttestation</S>
+          <S>PSCommand_Remove-AzPolicyAttestation</S>
+          <S>PSCmdlet_Remove-AzPolicyRemediation</S>
+          <S>PSCommand_Remove-AzPolicyRemediation</S>
+          <S>PSCmdlet_Set-AzPolicyAttestation</S>
+          <S>PSCommand_Set-AzPolicyAttestation</S>
+          <S>PSCmdlet_Start-AzPolicyComplianceScan</S>
+          <S>PSCommand_Start-AzPolicyComplianceScan</S>
+          <S>PSCmdlet_Start-AzPolicyRemediation</S>
+          <S>PSCommand_Start-AzPolicyRemediation</S>
+          <S>PSCmdlet_Stop-AzPolicyRemediation</S>
+          <S>PSCommand_Stop-AzPolicyRemediation</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzPolicyAttestation</S>
@@ -98,12 +116,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzPolicyAttestation</S>
@@ -124,69 +146,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Removed 'Microsoft.Azure.Management.PolicyInsights' Version '1.0.0' PackageReference</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.2</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.2</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.2, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.2</ToString>
+                    <Props>
+                      <Version N="Version">4.0.2.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.2</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">2</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.2, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Azure Policy Insights cmdlets for Windows PowerShell and PowerShell Core. Allows querying policy evaluation events and compliance states._x000D__x000A__x000D__x000A_For more information on Policy Insights, please visit the following: https://learn.microsoft.com/azure/governance/policy/overview</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Removed 'Microsoft.Azure.Management.PolicyInsights' Version '1.0.0' PackageReference</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">607083</S>
-          <S N="downloadCount">111266302</S>
-          <S N="packageSize">254237</S>
-          <S N="published">3/4/2025 4:19:57 AM -05:00</S>
-          <S N="created">3/4/2025 4:19:57 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM Provider Policy PolicyInsights PolicyEvent PolicyState Remediation PolicyMetadata PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzPolicyAttestation PSCommand_Get-AzPolicyAttestation PSCmdlet_Get-AzPolicyEvent PSCommand_Get-AzPolicyEvent PSCmdlet_Get-AzPolicyMetadata PSCommand_Get-AzPolicyMetadata PSCmdlet_Get-AzPolicyRemediation PSCommand_Get-AzPolicyRemediation PSCmdlet_Get-AzPolicyState PSCommand_Get-AzPolicyState PSCmdlet_Get-AzPolicyStateSummary PSCommand_Get-AzPolicyStateSummary PSCmdlet_New-AzPolicyAttestation PSCommand_New-AzPolicyAttestation PSCmdlet_Remove-AzPolicyAttestation PSCommand_Remove-AzPolicyAttestation PSCmdlet_Remove-AzPolicyRemediation PSCommand_Remove-AzPolicyRemediation PSCmdlet_Set-AzPolicyAttestation PSCommand_Set-AzPolicyAttestation PSCmdlet_Start-AzPolicyComplianceScan PSCommand_Start-AzPolicyComplianceScan PSCmdlet_Start-AzPolicyRemediation PSCommand_Start-AzPolicyRemediation PSCmdlet_Stop-AzPolicyRemediation PSCommand_Stop-AzPolicyRemediation PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">1.7.1</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.PolicyInsights.nuspec|Az.PolicyInsights.psd1|Az.PolicyInsights.psm1|Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll|Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml|Microsoft.Azure.PowerShell.PolicyInsights.Management.Sdk.dll|PolicyInsights.format.ps1xml|.signature.p7s</S>
-          <S N="GUID">8e5143cc-e222-4c80-9e62-c87989326174</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.PolicyInsights\1.7.1</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

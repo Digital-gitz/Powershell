@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.ServiceFabric</S>
-      <Version N="Version">3.5.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">3.5.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Service Fabric cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Service Fabric, please visit the following: https://learn.microsoft.com/azure/service-fabric/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:19:41-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:21:49.4896159-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:19:41.647</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:58.6480754-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,32 +42,147 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-AzServiceFabricClientCertificate</S>
+          <S>PSCommand_Add-AzServiceFabricClientCertificate</S>
+          <S>PSCmdlet_Add-AzServiceFabricManagedClusterClientCertificate</S>
+          <S>PSCommand_Add-AzServiceFabricManagedClusterClientCertificate</S>
+          <S>PSCmdlet_Add-AzServiceFabricManagedClusterNetworkSecurityRule</S>
+          <S>PSCommand_Add-AzServiceFabricManagedClusterNetworkSecurityRule</S>
+          <S>PSCmdlet_Add-AzServiceFabricManagedNodeTypeVMExtension</S>
+          <S>PSCommand_Add-AzServiceFabricManagedNodeTypeVMExtension</S>
+          <S>PSCmdlet_Add-AzServiceFabricManagedNodeTypeVMSecret</S>
+          <S>PSCommand_Add-AzServiceFabricManagedNodeTypeVMSecret</S>
+          <S>PSCmdlet_Add-AzServiceFabricNode</S>
+          <S>PSCommand_Add-AzServiceFabricNode</S>
+          <S>PSCmdlet_Add-AzServiceFabricNodeType</S>
+          <S>PSCommand_Add-AzServiceFabricNodeType</S>
+          <S>PSCmdlet_Get-AzServiceFabricApplication</S>
+          <S>PSCommand_Get-AzServiceFabricApplication</S>
+          <S>PSCmdlet_Get-AzServiceFabricApplicationType</S>
+          <S>PSCommand_Get-AzServiceFabricApplicationType</S>
+          <S>PSCmdlet_Get-AzServiceFabricApplicationTypeVersion</S>
+          <S>PSCommand_Get-AzServiceFabricApplicationTypeVersion</S>
+          <S>PSCmdlet_Get-AzServiceFabricCluster</S>
+          <S>PSCommand_Get-AzServiceFabricCluster</S>
+          <S>PSCmdlet_Get-AzServiceFabricManagedCluster</S>
+          <S>PSCommand_Get-AzServiceFabricManagedCluster</S>
+          <S>PSCmdlet_Get-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCommand_Get-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCmdlet_Get-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCommand_Get-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCmdlet_Get-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCommand_Get-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCmdlet_Get-AzServiceFabricManagedClusterService</S>
+          <S>PSCommand_Get-AzServiceFabricManagedClusterService</S>
+          <S>PSCmdlet_Get-AzServiceFabricManagedNodeType</S>
+          <S>PSCommand_Get-AzServiceFabricManagedNodeType</S>
+          <S>PSCmdlet_Get-AzServiceFabricService</S>
+          <S>PSCommand_Get-AzServiceFabricService</S>
+          <S>PSCmdlet_New-AzServiceFabricApplication</S>
+          <S>PSCommand_New-AzServiceFabricApplication</S>
+          <S>PSCmdlet_New-AzServiceFabricApplicationType</S>
+          <S>PSCommand_New-AzServiceFabricApplicationType</S>
+          <S>PSCmdlet_New-AzServiceFabricApplicationTypeVersion</S>
+          <S>PSCommand_New-AzServiceFabricApplicationTypeVersion</S>
+          <S>PSCmdlet_New-AzServiceFabricCluster</S>
+          <S>PSCommand_New-AzServiceFabricCluster</S>
+          <S>PSCmdlet_New-AzServiceFabricManagedCluster</S>
+          <S>PSCommand_New-AzServiceFabricManagedCluster</S>
+          <S>PSCmdlet_New-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCommand_New-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCmdlet_New-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCommand_New-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCmdlet_New-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCommand_New-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCmdlet_New-AzServiceFabricManagedClusterService</S>
+          <S>PSCommand_New-AzServiceFabricManagedClusterService</S>
+          <S>PSCmdlet_New-AzServiceFabricManagedNodeType</S>
+          <S>PSCommand_New-AzServiceFabricManagedNodeType</S>
+          <S>PSCmdlet_New-AzServiceFabricService</S>
+          <S>PSCommand_New-AzServiceFabricService</S>
+          <S>PSCmdlet_Remove-AzServiceFabricApplication</S>
+          <S>PSCommand_Remove-AzServiceFabricApplication</S>
+          <S>PSCmdlet_Remove-AzServiceFabricApplicationType</S>
+          <S>PSCommand_Remove-AzServiceFabricApplicationType</S>
+          <S>PSCmdlet_Remove-AzServiceFabricApplicationTypeVersion</S>
+          <S>PSCommand_Remove-AzServiceFabricApplicationTypeVersion</S>
+          <S>PSCmdlet_Remove-AzServiceFabricClientCertificate</S>
+          <S>PSCommand_Remove-AzServiceFabricClientCertificate</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedCluster</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedCluster</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedClusterClientCertificate</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedClusterClientCertificate</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedClusterService</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedClusterService</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedNodeType</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedNodeType</S>
+          <S>PSCmdlet_Remove-AzServiceFabricManagedNodeTypeVMExtension</S>
+          <S>PSCommand_Remove-AzServiceFabricManagedNodeTypeVMExtension</S>
+          <S>PSCmdlet_Remove-AzServiceFabricNode</S>
+          <S>PSCommand_Remove-AzServiceFabricNode</S>
+          <S>PSCmdlet_Remove-AzServiceFabricNodeType</S>
+          <S>PSCommand_Remove-AzServiceFabricNodeType</S>
+          <S>PSCmdlet_Remove-AzServiceFabricService</S>
+          <S>PSCommand_Remove-AzServiceFabricService</S>
+          <S>PSCmdlet_Remove-AzServiceFabricSetting</S>
+          <S>PSCommand_Remove-AzServiceFabricSetting</S>
+          <S>PSCmdlet_Restart-AzServiceFabricManagedNodeType</S>
+          <S>PSCommand_Restart-AzServiceFabricManagedNodeType</S>
+          <S>PSCmdlet_Set-AzServiceFabricManagedCluster</S>
+          <S>PSCommand_Set-AzServiceFabricManagedCluster</S>
+          <S>PSCmdlet_Set-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCommand_Set-AzServiceFabricManagedClusterApplication</S>
+          <S>PSCmdlet_Set-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCommand_Set-AzServiceFabricManagedClusterApplicationType</S>
+          <S>PSCmdlet_Set-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCommand_Set-AzServiceFabricManagedClusterApplicationTypeVersion</S>
+          <S>PSCmdlet_Set-AzServiceFabricManagedClusterService</S>
+          <S>PSCommand_Set-AzServiceFabricManagedClusterService</S>
+          <S>PSCmdlet_Set-AzServiceFabricManagedNodeType</S>
+          <S>PSCommand_Set-AzServiceFabricManagedNodeType</S>
+          <S>PSCmdlet_Set-AzServiceFabricSetting</S>
+          <S>PSCommand_Set-AzServiceFabricSetting</S>
+          <S>PSCmdlet_Set-AzServiceFabricUpgradeType</S>
+          <S>PSCommand_Set-AzServiceFabricUpgradeType</S>
+          <S>PSCmdlet_Update-AzServiceFabricApplication</S>
+          <S>PSCommand_Update-AzServiceFabricApplication</S>
+          <S>PSCmdlet_Update-AzServiceFabricDurability</S>
+          <S>PSCommand_Update-AzServiceFabricDurability</S>
+          <S>PSCmdlet_Update-AzServiceFabricNodeType</S>
+          <S>PSCommand_Update-AzServiceFabricNodeType</S>
+          <S>PSCmdlet_Update-AzServiceFabricReliability</S>
+          <S>PSCommand_Update-AzServiceFabricReliability</S>
+          <S>PSCmdlet_Update-AzServiceFabricVmImage</S>
+          <S>PSCommand_Update-AzServiceFabricVmImage</S>
+          <S>PSIncludes_Cmdlet</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="5" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzServiceFabricClientCertificate</S>
@@ -138,12 +248,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="5" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzServiceFabricClientCertificate</S>
@@ -210,69 +324,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="8">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="9">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="10">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Service Fabric cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Service Fabric, please visit the following: https://learn.microsoft.com/azure/service-fabric/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">False</S>
-          <S N="versionDownloadCount">7312258</S>
-          <S N="downloadCount">111068514</S>
-          <S N="packageSize">634547</S>
-          <S N="published">1/14/2025 3:19:41 AM -05:00</S>
-          <S N="created">1/14/2025 3:19:41 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM ServiceFabric PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Add-AzServiceFabricClientCertificate PSCommand_Add-AzServiceFabricClientCertificate PSCmdlet_Add-AzServiceFabricManagedClusterClientCertificate PSCommand_Add-AzServiceFabricManagedClusterClientCertificate PSCmdlet_Add-AzServiceFabricManagedClusterNetworkSecurityRule PSCommand_Add-AzServiceFabricManagedClusterNetworkSecurityRule PSCmdlet_Add-AzServiceFabricManagedNodeTypeVMExtension PSCommand_Add-AzServiceFabricManagedNodeTypeVMExtension PSCmdlet_Add-AzServiceFabricManagedNodeTypeVMSecret PSCommand_Add-AzServiceFabricManagedNodeTypeVMSecret PSCmdlet_Add-AzServiceFabricNode PSCommand_Add-AzServiceFabricNode PSCmdlet_Add-AzServiceFabricNodeType PSCommand_Add-AzServiceFabricNodeType PSCmdlet_Get-AzServiceFabricApplication PSCommand_Get-AzServiceFabricApplication PSCmdlet_Get-AzServiceFabricApplicationType PSCommand_Get-AzServiceFabricApplicationType PSCmdlet_Get-AzServiceFabricApplicationTypeVersion PSCommand_Get-AzServiceFabricApplicationTypeVersion PSCmdlet_Get-AzServiceFabricCluster PSCommand_Get-AzServiceFabricCluster PSCmdlet_Get-AzServiceFabricManagedCluster PSCommand_Get-AzServiceFabricManagedCluster PSCmdlet_Get-AzServiceFabricManagedClusterApplication PSCommand_Get-AzServiceFabricManagedClusterApplication PSCmdlet_Get-AzServiceFabricManagedClusterApplicationType PSCommand_Get-AzServiceFabricManagedClusterApplicationType PSCmdlet_Get-AzServiceFabricManagedClusterApplicationTypeVersion PSCommand_Get-AzServiceFabricManagedClusterApplicationTypeVersion PSCmdlet_Get-AzServiceFabricManagedClusterService PSCommand_Get-AzServiceFabricManagedClusterService PSCmdlet_Get-AzServiceFabricManagedNodeType PSCommand_Get-AzServiceFabricManagedNodeType PSCmdlet_Get-AzServiceFabricService PSCommand_Get-AzServiceFabricService PSCmdlet_New-AzServiceFabricApplication PSCommand_New-AzServiceFabricApplication PSCmdlet_New-AzServiceFabricApplicationType PSCommand_New-AzServiceFabricApplicationType PSCmdlet_New-AzServiceFabricApplicationTypeVersion PSCommand_New-AzServiceFabricApplicationTypeVersion PSCmdlet_New-AzServiceFabricCluster PSCommand_New-AzServiceFabricCluster PSCmdlet_New-AzServiceFabricManagedCluster PSCommand_New-AzServiceFabricManagedCluster PSCmdlet_New-AzServiceFabricManagedClusterApplication PSCommand_New-AzServiceFabricManagedClusterApplication PSCmdlet_New-AzServiceFabricManagedClusterApplicationType PSCommand_New-AzServiceFabricManagedClusterApplicationType PSCmdlet_New-AzServiceFabricManagedClusterApplicationTypeVersion PSCommand_New-AzServiceFabricManagedClusterApplicationTypeVersion PSCmdlet_New-AzServiceFabricManagedClusterService PSCommand_New-AzServiceFabricManagedClusterService PSCmdlet_New-AzServiceFabricManagedNodeType PSCommand_New-AzServiceFabricManagedNodeType PSCmdlet_New-AzServiceFabricService PSCommand_New-AzServiceFabricService PSCmdlet_Remove-AzServiceFabricApplication PSCommand_Remove-AzServiceFabricApplication PSCmdlet_Remove-AzServiceFabricApplicationType PSCommand_Remove-AzServiceFabricApplicationType PSCmdlet_Remove-AzServiceFabricApplicationTypeVersion PSCommand_Remove-AzServiceFabricApplicationTypeVersion PSCmdlet_Remove-AzServiceFabricClientCertificate PSCommand_Remove-AzServiceFabricClientCertificate PSCmdlet_Remove-AzServiceFabricManagedCluster PSCommand_Remove-AzServiceFabricManagedCluster PSCmdlet_Remove-AzServiceFabricManagedClusterApplication PSCommand_Remove-AzServiceFabricManagedClusterApplication PSCmdlet_Remove-AzServiceFabricManagedClusterApplicationType PSCommand_Remove-AzServiceFabricManagedClusterApplicationType PSCmdlet_Remove-AzServiceFabricManagedClusterApplicationTypeVersion PSCommand_Remove-AzServiceFabricManagedClusterApplicationTypeVersion PSCmdlet_Remove-AzServiceFabricManagedClusterClientCertificate PSCommand_Remove-AzServiceFabricManagedClusterClientCertificate PSCmdlet_Remove-AzServiceFabricManagedClusterService PSCommand_Remove-AzServiceFabricManagedClusterService PSCmdlet_Remove-AzServiceFabricManagedNodeType PSCommand_Remove-AzServiceFabricManagedNodeType PSCmdlet_Remove-AzServiceFabricManagedNodeTypeVMExtension PSCommand_Remove-AzServiceFabricManagedNodeTypeVMExtension PSCmdlet_Remove-AzServiceFabricNode PSCommand_Remove-AzServiceFabricNode PSCmdlet_Remove-AzServiceFabricNodeType PSCommand_Remove-AzServiceFabricNodeType PSCmdlet_Remove-AzServiceFabricService PSCommand_Remove-AzServiceFabricService PSCmdlet_Remove-AzServiceFabricSetting PSCommand_Remove-AzServiceFabricSetting PSCmdlet_Restart-AzServiceFabricManagedNodeType PSCommand_Restart-AzServiceFabricManagedNodeType PSCmdlet_Set-AzServiceFabricManagedCluster PSCommand_Set-AzServiceFabricManagedCluster PSCmdlet_Set-AzServiceFabricManagedClusterApplication PSCommand_Set-AzServiceFabricManagedClusterApplication PSCmdlet_Set-AzServiceFabricManagedClusterApplicationType PSCommand_Set-AzServiceFabricManagedClusterApplicationType PSCmdlet_Set-AzServiceFabricManagedClusterApplicationTypeVersion PSCommand_Set-AzServiceFabricManagedClusterApplicationTypeVersion PSCmdlet_Set-AzServiceFabricManagedClusterService PSCommand_Set-AzServiceFabricManagedClusterService PSCmdlet_Set-AzServiceFabricManagedNodeType PSCommand_Set-AzServiceFabricManagedNodeType PSCmdlet_Set-AzServiceFabricSetting PSCommand_Set-AzServiceFabricSetting PSCmdlet_Set-AzServiceFabricUpgradeType PSCommand_Set-AzServiceFabricUpgradeType PSCmdlet_Update-AzServiceFabricApplication PSCommand_Update-AzServiceFabricApplication PSCmdlet_Update-AzServiceFabricDurability PSCommand_Update-AzServiceFabricDurability PSCmdlet_Update-AzServiceFabricNodeType PSCommand_Update-AzServiceFabricNodeType PSCmdlet_Update-AzServiceFabricReliability PSCommand_Update-AzServiceFabricReliability PSCmdlet_Update-AzServiceFabricVmImage PSCommand_Update-AzServiceFabricVmImage PSIncludes_Cmdlet</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">3.5.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.ServiceFabric.nuspec|Microsoft.Azure.KeyVault.WebKey.dll|Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml|Microsoft.Azure.PowerShell.ServiceFabricManagedClusters.Management.Sdk.dll|ServiceFabric.format.ps1xml|Template\Linux\parameter.json|Template\Linux\template.json|Template\Service\parameter.json|Template\Service\template.json|Template\Ubuntu18_04\parameter.json|Template\Ubuntu18_04\template.json|Template\Ubuntu20_04\parameter.json|Template\Ubuntu20_04\template.json|Template\Windows\parameter.json|Template\Windows\template.json|Az.ServiceFabric.psm1|Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll|Microsoft.Azure.PowerShell.ServiceFabric.Management.Sdk.dll|Az.ServiceFabric.psd1|Microsoft.Azure.KeyVault.dll|.signature.p7s</S>
-          <S N="GUID">f98e4fc9-6247-4e59-99a1-7b8ba13b3d1e</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.ServiceFabric\3.5.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

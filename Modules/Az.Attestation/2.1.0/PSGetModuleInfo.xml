@@ -1,41 +1,36 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
       <T>System.Management.Automation.PSCustomObject</T>
       <T>System.Object</T>
     </TN>
     <MS>
       <S N="Name">Az.Attestation</S>
-      <Version N="Version">2.1.0</Version>
-      <S N="Type">Module</S>
+      <S N="Version">2.1.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
       <S N="Description">Microsoft Azure PowerShell - Attestation service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Attestation, please visit the following: https://learn.microsoft.com/azure/attestation/</S>
       <S N="Author">Microsoft Corporation</S>
-      <S N="CompanyName">azure-sdk</S>
+      <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
-      <DT N="PublishedDate">2025-01-14T03:11:22-05:00</DT>
-      <Obj N="InstalledDate" RefId="1">
-        <DT>2025-03-09T18:20:18.8611356-04:00</DT>
-        <MS>
-          <Obj N="DisplayHint" RefId="2">
-            <TN RefId="1">
-              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
-              <T>System.Enum</T>
-              <T>System.ValueType</T>
-              <T>System.Object</T>
-            </TN>
-            <ToString>DateTime</ToString>
-            <I32>2</I32>
-          </Obj>
-        </MS>
-      </Obj>
+      <DT N="PublishedDate">2025-01-14T03:11:22.623</DT>
+      <DT N="InstalledDate">2025-05-12T14:55:21.0284229-04:00</DT>
+      <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
       <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
       <Nil N="IconUri" />
-      <Obj N="Tags" RefId="3">
+      <Obj N="Tags" RefId="2">
         <TN RefId="2">
-          <T>System.Object[]</T>
+          <T>System.String[]</T>
           <T>System.Array</T>
           <T>System.Object</T>
         </TN>
@@ -47,41 +42,52 @@
           <S>PSModule</S>
           <S>PSEdition_Core</S>
           <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-AzAttestationPolicySigner</S>
+          <S>PSCommand_Add-AzAttestationPolicySigner</S>
+          <S>PSCmdlet_Get-AzAttestationPolicy</S>
+          <S>PSCommand_Get-AzAttestationPolicy</S>
+          <S>PSCmdlet_Get-AzAttestationPolicySigners</S>
+          <S>PSCommand_Get-AzAttestationPolicySigners</S>
+          <S>PSCmdlet_Remove-AzAttestationPolicySigner</S>
+          <S>PSCommand_Remove-AzAttestationPolicySigner</S>
+          <S>PSCmdlet_Reset-AzAttestationPolicy</S>
+          <S>PSCommand_Reset-AzAttestationPolicy</S>
+          <S>PSCmdlet_Set-AzAttestationPolicy</S>
+          <S>PSCommand_Set-AzAttestationPolicy</S>
+          <S>PSIncludes_Cmdlet</S>
+          <S>PSFunction_Get-AzAttestationDefaultProvider</S>
+          <S>PSCommand_Get-AzAttestationDefaultProvider</S>
+          <S>PSFunction_Get-AzAttestationProvider</S>
+          <S>PSCommand_Get-AzAttestationProvider</S>
+          <S>PSFunction_New-AzAttestationProvider</S>
+          <S>PSCommand_New-AzAttestationProvider</S>
+          <S>PSFunction_Remove-AzAttestationProvider</S>
+          <S>PSCommand_Remove-AzAttestationProvider</S>
+          <S>PSFunction_Update-AzAttestationProvider</S>
+          <S>PSCommand_Update-AzAttestationProvider</S>
+          <S>PSIncludes_Function</S>
         </LST>
       </Obj>
-      <Obj N="Includes" RefId="4">
+      <Obj N="Includes" RefId="3">
         <TN RefId="3">
           <T>System.Collections.Hashtable</T>
           <T>System.Object</T>
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzAttestationDefaultProvider</S>
-                <S>Get-AzAttestationProvider</S>
-                <S>New-AzAttestationProvider</S>
-                <S>Remove-AzAttestationProvider</S>
-                <S>Update-AzAttestationProvider</S>
-              </LST>
-            </Obj>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Obj N="Value" RefId="6">
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST />
             </Obj>
           </En>
           <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="7">
+            <Obj N="Value" RefId="5">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzAttestationPolicySigner</S>
@@ -99,12 +105,16 @@
             </Obj>
           </En>
           <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
             <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
+            <Nil N="Value" />
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="8">
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzAttestationPolicySigner</S>
@@ -118,71 +128,82 @@
           </En>
         </DCT>
       </Obj>
-      <Nil N="PowerShellGetFormatVersion" />
+      <S N="PowerShellGetFormatVersion"></S>
       <S N="ReleaseNotes">* Upgraded nuget package to signed package.</S>
-      <Obj N="Dependencies" RefId="9">
-        <TNRef RefId="2" />
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
         <LST>
-          <Obj RefId="10">
-            <TN RefId="4">
-              <T>System.Collections.Specialized.OrderedDictionary</T>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
               <T>System.Object</T>
             </TN>
-            <DCT>
-              <En>
-                <S N="Key">Name</S>
-                <S N="Value">Az.Accounts</S>
-              </En>
-              <En>
-                <S N="Key">MinimumVersion</S>
-                <S N="Value">4.0.1</S>
-              </En>
-              <En>
-                <S N="Key">CanonicalId</S>
-                <S N="Value">nuget:Az.Accounts/4.0.1</S>
-              </En>
-            </DCT>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.0.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.0.1</ToString>
+                    <Props>
+                      <Version N="Version">4.0.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.0.1</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.0.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
           </Obj>
         </LST>
       </Obj>
       <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
       <S N="Repository">PSGallery</S>
-      <S N="PackageManagementProvider">NuGet</S>
-      <Obj N="AdditionalMetadata" RefId="11">
-        <TN RefId="5">
-          <T>System.Management.Automation.PSCustomObject</T>
-          <T>System.Object</T>
-        </TN>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
         <MS>
-          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
-          <S N="description">Microsoft Azure PowerShell - Attestation service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Attestation, please visit the following: https://learn.microsoft.com/azure/attestation/</S>
-          <S N="requireLicenseAcceptance">True</S>
-          <S N="releaseNotes">* Upgraded nuget package to signed package.</S>
-          <S N="isLatestVersion">True</S>
-          <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">7078320</S>
-          <S N="downloadCount">80648075</S>
-          <S N="packageSize">593597</S>
-          <S N="published">1/14/2025 3:11:22 AM -05:00</S>
-          <S N="created">1/14/2025 3:11:22 AM -05:00</S>
-          <S N="lastUpdated">3/9/2025 10:10:00 PM -04:00</S>
-          <S N="tags">Azure ResourceManager ARM Attestation PSModule PSEdition_Core PSEdition_Desktop</S>
-          <S N="developmentDependency">False</S>
-          <S N="updated">2025-03-09T22:10:00Z</S>
           <S N="NormalizedVersion">2.1.0</S>
-          <S N="Authors">Microsoft Corporation</S>
-          <S N="IsPrerelease">false</S>
-          <S N="ItemType">Module</S>
-          <S N="FileList">Az.Attestation.nuspec|Attestation.Autorest\custom\JsonWebKeyHelper.cs|Attestation.Autorest\custom\New-AzAttestationProvider.ps1|Attestation.Autorest\exports\ProxyCmdletDefinitions.ps1|Attestation.Autorest\internal\Az.Attestation.internal.psm1|Attestation.Autorest\internal\ProxyCmdletDefinitions.ps1|Attestation.Autorest\utils\Get-SubscriptionIdTestSafe.ps1|Attestation.Autorest\utils\Unprotect-SecureString.ps1|Az.Attestation.psm1|Microsoft.Azure.PowerShell.Attestation.Management.Sdk.dll|Microsoft.Azure.PowerShell.Cmdlets.Attestation.dll-Help.xml|Microsoft.IdentityModel.Logging.dll|Attestation.Autorest\Az.Attestation.format.ps1xml|Attestation.Autorest\Az.Attestation.psm1|Attestation.Autorest\bin\Az.Attestation.private.dll|Attestation.Autorest\custom\Az.Attestation.custom.psm1|Az.Attestation.psd1|Microsoft.Azure.Attestation.dll|Microsoft.Azure.PowerShell.Cmdlets.Attestation.dll|Microsoft.IdentityModel.JsonWebTokens.dll|Microsoft.IdentityModel.Tokens.dll|.signature.p7s</S>
-          <S N="Cmdlets">Add-AzAttestationPolicySigner Get-AzAttestationPolicy Get-AzAttestationPolicySigners Remove-AzAttestationPolicySigner Reset-AzAttestationPolicy Set-AzAttestationPolicy</S>
-          <S N="Functions">Get-AzAttestationDefaultProvider Get-AzAttestationProvider New-AzAttestationProvider Remove-AzAttestationProvider Update-AzAttestationProvider</S>
-          <S N="GUID">249cb945-683e-4866-a9af-5704a2d890a5</S>
-          <S N="PowerShellVersion">5.1</S>
-          <S N="DotNetFrameworkVersion">4.7.2</S>
-          <S N="CompanyName">Microsoft Corporation</S>
+          <S N="IsPrerelease">False</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Az.Attestation\2.1.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
     </MS>
   </Obj>
 </Objs>

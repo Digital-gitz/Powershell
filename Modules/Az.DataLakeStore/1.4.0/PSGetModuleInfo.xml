@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:13:32.463</DT>
-      <DT N="InstalledDate">2025-05-12T14:55:29.980767-04:00</DT>
+      <DT N="InstalledDate">2025-06-08T15:49:52.4007967-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -139,10 +139,6 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Nil N="Value" />
-          </En>
-          <En>
             <S N="Key">DscResource</S>
             <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
@@ -150,8 +146,59 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzDataLakeStoreFirewallRule</S>
+                <S>Add-AzDataLakeStoreItemContent</S>
+                <S>Add-AzDataLakeStoreTrustedIdProvider</S>
+                <S>Add-AzDataLakeStoreVirtualNetworkRule</S>
+                <S>Enable-AzDataLakeStoreKeyVault</S>
+                <S>Export-AzDataLakeStoreChildItemProperty</S>
+                <S>Export-AzDataLakeStoreItem</S>
+                <S>Get-AzDataLakeStoreAccount</S>
+                <S>Get-AzDataLakeStoreChildItem</S>
+                <S>Get-AzDataLakeStoreChildItemSummary</S>
+                <S>Get-AzDataLakeStoreDeletedItem</S>
+                <S>Get-AzDataLakeStoreFirewallRule</S>
+                <S>Get-AzDataLakeStoreItem</S>
+                <S>Get-AzDataLakeStoreItemAclEntry</S>
+                <S>Get-AzDataLakeStoreItemContent</S>
+                <S>Get-AzDataLakeStoreItemOwner</S>
+                <S>Get-AzDataLakeStoreItemPermission</S>
+                <S>Get-AzDataLakeStoreTrustedIdProvider</S>
+                <S>Get-AzDataLakeStoreVirtualNetworkRule</S>
+                <S>Import-AzDataLakeStoreItem</S>
+                <S>Join-AzDataLakeStoreItem</S>
+                <S>Move-AzDataLakeStoreItem</S>
+                <S>New-AzDataLakeStoreAccount</S>
+                <S>New-AzDataLakeStoreItem</S>
+                <S>Remove-AzDataLakeStoreAccount</S>
+                <S>Remove-AzDataLakeStoreFirewallRule</S>
+                <S>Remove-AzDataLakeStoreItem</S>
+                <S>Remove-AzDataLakeStoreItemAcl</S>
+                <S>Remove-AzDataLakeStoreItemAclEntry</S>
+                <S>Remove-AzDataLakeStoreTrustedIdProvider</S>
+                <S>Remove-AzDataLakeStoreVirtualNetworkRule</S>
+                <S>Restore-AzDataLakeStoreDeletedItem</S>
+                <S>Set-AzDataLakeStoreAccount</S>
+                <S>Set-AzDataLakeStoreFirewallRule</S>
+                <S>Set-AzDataLakeStoreItemAcl</S>
+                <S>Set-AzDataLakeStoreItemAclEntry</S>
+                <S>Set-AzDataLakeStoreItemExpiry</S>
+                <S>Set-AzDataLakeStoreItemOwner</S>
+                <S>Set-AzDataLakeStoreItemPermission</S>
+                <S>Set-AzDataLakeStoreTrustedIdProvider</S>
+                <S>Set-AzDataLakeStoreVirtualNetworkRule</S>
+                <S>Test-AzDataLakeStoreAccount</S>
+                <S>Test-AzDataLakeStoreItem</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzDataLakeStoreFirewallRule</S>
@@ -205,59 +252,12 @@
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">RoleCapability</S>
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzDataLakeStoreFirewallRule</S>
-                <S>Add-AzDataLakeStoreItemContent</S>
-                <S>Add-AzDataLakeStoreTrustedIdProvider</S>
-                <S>Add-AzDataLakeStoreVirtualNetworkRule</S>
-                <S>Enable-AzDataLakeStoreKeyVault</S>
-                <S>Export-AzDataLakeStoreChildItemProperty</S>
-                <S>Export-AzDataLakeStoreItem</S>
-                <S>Get-AzDataLakeStoreAccount</S>
-                <S>Get-AzDataLakeStoreChildItem</S>
-                <S>Get-AzDataLakeStoreChildItemSummary</S>
-                <S>Get-AzDataLakeStoreDeletedItem</S>
-                <S>Get-AzDataLakeStoreFirewallRule</S>
-                <S>Get-AzDataLakeStoreItem</S>
-                <S>Get-AzDataLakeStoreItemAclEntry</S>
-                <S>Get-AzDataLakeStoreItemContent</S>
-                <S>Get-AzDataLakeStoreItemOwner</S>
-                <S>Get-AzDataLakeStoreItemPermission</S>
-                <S>Get-AzDataLakeStoreTrustedIdProvider</S>
-                <S>Get-AzDataLakeStoreVirtualNetworkRule</S>
-                <S>Import-AzDataLakeStoreItem</S>
-                <S>Join-AzDataLakeStoreItem</S>
-                <S>Move-AzDataLakeStoreItem</S>
-                <S>New-AzDataLakeStoreAccount</S>
-                <S>New-AzDataLakeStoreItem</S>
-                <S>Remove-AzDataLakeStoreAccount</S>
-                <S>Remove-AzDataLakeStoreFirewallRule</S>
-                <S>Remove-AzDataLakeStoreItem</S>
-                <S>Remove-AzDataLakeStoreItemAcl</S>
-                <S>Remove-AzDataLakeStoreItemAclEntry</S>
-                <S>Remove-AzDataLakeStoreTrustedIdProvider</S>
-                <S>Remove-AzDataLakeStoreVirtualNetworkRule</S>
-                <S>Restore-AzDataLakeStoreDeletedItem</S>
-                <S>Set-AzDataLakeStoreAccount</S>
-                <S>Set-AzDataLakeStoreFirewallRule</S>
-                <S>Set-AzDataLakeStoreItemAcl</S>
-                <S>Set-AzDataLakeStoreItemAclEntry</S>
-                <S>Set-AzDataLakeStoreItemExpiry</S>
-                <S>Set-AzDataLakeStoreItemOwner</S>
-                <S>Set-AzDataLakeStoreItemPermission</S>
-                <S>Set-AzDataLakeStoreTrustedIdProvider</S>
-                <S>Set-AzDataLakeStoreVirtualNetworkRule</S>
-                <S>Test-AzDataLakeStoreAccount</S>
-                <S>Test-AzDataLakeStoreItem</S>
-              </LST>
-            </Obj>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
         </DCT>
       </Obj>

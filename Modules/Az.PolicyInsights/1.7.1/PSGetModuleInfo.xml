@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-03-04T04:19:57.767</DT>
-      <DT N="InstalledDate">2025-05-12T14:55:48.6452834-04:00</DT>
+      <DT N="InstalledDate">2025-06-08T15:50:25.0658947-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -84,10 +84,6 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Nil N="Value" />
-          </En>
-          <En>
             <S N="Key">DscResource</S>
             <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
@@ -95,8 +91,29 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-AzPolicyAttestation</S>
+                <S>Get-AzPolicyEvent</S>
+                <S>Get-AzPolicyMetadata</S>
+                <S>Get-AzPolicyRemediation</S>
+                <S>Get-AzPolicyState</S>
+                <S>Get-AzPolicyStateSummary</S>
+                <S>New-AzPolicyAttestation</S>
+                <S>Remove-AzPolicyAttestation</S>
+                <S>Remove-AzPolicyRemediation</S>
+                <S>Set-AzPolicyAttestation</S>
+                <S>Start-AzPolicyComplianceScan</S>
+                <S>Start-AzPolicyRemediation</S>
+                <S>Stop-AzPolicyRemediation</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzPolicyAttestation</S>
@@ -120,29 +137,12 @@
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">RoleCapability</S>
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzPolicyAttestation</S>
-                <S>Get-AzPolicyEvent</S>
-                <S>Get-AzPolicyMetadata</S>
-                <S>Get-AzPolicyRemediation</S>
-                <S>Get-AzPolicyState</S>
-                <S>Get-AzPolicyStateSummary</S>
-                <S>New-AzPolicyAttestation</S>
-                <S>Remove-AzPolicyAttestation</S>
-                <S>Remove-AzPolicyRemediation</S>
-                <S>Set-AzPolicyAttestation</S>
-                <S>Start-AzPolicyComplianceScan</S>
-                <S>Start-AzPolicyRemediation</S>
-                <S>Stop-AzPolicyRemediation</S>
-              </LST>
-            </Obj>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
         </DCT>
       </Obj>

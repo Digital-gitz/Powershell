@@ -15,7 +15,7 @@
       <S N="Copyright">(c) Brandon Olin. All rights reserved.</S>
       <DT N="PublishedDate">2023-07-06T04:55:30-04:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2025-02-16T14:55:09.7150516-05:00</DT>
+        <DT>2025-05-18T13:07:45.6725975-04:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -55,8 +55,15 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Workflow</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-TerminalIconsColorTheme</S>
@@ -76,10 +83,7 @@
           </En>
           <En>
             <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
+            <Ref N="Value" RefId="5" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -103,15 +107,11 @@
           </En>
           <En>
             <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
+            <Ref N="Value" RefId="5" />
           </En>
           <En>
             <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Ref N="Value" RefId="6" />
+            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -136,26 +136,27 @@
           <S N="releaseNotes">https://raw.githubusercontent.com/devblackops/Terminal-Icons/master/CHANGELOG.md</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">5654438</S>
-          <S N="downloadCount">5903281</S>
+          <S N="versionDownloadCount">6129915</S>
+          <S N="downloadCount">6379411</S>
           <S N="packageSize">127437</S>
           <S N="published">7/6/2023 4:55:30 AM -04:00</S>
           <S N="created">7/6/2023 4:55:30 AM -04:00</S>
-          <S N="lastUpdated">2/16/2025 7:50:01 PM -05:00</S>
-          <S N="tags">Color Terminal Console NerdFonts Icon PSModule PSFunction_Add-TerminalIconsColorTheme PSCommand_Add-TerminalIconsColorTheme PSFunction_Add-TerminalIconsIconTheme PSCommand_Add-TerminalIconsIconTheme PSFunction_Format-TerminalIcons PSCommand_Format-TerminalIcons PSFunction_Get-TerminalIconsColorTheme PSCommand_Get-TerminalIconsColorTheme PSFunction_Get-TerminalIconsGlyphs PSCommand_Get-TerminalIconsGlyphs PSFunction_Get-TerminalIconsIconTheme PSCommand_Get-TerminalIconsIconTheme PSFunction_Get-TerminalIconsTheme PSCommand_Get-TerminalIconsTheme PSFunction_Invoke-TerminalIconsThemeMigration PSCommand_Invoke-TerminalIconsThemeMigration PSFunction_Remove-TerminalIconsTheme PSCommand_Remove-TerminalIconsTheme PSFunction_Set-TerminalIconsIcon PSCommand_Set-TerminalIconsIcon PSFunction_Set-TerminalIconsTheme PSCommand_Set-TerminalIconsTheme PSFunction_Show-TerminalIconsTheme PSCommand_Show-TerminalIconsTheme PSIncludes_Function</S>
+          <S N="lastUpdated">5/18/2025 5:00:00 PM -04:00</S>
+          <S N="tags">Color Terminal Console NerdFonts Icon PSModule</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2025-02-16T19:50:01Z</S>
+          <S N="updated">2025-05-18T17:00:00Z</S>
           <S N="NormalizedVersion">0.11.0</S>
           <S N="Authors">Brandon Olin</S>
           <S N="IsPrerelease">false</S>
           <S N="ItemType">Module</S>
           <S N="FileList">Terminal-Icons.nuspec|Terminal-Icons.psm1|en-US\Terminal-Icons-help.xml|Data\iconThemes\devblackops.psd1|Terminal-Icons.psd1|Data\colorThemes\devblackops.psd1|Terminal-Icons.format.ps1xml|Data\colorThemes\devblackops_light.psd1|Data\glyphs.ps1</S>
+          <S N="Functions">Add-TerminalIconsColorTheme Add-TerminalIconsIconTheme Format-TerminalIcons Get-TerminalIconsColorTheme Get-TerminalIconsGlyphs Get-TerminalIconsIconTheme Get-TerminalIconsTheme Invoke-TerminalIconsThemeMigration Remove-TerminalIconsTheme Set-TerminalIconsIcon Set-TerminalIconsTheme Show-TerminalIconsTheme</S>
           <S N="GUID">4419ddb6-3528-47cd-baf3-7fb9d8566620</S>
           <S N="PowerShellVersion">5.1</S>
           <S N="CompanyName">Community</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\russk.DISDM\Documents\PowerShell\Modules\Terminal-Icons\0.11.0</S>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\Terminal-Icons\0.11.0</S>
     </MS>
   </Obj>
 </Objs>

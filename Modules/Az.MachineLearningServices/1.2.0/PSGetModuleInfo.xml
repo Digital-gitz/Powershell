@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:16:24.327</DT>
-      <DT N="InstalledDate">2025-05-12T14:55:41.2129921-04:00</DT>
+      <DT N="InstalledDate">2025-06-08T15:50:12.6335034-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -328,10 +328,6 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Nil N="Value" />
-          </En>
-          <En>
             <S N="Key">DscResource</S>
             <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
@@ -339,8 +335,15 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzMLServiceQuota</S>
@@ -489,15 +492,12 @@
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">RoleCapability</S>
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
         </DCT>
       </Obj>

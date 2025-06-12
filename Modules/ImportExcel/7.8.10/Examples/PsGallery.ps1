@@ -15,6 +15,9 @@ $top1000 = foreach ($p in 1..50) {
     }
 }
 
+
+# Install-Module -Name SteamPS
+
 del "~\Documents\gallery.xlsx"
 $pivotdef = New-PivotTableDefinition -PivotTableName 'Summary' -PivotRows by -PivotData @{name="Count"
                                      Downloads="Sum"} -PivotDataToColumn -Activate -ChartType ColumnClustered -PivotNumberFormat '#,###'

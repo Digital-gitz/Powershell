@@ -1,3 +1,4 @@
+
 # Function to check if winget is available
 function Test-WingetAvailable {
     try {
@@ -210,11 +211,31 @@ $packages = @(
     @{ Id = "achannarasappa.ticker" },
     @{ Id = "Figma.Figma" },
     @{ Id = "Figma.FigmaAgent" },
-    @{ Id = "Insomnia.Insomnia" }
+    @{ Id = "Insomnia.Insomnia" },
+    @{ Id = "NirSoft.NirCmd" }
 )
 
 Write-Host "Starting package installation/update process..." -ForegroundColor Cyan
 Write-Host "Total packages to process: $($packages.Count)" -ForegroundColor Cyan
+# Function to install NirCmd utility
+function Install-NirCmd {
+    try {
+        Write-Host "Installing NirCmd utility..." -ForegroundColor Cyan
+        winget install -e --id NirSoft.NirCmd --accept-package-agreements --accept-source-agreements
+        if ($LASTEXITCODE -eq 0) {
+            Write-Host "✓ NirCmd installed successfully" -ForegroundColor Green 
+            return $true
+        }
+        else {
+            Write-Host "× Failed to install NirCmd" -ForegroundColor Red
+            return $false
+        }
+    }
+    catch {
+        Write-Host "Error installing NirCmd: $_" -ForegroundColor Red
+        return $false
+    }
+}
 
 # Install or update all packages
 foreach ($package in $packages) {

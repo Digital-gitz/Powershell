@@ -14,10 +14,10 @@
 # Create a new token in browser
 # gh-newtoken
 
- # GitHub Token Management
+# GitHub Token Management
 function Set-GitHubToken {
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]$Token,
         [switch]$Store
     )
@@ -33,7 +33,7 @@ Write-Output("Github UserScript Uploaded...")
 function Open-GitHubRepo {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]$RepoName
     )
     
@@ -62,7 +62,7 @@ function Update-AllRepos {
 function New-GitHubRepository {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$false)]
+        [Parameter(Mandatory = $false)]
         [string]$RepoName,
         [switch]$Private,
         [string]$Description
@@ -107,7 +107,8 @@ function Get-GitHubRepoList {
     param([switch]$All)
     if ($All) {
         gh repo list --limit 1000
-    } else {
+    }
+    else {
         gh repo list
     }
 }
@@ -125,7 +126,7 @@ function gitstatus {
 function Get-GitHubRepoclone {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]$RepoName
     )
 }
@@ -136,5 +137,7 @@ function Get-GitHubRepoclone {
 #         [string]$RepoName
 #     )
     
-   #  $repoUrl = "
+#  $repoUrl = "
 
+#I need to add a cursor integration to the github repo.
+#https://www.cursor.com/dashboard?tab=integrations

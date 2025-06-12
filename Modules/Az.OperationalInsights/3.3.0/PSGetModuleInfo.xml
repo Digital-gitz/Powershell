@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:17:59.8</DT>
-      <DT N="InstalledDate">2025-05-12T14:55:47.7082687-04:00</DT>
+      <DT N="InstalledDate">2025-06-08T15:50:23.2615464-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -188,10 +188,6 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Nil N="Value" />
-          </En>
-          <En>
             <S N="Key">DscResource</S>
             <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
@@ -199,8 +195,84 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Disable-AzOperationalInsightsIISLogCollection</S>
+                <S>Disable-AzOperationalInsightsLinuxCustomLogCollection</S>
+                <S>Disable-AzOperationalInsightsLinuxPerformanceCollection</S>
+                <S>Disable-AzOperationalInsightsLinuxSyslogCollection</S>
+                <S>Enable-AzOperationalInsightsIISLogCollection</S>
+                <S>Enable-AzOperationalInsightsLinuxCustomLogCollection</S>
+                <S>Enable-AzOperationalInsightsLinuxPerformanceCollection</S>
+                <S>Enable-AzOperationalInsightsLinuxSyslogCollection</S>
+                <S>Get-AzOperationalInsightsAvailableServiceTier</S>
+                <S>Get-AzOperationalInsightsCluster</S>
+                <S>Get-AzOperationalInsightsDataExport</S>
+                <S>Get-AzOperationalInsightsDataSource</S>
+                <S>Get-AzOperationalInsightsDeletedWorkspace</S>
+                <S>Get-AzOperationalInsightsIntelligencePack</S>
+                <S>Get-AzOperationalInsightsLinkedService</S>
+                <S>Get-AzOperationalInsightsLinkedStorageAccount</S>
+                <S>Get-AzOperationalInsightsOperation</S>
+                <S>Get-AzOperationalInsightsOperationStatus</S>
+                <S>Get-AzOperationalInsightsPurgeWorkspaceStatus</S>
+                <S>Get-AzOperationalInsightsSavedSearch</S>
+                <S>Get-AzOperationalInsightsSchema</S>
+                <S>Get-AzOperationalInsightsStorageInsight</S>
+                <S>Get-AzOperationalInsightsTable</S>
+                <S>Get-AzOperationalInsightsWorkspace</S>
+                <S>Get-AzOperationalInsightsWorkspaceManagementGroup</S>
+                <S>Get-AzOperationalInsightsWorkspaceSharedKey</S>
+                <S>Get-AzOperationalInsightsWorkspaceUsage</S>
+                <S>Invoke-AzOperationalInsightsMigrateTable</S>
+                <S>Invoke-AzOperationalInsightsQuery</S>
+                <S>New-AzOperationalInsightsApplicationInsightsDataSource</S>
+                <S>New-AzOperationalInsightsAzureActivityLogDataSource</S>
+                <S>New-AzOperationalInsightsCluster</S>
+                <S>New-AzOperationalInsightsComputerGroup</S>
+                <S>New-AzOperationalInsightsCustomLogDataSource</S>
+                <S>New-AzOperationalInsightsDataExport</S>
+                <S>New-AzOperationalInsightsLinkedStorageAccount</S>
+                <S>New-AzOperationalInsightsLinuxPerformanceObjectDataSource</S>
+                <S>New-AzOperationalInsightsLinuxSyslogDataSource</S>
+                <S>New-AzOperationalInsightsPurgeWorkspace</S>
+                <S>New-AzOperationalInsightsRestoreTable</S>
+                <S>New-AzOperationalInsightsSavedSearch</S>
+                <S>New-AzOperationalInsightsSearchTable</S>
+                <S>New-AzOperationalInsightsStorageInsight</S>
+                <S>New-AzOperationalInsightsTable</S>
+                <S>New-AzOperationalInsightsWindowsEventDataSource</S>
+                <S>New-AzOperationalInsightsWindowsPerformanceCounterDataSource</S>
+                <S>New-AzOperationalInsightsWorkspace</S>
+                <S>Remove-AzOperationalInsightsCluster</S>
+                <S>Remove-AzOperationalInsightsDataExport</S>
+                <S>Remove-AzOperationalInsightsDataSource</S>
+                <S>Remove-AzOperationalInsightsLinkedService</S>
+                <S>Remove-AzOperationalInsightsLinkedStorageAccount</S>
+                <S>Remove-AzOperationalInsightsSavedSearch</S>
+                <S>Remove-AzOperationalInsightsStorageInsight</S>
+                <S>Remove-AzOperationalInsightsTable</S>
+                <S>Remove-AzOperationalInsightsWorkspace</S>
+                <S>Restore-AzOperationalInsightsWorkspace</S>
+                <S>Set-AzOperationalInsightsDataSource</S>
+                <S>Set-AzOperationalInsightsIntelligencePack</S>
+                <S>Set-AzOperationalInsightsLinkedService</S>
+                <S>Set-AzOperationalInsightsLinkedStorageAccount</S>
+                <S>Set-AzOperationalInsightsSavedSearch</S>
+                <S>Set-AzOperationalInsightsStorageInsight</S>
+                <S>Set-AzOperationalInsightsWorkspace</S>
+                <S>Update-AzOperationalInsightsCluster</S>
+                <S>Update-AzOperationalInsightsDataExport</S>
+                <S>Update-AzOperationalInsightsTable</S>
+                <S>Update-AzOperationalInsightsWorkspaceSharedKey</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Disable-AzOperationalInsightsIISLogCollection</S>
@@ -279,84 +351,12 @@
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">RoleCapability</S>
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Disable-AzOperationalInsightsIISLogCollection</S>
-                <S>Disable-AzOperationalInsightsLinuxCustomLogCollection</S>
-                <S>Disable-AzOperationalInsightsLinuxPerformanceCollection</S>
-                <S>Disable-AzOperationalInsightsLinuxSyslogCollection</S>
-                <S>Enable-AzOperationalInsightsIISLogCollection</S>
-                <S>Enable-AzOperationalInsightsLinuxCustomLogCollection</S>
-                <S>Enable-AzOperationalInsightsLinuxPerformanceCollection</S>
-                <S>Enable-AzOperationalInsightsLinuxSyslogCollection</S>
-                <S>Get-AzOperationalInsightsAvailableServiceTier</S>
-                <S>Get-AzOperationalInsightsCluster</S>
-                <S>Get-AzOperationalInsightsDataExport</S>
-                <S>Get-AzOperationalInsightsDataSource</S>
-                <S>Get-AzOperationalInsightsDeletedWorkspace</S>
-                <S>Get-AzOperationalInsightsIntelligencePack</S>
-                <S>Get-AzOperationalInsightsLinkedService</S>
-                <S>Get-AzOperationalInsightsLinkedStorageAccount</S>
-                <S>Get-AzOperationalInsightsOperation</S>
-                <S>Get-AzOperationalInsightsOperationStatus</S>
-                <S>Get-AzOperationalInsightsPurgeWorkspaceStatus</S>
-                <S>Get-AzOperationalInsightsSavedSearch</S>
-                <S>Get-AzOperationalInsightsSchema</S>
-                <S>Get-AzOperationalInsightsStorageInsight</S>
-                <S>Get-AzOperationalInsightsTable</S>
-                <S>Get-AzOperationalInsightsWorkspace</S>
-                <S>Get-AzOperationalInsightsWorkspaceManagementGroup</S>
-                <S>Get-AzOperationalInsightsWorkspaceSharedKey</S>
-                <S>Get-AzOperationalInsightsWorkspaceUsage</S>
-                <S>Invoke-AzOperationalInsightsMigrateTable</S>
-                <S>Invoke-AzOperationalInsightsQuery</S>
-                <S>New-AzOperationalInsightsApplicationInsightsDataSource</S>
-                <S>New-AzOperationalInsightsAzureActivityLogDataSource</S>
-                <S>New-AzOperationalInsightsCluster</S>
-                <S>New-AzOperationalInsightsComputerGroup</S>
-                <S>New-AzOperationalInsightsCustomLogDataSource</S>
-                <S>New-AzOperationalInsightsDataExport</S>
-                <S>New-AzOperationalInsightsLinkedStorageAccount</S>
-                <S>New-AzOperationalInsightsLinuxPerformanceObjectDataSource</S>
-                <S>New-AzOperationalInsightsLinuxSyslogDataSource</S>
-                <S>New-AzOperationalInsightsPurgeWorkspace</S>
-                <S>New-AzOperationalInsightsRestoreTable</S>
-                <S>New-AzOperationalInsightsSavedSearch</S>
-                <S>New-AzOperationalInsightsSearchTable</S>
-                <S>New-AzOperationalInsightsStorageInsight</S>
-                <S>New-AzOperationalInsightsTable</S>
-                <S>New-AzOperationalInsightsWindowsEventDataSource</S>
-                <S>New-AzOperationalInsightsWindowsPerformanceCounterDataSource</S>
-                <S>New-AzOperationalInsightsWorkspace</S>
-                <S>Remove-AzOperationalInsightsCluster</S>
-                <S>Remove-AzOperationalInsightsDataExport</S>
-                <S>Remove-AzOperationalInsightsDataSource</S>
-                <S>Remove-AzOperationalInsightsLinkedService</S>
-                <S>Remove-AzOperationalInsightsLinkedStorageAccount</S>
-                <S>Remove-AzOperationalInsightsSavedSearch</S>
-                <S>Remove-AzOperationalInsightsStorageInsight</S>
-                <S>Remove-AzOperationalInsightsTable</S>
-                <S>Remove-AzOperationalInsightsWorkspace</S>
-                <S>Restore-AzOperationalInsightsWorkspace</S>
-                <S>Set-AzOperationalInsightsDataSource</S>
-                <S>Set-AzOperationalInsightsIntelligencePack</S>
-                <S>Set-AzOperationalInsightsLinkedService</S>
-                <S>Set-AzOperationalInsightsLinkedStorageAccount</S>
-                <S>Set-AzOperationalInsightsSavedSearch</S>
-                <S>Set-AzOperationalInsightsStorageInsight</S>
-                <S>Set-AzOperationalInsightsWorkspace</S>
-                <S>Update-AzOperationalInsightsCluster</S>
-                <S>Update-AzOperationalInsightsDataExport</S>
-                <S>Update-AzOperationalInsightsTable</S>
-                <S>Update-AzOperationalInsightsWorkspaceSharedKey</S>
-              </LST>
-            </Obj>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
         </DCT>
       </Obj>

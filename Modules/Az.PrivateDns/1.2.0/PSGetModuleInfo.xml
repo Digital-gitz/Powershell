@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:18:30.57</DT>
-      <DT N="InstalledDate">2025-05-12T14:55:49.949316-04:00</DT>
+      <DT N="InstalledDate">2025-06-08T15:50:27.8115605-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -82,10 +82,6 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">RoleCapability</S>
-            <Nil N="Value" />
-          </En>
-          <En>
             <S N="Key">DscResource</S>
             <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
@@ -93,8 +89,31 @@
             </Obj>
           </En>
           <En>
-            <S N="Key">Command</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzPrivateDnsRecordConfig</S>
+                <S>Get-AzPrivateDnsRecordSet</S>
+                <S>Get-AzPrivateDnsVirtualNetworkLink</S>
+                <S>Get-AzPrivateDnsZone</S>
+                <S>New-AzPrivateDnsRecordConfig</S>
+                <S>New-AzPrivateDnsRecordSet</S>
+                <S>New-AzPrivateDnsVirtualNetworkLink</S>
+                <S>New-AzPrivateDnsZone</S>
+                <S>Remove-AzPrivateDnsRecordConfig</S>
+                <S>Remove-AzPrivateDnsRecordSet</S>
+                <S>Remove-AzPrivateDnsVirtualNetworkLink</S>
+                <S>Remove-AzPrivateDnsZone</S>
+                <S>Set-AzPrivateDnsRecordSet</S>
+                <S>Set-AzPrivateDnsVirtualNetworkLink</S>
+                <S>Set-AzPrivateDnsZone</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzPrivateDnsRecordConfig</S>
@@ -120,31 +139,12 @@
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Workflow</S>
+            <S N="Key">RoleCapability</S>
             <Nil N="Value" />
           </En>
           <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzPrivateDnsRecordConfig</S>
-                <S>Get-AzPrivateDnsRecordSet</S>
-                <S>Get-AzPrivateDnsVirtualNetworkLink</S>
-                <S>Get-AzPrivateDnsZone</S>
-                <S>New-AzPrivateDnsRecordConfig</S>
-                <S>New-AzPrivateDnsRecordSet</S>
-                <S>New-AzPrivateDnsVirtualNetworkLink</S>
-                <S>New-AzPrivateDnsZone</S>
-                <S>Remove-AzPrivateDnsRecordConfig</S>
-                <S>Remove-AzPrivateDnsRecordSet</S>
-                <S>Remove-AzPrivateDnsVirtualNetworkLink</S>
-                <S>Remove-AzPrivateDnsZone</S>
-                <S>Set-AzPrivateDnsRecordSet</S>
-                <S>Set-AzPrivateDnsVirtualNetworkLink</S>
-                <S>Set-AzPrivateDnsZone</S>
-              </LST>
-            </Obj>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
           </En>
         </DCT>
       </Obj>

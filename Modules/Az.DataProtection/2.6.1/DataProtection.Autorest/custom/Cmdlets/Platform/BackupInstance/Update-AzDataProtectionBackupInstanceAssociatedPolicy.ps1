@@ -1,41 +1,38 @@
-﻿
-
-function Update-AzDataProtectionBackupInstanceAssociatedPolicy
-{
-	[OutputType('Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IBackupInstanceResource')]
-    [CmdletBinding(PositionalBinding=$false, SupportsShouldProcess)]
+﻿function Update-AzDataProtectionBackupInstanceAssociatedPolicy {
+    [OutputType('Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IBackupInstanceResource')]
+    [CmdletBinding(PositionalBinding = $false, SupportsShouldProcess)]
     [Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Description('Updates associated policy for a given backup instance')]
 
     param(
-        [Parameter(Mandatory=$false, HelpMessage='Subscription Id of the vault')]
+        [Parameter(Mandatory = $false, HelpMessage = 'Subscription Id of the vault')]
         [System.String]
         ${SubscriptionId},
 
-        [Parameter(Mandatory, HelpMessage='Resource Group of the backup vault')]
+        [Parameter(Mandatory, HelpMessage = 'Resource Group of the backup vault')]
         [System.String]
         ${ResourceGroupName},
 
-        [Parameter(Mandatory, HelpMessage='Name of the backup vault')]
+        [Parameter(Mandatory, HelpMessage = 'Name of the backup vault')]
         [System.String]
         ${VaultName},
 
-        [Parameter(Mandatory, HelpMessage='Unique Name of protected backup instance')]
+        [Parameter(Mandatory, HelpMessage = 'Unique Name of protected backup instance')]
         [System.String]
         ${BackupInstanceName},
 
-        [Parameter(Mandatory, HelpMessage='Id of the Policy to be associated with the backup instance')]
+        [Parameter(Mandatory, HelpMessage = 'Id of the Policy to be associated with the backup instance')]
         [System.String]
         ${PolicyId},
         
-        [Parameter(Mandatory=$false, HelpMessage='Resource guard operation request in the format similar to <ResourceGuard-ARMID>/dppModifyPolicy/default. Use this parameter when the operation is MUA protected.')]
+        [Parameter(Mandatory = $false, HelpMessage = 'Resource guard operation request in the format similar to <ResourceGuard-ARMID>/dppModifyPolicy/default. Use this parameter when the operation is MUA protected.')]
         [System.String[]]
         ${ResourceGuardOperationRequest},
 
-        [Parameter(Mandatory=$false, HelpMessage='Parameter deprecate. Please use SecureToken instead.')]
+        [Parameter(Mandatory = $false, HelpMessage = 'Parameter deprecate. Please use SecureToken instead.')]
         [System.String]
         ${Token},
 
-        [Parameter(Mandatory=$false, HelpMessage='Parameter to authorize operations protected by cross tenant resource guard. Use command (Get-AzAccessToken -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -AsSecureString").Token to fetch authorization token for different tenant.')]
+        [Parameter(Mandatory = $false, HelpMessage = 'Parameter to authorize operations protected by cross tenant resource guard. Use command (Get-AzAccessToken -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -AsSecureString").Token to fetch authorization token for different tenant.')]
         [System.Security.SecureString]
         ${SecureToken},
 
@@ -90,21 +87,20 @@ function Update-AzDataProtectionBackupInstanceAssociatedPolicy
         ${ProxyUseDefaultCredentials}
     )
 
-    process
-    {
+    process {
         $null = $PSBoundParameters.Remove("PolicyId")
         $instance = Az.DataProtection\Get-AzDataProtectionBackupInstance @PSBoundParameters
         $instance.Property.PolicyInfo.PolicyId = $PolicyId
         $null = $PSBoundParameters.Remove("BackupInstanceName")
 
         $hasResourceGuardOperationRequest = $PSBoundParameters.Remove("ResourceGuardOperationRequest")
-        if($hasResourceGuardOperationRequest){
+        if ($hasResourceGuardOperationRequest) {
             $instance.Property.ResourceGuardOperationRequest = $ResourceGuardOperationRequest
         }
         
         # Explicitly setting the whole DSSetInfo object as null when ResourceID is null
-        if($instance.Property.DataSourceSetInfo.ResourceId -eq $null){
-            $instance.Property.DataSourceSetInfo =$null      
+        if ($instance.Property.DataSourceSetInfo.ResourceId -eq $null) {
+            $instance.Property.DataSourceSetInfo = $null      
         }
 
         $null = $PSBoundParameters.Add("Parameter", $instance)
@@ -112,16 +108,15 @@ function Update-AzDataProtectionBackupInstanceAssociatedPolicy
 
         $hasToken = $PSBoundParameters.Remove("Token")
         $hasSecureToken = $PSBoundParameters.Remove("SecureToken")
-        if($hasToken -or $hasSecureToken)
-        {   
-            if($hasSecureToken -and $hasToken){
+        if ($hasToken -or $hasSecureToken) {   
+            if ($hasSecureToken -and $hasToken) {
                 throw "Both Token and SecureToken parameters cannot be provided together"
             }
-            elseif($hasToken){
+            elseif ($hasToken) {
                 Write-Warning -Message 'The Token parameter is deprecated and will be removed in future versions. Please use SecureToken instead.'
                 $null = $PSBoundParameters.Add("Token", "Bearer $Token")
             }
-            else{
+            else {
                 $plainToken = UnprotectSecureString -SecureString $SecureToken
                 $null = $PSBoundParameters.Add("Token", "Bearer $plainToken")
             }
@@ -130,6 +125,26 @@ function Update-AzDataProtectionBackupInstanceAssociatedPolicy
         Az.DataProtection.Internal\New-AzDataProtectionBackupInstance  @PSBoundParameters
     }
 }
+
+# Open all social media sites at once
+social
+
+# Open with progress bar
+social -ShowProgress
+
+# Open individual sites
+twitch
+twitter
+facebook
+instagram
+reddit
+youtube
+linkedin
+tiktok
+discord
+pinterest
+tumblr
+
 # SIG # Begin signature block
 # MIIoLQYJKoZIhvcNAQcCoIIoHjCCKBoCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
@@ -209,7 +224,7 @@ function Update-AzDataProtectionBackupInstanceAssociatedPolicy
 # /Xmfwb1tbWrJUnMTDXpQzTGCGg0wghoJAgEBMIGVMH4xCzAJBgNVBAYTAlVTMRMw
 # EQYDVQQIEwpXYXNoaW5ndG9uMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVN
 # aWNyb3NvZnQgQ29ycG9yYXRpb24xKDAmBgNVBAMTH01pY3Jvc29mdCBDb2RlIFNp
-# Z25pbmcgUENBIDIwMTECEzMAAAQEbHQG/1crJ3IAAAAABAQwDQYJYIZIAWUDBAIB
+# Z25pbmcgUENBIDIwMTECEzMAAAAEbHQG/1crJ3IAAAAABAQwDQYJYIZIAWUDBAIB
 # BQCgga4wGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQwHAYKKwYBBAGCNwIBCzEO
 # MAwGCisGAQQBgjcCARUwLwYJKoZIhvcNAQkEMSIEID6cu5fwTvuQ7csx17UaH2sz
 # zHAsKmbtLus1vbf9qHVLMEIGCisGAQQBgjcCAQwxNDAyoBSAEgBNAGkAYwByAG8A

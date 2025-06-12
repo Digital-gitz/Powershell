@@ -1,0 +1,285 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.PostgreSql</S>
+      <S N="Version">1.3.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell: PostgreSql cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-06-03T02:52:34.017</DT>
+      <DT N="InstalledDate">2025-06-08T15:50:26.0335604-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>PostgreSql</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSFunction_Get-AzPostgreSqlConfiguration</S>
+          <S>PSCommand_Get-AzPostgreSqlConfiguration</S>
+          <S>PSFunction_Get-AzPostgreSqlConnectionString</S>
+          <S>PSCommand_Get-AzPostgreSqlConnectionString</S>
+          <S>PSFunction_Get-AzPostgreSqlFirewallRule</S>
+          <S>PSCommand_Get-AzPostgreSqlFirewallRule</S>
+          <S>PSFunction_Get-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Get-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Get-AzPostgreSqlFlexibleServerConfiguration</S>
+          <S>PSCommand_Get-AzPostgreSqlFlexibleServerConfiguration</S>
+          <S>PSFunction_Get-AzPostgreSqlFlexibleServerConnectionString</S>
+          <S>PSCommand_Get-AzPostgreSqlFlexibleServerConnectionString</S>
+          <S>PSFunction_Get-AzPostgreSqlFlexibleServerDatabase</S>
+          <S>PSCommand_Get-AzPostgreSqlFlexibleServerDatabase</S>
+          <S>PSFunction_Get-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_Get-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_Get-AzPostgreSqlFlexibleServerLocationBasedCapability</S>
+          <S>PSCommand_Get-AzPostgreSqlFlexibleServerLocationBasedCapability</S>
+          <S>PSFunction_Get-AzPostgreSqlReplica</S>
+          <S>PSCommand_Get-AzPostgreSqlReplica</S>
+          <S>PSFunction_Get-AzPostgreSqlServer</S>
+          <S>PSCommand_Get-AzPostgreSqlServer</S>
+          <S>PSFunction_Get-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSCommand_Get-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSFunction_New-AzPostgreSqlFirewallRule</S>
+          <S>PSCommand_New-AzPostgreSqlFirewallRule</S>
+          <S>PSFunction_New-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_New-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_New-AzPostgreSqlFlexibleServerDatabase</S>
+          <S>PSCommand_New-AzPostgreSqlFlexibleServerDatabase</S>
+          <S>PSFunction_New-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_New-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_New-AzPostgreSqlReplica</S>
+          <S>PSCommand_New-AzPostgreSqlReplica</S>
+          <S>PSFunction_New-AzPostgreSqlServer</S>
+          <S>PSCommand_New-AzPostgreSqlServer</S>
+          <S>PSFunction_New-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSCommand_New-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSFunction_Remove-AzPostgreSqlFirewallRule</S>
+          <S>PSCommand_Remove-AzPostgreSqlFirewallRule</S>
+          <S>PSFunction_Remove-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Remove-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Remove-AzPostgreSqlFlexibleServerDatabase</S>
+          <S>PSCommand_Remove-AzPostgreSqlFlexibleServerDatabase</S>
+          <S>PSFunction_Remove-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_Remove-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_Remove-AzPostgreSqlServer</S>
+          <S>PSCommand_Remove-AzPostgreSqlServer</S>
+          <S>PSFunction_Remove-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSCommand_Remove-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSFunction_Restart-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Restart-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Restart-AzPostgreSqlServer</S>
+          <S>PSCommand_Restart-AzPostgreSqlServer</S>
+          <S>PSFunction_Restore-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Restore-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Restore-AzPostgreSqlServer</S>
+          <S>PSCommand_Restore-AzPostgreSqlServer</S>
+          <S>PSFunction_Start-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Start-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Stop-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Stop-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Test-AzPostgreSqlFlexibleServerConnect</S>
+          <S>PSCommand_Test-AzPostgreSqlFlexibleServerConnect</S>
+          <S>PSFunction_Update-AzPostgreSqlConfiguration</S>
+          <S>PSCommand_Update-AzPostgreSqlConfiguration</S>
+          <S>PSFunction_Update-AzPostgreSqlFirewallRule</S>
+          <S>PSCommand_Update-AzPostgreSqlFirewallRule</S>
+          <S>PSFunction_Update-AzPostgreSqlFlexibleServer</S>
+          <S>PSCommand_Update-AzPostgreSqlFlexibleServer</S>
+          <S>PSFunction_Update-AzPostgreSqlFlexibleServerConfiguration</S>
+          <S>PSCommand_Update-AzPostgreSqlFlexibleServerConfiguration</S>
+          <S>PSFunction_Update-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_Update-AzPostgreSqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_Update-AzPostgreSqlServer</S>
+          <S>PSCommand_Update-AzPostgreSqlServer</S>
+          <S>PSFunction_Update-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSCommand_Update-AzPostgreSqlVirtualNetworkRule</S>
+          <S>PSIncludes_Function</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-AzPostgreSqlConfiguration</S>
+                <S>Get-AzPostgreSqlConnectionString</S>
+                <S>Get-AzPostgreSqlFirewallRule</S>
+                <S>Get-AzPostgreSqlFlexibleServer</S>
+                <S>Get-AzPostgreSqlFlexibleServerConfiguration</S>
+                <S>Get-AzPostgreSqlFlexibleServerConnectionString</S>
+                <S>Get-AzPostgreSqlFlexibleServerDatabase</S>
+                <S>Get-AzPostgreSqlFlexibleServerFirewallRule</S>
+                <S>Get-AzPostgreSqlFlexibleServerLocationBasedCapability</S>
+                <S>Get-AzPostgreSqlReplica</S>
+                <S>Get-AzPostgreSqlServer</S>
+                <S>Get-AzPostgreSqlVirtualNetworkRule</S>
+                <S>New-AzPostgreSqlFirewallRule</S>
+                <S>New-AzPostgreSqlFlexibleServer</S>
+                <S>New-AzPostgreSqlFlexibleServerDatabase</S>
+                <S>New-AzPostgreSqlFlexibleServerFirewallRule</S>
+                <S>New-AzPostgreSqlReplica</S>
+                <S>New-AzPostgreSqlServer</S>
+                <S>New-AzPostgreSqlVirtualNetworkRule</S>
+                <S>Remove-AzPostgreSqlFirewallRule</S>
+                <S>Remove-AzPostgreSqlFlexibleServer</S>
+                <S>Remove-AzPostgreSqlFlexibleServerDatabase</S>
+                <S>Remove-AzPostgreSqlFlexibleServerFirewallRule</S>
+                <S>Remove-AzPostgreSqlServer</S>
+                <S>Remove-AzPostgreSqlVirtualNetworkRule</S>
+                <S>Restart-AzPostgreSqlFlexibleServer</S>
+                <S>Restart-AzPostgreSqlServer</S>
+                <S>Restore-AzPostgreSqlFlexibleServer</S>
+                <S>Restore-AzPostgreSqlServer</S>
+                <S>Start-AzPostgreSqlFlexibleServer</S>
+                <S>Stop-AzPostgreSqlFlexibleServer</S>
+                <S>Test-AzPostgreSqlFlexibleServerConnect</S>
+                <S>Update-AzPostgreSqlConfiguration</S>
+                <S>Update-AzPostgreSqlFirewallRule</S>
+                <S>Update-AzPostgreSqlFlexibleServer</S>
+                <S>Update-AzPostgreSqlFlexibleServerConfiguration</S>
+                <S>Update-AzPostgreSqlFlexibleServerFirewallRule</S>
+                <S>Update-AzPostgreSqlServer</S>
+                <S>Update-AzPostgreSqlVirtualNetworkRule</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Added support for Geo-restore in 'Restore-AzPostgreSqlFlexibleServer' cmdlets._x000D__x000A_    - Automatically determined the paired region for the source server during geo-restore._x000D__x000A_    - Enhanced validation for private access and DNS zone configurations during restore operations.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[5.0.2, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>5.0.2</ToString>
+                    <Props>
+                      <Version N="Version">5.0.2.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">5.0.2</S>
+                      <I32 N="Major">5</I32>
+                      <I32 N="Minor">0</I32>
+                      <I32 N="Patch">2</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[5.0.2, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.3.0</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

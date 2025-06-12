@@ -1,0 +1,1 @@
+curl terminal-stocks.dev/market-summary

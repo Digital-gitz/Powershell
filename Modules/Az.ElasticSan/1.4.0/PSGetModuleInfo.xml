@@ -1,0 +1,225 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ElasticSan</S>
+      <S N="Version">1.4.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell: ElasticSan cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-05-06T01:51:55.03</DT>
+      <DT N="InstalledDate">2025-06-08T15:49:59.521516-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>ElasticSan</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSFunction_Add-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSCommand_Add-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSFunction_Get-AzElasticSan</S>
+          <S>PSCommand_Get-AzElasticSan</S>
+          <S>PSFunction_Get-AzElasticSanSkuList</S>
+          <S>PSCommand_Get-AzElasticSanSkuList</S>
+          <S>PSFunction_Get-AzElasticSanVolume</S>
+          <S>PSCommand_Get-AzElasticSanVolume</S>
+          <S>PSFunction_Get-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_Get-AzElasticSanVolumeGroup</S>
+          <S>PSFunction_Get-AzElasticSanVolumeSnapshot</S>
+          <S>PSCommand_Get-AzElasticSanVolumeSnapshot</S>
+          <S>PSFunction_New-AzElasticSan</S>
+          <S>PSCommand_New-AzElasticSan</S>
+          <S>PSFunction_New-AzElasticSanVirtualNetworkRuleObject</S>
+          <S>PSCommand_New-AzElasticSanVirtualNetworkRuleObject</S>
+          <S>PSFunction_New-AzElasticSanVolume</S>
+          <S>PSCommand_New-AzElasticSanVolume</S>
+          <S>PSFunction_New-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_New-AzElasticSanVolumeGroup</S>
+          <S>PSFunction_New-AzElasticSanVolumeSnapshot</S>
+          <S>PSCommand_New-AzElasticSanVolumeSnapshot</S>
+          <S>PSFunction_Remove-AzElasticSan</S>
+          <S>PSCommand_Remove-AzElasticSan</S>
+          <S>PSFunction_Remove-AzElasticSanVolume</S>
+          <S>PSCommand_Remove-AzElasticSanVolume</S>
+          <S>PSFunction_Remove-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_Remove-AzElasticSanVolumeGroup</S>
+          <S>PSFunction_Remove-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSCommand_Remove-AzElasticSanVolumeGroupNetworkRule</S>
+          <S>PSFunction_Remove-AzElasticSanVolumeSnapshot</S>
+          <S>PSCommand_Remove-AzElasticSanVolumeSnapshot</S>
+          <S>PSFunction_Update-AzElasticSan</S>
+          <S>PSCommand_Update-AzElasticSan</S>
+          <S>PSFunction_Update-AzElasticSanVolume</S>
+          <S>PSCommand_Update-AzElasticSanVolume</S>
+          <S>PSFunction_Update-AzElasticSanVolumeGroup</S>
+          <S>PSCommand_Update-AzElasticSanVolumeGroup</S>
+          <S>PSIncludes_Function</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzElasticSanVolumeGroupNetworkRule</S>
+                <S>Get-AzElasticSan</S>
+                <S>Get-AzElasticSanSkuList</S>
+                <S>Get-AzElasticSanVolume</S>
+                <S>Get-AzElasticSanVolumeGroup</S>
+                <S>Get-AzElasticSanVolumeSnapshot</S>
+                <S>New-AzElasticSan</S>
+                <S>New-AzElasticSanVirtualNetworkRuleObject</S>
+                <S>New-AzElasticSanVolume</S>
+                <S>New-AzElasticSanVolumeGroup</S>
+                <S>New-AzElasticSanVolumeSnapshot</S>
+                <S>Remove-AzElasticSan</S>
+                <S>Remove-AzElasticSanVolume</S>
+                <S>Remove-AzElasticSanVolumeGroup</S>
+                <S>Remove-AzElasticSanVolumeGroupNetworkRule</S>
+                <S>Remove-AzElasticSanVolumeSnapshot</S>
+                <S>Update-AzElasticSan</S>
+                <S>Update-AzElasticSanVolume</S>
+                <S>Update-AzElasticSanVolumeGroup</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Changed parameters 'BaseSizeTiB' and 'ExtendedCapacitySizeTiB' in cmdlet 'New-AzElasticSan' to be optional._x000D__x000A_    - 'New-AzElasticSan'</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.2.0, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.2.0</ToString>
+                    <Props>
+                      <Version N="Version">4.2.0.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.2.0</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">2</I32>
+                      <I32 N="Patch">0</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.2.0, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.4.0</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

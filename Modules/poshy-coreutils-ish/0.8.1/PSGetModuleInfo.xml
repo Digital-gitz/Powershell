@@ -1,0 +1,174 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">poshy-coreutils-ish</S>
+      <Version N="Version">0.8.1</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Cmdlets that are semantically equivalent to GNU coreutils - useful when converting shell scripts to PowerShell.</S>
+      <S N="Author">Pwshrc Maintainers</S>
+      <S N="CompanyName">brucificus</S>
+      <S N="Copyright">Copyright ©️ 2023 Bruce Markham, All rights reserved.</S>
+      <DT N="PublishedDate">2024-12-18T19:16:49-05:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-03-31T00:02:30.0878591-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/pwshrc/poshy-coreutils-ish/tree/4d8accb57679f61e12f5ed4d729b5135bebd6281/LICENSE.txt</URI>
+      <URI N="ProjectUri">https://github.com/pwshrc/poshy-coreutils-ish</URI>
+      <URI N="IconUri">https://en.gravatar.com/userimage/238766323/a23519bf4769d01f4e880ce1a538785f.jpeg?size=256</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>arch</S>
+          <S>basename</S>
+          <S>chmod</S>
+          <S>coreutils</S>
+          <S>dirname</S>
+          <S>poshy-coreutils-ish</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSModule</S>
+          <S>pwshrc</S>
+          <S>shuf</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>arch</S>
+                <S>basename</S>
+                <S>ConvertTo-NixMode</S>
+                <S>dirname</S>
+                <S>Get-ItemNixMode</S>
+                <S>hostname</S>
+                <S>Set-ItemNixMode</S>
+                <S>shuf</S>
+                <S>arch</S>
+                <S>basename</S>
+                <S>ConvertTo-NixMode</S>
+                <S>dirname</S>
+                <S>Get-ItemNixMode</S>
+                <S>hostname</S>
+                <S>Set-ItemNixMode</S>
+                <S>shuf</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>arch</S>
+                <S>basename</S>
+                <S>ConvertTo-NixMode</S>
+                <S>dirname</S>
+                <S>Get-ItemNixMode</S>
+                <S>hostname</S>
+                <S>Set-ItemNixMode</S>
+                <S>shuf</S>
+                <S>arch</S>
+                <S>basename</S>
+                <S>ConvertTo-NixMode</S>
+                <S>dirname</S>
+                <S>Get-ItemNixMode</S>
+                <S>hostname</S>
+                <S>Set-ItemNixMode</S>
+                <S>shuf</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">## _xD83D__xDCE6_ Other_x000A__x000A_- _xD83D__xDEA8_ Fixes Version Calculation for Test Builds</S>
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Copyright ©️ 2023 Bruce Markham, All rights reserved.</S>
+          <S N="description">Cmdlets that are semantically equivalent to GNU coreutils - useful when converting shell scripts to PowerShell.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">## _xD83D__xDCE6_ Other_x000A__x000A_- _xD83D__xDEA8_ Fixes Version Calculation for Test Builds</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">16</S>
+          <S N="downloadCount">305</S>
+          <S N="packageSize">77295</S>
+          <S N="published">12/18/2024 7:16:49 PM -05:00</S>
+          <S N="created">12/18/2024 7:16:49 PM -05:00</S>
+          <S N="lastUpdated">3/29/2025 9:20:00 PM -04:00</S>
+          <S N="tags">arch basename chmod coreutils dirname poshy-coreutils-ish PSCommand_arch PSCommand_basename PSCommand_ConvertTo-NixMode PSCommand_dirname PSCommand_Get-ItemNixMode PSCommand_hostname PSCommand_Set-ItemNixMode PSCommand_shuf PSEdition_Core PSEdition_Desktop PSFunction_arch PSFunction_basename PSFunction_ConvertTo-NixMode PSFunction_dirname PSFunction_Get-ItemNixMode PSFunction_hostname PSFunction_Set-ItemNixMode PSFunction_shuf PSIncludes_Command PSIncludes_Function PSModule pwshrc shuf PSFunction_arch PSCommand_arch PSFunction_basename PSCommand_basename PSFunction_ConvertTo-NixMode PSCommand_ConvertTo-NixMode PSFunction_dirname PSCommand_dirname PSFunction_Get-ItemNixMode PSCommand_Get-ItemNixMode PSFunction_hostname PSCommand_hostname PSFunction_Set-ItemNixMode PSCommand_Set-ItemNixMode PSFunction_shuf PSCommand_shuf PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-03-29T21:20:00Z</S>
+          <S N="NormalizedVersion">0.8.1</S>
+          <S N="Authors">Pwshrc Maintainers</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">poshy-coreutils-ish.nuspec|icon.jpeg|src\uniq.ps1|src\realpath.ps1|src\od.ps1|LICENSE.txt|src\sync.ps1|src\touch.ps1|src\ConvertTo-NixMode.ps1|poshy-coreutils-ish.psd1|src\expand.ps1|src\numfmt.ps1|src\Get-ItemNixMode.ps1|README.md|src\sha224sum.ps1|src\csplit.ps1|src\shred.ps1|src\sha1sum.ps1|src\wc.ps1|src\mktemp.ps1|src\chgrp.ps1|src\du.ps1|src\df.ps1|src\unexpand.ps1|src\link.ps1|src\paste.ps1|src\Set-ItemNixMode.ps1|src\install.ps1|src\base64.ps1|src\hostname.ps1|src\pathchk.ps1|src\factor.ps1|src\comm.ps1|src\uname.ps1|src\tsort.ps1|src\sha512sum.ps1|src\tail.ps1|src\ln.ps1|src\who.ps1|src\unlink.ps1|src\truncate.ps1|src\join.ps1|src\tty.ps1|src\shuf.ps1|src\users.ps1|src\seq.ps1|src\split.ps1|src\b2sum.ps1|src\md5sum.ps1|src\ptx.ps1|src\basename.ps1|src\basenc.ps1|src\cut.ps1|src\head.ps1|src\base32.ps1|src\tac.ps1|src\uptime.ps1|src\arch.ps1|src\hostid.ps1|src\printenv.ps1|src\sum.ps1|src\nproc.ps1|src\logname.ps1|src\yes.ps1|src\dd.ps1|src\mkfifo.ps1|src\cksum.ps1|src\stat.ps1|src\readlink.ps1|src\pr.ps1|src\groups.ps1|src\tr.ps1|src\mknod.ps1|src\ConvertFrom-NixMode.ps1|src\stty.ps1|src\id.ps1|src\nl.ps1|src\dirname.ps1|src\poshy-coreutils-ish.psm1|src\fmt.ps1|src\sha384sum.ps1|src\fold.ps1|src\sha256sum.ps1|src\chown.ps1|src\chmod.ps1</S>
+          <S N="GUID">bfb8cac8-e3d7-40fe-bcea-1ec371e9f649</S>
+          <S N="PowerShellVersion">7.0</S>
+          <S N="CompanyName">Pwshrc Maintainers</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\poshy-coreutils-ish\0.8.1</S>
+    </MS>
+  </Obj>
+</Objs>

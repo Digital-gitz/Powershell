@@ -418,14 +418,35 @@ function global:edit_powershell_profile {
         Write-Warning "PowerShell profile directory not found at: $profileDir"
     }
 
-    # Open in editor
-    if (Get-Command cursor -ErrorAction SilentlyContinue) {
-        Start-Process "cursor" -ArgumentList $profileDir
+    # Check git status and perform git operations
+    if (Test-Path (Join-Path $profileDir ".git")) {
+        Write-Host "`nChecking Git Status..." -ForegroundColor Cyan
+        Set-Location $profileDir
+        git status
+
+        # Check for any uncommitted changes
+        $changes = git status --porcelain
+        if ($changes) {
+            Write-Host "`nFound uncommitted changes:" -ForegroundColor Yellow
+            $changes | ForEach-Object {
+                Write-Host "  $_" -ForegroundColor Gray
+            }
+            
+            # Show diff if there are changes
+            Write-Host "`nChanges:" -ForegroundColor Cyan
+            git diff
+        }
+        else {
+            Write-Host "No uncommitted changes found." -ForegroundColor Green
+        }
+
+        # Show recent commits
+        Write-Host "`nRecent Commits:" -ForegroundColor Cyan
+        git log --oneline -n 5
     }
     else {
-        Write-Warning "Cursor editor not found. Please ensure it is installed and in your PATH."
+        Write-Host "Not a git repository. Skipping git operations." -ForegroundColor Yellow
     }
-    14
 }
 
 #region Error Handling and Logging
@@ -513,6 +534,46 @@ function Get-CommandSuggestion {
         Write-Host ""
     }
 }
+
+function global:commit {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $false)]
+        [string]$Message = "Update",
+        
+        [Parameter(Mandatory = $false)]
+        [switch]$Push,
+        
+        [Parameter(Mandatory = $false)]
+        [switch]$ShowStatus
+    )
+
+    Write-ProfileLog "Starting git commit process..." -Level 'Info' -Source 'Git'
+
+    # Show status if requested
+    if ($ShowStatus) {
+        git status
+    }
+
+    # Add all changes
+    Write-ProfileLog "Adding changes to staging..." -Level 'Info' -Source 'Git'
+    git add .
+
+    # Commit changes
+    Write-ProfileLog "Committing changes with message: $Message" -Level 'Info' -Source 'Git'
+    git commit -m $Message
+
+    # Push if requested
+    if ($Push) {
+        Write-ProfileLog "Pushing changes to remote..." -Level 'Info' -Source 'Git'
+        git push
+    }
+
+    Write-ProfileLog "Commit process completed" -Level 'Success' -Source 'Git'
+}
+
+
+
 
 # Enhanced Levenshtein distance calculation with memoization
 $script:levenshteinCache = @{}
@@ -617,21 +678,27 @@ else {
 #region Profile Completion
 $loadTime = (Get-Date) - $profileLoadStart
 Write-ProfileLog "PowerShell profile loaded in $([math]::Round($loadTime.TotalMilliseconds))ms!" -Level 'Success'
-
 # Display available commands
 Write-Host "`nAvailable Commands:" -ForegroundColor Cyan
-Write-Host "─────────────────────────────" -ForegroundColor DarkGray
-Write-Host "h <pattern>       - Search command history" -ForegroundColor Gray
-Write-Host "llm               - Open all LLM chat services" -ForegroundColor Gray
-Write-Host "chatgpt           - Open ChatGPT" -ForegroundColor Gray
-Write-Host "claude            - Open Claude" -ForegroundColor Gray
-Write-Host "gemini            - Open Gemini" -ForegroundColor Gray
-Write-Host "perplexity        - Open Perplexity AI" -ForegroundColor Gray
-Write-Host "edit_profile      - Edit PowerShell profile" -ForegroundColor Gray
-Write-Host "Start-Aseprite    - Starts Aseprite" -ForegroundColor Gray
-Write-Host "Start-DoomEternal - Starts Doom Eternal" -ForegroundColor Gray
-Write-Host "godot             - Starts godot" -ForegroundColor Gray
-Write-Host "─────────────────────────────" -ForegroundColor DarkGray
+Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
+Write-Host "h <pattern>                 - Search command history" -ForegroundColor Gray
+Write-Host "llm                         - Open all LLM chat services" -ForegroundColor Gray
+Write-Host "chatgpt                     - Open ChatGPT" -ForegroundColor Gray
+Write-Host "claude                      - Open Claude" -ForegroundColor Gray
+Write-Host "gemini                      - Open Gemini" -ForegroundColor Gray
+Write-Host "perplexity                  - Open Perplexity AI" -ForegroundColor Gray
+Write-Host "edit_profile                - Edit PowerShell profile" -ForegroundColor Gray
+Write-Host "Start-Aseprite              - Starts Aseprite" -ForegroundColor Gray
+Write-Host "Start-DoomEternal           - Starts Doom Eternal" -ForegroundColor Gray
+Write-Host "godot                       - Starts godot" -ForegroundColor Gray
+Write-Host "ghub                        - Go to Github Folder" -ForegroundColor Gray
+Write-Host "ddump                       - Go to DigitalHubDump Folder" -ForegroundColor Gray
+Write-Host "Start-Aseprite              - Starts Aseprite and assosated files" -ForegroundColor Gray
+Write-Host "edge                        - Starts Edge" -ForegroundColor Gray
+Write-Host "Search-CommandHistory or h  - Search Commands History" -ForegroundColor Gray
+Write-Host "edit_powershell_profile     - Edit my powersehll Profile" -ForegroundColor Gray
+
+Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
 
 #region Ect
 function Start-Aseprite {
@@ -659,9 +726,6 @@ function Start-Aseprite {
     }
 }
 function global:edge {
-    Start-Process "C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
-}
-function global:devEdge {
     param(
         [Parameter(ValueFromPipeline = $true)]
         [string]$Url
@@ -677,7 +741,39 @@ function global:devEdge {
     }
 }
 
-function globalL:ddump{}
+function global:ddump {
+    param()
+    try {
+        $path = "C:\Users\Digital_Russkiy\Documents\DGTLHubDump"
+        if (Test-Path $path) {
+            Set-Location -Path $path -ErrorAction Stop
+            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
+        }
+        else {
+            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
+        }
+    }
+    catch {
+        Write-Host "Error changing directory: $_" -ForegroundColor Red
+    }
+}
+
+function global:ghub {
+    param()
+    try {
+        $path = "C:\Users\Digital_Russkiy\Documents\GitHub"
+        if (Test-Path $path) {
+            Set-Location -Path $path -ErrorAction Stop
+            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
+        }
+        else {
+            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
+        }
+    }
+    catch {
+        Write-Host "Error changing directory: $_" -ForegroundColor Red
+    }
+}
 
 #endregionste
 

@@ -1,0 +1,353 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.CognitiveServices</S>
+      <S N="Version">1.16.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell - Cognitive Services management cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core. Creates and manages cognitive services accounts in Azure Resource Manager._x000D__x000A__x000D__x000A_For more information on Cognitive Services, please visit the following: https://learn.microsoft.com/azure/cognitive-services/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-04-01T06:23:06.603</DT>
+      <DT N="InstalledDate">2025-06-08T15:49:42.7872546-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>CognitiveServices</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-AzCognitiveServicesAccountNetworkRule</S>
+          <S>PSCommand_Add-AzCognitiveServicesAccountNetworkRule</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccount</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccount</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountCommitmentPlan</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountCommitmentPlan</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountDeployment</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountDeployment</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountDefenderForAISetting</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountDefenderForAISetting</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountDeploymentSku</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountDeploymentSku</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountKey</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountKey</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountModel</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountModel</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountNetworkRuleSet</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountNetworkRuleSet</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountRaiPolicy</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountRaiPolicy</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountRaiBlocklist</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountRaiBlocklist</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountRaiBlocklistItem</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountRaiBlocklistItem</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountSku</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountSku</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountType</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountType</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesAccountUsage</S>
+          <S>PSCommand_Get-AzCognitiveServicesAccountUsage</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesCommitmentPlan</S>
+          <S>PSCommand_Get-AzCognitiveServicesCommitmentPlan</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesCommitmentPlanAssociation</S>
+          <S>PSCommand_Get-AzCognitiveServicesCommitmentPlanAssociation</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesCommitmentTier</S>
+          <S>PSCommand_Get-AzCognitiveServicesCommitmentTier</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesModel</S>
+          <S>PSCommand_Get-AzCognitiveServicesModel</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesModelCapacity</S>
+          <S>PSCommand_Get-AzCognitiveServicesModelCapacity</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesRaiContentFilter</S>
+          <S>PSCommand_Get-AzCognitiveServicesRaiContentFilter</S>
+          <S>PSCmdlet_Get-AzCognitiveServicesUsage</S>
+          <S>PSCommand_Get-AzCognitiveServicesUsage</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccount</S>
+          <S>PSCommand_New-AzCognitiveServicesAccount</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountApiProperty</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountApiProperty</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountCommitmentPlan</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountCommitmentPlan</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountDeployment</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountDeployment</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountDefenderForAISetting</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountDefenderForAISetting</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountKey</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountKey</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountRaiPolicy</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountRaiPolicy</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountRaiBlocklist</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountRaiBlocklist</S>
+          <S>PSCmdlet_New-AzCognitiveServicesAccountRaiBlocklistItem</S>
+          <S>PSCommand_New-AzCognitiveServicesAccountRaiBlocklistItem</S>
+          <S>PSCmdlet_New-AzCognitiveServicesCommitmentPlan</S>
+          <S>PSCommand_New-AzCognitiveServicesCommitmentPlan</S>
+          <S>PSCmdlet_New-AzCognitiveServicesCommitmentPlanAssociation</S>
+          <S>PSCommand_New-AzCognitiveServicesCommitmentPlanAssociation</S>
+          <S>PSCmdlet_New-AzCognitiveServicesObject</S>
+          <S>PSCommand_New-AzCognitiveServicesObject</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccount</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccount</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccountCommitmentPlan</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccountCommitmentPlan</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccountDeployment</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccountDeployment</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccountNetworkRule</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccountNetworkRule</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccountRaiPolicy</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccountRaiPolicy</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccountRaiBlocklist</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccountRaiBlocklist</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesAccountRaiBlocklistItem</S>
+          <S>PSCommand_Remove-AzCognitiveServicesAccountRaiBlocklistItem</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesCommitmentPlan</S>
+          <S>PSCommand_Remove-AzCognitiveServicesCommitmentPlan</S>
+          <S>PSCmdlet_Remove-AzCognitiveServicesCommitmentPlanAssociation</S>
+          <S>PSCommand_Remove-AzCognitiveServicesCommitmentPlanAssociation</S>
+          <S>PSCmdlet_Set-AzCognitiveServicesAccount</S>
+          <S>PSCommand_Set-AzCognitiveServicesAccount</S>
+          <S>PSCmdlet_Undo-AzCognitiveServicesAccountRemoval</S>
+          <S>PSCommand_Undo-AzCognitiveServicesAccountRemoval</S>
+          <S>PSCmdlet_Update-AzCognitiveServicesAccountNetworkRuleSet</S>
+          <S>PSCommand_Update-AzCognitiveServicesAccountNetworkRuleSet</S>
+          <S>PSIncludes_Cmdlet</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzCognitiveServicesAccountNetworkRule</S>
+                <S>Get-AzCognitiveServicesAccount</S>
+                <S>Get-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>Get-AzCognitiveServicesAccountDeployment</S>
+                <S>Get-AzCognitiveServicesAccountDefenderForAISetting</S>
+                <S>Get-AzCognitiveServicesAccountDeploymentSku</S>
+                <S>Get-AzCognitiveServicesAccountKey</S>
+                <S>Get-AzCognitiveServicesAccountModel</S>
+                <S>Get-AzCognitiveServicesAccountNetworkRuleSet</S>
+                <S>Get-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>Get-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>Get-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>Get-AzCognitiveServicesAccountSku</S>
+                <S>Get-AzCognitiveServicesAccountType</S>
+                <S>Get-AzCognitiveServicesAccountUsage</S>
+                <S>Get-AzCognitiveServicesCommitmentPlan</S>
+                <S>Get-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>Get-AzCognitiveServicesCommitmentTier</S>
+                <S>Get-AzCognitiveServicesModel</S>
+                <S>Get-AzCognitiveServicesModelCapacity</S>
+                <S>Get-AzCognitiveServicesRaiContentFilter</S>
+                <S>Get-AzCognitiveServicesUsage</S>
+                <S>New-AzCognitiveServicesAccount</S>
+                <S>New-AzCognitiveServicesAccountApiProperty</S>
+                <S>New-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>New-AzCognitiveServicesAccountDeployment</S>
+                <S>New-AzCognitiveServicesAccountDefenderForAISetting</S>
+                <S>New-AzCognitiveServicesAccountKey</S>
+                <S>New-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>New-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>New-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>New-AzCognitiveServicesCommitmentPlan</S>
+                <S>New-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>New-AzCognitiveServicesObject</S>
+                <S>Remove-AzCognitiveServicesAccount</S>
+                <S>Remove-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>Remove-AzCognitiveServicesAccountDeployment</S>
+                <S>Remove-AzCognitiveServicesAccountNetworkRule</S>
+                <S>Remove-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>Remove-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>Remove-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>Remove-AzCognitiveServicesCommitmentPlan</S>
+                <S>Remove-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>Set-AzCognitiveServicesAccount</S>
+                <S>Undo-AzCognitiveServicesAccountRemoval</S>
+                <S>Update-AzCognitiveServicesAccountNetworkRuleSet</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzCognitiveServicesAccountNetworkRule</S>
+                <S>Get-AzCognitiveServicesAccount</S>
+                <S>Get-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>Get-AzCognitiveServicesAccountDeployment</S>
+                <S>Get-AzCognitiveServicesAccountDefenderForAISetting</S>
+                <S>Get-AzCognitiveServicesAccountDeploymentSku</S>
+                <S>Get-AzCognitiveServicesAccountKey</S>
+                <S>Get-AzCognitiveServicesAccountModel</S>
+                <S>Get-AzCognitiveServicesAccountNetworkRuleSet</S>
+                <S>Get-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>Get-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>Get-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>Get-AzCognitiveServicesAccountSku</S>
+                <S>Get-AzCognitiveServicesAccountType</S>
+                <S>Get-AzCognitiveServicesAccountUsage</S>
+                <S>Get-AzCognitiveServicesCommitmentPlan</S>
+                <S>Get-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>Get-AzCognitiveServicesCommitmentTier</S>
+                <S>Get-AzCognitiveServicesModel</S>
+                <S>Get-AzCognitiveServicesModelCapacity</S>
+                <S>Get-AzCognitiveServicesRaiContentFilter</S>
+                <S>Get-AzCognitiveServicesUsage</S>
+                <S>New-AzCognitiveServicesAccount</S>
+                <S>New-AzCognitiveServicesAccountApiProperty</S>
+                <S>New-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>New-AzCognitiveServicesAccountDeployment</S>
+                <S>New-AzCognitiveServicesAccountDefenderForAISetting</S>
+                <S>New-AzCognitiveServicesAccountKey</S>
+                <S>New-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>New-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>New-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>New-AzCognitiveServicesCommitmentPlan</S>
+                <S>New-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>New-AzCognitiveServicesObject</S>
+                <S>Remove-AzCognitiveServicesAccount</S>
+                <S>Remove-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>Remove-AzCognitiveServicesAccountDeployment</S>
+                <S>Remove-AzCognitiveServicesAccountNetworkRule</S>
+                <S>Remove-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>Remove-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>Remove-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>Remove-AzCognitiveServicesCommitmentPlan</S>
+                <S>Remove-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>Set-AzCognitiveServicesAccount</S>
+                <S>Undo-AzCognitiveServicesAccountRemoval</S>
+                <S>Update-AzCognitiveServicesAccountNetworkRuleSet</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Updated SDK via autorest.powershell._x000D__x000A_* Added Get, New, Remove cmdlets for AzCognitiveServicesAccountRaiPolicy, AzCognitiveServicesAccountRaiBlocklist, AzCognitiveServicesAccountRaiBlocklistItem._x000D__x000A_* Added Get cmdlets for AzCognitiveServicesRaiContentFilters, AzCognitiveServicesAccountDeploymentSku, AzCognitiveServicesModelCapacity._x000D__x000A_* Added Get, New cmdlets for AzCognitiveServicesAccountDefenderForAISetting.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.1.0, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.1.0</ToString>
+                    <Props>
+                      <Version N="Version">4.1.0.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.1.0</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">1</I32>
+                      <I32 N="Patch">0</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.1.0, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.16.0</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

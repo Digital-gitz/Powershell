@@ -1,0 +1,317 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.FrontDoor</S>
+      <S N="Version">1.13.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell - Front Door service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Front Door, please visit the following: https://learn.microsoft.com/azure/frontdoor/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-05-06T01:51:59.847</DT>
+      <DT N="InstalledDate">2025-06-08T15:50:02.5312703-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>FrontDoor</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Disable-AzFrontDoorCustomDomainHttps</S>
+          <S>PSCommand_Disable-AzFrontDoorCustomDomainHttps</S>
+          <S>PSCmdlet_Enable-AzFrontDoorCustomDomainHttps</S>
+          <S>PSCommand_Enable-AzFrontDoorCustomDomainHttps</S>
+          <S>PSCmdlet_Get-AzFrontDoor</S>
+          <S>PSCommand_Get-AzFrontDoor</S>
+          <S>PSCmdlet_Get-AzFrontDoorFrontendEndpoint</S>
+          <S>PSCommand_Get-AzFrontDoorFrontendEndpoint</S>
+          <S>PSCmdlet_Get-AzFrontDoorRulesEngine</S>
+          <S>PSCommand_Get-AzFrontDoorRulesEngine</S>
+          <S>PSCmdlet_Get-AzFrontDoorWafManagedRuleSetDefinition</S>
+          <S>PSCommand_Get-AzFrontDoorWafManagedRuleSetDefinition</S>
+          <S>PSCmdlet_Get-AzFrontDoorWafPolicy</S>
+          <S>PSCommand_Get-AzFrontDoorWafPolicy</S>
+          <S>PSCmdlet_New-AzFrontDoor</S>
+          <S>PSCommand_New-AzFrontDoor</S>
+          <S>PSCmdlet_New-AzFrontDoorBackendObject</S>
+          <S>PSCommand_New-AzFrontDoorBackendObject</S>
+          <S>PSCmdlet_New-AzFrontDoorBackendPoolObject</S>
+          <S>PSCommand_New-AzFrontDoorBackendPoolObject</S>
+          <S>PSCmdlet_New-AzFrontDoorBackendPoolsSettingObject</S>
+          <S>PSCommand_New-AzFrontDoorBackendPoolsSettingObject</S>
+          <S>PSCmdlet_New-AzFrontDoorFrontendEndpointObject</S>
+          <S>PSCommand_New-AzFrontDoorFrontendEndpointObject</S>
+          <S>PSCmdlet_New-AzFrontDoorHeaderActionObject</S>
+          <S>PSCommand_New-AzFrontDoorHeaderActionObject</S>
+          <S>PSCmdlet_New-AzFrontDoorHealthProbeSettingObject</S>
+          <S>PSCommand_New-AzFrontDoorHealthProbeSettingObject</S>
+          <S>PSCmdlet_New-AzFrontDoorLoadBalancingSettingObject</S>
+          <S>PSCommand_New-AzFrontDoorLoadBalancingSettingObject</S>
+          <S>PSCmdlet_New-AzFrontDoorRoutingRuleObject</S>
+          <S>PSCommand_New-AzFrontDoorRoutingRuleObject</S>
+          <S>PSCmdlet_New-AzFrontDoorRulesEngine</S>
+          <S>PSCommand_New-AzFrontDoorRulesEngine</S>
+          <S>PSCmdlet_New-AzFrontDoorRulesEngineActionObject</S>
+          <S>PSCommand_New-AzFrontDoorRulesEngineActionObject</S>
+          <S>PSCmdlet_New-AzFrontDoorRulesEngineMatchConditionObject</S>
+          <S>PSCommand_New-AzFrontDoorRulesEngineMatchConditionObject</S>
+          <S>PSCmdlet_New-AzFrontDoorRulesEngineRuleObject</S>
+          <S>PSCommand_New-AzFrontDoorRulesEngineRuleObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafLogScrubbingRuleObject</S>
+          <S>PSCommand_New-AzFrontDoorWafLogScrubbingRuleObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafLogScrubbingSettingObject</S>
+          <S>PSCommand_New-AzFrontDoorWafLogScrubbingSettingObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafCustomRuleObject</S>
+          <S>PSCommand_New-AzFrontDoorWafCustomRuleObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafCustomRuleGroupByVariableObject</S>
+          <S>PSCommand_New-AzFrontDoorWafCustomRuleGroupByVariableObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafManagedRuleExclusionObject</S>
+          <S>PSCommand_New-AzFrontDoorWafManagedRuleExclusionObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafManagedRuleObject</S>
+          <S>PSCommand_New-AzFrontDoorWafManagedRuleObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafManagedRuleOverrideObject</S>
+          <S>PSCommand_New-AzFrontDoorWafManagedRuleOverrideObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafMatchConditionObject</S>
+          <S>PSCommand_New-AzFrontDoorWafMatchConditionObject</S>
+          <S>PSCmdlet_New-AzFrontDoorWafPolicy</S>
+          <S>PSCommand_New-AzFrontDoorWafPolicy</S>
+          <S>PSCmdlet_New-AzFrontDoorWafRuleGroupOverrideObject</S>
+          <S>PSCommand_New-AzFrontDoorWafRuleGroupOverrideObject</S>
+          <S>PSCmdlet_Remove-AzFrontDoor</S>
+          <S>PSCommand_Remove-AzFrontDoor</S>
+          <S>PSCmdlet_Remove-AzFrontDoorContent</S>
+          <S>PSCommand_Remove-AzFrontDoorContent</S>
+          <S>PSCmdlet_Remove-AzFrontDoorRulesEngine</S>
+          <S>PSCommand_Remove-AzFrontDoorRulesEngine</S>
+          <S>PSCmdlet_Remove-AzFrontDoorWafPolicy</S>
+          <S>PSCommand_Remove-AzFrontDoorWafPolicy</S>
+          <S>PSCmdlet_Set-AzFrontDoor</S>
+          <S>PSCommand_Set-AzFrontDoor</S>
+          <S>PSCmdlet_Set-AzFrontDoorRulesEngine</S>
+          <S>PSCommand_Set-AzFrontDoorRulesEngine</S>
+          <S>PSCmdlet_Update-AzFrontDoorWafPolicy</S>
+          <S>PSCommand_Update-AzFrontDoorWafPolicy</S>
+          <S>PSIncludes_Cmdlet</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Disable-AzFrontDoorCustomDomainHttps</S>
+                <S>Enable-AzFrontDoorCustomDomainHttps</S>
+                <S>Get-AzFrontDoor</S>
+                <S>Get-AzFrontDoorFrontendEndpoint</S>
+                <S>Get-AzFrontDoorRulesEngine</S>
+                <S>Get-AzFrontDoorWafManagedRuleSetDefinition</S>
+                <S>Get-AzFrontDoorWafPolicy</S>
+                <S>New-AzFrontDoor</S>
+                <S>New-AzFrontDoorBackendObject</S>
+                <S>New-AzFrontDoorBackendPoolObject</S>
+                <S>New-AzFrontDoorBackendPoolsSettingObject</S>
+                <S>New-AzFrontDoorFrontendEndpointObject</S>
+                <S>New-AzFrontDoorHeaderActionObject</S>
+                <S>New-AzFrontDoorHealthProbeSettingObject</S>
+                <S>New-AzFrontDoorLoadBalancingSettingObject</S>
+                <S>New-AzFrontDoorRoutingRuleObject</S>
+                <S>New-AzFrontDoorRulesEngine</S>
+                <S>New-AzFrontDoorRulesEngineActionObject</S>
+                <S>New-AzFrontDoorRulesEngineMatchConditionObject</S>
+                <S>New-AzFrontDoorRulesEngineRuleObject</S>
+                <S>New-AzFrontDoorWafLogScrubbingRuleObject</S>
+                <S>New-AzFrontDoorWafLogScrubbingSettingObject</S>
+                <S>New-AzFrontDoorWafCustomRuleObject</S>
+                <S>New-AzFrontDoorWafCustomRuleGroupByVariableObject</S>
+                <S>New-AzFrontDoorWafManagedRuleExclusionObject</S>
+                <S>New-AzFrontDoorWafManagedRuleObject</S>
+                <S>New-AzFrontDoorWafManagedRuleOverrideObject</S>
+                <S>New-AzFrontDoorWafMatchConditionObject</S>
+                <S>New-AzFrontDoorWafPolicy</S>
+                <S>New-AzFrontDoorWafRuleGroupOverrideObject</S>
+                <S>Remove-AzFrontDoor</S>
+                <S>Remove-AzFrontDoorContent</S>
+                <S>Remove-AzFrontDoorRulesEngine</S>
+                <S>Remove-AzFrontDoorWafPolicy</S>
+                <S>Set-AzFrontDoor</S>
+                <S>Set-AzFrontDoorRulesEngine</S>
+                <S>Update-AzFrontDoorWafPolicy</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Disable-AzFrontDoorCustomDomainHttps</S>
+                <S>Enable-AzFrontDoorCustomDomainHttps</S>
+                <S>Get-AzFrontDoor</S>
+                <S>Get-AzFrontDoorFrontendEndpoint</S>
+                <S>Get-AzFrontDoorRulesEngine</S>
+                <S>Get-AzFrontDoorWafManagedRuleSetDefinition</S>
+                <S>Get-AzFrontDoorWafPolicy</S>
+                <S>New-AzFrontDoor</S>
+                <S>New-AzFrontDoorBackendObject</S>
+                <S>New-AzFrontDoorBackendPoolObject</S>
+                <S>New-AzFrontDoorBackendPoolsSettingObject</S>
+                <S>New-AzFrontDoorFrontendEndpointObject</S>
+                <S>New-AzFrontDoorHeaderActionObject</S>
+                <S>New-AzFrontDoorHealthProbeSettingObject</S>
+                <S>New-AzFrontDoorLoadBalancingSettingObject</S>
+                <S>New-AzFrontDoorRoutingRuleObject</S>
+                <S>New-AzFrontDoorRulesEngine</S>
+                <S>New-AzFrontDoorRulesEngineActionObject</S>
+                <S>New-AzFrontDoorRulesEngineMatchConditionObject</S>
+                <S>New-AzFrontDoorRulesEngineRuleObject</S>
+                <S>New-AzFrontDoorWafLogScrubbingRuleObject</S>
+                <S>New-AzFrontDoorWafLogScrubbingSettingObject</S>
+                <S>New-AzFrontDoorWafCustomRuleObject</S>
+                <S>New-AzFrontDoorWafCustomRuleGroupByVariableObject</S>
+                <S>New-AzFrontDoorWafManagedRuleExclusionObject</S>
+                <S>New-AzFrontDoorWafManagedRuleObject</S>
+                <S>New-AzFrontDoorWafManagedRuleOverrideObject</S>
+                <S>New-AzFrontDoorWafMatchConditionObject</S>
+                <S>New-AzFrontDoorWafPolicy</S>
+                <S>New-AzFrontDoorWafRuleGroupOverrideObject</S>
+                <S>Remove-AzFrontDoor</S>
+                <S>Remove-AzFrontDoorContent</S>
+                <S>Remove-AzFrontDoorRulesEngine</S>
+                <S>Remove-AzFrontDoorWafPolicy</S>
+                <S>Set-AzFrontDoor</S>
+                <S>Set-AzFrontDoorRulesEngine</S>
+                <S>Update-AzFrontDoorWafPolicy</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Added support for Captcha</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[4.2.0, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>4.2.0</ToString>
+                    <Props>
+                      <Version N="Version">4.2.0.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">4.2.0</S>
+                      <I32 N="Major">4</I32>
+                      <I32 N="Minor">2</I32>
+                      <I32 N="Patch">0</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[4.2.0, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.13.0</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

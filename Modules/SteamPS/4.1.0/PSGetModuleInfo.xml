@@ -1,0 +1,158 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">SteamPS</S>
+      <Version N="Version">4.1.0</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Module that utilizes PowerShell as a wrapper for SteamCMD and interacts with various Steam APIs.</S>
+      <S N="Author">Frederik Hjorslev Nylander</S>
+      <S N="CompanyName">fhjorslev</S>
+      <S N="Copyright">(c) 2019-2024 Frederik Hjorslev Nylander. All rights reserved.</S>
+      <DT N="PublishedDate">2024-06-12T22:29:40-04:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-06-01T21:40:02.0681332-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/hjorslev/SteamPS/blob/master/LICENSE.md</URI>
+      <URI N="ProjectUri">https://github.com/hjorslev/SteamPS</URI>
+      <URI N="IconUri">https://raw.githubusercontent.com/hjorslev/SteamPS/master/assets/images/SteamPS-icon.svg</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Steam</S>
+          <S>SteamCMD</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Connect-SteamAPI</S>
+                <S>Disconnect-SteamAPI</S>
+                <S>Get-SteamApp</S>
+                <S>Get-SteamFriendList</S>
+                <S>Get-SteamNews</S>
+                <S>Get-SteamPlayerBan</S>
+                <S>Get-SteamPlayerSummary</S>
+                <S>Resolve-VanityURL</S>
+                <S>Get-SteamServerInfo</S>
+                <S>Install-SteamCMD</S>
+                <S>Update-SteamApp</S>
+                <S>Update-SteamServer</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Connect-SteamAPI</S>
+                <S>Disconnect-SteamAPI</S>
+                <S>Get-SteamApp</S>
+                <S>Get-SteamFriendList</S>
+                <S>Get-SteamNews</S>
+                <S>Get-SteamPlayerBan</S>
+                <S>Get-SteamPlayerSummary</S>
+                <S>Resolve-VanityURL</S>
+                <S>Get-SteamServerInfo</S>
+                <S>Install-SteamCMD</S>
+                <S>Update-SteamApp</S>
+                <S>Update-SteamServer</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">https://github.com/hjorslev/SteamPS/releases</S>
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2019-2024 Frederik Hjorslev Nylander. All rights reserved.</S>
+          <S N="description">Module that utilizes PowerShell as a wrapper for SteamCMD and interacts with various Steam APIs.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">https://github.com/hjorslev/SteamPS/releases</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">13811</S>
+          <S N="downloadCount">20481</S>
+          <S N="packageSize">18948</S>
+          <S N="published">6/12/2024 10:29:40 PM -04:00</S>
+          <S N="created">6/12/2024 10:29:40 PM -04:00</S>
+          <S N="lastUpdated">5/30/2025 8:30:00 PM -04:00</S>
+          <S N="tags">Steam SteamCMD PSModule PSFunction_Connect-SteamAPI PSCommand_Connect-SteamAPI PSFunction_Disconnect-SteamAPI PSCommand_Disconnect-SteamAPI PSFunction_Get-SteamApp PSCommand_Get-SteamApp PSFunction_Get-SteamFriendList PSCommand_Get-SteamFriendList PSFunction_Get-SteamNews PSCommand_Get-SteamNews PSFunction_Get-SteamPlayerBan PSCommand_Get-SteamPlayerBan PSFunction_Get-SteamPlayerSummary PSCommand_Get-SteamPlayerSummary PSFunction_Resolve-VanityURL PSCommand_Resolve-VanityURL PSFunction_Get-SteamServerInfo PSCommand_Get-SteamServerInfo PSFunction_Install-SteamCMD PSCommand_Install-SteamCMD PSFunction_Update-SteamApp PSCommand_Update-SteamApp PSFunction_Update-SteamServer PSCommand_Update-SteamServer PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-05-30T20:30:00Z</S>
+          <S N="NormalizedVersion">4.1.0</S>
+          <S N="Authors">Frederik Hjorslev Nylander</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">SteamPS.nuspec|SteamPS.psd1|SteamPS.psm1</S>
+          <S N="GUID">1043b347-925c-4b8b-9cd9-075bc9f9a153</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="CompanyName">hjorslev</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\SteamPS\4.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

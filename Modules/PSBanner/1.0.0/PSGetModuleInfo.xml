@@ -1,0 +1,135 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PSBanner</S>
+      <Version N="Version">1.0.0</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Banner written in PowerShell.</S>
+      <S N="Author">stknohg</S>
+      <S N="CompanyName">stknohg</S>
+      <S N="Copyright">(c) 2016 stknohg. All rights reserved.</S>
+      <DT N="PublishedDate">2018-10-16T14:20:11-04:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2025-06-18T15:17:54.5839699-04:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/stknohg/PSBanner/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/stknohg/PSBanner</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Banner</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-FontFamilies</S>
+                <S>Write-Banner</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-FontFamilies</S>
+                <S>Write-Banner</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2016 stknohg. All rights reserved.</S>
+          <S N="description">Banner written in PowerShell.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">8692</S>
+          <S N="downloadCount">9278</S>
+          <S N="packageSize">146345</S>
+          <S N="published">10/16/2018 2:20:11 PM -04:00</S>
+          <S N="created">10/16/2018 2:20:11 PM -04:00</S>
+          <S N="lastUpdated">6/18/2025 9:30:00 AM -04:00</S>
+          <S N="tags">Banner PSModule PSFunction_Get-FontFamilies PSCommand_Get-FontFamilies PSFunction_Write-Banner PSCommand_Write-Banner PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-06-18T09:30:00Z</S>
+          <S N="NormalizedVersion">1.0.0</S>
+          <S N="Authors">stknohg</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PSBanner.nuspec|CoreCompat.System.Drawing.dll|PSBanner.psd1|PSBanner.psm1</S>
+          <S N="GUID">f60e6bc5-d535-488f-a246-494c511d59e3</S>
+          <S N="CompanyName">stknohg</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules\PSBanner\1.0.0</S>
+    </MS>
+  </Obj>
+</Objs>

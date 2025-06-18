@@ -1,0 +1,49 @@
+Start-Aseprite
+clr
+ls
+pwsh
+New-QRCode google.com
+New-QRCode 
+h
+kist_llm
+list_llms
+list_llm
+clear
+pwsh
+Get-StockMarketSummary
+nvim
+go get github.com/mattn/gobanner
+go
+go install github.com/mattn/gobanner
+go install github.com/mattn/gobanner@latest
+gobanner
+Install-Module -Name PSBanner -Scope CurrentUser
+Write-Banner "Hello!"
+Write-Banner "Hello!" -FontName "Consolas" -FontSize 14
+Write-Banner "Hello!" -FontName "Consolas" -FontSize 14
+Write-Banner "Hello!" -Bold -Italic -Strikeout -Underline
+"Hello!" | Write-Banner
+Write-Banner "😊" -FontName "Segoe UI Emoji" -FontSize 20
+Write-Banner "Power Shell!" -FontName "Consolas" -FontSize 14
+Write-Banner "Power Shell!" -FontName "Consolas" -FontSize 6
+Write-Banner "Power Shell!" -FontName "Consolas" -FontSize 8
+Write-Banner "Power Shell!" -FontName "Consolas" -FontSize 12
+Write-Banner "|Power Shell!|" -FontName "Consolas" -FontSize 12
+Write-Banner "|Power Shell!|" -FontName "Consolas" -FontSize 14
+z powershell
+git status
+ghub
+z powersehll 
+z 'C:\Users\Digital_Russkiy\Documents\Powershell'
+ls
+git status 
+github
+git commit 
+git commit -a
+git status 
+git push 
+git status 
+git commit -a -m "updated"
+git add . 
+git status
+git commit -a -m "updated"

@@ -1,0 +1,243 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">AWS.Tools.Common</S>
+      <S N="Version">4.1.842</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">The AWS Tools for PowerShell lets developers and administrators manage their AWS services from the PowerShell scripting environment. In order to manage each AWS service, install the corresponding module (e.g. AWS.Tools.EC2, AWS.Tools.S3...)._x000D__x000A_The module AWS.Tools.Installer (https://www.powershellgallery.com/packages/AWS.Tools.Installer/) makes it easier to install, update and uninstall the AWS.Tools modules._x000D__x000A_This version of AWS Tools for PowerShell is compatible with Windows PowerShell 5.1+ and PowerShell Core 6+ on Windows, Linux and macOS. When running on Windows PowerShell, .NET Framework 4.7.2 or newer is required._x000D__x000A_Alternative modules, AWSPowerShell.NetCore and AWSPowerShell, provide support for all AWS services from a single module and also support older versions of Windows PowerShell and .NET Framework.</S>
+      <S N="Author">Amazon.com Inc</S>
+      <S N="CompanyName">Amazon.com, Inc</S>
+      <S N="Copyright">Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.</S>
+      <DT N="PublishedDate">2025-06-17T23:17:49.21</DT>
+      <DT N="InstalledDate">2025-06-18T14:46:21.7529665-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aws.amazon.com/apache-2-0/</URI>
+      <URI N="ProjectUri">https://github.com/aws/aws-tools-for-powershell</URI>
+      <URI N="IconUri">https://sdk-for-net.amazonwebservices.com/images/AWSLogo128x128.png</URI>
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>AWS</S>
+          <S>cloud</S>
+          <S>Windows</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSEdition_Core</S>
+          <S>Linux</S>
+          <S>MacOS</S>
+          <S>Mac</S>
+          <S>PSModule</S>
+          <S>PSCmdlet_Clear-AWSHistory</S>
+          <S>PSCommand_Clear-AWSHistory</S>
+          <S>PSCmdlet_Set-AWSHistoryConfiguration</S>
+          <S>PSCommand_Set-AWSHistoryConfiguration</S>
+          <S>PSCmdlet_Initialize-AWSDefaultConfiguration</S>
+          <S>PSCommand_Initialize-AWSDefaultConfiguration</S>
+          <S>PSCmdlet_Clear-AWSDefaultConfiguration</S>
+          <S>PSCommand_Clear-AWSDefaultConfiguration</S>
+          <S>PSCmdlet_Get-AWSPowerShellVersion</S>
+          <S>PSCommand_Get-AWSPowerShellVersion</S>
+          <S>PSCmdlet_Set-AWSSensitiveDataConfiguration</S>
+          <S>PSCommand_Set-AWSSensitiveDataConfiguration</S>
+          <S>PSCmdlet_Get-AWSSensitiveDataConfiguration</S>
+          <S>PSCommand_Get-AWSSensitiveDataConfiguration</S>
+          <S>PSCmdlet_New-AWSCredential</S>
+          <S>PSCommand_New-AWSCredential</S>
+          <S>PSCmdlet_Set-AWSCredential</S>
+          <S>PSCommand_Set-AWSCredential</S>
+          <S>PSCmdlet_Clear-AWSCredential</S>
+          <S>PSCommand_Clear-AWSCredential</S>
+          <S>PSCmdlet_Get-AWSCredential</S>
+          <S>PSCommand_Get-AWSCredential</S>
+          <S>PSCmdlet_Set-AWSSamlEndpoint</S>
+          <S>PSCommand_Set-AWSSamlEndpoint</S>
+          <S>PSCmdlet_Set-AWSSamlRoleProfile</S>
+          <S>PSCommand_Set-AWSSamlRoleProfile</S>
+          <S>PSCmdlet_Get-AWSService</S>
+          <S>PSCommand_Get-AWSService</S>
+          <S>PSCmdlet_Get-AWSCmdletName</S>
+          <S>PSCommand_Get-AWSCmdletName</S>
+          <S>PSCmdlet_Add-AWSLoggingListener</S>
+          <S>PSCommand_Add-AWSLoggingListener</S>
+          <S>PSCmdlet_Remove-AWSLoggingListener</S>
+          <S>PSCommand_Remove-AWSLoggingListener</S>
+          <S>PSCmdlet_Set-AWSResponseLogging</S>
+          <S>PSCommand_Set-AWSResponseLogging</S>
+          <S>PSCmdlet_Enable-AWSMetricsLogging</S>
+          <S>PSCommand_Enable-AWSMetricsLogging</S>
+          <S>PSCmdlet_Disable-AWSMetricsLogging</S>
+          <S>PSCommand_Disable-AWSMetricsLogging</S>
+          <S>PSCmdlet_Set-AWSProxy</S>
+          <S>PSCommand_Set-AWSProxy</S>
+          <S>PSCmdlet_Clear-AWSProxy</S>
+          <S>PSCommand_Clear-AWSProxy</S>
+          <S>PSCmdlet_Get-AWSPublicIpAddressRange</S>
+          <S>PSCommand_Get-AWSPublicIpAddressRange</S>
+          <S>PSCmdlet_Set-DefaultAWSRegion</S>
+          <S>PSCommand_Set-DefaultAWSRegion</S>
+          <S>PSCmdlet_Clear-DefaultAWSRegion</S>
+          <S>PSCommand_Clear-DefaultAWSRegion</S>
+          <S>PSCmdlet_Get-DefaultAWSRegion</S>
+          <S>PSCommand_Get-DefaultAWSRegion</S>
+          <S>PSCmdlet_Get-AWSRegion</S>
+          <S>PSCommand_Get-AWSRegion</S>
+          <S>PSCmdlet_Remove-AWSCredentialProfile</S>
+          <S>PSCommand_Remove-AWSCredentialProfile</S>
+          <S>PSCmdlet_Invoke-AWSSSOLogin</S>
+          <S>PSCommand_Invoke-AWSSSOLogin</S>
+          <S>PSCmdlet_Initialize-AWSSSOConfiguration</S>
+          <S>PSCommand_Initialize-AWSSSOConfiguration</S>
+          <S>PSCmdlet_Set-AWSSSOSessionConfiguration</S>
+          <S>PSCommand_Set-AWSSSOSessionConfiguration</S>
+          <S>PSCmdlet_Invoke-AWSSSOLogout</S>
+          <S>PSCommand_Invoke-AWSSSOLogout</S>
+          <S>PSIncludes_Cmdlet</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Clear-AWSHistory</S>
+                <S>Set-AWSHistoryConfiguration</S>
+                <S>Initialize-AWSDefaultConfiguration</S>
+                <S>Clear-AWSDefaultConfiguration</S>
+                <S>Get-AWSPowerShellVersion</S>
+                <S>Set-AWSSensitiveDataConfiguration</S>
+                <S>Get-AWSSensitiveDataConfiguration</S>
+                <S>New-AWSCredential</S>
+                <S>Set-AWSCredential</S>
+                <S>Clear-AWSCredential</S>
+                <S>Get-AWSCredential</S>
+                <S>Set-AWSSamlEndpoint</S>
+                <S>Set-AWSSamlRoleProfile</S>
+                <S>Get-AWSService</S>
+                <S>Get-AWSCmdletName</S>
+                <S>Add-AWSLoggingListener</S>
+                <S>Remove-AWSLoggingListener</S>
+                <S>Set-AWSResponseLogging</S>
+                <S>Enable-AWSMetricsLogging</S>
+                <S>Disable-AWSMetricsLogging</S>
+                <S>Set-AWSProxy</S>
+                <S>Clear-AWSProxy</S>
+                <S>Get-AWSPublicIpAddressRange</S>
+                <S>Set-DefaultAWSRegion</S>
+                <S>Clear-DefaultAWSRegion</S>
+                <S>Get-DefaultAWSRegion</S>
+                <S>Get-AWSRegion</S>
+                <S>Remove-AWSCredentialProfile</S>
+                <S>Invoke-AWSSSOLogin</S>
+                <S>Initialize-AWSSSOConfiguration</S>
+                <S>Set-AWSSSOSessionConfiguration</S>
+                <S>Invoke-AWSSSOLogout</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Clear-AWSHistory</S>
+                <S>Set-AWSHistoryConfiguration</S>
+                <S>Initialize-AWSDefaultConfiguration</S>
+                <S>Clear-AWSDefaultConfiguration</S>
+                <S>Get-AWSPowerShellVersion</S>
+                <S>Set-AWSSensitiveDataConfiguration</S>
+                <S>Get-AWSSensitiveDataConfiguration</S>
+                <S>New-AWSCredential</S>
+                <S>Set-AWSCredential</S>
+                <S>Clear-AWSCredential</S>
+                <S>Get-AWSCredential</S>
+                <S>Set-AWSSamlEndpoint</S>
+                <S>Set-AWSSamlRoleProfile</S>
+                <S>Get-AWSService</S>
+                <S>Get-AWSCmdletName</S>
+                <S>Add-AWSLoggingListener</S>
+                <S>Remove-AWSLoggingListener</S>
+                <S>Set-AWSResponseLogging</S>
+                <S>Enable-AWSMetricsLogging</S>
+                <S>Disable-AWSMetricsLogging</S>
+                <S>Set-AWSProxy</S>
+                <S>Clear-AWSProxy</S>
+                <S>Get-AWSPublicIpAddressRange</S>
+                <S>Set-DefaultAWSRegion</S>
+                <S>Clear-DefaultAWSRegion</S>
+                <S>Get-DefaultAWSRegion</S>
+                <S>Get-AWSRegion</S>
+                <S>Remove-AWSCredentialProfile</S>
+                <S>Invoke-AWSSSOLogin</S>
+                <S>Initialize-AWSSSOConfiguration</S>
+                <S>Set-AWSSSOSessionConfiguration</S>
+                <S>Invoke-AWSSSOLogout</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">https://github.com/aws/aws-tools-for-powershell/blob/master/CHANGELOG.md</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">4.1.842</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

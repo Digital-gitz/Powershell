@@ -260,31 +260,22 @@ function global:copilot {
 }
 
 function global:edgepasswords { Start-Process "edge://wallet/passwords?source=assetsSettingsPasswords%22}" }
-Write-Host "URL-Funk.ps1 loaded successfully!" -ForegroundColor Green
-Write-Host "Use 'Open-LLMChat' or 'llm' to open all LLM chat URLs" -ForegroundColor Cyan
-Write-Host "Use 'chat-gpt' to open ChatGPT" -ForegroundColor Blue
-Write-Host "Use 'claude' to open Claude" -ForegroundColor Blue
-Write-Host "Use 'gemini' to open Gemini" -ForegroundColor Blue
-Write-Host "Use 'deepseek' to open DeepSeek" -ForegroundColor Blue
-Write-Host "Use 'grok' to open Grok" -ForegroundColor Blue
-Write-Host "Use 'you' to open You" -ForegroundColor Blue
-Write-Host "Use 'pi' to open Pi" -ForegroundColor Blue
-Write-Host "Use 'gally' to open PowerShell Gallery" -ForegroundColor Blue
-Write-Host "Use 'perplexity' to open Perplexity AI" -ForegroundColor Blue
-Write-Host "Use 'copilot' to open Copilot" -ForegroundColor Blue
 
 
 
-function global:listllm {
-    Write-Host "`nAvailable LLM Chat Services:" -ForegroundColor Yellow
-    Write-Host "1. ChatGPT (chat-gpt)" -ForegroundColor Cyan
-    Write-Host "2. Claude (claude)" -ForegroundColor Cyan
-    Write-Host "3. Gemini (gemini)" -ForegroundColor Cyan
-    Write-Host "4. DeepSeek (deepseek)" -ForegroundColor Cyan
-    Write-Host "5. Grok (grok)" -ForegroundColor Cyan
-    Write-Host "6. You (you)" -ForegroundColor Cyan
-    Write-Host "7. Pi (pi)" -ForegroundColor Cyan
-    Write-Host "8. Perplexity AI (perplexity)" -ForegroundColor Cyan
-    Write-Host "9. Copilot (copilot)" -ForegroundColor Cyan
+
+function global:list_llm {
+    Write-Host "URL-Funk.ps1 loaded successfully!" -ForegroundColor Green
+    Write-Host "Use 'Open-LLMChat' or 'llm' to open all LLM chat URLs" -ForegroundColor Cyan
+    Write-Host "Use 'chat-gpt' to open ChatGPT" -ForegroundColor Blue
+    Write-Host "Use 'claude' to open Claude" -ForegroundColor Blue
+    Write-Host "Use 'gemini' to open Gemini" -ForegroundColor Blue
+    Write-Host "Use 'deepseek' to open DeepSeek" -ForegroundColor Blue
+    Write-Host "Use 'grok' to open Grok" -ForegroundColor Blue
+    Write-Host "Use 'you' to open You" -ForegroundColor Blue
+    Write-Host "Use 'pi' to open Pi" -ForegroundColor Blue
+    Write-Host "Use 'gally' to open PowerShell Gallery" -ForegroundColor Blue
+    Write-Host "Use 'perplexity' to open Perplexity AI" -ForegroundColor Blue
+    Write-Host "Use 'copilot' to open Copilot" -ForegroundColor Blue
     Write-Host "`nUse the command in parentheses to open the respective service" -ForegroundColor Green
 }

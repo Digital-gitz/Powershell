@@ -10,13 +10,16 @@ Write-Log "Defining Open-SocialChat function..." -Level 'Info'
 
 # Define URLs first
 $script:OpenSocialUrls = @(
+    # meta apps
     "https://www.facebook.com/",
     "https://www.threads.com/",
     "https://www.tumblr.com/",
+    # Art Socail media apps
     "https://www.deviantart.com/",
+    "https://www.Artstation.com"
+
     "https://x.com/",
     "https://bsky.app/",    
-    "https://www.deviantart.com/",
     "https://www.youtube.com/",
     "https://www.instagram.com/",
     "https://www.reddit.com/",
@@ -123,6 +126,7 @@ function global:twitch {
     Write-Host "Cli api can be found at https://dev.twitch.tv/docs/api/reference  "
     Write-Host "the Developer Console can be found at https://dev.twitch.tv/console"
     Write-Host "followed Streamers can be found at https://www.twitch.tv/directory/following"
+    Write-Host "the Docs can be found https://dev.twitch.tv/docs/"
 }
 
 function global:twitter { 
@@ -200,7 +204,13 @@ function global:kick {
     Start-Process "https://kick.com/"
 }
 
+function Spot {
+    Write-Host "Opening Spotify with api builder"
+    Start-Process "https://open.spotify.com/"
+    Start-Process "https://developer.spotify.com/documentation/web-api"
+    
 
+}
 
 
 

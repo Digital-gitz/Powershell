@@ -1,447 +1,491 @@
 #region Utility Functions
-function Get-Guid { [guid]::NewGuid().ToString() }
+<#
+.SYNOPSIS
+Consolidated utility functions for PowerShell profile
 
-# Initialize Config if it doesn't exist
-if (-not (Get-Variable -Name Config -Scope Global -ErrorAction SilentlyContinue)) {
-    $global:Config = @{}
+.DESCRIPTION
+This file contains all utility functions used throughout the PowerShell profile,
+organized by category for better maintainability.
+#>
+
+#region System Functions
+function Startup {
+    Start-Process "explorer.exe" "shell:startup"
+    Start-Process "ms-settings:startupapps"
 }
 
-# Initialize PSReadLine configuration if it doesn't exist
-if (-not $global:Config.PSReadLine) {
-    $global:Config.PSReadLine = @{
-        ShowToolTips        = $true
-        PredictionSource    = "History"
-        PredictionViewStyle = "ListView"
-        EditMode            = "Windows"
-    }
-}
-
-function Update-ModulePath {
-    [CmdletBinding()]
-    [Alias('modpath')]
-    param (
-        [switch]$Formatted,
-        [switch]$Add,
-        [string]$Path,
-        [switch]$NoColor
-    )
-    
-    if ($Add -and $Path -and (Test-Path $Path)) {
-        $env:PSModulePath = "$Path;$env:PSModulePath"
-    }
-    
-    $paths = $env:PSModulePath -split ';'
-    if ($Formatted) {
-        $paths | ForEach-Object { 
-            $color = if ($NoColor) { $null } else { [System.ConsoleColor]::Cyan }
-            try {
-                Write-Host "- $_" -ForegroundColor $color
-            }
-            catch {
-                Write-Host "- $_"
-            }
-        }
-    }
-    else {
-        $paths
-    }
-}
-
-# Only run Update-ModulePath if we're not in a profile reload
-if (-not $global:IsProfileReload) {
-    Update-ModulePath -NoColor
-}
-
-function Install-Package {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory)]
-        [string]$PackageId,
-        [string]$Scope = "user",
-        [switch]$Force
-    )
-    
-    $packagesToInstall = @($PackageId)
-    
-    while ($true) {
-        try {
-            foreach ($package in $packagesToInstall) {
-                $result = winget list --id $package --exact
-                $action = if ($result -match $package) { "upgrade" } else { "install" }
-                $message = if ($action -eq "upgrade") { "Updating" } else { "Installing" }
-                
-                Write-Host "$message $package..." 
-                winget $action --id $package --scope $Scope --silent --accept-package-agreements --accept-source-agreements
-            }
-        }
-        catch {
-            Write-Error "Failed to $action package $package`: $_"
-            throw
-        }
-
-        $response = Read-Host "Would you like to install another package? (Y/N)"
-        if ($response -ne 'Y') {
-            break
-        }
-
-        $newPackage = Read-Host "Enter the package ID"
-        if (-not [string]::IsNullOrWhiteSpace($newPackage)) {
-            $packagesToInstall += $newPackage
-        }
-    }
-}
-
-#region PSReadLine Configuration
-function Initialize-PSReadLine {
-    if (-not (Get-Module PSReadLine -ErrorAction SilentlyContinue)) { return }
-    
+function sleep {
+    Write-Host "`n💤 Putting computer to sleep..." -ForegroundColor Cyan
     try {
-        $defaultConfig = @{
-            ShowToolTips        = $true
-            PredictionSource    = "History"
-            PredictionViewStyle = "ListView"
-            EditMode            = "Windows"
-        }
-        
-        $config = $global:Config.PSReadLine ?? $defaultConfig
-        
-        # Set basic options
-        if ($config.ShowToolTips) {
-            Set-PSReadLineOption -ShowToolTips
-        }
-        if ($config.PredictionSource) {
-            Set-PSReadLineOption -PredictionSource $config.PredictionSource
-        }
-        if ($config.PredictionViewStyle) {
-            Set-PSReadLineOption -PredictionViewStyle $config.PredictionViewStyle
-        }
-        if ($config.EditMode) {
-            Set-PSReadLineOption -EditMode $config.EditMode
-        }
-        
-        # Set colors if specified
-        if ($config.Colors) {
-            foreach ($color in $config.Colors.GetEnumerator()) {
-                Set-PSReadLineOption -Colors @{$color.Key = $color.Value } -ErrorAction SilentlyContinue
-            }
-        }
-        
-        # Set key bindings if specified
-        if ($config.KeyBindings) {
-            foreach ($binding in $config.KeyBindings.GetEnumerator()) {
-                Set-PSReadLineKeyHandler -Chord $binding.Key -Function $binding.Value -ErrorAction SilentlyContinue
-            }
-        }
-        
-        # Set standard key bindings
-        @{
-            UpArrow   = 'HistorySearchBackward'
-            DownArrow = 'HistorySearchForward'
-            Tab       = 'MenuComplete'
-        }.GetEnumerator() | ForEach-Object {
-            Set-PSReadLineKeyHandler -Key $_.Key -Function $_.Value -ErrorAction SilentlyContinue
-        }
+        rundll32.exe powrprof.dll, SetSuspendState 0, 1, 0
     }
     catch {
-        Write-Warning "Failed to initialize PSReadLine: $_"
+        Write-Host "Failed to put computer to sleep: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
-# Initialize PSReadLine if available
-if (Get-Command Set-PSReadLineOption -ErrorAction SilentlyContinue) {
-    Initialize-PSReadLine
+function restart {
+    Write-Host "`n🔄 Restarting PowerShell session..." -ForegroundColor Cyan
+    Clear-Host
+    . $PROFILE
+    Write-Host "✓ PowerShell session restarted successfully!" -ForegroundColor Green
 }
 
-function Show-Path {
-    $env:PATH -split ';' | ForEach-Object {
-        $color = if (Test-Path $_) { [System.ConsoleColor]::Green } else { [System.ConsoleColor]::Red }
-        Write-Host $_ -ForegroundColor $color
+function programs {
+    Write-Host "`nWMIC Installed Programs:" -ForegroundColor Cyan
+    wmic product get name | Sort-Object
+
+    Write-Host "`nWinget Installed Programs:" -ForegroundColor Cyan
+    winget list | Sort-Object -Property Name
+
+    if (Get-Command choco -ErrorAction SilentlyContinue) {
+        Write-Host "`nChocolatey Installed Programs:" -ForegroundColor Cyan
+        choco list --local-only | Sort-Object
+    }
+
+    if (Get-Command scoop -ErrorAction SilentlyContinue) {
+        Write-Host "`nScoop Installed Programs:" -ForegroundColor Cyan
+        scoop list | Sort-Object
     }
 }
 
-function Show-LLMConfig {
-    Write-Output "/agent config openai-gpt"
-}
-
-function Find-AndInstallModule {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$ModuleName
-    )
-
+function Get-MyIP {
     try {
-        $module = Find-Module -Name $ModuleName
-        if ($module) {
-            Write-Host "Found module: $($module.Name) - $($module.Description)"
-            if ((Read-Host "Do you want to install this module? (Y/N)") -eq 'Y') {
-                Install-Module -Name $ModuleName -Force
-                Write-Host "Module $ModuleName installed successfully." -ForegroundColor Green
-            }
+        Write-Host "Fetching your IP information..." -ForegroundColor Cyan
+        $response = Invoke-RestMethod -Uri $Config.URLs.IPInfo -Method Get
+        Write-Host "IP Information:" -ForegroundColor Green
+        Write-Host "IP: $($response.ip)" -ForegroundColor Gray
+        Write-Host "City: $($response.city)" -ForegroundColor Gray
+        Write-Host "Region: $($response.region)" -ForegroundColor Gray
+        Write-Host "Country: $($response.country)" -ForegroundColor Gray
+        Write-Host "Location: $($response.loc)" -ForegroundColor Gray
+        Write-Host "Organization: $($response.org)" -ForegroundColor Gray
+        Write-Host "Timezone: $($response.timezone)" -ForegroundColor Gray
+    }
+    catch {
+        Write-Host "Error fetching IP information: $($_.Exception.Message)" -ForegroundColor Red
+    }
+}
+
+function Get-BIOSInfo {
+    try {
+        $scriptPath = Join-Path $PSScriptRoot "Scripts\Core\System\check-bios.ps1"
+        
+        if (Test-Path $scriptPath) {
+            Write-Host "Checking BIOS information..." -ForegroundColor Cyan
+            & $scriptPath
         }
         else {
-            Write-Host "Module $ModuleName not found." -ForegroundColor Red
+            Write-Host "Error: BIOS check script not found at: $scriptPath" -ForegroundColor Red
         }
     }
     catch {
-        Write-Error "Failed to process module $ModuleName`: $_"
+        Write-Host "Error running BIOS check: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
 
-function Import-EnvironmentSpecificConfig {
+function Show-NyanCat {
+    try {
+        Write-Host "Fetching Nyan Cat animation..." -ForegroundColor Cyan
+        
+        if (-not (Get-Command curl -ErrorAction SilentlyContinue)) {
+            Write-Host "Error: curl is not available. Please install curl first." -ForegroundColor Red
+            return
+        }
+        
+        if (-not (Get-Command lolcat -ErrorAction SilentlyContinue)) {
+            Write-Host "Error: lolcat is not available. Please install lolcat first." -ForegroundColor Red
+            Write-Host "You can install it via: gem install lolcat" -ForegroundColor Yellow
+            return
+        }
+        
+        curl -s ascii.live/nyan | lolcat
+        
+        Write-Host "Nyan Cat animation completed!" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error showing Nyan Cat: $($_.Exception.Message)" -ForegroundColor Red
+    }
+}
+#endregion System Functions
+
+#region Navigation Functions
+function global:ddump {
+    try {
+        $path = $Config.Paths.DGTLHubDump
+        if (Test-Path $path) {
+            Set-Location -Path $path -ErrorAction Stop
+            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
+        }
+        else {
+            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
+        }
+    }
+    catch {
+        Write-Host "Error changing directory: $_" -ForegroundColor Red
+    }
+
+    try {
+        $null = Invoke-WebRequest -Uri $Config.URLs.GitHub -UseBasicParsing -TimeoutSec 5
+        Start-Process $Config.URLs.DGTLHubDumpRepo
+        Write-Host "Successfully Opened $($Config.URLs.DGTLHubDumpRepo)"
+    }
+    catch {
+        Write-Warning "Could not connect to GitHub. Please check your internet connection."
+    }
+}
+
+function global:ghub {
+    try {
+        $path = $Config.Paths.GitHub
+        if (Test-Path $path) {
+            Set-Location -Path $path -ErrorAction Stop
+            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
+            
+            if (Get-Command gh -ErrorAction SilentlyContinue) {
+                Write-Host "`nGitHub Repositories:" -ForegroundColor Cyan
+                Write-Host "─────────────────────────────" -ForegroundColor DarkGray
+                gh repo list --limit 100 | ForEach-Object {
+                    $repo = $_ -split '\s+'
+                    Write-Host ("{0,-40} {1}" -f $repo[0], $repo[1]) -ForegroundColor Gray
+                }
+            }
+            else {
+                Write-Host "GitHub CLI (gh) is not installed. Please install it to list repositories." -ForegroundColor Yellow
+                Write-Host "Installation command: winget install GitHub.cli" -ForegroundColor Yellow
+            }
+            
+            Write-Host "`nContents of GitHub directory:" -ForegroundColor Cyan
+            Get-ChildItem -Path $path | Format-Table Name, LastWriteTime, Length -AutoSize
+        }
+        else {
+            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
+        }
+    }
+    catch {
+        Write-Host "Error changing directory: $_" -ForegroundColor Red
+    }
+
+    Start-Process $Config.URLs.GitHub
+}
+
+function Get-DirectoryFiles {
+    param([string]$Path = ".")
+    
+    if (-not (Test-Path $Path -PathType Container)) {
+        Write-Error "Directory '$Path' does not exist or is not a directory."
+        return
+    }
+    
+    Get-ChildItem -Path $Path -File | ForEach-Object {
+        Write-Host $_.Name
+    }
+}
+#endregion Navigation Functions
+
+#region Development Functions
+function global:edit_powershell {
+    Write-Host "Opening PowerShell Profile..." -ForegroundColor Cyan
+    
+    $profilePath = $PROFILE
+    $profileDir = Split-Path $profilePath -Parent
+    
+    try {
+        $null = Invoke-WebRequest -Uri $Config.URLs.GitHub -UseBasicParsing -TimeoutSec 5
+        Start-Process $Config.URLs.PowerShellRepo
+    }
+    catch {
+        Write-Warning "Could not connect to GitHub. Please check your internet connection."
+    }
+
+    if (Test-Path $profileDir) {
+        Set-Location $profileDir
+    }
+
+    if (Test-Path (Join-Path $profileDir ".git")) {
+        Write-Host "`nChecking Git Status..." -ForegroundColor Cyan
+        Set-Location $profileDir
+        git status
+
+        $changes = git status --porcelain
+        if ($changes) {
+            Write-Host "`nFound uncommitted changes:" -ForegroundColor Yellow
+            $changes | ForEach-Object { Write-Host "  $_" -ForegroundColor Gray }
+            Write-Host "`nChanges:" -ForegroundColor Cyan
+            git diff
+        }
+        else {
+            Write-Host "No uncommitted changes found." -ForegroundColor Green
+        }
+
+        Write-Host "`nRecent Commits:" -ForegroundColor Cyan
+        git log --oneline -n 5
+    }
+}
+
+function global:commit {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory = $false)]
-        [string]$ConfigDir = (Join-Path $PSScriptRoot "Environments")
-    )
-    
-    $envInfo = @{
-        ComputerName = $env:COMPUTERNAME
-        UserName     = $env:USERNAME
-        Domain       = $env:USERDOMAIN
-        OSVersion    = [System.Environment]::OSVersion.Version.Major
-    }
-    
-    $configFiles = @(
-        "$ConfigDir\computer-$($envInfo.ComputerName).psd1",
-        "$ConfigDir\user-$($envInfo.UserName).psd1",
-        "$ConfigDir\domain-$($envInfo.Domain).psd1",
-        "$ConfigDir\os-win$($envInfo.OSVersion).psd1"
-    )
-    
-    $loadedConfigs = @()
-    
-    foreach ($file in $configFiles) {
-        if (Test-Path $file) {
-            try {
-                $envConfig = Import-PowerShellDataFile -Path $file -ErrorAction Stop
-                
-                foreach ($key in $envConfig.Keys) {
-                    if ($Config.ContainsKey($key) -and $Config[$key] -is [hashtable] -and $envConfig[$key] -is [hashtable]) {
-                        $Config[$key] = @($Config[$key].Clone(), $envConfig[$key]) | Merge-Hashtables
-                    }
-                    else {
-                        $Config[$key] = $envConfig[$key]
-                    }
-                }
-                
-                $loadedConfigs += (Split-Path -Path $file -Leaf)
-                Write-Host "Loaded environment config: $(Split-Path -Path $file -Leaf)" -ForegroundColor Green
-            }
-            catch {
-                Write-Warning "Failed to load environment config $file`: $_"
-            }
-        }
-    }
-    
-    if (-not (Test-Path $ConfigDir)) {
-        New-Item -Path $ConfigDir -ItemType Directory -Force | Out-Null
-        Write-Host "Created environments directory: $ConfigDir" -ForegroundColor Green
-    }
-    
-    return $loadedConfigs
-}
-
-function New-Script {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$Name
+        [string]$Message = "Update",
+        
+        [Parameter(Mandatory = $false)]
+        [switch]$Push,
+        
+        [Parameter(Mandatory = $false)]
+        [switch]$ShowStatus
     )
 
-    try {
-        $scriptPath = Join-Path $CommonPaths.Scripts "$Name.ps1"
-        if (!(Test-Path $scriptPath)) {
-            $content = @"
-# $Name
-# Created on $(Get-Date -Format 'yyyy-MM-dd')
+    Write-ProfileLog "Starting git commit process..." -Level 'Info' -Source 'Git'
 
-"@
-            New-Item -Path $scriptPath -ItemType File -Value $content | Out-Null
-        }
-        code $scriptPath
+    if ($ShowStatus) {
+        git status
     }
-    catch {
-        Write-Error "Failed to create script: $_"
+
+    git add .
+    git commit -m $Message
+
+    if ($Push) {
+        git push
     }
+
+    Write-ProfileLog "Commit process completed" -Level 'Success' -Source 'Git'
 }
 
-function Get-PSVersion {
-    $PSVersionTable.PSVersion
-}
-
-function Get-TimeInfo {
-    [CmdletBinding()]
-    param()
-    
-    $currentDate = Get-Date
-    $timeZone = [System.TimeZoneInfo]::Local
-    
-    [PSCustomObject]@{
-        Year          = $currentDate.Year
-        Month         = $currentDate.ToString("MMMM")
-        Day           = $currentDate.Day
-        DayOfWeek     = $currentDate.DayOfWeek
-        Hour          = $currentDate.Hour
-        Minute        = $currentDate.Minute
-        Second        = $currentDate.Second
-        TimeZone      = $timeZone.DisplayName
-        UnixTimestamp = [int64](([datetime]::UtcNow) - (get-date "1/1/1970")).TotalSeconds
-    }
-}
-
-function Search-History {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$Keyword
-    )
-
-    Get-History | Where-Object { $_.CommandLine -like "*$Keyword*" } | 
-    Format-Table Id, CommandLine -AutoSize
-}
-
-function Backup-Profile {
-    [CmdletBinding()]
+function Search-GoPackages {
     param(
-        [string]$BackupPath = (Join-Path $CommonPaths.PowerShell "profile_backup_$(Get-Date -Format 'yyyyMMddHHmmss').ps1")
+        [Parameter(Mandatory = $true)]
+        [string]$SearchTerm,
+        
+        [switch]$OpenInBrowser
     )
     
     try {
-        Copy-Item -Path $PROFILE -Destination $BackupPath
-        Write-Host "Profile backed up to: $BackupPath" -ForegroundColor Green
+        Write-Host "Searching Go packages for: $SearchTerm" -ForegroundColor Cyan
+        
+        $searchUrl = "$($Config.URLs.GoPackages)?q=$([System.Web.HttpUtility]::UrlEncode($SearchTerm))"
+        
+        if ($OpenInBrowser) {
+            Write-Host "Opening search results in browser..." -ForegroundColor Green
+            Start-Process $searchUrl
+        }
+        else {
+            Write-Host "Search URL: $searchUrl" -ForegroundColor Yellow
+            Write-Host "Use -OpenInBrowser switch to open results directly in your browser" -ForegroundColor Gray
+        }
+        
+        Write-Host "Search completed!" -ForegroundColor Green
     }
     catch {
-        Write-Error "Failed to backup profile: $_"
+        Write-Host "Error searching Go packages: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
+#endregion Development Functions
 
-function Update-Profile {
-    [CmdletBinding()]
-    param()
+#region Web and URL Functions
+function New-QRCode {
+    param([Parameter(Mandatory = $true)][string]$Url)
     
     try {
-        . $PROFILE
-        Write-Host "PowerShell profile has been reloaded successfully." -ForegroundColor Green
+        if ($Url -notmatch '^https?://') {
+            Write-Host "Error: Please provide a valid URL starting with http:// or https://" -ForegroundColor Red
+            return
+        }
+        
+        $qrCodeUrl = "$($Config.URLs.QRCode)/$Url"
+        
+        Write-Host "Generating QR code for: $Url" -ForegroundColor Cyan
+        Write-Host "QR Code URL: $qrCodeUrl" -ForegroundColor Green
+        
+        Start-Process $qrCodeUrl
+        
+        Write-Host "QR code opened in browser successfully!" -ForegroundColor Green
     }
     catch {
-        Write-Error "Failed to reload profile: $_"
+        Write-Host "Error generating QR code: $($_.Exception.Message)" -ForegroundColor Red
     }
 }
+#endregion Web and URL Functions
 
-function Get-RecentFiles {
-    [CmdletBinding()]
-    param (
-        [string]$Path = ".",
-        [int]$LastDays = 1
+#region Application Functions
+function TwitchOverlay {
+    $updatePath = $Config.Applications.TwitchOverlay.Update
+    $appPath = $Config.Applications.TwitchOverlay.App
+
+    Write-Host "Starting Twitch Chat Overlay update..." -ForegroundColor Cyan
+    Start-Process -FilePath $updatePath -Wait
+
+    Write-Host "Launching Twitch Chat Overlay..." -ForegroundColor Green
+    Start-Process -FilePath $appPath
+}
+#endregion Application Functions
+
+#region Error Handling and Logging
+function Write-ProfileLog {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Message,
+        
+        [Parameter(Mandatory = $false)]
+        [ValidateSet('Info', 'Warning', 'Error', 'Success')]
+        [string]$Level = 'Info',
+        
+        [Parameter(Mandatory = $false)]
+        [string]$Source = 'Profile'
     )
     
-    Get-ChildItem -Path $Path -Recurse |
-    Where-Object { $_.LastWriteTime -gt (Get-Date).AddDays(-$LastDays) } |
-    Sort-Object LastWriteTime -Descending |
-    Select-Object -First 10
+    if (-not $Config.Logging.Enabled) { return }
+    
+    $timestamp = if ($Config.Logging.IncludeTimestamp) { 
+        Get-Date -Format "yyyy-MM-dd HH:mm:ss" 
+    }
+    else { "" }
+    
+    $sourceInfo = if ($Config.Logging.IncludeSource) { "[$Source]" } else { "" }
+    
+    $color = switch ($Level) {
+        'Info' { 'Cyan' }
+        'Warning' { 'Yellow' }
+        'Error' { 'Red' }
+        'Success' { 'Green' }
+    }
+    
+    $logMessage = if ($timestamp) { "[$timestamp] $sourceInfo [$Level] $Message" } else { "$sourceInfo [$Level] $Message" }
+    Write-Host $logMessage -ForegroundColor $color
 }
 
-function Edit-HostsFile {
-    $hostsPath = "$env:SystemRoot\System32\drivers\etc\hosts"
-    if (Test-Path $hostsPath) {
-        Start-Process notepad -ArgumentList $hostsPath -Verb RunAs
+function Get-CommandSuggestion {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ErrorMessage,
+        
+        [Parameter(Mandatory = $false)]
+        [switch]$ShowHelp
+    )
+
+    $commandName = if ($ErrorMessage -match "The term '([^']+)'") {
+        $matches[1]
     }
     else {
-        throw "Hosts file not found at $hostsPath"
+        return
     }
-}
 
-function Get-SystemInfo {
-    [CmdletBinding()]
-    param()
-    
-    try {
-        $computerInfo = Get-ComputerInfo
-        $processor = Get-WmiObject Win32_Processor
-        $memory = Get-WmiObject Win32_OperatingSystem
-        
+    $allCommands = Get-Command -All -ErrorAction SilentlyContinue | 
+    Where-Object { $_.Name -notlike "Microsoft.PowerShell*" } |
+    Select-Object -First $Config.ErrorHandling.MaxCommandsToSearch
+
+    $suggestions = $allCommands | ForEach-Object {
+        $distance = Get-LevenshteinDistance -String1 $commandName -String2 $_.Name
         [PSCustomObject]@{
-            OS                = "$($computerInfo.OsName) $($computerInfo.OsArchitecture) $($computerInfo.OsVersion)"
-            PowerShellVersion = $PSVersionTable.PSVersion
-            Username          = $env:USERNAME
-            ComputerName      = $env:COMPUTERNAME
-            Processor         = $processor.Name
-            Memory            = [math]::Round($memory.TotalVisibleMemorySize / 1MB, 2)
-            FreeMemory        = [math]::Round($memory.FreePhysicalMemory / 1MB, 2)
-            LastBootTime      = $computerInfo.OsLastBootUpTime
-            HomeDrive         = $env:HOMEDRIVE
-            HomePath          = $env:HOMEPATH
+            Name     = $_.Name
+            Distance = $distance
+            Type     = $_.CommandType
         }
-    }
-    catch {
-        Write-Error "Failed to get system info: $_"
-        throw
+    } | Where-Object { $_.Distance -le $Config.ErrorHandling.LevenshteinThreshold } | 
+    Sort-Object Distance | 
+    Select-Object -First $Config.ErrorHandling.MaxCommandSuggestions
+
+    if ($suggestions) {
+        Write-Host "`nDid you mean one of these commands?" -ForegroundColor Yellow
+        $suggestions | ForEach-Object {
+            Write-Host "  $($_.Name) ($($_.Type))" -ForegroundColor Cyan
+            
+            if ($ShowHelp) {
+                try {
+                    $helpInfo = Get-Help $_.Name -ErrorAction SilentlyContinue -Timeout 1
+                    if ($helpInfo.Synopsis) {
+                        Write-Host "    $($helpInfo.Synopsis)" -ForegroundColor DarkGray
+                    }
+                }
+                catch { }
+            }
+        }
+        Write-Host ""
     }
 }
 
-function Get-Weather {
-    [CmdletBinding()]
+$script:levenshteinCache = @{}
+function Get-LevenshteinDistance {
     param(
-        [string]$Location = "",
-        [ValidateSet("1", "2", "3")]
-        [string]$Format = "3"
+        [Parameter(Mandatory = $true)]
+        [string]$String1,
+        
+        [Parameter(Mandatory = $true)]
+        [string]$String2
     )
-    
-    try {
-        $WeatherUrl = "http://wttr.in/${Location}?format=$Format"
-        Invoke-RestMethod -Uri $WeatherUrl
+
+    $cacheKey = "$String1|$String2"
+    if ($script:levenshteinCache.ContainsKey($cacheKey)) {
+        return $script:levenshteinCache[$cacheKey]
     }
-    catch {
-        Write-Error "Unable to fetch weather information: $_"
-        throw
+
+    $n = $String1.Length
+    $m = $String2.Length
+    $d = New-Object 'int[,]' ($n + 1), ($m + 1)
+
+    for ($i = 0; $i -le $n; $i++) {
+        $d[$i, 0] = $i
     }
+    for ($j = 0; $j -le $m; $j++) {
+        $d[0, $j] = $j
+    }
+
+    for ($i = 1; $i -le $n; $i++) {
+        for ($j = 1; $j -le $m; $j++) {
+            if ($String1[$i - 1] -eq $String2[$j - 1]) {
+                $d[$i, $j] = $d[($i - 1), ($j - 1)]
+            }
+            else {
+                $d[$i, $j] = [Math]::Min(
+                    [Math]::Min(
+                        $d[($i - 1), $j] + 1,
+                        $d[$i, ($j - 1)] + 1
+                    ),
+                    $d[($i - 1), ($j - 1)] + 1
+                )
+            }
+        }
+    }
+
+    $result = $d[$n, $m]
+    $script:levenshteinCache[$cacheKey] = $result
+    return $result
 }
 
-function Get-FileHash {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-        [string]$Path,
-        [ValidateSet("MD5", "SHA1", "SHA256", "SHA384", "SHA512")]
-        [string]$Algorithm = "SHA256"
-    )
-    
-    process {
-        try {
-            $file = Get-Item $Path
-            Write-Progress -Activity "Calculating $Algorithm hash" -Status "Processing $($file.Name)"
-            $hash = Microsoft.PowerShell.Utility\Get-FileHash -Path $Path -Algorithm $Algorithm
-            Write-Progress -Activity "Calculating $Algorithm hash" -Completed
-            return $hash
-        }
-        catch {
-            Write-Error "Failed to get file hash for $Path`: $_"
-            throw
-        }
-    }
-}
-
-# Helper function to merge hashtables
-function Merge-Hashtables {
+function Search-CommandHistory {
     param(
-        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-        [hashtable[]]$Hashtables
+        [Parameter(Mandatory = $false)]
+        [string]$Pattern,
+        
+        [Parameter(Mandatory = $false)]
+        [int]$Count = 10
     )
     
-    $merged = @{}
-    foreach ($ht in $Hashtables) {
-        foreach ($key in $ht.Keys) {
-            $merged[$key] = $ht[$key]
-        }
+    $history = Get-Content (Get-PSReadLineOption).HistorySavePath -ErrorAction SilentlyContinue
+    if ($Pattern) {
+        $history = $history | Where-Object { $_ -like "*$Pattern*" }
     }
-    return $merged
+    $history | Select-Object -Last $Count | ForEach-Object {
+        Write-Host $_ -ForegroundColor Cyan
+    }
 }
 
-function Get-MoonPhaseInfo {
-    $modulePath = Join-Path $PSScriptRoot ".." "Utility" "check-moon-phase.psd1"
-    if (-not (Get-Module -Name "check-moon-phase")) {
-        Import-Module $modulePath -Force
+$ExecutionContext.InvokeCommand.CommandNotFoundAction = {
+    param($CommandName, $CommandLookupEventArgs)
+    $job = Start-Job -ScriptBlock {
+        param($cmdName)
+        Get-CommandSuggestion -ErrorMessage "The term '$cmdName' is not recognized" -ShowHelp
+    } -ArgumentList $CommandName
+    
+    $job | Wait-Job -Timeout $Config.ErrorHandling.CommandSuggestionTimeout | Out-Null
+    if ($job.State -eq 'Running') {
+        Stop-Job $job
+        Write-Host "`nCommand suggestion timed out. Try using 'h' to search command history." -ForegroundColor Yellow
     }
-    Get-MoonPhase
+    Remove-Job $job -Force
 }
+
+Set-Alias -Name h -Value Search-CommandHistory -Scope Global
+#endregion Error Handling and Logging
+
+Write-Host "Utility functions loaded successfully" -ForegroundColor Green

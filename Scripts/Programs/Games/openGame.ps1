@@ -1,4 +1,4 @@
-function Start-DoomEternal {
+function global:Start-DoomEternal {
     if ((Get-Process "Doom Eternal" -ea SilentlyContinue) -eq $null) {
         Write-Host "Doom Eternal is not running. Starting it up!"
     }

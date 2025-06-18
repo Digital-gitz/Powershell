@@ -139,5 +139,6 @@ function Get-GitHubRepoclone {
     
 #  $repoUrl = "
 
-#I need to add a cursor integration to the github repo.
-#https://www.cursor.com/dashboard?tab=integrations
+#TODO: need to add url like to gh cli and other api
+
+

@@ -1,107 +1,172 @@
 #region Configuration
-$configPath = Join-Path $PSScriptRoot "..\..\config.psd1"
+<#
+.SYNOPSIS
+Centralized configuration for PowerShell profile
 
-# Default configuration
-$defaultConfig = @{
-    CommonPaths     = @{
-        PowerShell = $PSScriptRoot
-        Scripts    = Join-Path $PSScriptRoot ".."
-        Documents  = [Environment]::GetFolderPath('MyDocuments')
+.DESCRIPTION
+This file contains all configuration settings for the PowerShell profile,
+including paths, module settings, and script categories.
+#>
+
+# Core configuration object
+$script:Config = @{
+    Version          = "5.0"
+    Author           = "Svyatoslav Oleg Russkiy"
+    
+    # Paths
+    Paths            = @{
+        Scripts     = Join-Path $PSScriptRoot "Scripts"
+        Core        = Join-Path $PSScriptRoot "Scripts\Core"
+        Documents   = [Environment]::GetFolderPath('MyDocuments')
+        PowerShell  = $PSScriptRoot
+        GitHub      = Join-Path $env:USERPROFILE "Documents\GitHub"
+        DGTLHubDump = "C:\Users\Digital_Russkiy\Documents\DGTLHubDump"
     }
-    RequiredModules = @(
-        @{Name = 'Terminal-Icons'; Purpose = 'Directory and file icons'; Scope = 'CurrentUser' }
-        @{Name = 'PSReadLine'; Purpose = 'Enhanced console experience'; Scope = 'CurrentUser' }
-        @{Name = 'posh-git'; Purpose = 'Git integration for PowerShell'; Scope = 'CurrentUser' }
+    
+    # Environment paths to add
+    EnvironmentPaths = @(
+        "C:\Users\Digital_Russkiy\AppData\Local\Microsoft\PowerToys\PowerToys Run",
+        "$HOME\.local\bin",
+        "$HOME\AppData\Local\Programs\Microsoft VS Code\bin",
+        "C:\Users\Digital_Russkiy\AppData\Local\Programs\lua5.1"
     )
-    PSReadLine      = @{
+    
+    # Module configuration
+    Modules          = @{
+        Essential = @(
+            @{Name = 'PSReadLine'; Purpose = 'Enhanced console experience' }
+            @{Name = 'posh-git'; Purpose = 'Git integration' }
+        )
+        Optional  = @(
+            'Terminal-Icons'
+        )
+    }
+    
+    # PSReadLine configuration
+    PSReadLine       = @{
         ShowToolTips        = $true
         PredictionSource    = "History"
         PredictionViewStyle = "ListView"
         EditMode            = "Windows"
-        HistorySavePath     = Join-Path $env:APPDATA "PowerShell\history"
         HistorySaveStyle    = "SaveIncrementally"
-    }
-}
-
-# Try to load configuration file
-$config = try {
-    if (Test-Path $configPath) {
-        $configData = Import-PowerShellDataFile -Path $configPath -ErrorAction Stop
-        if ($configData -isnot [hashtable]) { throw "Configuration must be a hashtable" }
-        
-        # Merge with default config to ensure all required keys exist
-        $mergedConfig = $defaultConfig.Clone()
-        foreach ($key in $configData.Keys) {
-            if ($configData[$key] -is [hashtable]) {
-                foreach ($subKey in $configData[$key].Keys) {
-                    $mergedConfig[$key][$subKey] = $configData[$key][$subKey]
-                }
-            }
-            else {
-                $mergedConfig[$key] = $configData[$key]
-            }
-        }
-        $mergedConfig
-    }
-    else {
-        $defaultConfig
-    }
-}
-catch {
-    Write-Host "Using default configuration" -ForegroundColor Yellow
-    $defaultConfig
-}
-
-# Ensure PSReadLine settings are valid
-if (-not $config.PSReadLine) {
-    $config.PSReadLine = $defaultConfig.PSReadLine
-}
-else {
-    # Validate and set default values for each PSReadLine setting
-    $config.PSReadLine.ShowToolTips = if ($config.PSReadLine.ShowToolTips -eq $null) { $true } else { $config.PSReadLine.ShowToolTips }
-    $config.PSReadLine.PredictionSource = if ($config.PSReadLine.PredictionSource -notin @("None", "History", "Plugin", "HistoryAndPlugin")) { "History" } else { $config.PSReadLine.PredictionSource }
-    $config.PSReadLine.PredictionViewStyle = if ($config.PSReadLine.PredictionViewStyle -notin @("InlineView", "ListView")) { "ListView" } else { $config.PSReadLine.PredictionViewStyle }
-    $config.PSReadLine.EditMode = if ($config.PSReadLine.EditMode -notin @("Windows", "Emacs", "Vi")) { "Windows" } else { $config.PSReadLine.EditMode }
-    $config.PSReadLine.HistorySavePath = if ([string]::IsNullOrEmpty($config.PSReadLine.HistorySavePath)) { $defaultConfig.PSReadLine.HistorySavePath } else { $config.PSReadLine.HistorySavePath }
-    $config.PSReadLine.HistorySaveStyle = if ($config.PSReadLine.HistorySaveStyle -notin @("SaveIncrementally", "SaveAtExit", "SaveNothing")) { "SaveIncrementally" } else { $config.PSReadLine.HistorySaveStyle }
-}
-
-# Initialize common paths and create necessary directories
-$commonPaths = @{}
-foreach ($key in $config.CommonPaths.Keys) {
-    $pathValue = $ExecutionContext.InvokeCommand.ExpandString($config.CommonPaths[$key])
-    $commonPaths[$key] = $pathValue
-    if (-not (Test-Path $pathValue)) { 
-        try {
-            New-Item -ItemType Directory -Path $pathValue -Force | Out-Null
-        }
-        catch {
-            Write-Host "Failed to create directory $pathValue" -ForegroundColor Red
+        HistorySavePath     = Join-Path $env:USERPROFILE "Documents\PowerShell\PSReadLine\ConsoleHost_history.txt"
+        Colors              = @{
+            Command          = 'Cyan'
+            Parameter        = 'DarkCyan'
+            InlinePrediction = 'DarkGray'
+            Operator         = 'DarkYellow'
+            String           = 'Green'
+            Number           = 'DarkGreen'
+            Member           = 'DarkYellow'
+            Type             = 'DarkBlue'
+            Variable         = 'DarkMagenta'
+            Comment          = 'DarkGray'
         }
     }
-}
-
-# Create PSReadLine history directory with proper permissions
-$historyPath = $config.PSReadLine.HistorySavePath
-if (-not (Test-Path $historyPath)) {
-    try {
-        New-Item -ItemType Directory -Path $historyPath -Force | Out-Null
-        $acl = Get-Acl $historyPath
-        $acl.SetAccessRuleProtection($false, $true)
-        $rule = New-Object System.Security.AccessControl.FileSystemAccessRule($env:USERNAME, "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow")
-        $acl.SetAccessRule($rule)
-        Set-Acl $historyPath $acl
+    
+    # Script categories and loading order
+    ScriptCategories = @{
+        Core           = @("Aliases.ps1")
+        FileManagement = @("bringVsCodeForeground.ps1")
+        Development    = @("Notes-Function.ps1")
+        UI             = @("winfetch-pro.ps1", "Stock-Market-UI.ps1")
+        Networking     = @("NetworkTools.ps1")
+        URL            = @("LLM-Funk.ps1", "Shopping-Funk.ps1", "Social-Funk.ps1")
+        Applications   = @("App-Functions.ps1")
+        Programs       = @("Aseprite.ps1", "edge.ps1", "windows.ps1", "Games/*.ps1")
     }
-    catch {
-        Write-Host "Failed to create PSReadLine history directory" -ForegroundColor Red
+    
+    LoadOrder        = @("Core", "UI", "Networking", "URL", "Development", "FileManagement", "Applications", "Programs")
+    
+    # Application paths
+    Applications     = @{
+        Aseprite      = "C:\Program Files (x86)\Steam\steamapps\common\Aseprite\Aseprite.exe"
+        Edge          = "C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
+        TwitchOverlay = @{
+            Update = "C:\Users\Digital_Russkiy\AppData\Local\TransparentTwitchChatOverlay\Update.exe"
+            App    = "C:\Users\Digital_Russkiy\AppData\Local\TransparentTwitchChatOverlay\TransparentTwitchChatWPF.exe"
+        }
+    }
+    
+    # URLs
+    URLs             = @{
+        GitHub          = "https://github.com"
+        PowerShellRepo  = "https://github.com/Digital-gitz/PowerShell"
+        DGTLHubDumpRepo = "https://github.com/Digital-gitz/DGTLHubDump"
+        IPInfo          = "https://ipinfo.io"
+        QRCode          = "https://qrenco.de"
+        GoPackages      = "https://pkg.go.dev/search"
+    }
+    
+    # Error handling
+    ErrorHandling    = @{
+        CommandSuggestionTimeout = 3
+        MaxCommandSuggestions    = 5
+        LevenshteinThreshold     = 3
+        MaxCommandsToSearch      = 100
+    }
+    
+    # Logging
+    Logging          = @{
+        Enabled          = $true
+        Level            = "Info" # Info, Warning, Error, Success
+        IncludeTimestamp = $true
+        IncludeSource    = $true
     }
 }
 
-function Get-Configuration {
-    return $config
-}
-
+# Helper functions
 function Get-CommonPaths {
-    return $commonPaths
+    return $Config.Paths
 }
+
+function Get-Config {
+    return $Config
+}
+
+function Set-Config {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Path,
+        
+        [Parameter(Mandatory = $true)]
+        $Value
+    )
+    
+    $pathParts = $Path -split '\.'
+    $current = $Config
+    
+    for ($i = 0; $i -lt $pathParts.Count - 1; $i++) {
+        $current = $current[$pathParts[$i]]
+    }
+    
+    $current[$pathParts[-1]] = $Value
+}
+
+function Get-ConfigValue {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Path
+    )
+    
+    $pathParts = $Path -split '\.'
+    $current = $Config
+    
+    foreach ($part in $pathParts) {
+        if ($current.ContainsKey($part)) {
+            $current = $current[$part]
+        }
+        else {
+            return $null
+        }
+    }
+    
+    return $current
+}
+
+# Export configuration
+$Global:Config = $Config
+$Global:CommonPaths = $Config.Paths
+
+Write-Host "Configuration loaded successfully" -ForegroundColor Green
 #endregion Configuration 

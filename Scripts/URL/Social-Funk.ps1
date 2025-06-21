@@ -1,45 +1,128 @@
-Write-Host "Loading Social-Funk.ps1..." -ForegroundColor Green
+#region Social Media Functions
+<#
+.SYNOPSIS
+Social media URL management and opening functions
 
-if (-not (Get-Command -Name Write-Log -ErrorAction SilentlyContinue)) {
-    function Write-Log {
-        param($Message, $Level = 'Info')
-        Write-Host "[Social-Funk.ps1] [$Level] $Message" -ForegroundColor Yellow
+.DESCRIPTION
+This script provides functions to open various social media platforms
+and manage social media URLs efficiently with parallel processing.
+
+.NOTES
+Author: Svyatoslav Oleg Russkiy
+Version: 2.0 (Optimized)
+#>
+
+# Initialize logging if not available
+if (-not (Get-Command -Name Write-ProfileLog -ErrorAction SilentlyContinue)) {
+    function Write-ProfileLog {
+        param($Message, $Level = 'Info', $Source = 'Social-Funk')
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        $color = switch ($Level) {
+            'Info' { 'Cyan' }
+            'Warning' { 'Yellow' }
+            'Error' { 'Red' }
+            'Success' { 'Green' }
+        }
+        Write-Host "[$timestamp] [$Source] [$Level] $Message" -ForegroundColor $color
     }
 }
-Write-Log "Defining Open-SocialChat function..." -Level 'Info'
 
-# Define URLs first
-$script:OpenSocialUrls = @(
-    # meta apps
-    "https://www.facebook.com/",
-    "https://www.threads.com/",
-    "https://www.tumblr.com/",
-    # Art Socail media apps
-    "https://www.deviantart.com/",
-    "https://www.Artstation.com"
+Write-ProfileLog "Loading Social Media Functions..." -Level 'Info'
 
-    "https://x.com/",
-    "https://bsky.app/",    
-    "https://www.youtube.com/",
-    "https://www.instagram.com/",
-    "https://www.reddit.com/",
-    "https://www.linkedin.com/",
-    "https://www.tiktok.com/",
-    "https://www.discord.com/",
-    "https://kick.com/",
-    "https://www.pinterest.com/",
-    "https://www.twitch.tv/",
-    "https://rumble.com/"
-)
+# Social media URL definitions with categories
+$script:SocialMediaUrls = @{
+    Meta          = @{
+        Facebook  = "https://www.facebook.com/"
+        Threads   = "https://www.threads.com/"
+        Instagram = "https://www.instagram.com/"
+    }
+    Art           = @{
+        DeviantArt = "https://www.deviantart.com/"
+        ArtStation = "https://www.artstation.com/"
+        Pinterest  = "https://www.pinterest.com/"
+    }
+    Microblogging = @{
+        Twitter  = "https://x.com/"
+        Bluesky  = "https://bsky.app/"
+        Tumblr   = "https://www.tumblr.com/"
+        Telegram = "https://web.telegram.org/"
+    }
+    Video         = @{
+        YouTube = "https://www.youtube.com/"
+        TikTok  = "https://www.tiktok.com/"
+        Twitch  = "https://www.twitch.tv/"
+        Kick    = "https://kick.com/"
+        Rumble  = "https://rumble.com/"
+    }
+    Professional  = @{
+        LinkedIn = "https://www.linkedin.com/"
+        Reddit   = "https://www.reddit.com/"
+    }
+    Communication = @{
+        Discord = "https://www.discord.com/"
+        tiktok  = "https://www.tiktok.com/"
+    }
+    Music         = @{
+        Spotify    = "https://open.spotify.com/"
+        SpotifyAPI = "https://developer.spotify.com/documentation/web-api"
+    }
+}
 
-# Define the function in global scope
+# Flatten URLs for the Open-SocialChat function
+$script:AllSocialUrls = $script:SocialMediaUrls.Values | ForEach-Object { $_.Values } | Where-Object { $_ -ne $null }
+
+#region Core Functions
+
 function global:Open-SocialChat {
+    <#
+    .SYNOPSIS
+    Opens all social media services in parallel
+
+    .DESCRIPTION
+    Opens all configured social media URLs using parallel processing for better performance.
+    Supports progress display and error handling.
+
+    .PARAMETER ShowProgress
+    Shows a progress bar during URL opening
+
+    .PARAMETER Category
+    Opens only URLs from a specific category (Meta, Art, Microblogging, Video, Professional, Communication, Music)
+
+    .EXAMPLE
+    Open-SocialChat
+    Opens all social media services
+
+    .EXAMPLE
+    Open-SocialChat -ShowProgress
+    Opens all services with progress display
+
+    .EXAMPLE
+    Open-SocialChat -Category Video
+    Opens only video platforms (YouTube, TikTok, Twitch, etc.)
+    #>
     [CmdletBinding()]
     param(
-        [switch]$ShowProgress
+        [switch]$ShowProgress,
+        [ValidateSet('Meta', 'Art', 'Microblogging', 'Video', 'Professional', 'Communication', 'Music')]
+        [string]$Category
     )
     
+    $urlsToOpen = if ($Category) {
+        $script:SocialMediaUrls[$Category].Values
+    }
+    else {
+        $script:AllSocialUrls
+    }
+
+    if (-not $urlsToOpen) {
+        Write-ProfileLog "No URLs found for category: $Category" -Level 'Warning'
+        return
+    }
+
     Write-Host "`n🌐 Opening Social Media Services..." -ForegroundColor Cyan
+    if ($Category) {
+        Write-Host "Category: $Category" -ForegroundColor Yellow
+    }
     Write-Host "─────────────────────────────" -ForegroundColor DarkGray
 
     # Create a runspace pool for parallel processing
@@ -61,7 +144,7 @@ function global:Open-SocialChat {
     }
 
     # Start all URL openings in parallel
-    foreach ($url in $script:OpenSocialUrls) {
+    foreach ($url in $urlsToOpen) {
         $runspace = [powershell]::Create().AddScript($scriptBlock).AddArgument($url)
         $runspace.RunspacePool = $runspacePool
         $runspaces.Add(@{
@@ -78,7 +161,7 @@ function global:Open-SocialChat {
         $completed++
         
         if ($ShowProgress) {
-            $percentComplete = ($completed / $script:OpenSocialUrls.Count) * 100
+            $percentComplete = ($completed / $urlsToOpen.Count) * 100
             Write-Progress -Activity "Opening Social Media Services" -Status "$($runspace.Url)" -PercentComplete $percentComplete
         }
 
@@ -103,10 +186,10 @@ function global:Open-SocialChat {
 
     Write-Host "─────────────────────────────" -ForegroundColor DarkGray
     if ($failedUrls.Count -eq 0) {
-        Write-Host "✨ All social media services opened successfully!" -ForegroundColor Green
+        Write-ProfileLog "All social media services opened successfully!" -Level 'Success'
     }
     else {
-        Write-Host "⚠️ Some URLs failed to open:" -ForegroundColor Yellow
+        Write-ProfileLog "Some URLs failed to open:" -Level 'Warning'
         $failedUrls | ForEach-Object {
             Write-Host "  • $_" -ForegroundColor Red
         }
@@ -114,128 +197,297 @@ function global:Open-SocialChat {
     Write-Host
 }
 
-# Create an alias for easier access
-if (-not (Get-Alias -Name social -ErrorAction SilentlyContinue)) {
-    New-Alias -Name social -Value Open-SocialChat -Scope Global -Force
-}
+#endregion Core Functions
 
-# Individual social media functions
-function global:twitch { 
-    Write-Host "Opening Twitch..." -ForegroundColor Cyan
-    Start-Process "https://www.twitch.tv/"
-    Write-Host "Cli api can be found at https://dev.twitch.tv/docs/api/reference  "
-    Write-Host "the Developer Console can be found at https://dev.twitch.tv/console"
-    Write-Host "followed Streamers can be found at https://www.twitch.tv/directory/following"
-    Write-Host "the Docs can be found https://dev.twitch.tv/docs/"
-}
-
-function global:twitter { 
-    Write-Host "Opening Twitter/X..." -ForegroundColor Cyan
-    Start-Process "https://x.com/"
-}
+#region Individual Platform Functions
 
 function global:facebook { 
-    Write-Host "Opening Facebook..." -ForegroundColor Cyan
-    Start-Process "https://www.facebook.com/"
-}
-
-function global:instagram { 
-    Write-Host "Opening Instagram..." -ForegroundColor Cyan
-    Start-Process "https://www.instagram.com/"
-}
-
-function global:reddit { 
-    Write-Host "Opening Reddit..." -ForegroundColor Cyan
-    Start-Process "https://www.reddit.com/"
-}
-
-function global:youtube { 
-    Write-Host "Opening YouTube..." -ForegroundColor Cyan
-    Start-Process "https://www.youtube.com/"
-}
-
-function global:linkedin { 
-    Write-Host "Opening LinkedIn..." -ForegroundColor Cyan
-    Start-Process "https://www.linkedin.com/"
-}
-
-function global:tiktok { 
-    Write-Host "Opening TikTok..." -ForegroundColor Cyan
-    Start-Process "https://www.tiktok.com/"
-}
-
-function global:discord { 
-    Write-Host "Opening Discord..." -ForegroundColor Cyan
-    Start-Process "https://www.discord.com/"
-}
-
-function global:pinterest { 
-    Write-Host "Opening Pinterest..." -ForegroundColor Cyan
-    Start-Process "https://www.pinterest.com/"
-}
-
-function global:tumblr { 
-    Write-Host "Opening Tumblr..." -ForegroundColor Cyan
-    Start-Process "https://www.tumblr.com/"
-}
-
-function global:rumble { 
-    Write-Host "Opening Rumble..." -ForegroundColor Cyan
-    Start-Process "https://rumble.com/"
-}
-
-function global:deviantart { 
-    Write-Host "Opening DeviantArt..." -ForegroundColor Cyan
-    Start-Process "https://www.deviantart.com/"
+    <#
+    .SYNOPSIS
+    Opens Facebook
+    #>
+    Write-ProfileLog "Opening Facebook..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Meta.Facebook
 }
 
 function global:threads { 
-    Write-Host "Opening Threads..." -ForegroundColor Cyan
-    Start-Process "https://www.threads.com/"
+    <#
+    .SYNOPSIS
+    Opens Threads
+    #>
+    Write-ProfileLog "Opening Threads..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Meta.Threads
+}
+
+function global:instagram { 
+    <#
+    .SYNOPSIS
+    Opens Instagram
+    #>
+    Write-ProfileLog "Opening Instagram..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Meta.Instagram
+}
+
+function global:deviantart { 
+    <#
+    .SYNOPSIS
+    Opens DeviantArt
+    #>
+    Write-ProfileLog "Opening DeviantArt..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Art.DeviantArt
+}
+
+function global:artstation { 
+    <#
+    .SYNOPSIS
+    Opens ArtStation
+    #>
+    Write-ProfileLog "Opening ArtStation..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Art.ArtStation
+}
+
+function global:pinterest { 
+    <#
+    .SYNOPSIS
+    Opens Pinterest
+    #>
+    Write-ProfileLog "Opening Pinterest..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Art.Pinterest
+}
+
+function global:twitter { 
+    <#
+    .SYNOPSIS
+    Opens Twitter/X
+    #>
+    Write-ProfileLog "Opening Twitter/X..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Microblogging.Twitter
 }
 
 function global:bsky { 
-    Write-Host "Opening Bluesky..." -ForegroundColor Cyan
-    Start-Process "https://bsky.app/"
+    <#
+    .SYNOPSIS
+    Opens Bluesky
+    #>
+    Write-ProfileLog "Opening Bluesky..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Microblogging.Bluesky
+}
+
+function global:tumblr { 
+    <#
+    .SYNOPSIS
+    Opens Tumblr
+    #>
+    Write-ProfileLog "Opening Tumblr..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Microblogging.Tumblr
+}
+
+function global:youtube { 
+    <#
+    .SYNOPSIS
+    Opens YouTube
+    #>
+    Write-ProfileLog "Opening YouTube..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Video.YouTube
+}
+
+function global:tiktok { 
+    <#
+    .SYNOPSIS
+    Opens TikTok
+    #>
+    Write-ProfileLog "Opening TikTok..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Video.TikTok
+}
+
+function global:twitch { 
+    <#
+    .SYNOPSIS
+    Opens Twitch with additional developer information
+    #>
+    Write-ProfileLog "Opening Twitch..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Video.Twitch
+    
+    # Display additional Twitch resources
+    Write-Host "`nTwitch Developer Resources:" -ForegroundColor Cyan
+    Write-Host "• API Reference: https://dev.twitch.tv/docs/api/reference" -ForegroundColor Gray
+    Write-Host "• Developer Console: https://dev.twitch.tv/console" -ForegroundColor Gray
+    Write-Host "• Following Streamers: https://www.twitch.tv/directory/following" -ForegroundColor Gray
+    Write-Host "• Documentation: https://dev.twitch.tv/docs/" -ForegroundColor Gray
 }
 
 function global:kick { 
-    Write-Host "Opening Kick..." -ForegroundColor Cyan
-    Start-Process "https://kick.com/"
+    <#
+    .SYNOPSIS
+    Opens Kick
+    #>
+    Write-ProfileLog "Opening Kick..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Video.Kick
 }
 
-function Spot {
-    Write-Host "Opening Spotify with api builder"
-    Start-Process "https://open.spotify.com/"
-    Start-Process "https://developer.spotify.com/documentation/web-api"
+function global:rumble { 
+    <#
+    .SYNOPSIS
+    Opens Rumble
+    #>
+    Write-ProfileLog "Opening Rumble..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Video.Rumble
+}
+
+function global:linkedin { 
+    <#
+    .SYNOPSIS
+    Opens LinkedIn
+    #>
+    Write-ProfileLog "Opening LinkedIn..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Professional.LinkedIn
+}
+
+function global:reddit { 
+    <#
+    .SYNOPSIS
+    Opens Reddit
+    #>
+    Write-ProfileLog "Opening Reddit..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Professional.Reddit
+}
+
+function global:discord { 
+    <#
+    .SYNOPSIS
+    Opens Discord
+    #>
+    Write-ProfileLog "Opening Discord..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Communication.Discord
+}
+
+function global:spotify { 
+    <#
+    .SYNOPSIS
+    Opens Spotify and Spotify API documentation
+    #>
+    Write-ProfileLog "Opening Spotify with API documentation..." -Level 'Info'
+    Start-Process $script:SocialMediaUrls.Music.Spotify
+    Start-Process $script:SocialMediaUrls.Music.SpotifyAPI
+}
+
+#endregion Individual Platform Functions
+
+#region Utility Functions
+
+function global:Get-SocialFunctions {
+    <#
+    .SYNOPSIS
+    Displays all available social media functions
+
+    .DESCRIPTION
+    Lists all available social media functions organized by category,
+    including their descriptions and usage examples.
+
+    .EXAMPLE
+    Get-SocialFunctions
+    Shows all available social media functions
+    #>
     
-
+    Write-Host "`n📱 Available Social Media Functions" -ForegroundColor Cyan
+    Write-Host "=====================================" -ForegroundColor DarkGray
+    
+    # Core functions
+    Write-Host "`n🌐 Core Functions:" -ForegroundColor Yellow
+    Write-Host "• Open-SocialChat [social] - Open all social media services" -ForegroundColor Gray
+    Write-Host "• Open-SocialChat -Category <category> - Open specific category" -ForegroundColor Gray
+    Write-Host "• Open-SocialChat -ShowProgress - Open with progress bar" -ForegroundColor Gray
+    Write-Host "• Get-SocialFunctions [listsocial] - Show this help" -ForegroundColor Gray
+    
+    # Meta platforms
+    Write-Host "`n📘 Meta Platforms:" -ForegroundColor Yellow
+    Write-Host "• facebook - Open Facebook" -ForegroundColor Gray
+    Write-Host "• threads - Open Threads" -ForegroundColor Gray
+    Write-Host "• instagram - Open Instagram" -ForegroundColor Gray
+    
+    # Art platforms
+    Write-Host "`n🎨 Art Platforms:" -ForegroundColor Yellow
+    Write-Host "• deviantart - Open DeviantArt" -ForegroundColor Gray
+    Write-Host "• artstation - Open ArtStation" -ForegroundColor Gray
+    Write-Host "• pinterest - Open Pinterest" -ForegroundColor Gray
+    
+    # Microblogging platforms
+    Write-Host "`n🐦 Microblogging Platforms:" -ForegroundColor Yellow
+    Write-Host "• twitter - Open Twitter/X" -ForegroundColor Gray
+    Write-Host "• bsky - Open Bluesky" -ForegroundColor Gray
+    Write-Host "• tumblr - Open Tumblr" -ForegroundColor Gray
+    
+    # Video platforms
+    Write-Host "`n📹 Video Platforms:" -ForegroundColor Yellow
+    Write-Host "• youtube - Open YouTube" -ForegroundColor Gray
+    Write-Host "• tiktok - Open TikTok" -ForegroundColor Gray
+    Write-Host "• twitch - Open Twitch (with dev resources)" -ForegroundColor Gray
+    Write-Host "• kick - Open Kick" -ForegroundColor Gray
+    Write-Host "• rumble - Open Rumble" -ForegroundColor Gray
+    
+    # Professional platforms
+    Write-Host "`n💼 Professional Platforms:" -ForegroundColor Yellow
+    Write-Host "• linkedin - Open LinkedIn" -ForegroundColor Gray
+    Write-Host "• reddit - Open Reddit" -ForegroundColor Gray
+    
+    # Communication platforms
+    Write-Host "`n💬 Communication Platforms:" -ForegroundColor Yellow
+    Write-Host "• discord - Open Discord" -ForegroundColor Gray
+    
+    # Music platforms
+    Write-Host "`n🎵 Music Platforms:" -ForegroundColor Yellow
+    Write-Host "• spotify - Open Spotify (with API docs)" -ForegroundColor Gray
+    
+    Write-Host "`n💡 Usage Examples:" -ForegroundColor Cyan
+    Write-Host "• social - Open all platforms" -ForegroundColor Gray
+    Write-Host "• Open-SocialChat -Category Video - Open only video platforms" -ForegroundColor Gray
+    Write-Host "• twitter - Open Twitter/X" -ForegroundColor Gray
+    Write-Host "• twitch - Open Twitch with developer resources" -ForegroundColor Gray
 }
 
+function global:Get-SocialCategories {
+    <#
+    .SYNOPSIS
+    Displays available social media categories
 
-
-Write-Host "Social-Funk.ps1 loaded successfully!" -ForegroundColor Green
-Write-Host "Use 'Open-SocialChat' or 'social' to open all social media URLs" -ForegroundColor Cyan
-Write-Host "Use individual commands (twitch, twitter, facebook, etc.) to open specific sites" -ForegroundColor Blue
-
-
-function global:listsocial {
-    Write-Host "`nAvailable Social Media Services:" -ForegroundColor Yellow
-    Write-Host "1. Facebook (facebook)" -ForegroundColor Cyan
-    Write-Host "2. Threads (threads)" -ForegroundColor Cyan
-    Write-Host "3. Tumblr (tumblr)" -ForegroundColor Cyan
-    Write-Host "4. DeviantArt (deviantart)" -ForegroundColor Cyan
-    Write-Host "5. Twitter/X (twitter)" -ForegroundColor Cyan
-    Write-Host "6. Bluesky (bsky)" -ForegroundColor Cyan
-    Write-Host "7. YouTube (youtube)" -ForegroundColor Cyan
-    Write-Host "8. Instagram (instagram)" -ForegroundColor Cyan
-    Write-Host "9. Reddit (reddit)" -ForegroundColor Cyan
-    Write-Host "10. LinkedIn (linkedin)" -ForegroundColor Cyan
-    Write-Host "11. TikTok (tiktok)" -ForegroundColor Cyan
-    Write-Host "12. Discord (discord)" -ForegroundColor Cyan
-    Write-Host "13. Kick (kick)" -ForegroundColor Cyan
-    Write-Host "14. Pinterest (pinterest)" -ForegroundColor Cyan
-    Write-Host "15. Twitch (twitch)" -ForegroundColor Cyan
-    Write-Host "16. Rumble (rumble)" -ForegroundColor Cyan
-    Write-Host "`nUse the command in parentheses to open the respective service" -ForegroundColor Green
+    .DESCRIPTION
+    Shows all available categories for the Open-SocialChat function
+    #>
+    
+    Write-Host "`n📂 Available Social Media Categories:" -ForegroundColor Cyan
+    Write-Host "=====================================" -ForegroundColor DarkGray
+    
+    $script:SocialMediaUrls.Keys | ForEach-Object {
+        $category = $_
+        $count = $script:SocialMediaUrls[$category].Count
+        Write-Host "• $category ($count platforms)" -ForegroundColor Yellow
+        $script:SocialMediaUrls[$category].Keys | ForEach-Object {
+            Write-Host "  - $_" -ForegroundColor Gray
+        }
+    }
+    
+    Write-Host "`n💡 Usage: Open-SocialChat -Category <category>" -ForegroundColor Cyan
 }
+
+#endregion Utility Functions
+
+#region Aliases and Initialization
+
+# Create aliases for easier access
+$aliases = @{
+    'social'     = 'Open-SocialChat'
+    'listsocial' = 'Get-SocialFunctions'
+    'socialcats' = 'Get-SocialCategories'
+}
+
+foreach ($alias in $aliases.GetEnumerator()) {
+    if (-not (Get-Alias -Name $alias.Key -ErrorAction SilentlyContinue)) {
+        New-Alias -Name $alias.Key -Value $alias.Value -Scope Global -Force
+    }
+}
+
+#endregion Aliases and Initialization
+
+Write-ProfileLog "Social Media Functions loaded successfully!" -Level 'Success'
+Write-ProfileLog "Use 'Get-SocialFunctions' or 'listsocial' to see all available functions" -Level 'Info'
+Write-ProfileLog "Use 'Open-SocialChat' or 'social' to open all social media platforms" -Level 'Info'

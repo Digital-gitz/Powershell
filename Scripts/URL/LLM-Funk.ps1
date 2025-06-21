@@ -259,11 +259,6 @@ function global:copilot {
     Start-Process "https://github.com/copilot"
 }
 
-function global:edgepasswords { Start-Process "edge://wallet/passwords?source=assetsSettingsPasswords%22}" }
-
-
-
-
 function global:list_llm {
     Write-Host "URL-Funk.ps1 loaded successfully!" -ForegroundColor Green
     Write-Host "Use 'Open-LLMChat' or 'llm' to open all LLM chat URLs" -ForegroundColor Cyan

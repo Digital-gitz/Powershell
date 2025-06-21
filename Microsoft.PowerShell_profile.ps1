@@ -21,14 +21,6 @@ Version: 5.0 (Optimized)
 $ErrorActionPreference = 'Continue'
 $profileLoadStart = Get-Date
 
-# Define core paths
-$scriptsDir = Join-Path $PSScriptRoot "Scripts"
-$coreDir = Join-Path $scriptsDir "Core"
-
-# Load core configuration and utility functions
-. (Join-Path $coreDir "Configuration.ps1")
-. (Join-Path $coreDir "Utility-Functions.ps1")
-
 # Display PowerShell version information
 Write-Banner "|Power Shell!|" -FontName "Consolas" -FontSize 14
 Write-Host "`nPowerShell Version Information:" -ForegroundColor Cyan
@@ -37,219 +29,23 @@ $PSVersionTable.GetEnumerator() | Sort-Object Key | ForEach-Object {
     Write-Host ("{0,-20}: {1}" -f $_.Key, $_.Value) -ForegroundColor Gray
 }
 Write-Host "─────────────────────────────`n" -ForegroundColor DarkGray
-
 #region Environment Setup
 # Set up environment paths efficiently
-$newPaths = $Config.EnvironmentPaths | Where-Object { Test-Path $_ } | ForEach-Object { (Resolve-Path $_).Path }
-$env:PATH = ($env:PATH.Split(';') + $newPaths | Select-Object -Unique) -join ";"
-
+$newPaths = @()
+if ($Config -and $Config.EnvironmentPaths) {
+    $newPaths = $Config.EnvironmentPaths | Where-Object { $_ -and (Test-Path $_) } | ForEach-Object { (Resolve-Path $_).Path }
+    $env:PATH = ($env:PATH.Split(';') + $newPaths | Select-Object -Unique) -join ";"
+}
 # Check for admin privileges
 $isAdmin = [Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 if ($isAdmin) {
     Write-Host "⚡ Running with administrator privileges" -ForegroundColor Yellow
 }
-
-#region Module Management
-# Optimized module loading function
-function Import-ModuleSafely {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$Name,
-        
-        [Parameter(Mandatory = $false)]
-        [string]$Scope = 'CurrentUser',
-        
-        [Parameter(Mandatory = $false)]
-        [string]$Purpose,
-        
-        [Parameter(Mandatory = $false)]
-        [string]$MinimumVersion
-    )
-    
-    try {
-        # Check if module is already loaded
-        if (Get-Module -Name $Name) {
-            return
-        }
-
-        # Check if module needs to be installed
-        if (-not (Get-Module -Name $Name -ListAvailable)) {
-            try {
-                # Ensure PSGallery is trusted
-                if ((Get-PSRepository -Name 'PSGallery').InstallationPolicy -ne 'Trusted') {
-                    Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
-                }
-                
-                # Install module
-                $params = @{
-                    Name               = $Name
-                    Force              = $true 
-                    Scope              = $Scope
-                    AllowClobber       = $true
-                    SkipPublisherCheck = $true
-                    ErrorAction        = 'Stop'
-                }
-                if ($MinimumVersion) {
-                    $params['MinimumVersion'] = $MinimumVersion
-                }
-                
-                Install-Module @params
-            }
-            catch {
-                Write-Warning "Failed to install module $Name : $($_.Exception.Message)"
-                return
-            }
-        }
-
-        # Import module
-        Import-Module -Name $Name -Force -DisableNameChecking -ErrorAction Stop
-    }
-    catch {
-        Write-Warning "Failed to load ${Name} - $($_.Exception.Message)"
-    }
+else {
+    Write-Host " Is not currently Admin."
 }
 
-# Load essential modules
-foreach ($module in $Config.Modules.Essential) {
-    Import-ModuleSafely -Name $module.Name -Purpose $module.Purpose
-    if ($module.Name -eq 'posh-git') {
-        $env:POSHGIT_CYGWIN_WARNING = 'false'
-    }
-}
-
-# Load optional modules
-foreach ($module in $Config.Modules.Optional) {
-    Import-ModuleSafely -Name $module
-}
-
-#region Prompt Configuration
-# Initialize Oh My Posh with fallback
-try {
-    $themeFile = "$env:POSH_THEMES_PATH\agnosterplus.omp.json"
-    if (Test-Path $themeFile) {
-        oh-my-posh init pwsh --config $themeFile | Invoke-Expression
-    }
-    else {
-        throw "Theme file not found"
-    }
-}
-catch {
-    function prompt {
-        $lastCommand = Get-History -Count 1
-        $lastCommandTime = if ($lastCommand) { 
-            $duration = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
-            " [$([math]::Round($duration.TotalMilliseconds))ms]"
-        }
-        else { "" }
-
-        $currentLocation = Get-Location
-        $adminIndicator = if ($isAdmin) { "[ADMIN] " } else { "" }
-        
-        $gitCommand = Get-Command -Name git -ErrorAction SilentlyContinue
-        $gitBranch = if ($gitCommand) { 
-            $branch = git branch --show-current 2>$null
-            if ($branch) { " [$branch]" } else { "" }
-        }
-        else { "" }
-
-        Write-Host "`n$adminIndicator" -NoNewline -ForegroundColor Red
-        Write-Host "PS" -NoNewline -ForegroundColor Blue
-        Write-Host "$lastCommandTime" -NoNewline -ForegroundColor DarkGray
-        Write-Host " $($currentLocation)" -NoNewline -ForegroundColor Yellow
-        Write-Host "$gitBranch" -NoNewline -ForegroundColor Green
-        return "`n❯ "
-    }
-}
-
-#region PSReadLine Configuration
-if (Get-Module -Name PSReadLine) {
-    try {
-        Set-PSReadLineOption -ShowToolTips:$Config.PSReadLine.ShowToolTips `
-            -PredictionSource $Config.PSReadLine.PredictionSource `
-            -PredictionViewStyle $Config.PSReadLine.PredictionViewStyle `
-            -EditMode $Config.PSReadLine.EditMode `
-            -HistorySaveStyle $Config.PSReadLine.HistorySaveStyle
-
-        if ($Config.PSReadLine.HistorySavePath) {
-            Set-PSReadLineOption -HistorySavePath $Config.PSReadLine.HistorySavePath
-        }
-
-        Set-PSReadLineOption -Colors $Config.PSReadLine.Colors
-
-        Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
-        Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-        Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-        Set-PSReadLineKeyHandler -Key Ctrl+Spacebar -Function AcceptSuggestion
-        Set-PSReadLineKeyHandler -Key Alt+Enter -Function AcceptNextSuggestionWord
-    }
-    catch {
-        Write-Warning "Error configuring PSReadLine - $($_.Exception.Message)"
-    }
-}
-
-#region Script Loading
-# Consolidated script loading system
-function Import-ScriptSafely {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$Category,
-        
-        [Parameter(Mandatory = $true)]
-        [string]$ScriptName
-    )
-    
-    $scriptPath = Join-Path $scriptsDir $Category $ScriptName
-    
-    if (Test-Path $scriptPath) {
-        try {
-            . $scriptPath
-        }
-        catch {
-            Write-Warning "Failed to load ${ScriptName} - $($_.Exception.Message)"
-        }
-    }
-}
-
-# Load scripts efficiently
-foreach ($category in $Config.LoadOrder) {
-    if ($Config.ScriptCategories.ContainsKey($category)) {
-        foreach ($script in $Config.ScriptCategories[$category]) {
-            if ($script -like "*`**") {
-                $categoryPath = Join-Path $scriptsDir $category
-                
-                if ($script -like "*/*") {
-                    $subDirPattern = $script -replace "\\", "/"
-                    $subDirPath = Join-Path $categoryPath ($subDirPattern -split "/")[0]
-                    $filePattern = ($subDirPattern -split "/")[1]
-                    
-                    if (Test-Path $subDirPath) {
-                        $matchingScripts = Get-ChildItem -Path $subDirPath -Name $filePattern -ErrorAction SilentlyContinue
-                        foreach ($matchingScript in $matchingScripts) {
-                            $fullScriptPath = Join-Path $subDirPath $matchingScript
-                            try {
-                                . $fullScriptPath
-                            }
-                            catch {
-                                Write-Warning "Failed to load $matchingScript - $($_.Exception.Message)"
-                            }
-                        }
-                    }
-                }
-                else {
-                    $matchingScripts = Get-ChildItem -Path $categoryPath -Name $script -ErrorAction SilentlyContinue
-                    foreach ($matchingScript in $matchingScripts) {
-                        Import-ScriptSafely -Category $category -ScriptName $matchingScript
-                    }
-                }
-            }
-            else {
-                Import-ScriptSafely -Category $category -ScriptName $script
-            }
-        }
-    }
-}
-
-#region Node.js Configuration
+# node
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
 
 if (Get-Command node -ErrorAction SilentlyContinue) {
@@ -259,122 +55,131 @@ else {
     Write-Host "Node.js is not installed" -ForegroundColor Red
 }
 
+# load in Scripts
+# function LoadCoreScripts {
+#     [CmdletBinding()]
+#     param(
+#         [switch]$ShowVerbose
+#     )
+#     foreach ($category in $Config.LoadOrder) {
+#         if ($Config.ScriptCategories.ContainsKey($category)) {
+#             foreach ($script in $Config.ScriptCategories[$category]) {
+#                 $scriptPath = Join-Path $CommonPaths.Scripts $category $script
+#                 if (Test-Path $scriptPath) {
+#                     try {
+#                         if ($ShowVerbose) { Write-Host "Loading $scriptPath..." -ForegroundColor Cyan }
+#                         . $scriptPath
+#                         if ($ShowVerbose) { Write-Host "Loaded $scriptPath" -ForegroundColor Green }
+#                     }
+#                     catch {
+#                         Write-Warning ("Failed to load {0}: {1}" -f $scriptPath, $_.Exception.Message)
+#                     }
+#                 }
+#                 else {
+#                     Write-Warning "Script not found: $scriptPath"
+#                 }
+#             }
+#         }
+#     }
+# }
+
+. "$PSScriptRoot\Scripts\Core\Aliases.ps1"
+. "$PSScriptRoot\Scripts\Core\Module-Management.ps1"
+. "$PSScriptRoot\Scripts\Programs\Aseprite.ps1"
+. "$PSScriptRoot\Scripts\UI\Prompt-Configuration.ps1"
+. "$PSScriptRoot\Scripts\Networking\SSH-Tools.ps1"
+. "$PSScriptRoot\Scripts\URL\LLM-Funk.ps1"
+. "$PSScriptRoot\Scripts\URL\Search-pkgs.ps1"
+# . "$PSScriptRoot\Scripts\URL\Godot-Funk.ps1"
+
+# Load scripts efficiently
+# foreach ($category in $Config.LoadOrder) { ... }
+
+
 #region Profile Completion
 $loadTime = (Get-Date) - $profileLoadStart
-Write-ProfileLog "PowerShell profile loaded in $([math]::Round($loadTime.TotalMilliseconds))ms!" -Level 'Success'
+Write-Host "PowerShell profile loaded in $([math]::Round($loadTime.TotalMilliseconds))ms!" -Level 'Success'
 
 # Display available commands
 Write-Host "`nAvailable Commands:" -ForegroundColor Cyan
 Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
-Write-Host "h <pattern>                 - Search command history" -ForegroundColor Gray
-Write-Host "Start-Aseprite              - Starts Aseprite" -ForegroundColor Gray
-Write-Host "Start-DoomEternal           - Starts Doom Eternal" -ForegroundColor Gray
-Write-Host "godot                       - Starts godot" -ForegroundColor Gray
-Write-Host "ghub                        - Go to Github Folder and list" -ForegroundColor Gray
-Write-Host "ddump                       - Go to DigitalHubDump Folder" -ForegroundColor Gray
-Write-Host "edge                        - Starts Edge" -ForegroundColor Gray
-Write-Host "Search-CommandHistory or h  - Search Commands History" -ForegroundColor Gray
-Write-Host "edit_powershell             - Edit my powersehll Profile" -ForegroundColor Gray
-Write-Host "list_llm                    - List of my llms" -ForegroundColor Gray
-Write-Host "programs                    - List Programs" -ForegroundColor Gray
-Write-Host "TwitchOverlay               - Launches Twitch Chat OVerlay" -ForegroundColor Gray
-Write-Host "Get-StockMarketSummary      - Get-StockMarketSummary" -ForegroundColor Gray
-Write-Host "New-QRCode                  - Generate a QR code" -ForegroundColor Gray
-Write-Host "Get-MyIP                    - Get my IP" -ForegroundColor Gray
-Write-Host "Search-GoPackages           - Search Go pachages" -ForegroundColor Gray
+
+Write-Host "Start-Aseprite" -ForegroundColor Green -NoNewline
+Write-Host "              - Starts Aseprite Pixal Art Editor" -ForegroundColor Gray
+Write-Host "Start-DoomEternal" -ForegroundColor Green -NoNewline
+Write-Host "           - Starts Doom Eternal" -ForegroundColor Gray
+Write-Host "godot" -ForegroundColor Green -NoNewline
+Write-Host "                       - Starts godot" -ForegroundColor Gray
+Write-Host "edge" -ForegroundColor Green -NoNewline
+Write-Host "                        - Starts Edge" -ForegroundColor Gray
+
+Write-Host "ghub" -ForegroundColor Green -NoNewline
+Write-Host "                        - Go to Github Folder and list" -ForegroundColor Gray
+Write-Host "ddump" -ForegroundColor Green -NoNewline
+Write-Host "                       - Go to DigitalHubDump Folder" -ForegroundColor Gray
+Write-Host "edit_powershell" -ForegroundColor Green -NoNewline
+Write-Host "             - Edit my powersehll Profile" -ForegroundColor Gray
+
+Write-Host "Search-CommandHistory or h" -ForegroundColor Green -NoNewline
+Write-Host "  - Search Commands History" -ForegroundColor Gray
+Write-Host "list_llm" -ForegroundColor Green -NoNewline
+Write-Host "                    - List of my llms" -ForegroundColor Gray
+Write-Host "h <pattern>" -ForegroundColor Green -NoNewline
+Write-Host "                 - Search command history" -ForegroundColor Gray
+Write-Host "programs" -ForegroundColor Green -NoNewline
+Write-Host "                    - List Programs" -ForegroundColor Gray
+
+Write-Host "TwitchOverlay" -ForegroundColor Green -NoNewline
+Write-Host "               - Launches Twitch Chat OVerlay" -ForegroundColor Gray
+Write-Host "Get-StockMarketSummary" -ForegroundColor Green -NoNewline
+Write-Host "      - Get-StockMarketSummary" -ForegroundColor Gray
+Write-Host "New-QRCode" -ForegroundColor Green -NoNewline
+Write-Host "                  - Generate a QR code" -ForegroundColor Gray
+
+Write-Host "Get-MyIP" -ForegroundColor Green -NoNewline
+Write-Host "                    - Get my IP" -ForegroundColor Gray
+Write-Host "Get-BIOSInfo" -ForegroundColor Green -NoNewline
+Write-Host "                - Get-BIOSInfo  " -ForegroundColor Gray
+Write-Host "Get-SshStatus" -ForegroundColor Green -NoNewline
+Write-Host "               - Get the status of SSH (might need elevated permission)" -ForegroundColor Gray
+
+Write-Host "Search-GoPackages" -ForegroundColor Green -NoNewline
+Write-Host "           - Search Go pachages" -ForegroundColor Gray
+Write-Host "Get-AllFunctions" -ForegroundColor Green -NoNewline
+Write-Host "            - Show all available functions by category" -ForegroundColor Gray
+Write-Host "Get-FunctionHelp" -ForegroundColor Green -NoNewline
+Write-Host "            - Show detailed help for a specific function" -ForegroundColor Gray
+
+Write-Host "TwitchOverlay" -ForegroundColor Green -NoNewline
+Write-Host "               - Opens up my Twitch ocerlay" -ForegroundColor Gray
+
+Write-Host "Search-GoPackages" -ForegroundColor Green -NoNewline
+Write-Host "           - Search Go package to install " -ForegroundColor Gray
+Write-Host "Search-PyPiPackages" -ForegroundColor Green -NoNewline
+Write-Host "         - Search python package to install " -ForegroundColor Gray
+Write-Host "Search-GitHubRepositories" -ForegroundColor Green -NoNewline
+Write-Host "   - Search Github Repo package to install " -ForegroundColor Gray
+Write-Host "Search-NpmPackages" -ForegroundColor Green -NoNewline
+Write-Host "          - Search Node Package Manager " -ForegroundColor Gray
+
+
 Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
 
+# Display social media functions if available
+if (Get-Command Get-SocialFunctions -ErrorAction SilentlyContinue) {
+    Write-Host "`n📱 Social Media Functions:" -ForegroundColor Cyan
+    
+    Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
+
+    Write-Host "social [Open-SocialChat]  - Open all social media platforms" -ForegroundColor Gray
+    Write-Host "listsocial [Get-SocialFunctions] - Show all social media functions" -ForegroundColor Gray
+    Write-Host "socialcats [Get-SocialCategories] - Show social media categories" -ForegroundColor Gray
+    Write-Host "facebook, twitter, youtube, twitch, etc. - Open specific platforms" -ForegroundColor Gray
+    
+    Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
+}
+
 #region Additional Functions
-function Get-MyIP {
-    try {
-        Write-Host "Fetching your IP information..." -ForegroundColor Cyan
-        $response = Invoke-RestMethod -Uri "https://ipinfo.io" -Method Get
-        Write-Host "IP Information:" -ForegroundColor Green
-        Write-Host "IP: $($response.ip)" -ForegroundColor Gray
-        Write-Host "City: $($response.city)" -ForegroundColor Gray
-        Write-Host "Region: $($response.region)" -ForegroundColor Gray
-        Write-Host "Country: $($response.country)" -ForegroundColor Gray
-        Write-Host "Location: $($response.loc)" -ForegroundColor Gray
-        Write-Host "Organization: $($response.org)" -ForegroundColor Gray
-        Write-Host "Timezone: $($response.timezone)" -ForegroundColor Gray
-    }
-    catch {
-        Write-Host "Error fetching IP information: $($_.Exception.Message)" -ForegroundColor Red
-    }
-}
-
-function global:ddump {
-    try {
-        $path = "C:\Users\Digital_Russkiy\Documents\DGTLHubDump"
-        if (Test-Path $path) {
-            Set-Location -Path $path -ErrorAction Stop
-            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
-        }
-        else {
-            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
-        }
-    }
-    catch {
-        Write-Host "Error changing directory: $_" -ForegroundColor Red
-    }
-
-    try {
-        $null = Invoke-WebRequest -Uri "https://github.com" -UseBasicParsing -TimeoutSec 5
-        Start-Process "https://github.com/Digital-gitz/DGTLHubDump"
-        Write-Host "Successfully Opened https://github.com/Digital-gitz/DGTLHubDump"
-    }
-    catch {
-        Write-Warning "Could not connect to GitHub. Please check your internet connection."
-    }
-}
-
-function global:ghub {
-    try {
-        $path = "C:\Users\Digital_Russkiy\Documents\GitHub"
-        if (Test-Path $path) {
-            Set-Location -Path $path -ErrorAction Stop
-            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
-            
-            if (Get-Command gh -ErrorAction SilentlyContinue) {
-                Write-Host "`nGitHub Repositories:" -ForegroundColor Cyan
-                Write-Host "─────────────────────────────" -ForegroundColor DarkGray
-                gh repo list --limit 100 | ForEach-Object {
-                    $repo = $_ -split '\s+'
-                    Write-Host ("{0,-40} {1}" -f $repo[0], $repo[1]) -ForegroundColor Gray
-                }
-            }
-            else {
-                Write-Host "GitHub CLI (gh) is not installed. Please install it to list repositories." -ForegroundColor Yellow
-                Write-Host "Installation command: winget install GitHub.cli" -ForegroundColor Yellow
-            }
-            
-            Write-Host "`nContents of GitHub directory:" -ForegroundColor Cyan
-            Get-ChildItem -Path $path | Format-Table Name, LastWriteTime, Length -AutoSize
-        }
-        else {
-            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
-        }
-    }
-    catch {
-        Write-Host "Error changing directory: $_" -ForegroundColor Red
-    }
-
-    Start-Process "https://github.com/"
-}
-
-function Get-DirectoryFiles {
-    param([string]$Path = ".")
-    
-    if (-not (Test-Path $Path -PathType Container)) {
-        Write-Error "Directory '$Path' does not exist or is not a directory."
-        return
-    }
-    
-    Get-ChildItem -Path $Path -File | ForEach-Object {
-        Write-Host $_.Name
-    }
-}
-
 function New-QRCode {
     param([Parameter(Mandatory = $true)][string]$Url)
     
@@ -398,84 +203,15 @@ function New-QRCode {
     }
 }
 
-function Get-BIOSInfo {
-    try {
-        $scriptPath = Join-Path $PSScriptRoot "Scripts\Core\System\check-bios.ps1"
-        
-        if (Test-Path $scriptPath) {
-            Write-Host "Checking BIOS information..." -ForegroundColor Cyan
-            & $scriptPath
-        }
-        else {
-            Write-Host "Error: BIOS check script not found at: $scriptPath" -ForegroundColor Red
-        }
-    }
-    catch {
-        Write-Host "Error running BIOS check: $($_.Exception.Message)" -ForegroundColor Red
-    }
+#region Error Handling
+
+if (-not $global:ProfileCallDepth) { $global:ProfileCallDepth = 0 }
+$global:ProfileCallDepth++
+Write-Host "Profile call depth: $global:ProfileCallDepth"
+if ($global:ProfileCallDepth -gt 10) {
+    throw "Profile loaded too many times! Possible recursion."
 }
 
-function Show-NyanCat {
-    try {
-        Write-Host "Fetching Nyan Cat animation..." -ForegroundColor Cyan
-        
-        if (-not (Get-Command curl -ErrorAction SilentlyContinue)) {
-            Write-Host "Error: curl is not available. Please install curl first." -ForegroundColor Red
-            return
-        }
-        
-        if (-not (Get-Command lolcat -ErrorAction SilentlyContinue)) {
-            Write-Host "Error: lolcat is not available. Please install lolcat first." -ForegroundColor Red
-            Write-Host "You can install it via: gem install lolcat" -ForegroundColor Yellow
-            return
-        }
-        
-        curl -s ascii.live/nyan | lolcat
-        
-        Write-Host "Nyan Cat animation completed!" -ForegroundColor Green
-    }
-    catch {
-        Write-Host "Error showing Nyan Cat: $($_.Exception.Message)" -ForegroundColor Red
-    }
+if (-not (Get-Command Write-ProfileLog -ErrorAction SilentlyContinue)) {
+    function Write-ProfileLog { param($msg, $Level) Write-Host "${Level}: ${msg}" }
 }
-
-function Search-GoPackages {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$SearchTerm,
-        
-        [switch]$OpenInBrowser
-    )
-    
-    try {
-        Write-Host "Searching Go packages for: $SearchTerm" -ForegroundColor Cyan
-        
-        $searchUrl = "https://pkg.go.dev/search?q=$([System.Web.HttpUtility]::UrlEncode($SearchTerm))"
-        
-        if ($OpenInBrowser) {
-            Write-Host "Opening search results in browser..." -ForegroundColor Green
-            Start-Process $searchUrl
-        }
-        else {
-            Write-Host "Search URL: $searchUrl" -ForegroundColor Yellow
-            Write-Host "Use -OpenInBrowser switch to open results directly in your browser" -ForegroundColor Gray
-        }
-        
-        Write-Host "Search completed!" -ForegroundColor Green
-    }
-    catch {
-        Write-Host "Error searching Go packages: $($_.Exception.Message)" -ForegroundColor Red
-    }
-}
-
-function TwitchOverlay {
-    $updatePath = "C:\Users\Digital_Russkiy\AppData\Local\TransparentTwitchChatOverlay\Update.exe"
-    $appPath = "C:\Users\Digital_Russkiy\AppData\Local\TransparentTwitchChatOverlay\TransparentTwitchChatWPF.exe"
-
-    Write-Host "Starting Twitch Chat Overlay update..." -ForegroundColor Cyan
-    Start-Process -FilePath $updatePath -Wait
-
-    Write-Host "Launching Twitch Chat Overlay..." -ForegroundColor Green
-    Start-Process -FilePath $appPath
-}
-

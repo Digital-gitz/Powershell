@@ -104,9 +104,6 @@ function global:publix { Start-Process "https://www.publix.com/" }
 function global:aldi { Start-Process "https://www.aldi.com/" }
 
 Write-Host "URL-Funk.ps1 loaded successfully!" -ForegroundColor Green
-Write-Host "Use 'Open-Shopping' or 'shopping' to open all Shopping URLs" -ForegroundColor Cyan
-Write-Host "Use 'amazon' to open Amazon" -ForegroundColor Magenta
-Write-Host "Use 'walmart' to open Walmart" -ForegroundColor Magenta
-Write-Host "Use 'target' to open Target" -ForegroundColor Magenta
-Write-Host "Use 'bestbuy' to open Best Buy" -ForegroundColor Magenta
+Write-Host "Use 'Open-Shopping' or 'llm' to open all Shopping URLs" -ForegroundColor Cyan
+Write-Host "Use 'amazon', 'walmart', 'target', etc. to open individual stores" -ForegroundColor Magenta
 

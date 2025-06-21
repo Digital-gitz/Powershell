@@ -97,10 +97,10 @@ $scriptCategories = @{
         "HVAC.ps1",
         "Backup.ps1"
     )
-    UI             = @(
-        "winfetch-pro.ps1",
-        "Welcome-Message.ps1"
-    )
+    # UI             = @(
+    #     "winfetch-pro.ps1",
+    #     "Welcome-Message.ps1"
+    # )
 }
 
 function Import-AllScripts {

@@ -47,3 +47,111 @@ git commit -a -m "updated"
 git add . 
 git status
 git commit -a -m "updated"
+git push
+cluade
+claude
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+pwsh
+Get-SshStatus
+Get-SshStatus
+pwsh
+Get-SshStatus
+Get-Service | Where-Object {$_.Name -like "*ssh*"}
+pwsh
+Get-SshStatus
+pwsh
+Get-SshStatus
+where.exe ssh
+ssh -V
+pwsh 
+Get-SshStatus
+pwsh 
+winget search hyper
+winget install  Vercel.Hyper 
+hyper
+hyper i hyperpower
+claude
+AHK
+$ npm install -g twitch-chat-cli
+ npm install -g twitch-chat-cli
+Update-CustomScripts
+Update-ConfiguredPackages
+Show-Welcome
+Remove-UnusedModules
+Update-PowerShellProfile
+github
+tc
+ia
+ npm search hyper
+hyper i hyperpower
+cd C:\Users\Digital_Russkiy\AppData\Roaming\Hyper
+ls
+hyper i hyperpower
+ls
+pwsh
+devientart
+rumble
+pwsh
+listsocial
+reddit
+pwsh
+socialcats
+amazon
+ckr
+clr 
+pip install kick-chat
+nvim 
+pwsh
+listsocial
+ghub
+z github
+ls
+mkdir Artstation
+cd .\Artstation\
+ls
+gh repo clone kent-lee/artstation-scraper
+startup
+github
+winget install Desmos
+winget search Desmos
+z github
+ls
+cd .\Digital\
+ls
+cd .
+z obsdidian
+z bosidian
+z obsidian
+z documents
+ls
+cargo install obsidian-export
+youtube-viewer clipstudio
+torrent 
+perplexity 
+z workbench
+google
+list_llm
+perplexity
+startup
+list_llm
+ai
+TwitchOverlay
+ Search-GoPackages
+ Search-GoPackages internet -OpenInBrowser
+pwsh
+Get-BIOSInfo
+Get-AllFunctions
+pwsh
+ddump
+git status
+git commit -a -m "updated folder"
+git push
+git add .
+git push
+git status
+clear
+pwsh
+Import-ModuleManaged
+pwsh
+Search-PyPiPackages internet
+pwsh

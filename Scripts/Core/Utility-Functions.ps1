@@ -320,6 +320,244 @@ function TwitchOverlay {
 }
 #endregion Application Functions
 
+#region Function Discovery and Listing
+function global:Get-AllFunctions {
+    <#
+    .SYNOPSIS
+    Displays all available functions from all loaded scripts
+
+    .DESCRIPTION
+    Scans all loaded functions and organizes them by category based on their names
+    and common patterns. Provides a comprehensive overview of available functionality.
+
+    .PARAMETER Category
+    Filter to show only functions from a specific category
+
+    .PARAMETER Search
+    Search for functions containing the specified text
+
+    .EXAMPLE
+    Get-AllFunctions
+    Shows all available functions organized by category
+
+    .EXAMPLE
+    Get-AllFunctions -Category "Social"
+    Shows only social media related functions
+
+    .EXAMPLE
+    Get-AllFunctions -Search "git"
+    Shows functions containing "git" in their name
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $false)]
+        [ValidateSet('System', 'Navigation', 'Development', 'Social', 'Web', 'Application', 'Utility', 'All')]
+        [string]$Category = 'All',
+        
+        [Parameter(Mandatory = $false)]
+        [string]$Search
+    )
+
+    # Get all functions from the current session
+    $allFunctions = Get-Command -CommandType Function | Where-Object { 
+        $_.Name -notlike "Microsoft.PowerShell*" -and 
+        $_.Name -notlike "*Internal*" -and
+        $_.Name -notlike "*Private*"
+    }
+
+    # Define function categories and their patterns
+    $functionCategories = @{
+        'System'      = @{
+            Patterns    = @('Get-*', 'Set-*', 'Start-*', 'Stop-*', 'Restart-*', 'sleep', 'programs', 'Startup')
+            Description = 'System management and control functions'
+        }
+        'Navigation'  = @{
+            Patterns    = @('*Location*', '*Path*', '*Directory*', 'ghub', 'ddump', 'goto')
+            Description = 'Directory navigation and path management'
+        }
+        'Development' = @{
+            Patterns    = @('*Git*', '*Commit*', '*Repo*', 'edit_*', 'Search-*Packages')
+            Description = 'Development and coding related functions'
+        }
+        'Social'      = @{
+            Patterns    = @('*Social*', 'facebook', 'twitter', 'youtube', 'twitch', 'instagram', 'reddit', 'linkedin', 'tiktok', 'discord', 'pinterest', 'tumblr', 'rumble', 'kick', 'bsky', 'threads', 'deviantart', 'artstation', 'spotify')
+            Description = 'Social media and communication platforms'
+        }
+        'Web'         = @{
+            Patterns    = @('*Url*', '*Web*', '*Http*', '*IP*', '*QR*')
+            Description = 'Web and internet related functions'
+        }
+        'Application' = @{
+            Patterns    = @('*App*', '*Program*', '*Game*', '*Overlay*', '*Aseprite*', '*Doom*', '*Godot*')
+            Description = 'Application and program launchers'
+        }
+        'Utility'     = @{
+            Patterns    = @('*Help*', '*List*', '*Show*', '*Display*', '*Search*', '*Find*', '*Get-*Functions*')
+            Description = 'Utility and helper functions'
+        }
+    }
+
+    # Categorize functions
+    $categorizedFunctions = @{}
+    foreach ($category in $functionCategories.Keys) {
+        $categorizedFunctions[$category] = @()
+    }
+
+    foreach ($function in $allFunctions) {
+        $assigned = $false
+        foreach ($category in $functionCategories.Keys) {
+            foreach ($pattern in $functionCategories[$category].Patterns) {
+                if ($function.Name -like $pattern) {
+                    $categorizedFunctions[$category] += $function
+                    $assigned = $true
+                    break
+                }
+            }
+            if ($assigned) { break }
+        }
+        
+        # If no category matched, put in Utility
+        if (-not $assigned) {
+            $categorizedFunctions['Utility'] += $function
+        }
+    }
+
+    # Filter by search term if specified
+    if ($Search) {
+        foreach ($cat in $categorizedFunctions.Keys) {
+            $categorizedFunctions[$cat] = $categorizedFunctions[$cat] | Where-Object { 
+                $_.Name -like "*$Search*" 
+            }
+        }
+    }
+
+    # Display results
+    Write-Host "`n🔍 Available Functions" -ForegroundColor Cyan
+    Write-Host "=====================" -ForegroundColor DarkGray
+    
+    if ($Search) {
+        Write-Host "Search term: '$Search'" -ForegroundColor Yellow
+    }
+
+    $totalFunctions = 0
+    foreach ($cat in $categorizedFunctions.Keys) {
+        if ($Category -eq 'All' -or $Category -eq $cat) {
+            if ($categorizedFunctions[$cat].Count -gt 0) {
+                $emoji = switch ($cat) {
+                    'System' { '⚙️' }
+                    'Navigation' { '🗂️' }
+                    'Development' { '💻' }
+                    'Social' { '📱' }
+                    'Web' { '🌐' }
+                    'Application' { '🎮' }
+                    'Utility' { '🛠️' }
+                    default { '📋' }
+                }
+                
+                Write-Host "`n$emoji $cat Functions ($($categorizedFunctions[$cat].Count)):" -ForegroundColor Yellow
+                Write-Host $functionCategories[$cat].Description -ForegroundColor DarkGray
+                Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
+                
+                $categorizedFunctions[$cat] | Sort-Object Name | ForEach-Object {
+                    Write-Host "• $($_.Name)" -ForegroundColor Gray
+                }
+                
+                $totalFunctions += $categorizedFunctions[$cat].Count
+            }
+        }
+    }
+
+    Write-Host "`n📊 Summary:" -ForegroundColor Cyan
+    Write-Host "Total functions found: $totalFunctions" -ForegroundColor Green
+    
+    if ($Category -eq 'All') {
+        Write-Host "`n💡 Usage Examples:" -ForegroundColor Cyan
+        Write-Host "• Get-AllFunctions -Category Social" -ForegroundColor Gray
+        Write-Host "• Get-AllFunctions -Search 'git'" -ForegroundColor Gray
+        Write-Host "• Get-AllFunctions -Category Development -Search 'commit'" -ForegroundColor Gray
+    }
+}
+
+function global:Get-FunctionHelp {
+    <#
+    .SYNOPSIS
+    Shows detailed help for a specific function
+
+    .DESCRIPTION
+    Displays comprehensive help information for a function including
+    synopsis, description, parameters, and examples.
+
+    .PARAMETER FunctionName
+    The name of the function to get help for
+
+    .EXAMPLE
+    Get-FunctionHelp -FunctionName "Open-SocialChat"
+    Shows detailed help for the Open-SocialChat function
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$FunctionName
+    )
+
+    try {
+        $function = Get-Command -Name $FunctionName -CommandType Function -ErrorAction Stop
+        
+        Write-Host "`n📖 Function Help: $FunctionName" -ForegroundColor Cyan
+        Write-Host "=====================================" -ForegroundColor DarkGray
+        
+        # Get help content
+        $help = Get-Help -Name $FunctionName -Full -ErrorAction SilentlyContinue
+        
+        if ($help) {
+            if ($help.Synopsis) {
+                Write-Host "`n📝 Synopsis:" -ForegroundColor Yellow
+                Write-Host $help.Synopsis -ForegroundColor Gray
+            }
+            
+            if ($help.Description) {
+                Write-Host "`n📄 Description:" -ForegroundColor Yellow
+                Write-Host $help.Description.Text -ForegroundColor Gray
+            }
+            
+            if ($help.Parameters) {
+                Write-Host "`n⚙️ Parameters:" -ForegroundColor Yellow
+                $help.Parameters.Parameter | ForEach-Object {
+                    Write-Host "• $($_.Name)" -ForegroundColor Cyan
+                    if ($_.Description) {
+                        Write-Host "  $($_.Description.Text)" -ForegroundColor Gray
+                    }
+                    if ($_.Type) {
+                        Write-Host "  Type: $($_.Type.Name)" -ForegroundColor DarkGray
+                    }
+                }
+            }
+            
+            if ($help.Examples) {
+                Write-Host "`n💡 Examples:" -ForegroundColor Yellow
+                $help.Examples.Example | ForEach-Object {
+                    Write-Host "• $($_.Title)" -ForegroundColor Cyan
+                    if ($_.Code) {
+                        Write-Host "  $($_.Code)" -ForegroundColor Gray
+                    }
+                    if ($_.Remarks) {
+                        Write-Host "  $($_.Remarks.Text)" -ForegroundColor DarkGray
+                    }
+                }
+            }
+        }
+        else {
+            Write-Host "No detailed help available for this function." -ForegroundColor Yellow
+            Write-Host "Function exists but may not have help documentation." -ForegroundColor Gray
+        }
+    }
+    catch {
+        Write-Host "Function '$FunctionName' not found." -ForegroundColor Red
+        Write-Host "Use 'Get-AllFunctions' to see available functions." -ForegroundColor Yellow
+    }
+}
+#endregion Function Discovery and Listing
+
 #region Error Handling and Logging
 function Write-ProfileLog {
     param(
@@ -382,8 +620,8 @@ function Get-CommandSuggestion {
             Type     = $_.CommandType
         }
     } | Where-Object { $_.Distance -le $Config.ErrorHandling.LevenshteinThreshold } | 
-    Sort-Object Distance | 
-    Select-Object -First $Config.ErrorHandling.MaxCommandSuggestions
+      Sort-Object Distance | 
+      Select-Object -First $Config.ErrorHandling.MaxCommandSuggestions
 
     if ($suggestions) {
         Write-Host "`nDid you mean one of these commands?" -ForegroundColor Yellow

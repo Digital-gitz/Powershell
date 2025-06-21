@@ -1,43 +1,131 @@
 #region Module Management
-function Import-RequiredModule {
+
+Write-Host "Module-Managment has been loaded....."
+function Import-ModuleManaged {
+    <#
+    .SYNOPSIS
+    Installs and imports a PowerShell module if not already available, with robust error handling and logging.
+    .DESCRIPTION
+    Ensures the specified module is installed and imported, with support for minimum version, parallel install, and logging.
+    #>
     [CmdletBinding()]
-    param (
-        [Parameter(Mandatory)][string]$Name,
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]$Name,
+
+        [Parameter()]
         [string]$Purpose,
-        [string]$Version,
+
+        [Parameter()]
+        [string]$MinimumVersion,
+
+        [Parameter()]
+        [string]$Scope = 'CurrentUser',
+
+        [Parameter()]
         [switch]$Parallel
     )
-    
+
     $job = {
-        param($ModuleName, $Version)
+        param($ModuleName, $MinimumVersion, $Scope)
         try {
             if (-not (Get-Module -Name $ModuleName -ListAvailable)) {
-                if ($Version) {
-                    Install-Module -Name $ModuleName -RequiredVersion $Version -Scope CurrentUser -Force -ErrorAction Stop | Out-Null
-                } else {
-                    Install-Module -Name $ModuleName -Scope CurrentUser -Force -ErrorAction Stop | Out-Null
+                # Ensure PSGallery is trusted
+                if ((Get-PSRepository -Name 'PSGallery').InstallationPolicy -ne 'Trusted') {
+                    Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
                 }
+                $params = @{
+                    Name               = $ModuleName
+                    Force              = $true
+                    Scope              = $Scope
+                    AllowClobber       = $true
+                    SkipPublisherCheck = $true
+                    ErrorAction        = 'Stop'
+                }
+                if ($MinimumVersion) { $params['MinimumVersion'] = $MinimumVersion }
+                Install-Module @params
             }
-            Import-Module -Name $ModuleName -ErrorAction Stop | Out-Null
-            # Return nothing on success
+            Import-Module -Name $ModuleName -Force -DisableNameChecking -ErrorAction Stop
             return $null
-        } catch {
+        }
+        catch {
             return @{ Success = $false; Message = $_.Exception.Message }
         }
     }
 
     if ($Parallel) {
-        $result = Start-Job -ScriptBlock $job -ArgumentList $Name, $Version | 
-            Receive-Job -Wait -AutoRemoveJob
-        # Only output if there was an error
+        $result = Start-Job -ScriptBlock $job -ArgumentList $Name, $MinimumVersion, $Scope | Receive-Job -Wait -AutoRemoveJob
         if ($result) {
-            Write-Warning "Failed to import module $Name`: $($result.Message)"
+            Write-Log "Failed to import module $Name ($($result.Message))" -Level Error
         }
-    } else {
-        $result = & $job $Name $Version
-        # Only output if there was an error
+        else {
+            Write-Log "Imported module $Name successfully (parallel)" -Level Info
+        }
+    }
+    else {
+        $result = & $job $Name $MinimumVersion $Scope
         if ($result) {
-            Write-Warning "Failed to import module $Name`: $($result.Message)"
+            Write-Log "Failed to import module $Name ($($result.Message))" -Level Error
+        }
+        else {
+            Write-Log "Imported module $Name successfully" -Level Info
+        }
+    }
+}
+
+function ConfiguredModulesLoad {
+    <#
+    .SYNOPSIS
+    Loads all essential and optional modules as defined in $Config.
+    .DESCRIPTION
+    Loads modules from $Config.Modules.Essential and $Config.Modules.Optional using Import-ModuleManaged.
+    #>
+    [CmdletBinding()]
+    param(
+        [switch]$Parallel
+    )
+    if ($Config.Modules.Essential) {
+        foreach ($module in $Config.Modules.Essential) {
+            if ($module -is [hashtable]) {
+                if ($Parallel) {
+                    Import-ModuleManaged -Name $module.Name -Purpose $module.Purpose -MinimumVersion $module.MinimumVersion -Parallel
+                }
+                else {
+                    Import-ModuleManaged -Name $module.Name -Purpose $module.Purpose -MinimumVersion $module.MinimumVersion
+                }
+                if ($module.Name -eq 'posh-git') {
+                    $env:POSHGIT_CYGWIN_WARNING = 'false'
+                }
+            }
+            else {
+                if ($Parallel) {
+                    Import-ModuleManaged -Name $module -Parallel
+                }
+                else {
+                    Import-ModuleManaged -Name $module
+                }
+            }
+        }
+    }
+    if ($Config.Modules.Optional) {
+        foreach ($module in $Config.Modules.Optional) {
+            if ($module -is [hashtable]) {
+                if ($Parallel) {
+                    Import-ModuleManaged -Name $module.Name -Purpose $module.Purpose -MinimumVersion $module.MinimumVersion -Parallel
+                }
+                else {
+                    Import-ModuleManaged -Name $module.Name -Purpose $module.Purpose -MinimumVersion $module.MinimumVersion
+                }
+            }
+            else {
+                if ($Parallel) {
+                    Import-ModuleManaged -Name $module -Parallel
+                }
+                else {
+                    Import-ModuleManaged -Name $module
+                }
+            }
         }
     }
 }
@@ -71,18 +159,21 @@ function Remove-UnusedModules {
             $unusedModules | ForEach-Object {
                 Write-Host "- $($_.Name) v$($_.Version)" -ForegroundColor Yellow
             }
-        } else {
+        }
+        else {
             $unusedModules | ForEach-Object {
                 Write-Host "Removing unused module: $($_.Name) v$($_.Version)" -ForegroundColor Yellow
                 try {
                     Uninstall-Module -Name $_.Name -Force -ErrorAction Stop
                     Write-Host "  ✓ Removed successfully" -ForegroundColor Green
-                } catch {
+                }
+                catch {
                     Write-Host "  ✗ Failed to remove: $_" -ForegroundColor Red
                 }
             }
         }
-    } else {
+    }
+    else {
         Write-Host "No unused modules found." -ForegroundColor Green
     }
 }
@@ -91,13 +182,13 @@ function Remove-UnusedModules {
 function Update-PowerShellModules {
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory=$false)]
+        [Parameter(Mandatory = $false)]
         [string[]]$ModuleNames = $Config.RequiredModules.Name,
         
-        [Parameter(Mandatory=$false)]
+        [Parameter(Mandatory = $false)]
         [switch]$AutoInstall,
         
-        [Parameter(Mandatory=$false)]
+        [Parameter(Mandatory = $false)]
         [switch]$UpdateExisting
     )
     
@@ -108,9 +199,9 @@ function Update-PowerShellModules {
     
     $results = @{
         Installed = @()
-        Updated = @()
-        Failed = @()
-        Skipped = @()
+        Updated   = @()
+        Failed    = @()
+        Skipped   = @()
     }
     
     foreach ($moduleName in $ModuleNames) {
@@ -138,9 +229,9 @@ function Update-PowerShellModules {
                     Write-Host "Installing module: $moduleName" -ForegroundColor Cyan -NoNewline
                     
                     $installParams = @{
-                        Name = $moduleName
-                        Scope = "CurrentUser"
-                        Force = $true
+                        Name        = $moduleName
+                        Scope       = "CurrentUser"
+                        Force       = $true
                         ErrorAction = "Stop"
                     }
                     
@@ -154,9 +245,9 @@ function Update-PowerShellModules {
                 }
                 catch {
                     Write-Host " - Failed!" -ForegroundColor Red
-                    Write-Warning "Failed to install module $moduleName`: $_"
+                    Write-Warning "Failed to install module $moduleName ($($_.Exception.Message))"
                     $results.Failed += @{
-                        Name = $moduleName
+                        Name  = $moduleName
                         Error = $_.Exception.Message
                     }
                 }
@@ -179,7 +270,7 @@ function Update-PowerShellModules {
                     
                     Update-Module -Name $moduleName -Force -ErrorAction Stop
                     $results.Updated += @{
-                        Name = $moduleName
+                        Name       = $moduleName
                         OldVersion = $currentVersion
                         NewVersion = $onlineModule.Version
                     }
@@ -191,9 +282,9 @@ function Update-PowerShellModules {
             }
             catch {
                 Write-Host " - Update failed!" -ForegroundColor Red
-                Write-Warning "Failed to update module $moduleName`: $_"
+                Write-Warning "Failed to update module $moduleName ($($_.Exception.Message))"
                 $results.Failed += @{
-                    Name = $moduleName
+                    Name  = $moduleName
                     Error = $_.Exception.Message
                 }
             }
@@ -279,9 +370,10 @@ function Install-RequiredModule {
         }
         Import-Module $ModuleName -Force
         Register-ProfileMetric -Name "Module-Import-$ModuleName" -StartTime $startTime
-    } catch {
+    }
+    catch {
         Register-ProfileMetric -Name "Module-Setup-$ModuleName" -StartTime $startTime -IsError -Details $_.Exception.Message
-        Write-Error "Failed to setup module $ModuleName : $_"
+        Write-Error "Failed to setup module $ModuleName ($($_.Exception.Message))"
         return $false
     }
     return $true
@@ -318,7 +410,8 @@ function New-PowerShellModule {
         # Determine the module path
         if (-not $OutputPath) {
             $modulePath = Join-Path $CommonPaths.Documents "PowerShell\Modules\$ModuleName"
-        } else {
+        }
+        else {
             $modulePath = Join-Path $OutputPath $ModuleName
         }
         
@@ -374,10 +467,152 @@ Export-ModuleMember -Function *
         Write-Host "Module created successfully at $modulePath" -ForegroundColor Green
         Write-Host "Module manifest: $manifestPath" -ForegroundColor Cyan
         Write-Host "Module script: $moduleScriptPath" -ForegroundColor Cyan
-    } catch {
-        Write-Error "Failed to create module: $_"
+    }
+    catch {
+        Write-Error "Failed to create module ($($_.Exception.Message))"
     }
 }
 
 
 
+function Import-ModuleSafely {
+    <#
+    .SYNOPSIS
+    Installs and imports a PowerShell module if not already available.
+    .DESCRIPTION
+    Ensures the specified module is installed and imported, with robust error handling and logging.
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string]$Name,
+
+        [Parameter()]
+        [string]$Scope = 'CurrentUser',
+
+        [Parameter()]
+        [string]$Purpose,
+
+        [Parameter()]
+        [string]$MinimumVersion
+    )
+
+    try {
+        if (Get-Module -Name $Name) { return }
+        if (-not (Get-Module -Name $Name -ListAvailable)) {
+            try {
+                if ((Get-PSRepository -Name 'PSGallery').InstallationPolicy -ne 'Trusted') {
+                    Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+                }
+                $params = @{
+                    Name               = $Name
+                    Force              = $true
+                    Scope              = $Scope
+                    AllowClobber       = $true
+                    SkipPublisherCheck = $true
+                    ErrorAction        = 'Stop'
+                }
+                if ($MinimumVersion) { $params['MinimumVersion'] = $MinimumVersion }
+                Install-Module @params
+                Write-Log "Installed module $Name" -Level Info
+            }
+            catch {
+                Write-Log "Failed to install module $Name ($($_.Exception.Message))" -Level Error
+                return
+            }
+        }
+        Import-Module -Name $Name -Force -DisableNameChecking -ErrorAction Stop
+        Write-Log "Imported module $Name" -Level Info
+    }
+    catch {
+        Write-Error "Failed to load $Name ($($_.Exception.Message))"
+    }
+}
+
+# Load essential modules
+foreach ($module in $Config.Modules.Essential) {
+    Import-ModuleSafely -Name $module.Name -Purpose $module.Purpose
+    if ($module.Name -eq 'posh-git') {
+        $env:POSHGIT_CYGWIN_WARNING = 'false'
+    }
+}
+
+# Load optional modules
+foreach ($module in $Config.Modules.Optional) {
+    Import-ModuleSafely -Name $module
+}
+
+
+#region Module Management
+# Optimized module loading function
+# function Import-ModuleSafely {
+#     param(
+#         [Parameter(Mandatory = $true)]
+#         [string]$Name,
+        
+#         [Parameter(Mandatory = $false)]
+#         [string]$Scope = 'CurrentUser',
+        
+#         [Parameter(Mandatory = $false)]
+#         [string]$Purpose,
+        
+#         [Parameter(Mandatory = $false)]
+#         [string]$MinimumVersion
+#     )
+    
+#     try {
+#         # Check if module is already loaded
+#         if (Get-Module -Name $Name) {
+#             return
+#         }
+
+#         # Check if module needs to be installed
+#         if (-not (Get-Module -Name $Name -ListAvailable)) {
+#             try {
+#                 # Ensure PSGallery is trusted
+#                 if ((Get-PSRepository -Name 'PSGallery').InstallationPolicy -ne 'Trusted') {
+#                     Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+#                 }
+                
+#                 # Install module
+#                 $params = @{
+#                     Name               = $Name
+#                     Force              = $true 
+#                     Scope              = $Scope
+#                     AllowClobber       = $true
+#                     SkipPublisherCheck = $true
+#                     ErrorAction        = 'Stop'
+#                 }
+#                 if ($MinimumVersion) {
+#                     $params['MinimumVersion'] = $MinimumVersion
+#                 }
+                
+#                 Install-Module @params
+#             }
+#             catch {
+#                 Write-Warning "Failed to install module $Name : $($_.Exception.Message)"
+#                 return
+#             }
+#         }
+
+#         # Import module
+#         Import-Module -Name $Name -Force -DisableNameChecking -ErrorAction Stop
+#     }
+#     catch {
+#         Write-Warning "Failed to load ${Name} - $($_.Exception.Message)"
+#     }
+# }
+
+# # Load essential modules
+# foreach ($module in $Config.Modules.Essential) {
+#     Import-ModuleSafely -Name $module.Name -Purpose $module.Purpose
+#     if ($module.Name -eq 'posh-git') {
+#         $env:POSHGIT_CYGWIN_WARNING = 'false'
+#     }
+# }
+
+# # Load optional modules
+# foreach ($module in $Config.Modules.Optional) {
+#     Import-ModuleSafely -Name $module
+# }

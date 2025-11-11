@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:10:52.773</DT>
-      <DT N="InstalledDate">2025-06-08T15:49:32.2780086-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:44.5256732-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -328,161 +328,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzApiManagementApiToGateway</S>
-                <S>Add-AzApiManagementApiToProduct</S>
-                <S>Add-AzApiManagementProductToGroup</S>
-                <S>Add-AzApiManagementRegion</S>
-                <S>Add-AzApiManagementUserToGroup</S>
-                <S>Backup-AzApiManagement</S>
-                <S>Export-AzApiManagementApi</S>
-                <S>Get-AzApiManagement</S>
-                <S>Get-AzApiManagementApi</S>
-                <S>Get-AzApiManagementApiRelease</S>
-                <S>Get-AzApiManagementApiRevision</S>
-                <S>Get-AzApiManagementApiSchema</S>
-                <S>Get-AzApiManagementApiVersionSet</S>
-                <S>Get-AzApiManagementAuthorizationServer</S>
-                <S>Get-AzApiManagementAuthorizationServerClientSecret</S>
-                <S>Get-AzApiManagementBackend</S>
-                <S>Get-AzApiManagementCache</S>
-                <S>Get-AzApiManagementCertificate</S>
-                <S>Get-AzApiManagementDiagnostic</S>
-                <S>Get-AzApiManagementGateway</S>
-                <S>Get-AzApiManagementGatewayHostnameConfiguration</S>
-                <S>Get-AzApiManagementGatewayKey</S>
-                <S>Get-AzApiManagementGroup</S>
-                <S>Get-AzApiManagementIdentityProvider</S>
-                <S>Get-AzApiManagementIdentityProviderClientSecret</S>
-                <S>Get-AzApiManagementLogger</S>
-                <S>Get-AzApiManagementNamedValue</S>
-                <S>Get-AzApiManagementNamedValueSecretValue</S>
-                <S>Get-AzApiManagementNetworkStatus</S>
-                <S>Get-AzApiManagementOpenIdConnectProvider</S>
-                <S>Get-AzApiManagementOpenIdConnectProviderClientSecret</S>
-                <S>Get-AzApiManagementOperation</S>
-                <S>Get-AzApiManagementPolicy</S>
-                <S>Get-AzApiManagementProduct</S>
-                <S>Get-AzApiManagementSsoToken</S>
-                <S>Get-AzApiManagementSubscription</S>
-                <S>Get-AzApiManagementSubscriptionKey</S>
-                <S>Get-AzApiManagementTenantAccess</S>
-                <S>Get-AzApiManagementTenantAccessSecret</S>
-                <S>Get-AzApiManagementTenantGitAccess</S>
-                <S>Get-AzApiManagementTenantGitAccessSecret</S>
-                <S>Get-AzApiManagementTenantSyncState</S>
-                <S>Get-AzApiManagementUser</S>
-                <S>Get-AzApiManagementUserSsoUrl</S>
-                <S>Import-AzApiManagementApi</S>
-                <S>New-AzApiManagement</S>
-                <S>New-AzApiManagementApi</S>
-                <S>New-AzApiManagementApiRelease</S>
-                <S>New-AzApiManagementApiRevision</S>
-                <S>New-AzApiManagementApiSchema</S>
-                <S>New-AzApiManagementApiVersionSet</S>
-                <S>New-AzApiManagementAuthorizationServer</S>
-                <S>New-AzApiManagementBackend</S>
-                <S>New-AzApiManagementBackendCredential</S>
-                <S>New-AzApiManagementBackendProxy</S>
-                <S>New-AzApiManagementBackendServiceFabric</S>
-                <S>New-AzApiManagementCache</S>
-                <S>New-AzApiManagementCertificate</S>
-                <S>New-AzApiManagementContext</S>
-                <S>New-AzApiManagementCustomHostnameConfiguration</S>
-                <S>New-AzApiManagementDiagnostic</S>
-                <S>New-AzApiManagementGateway</S>
-                <S>New-AzApiManagementGatewayHostnameConfiguration</S>
-                <S>New-AzApiManagementGroup</S>
-                <S>New-AzApiManagementHttpMessageDiagnostic</S>
-                <S>New-AzApiManagementIdentityProvider</S>
-                <S>New-AzApiManagementKeyVaultObject</S>
-                <S>New-AzApiManagementLogger</S>
-                <S>New-AzApiManagementNamedValue</S>
-                <S>New-AzApiManagementOpenIdConnectProvider</S>
-                <S>New-AzApiManagementOperation</S>
-                <S>New-AzApiManagementPipelineDiagnosticSetting</S>
-                <S>New-AzApiManagementProduct</S>
-                <S>New-AzApiManagementRegion</S>
-                <S>New-AzApiManagementResourceLocationObject</S>
-                <S>New-AzApiManagementSamplingSetting</S>
-                <S>New-AzApiManagementSslSetting</S>
-                <S>New-AzApiManagementSubscription</S>
-                <S>New-AzApiManagementSystemCertificate</S>
-                <S>New-AzApiManagementUser</S>
-                <S>New-AzApiManagementUserToken</S>
-                <S>New-AzApiManagementVirtualNetwork</S>
-                <S>Publish-AzApiManagementTenantGitConfiguration</S>
-                <S>Remove-AzApiManagement</S>
-                <S>Remove-AzApiManagementApi</S>
-                <S>Remove-AzApiManagementApiFromGateway</S>
-                <S>Remove-AzApiManagementApiFromProduct</S>
-                <S>Remove-AzApiManagementApiRelease</S>
-                <S>Remove-AzApiManagementApiRevision</S>
-                <S>Remove-AzApiManagementApiSchema</S>
-                <S>Remove-AzApiManagementApiVersionSet</S>
-                <S>Remove-AzApiManagementAuthorizationServer</S>
-                <S>Remove-AzApiManagementBackend</S>
-                <S>Remove-AzApiManagementCache</S>
-                <S>Remove-AzApiManagementCertificate</S>
-                <S>Remove-AzApiManagementDiagnostic</S>
-                <S>Remove-AzApiManagementGateway</S>
-                <S>Remove-AzApiManagementGatewayHostnameConfiguration</S>
-                <S>Remove-AzApiManagementGroup</S>
-                <S>Remove-AzApiManagementIdentityProvider</S>
-                <S>Remove-AzApiManagementLogger</S>
-                <S>Remove-AzApiManagementNamedValue</S>
-                <S>Remove-AzApiManagementOpenIdConnectProvider</S>
-                <S>Remove-AzApiManagementOperation</S>
-                <S>Remove-AzApiManagementPolicy</S>
-                <S>Remove-AzApiManagementProduct</S>
-                <S>Remove-AzApiManagementProductFromGroup</S>
-                <S>Remove-AzApiManagementRegion</S>
-                <S>Remove-AzApiManagementSubscription</S>
-                <S>Remove-AzApiManagementUser</S>
-                <S>Remove-AzApiManagementUserFromGroup</S>
-                <S>Restore-AzApiManagement</S>
-                <S>Save-AzApiManagementTenantGitConfiguration</S>
-                <S>Set-AzApiManagement</S>
-                <S>Set-AzApiManagementApi</S>
-                <S>Set-AzApiManagementApiRevision</S>
-                <S>Set-AzApiManagementApiSchema</S>
-                <S>Set-AzApiManagementApiVersionSet</S>
-                <S>Set-AzApiManagementAuthorizationServer</S>
-                <S>Set-AzApiManagementBackend</S>
-                <S>Set-AzApiManagementCertificate</S>
-                <S>Set-AzApiManagementDiagnostic</S>
-                <S>Set-AzApiManagementGroup</S>
-                <S>Set-AzApiManagementIdentityProvider</S>
-                <S>Set-AzApiManagementLogger</S>
-                <S>Set-AzApiManagementNamedValue</S>
-                <S>Set-AzApiManagementOpenIdConnectProvider</S>
-                <S>Set-AzApiManagementOperation</S>
-                <S>Set-AzApiManagementPolicy</S>
-                <S>Set-AzApiManagementProduct</S>
-                <S>Set-AzApiManagementSubscription</S>
-                <S>Set-AzApiManagementTenantAccess</S>
-                <S>Set-AzApiManagementUser</S>
-                <S>Sync-AzApiManagementKeyVaultSecret</S>
-                <S>Update-AzApiManagementApiRelease</S>
-                <S>Update-AzApiManagementCache</S>
-                <S>Update-AzApiManagementGateway</S>
-                <S>Update-AzApiManagementRegion</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzApiManagementApiToGateway</S>
@@ -633,6 +480,159 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzApiManagementApiToGateway</S>
+                <S>Add-AzApiManagementApiToProduct</S>
+                <S>Add-AzApiManagementProductToGroup</S>
+                <S>Add-AzApiManagementRegion</S>
+                <S>Add-AzApiManagementUserToGroup</S>
+                <S>Backup-AzApiManagement</S>
+                <S>Export-AzApiManagementApi</S>
+                <S>Get-AzApiManagement</S>
+                <S>Get-AzApiManagementApi</S>
+                <S>Get-AzApiManagementApiRelease</S>
+                <S>Get-AzApiManagementApiRevision</S>
+                <S>Get-AzApiManagementApiSchema</S>
+                <S>Get-AzApiManagementApiVersionSet</S>
+                <S>Get-AzApiManagementAuthorizationServer</S>
+                <S>Get-AzApiManagementAuthorizationServerClientSecret</S>
+                <S>Get-AzApiManagementBackend</S>
+                <S>Get-AzApiManagementCache</S>
+                <S>Get-AzApiManagementCertificate</S>
+                <S>Get-AzApiManagementDiagnostic</S>
+                <S>Get-AzApiManagementGateway</S>
+                <S>Get-AzApiManagementGatewayHostnameConfiguration</S>
+                <S>Get-AzApiManagementGatewayKey</S>
+                <S>Get-AzApiManagementGroup</S>
+                <S>Get-AzApiManagementIdentityProvider</S>
+                <S>Get-AzApiManagementIdentityProviderClientSecret</S>
+                <S>Get-AzApiManagementLogger</S>
+                <S>Get-AzApiManagementNamedValue</S>
+                <S>Get-AzApiManagementNamedValueSecretValue</S>
+                <S>Get-AzApiManagementNetworkStatus</S>
+                <S>Get-AzApiManagementOpenIdConnectProvider</S>
+                <S>Get-AzApiManagementOpenIdConnectProviderClientSecret</S>
+                <S>Get-AzApiManagementOperation</S>
+                <S>Get-AzApiManagementPolicy</S>
+                <S>Get-AzApiManagementProduct</S>
+                <S>Get-AzApiManagementSsoToken</S>
+                <S>Get-AzApiManagementSubscription</S>
+                <S>Get-AzApiManagementSubscriptionKey</S>
+                <S>Get-AzApiManagementTenantAccess</S>
+                <S>Get-AzApiManagementTenantAccessSecret</S>
+                <S>Get-AzApiManagementTenantGitAccess</S>
+                <S>Get-AzApiManagementTenantGitAccessSecret</S>
+                <S>Get-AzApiManagementTenantSyncState</S>
+                <S>Get-AzApiManagementUser</S>
+                <S>Get-AzApiManagementUserSsoUrl</S>
+                <S>Import-AzApiManagementApi</S>
+                <S>New-AzApiManagement</S>
+                <S>New-AzApiManagementApi</S>
+                <S>New-AzApiManagementApiRelease</S>
+                <S>New-AzApiManagementApiRevision</S>
+                <S>New-AzApiManagementApiSchema</S>
+                <S>New-AzApiManagementApiVersionSet</S>
+                <S>New-AzApiManagementAuthorizationServer</S>
+                <S>New-AzApiManagementBackend</S>
+                <S>New-AzApiManagementBackendCredential</S>
+                <S>New-AzApiManagementBackendProxy</S>
+                <S>New-AzApiManagementBackendServiceFabric</S>
+                <S>New-AzApiManagementCache</S>
+                <S>New-AzApiManagementCertificate</S>
+                <S>New-AzApiManagementContext</S>
+                <S>New-AzApiManagementCustomHostnameConfiguration</S>
+                <S>New-AzApiManagementDiagnostic</S>
+                <S>New-AzApiManagementGateway</S>
+                <S>New-AzApiManagementGatewayHostnameConfiguration</S>
+                <S>New-AzApiManagementGroup</S>
+                <S>New-AzApiManagementHttpMessageDiagnostic</S>
+                <S>New-AzApiManagementIdentityProvider</S>
+                <S>New-AzApiManagementKeyVaultObject</S>
+                <S>New-AzApiManagementLogger</S>
+                <S>New-AzApiManagementNamedValue</S>
+                <S>New-AzApiManagementOpenIdConnectProvider</S>
+                <S>New-AzApiManagementOperation</S>
+                <S>New-AzApiManagementPipelineDiagnosticSetting</S>
+                <S>New-AzApiManagementProduct</S>
+                <S>New-AzApiManagementRegion</S>
+                <S>New-AzApiManagementResourceLocationObject</S>
+                <S>New-AzApiManagementSamplingSetting</S>
+                <S>New-AzApiManagementSslSetting</S>
+                <S>New-AzApiManagementSubscription</S>
+                <S>New-AzApiManagementSystemCertificate</S>
+                <S>New-AzApiManagementUser</S>
+                <S>New-AzApiManagementUserToken</S>
+                <S>New-AzApiManagementVirtualNetwork</S>
+                <S>Publish-AzApiManagementTenantGitConfiguration</S>
+                <S>Remove-AzApiManagement</S>
+                <S>Remove-AzApiManagementApi</S>
+                <S>Remove-AzApiManagementApiFromGateway</S>
+                <S>Remove-AzApiManagementApiFromProduct</S>
+                <S>Remove-AzApiManagementApiRelease</S>
+                <S>Remove-AzApiManagementApiRevision</S>
+                <S>Remove-AzApiManagementApiSchema</S>
+                <S>Remove-AzApiManagementApiVersionSet</S>
+                <S>Remove-AzApiManagementAuthorizationServer</S>
+                <S>Remove-AzApiManagementBackend</S>
+                <S>Remove-AzApiManagementCache</S>
+                <S>Remove-AzApiManagementCertificate</S>
+                <S>Remove-AzApiManagementDiagnostic</S>
+                <S>Remove-AzApiManagementGateway</S>
+                <S>Remove-AzApiManagementGatewayHostnameConfiguration</S>
+                <S>Remove-AzApiManagementGroup</S>
+                <S>Remove-AzApiManagementIdentityProvider</S>
+                <S>Remove-AzApiManagementLogger</S>
+                <S>Remove-AzApiManagementNamedValue</S>
+                <S>Remove-AzApiManagementOpenIdConnectProvider</S>
+                <S>Remove-AzApiManagementOperation</S>
+                <S>Remove-AzApiManagementPolicy</S>
+                <S>Remove-AzApiManagementProduct</S>
+                <S>Remove-AzApiManagementProductFromGroup</S>
+                <S>Remove-AzApiManagementRegion</S>
+                <S>Remove-AzApiManagementSubscription</S>
+                <S>Remove-AzApiManagementUser</S>
+                <S>Remove-AzApiManagementUserFromGroup</S>
+                <S>Restore-AzApiManagement</S>
+                <S>Save-AzApiManagementTenantGitConfiguration</S>
+                <S>Set-AzApiManagement</S>
+                <S>Set-AzApiManagementApi</S>
+                <S>Set-AzApiManagementApiRevision</S>
+                <S>Set-AzApiManagementApiSchema</S>
+                <S>Set-AzApiManagementApiVersionSet</S>
+                <S>Set-AzApiManagementAuthorizationServer</S>
+                <S>Set-AzApiManagementBackend</S>
+                <S>Set-AzApiManagementCertificate</S>
+                <S>Set-AzApiManagementDiagnostic</S>
+                <S>Set-AzApiManagementGroup</S>
+                <S>Set-AzApiManagementIdentityProvider</S>
+                <S>Set-AzApiManagementLogger</S>
+                <S>Set-AzApiManagementNamedValue</S>
+                <S>Set-AzApiManagementOpenIdConnectProvider</S>
+                <S>Set-AzApiManagementOperation</S>
+                <S>Set-AzApiManagementPolicy</S>
+                <S>Set-AzApiManagementProduct</S>
+                <S>Set-AzApiManagementSubscription</S>
+                <S>Set-AzApiManagementTenantAccess</S>
+                <S>Set-AzApiManagementUser</S>
+                <S>Sync-AzApiManagementKeyVaultSecret</S>
+                <S>Update-AzApiManagementApiRelease</S>
+                <S>Update-AzApiManagementCache</S>
+                <S>Update-AzApiManagementGateway</S>
+                <S>Update-AzApiManagementRegion</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

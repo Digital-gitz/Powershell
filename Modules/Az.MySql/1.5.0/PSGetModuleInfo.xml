@@ -1,0 +1,300 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.MySql</S>
+      <S N="Version">1.5.0</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell: MySql cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-08-05T01:44:32.49</DT>
+      <DT N="InstalledDate">2025-09-27T23:50:21.3181364-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>MySql</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSFunction_Get-AzMySqlConfiguration</S>
+          <S>PSCommand_Get-AzMySqlConfiguration</S>
+          <S>PSFunction_Get-AzMySqlConnectionString</S>
+          <S>PSCommand_Get-AzMySqlConnectionString</S>
+          <S>PSFunction_Get-AzMySqlFirewallRule</S>
+          <S>PSCommand_Get-AzMySqlFirewallRule</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerAdvancedThreatProtectionSetting</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerAdvancedThreatProtectionSetting</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerConfiguration</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerConfiguration</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerConnectionString</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerConnectionString</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerDatabase</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerDatabase</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerLocationBasedCapability</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerLocationBasedCapability</S>
+          <S>PSFunction_Get-AzMySqlFlexibleServerReplica</S>
+          <S>PSCommand_Get-AzMySqlFlexibleServerReplica</S>
+          <S>PSFunction_Get-AzMySqlReplica</S>
+          <S>PSCommand_Get-AzMySqlReplica</S>
+          <S>PSFunction_Get-AzMySqlServer</S>
+          <S>PSCommand_Get-AzMySqlServer</S>
+          <S>PSFunction_Get-AzMySqlVirtualNetworkRule</S>
+          <S>PSCommand_Get-AzMySqlVirtualNetworkRule</S>
+          <S>PSFunction_New-AzMySqlFirewallRule</S>
+          <S>PSCommand_New-AzMySqlFirewallRule</S>
+          <S>PSFunction_New-AzMySqlFlexibleServer</S>
+          <S>PSCommand_New-AzMySqlFlexibleServer</S>
+          <S>PSFunction_New-AzMySqlFlexibleServerDatabase</S>
+          <S>PSCommand_New-AzMySqlFlexibleServerDatabase</S>
+          <S>PSFunction_New-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_New-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_New-AzMySqlFlexibleServerReplica</S>
+          <S>PSCommand_New-AzMySqlFlexibleServerReplica</S>
+          <S>PSFunction_New-AzMySqlReplica</S>
+          <S>PSCommand_New-AzMySqlReplica</S>
+          <S>PSFunction_New-AzMySqlServer</S>
+          <S>PSCommand_New-AzMySqlServer</S>
+          <S>PSFunction_New-AzMySqlVirtualNetworkRule</S>
+          <S>PSCommand_New-AzMySqlVirtualNetworkRule</S>
+          <S>PSFunction_Remove-AzMySqlFirewallRule</S>
+          <S>PSCommand_Remove-AzMySqlFirewallRule</S>
+          <S>PSFunction_Remove-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Remove-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Remove-AzMySqlFlexibleServerDatabase</S>
+          <S>PSCommand_Remove-AzMySqlFlexibleServerDatabase</S>
+          <S>PSFunction_Remove-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_Remove-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_Remove-AzMySqlServer</S>
+          <S>PSCommand_Remove-AzMySqlServer</S>
+          <S>PSFunction_Remove-AzMySqlVirtualNetworkRule</S>
+          <S>PSCommand_Remove-AzMySqlVirtualNetworkRule</S>
+          <S>PSFunction_Restart-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Restart-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Restart-AzMySqlServer</S>
+          <S>PSCommand_Restart-AzMySqlServer</S>
+          <S>PSFunction_Restore-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Restore-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Restore-AzMySqlServer</S>
+          <S>PSCommand_Restore-AzMySqlServer</S>
+          <S>PSFunction_Start-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Start-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Stop-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Stop-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Test-AzMySqlFlexibleServerConnect</S>
+          <S>PSCommand_Test-AzMySqlFlexibleServerConnect</S>
+          <S>PSFunction_Update-AzMySqlConfiguration</S>
+          <S>PSCommand_Update-AzMySqlConfiguration</S>
+          <S>PSFunction_Update-AzMySqlFirewallRule</S>
+          <S>PSCommand_Update-AzMySqlFirewallRule</S>
+          <S>PSFunction_Update-AzMySqlFlexibleServer</S>
+          <S>PSCommand_Update-AzMySqlFlexibleServer</S>
+          <S>PSFunction_Update-AzMySqlFlexibleServerAdvancedThreatProtectionSetting</S>
+          <S>PSCommand_Update-AzMySqlFlexibleServerAdvancedThreatProtectionSetting</S>
+          <S>PSFunction_Update-AzMySqlFlexibleServerConfiguration</S>
+          <S>PSCommand_Update-AzMySqlFlexibleServerConfiguration</S>
+          <S>PSFunction_Update-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSCommand_Update-AzMySqlFlexibleServerFirewallRule</S>
+          <S>PSFunction_Update-AzMySqlServer</S>
+          <S>PSCommand_Update-AzMySqlServer</S>
+          <S>PSFunction_Update-AzMySqlServerConfigurationsList</S>
+          <S>PSCommand_Update-AzMySqlServerConfigurationsList</S>
+          <S>PSFunction_Update-AzMySqlVirtualNetworkRule</S>
+          <S>PSCommand_Update-AzMySqlVirtualNetworkRule</S>
+          <S>PSIncludes_Function</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-AzMySqlConfiguration</S>
+                <S>Get-AzMySqlConnectionString</S>
+                <S>Get-AzMySqlFirewallRule</S>
+                <S>Get-AzMySqlFlexibleServer</S>
+                <S>Get-AzMySqlFlexibleServerAdvancedThreatProtectionSetting</S>
+                <S>Get-AzMySqlFlexibleServerConfiguration</S>
+                <S>Get-AzMySqlFlexibleServerConnectionString</S>
+                <S>Get-AzMySqlFlexibleServerDatabase</S>
+                <S>Get-AzMySqlFlexibleServerFirewallRule</S>
+                <S>Get-AzMySqlFlexibleServerLocationBasedCapability</S>
+                <S>Get-AzMySqlFlexibleServerReplica</S>
+                <S>Get-AzMySqlReplica</S>
+                <S>Get-AzMySqlServer</S>
+                <S>Get-AzMySqlVirtualNetworkRule</S>
+                <S>New-AzMySqlFirewallRule</S>
+                <S>New-AzMySqlFlexibleServer</S>
+                <S>New-AzMySqlFlexibleServerDatabase</S>
+                <S>New-AzMySqlFlexibleServerFirewallRule</S>
+                <S>New-AzMySqlFlexibleServerReplica</S>
+                <S>New-AzMySqlReplica</S>
+                <S>New-AzMySqlServer</S>
+                <S>New-AzMySqlVirtualNetworkRule</S>
+                <S>Remove-AzMySqlFirewallRule</S>
+                <S>Remove-AzMySqlFlexibleServer</S>
+                <S>Remove-AzMySqlFlexibleServerDatabase</S>
+                <S>Remove-AzMySqlFlexibleServerFirewallRule</S>
+                <S>Remove-AzMySqlServer</S>
+                <S>Remove-AzMySqlVirtualNetworkRule</S>
+                <S>Restart-AzMySqlFlexibleServer</S>
+                <S>Restart-AzMySqlServer</S>
+                <S>Restore-AzMySqlFlexibleServer</S>
+                <S>Restore-AzMySqlServer</S>
+                <S>Start-AzMySqlFlexibleServer</S>
+                <S>Stop-AzMySqlFlexibleServer</S>
+                <S>Test-AzMySqlFlexibleServerConnect</S>
+                <S>Update-AzMySqlConfiguration</S>
+                <S>Update-AzMySqlFirewallRule</S>
+                <S>Update-AzMySqlFlexibleServer</S>
+                <S>Update-AzMySqlFlexibleServerAdvancedThreatProtectionSetting</S>
+                <S>Update-AzMySqlFlexibleServerConfiguration</S>
+                <S>Update-AzMySqlFlexibleServerFirewallRule</S>
+                <S>Update-AzMySqlServer</S>
+                <S>Update-AzMySqlServerConfigurationsList</S>
+                <S>Update-AzMySqlVirtualNetworkRule</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">- Aligned with SimplySql, use a PSCredential object instead of UserName/Password parameters when calling Open-MySQLConnection_x000D__x000A_- Introduced a Timeout value when running Test-AzMySqlFlexibleServerConnect with long running query</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[5.2.0, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>5.2.0</ToString>
+                    <Props>
+                      <Version N="Version">5.2.0.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">5.2.0</S>
+                      <I32 N="Major">5</I32>
+                      <I32 N="Minor">2</I32>
+                      <I32 N="Patch">0</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[5.2.0, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.5.0</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

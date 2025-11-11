@@ -1,0 +1,507 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DevCenter</S>
+      <S N="Version">2.0.2</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell: DevCenter cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-08-05T01:43:51.83</DT>
+      <DT N="InstalledDate">2025-09-27T23:50:08.0726459-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>DevCenter</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSFunction_Connect-AzDevCenterAdminCatalog</S>
+          <S>PSCommand_Connect-AzDevCenterAdminCatalog</S>
+          <S>PSFunction_Connect-AzDevCenterAdminProjectCatalog</S>
+          <S>PSCommand_Connect-AzDevCenterAdminProjectCatalog</S>
+          <S>PSFunction_Deploy-AzDevCenterUserEnvironment</S>
+          <S>PSCommand_Deploy-AzDevCenterUserEnvironment</S>
+          <S>PSFunction_Get-AzDevCenterAdminAttachedNetwork</S>
+          <S>PSCommand_Get-AzDevCenterAdminAttachedNetwork</S>
+          <S>PSFunction_Get-AzDevCenterAdminCatalog</S>
+          <S>PSCommand_Get-AzDevCenterAdminCatalog</S>
+          <S>PSFunction_Get-AzDevCenterAdminCatalogSyncErrorDetail</S>
+          <S>PSCommand_Get-AzDevCenterAdminCatalogSyncErrorDetail</S>
+          <S>PSFunction_Get-AzDevCenterAdminCustomizationTask</S>
+          <S>PSCommand_Get-AzDevCenterAdminCustomizationTask</S>
+          <S>PSFunction_Get-AzDevCenterAdminCustomizationTaskErrorDetail</S>
+          <S>PSCommand_Get-AzDevCenterAdminCustomizationTaskErrorDetail</S>
+          <S>PSFunction_Get-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSCommand_Get-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSFunction_Get-AzDevCenterAdminDevCenter</S>
+          <S>PSCommand_Get-AzDevCenterAdminDevCenter</S>
+          <S>PSFunction_Get-AzDevCenterAdminEnvironmentDefinition</S>
+          <S>PSCommand_Get-AzDevCenterAdminEnvironmentDefinition</S>
+          <S>PSFunction_Get-AzDevCenterAdminEnvironmentDefinitionErrorDetail</S>
+          <S>PSCommand_Get-AzDevCenterAdminEnvironmentDefinitionErrorDetail</S>
+          <S>PSFunction_Get-AzDevCenterAdminEnvironmentType</S>
+          <S>PSCommand_Get-AzDevCenterAdminEnvironmentType</S>
+          <S>PSFunction_Get-AzDevCenterAdminGallery</S>
+          <S>PSCommand_Get-AzDevCenterAdminGallery</S>
+          <S>PSFunction_Get-AzDevCenterAdminImage</S>
+          <S>PSCommand_Get-AzDevCenterAdminImage</S>
+          <S>PSFunction_Get-AzDevCenterAdminImageVersion</S>
+          <S>PSCommand_Get-AzDevCenterAdminImageVersion</S>
+          <S>PSFunction_Get-AzDevCenterAdminNetworkConnection</S>
+          <S>PSCommand_Get-AzDevCenterAdminNetworkConnection</S>
+          <S>PSFunction_Get-AzDevCenterAdminNetworkConnectionHealthDetail</S>
+          <S>PSCommand_Get-AzDevCenterAdminNetworkConnectionHealthDetail</S>
+          <S>PSFunction_Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint</S>
+          <S>PSCommand_Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint</S>
+          <S>PSFunction_Get-AzDevCenterAdminOperationStatus</S>
+          <S>PSCommand_Get-AzDevCenterAdminOperationStatus</S>
+          <S>PSFunction_Get-AzDevCenterAdminPlan</S>
+          <S>PSCommand_Get-AzDevCenterAdminPlan</S>
+          <S>PSFunction_Get-AzDevCenterAdminPlanMember</S>
+          <S>PSCommand_Get-AzDevCenterAdminPlanMember</S>
+          <S>PSFunction_Get-AzDevCenterAdminPool</S>
+          <S>PSCommand_Get-AzDevCenterAdminPool</S>
+          <S>PSFunction_Get-AzDevCenterAdminProject</S>
+          <S>PSCommand_Get-AzDevCenterAdminProject</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectAllowedEnvironmentType</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectAllowedEnvironmentType</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectCatalog</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectCatalog</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectCatalogSyncErrorDetail</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectCatalogSyncErrorDetail</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectEnvironmentDefinition</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectEnvironmentDefinition</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectEnvironmentDefinitionErrorDetail</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectEnvironmentDefinitionErrorDetail</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSFunction_Get-AzDevCenterAdminProjectInheritedSetting</S>
+          <S>PSCommand_Get-AzDevCenterAdminProjectInheritedSetting</S>
+          <S>PSFunction_Get-AzDevCenterAdminSchedule</S>
+          <S>PSCommand_Get-AzDevCenterAdminSchedule</S>
+          <S>PSFunction_Get-AzDevCenterAdminSku</S>
+          <S>PSCommand_Get-AzDevCenterAdminSku</S>
+          <S>PSFunction_Get-AzDevCenterAdminUsage</S>
+          <S>PSCommand_Get-AzDevCenterAdminUsage</S>
+          <S>PSFunction_Get-AzDevCenterUserCatalog</S>
+          <S>PSCommand_Get-AzDevCenterUserCatalog</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBox</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBox</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBoxAction</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBoxAction</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBoxCustomizationGroup</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBoxCustomizationGroup</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBoxCustomizationTaskDefinition</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBoxCustomizationTaskDefinition</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBoxCustomizationTaskLog</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBoxCustomizationTaskLog</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBoxOperation</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBoxOperation</S>
+          <S>PSFunction_Get-AzDevCenterUserDevBoxRemoteConnection</S>
+          <S>PSCommand_Get-AzDevCenterUserDevBoxRemoteConnection</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironment</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironment</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironmentAction</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironmentAction</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironmentDefinition</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironmentDefinition</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironmentLog</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironmentLog</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironmentOperation</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironmentOperation</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironmentOutput</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironmentOutput</S>
+          <S>PSFunction_Get-AzDevCenterUserEnvironmentType</S>
+          <S>PSCommand_Get-AzDevCenterUserEnvironmentType</S>
+          <S>PSFunction_Get-AzDevCenterUserPool</S>
+          <S>PSCommand_Get-AzDevCenterUserPool</S>
+          <S>PSFunction_Get-AzDevCenterUserProject</S>
+          <S>PSCommand_Get-AzDevCenterUserProject</S>
+          <S>PSFunction_Get-AzDevCenterUserSchedule</S>
+          <S>PSCommand_Get-AzDevCenterUserSchedule</S>
+          <S>PSFunction_Invoke-AzDevCenterAdminExecuteCheckNameAvailability</S>
+          <S>PSCommand_Invoke-AzDevCenterAdminExecuteCheckNameAvailability</S>
+          <S>PSFunction_Invoke-AzDevCenterAdminExecuteCheckScopedNameAvailability</S>
+          <S>PSCommand_Invoke-AzDevCenterAdminExecuteCheckScopedNameAvailability</S>
+          <S>PSFunction_Invoke-AzDevCenterUserDelayDevBoxAction</S>
+          <S>PSCommand_Invoke-AzDevCenterUserDelayDevBoxAction</S>
+          <S>PSFunction_Invoke-AzDevCenterUserDelayEnvironmentAction</S>
+          <S>PSCommand_Invoke-AzDevCenterUserDelayEnvironmentAction</S>
+          <S>PSFunction_New-AzDevCenterAdminAttachedNetwork</S>
+          <S>PSCommand_New-AzDevCenterAdminAttachedNetwork</S>
+          <S>PSFunction_New-AzDevCenterAdminCatalog</S>
+          <S>PSCommand_New-AzDevCenterAdminCatalog</S>
+          <S>PSFunction_New-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSCommand_New-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSFunction_New-AzDevCenterAdminDevCenter</S>
+          <S>PSCommand_New-AzDevCenterAdminDevCenter</S>
+          <S>PSFunction_New-AzDevCenterAdminEnvironmentType</S>
+          <S>PSCommand_New-AzDevCenterAdminEnvironmentType</S>
+          <S>PSFunction_New-AzDevCenterAdminGallery</S>
+          <S>PSCommand_New-AzDevCenterAdminGallery</S>
+          <S>PSFunction_New-AzDevCenterAdminNetworkConnection</S>
+          <S>PSCommand_New-AzDevCenterAdminNetworkConnection</S>
+          <S>PSFunction_New-AzDevCenterAdminPlan</S>
+          <S>PSCommand_New-AzDevCenterAdminPlan</S>
+          <S>PSFunction_New-AzDevCenterAdminPlanMember</S>
+          <S>PSCommand_New-AzDevCenterAdminPlanMember</S>
+          <S>PSFunction_New-AzDevCenterAdminPool</S>
+          <S>PSCommand_New-AzDevCenterAdminPool</S>
+          <S>PSFunction_New-AzDevCenterAdminProject</S>
+          <S>PSCommand_New-AzDevCenterAdminProject</S>
+          <S>PSFunction_New-AzDevCenterAdminProjectCatalog</S>
+          <S>PSCommand_New-AzDevCenterAdminProjectCatalog</S>
+          <S>PSFunction_New-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSCommand_New-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSFunction_New-AzDevCenterAdminSchedule</S>
+          <S>PSCommand_New-AzDevCenterAdminSchedule</S>
+          <S>PSFunction_New-AzDevCenterUserDevBox</S>
+          <S>PSCommand_New-AzDevCenterUserDevBox</S>
+          <S>PSFunction_New-AzDevCenterUserDevBoxCustomizationGroup</S>
+          <S>PSCommand_New-AzDevCenterUserDevBoxCustomizationGroup</S>
+          <S>PSFunction_New-AzDevCenterUserEnvironment</S>
+          <S>PSCommand_New-AzDevCenterUserEnvironment</S>
+          <S>PSFunction_Remove-AzDevCenterAdminAttachedNetwork</S>
+          <S>PSCommand_Remove-AzDevCenterAdminAttachedNetwork</S>
+          <S>PSFunction_Remove-AzDevCenterAdminCatalog</S>
+          <S>PSCommand_Remove-AzDevCenterAdminCatalog</S>
+          <S>PSFunction_Remove-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSCommand_Remove-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSFunction_Remove-AzDevCenterAdminDevCenter</S>
+          <S>PSCommand_Remove-AzDevCenterAdminDevCenter</S>
+          <S>PSFunction_Remove-AzDevCenterAdminEnvironmentType</S>
+          <S>PSCommand_Remove-AzDevCenterAdminEnvironmentType</S>
+          <S>PSFunction_Remove-AzDevCenterAdminGallery</S>
+          <S>PSCommand_Remove-AzDevCenterAdminGallery</S>
+          <S>PSFunction_Remove-AzDevCenterAdminNetworkConnection</S>
+          <S>PSCommand_Remove-AzDevCenterAdminNetworkConnection</S>
+          <S>PSFunction_Remove-AzDevCenterAdminPlan</S>
+          <S>PSCommand_Remove-AzDevCenterAdminPlan</S>
+          <S>PSFunction_Remove-AzDevCenterAdminPlanMember</S>
+          <S>PSCommand_Remove-AzDevCenterAdminPlanMember</S>
+          <S>PSFunction_Remove-AzDevCenterAdminPool</S>
+          <S>PSCommand_Remove-AzDevCenterAdminPool</S>
+          <S>PSFunction_Remove-AzDevCenterAdminProject</S>
+          <S>PSCommand_Remove-AzDevCenterAdminProject</S>
+          <S>PSFunction_Remove-AzDevCenterAdminProjectCatalog</S>
+          <S>PSCommand_Remove-AzDevCenterAdminProjectCatalog</S>
+          <S>PSFunction_Remove-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSCommand_Remove-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSFunction_Remove-AzDevCenterAdminSchedule</S>
+          <S>PSCommand_Remove-AzDevCenterAdminSchedule</S>
+          <S>PSFunction_Remove-AzDevCenterUserDevBox</S>
+          <S>PSCommand_Remove-AzDevCenterUserDevBox</S>
+          <S>PSFunction_Remove-AzDevCenterUserEnvironment</S>
+          <S>PSCommand_Remove-AzDevCenterUserEnvironment</S>
+          <S>PSFunction_Repair-AzDevCenterUserDevBox</S>
+          <S>PSCommand_Repair-AzDevCenterUserDevBox</S>
+          <S>PSFunction_Restart-AzDevCenterUserDevBox</S>
+          <S>PSCommand_Restart-AzDevCenterUserDevBox</S>
+          <S>PSFunction_Skip-AzDevCenterUserDevBoxAction</S>
+          <S>PSCommand_Skip-AzDevCenterUserDevBoxAction</S>
+          <S>PSFunction_Skip-AzDevCenterUserEnvironmentAction</S>
+          <S>PSCommand_Skip-AzDevCenterUserEnvironmentAction</S>
+          <S>PSFunction_Start-AzDevCenterAdminNetworkConnectionHealthCheck</S>
+          <S>PSCommand_Start-AzDevCenterAdminNetworkConnectionHealthCheck</S>
+          <S>PSFunction_Start-AzDevCenterAdminPoolHealthCheck</S>
+          <S>PSCommand_Start-AzDevCenterAdminPoolHealthCheck</S>
+          <S>PSFunction_Start-AzDevCenterUserDevBox</S>
+          <S>PSCommand_Start-AzDevCenterUserDevBox</S>
+          <S>PSFunction_Stop-AzDevCenterUserDevBox</S>
+          <S>PSCommand_Stop-AzDevCenterUserDevBox</S>
+          <S>PSFunction_Sync-AzDevCenterAdminCatalog</S>
+          <S>PSCommand_Sync-AzDevCenterAdminCatalog</S>
+          <S>PSFunction_Sync-AzDevCenterAdminProjectCatalog</S>
+          <S>PSCommand_Sync-AzDevCenterAdminProjectCatalog</S>
+          <S>PSFunction_Test-AzDevCenterUserDevBoxCustomizationTaskAction</S>
+          <S>PSCommand_Test-AzDevCenterUserDevBoxCustomizationTaskAction</S>
+          <S>PSFunction_Update-AzDevCenterAdminCatalog</S>
+          <S>PSCommand_Update-AzDevCenterAdminCatalog</S>
+          <S>PSFunction_Update-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSCommand_Update-AzDevCenterAdminDevBoxDefinition</S>
+          <S>PSFunction_Update-AzDevCenterAdminDevCenter</S>
+          <S>PSCommand_Update-AzDevCenterAdminDevCenter</S>
+          <S>PSFunction_Update-AzDevCenterAdminEnvironmentType</S>
+          <S>PSCommand_Update-AzDevCenterAdminEnvironmentType</S>
+          <S>PSFunction_Update-AzDevCenterAdminNetworkConnection</S>
+          <S>PSCommand_Update-AzDevCenterAdminNetworkConnection</S>
+          <S>PSFunction_Update-AzDevCenterAdminPlan</S>
+          <S>PSCommand_Update-AzDevCenterAdminPlan</S>
+          <S>PSFunction_Update-AzDevCenterAdminPlanMember</S>
+          <S>PSCommand_Update-AzDevCenterAdminPlanMember</S>
+          <S>PSFunction_Update-AzDevCenterAdminPool</S>
+          <S>PSCommand_Update-AzDevCenterAdminPool</S>
+          <S>PSFunction_Update-AzDevCenterAdminProject</S>
+          <S>PSCommand_Update-AzDevCenterAdminProject</S>
+          <S>PSFunction_Update-AzDevCenterAdminProjectCatalog</S>
+          <S>PSCommand_Update-AzDevCenterAdminProjectCatalog</S>
+          <S>PSFunction_Update-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSCommand_Update-AzDevCenterAdminProjectEnvironmentType</S>
+          <S>PSFunction_Update-AzDevCenterAdminSchedule</S>
+          <S>PSCommand_Update-AzDevCenterAdminSchedule</S>
+          <S>PSFunction_Update-AzDevCenterUserEnvironment</S>
+          <S>PSCommand_Update-AzDevCenterUserEnvironment</S>
+          <S>PSIncludes_Function</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Connect-AzDevCenterAdminCatalog</S>
+                <S>Connect-AzDevCenterAdminProjectCatalog</S>
+                <S>Deploy-AzDevCenterUserEnvironment</S>
+                <S>Get-AzDevCenterAdminAttachedNetwork</S>
+                <S>Get-AzDevCenterAdminCatalog</S>
+                <S>Get-AzDevCenterAdminCatalogSyncErrorDetail</S>
+                <S>Get-AzDevCenterAdminCustomizationTask</S>
+                <S>Get-AzDevCenterAdminCustomizationTaskErrorDetail</S>
+                <S>Get-AzDevCenterAdminDevBoxDefinition</S>
+                <S>Get-AzDevCenterAdminDevCenter</S>
+                <S>Get-AzDevCenterAdminEnvironmentDefinition</S>
+                <S>Get-AzDevCenterAdminEnvironmentDefinitionErrorDetail</S>
+                <S>Get-AzDevCenterAdminEnvironmentType</S>
+                <S>Get-AzDevCenterAdminGallery</S>
+                <S>Get-AzDevCenterAdminImage</S>
+                <S>Get-AzDevCenterAdminImageVersion</S>
+                <S>Get-AzDevCenterAdminNetworkConnection</S>
+                <S>Get-AzDevCenterAdminNetworkConnectionHealthDetail</S>
+                <S>Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint</S>
+                <S>Get-AzDevCenterAdminOperationStatus</S>
+                <S>Get-AzDevCenterAdminPlan</S>
+                <S>Get-AzDevCenterAdminPlanMember</S>
+                <S>Get-AzDevCenterAdminPool</S>
+                <S>Get-AzDevCenterAdminProject</S>
+                <S>Get-AzDevCenterAdminProjectAllowedEnvironmentType</S>
+                <S>Get-AzDevCenterAdminProjectCatalog</S>
+                <S>Get-AzDevCenterAdminProjectCatalogSyncErrorDetail</S>
+                <S>Get-AzDevCenterAdminProjectEnvironmentDefinition</S>
+                <S>Get-AzDevCenterAdminProjectEnvironmentDefinitionErrorDetail</S>
+                <S>Get-AzDevCenterAdminProjectEnvironmentType</S>
+                <S>Get-AzDevCenterAdminProjectInheritedSetting</S>
+                <S>Get-AzDevCenterAdminSchedule</S>
+                <S>Get-AzDevCenterAdminSku</S>
+                <S>Get-AzDevCenterAdminUsage</S>
+                <S>Get-AzDevCenterUserCatalog</S>
+                <S>Get-AzDevCenterUserDevBox</S>
+                <S>Get-AzDevCenterUserDevBoxAction</S>
+                <S>Get-AzDevCenterUserDevBoxCustomizationGroup</S>
+                <S>Get-AzDevCenterUserDevBoxCustomizationTaskDefinition</S>
+                <S>Get-AzDevCenterUserDevBoxCustomizationTaskLog</S>
+                <S>Get-AzDevCenterUserDevBoxOperation</S>
+                <S>Get-AzDevCenterUserDevBoxRemoteConnection</S>
+                <S>Get-AzDevCenterUserEnvironment</S>
+                <S>Get-AzDevCenterUserEnvironmentAction</S>
+                <S>Get-AzDevCenterUserEnvironmentDefinition</S>
+                <S>Get-AzDevCenterUserEnvironmentLog</S>
+                <S>Get-AzDevCenterUserEnvironmentOperation</S>
+                <S>Get-AzDevCenterUserEnvironmentOutput</S>
+                <S>Get-AzDevCenterUserEnvironmentType</S>
+                <S>Get-AzDevCenterUserPool</S>
+                <S>Get-AzDevCenterUserProject</S>
+                <S>Get-AzDevCenterUserSchedule</S>
+                <S>Invoke-AzDevCenterAdminExecuteCheckNameAvailability</S>
+                <S>Invoke-AzDevCenterAdminExecuteCheckScopedNameAvailability</S>
+                <S>Invoke-AzDevCenterUserDelayDevBoxAction</S>
+                <S>Invoke-AzDevCenterUserDelayEnvironmentAction</S>
+                <S>New-AzDevCenterAdminAttachedNetwork</S>
+                <S>New-AzDevCenterAdminCatalog</S>
+                <S>New-AzDevCenterAdminDevBoxDefinition</S>
+                <S>New-AzDevCenterAdminDevCenter</S>
+                <S>New-AzDevCenterAdminEnvironmentType</S>
+                <S>New-AzDevCenterAdminGallery</S>
+                <S>New-AzDevCenterAdminNetworkConnection</S>
+                <S>New-AzDevCenterAdminPlan</S>
+                <S>New-AzDevCenterAdminPlanMember</S>
+                <S>New-AzDevCenterAdminPool</S>
+                <S>New-AzDevCenterAdminProject</S>
+                <S>New-AzDevCenterAdminProjectCatalog</S>
+                <S>New-AzDevCenterAdminProjectEnvironmentType</S>
+                <S>New-AzDevCenterAdminSchedule</S>
+                <S>New-AzDevCenterUserDevBox</S>
+                <S>New-AzDevCenterUserDevBoxCustomizationGroup</S>
+                <S>New-AzDevCenterUserEnvironment</S>
+                <S>Remove-AzDevCenterAdminAttachedNetwork</S>
+                <S>Remove-AzDevCenterAdminCatalog</S>
+                <S>Remove-AzDevCenterAdminDevBoxDefinition</S>
+                <S>Remove-AzDevCenterAdminDevCenter</S>
+                <S>Remove-AzDevCenterAdminEnvironmentType</S>
+                <S>Remove-AzDevCenterAdminGallery</S>
+                <S>Remove-AzDevCenterAdminNetworkConnection</S>
+                <S>Remove-AzDevCenterAdminPlan</S>
+                <S>Remove-AzDevCenterAdminPlanMember</S>
+                <S>Remove-AzDevCenterAdminPool</S>
+                <S>Remove-AzDevCenterAdminProject</S>
+                <S>Remove-AzDevCenterAdminProjectCatalog</S>
+                <S>Remove-AzDevCenterAdminProjectEnvironmentType</S>
+                <S>Remove-AzDevCenterAdminSchedule</S>
+                <S>Remove-AzDevCenterUserDevBox</S>
+                <S>Remove-AzDevCenterUserEnvironment</S>
+                <S>Repair-AzDevCenterUserDevBox</S>
+                <S>Restart-AzDevCenterUserDevBox</S>
+                <S>Skip-AzDevCenterUserDevBoxAction</S>
+                <S>Skip-AzDevCenterUserEnvironmentAction</S>
+                <S>Start-AzDevCenterAdminNetworkConnectionHealthCheck</S>
+                <S>Start-AzDevCenterAdminPoolHealthCheck</S>
+                <S>Start-AzDevCenterUserDevBox</S>
+                <S>Stop-AzDevCenterUserDevBox</S>
+                <S>Sync-AzDevCenterAdminCatalog</S>
+                <S>Sync-AzDevCenterAdminProjectCatalog</S>
+                <S>Test-AzDevCenterUserDevBoxCustomizationTaskAction</S>
+                <S>Update-AzDevCenterAdminCatalog</S>
+                <S>Update-AzDevCenterAdminDevBoxDefinition</S>
+                <S>Update-AzDevCenterAdminDevCenter</S>
+                <S>Update-AzDevCenterAdminEnvironmentType</S>
+                <S>Update-AzDevCenterAdminNetworkConnection</S>
+                <S>Update-AzDevCenterAdminPlan</S>
+                <S>Update-AzDevCenterAdminPlanMember</S>
+                <S>Update-AzDevCenterAdminPool</S>
+                <S>Update-AzDevCenterAdminProject</S>
+                <S>Update-AzDevCenterAdminProjectCatalog</S>
+                <S>Update-AzDevCenterAdminProjectEnvironmentType</S>
+                <S>Update-AzDevCenterAdminSchedule</S>
+                <S>Update-AzDevCenterUserEnvironment</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Added preannouncement breaking change messages.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[5.2.0, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>5.2.0</ToString>
+                    <Props>
+                      <Version N="Version">5.2.0.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">5.2.0</S>
+                      <I32 N="Major">5</I32>
+                      <I32 N="Minor">2</I32>
+                      <I32 N="Patch">0</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[5.2.0, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">2.0.2</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

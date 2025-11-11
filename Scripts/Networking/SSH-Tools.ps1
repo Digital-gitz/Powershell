@@ -42,6 +42,22 @@ function Get-SshStatus {
         Write-Host "Error running ssh -V: $($_.Exception.Message)" -ForegroundColor Red
     }
 
+    # Check if SSH daemon is running and listening on port 22
+    Write-Host "`n[Checking if SSH daemon is running and listening on port TCP/22:]" -ForegroundColor Cyan
+    try {
+        $netstatOutput = & netstat -nao | find /i '":22"'
+        if ($netstatOutput) {
+            Write-Host "SSH daemon is running and listening on port TCP/22:" -ForegroundColor Green
+            $netstatOutput | ForEach-Object { Write-Host $_ -ForegroundColor Gray }
+        }
+        else {
+            Write-Host "SSH daemon is not listening on port TCP/22." -ForegroundColor Yellow
+        }
+    }
+    catch {
+        Write-Host "Error checking SSH daemon status: $($_.Exception.Message)" -ForegroundColor Red
+    }
+
     # Check for elevated (admin) permissions
     $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 

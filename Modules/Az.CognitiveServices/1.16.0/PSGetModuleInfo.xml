@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-04-01T06:23:06.603</DT>
-      <DT N="InstalledDate">2025-06-08T15:49:42.7872546-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:50.0644518-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -144,69 +144,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzCognitiveServicesAccountNetworkRule</S>
-                <S>Get-AzCognitiveServicesAccount</S>
-                <S>Get-AzCognitiveServicesAccountCommitmentPlan</S>
-                <S>Get-AzCognitiveServicesAccountDeployment</S>
-                <S>Get-AzCognitiveServicesAccountDefenderForAISetting</S>
-                <S>Get-AzCognitiveServicesAccountDeploymentSku</S>
-                <S>Get-AzCognitiveServicesAccountKey</S>
-                <S>Get-AzCognitiveServicesAccountModel</S>
-                <S>Get-AzCognitiveServicesAccountNetworkRuleSet</S>
-                <S>Get-AzCognitiveServicesAccountRaiPolicy</S>
-                <S>Get-AzCognitiveServicesAccountRaiBlocklist</S>
-                <S>Get-AzCognitiveServicesAccountRaiBlocklistItem</S>
-                <S>Get-AzCognitiveServicesAccountSku</S>
-                <S>Get-AzCognitiveServicesAccountType</S>
-                <S>Get-AzCognitiveServicesAccountUsage</S>
-                <S>Get-AzCognitiveServicesCommitmentPlan</S>
-                <S>Get-AzCognitiveServicesCommitmentPlanAssociation</S>
-                <S>Get-AzCognitiveServicesCommitmentTier</S>
-                <S>Get-AzCognitiveServicesModel</S>
-                <S>Get-AzCognitiveServicesModelCapacity</S>
-                <S>Get-AzCognitiveServicesRaiContentFilter</S>
-                <S>Get-AzCognitiveServicesUsage</S>
-                <S>New-AzCognitiveServicesAccount</S>
-                <S>New-AzCognitiveServicesAccountApiProperty</S>
-                <S>New-AzCognitiveServicesAccountCommitmentPlan</S>
-                <S>New-AzCognitiveServicesAccountDeployment</S>
-                <S>New-AzCognitiveServicesAccountDefenderForAISetting</S>
-                <S>New-AzCognitiveServicesAccountKey</S>
-                <S>New-AzCognitiveServicesAccountRaiPolicy</S>
-                <S>New-AzCognitiveServicesAccountRaiBlocklist</S>
-                <S>New-AzCognitiveServicesAccountRaiBlocklistItem</S>
-                <S>New-AzCognitiveServicesCommitmentPlan</S>
-                <S>New-AzCognitiveServicesCommitmentPlanAssociation</S>
-                <S>New-AzCognitiveServicesObject</S>
-                <S>Remove-AzCognitiveServicesAccount</S>
-                <S>Remove-AzCognitiveServicesAccountCommitmentPlan</S>
-                <S>Remove-AzCognitiveServicesAccountDeployment</S>
-                <S>Remove-AzCognitiveServicesAccountNetworkRule</S>
-                <S>Remove-AzCognitiveServicesAccountRaiPolicy</S>
-                <S>Remove-AzCognitiveServicesAccountRaiBlocklist</S>
-                <S>Remove-AzCognitiveServicesAccountRaiBlocklistItem</S>
-                <S>Remove-AzCognitiveServicesCommitmentPlan</S>
-                <S>Remove-AzCognitiveServicesCommitmentPlanAssociation</S>
-                <S>Set-AzCognitiveServicesAccount</S>
-                <S>Undo-AzCognitiveServicesAccountRemoval</S>
-                <S>Update-AzCognitiveServicesAccountNetworkRuleSet</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzCognitiveServicesAccountNetworkRule</S>
@@ -265,6 +204,67 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzCognitiveServicesAccountNetworkRule</S>
+                <S>Get-AzCognitiveServicesAccount</S>
+                <S>Get-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>Get-AzCognitiveServicesAccountDeployment</S>
+                <S>Get-AzCognitiveServicesAccountDefenderForAISetting</S>
+                <S>Get-AzCognitiveServicesAccountDeploymentSku</S>
+                <S>Get-AzCognitiveServicesAccountKey</S>
+                <S>Get-AzCognitiveServicesAccountModel</S>
+                <S>Get-AzCognitiveServicesAccountNetworkRuleSet</S>
+                <S>Get-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>Get-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>Get-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>Get-AzCognitiveServicesAccountSku</S>
+                <S>Get-AzCognitiveServicesAccountType</S>
+                <S>Get-AzCognitiveServicesAccountUsage</S>
+                <S>Get-AzCognitiveServicesCommitmentPlan</S>
+                <S>Get-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>Get-AzCognitiveServicesCommitmentTier</S>
+                <S>Get-AzCognitiveServicesModel</S>
+                <S>Get-AzCognitiveServicesModelCapacity</S>
+                <S>Get-AzCognitiveServicesRaiContentFilter</S>
+                <S>Get-AzCognitiveServicesUsage</S>
+                <S>New-AzCognitiveServicesAccount</S>
+                <S>New-AzCognitiveServicesAccountApiProperty</S>
+                <S>New-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>New-AzCognitiveServicesAccountDeployment</S>
+                <S>New-AzCognitiveServicesAccountDefenderForAISetting</S>
+                <S>New-AzCognitiveServicesAccountKey</S>
+                <S>New-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>New-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>New-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>New-AzCognitiveServicesCommitmentPlan</S>
+                <S>New-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>New-AzCognitiveServicesObject</S>
+                <S>Remove-AzCognitiveServicesAccount</S>
+                <S>Remove-AzCognitiveServicesAccountCommitmentPlan</S>
+                <S>Remove-AzCognitiveServicesAccountDeployment</S>
+                <S>Remove-AzCognitiveServicesAccountNetworkRule</S>
+                <S>Remove-AzCognitiveServicesAccountRaiPolicy</S>
+                <S>Remove-AzCognitiveServicesAccountRaiBlocklist</S>
+                <S>Remove-AzCognitiveServicesAccountRaiBlocklistItem</S>
+                <S>Remove-AzCognitiveServicesCommitmentPlan</S>
+                <S>Remove-AzCognitiveServicesCommitmentPlanAssociation</S>
+                <S>Set-AzCognitiveServicesAccount</S>
+                <S>Undo-AzCognitiveServicesAccountRemoval</S>
+                <S>Update-AzCognitiveServicesAccountNetworkRuleSet</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

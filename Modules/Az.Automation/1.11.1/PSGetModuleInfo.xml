@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-02-11T02:17:49.31</DT>
-      <DT N="InstalledDate">2025-06-08T15:49:38.2849872-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:47.6374346-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -252,123 +252,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Export-AzAutomationDscConfiguration</S>
-                <S>Export-AzAutomationDscNodeReportContent</S>
-                <S>Export-AzAutomationRunbook</S>
-                <S>Get-AzAutomationAccount</S>
-                <S>Get-AzAutomationCertificate</S>
-                <S>Get-AzAutomationConnection</S>
-                <S>Get-AzAutomationCredential</S>
-                <S>Get-AzAutomationDscCompilationJob</S>
-                <S>Get-AzAutomationDscCompilationJobOutput</S>
-                <S>Get-AzAutomationDscConfiguration</S>
-                <S>Get-AzAutomationDscNode</S>
-                <S>Get-AzAutomationDscNodeConfiguration</S>
-                <S>Get-AzAutomationDscNodeConfigurationDeployment</S>
-                <S>Get-AzAutomationDscNodeConfigurationDeploymentSchedule</S>
-                <S>Get-AzAutomationDscNodeReport</S>
-                <S>Get-AzAutomationDscOnboardingMetaconfig</S>
-                <S>Get-AzAutomationHybridRunbookWorker</S>
-                <S>Get-AzAutomationHybridRunbookWorkerGroup</S>
-                <S>Get-AzAutomationHybridWorkerGroup</S>
-                <S>Get-AzAutomationJob</S>
-                <S>Get-AzAutomationJobOutput</S>
-                <S>Get-AzAutomationJobOutputRecord</S>
-                <S>Get-AzAutomationModule</S>
-                <S>Get-AzAutomationPython3Package</S>
-                <S>Get-AzAutomationRegistrationInfo</S>
-                <S>Get-AzAutomationRunbook</S>
-                <S>Get-AzAutomationSchedule</S>
-                <S>Get-AzAutomationScheduledRunbook</S>
-                <S>Get-AzAutomationSoftwareUpdateConfiguration</S>
-                <S>Get-AzAutomationSoftwareUpdateMachineRun</S>
-                <S>Get-AzAutomationSoftwareUpdateRun</S>
-                <S>Get-AzAutomationSourceControl</S>
-                <S>Get-AzAutomationSourceControlSyncJob</S>
-                <S>Get-AzAutomationSourceControlSyncJobOutput</S>
-                <S>Get-AzAutomationVariable</S>
-                <S>Get-AzAutomationWebhook</S>
-                <S>Import-AzAutomationDscConfiguration</S>
-                <S>Import-AzAutomationDscNodeConfiguration</S>
-                <S>Import-AzAutomationRunbook</S>
-                <S>Move-AzAutomationHybridRunbookWorker</S>
-                <S>New-AzAutomationAccount</S>
-                <S>New-AzAutomationCertificate</S>
-                <S>New-AzAutomationConnection</S>
-                <S>New-AzAutomationCredential</S>
-                <S>New-AzAutomationHybridRunbookWorker</S>
-                <S>New-AzAutomationHybridRunbookWorkerGroup</S>
-                <S>New-AzAutomationKey</S>
-                <S>New-AzAutomationModule</S>
-                <S>New-AzAutomationPython3Package</S>
-                <S>New-AzAutomationRunbook</S>
-                <S>New-AzAutomationSchedule</S>
-                <S>New-AzAutomationSoftwareUpdateConfiguration</S>
-                <S>New-AzAutomationSourceControl</S>
-                <S>New-AzAutomationUpdateManagementAzureQuery</S>
-                <S>New-AzAutomationVariable</S>
-                <S>New-AzAutomationWebhook</S>
-                <S>Publish-AzAutomationRunbook</S>
-                <S>Register-AzAutomationDscNode</S>
-                <S>Register-AzAutomationScheduledRunbook</S>
-                <S>Remove-AzAutomationAccount</S>
-                <S>Remove-AzAutomationCertificate</S>
-                <S>Remove-AzAutomationConnection</S>
-                <S>Remove-AzAutomationConnectionType</S>
-                <S>Remove-AzAutomationCredential</S>
-                <S>Remove-AzAutomationDscConfiguration</S>
-                <S>Remove-AzAutomationDscNodeConfiguration</S>
-                <S>Remove-AzAutomationHybridRunbookWorker</S>
-                <S>Remove-AzAutomationHybridRunbookWorkerGroup</S>
-                <S>Remove-AzAutomationHybridWorkerGroup</S>
-                <S>Remove-AzAutomationModule</S>
-                <S>Remove-AzAutomationPython3Package</S>
-                <S>Remove-AzAutomationRunbook</S>
-                <S>Remove-AzAutomationSchedule</S>
-                <S>Remove-AzAutomationSoftwareUpdateConfiguration</S>
-                <S>Remove-AzAutomationSourceControl</S>
-                <S>Remove-AzAutomationVariable</S>
-                <S>Remove-AzAutomationWebhook</S>
-                <S>Resume-AzAutomationJob</S>
-                <S>Set-AzAutomationAccount</S>
-                <S>Set-AzAutomationCertificate</S>
-                <S>Set-AzAutomationConnectionFieldValue</S>
-                <S>Set-AzAutomationCredential</S>
-                <S>Set-AzAutomationDscNode</S>
-                <S>Set-AzAutomationHybridRunbookWorkerGroup</S>
-                <S>Set-AzAutomationModule</S>
-                <S>Set-AzAutomationPython3Package</S>
-                <S>Set-AzAutomationRunbook</S>
-                <S>Set-AzAutomationSchedule</S>
-                <S>Set-AzAutomationVariable</S>
-                <S>Set-AzAutomationWebhook</S>
-                <S>Start-AzAutomationDscCompilationJob</S>
-                <S>Start-AzAutomationDscNodeConfigurationDeployment</S>
-                <S>Start-AzAutomationRunbook</S>
-                <S>Start-AzAutomationSourceControlSyncJob</S>
-                <S>Stop-AzAutomationDscNodeConfigurationDeployment</S>
-                <S>Stop-AzAutomationJob</S>
-                <S>Suspend-AzAutomationJob</S>
-                <S>Unregister-AzAutomationDscNode</S>
-                <S>Unregister-AzAutomationScheduledRunbook</S>
-                <S>Update-AzAutomationSourceControl</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Export-AzAutomationDscConfiguration</S>
@@ -481,6 +366,121 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Export-AzAutomationDscConfiguration</S>
+                <S>Export-AzAutomationDscNodeReportContent</S>
+                <S>Export-AzAutomationRunbook</S>
+                <S>Get-AzAutomationAccount</S>
+                <S>Get-AzAutomationCertificate</S>
+                <S>Get-AzAutomationConnection</S>
+                <S>Get-AzAutomationCredential</S>
+                <S>Get-AzAutomationDscCompilationJob</S>
+                <S>Get-AzAutomationDscCompilationJobOutput</S>
+                <S>Get-AzAutomationDscConfiguration</S>
+                <S>Get-AzAutomationDscNode</S>
+                <S>Get-AzAutomationDscNodeConfiguration</S>
+                <S>Get-AzAutomationDscNodeConfigurationDeployment</S>
+                <S>Get-AzAutomationDscNodeConfigurationDeploymentSchedule</S>
+                <S>Get-AzAutomationDscNodeReport</S>
+                <S>Get-AzAutomationDscOnboardingMetaconfig</S>
+                <S>Get-AzAutomationHybridRunbookWorker</S>
+                <S>Get-AzAutomationHybridRunbookWorkerGroup</S>
+                <S>Get-AzAutomationHybridWorkerGroup</S>
+                <S>Get-AzAutomationJob</S>
+                <S>Get-AzAutomationJobOutput</S>
+                <S>Get-AzAutomationJobOutputRecord</S>
+                <S>Get-AzAutomationModule</S>
+                <S>Get-AzAutomationPython3Package</S>
+                <S>Get-AzAutomationRegistrationInfo</S>
+                <S>Get-AzAutomationRunbook</S>
+                <S>Get-AzAutomationSchedule</S>
+                <S>Get-AzAutomationScheduledRunbook</S>
+                <S>Get-AzAutomationSoftwareUpdateConfiguration</S>
+                <S>Get-AzAutomationSoftwareUpdateMachineRun</S>
+                <S>Get-AzAutomationSoftwareUpdateRun</S>
+                <S>Get-AzAutomationSourceControl</S>
+                <S>Get-AzAutomationSourceControlSyncJob</S>
+                <S>Get-AzAutomationSourceControlSyncJobOutput</S>
+                <S>Get-AzAutomationVariable</S>
+                <S>Get-AzAutomationWebhook</S>
+                <S>Import-AzAutomationDscConfiguration</S>
+                <S>Import-AzAutomationDscNodeConfiguration</S>
+                <S>Import-AzAutomationRunbook</S>
+                <S>Move-AzAutomationHybridRunbookWorker</S>
+                <S>New-AzAutomationAccount</S>
+                <S>New-AzAutomationCertificate</S>
+                <S>New-AzAutomationConnection</S>
+                <S>New-AzAutomationCredential</S>
+                <S>New-AzAutomationHybridRunbookWorker</S>
+                <S>New-AzAutomationHybridRunbookWorkerGroup</S>
+                <S>New-AzAutomationKey</S>
+                <S>New-AzAutomationModule</S>
+                <S>New-AzAutomationPython3Package</S>
+                <S>New-AzAutomationRunbook</S>
+                <S>New-AzAutomationSchedule</S>
+                <S>New-AzAutomationSoftwareUpdateConfiguration</S>
+                <S>New-AzAutomationSourceControl</S>
+                <S>New-AzAutomationUpdateManagementAzureQuery</S>
+                <S>New-AzAutomationVariable</S>
+                <S>New-AzAutomationWebhook</S>
+                <S>Publish-AzAutomationRunbook</S>
+                <S>Register-AzAutomationDscNode</S>
+                <S>Register-AzAutomationScheduledRunbook</S>
+                <S>Remove-AzAutomationAccount</S>
+                <S>Remove-AzAutomationCertificate</S>
+                <S>Remove-AzAutomationConnection</S>
+                <S>Remove-AzAutomationConnectionType</S>
+                <S>Remove-AzAutomationCredential</S>
+                <S>Remove-AzAutomationDscConfiguration</S>
+                <S>Remove-AzAutomationDscNodeConfiguration</S>
+                <S>Remove-AzAutomationHybridRunbookWorker</S>
+                <S>Remove-AzAutomationHybridRunbookWorkerGroup</S>
+                <S>Remove-AzAutomationHybridWorkerGroup</S>
+                <S>Remove-AzAutomationModule</S>
+                <S>Remove-AzAutomationPython3Package</S>
+                <S>Remove-AzAutomationRunbook</S>
+                <S>Remove-AzAutomationSchedule</S>
+                <S>Remove-AzAutomationSoftwareUpdateConfiguration</S>
+                <S>Remove-AzAutomationSourceControl</S>
+                <S>Remove-AzAutomationVariable</S>
+                <S>Remove-AzAutomationWebhook</S>
+                <S>Resume-AzAutomationJob</S>
+                <S>Set-AzAutomationAccount</S>
+                <S>Set-AzAutomationCertificate</S>
+                <S>Set-AzAutomationConnectionFieldValue</S>
+                <S>Set-AzAutomationCredential</S>
+                <S>Set-AzAutomationDscNode</S>
+                <S>Set-AzAutomationHybridRunbookWorkerGroup</S>
+                <S>Set-AzAutomationModule</S>
+                <S>Set-AzAutomationPython3Package</S>
+                <S>Set-AzAutomationRunbook</S>
+                <S>Set-AzAutomationSchedule</S>
+                <S>Set-AzAutomationVariable</S>
+                <S>Set-AzAutomationWebhook</S>
+                <S>Start-AzAutomationDscCompilationJob</S>
+                <S>Start-AzAutomationDscNodeConfigurationDeployment</S>
+                <S>Start-AzAutomationRunbook</S>
+                <S>Start-AzAutomationSourceControlSyncJob</S>
+                <S>Stop-AzAutomationDscNodeConfigurationDeployment</S>
+                <S>Stop-AzAutomationJob</S>
+                <S>Suspend-AzAutomationJob</S>
+                <S>Unregister-AzAutomationDscNode</S>
+                <S>Unregister-AzAutomationScheduledRunbook</S>
+                <S>Update-AzAutomationSourceControl</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

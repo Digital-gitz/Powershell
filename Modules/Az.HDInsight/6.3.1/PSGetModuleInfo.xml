@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:15:17.387</DT>
-      <DT N="InstalledDate">2025-06-08T15:50:04.5914807-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:50:01.4809106-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -156,75 +156,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzHDInsightClusterIdentity</S>
-                <S>Add-AzHDInsightComponentVersion</S>
-                <S>Add-AzHDInsightConfigValue</S>
-                <S>Add-AzHDInsightMetastore</S>
-                <S>Add-AzHDInsightScriptAction</S>
-                <S>Add-AzHDInsightSecurityProfile</S>
-                <S>Add-AzHDInsightStorage</S>
-                <S>Disable-AzHDInsightAzureMonitor</S>
-                <S>Disable-AzHDInsightAzureMonitorAgent</S>
-                <S>Disable-AzHDInsightMonitoring</S>
-                <S>Enable-AzHDInsightAzureMonitor</S>
-                <S>Enable-AzHDInsightAzureMonitorAgent</S>
-                <S>Enable-AzHDInsightMonitoring</S>
-                <S>Get-AzHDInsightAzureMonitor</S>
-                <S>Get-AzHDInsightAzureMonitorAgent</S>
-                <S>Get-AzHDInsightCluster</S>
-                <S>Update-AzHDInsightCluster</S>
-                <S>Get-AzHDInsightClusterAutoscaleConfiguration</S>
-                <S>Get-AzHDInsightHost</S>
-                <S>Get-AzHDInsightJob</S>
-                <S>Get-AzHDInsightJobOutput</S>
-                <S>Get-AzHDInsightMonitoring</S>
-                <S>Get-AzHDInsightPersistedScriptAction</S>
-                <S>Get-AzHDInsightProperty</S>
-                <S>Get-AzHDInsightScriptActionHistory</S>
-                <S>Invoke-AzHDInsightHiveJob</S>
-                <S>New-AzHDInsightCluster</S>
-                <S>New-AzHDInsightClusterAutoscaleConfiguration</S>
-                <S>New-AzHDInsightClusterAutoscaleScheduleCondition</S>
-                <S>New-AzHDInsightClusterConfig</S>
-                <S>New-AzHDInsightHiveJobDefinition</S>
-                <S>New-AzHDInsightIPConfiguration</S>
-                <S>New-AzHDInsightMapReduceJobDefinition</S>
-                <S>New-AzHDInsightPigJobDefinition</S>
-                <S>New-AzHDInsightPrivateLinkConfiguration</S>
-                <S>New-AzHDInsightSqoopJobDefinition</S>
-                <S>New-AzHDInsightStreamingMapReduceJobDefinition</S>
-                <S>Remove-AzHDInsightCluster</S>
-                <S>Remove-AzHDInsightClusterAutoscaleConfiguration</S>
-                <S>Remove-AzHDInsightPersistedScriptAction</S>
-                <S>Restart-AzHDInsightHost</S>
-                <S>Set-AzHDInsightClusterAutoscaleConfiguration</S>
-                <S>Set-AzHDInsightClusterDiskEncryptionKey</S>
-                <S>Set-AzHDInsightClusterSize</S>
-                <S>Set-AzHDInsightDefaultStorage</S>
-                <S>Set-AzHDInsightGatewayCredential</S>
-                <S>Set-AzHDInsightPersistedScriptAction</S>
-                <S>Start-AzHDInsightJob</S>
-                <S>Stop-AzHDInsightJob</S>
-                <S>Submit-AzHDInsightScriptAction</S>
-                <S>Use-AzHDInsightCluster</S>
-                <S>Wait-AzHDInsightJob</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzHDInsightClusterIdentity</S>
@@ -289,6 +222,73 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzHDInsightClusterIdentity</S>
+                <S>Add-AzHDInsightComponentVersion</S>
+                <S>Add-AzHDInsightConfigValue</S>
+                <S>Add-AzHDInsightMetastore</S>
+                <S>Add-AzHDInsightScriptAction</S>
+                <S>Add-AzHDInsightSecurityProfile</S>
+                <S>Add-AzHDInsightStorage</S>
+                <S>Disable-AzHDInsightAzureMonitor</S>
+                <S>Disable-AzHDInsightAzureMonitorAgent</S>
+                <S>Disable-AzHDInsightMonitoring</S>
+                <S>Enable-AzHDInsightAzureMonitor</S>
+                <S>Enable-AzHDInsightAzureMonitorAgent</S>
+                <S>Enable-AzHDInsightMonitoring</S>
+                <S>Get-AzHDInsightAzureMonitor</S>
+                <S>Get-AzHDInsightAzureMonitorAgent</S>
+                <S>Get-AzHDInsightCluster</S>
+                <S>Update-AzHDInsightCluster</S>
+                <S>Get-AzHDInsightClusterAutoscaleConfiguration</S>
+                <S>Get-AzHDInsightHost</S>
+                <S>Get-AzHDInsightJob</S>
+                <S>Get-AzHDInsightJobOutput</S>
+                <S>Get-AzHDInsightMonitoring</S>
+                <S>Get-AzHDInsightPersistedScriptAction</S>
+                <S>Get-AzHDInsightProperty</S>
+                <S>Get-AzHDInsightScriptActionHistory</S>
+                <S>Invoke-AzHDInsightHiveJob</S>
+                <S>New-AzHDInsightCluster</S>
+                <S>New-AzHDInsightClusterAutoscaleConfiguration</S>
+                <S>New-AzHDInsightClusterAutoscaleScheduleCondition</S>
+                <S>New-AzHDInsightClusterConfig</S>
+                <S>New-AzHDInsightHiveJobDefinition</S>
+                <S>New-AzHDInsightIPConfiguration</S>
+                <S>New-AzHDInsightMapReduceJobDefinition</S>
+                <S>New-AzHDInsightPigJobDefinition</S>
+                <S>New-AzHDInsightPrivateLinkConfiguration</S>
+                <S>New-AzHDInsightSqoopJobDefinition</S>
+                <S>New-AzHDInsightStreamingMapReduceJobDefinition</S>
+                <S>Remove-AzHDInsightCluster</S>
+                <S>Remove-AzHDInsightClusterAutoscaleConfiguration</S>
+                <S>Remove-AzHDInsightPersistedScriptAction</S>
+                <S>Restart-AzHDInsightHost</S>
+                <S>Set-AzHDInsightClusterAutoscaleConfiguration</S>
+                <S>Set-AzHDInsightClusterDiskEncryptionKey</S>
+                <S>Set-AzHDInsightClusterSize</S>
+                <S>Set-AzHDInsightDefaultStorage</S>
+                <S>Set-AzHDInsightGatewayCredential</S>
+                <S>Set-AzHDInsightPersistedScriptAction</S>
+                <S>Start-AzHDInsightJob</S>
+                <S>Stop-AzHDInsightJob</S>
+                <S>Submit-AzHDInsightScriptAction</S>
+                <S>Use-AzHDInsightCluster</S>
+                <S>Wait-AzHDInsightJob</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

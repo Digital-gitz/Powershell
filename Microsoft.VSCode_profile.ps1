@@ -22,13 +22,18 @@ $ErrorActionPreference = 'Continue'
 $profileLoadStart = Get-Date
 
 # Display PowerShell version information
-Write-Banner "|Power Shell!|" -FontName "Consolas" -FontSize 14
+if (Get-Command Write-Banner -ErrorAction SilentlyContinue) {
+    Write-Banner "|Power Shell!|" -FontName "Consolas" -FontSize 14
+}
 Write-Host "`nPowerShell Version Information:" -ForegroundColor Cyan
 Write-Host "─────────────────────────────" -ForegroundColor DarkGray
 $PSVersionTable.GetEnumerator() | Sort-Object Key | ForEach-Object {
     Write-Host ("{0,-20}: {1}" -f $_.Key, $_.Value) -ForegroundColor Gray
 }
 Write-Host "─────────────────────────────`n" -ForegroundColor DarkGray
+# Load configuration first
+. "$PSScriptRoot\Scripts\Core\Configuration.ps1"
+
 #region Environment Setup
 # Set up environment paths efficiently
 $newPaths = @()
@@ -55,127 +60,88 @@ else {
     Write-Host "Node.js is not installed" -ForegroundColor Red
 }
 
-# load in Scripts
-# function LoadCoreScripts {
-#     [CmdletBinding()]
-#     param(
-#         [switch]$ShowVerbose
-#     )
-#     foreach ($category in $Config.LoadOrder) {
-#         if ($Config.ScriptCategories.ContainsKey($category)) {
-#             foreach ($script in $Config.ScriptCategories[$category]) {
-#                 $scriptPath = Join-Path $CommonPaths.Scripts $category $script
-#                 if (Test-Path $scriptPath) {
-#                     try {
-#                         if ($ShowVerbose) { Write-Host "Loading $scriptPath..." -ForegroundColor Cyan }
-#                         . $scriptPath
-#                         if ($ShowVerbose) { Write-Host "Loaded $scriptPath" -ForegroundColor Green }
-#                     }
-#                     catch {
-#                         Write-Warning ("Failed to load {0}: {1}" -f $scriptPath, $_.Exception.Message)
-#                     }
-#                 }
-#                 else {
-#                     Write-Warning "Script not found: $scriptPath"
-#                 }
-#             }
-#         }
-#     }
-# }
-
-. "$PSScriptRoot\Scripts\URL\LLM-Funk.ps1"
-. "$PSScriptRoot\Scripts\URL\Search-pkgs.ps1"
-# . "$PSScriptRoot\Scripts\URL\Godot-Funk.ps1"
-. "$PSScriptRoot\Scripts\Core\Aliases.ps1"
-. "$PSScriptRoot\Scripts\Core\Module-Management.ps1"
-. "$PSScriptRoot\Scripts\Networking\SSH-Tools.ps1"
-. "$PSScriptRoot\Scripts\UI\Prompt-Configuration.ps1"
-
+. "$PSScriptRoot\Scripts\Core\Logging.ps1"                              #Logging Functions.
+. "$PSScriptRoot\Scripts\Core\Aliases.ps1"                              #main Alias Navigation.
+. "$PSScriptRoot\Scripts\Core\Module-Management.ps1"                    #Module Managment Functions.
+. "$PSScriptRoot\Scripts\Core\System\FileManagement\FetchDownload.ps1"  #Fetch Download Functions.
+. "$PSScriptRoot\Scripts\Core\Navigation\Directory-Navigation.ps1"      #Directory Navigation
+. "$PSScriptRoot\Scripts\Programs\Aseprite.ps1"                         #Asperite Functions.
+. "$PSScriptRoot\Scripts\UI\Prompt-Configuration.ps1"                   #Prompt Configuration Functions.
+. "$PSScriptRoot\Scripts\Networking\SSH-Tools.ps1"                      #SSH Tools.
+. "$PSScriptRoot\Scripts\Networking\NetworkTools.ps1"                    #Network Tools.
+. "$PSScriptRoot\Scripts\URL\LLM-Funk.ps1"                              #LLM functiwons Shortcuts.
+. "$PSScriptRoot\Scripts\URL\Search-pkgs.ps1"                           #Search-pkgs Shortcuts.
+. "$PSScriptRoot\Scripts\Core\Utility-Functions.ps1"                    #Utility Functions.
+. "$PSScriptRoot\Scripts\Programs\Windows.ps1"                          #windows Funtions.
+. "$PSScriptRoot\Scripts\Development\git\Github\GitHubFunctions.ps1"    #Github Funtionality.
+. "$PSScriptRoot\Scripts\Development\git\Github\GitHubVisibility.ps1"   #GitHub Visibility Functions.
+. "$PSScriptRoot\Scripts\Development\git\Github\Repositories.ps1"       #Github Repository Functions.
+. "$PSScriptRoot\Scripts\URL\URL.ps1"                                   #URL Functions. 
+. "$PSScriptRoot\Scripts\URL\passwords.ps1"                             #Password Functions.
+. "$PSScriptRoot\Scripts\URL\Art.ps1"                                   #Art Functions.
+. "$PSScriptRoot\Scripts\Core\FineAndFolderHandler.ps1"                 #Fine and Folder Handler Functions.
 # Load scripts efficiently
 # foreach ($category in $Config.LoadOrder) { ... }
-
-
+#region Navigation 
+function home { . "$PSScriptRoot\Scripts\Core\Navigation\cd-home.ps1" }
+function fonts { . "$PSScriptRoot\Scripts\Core\Navigation\cd-fonts.ps1" }
+#region End
 #region Profile Completion
 $loadTime = (Get-Date) - $profileLoadStart
-Write-Host "PowerShell profile loaded in $([math]::Round($loadTime.TotalMilliseconds))ms!" -Level 'Success'
+Write-Host "PowerShell profile loaded in $([math]::Round($loadTime.TotalMilliseconds))ms!" -ForegroundColor Green
 
 # Display available commands
 Write-Host "`nAvailable Commands:" -ForegroundColor Cyan
+Get-Content ".\text\Available Commands.txt"       
 Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
-
-Write-Host "Start-Aseprite              - Starts Aseprite       |          Start-DoomEternal           - Starts Doom Eternal" -ForegroundColor Gray
-Write-Host "Start-DoomEternal           - Starts Doom Eternal" -ForegroundColor Gray
-Write-Host "godot                       - Starts godot" -ForegroundColor Gray
-Write-Host "edge                        - Starts Edge" -ForegroundColor Gray
-
-Write-Host "ghub                        - Go to Github Folder and list" -ForegroundColor Gray
-Write-Host "ddump                       - Go to DigitalHubDump Folder" -ForegroundColor Gray
-Write-Host "edit_powershell             - Edit my powersehll Profile" -ForegroundColor Gray
-
-Write-Host "Search-CommandHistory or h  - Search Commands History" -ForegroundColor Gray
-Write-Host "list_llm                    - List of my llms" -ForegroundColor Gray
-Write-Host "h <pattern>                 - Search command history" -ForegroundColor Gray
-Write-Host "programs                    - List Programs" -ForegroundColor Gray
-
-Write-Host "TwitchOverlay               - Launches Twitch Chat OVerlay" -ForegroundColor Gray
-Write-Host "Get-StockMarketSummary      - Get-StockMarketSummary" -ForegroundColor Gray
-Write-Host "New-QRCode                  - Generate a QR code" -ForegroundColor Gray
-
-Write-Host "Get-MyIP                    - Get my IP" -ForegroundColor Gray
-Write-Host "Get-BIOSInfo                - Get-BIOSInfo  " -ForegroundColor Gray
-Write-Host "Get-SshStatus               - Get the status of SSH (might need elevated permission)" -ForegroundColor Gray
-
-Write-Host "Search-GoPackages           - Search Go pachages" -ForegroundColor Gray
-Write-Host "Get-AllFunctions            - Show all available functions by category" -ForegroundColor Gray
-Write-Host "Get-FunctionHelp            - Show detailed help for a specific function" -ForegroundColor Gray
-
-Write-Host "TwitchOverlay               - Opens up my Twitch ocerlay" -ForegroundColor Gray
-
-Write-Host "Search-GoPackages           - Search Go package to install " -ForegroundColor Gray
-Write-Host "Search-PyPiPackages         - Search python package to install " -ForegroundColor Gray
-Write-Host "Search-GitHubRepositories   - Search Github Repo package to install " -ForegroundColor Gray
-Write-Host "Search-NpmPackages          - Search Node Package Manager " -ForegroundColor Gray
-
-
-Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
-
-# Display social media functions if available
-if (Get-Command Get-SocialFunctions -ErrorAction SilentlyContinue) {
-    Write-Host "`n📱 Social Media Functions:" -ForegroundColor Cyan
-    
-    Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
-
-    Write-Host "social [Open-SocialChat]  - Open all social media platforms" -ForegroundColor Gray
-    Write-Host "listsocial [Get-SocialFunctions] - Show all social media functions" -ForegroundColor Gray
-    Write-Host "socialcats [Get-SocialCategories] - Show social media categories" -ForegroundColor Gray
-    Write-Host "facebook, twitter, youtube, twitch, etc. - Open specific platforms" -ForegroundColor Gray
-    
-    Write-Host "─────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
+# Helper function for pretty printing commands in columns
+# function Show-CommandList {
+#     param(
+#         [Parameter(Mandatory)]
+#         [array]$Commands
+#     )
+#     $maxCmdLen = ($Commands | ForEach-Object { $_.Name.Length } | Measure-Object -Maximum).Maximum
+#     foreach ($cmd in $Commands) {
+#         $pad = " " * ($maxCmdLen - $cmd.Name.Length + 2)
+#         Write-Host ("  " + $cmd.Name) -ForegroundColor Green -NoNewline
+#         Write-Host ($pad + $cmd.Desc) -ForegroundColor Gray
+#     }
+# }
+#region Search Scripts Functions.
+function Search-Scripts {
+    param(
+        [Parameter(Mandatory)]
+        [string]$SearchTerm
+    )
+    Get-Content ".\text\Available Commands.txt" | Where-Object { $_ -like "*$SearchTerm*" }
 }
 
-#region Additional Functions
-function New-QRCode {
-    param([Parameter(Mandatory = $true)][string]$Url)
-    
-    try {
-        if ($Url -notmatch '^https?://') {
-            Write-Host "Error: Please provide a valid URL starting with http:// or https://" -ForegroundColor Red
-            return
-        }
-        
-        $qrCodeUrl = "https://qrenco.de/$Url"
-        
-        Write-Host "Generating QR code for: $Url" -ForegroundColor Cyan
-        Write-Host "QR Code URL: $qrCodeUrl" -ForegroundColor Green
-        
-        Start-Process $qrCodeUrl
-        
-        Write-Host "QR code opened in browser successfully!" -ForegroundColor Green
+function Search-ArtStation {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Subject,
+        [int]$MaxResults = 20,
+        [switch]$OpenInBrowser,
+        [switch]$BrowserOnly
+    )
+    $params = @{
+        Subject    = $Subject
+        MaxResults = $MaxResults
     }
-    catch {
-        Write-Host "Error generating QR code: $($_.Exception.Message)" -ForegroundColor Red
+    if ($OpenInBrowser) {
+        $params['OpenInBrowser'] = $true
     }
+    if ($BrowserOnly) {
+        $params['BrowserOnly'] = $true
+    }
+    & "$PSScriptRoot\Scripts\Search\Search-ArtStation.ps1" @params
 }
+
+
+#region End
+
+
+
 
 #region Error Handling
 
@@ -189,3 +155,11 @@ if ($global:ProfileCallDepth -gt 10) {
 if (-not (Get-Command Write-ProfileLog -ErrorAction SilentlyContinue)) {
     function Write-ProfileLog { param($msg, $Level) Write-Host "${Level}: ${msg}" }
 }
+
+try {
+    Import-Module Terminal-Icons -ErrorAction Stop
+}
+catch {
+    Write-Warning "Terminal-Icons failed to load: $($_.Exception.Message)"
+}
+

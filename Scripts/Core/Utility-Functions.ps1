@@ -8,6 +8,40 @@ This file contains all utility functions used throughout the PowerShell profile,
 organized by category for better maintainability.
 #>
 
+# Ensure Config is available with comprehensive fallback defaults
+# if (-not $Config) {
+#     $Config = @{
+#         Paths         = @{
+#             DGTLHubDump = "C:\Users\Digital_Russkiy\Documents\DGTLHubDump"
+#             GitHub      = Join-Path $env:USERPROFILE "Documents\GitHub"
+#         }
+#         URLs          = @{
+#             IPInfo          = "https://ipinfo.io"
+#             GitHub          = "https://github.com"
+#             DGTLHubDumpRepo = "https://github.com/Digital-gitz/DGTLHubDump"
+#             PowerShellRepo  = "https://github.com/Digital-gitz/PowerShell"
+#             QRCode          = "https://qrenco.de"
+#             GoPackages      = "https://pkg.go.dev/search"
+#         }
+#         Applications  = @{
+#             TwitchOverlay = @{
+#                 Update = "C:\Users\Digital_Russkiy\AppData\Local\TransparentTwitchChatOverlay\Update.exe"
+#                 App    = "C:\Users\Digital_Russkiy\AppData\Local\TransparentTwitchChatOverlay\TransparentTwitchChatWPF.exe"
+#             }
+#         }
+#         ErrorHandling = @{
+#             CommandSuggestionTimeout = 3
+#             MaxCommandSuggestions    = 5
+#             LevenshteinThreshold     = 3
+#             MaxCommandsToSearch      = 100
+#         }
+#         Logging       = @{
+#             Enabled          = $true
+#             IncludeTimestamp = $true
+#             IncludeSource    = $true
+#         }
+#     }
+# }
 #region System Functions
 function Startup {
     Start-Process "explorer.exe" "shell:startup"
@@ -110,64 +144,6 @@ function Show-NyanCat {
 #endregion System Functions
 
 #region Navigation Functions
-function global:ddump {
-    try {
-        $path = $Config.Paths.DGTLHubDump
-        if (Test-Path $path) {
-            Set-Location -Path $path -ErrorAction Stop
-            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
-        }
-        else {
-            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
-        }
-    }
-    catch {
-        Write-Host "Error changing directory: $_" -ForegroundColor Red
-    }
-
-    try {
-        $null = Invoke-WebRequest -Uri $Config.URLs.GitHub -UseBasicParsing -TimeoutSec 5
-        Start-Process $Config.URLs.DGTLHubDumpRepo
-        Write-Host "Successfully Opened $($Config.URLs.DGTLHubDumpRepo)"
-    }
-    catch {
-        Write-Warning "Could not connect to GitHub. Please check your internet connection."
-    }
-}
-
-function global:ghub {
-    try {
-        $path = $Config.Paths.GitHub
-        if (Test-Path $path) {
-            Set-Location -Path $path -ErrorAction Stop
-            Write-Host "Successfully changed directory to: $path" -ForegroundColor Green
-            
-            if (Get-Command gh -ErrorAction SilentlyContinue) {
-                Write-Host "`nGitHub Repositories:" -ForegroundColor Cyan
-                Write-Host "─────────────────────────────" -ForegroundColor DarkGray
-                gh repo list --limit 100 | ForEach-Object {
-                    $repo = $_ -split '\s+'
-                    Write-Host ("{0,-40} {1}" -f $repo[0], $repo[1]) -ForegroundColor Gray
-                }
-            }
-            else {
-                Write-Host "GitHub CLI (gh) is not installed. Please install it to list repositories." -ForegroundColor Yellow
-                Write-Host "Installation command: winget install GitHub.cli" -ForegroundColor Yellow
-            }
-            
-            Write-Host "`nContents of GitHub directory:" -ForegroundColor Cyan
-            Get-ChildItem -Path $path | Format-Table Name, LastWriteTime, Length -AutoSize
-        }
-        else {
-            Write-Host "Error: Directory does not exist at path: $path" -ForegroundColor Red
-        }
-    }
-    catch {
-        Write-Host "Error changing directory: $_" -ForegroundColor Red
-    }
-
-    Start-Process $Config.URLs.GitHub
-}
 
 function Get-DirectoryFiles {
     param([string]$Path = ".")
@@ -620,8 +596,8 @@ function Get-CommandSuggestion {
             Type     = $_.CommandType
         }
     } | Where-Object { $_.Distance -le $Config.ErrorHandling.LevenshteinThreshold } | 
-      Sort-Object Distance | 
-      Select-Object -First $Config.ErrorHandling.MaxCommandSuggestions
+    Sort-Object Distance | 
+    Select-Object -First $Config.ErrorHandling.MaxCommandSuggestions
 
     if ($suggestions) {
         Write-Host "`nDid you mean one of these commands?" -ForegroundColor Yellow
@@ -726,4 +702,73 @@ $ExecutionContext.InvokeCommand.CommandNotFoundAction = {
 Set-Alias -Name h -Value Search-CommandHistory -Scope Global
 #endregion Error Handling and Logging
 
+function New-QRCode {
+    param([Parameter(Mandatory = $true)][string]$Url)
+    
+    try {
+        if ($Url -notmatch '^https?://') {
+            Write-Host "Error: Please provide a valid URL starting with http:// or https://" -ForegroundColor Red
+            return
+        }
+        
+        $qrCodeUrl = "https://qrenco.de/$Url"
+        
+        Write-Host "Generating QR code for: $Url" -ForegroundColor Cyan
+        Write-Host "QR Code URL: $qrCodeUrl" -ForegroundColor Green
+        
+        Start-Process $qrCodeUrl
+        
+        Write-Host "QR code opened in browser successfully!" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error generating QR code: $($_.Exception.Message)" -ForegroundColor Red
+    }
+}
+
+function Get-Example {
+    <#
+    .SYNOPSIS
+        Example function template.
+    .DESCRIPTION
+        This function demonstrates best practices for PowerShell functions.
+    .PARAMETER Name
+        The name to display.
+    .EXAMPLE
+        Get-Example -Name "World"
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]
+        [string]$Name
+    )
+    try {
+        Write-Host "Hello, $Name!" -ForegroundColor Green
+    }
+    catch {
+        Write-Error "Failed: $($_.Exception.Message)"
+    }
+}
+
 Write-Host "Utility functions loaded successfully" -ForegroundColor Green
+
+
+function Get-AlphabeticalFileList {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$FolderPath
+    )
+
+    if (-Not (Test-Path -Path $FolderPath -PathType Container)) {
+        Write-Error "The path '$FolderPath' does not exist or is not a folder."
+        return
+    }
+
+    try {
+        Get-ChildItem -Path $FolderPath -File |
+        Sort-Object -Property Name |
+        Select-Object -ExpandProperty Name
+    }
+    catch {
+        Write-Error "Failed to list files: $_"
+    }
+}

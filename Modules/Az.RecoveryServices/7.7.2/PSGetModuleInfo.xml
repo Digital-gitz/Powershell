@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-06-03T02:52:39.207</DT>
-      <DT N="InstalledDate">2025-06-08T15:50:28.8115349-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:50:14.0517536-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -318,156 +318,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzRecoveryServicesAsrReplicationProtectedItemDisk</S>
-                <S>Backup-AzRecoveryServicesBackupItem</S>
-                <S>Copy-AzRecoveryServicesVault</S>
-                <S>Disable-AzRecoveryServicesBackupAutoProtection</S>
-                <S>Disable-AzRecoveryServicesBackupProtection</S>
-                <S>Disable-AzRecoveryServicesBackupRPMountScript</S>
-                <S>Edit-AzRecoveryServicesAsrRecoveryPlan</S>
-                <S>Enable-AzRecoveryServicesBackupAutoProtection</S>
-                <S>Enable-AzRecoveryServicesBackupProtection</S>
-                <S>Get-AzRecoveryServicesAsrAlertSetting</S>
-                <S>Get-AzRecoveryServicesAsrClusterRecoveryPoint</S>
-                <S>Get-AzRecoveryServicesAsrEvent</S>
-                <S>Get-AzRecoveryServicesAsrFabric</S>
-                <S>Get-AzRecoveryServicesAsrJob</S>
-                <S>Get-AzRecoveryServicesAsrNetwork</S>
-                <S>Get-AzRecoveryServicesAsrNetworkMapping</S>
-                <S>Get-AzRecoveryServicesAsrPolicy</S>
-                <S>Get-AzRecoveryServicesAsrProtectableItem</S>
-                <S>Get-AzRecoveryServicesAsrProtectionContainer</S>
-                <S>Get-AzRecoveryServicesAsrProtectionContainerMapping</S>
-                <S>Get-AzRecoveryServicesAsrRecoveryPlan</S>
-                <S>Get-AzRecoveryServicesAsrRecoveryPoint</S>
-                <S>Get-AzRecoveryServicesAsrReplicationProtectedItem</S>
-                <S>Get-AzRecoveryServicesAsrReplicationProtectionCluster</S>
-                <S>Get-AzRecoveryServicesAsrServicesProvider</S>
-                <S>Get-AzRecoveryServicesAsrStorageClassification</S>
-                <S>Get-AzRecoveryServicesAsrStorageClassificationMapping</S>
-                <S>Get-AzRecoveryServicesAsrVaultContext</S>
-                <S>Get-AzRecoveryServicesAsrvCenter</S>
-                <S>Get-AzRecoveryServicesBackupContainer</S>
-                <S>Get-AzRecoveryServicesBackupItem</S>
-                <S>Get-AzRecoveryServicesBackupJob</S>
-                <S>Get-AzRecoveryServicesBackupJobDetail</S>
-                <S>Get-AzRecoveryServicesBackupManagementServer</S>
-                <S>Get-AzRecoveryServicesBackupProperty</S>
-                <S>Get-AzRecoveryServicesBackupProtectableItem</S>
-                <S>Get-AzRecoveryServicesBackupProtectionPolicy</S>
-                <S>Get-AzRecoveryServicesBackupRecommendedArchivableRPGroup</S>
-                <S>Get-AzRecoveryServicesBackupRecoveryLogChain</S>
-                <S>Get-AzRecoveryServicesBackupRecoveryPoint</S>
-                <S>Get-AzRecoveryServicesBackupRetentionPolicyObject</S>
-                <S>Get-AzRecoveryServicesBackupRPMountScript</S>
-                <S>Get-AzRecoveryServicesBackupSchedulePolicyObject</S>
-                <S>Get-AzRecoveryServicesBackupStatus</S>
-                <S>Get-AzRecoveryServicesBackupWorkloadRecoveryConfig</S>
-                <S>Get-AzRecoveryServicesResourceGuardMapping</S>
-                <S>Get-AzRecoveryServicesVault</S>
-                <S>Get-AzRecoveryServicesVaultProperty</S>
-                <S>Get-AzRecoveryServicesVaultSettingsFile</S>
-                <S>Import-AzRecoveryServicesAsrVaultSettingsFile</S>
-                <S>Initialize-AzRecoveryServicesBackupProtectableItem</S>
-                <S>Initialize-AzRecoveryServicesDSMove</S>
-                <S>Move-AzRecoveryServicesBackupRecoveryPoint</S>
-                <S>New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig</S>
-                <S>New-AzRecoveryServicesAsrAzureToAzureReplicationProtectedItemConfig</S>
-                <S>New-AzRecoveryServicesAsrFabric</S>
-                <S>New-AzRecoveryServicesAsrInMageAzureV2DiskInput</S>
-                <S>New-AzRecoveryServicesAsrInMageRcmDiskInput</S>
-                <S>New-AzRecoveryServicesAsrNetworkMapping</S>
-                <S>New-AzRecoveryServicesAsrPolicy</S>
-                <S>New-AzRecoveryServicesAsrProtectableItem</S>
-                <S>New-AzRecoveryServicesAsrProtectionContainer</S>
-                <S>New-AzRecoveryServicesAsrProtectionContainerMapping</S>
-                <S>New-AzRecoveryServicesAsrRecoveryPlan</S>
-                <S>New-AzRecoveryServicesAsrReplicationProtectedItem</S>
-                <S>New-AzRecoveryServicesAsrReplicationProtectionCluster</S>
-                <S>New-AzRecoveryServicesAsrStorageClassificationMapping</S>
-                <S>New-AzRecoveryServicesAsrvCenter</S>
-                <S>New-AzRecoveryServicesAsrVMNicConfig</S>
-                <S>New-AzRecoveryServicesAsrVMNicIPConfig</S>
-                <S>New-AzRecoveryServicesBackupProtectionPolicy</S>
-                <S>New-AzRecoveryServicesVault</S>
-                <S>Register-AzRecoveryServicesBackupContainer</S>
-                <S>Remove-AzRecoveryServicesAsrFabric</S>
-                <S>Remove-AzRecoveryServicesAsrNetworkMapping</S>
-                <S>Remove-AzRecoveryServicesAsrPolicy</S>
-                <S>Remove-AzRecoveryServicesAsrProtectionContainer</S>
-                <S>Remove-AzRecoveryServicesAsrProtectionContainerMapping</S>
-                <S>Remove-AzRecoveryServicesAsrRecoveryPlan</S>
-                <S>Remove-AzRecoveryServicesAsrReplicationProtectedItem</S>
-                <S>Remove-AzRecoveryServicesAsrReplicationProtectionCluster</S>
-                <S>Remove-AzRecoveryServicesAsrReplicationProtectedItemDisk</S>
-                <S>Remove-AzRecoveryServicesAsrServicesProvider</S>
-                <S>Remove-AzRecoveryServicesAsrStorageClassificationMapping</S>
-                <S>Remove-AzRecoveryServicesAsrvCenter</S>
-                <S>Remove-AzRecoveryServicesBackupProtectionPolicy</S>
-                <S>Remove-AzRecoveryServicesResourceGuardMapping</S>
-                <S>Remove-AzRecoveryServicesVault</S>
-                <S>Restart-AzRecoveryServicesAsrJob</S>
-                <S>Restore-AzRecoveryServicesBackupItem</S>
-                <S>Resume-AzRecoveryServicesAsrJob</S>
-                <S>Set-AzRecoveryServicesAsrAlertSetting</S>
-                <S>Set-AzRecoveryServicesAsrReplicationProtectedItem</S>
-                <S>Set-AzRecoveryServicesAsrVaultContext</S>
-                <S>Set-AzRecoveryServicesBackupProperty</S>
-                <S>Set-AzRecoveryServicesBackupProtectionPolicy</S>
-                <S>Set-AzRecoveryServicesResourceGuardMapping</S>
-                <S>Set-AzRecoveryServicesVaultContext</S>
-                <S>Set-AzRecoveryServicesVaultProperty</S>
-                <S>Start-AzRecoveryServicesAsrApplyClusterRecoveryPoint</S>
-                <S>Start-AzRecoveryServicesAsrApplyRecoveryPoint</S>
-                <S>Start-AzRecoveryServicesAsrCancelFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrClusterCommitFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrCommitFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrClusterTestFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrClusterTestFailoverCleanupJob</S>
-                <S>Start-AzRecoveryServicesAsrClusterUnplannedFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrPlannedFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrResynchronizeReplicationJob</S>
-                <S>Start-AzRecoveryServicesAsrClusterResynchronizeReplicationJob</S>
-                <S>Start-AzRecoveryServicesAsrSwitchAppliance</S>
-                <S>Start-AzRecoveryServicesAsrSwitchProcessServerJob</S>
-                <S>Start-AzRecoveryServicesAsrTestFailoverCleanupJob</S>
-                <S>Start-AzRecoveryServicesAsrTestFailoverJob</S>
-                <S>Start-AzRecoveryServicesAsrUnplannedFailoverJob</S>
-                <S>Stop-AzRecoveryServicesAsrJob</S>
-                <S>Stop-AzRecoveryServicesBackupJob</S>
-                <S>Test-AzRecoveryServicesDSMove</S>
-                <S>Undo-AzRecoveryServicesBackupContainerDeletion</S>
-                <S>Undo-AzRecoveryServicesBackupItemDeletion</S>
-                <S>Unregister-AzRecoveryServicesBackupContainer</S>
-                <S>Unregister-AzRecoveryServicesBackupManagementServer</S>
-                <S>Update-AzRecoveryServicesAsrMobilityService</S>
-                <S>Update-AzRecoveryServicesAsrNetworkMapping</S>
-                <S>Update-AzRecoveryServicesAsrPolicy</S>
-                <S>Update-AzRecoveryServicesAsrProtectionContainerMapping</S>
-                <S>Update-AzRecoveryServicesAsrProtectionDirection</S>
-                <S>Update-AzRecoveryServicesAsrClusterProtectionDirection</S>
-                <S>Update-AzRecoveryServicesAsrRecoveryPlan</S>
-                <S>Update-AzRecoveryServicesAsrServicesProvider</S>
-                <S>Update-AzRecoveryServicesAsrvCenter</S>
-                <S>Update-AzRecoveryServicesVault</S>
-                <S>Wait-AzRecoveryServicesBackupJob</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzRecoveryServicesAsrReplicationProtectedItemDisk</S>
@@ -613,6 +465,154 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzRecoveryServicesAsrReplicationProtectedItemDisk</S>
+                <S>Backup-AzRecoveryServicesBackupItem</S>
+                <S>Copy-AzRecoveryServicesVault</S>
+                <S>Disable-AzRecoveryServicesBackupAutoProtection</S>
+                <S>Disable-AzRecoveryServicesBackupProtection</S>
+                <S>Disable-AzRecoveryServicesBackupRPMountScript</S>
+                <S>Edit-AzRecoveryServicesAsrRecoveryPlan</S>
+                <S>Enable-AzRecoveryServicesBackupAutoProtection</S>
+                <S>Enable-AzRecoveryServicesBackupProtection</S>
+                <S>Get-AzRecoveryServicesAsrAlertSetting</S>
+                <S>Get-AzRecoveryServicesAsrClusterRecoveryPoint</S>
+                <S>Get-AzRecoveryServicesAsrEvent</S>
+                <S>Get-AzRecoveryServicesAsrFabric</S>
+                <S>Get-AzRecoveryServicesAsrJob</S>
+                <S>Get-AzRecoveryServicesAsrNetwork</S>
+                <S>Get-AzRecoveryServicesAsrNetworkMapping</S>
+                <S>Get-AzRecoveryServicesAsrPolicy</S>
+                <S>Get-AzRecoveryServicesAsrProtectableItem</S>
+                <S>Get-AzRecoveryServicesAsrProtectionContainer</S>
+                <S>Get-AzRecoveryServicesAsrProtectionContainerMapping</S>
+                <S>Get-AzRecoveryServicesAsrRecoveryPlan</S>
+                <S>Get-AzRecoveryServicesAsrRecoveryPoint</S>
+                <S>Get-AzRecoveryServicesAsrReplicationProtectedItem</S>
+                <S>Get-AzRecoveryServicesAsrReplicationProtectionCluster</S>
+                <S>Get-AzRecoveryServicesAsrServicesProvider</S>
+                <S>Get-AzRecoveryServicesAsrStorageClassification</S>
+                <S>Get-AzRecoveryServicesAsrStorageClassificationMapping</S>
+                <S>Get-AzRecoveryServicesAsrVaultContext</S>
+                <S>Get-AzRecoveryServicesAsrvCenter</S>
+                <S>Get-AzRecoveryServicesBackupContainer</S>
+                <S>Get-AzRecoveryServicesBackupItem</S>
+                <S>Get-AzRecoveryServicesBackupJob</S>
+                <S>Get-AzRecoveryServicesBackupJobDetail</S>
+                <S>Get-AzRecoveryServicesBackupManagementServer</S>
+                <S>Get-AzRecoveryServicesBackupProperty</S>
+                <S>Get-AzRecoveryServicesBackupProtectableItem</S>
+                <S>Get-AzRecoveryServicesBackupProtectionPolicy</S>
+                <S>Get-AzRecoveryServicesBackupRecommendedArchivableRPGroup</S>
+                <S>Get-AzRecoveryServicesBackupRecoveryLogChain</S>
+                <S>Get-AzRecoveryServicesBackupRecoveryPoint</S>
+                <S>Get-AzRecoveryServicesBackupRetentionPolicyObject</S>
+                <S>Get-AzRecoveryServicesBackupRPMountScript</S>
+                <S>Get-AzRecoveryServicesBackupSchedulePolicyObject</S>
+                <S>Get-AzRecoveryServicesBackupStatus</S>
+                <S>Get-AzRecoveryServicesBackupWorkloadRecoveryConfig</S>
+                <S>Get-AzRecoveryServicesResourceGuardMapping</S>
+                <S>Get-AzRecoveryServicesVault</S>
+                <S>Get-AzRecoveryServicesVaultProperty</S>
+                <S>Get-AzRecoveryServicesVaultSettingsFile</S>
+                <S>Import-AzRecoveryServicesAsrVaultSettingsFile</S>
+                <S>Initialize-AzRecoveryServicesBackupProtectableItem</S>
+                <S>Initialize-AzRecoveryServicesDSMove</S>
+                <S>Move-AzRecoveryServicesBackupRecoveryPoint</S>
+                <S>New-AzRecoveryServicesAsrAzureToAzureDiskReplicationConfig</S>
+                <S>New-AzRecoveryServicesAsrAzureToAzureReplicationProtectedItemConfig</S>
+                <S>New-AzRecoveryServicesAsrFabric</S>
+                <S>New-AzRecoveryServicesAsrInMageAzureV2DiskInput</S>
+                <S>New-AzRecoveryServicesAsrInMageRcmDiskInput</S>
+                <S>New-AzRecoveryServicesAsrNetworkMapping</S>
+                <S>New-AzRecoveryServicesAsrPolicy</S>
+                <S>New-AzRecoveryServicesAsrProtectableItem</S>
+                <S>New-AzRecoveryServicesAsrProtectionContainer</S>
+                <S>New-AzRecoveryServicesAsrProtectionContainerMapping</S>
+                <S>New-AzRecoveryServicesAsrRecoveryPlan</S>
+                <S>New-AzRecoveryServicesAsrReplicationProtectedItem</S>
+                <S>New-AzRecoveryServicesAsrReplicationProtectionCluster</S>
+                <S>New-AzRecoveryServicesAsrStorageClassificationMapping</S>
+                <S>New-AzRecoveryServicesAsrvCenter</S>
+                <S>New-AzRecoveryServicesAsrVMNicConfig</S>
+                <S>New-AzRecoveryServicesAsrVMNicIPConfig</S>
+                <S>New-AzRecoveryServicesBackupProtectionPolicy</S>
+                <S>New-AzRecoveryServicesVault</S>
+                <S>Register-AzRecoveryServicesBackupContainer</S>
+                <S>Remove-AzRecoveryServicesAsrFabric</S>
+                <S>Remove-AzRecoveryServicesAsrNetworkMapping</S>
+                <S>Remove-AzRecoveryServicesAsrPolicy</S>
+                <S>Remove-AzRecoveryServicesAsrProtectionContainer</S>
+                <S>Remove-AzRecoveryServicesAsrProtectionContainerMapping</S>
+                <S>Remove-AzRecoveryServicesAsrRecoveryPlan</S>
+                <S>Remove-AzRecoveryServicesAsrReplicationProtectedItem</S>
+                <S>Remove-AzRecoveryServicesAsrReplicationProtectionCluster</S>
+                <S>Remove-AzRecoveryServicesAsrReplicationProtectedItemDisk</S>
+                <S>Remove-AzRecoveryServicesAsrServicesProvider</S>
+                <S>Remove-AzRecoveryServicesAsrStorageClassificationMapping</S>
+                <S>Remove-AzRecoveryServicesAsrvCenter</S>
+                <S>Remove-AzRecoveryServicesBackupProtectionPolicy</S>
+                <S>Remove-AzRecoveryServicesResourceGuardMapping</S>
+                <S>Remove-AzRecoveryServicesVault</S>
+                <S>Restart-AzRecoveryServicesAsrJob</S>
+                <S>Restore-AzRecoveryServicesBackupItem</S>
+                <S>Resume-AzRecoveryServicesAsrJob</S>
+                <S>Set-AzRecoveryServicesAsrAlertSetting</S>
+                <S>Set-AzRecoveryServicesAsrReplicationProtectedItem</S>
+                <S>Set-AzRecoveryServicesAsrVaultContext</S>
+                <S>Set-AzRecoveryServicesBackupProperty</S>
+                <S>Set-AzRecoveryServicesBackupProtectionPolicy</S>
+                <S>Set-AzRecoveryServicesResourceGuardMapping</S>
+                <S>Set-AzRecoveryServicesVaultContext</S>
+                <S>Set-AzRecoveryServicesVaultProperty</S>
+                <S>Start-AzRecoveryServicesAsrApplyClusterRecoveryPoint</S>
+                <S>Start-AzRecoveryServicesAsrApplyRecoveryPoint</S>
+                <S>Start-AzRecoveryServicesAsrCancelFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrClusterCommitFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrCommitFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrClusterTestFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrClusterTestFailoverCleanupJob</S>
+                <S>Start-AzRecoveryServicesAsrClusterUnplannedFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrPlannedFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrResynchronizeReplicationJob</S>
+                <S>Start-AzRecoveryServicesAsrClusterResynchronizeReplicationJob</S>
+                <S>Start-AzRecoveryServicesAsrSwitchAppliance</S>
+                <S>Start-AzRecoveryServicesAsrSwitchProcessServerJob</S>
+                <S>Start-AzRecoveryServicesAsrTestFailoverCleanupJob</S>
+                <S>Start-AzRecoveryServicesAsrTestFailoverJob</S>
+                <S>Start-AzRecoveryServicesAsrUnplannedFailoverJob</S>
+                <S>Stop-AzRecoveryServicesAsrJob</S>
+                <S>Stop-AzRecoveryServicesBackupJob</S>
+                <S>Test-AzRecoveryServicesDSMove</S>
+                <S>Undo-AzRecoveryServicesBackupContainerDeletion</S>
+                <S>Undo-AzRecoveryServicesBackupItemDeletion</S>
+                <S>Unregister-AzRecoveryServicesBackupContainer</S>
+                <S>Unregister-AzRecoveryServicesBackupManagementServer</S>
+                <S>Update-AzRecoveryServicesAsrMobilityService</S>
+                <S>Update-AzRecoveryServicesAsrNetworkMapping</S>
+                <S>Update-AzRecoveryServicesAsrPolicy</S>
+                <S>Update-AzRecoveryServicesAsrProtectionContainerMapping</S>
+                <S>Update-AzRecoveryServicesAsrProtectionDirection</S>
+                <S>Update-AzRecoveryServicesAsrClusterProtectionDirection</S>
+                <S>Update-AzRecoveryServicesAsrRecoveryPlan</S>
+                <S>Update-AzRecoveryServicesAsrServicesProvider</S>
+                <S>Update-AzRecoveryServicesAsrvCenter</S>
+                <S>Update-AzRecoveryServicesVault</S>
+                <S>Wait-AzRecoveryServicesBackupJob</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

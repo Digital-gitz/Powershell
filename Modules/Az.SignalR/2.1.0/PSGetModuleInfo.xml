@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:19:48.26</DT>
-      <DT N="InstalledDate">2025-06-08T15:50:38.8458379-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:50:19.4508007-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -117,34 +117,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzSignalR</S>
-                <S>Get-AzSignalRKey</S>
-                <S>Get-AzSignalRUsage</S>
-                <S>New-AzSignalR</S>
-                <S>New-AzSignalRKey</S>
-                <S>Remove-AzSignalR</S>
-                <S>Restart-AzSignalR</S>
-                <S>Set-AzSignalRUpstream</S>
-                <S>Test-AzSignalRName</S>
-                <S>Update-AzSignalR</S>
-                <S>Update-AzSignalRNetworkAcl</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzSignalR</S>
@@ -189,6 +163,32 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-AzSignalR</S>
+                <S>Get-AzSignalRKey</S>
+                <S>Get-AzSignalRUsage</S>
+                <S>New-AzSignalR</S>
+                <S>New-AzSignalRKey</S>
+                <S>Remove-AzSignalR</S>
+                <S>Restart-AzSignalR</S>
+                <S>Set-AzSignalRUpstream</S>
+                <S>Test-AzSignalRName</S>
+                <S>Update-AzSignalR</S>
+                <S>Update-AzSignalRNetworkAcl</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

@@ -540,79 +540,13 @@ foreach ($module in $Config.Modules.Essential) {
 
 # Load optional modules
 foreach ($module in $Config.Modules.Optional) {
-    Import-ModuleSafely -Name $module
+    # Temporarily skip Terminal-Icons until its malformed XML is fixed
+    if ($module -is [hashtable]) {
+        if ($module.Name -eq 'Terminal-Icons') { Write-Warning 'Skipping Terminal-Icons (broken XML)'; continue }
+        Import-ModuleSafely -Name $module.Name -Purpose $module.Purpose -MinimumVersion $module.MinimumVersion
+    }
+    else {
+        if ($module -eq 'Terminal-Icons') { Write-Warning 'Skipping Terminal-Icons (broken XML)'; continue }
+        Import-ModuleSafely -Name $module
+    }
 }
-
-
-#region Module Management
-# Optimized module loading function
-# function Import-ModuleSafely {
-#     param(
-#         [Parameter(Mandatory = $true)]
-#         [string]$Name,
-        
-#         [Parameter(Mandatory = $false)]
-#         [string]$Scope = 'CurrentUser',
-        
-#         [Parameter(Mandatory = $false)]
-#         [string]$Purpose,
-        
-#         [Parameter(Mandatory = $false)]
-#         [string]$MinimumVersion
-#     )
-    
-#     try {
-#         # Check if module is already loaded
-#         if (Get-Module -Name $Name) {
-#             return
-#         }
-
-#         # Check if module needs to be installed
-#         if (-not (Get-Module -Name $Name -ListAvailable)) {
-#             try {
-#                 # Ensure PSGallery is trusted
-#                 if ((Get-PSRepository -Name 'PSGallery').InstallationPolicy -ne 'Trusted') {
-#                     Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
-#                 }
-                
-#                 # Install module
-#                 $params = @{
-#                     Name               = $Name
-#                     Force              = $true 
-#                     Scope              = $Scope
-#                     AllowClobber       = $true
-#                     SkipPublisherCheck = $true
-#                     ErrorAction        = 'Stop'
-#                 }
-#                 if ($MinimumVersion) {
-#                     $params['MinimumVersion'] = $MinimumVersion
-#                 }
-                
-#                 Install-Module @params
-#             }
-#             catch {
-#                 Write-Warning "Failed to install module $Name : $($_.Exception.Message)"
-#                 return
-#             }
-#         }
-
-#         # Import module
-#         Import-Module -Name $Name -Force -DisableNameChecking -ErrorAction Stop
-#     }
-#     catch {
-#         Write-Warning "Failed to load ${Name} - $($_.Exception.Message)"
-#     }
-# }
-
-# # Load essential modules
-# foreach ($module in $Config.Modules.Essential) {
-#     Import-ModuleSafely -Name $module.Name -Purpose $module.Purpose
-#     if ($module.Name -eq 'posh-git') {
-#         $env:POSHGIT_CYGWIN_WARNING = 'false'
-#     }
-# }
-
-# # Load optional modules
-# foreach ($module in $Config.Modules.Optional) {
-#     Import-ModuleSafely -Name $module
-# }

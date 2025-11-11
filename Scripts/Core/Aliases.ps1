@@ -8,6 +8,10 @@ $aliasDefinitions = @{
     'lsa'       = 'Get-ChildItem -Force'
     'touch'     = { param($f) New-Item -ItemType File -Path $f -Force }
     'which'     = { param($c) (Get-Command $c).Path }
+    'open'     = 'explorer.exe .'
+    '..'        = 'cd ..'
+    '...'       = 'cd ...'
+    '....'      = 'cd ....'
 }
 
 

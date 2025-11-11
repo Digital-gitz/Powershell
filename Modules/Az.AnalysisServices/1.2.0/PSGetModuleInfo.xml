@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:10:49.437</DT>
-      <DT N="InstalledDate">2025-06-08T15:49:31.4645482-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:44.1285197-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -79,36 +79,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Add-AzAnalysisServicesAccount</S>
-                <S>Export-AzAnalysisServicesInstanceLog</S>
-                <S>Get-AzAnalysisServicesServer</S>
-                <S>New-AzAnalysisServicesFirewallConfig</S>
-                <S>New-AzAnalysisServicesFirewallRule</S>
-                <S>New-AzAnalysisServicesServer</S>
-                <S>Remove-AzAnalysisServicesServer</S>
-                <S>Restart-AzAnalysisServicesInstance</S>
-                <S>Resume-AzAnalysisServicesServer</S>
-                <S>Set-AzAnalysisServicesServer</S>
-                <S>Suspend-AzAnalysisServicesServer</S>
-                <S>Sync-AzAnalysisServicesInstance</S>
-                <S>Test-AzAnalysisServicesServer</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Add-AzAnalysisServicesAccount</S>
@@ -134,6 +106,34 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzAnalysisServicesAccount</S>
+                <S>Export-AzAnalysisServicesInstanceLog</S>
+                <S>Get-AzAnalysisServicesServer</S>
+                <S>New-AzAnalysisServicesFirewallConfig</S>
+                <S>New-AzAnalysisServicesFirewallRule</S>
+                <S>New-AzAnalysisServicesServer</S>
+                <S>Remove-AzAnalysisServicesServer</S>
+                <S>Restart-AzAnalysisServicesInstance</S>
+                <S>Resume-AzAnalysisServicesServer</S>
+                <S>Set-AzAnalysisServicesServer</S>
+                <S>Suspend-AzAnalysisServicesServer</S>
+                <S>Sync-AzAnalysisServicesInstance</S>
+                <S>Test-AzAnalysisServicesServer</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

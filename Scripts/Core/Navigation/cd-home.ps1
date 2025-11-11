@@ -6,8 +6,6 @@
 .EXAMPLE
 	PS> ./cd-home.ps1
 	📂C:\Users\Markus entered (has 4 files and 7 subfolders)
-.LINK
-	https://github.com/fleschutz/PowerShell
 .NOTES
 	Author: Markus Fleschutz | License: CC0
 #>

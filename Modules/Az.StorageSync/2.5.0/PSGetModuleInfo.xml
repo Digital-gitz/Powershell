@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-04-01T06:28:16.663</DT>
-      <DT N="InstalledDate">2025-06-08T15:50:45.0681523-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:50:23.4514545-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -103,48 +103,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzStorageSyncCloudEndpoint</S>
-                <S>Get-AzStorageSyncGroup</S>
-                <S>Get-AzStorageSyncServer</S>
-                <S>Get-AzStorageSyncServerEndpoint</S>
-                <S>Get-AzStorageSyncService</S>
-                <S>Invoke-AzStorageSyncChangeDetection</S>
-                <S>Invoke-AzStorageSyncCompatibilityCheck</S>
-                <S>New-AzStorageSyncCloudEndpoint</S>
-                <S>New-AzStorageSyncGroup</S>
-                <S>New-AzStorageSyncServerEndpoint</S>
-                <S>New-AzStorageSyncService</S>
-                <S>Register-AzStorageSyncServer</S>
-                <S>Remove-AzStorageSyncCloudEndpoint</S>
-                <S>Remove-AzStorageSyncGroup</S>
-                <S>Remove-AzStorageSyncServerEndpoint</S>
-                <S>Remove-AzStorageSyncServerEndpointPermission</S>
-                <S>Remove-AzStorageSyncService</S>
-                <S>Reset-AzStorageSyncServerCertificate</S>
-                <S>Set-AzStorageSyncCloudEndpointPermission</S>
-                <S>Set-AzStorageSyncServer</S>
-                <S>Set-AzStorageSyncServerEndpoint</S>
-                <S>Set-AzStorageSyncServerEndpointPermission</S>
-                <S>Set-AzStorageSyncService</S>
-                <S>Set-AzStorageSyncServiceIdentity</S>
-                <S>Unregister-AzStorageSyncServer</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzStorageSyncCloudEndpoint</S>
@@ -182,6 +142,46 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-AzStorageSyncCloudEndpoint</S>
+                <S>Get-AzStorageSyncGroup</S>
+                <S>Get-AzStorageSyncServer</S>
+                <S>Get-AzStorageSyncServerEndpoint</S>
+                <S>Get-AzStorageSyncService</S>
+                <S>Invoke-AzStorageSyncChangeDetection</S>
+                <S>Invoke-AzStorageSyncCompatibilityCheck</S>
+                <S>New-AzStorageSyncCloudEndpoint</S>
+                <S>New-AzStorageSyncGroup</S>
+                <S>New-AzStorageSyncServerEndpoint</S>
+                <S>New-AzStorageSyncService</S>
+                <S>Register-AzStorageSyncServer</S>
+                <S>Remove-AzStorageSyncCloudEndpoint</S>
+                <S>Remove-AzStorageSyncGroup</S>
+                <S>Remove-AzStorageSyncServerEndpoint</S>
+                <S>Remove-AzStorageSyncServerEndpointPermission</S>
+                <S>Remove-AzStorageSyncService</S>
+                <S>Reset-AzStorageSyncServerCertificate</S>
+                <S>Set-AzStorageSyncCloudEndpointPermission</S>
+                <S>Set-AzStorageSyncServer</S>
+                <S>Set-AzStorageSyncServerEndpoint</S>
+                <S>Set-AzStorageSyncServerEndpointPermission</S>
+                <S>Set-AzStorageSyncService</S>
+                <S>Set-AzStorageSyncServiceIdentity</S>
+                <S>Unregister-AzStorageSyncServer</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

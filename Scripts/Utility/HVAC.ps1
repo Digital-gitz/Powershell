@@ -19,6 +19,17 @@ function ConvertCelsiusToFahrenheit {
     return $fahrenheit
 }
 
+# CFM clalculation for a room
+# function CalculateCFM {
+#     param(
+#         [double]$roomVolume,
+#         [double]$airChangesPerHour
+#     )
+# }
+
+
+
+
 # Example usage:
 # ConvertFahrenheitToCelsius -fahrenheit 98.6
 # ConvertCelsiusToFahrenheit -celsius 37

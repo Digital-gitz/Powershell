@@ -1,0 +1,497 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DataFactory</S>
+      <S N="Version">1.19.4</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell - Data Factory service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Data Factory, please visit the following: https://learn.microsoft.com/azure/data-factory/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-07-01T04:49:45.773</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:54.1015279-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>DataFactory</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSCmdlet_Add-AzDataFactoryV2DataFlowDebugSessionPackage</S>
+          <S>PSCommand_Add-AzDataFactoryV2DataFlowDebugSessionPackage</S>
+          <S>PSCmdlet_Add-AzDataFactoryV2TriggerSubscription</S>
+          <S>PSCommand_Add-AzDataFactoryV2TriggerSubscription</S>
+          <S>PSCmdlet_Get-AzDataFactory</S>
+          <S>PSCommand_Get-AzDataFactory</S>
+          <S>PSCmdlet_Get-AzDataFactoryActivityWindow</S>
+          <S>PSCommand_Get-AzDataFactoryActivityWindow</S>
+          <S>PSCmdlet_Get-AzDataFactoryDataset</S>
+          <S>PSCommand_Get-AzDataFactoryDataset</S>
+          <S>PSCmdlet_Get-AzDataFactoryGateway</S>
+          <S>PSCommand_Get-AzDataFactoryGateway</S>
+          <S>PSCmdlet_Get-AzDataFactoryGatewayAuthKey</S>
+          <S>PSCommand_Get-AzDataFactoryGatewayAuthKey</S>
+          <S>PSCmdlet_Get-AzDataFactoryHub</S>
+          <S>PSCommand_Get-AzDataFactoryHub</S>
+          <S>PSCmdlet_Get-AzDataFactoryLinkedService</S>
+          <S>PSCommand_Get-AzDataFactoryLinkedService</S>
+          <S>PSCmdlet_Get-AzDataFactoryPipeline</S>
+          <S>PSCommand_Get-AzDataFactoryPipeline</S>
+          <S>PSCmdlet_Get-AzDataFactoryRun</S>
+          <S>PSCommand_Get-AzDataFactoryRun</S>
+          <S>PSCmdlet_Get-AzDataFactorySlice</S>
+          <S>PSCommand_Get-AzDataFactorySlice</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2</S>
+          <S>PSCommand_Get-AzDataFactoryV2</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2ActivityRun</S>
+          <S>PSCommand_Get-AzDataFactoryV2ActivityRun</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2DataFlow</S>
+          <S>PSCommand_Get-AzDataFactoryV2DataFlow</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2DataFlowDebugSession</S>
+          <S>PSCommand_Get-AzDataFactoryV2DataFlowDebugSession</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2Dataset</S>
+          <S>PSCommand_Get-AzDataFactoryV2Dataset</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCommand_Get-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2IntegrationRuntimeKey</S>
+          <S>PSCommand_Get-AzDataFactoryV2IntegrationRuntimeKey</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2IntegrationRuntimeMetric</S>
+          <S>PSCommand_Get-AzDataFactoryV2IntegrationRuntimeMetric</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2IntegrationRuntimeNode</S>
+          <S>PSCommand_Get-AzDataFactoryV2IntegrationRuntimeNode</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2IntegrationRuntimeOutboundNetworkDependenciesEndpoint</S>
+          <S>PSCommand_Get-AzDataFactoryV2IntegrationRuntimeOutboundNetworkDependenciesEndpoint</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2LinkedService</S>
+          <S>PSCommand_Get-AzDataFactoryV2LinkedService</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2Pipeline</S>
+          <S>PSCommand_Get-AzDataFactoryV2Pipeline</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2PipelineRun</S>
+          <S>PSCommand_Get-AzDataFactoryV2PipelineRun</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2Trigger</S>
+          <S>PSCommand_Get-AzDataFactoryV2Trigger</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2TriggerRun</S>
+          <S>PSCommand_Get-AzDataFactoryV2TriggerRun</S>
+          <S>PSCmdlet_Get-AzDataFactoryV2TriggerSubscriptionStatus</S>
+          <S>PSCommand_Get-AzDataFactoryV2TriggerSubscriptionStatus</S>
+          <S>PSCmdlet_Invoke-AzDataFactoryV2DataFlowDebugSessionCommand</S>
+          <S>PSCommand_Invoke-AzDataFactoryV2DataFlowDebugSessionCommand</S>
+          <S>PSCmdlet_Invoke-AzDataFactoryV2IntegrationRuntimeUpgrade</S>
+          <S>PSCommand_Invoke-AzDataFactoryV2IntegrationRuntimeUpgrade</S>
+          <S>PSCmdlet_Invoke-AzDataFactoryV2Pipeline</S>
+          <S>PSCommand_Invoke-AzDataFactoryV2Pipeline</S>
+          <S>PSCmdlet_Invoke-AzDataFactoryV2TriggerRun</S>
+          <S>PSCommand_Invoke-AzDataFactoryV2TriggerRun</S>
+          <S>PSCmdlet_New-AzDataFactory</S>
+          <S>PSCommand_New-AzDataFactory</S>
+          <S>PSCmdlet_New-AzDataFactoryDataset</S>
+          <S>PSCommand_New-AzDataFactoryDataset</S>
+          <S>PSCmdlet_New-AzDataFactoryEncryptValue</S>
+          <S>PSCommand_New-AzDataFactoryEncryptValue</S>
+          <S>PSCmdlet_New-AzDataFactoryGateway</S>
+          <S>PSCommand_New-AzDataFactoryGateway</S>
+          <S>PSCmdlet_New-AzDataFactoryGatewayAuthKey</S>
+          <S>PSCommand_New-AzDataFactoryGatewayAuthKey</S>
+          <S>PSCmdlet_New-AzDataFactoryHub</S>
+          <S>PSCommand_New-AzDataFactoryHub</S>
+          <S>PSCmdlet_New-AzDataFactoryLinkedService</S>
+          <S>PSCommand_New-AzDataFactoryLinkedService</S>
+          <S>PSCmdlet_New-AzDataFactoryPipeline</S>
+          <S>PSCommand_New-AzDataFactoryPipeline</S>
+          <S>PSCmdlet_New-AzDataFactoryV2IntegrationRuntimeKey</S>
+          <S>PSCommand_New-AzDataFactoryV2IntegrationRuntimeKey</S>
+          <S>PSCmdlet_New-AzDataFactoryV2LinkedServiceEncryptedCredential</S>
+          <S>PSCommand_New-AzDataFactoryV2LinkedServiceEncryptedCredential</S>
+          <S>PSCmdlet_Remove-AzDataFactory</S>
+          <S>PSCommand_Remove-AzDataFactory</S>
+          <S>PSCmdlet_Remove-AzDataFactoryDataset</S>
+          <S>PSCommand_Remove-AzDataFactoryDataset</S>
+          <S>PSCmdlet_Remove-AzDataFactoryGateway</S>
+          <S>PSCommand_Remove-AzDataFactoryGateway</S>
+          <S>PSCmdlet_Remove-AzDataFactoryHub</S>
+          <S>PSCommand_Remove-AzDataFactoryHub</S>
+          <S>PSCmdlet_Remove-AzDataFactoryLinkedService</S>
+          <S>PSCommand_Remove-AzDataFactoryLinkedService</S>
+          <S>PSCmdlet_Remove-AzDataFactoryPipeline</S>
+          <S>PSCommand_Remove-AzDataFactoryPipeline</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2</S>
+          <S>PSCommand_Remove-AzDataFactoryV2</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2DataFlow</S>
+          <S>PSCommand_Remove-AzDataFactoryV2DataFlow</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2Dataset</S>
+          <S>PSCommand_Remove-AzDataFactoryV2Dataset</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCommand_Remove-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2IntegrationRuntimeNode</S>
+          <S>PSCommand_Remove-AzDataFactoryV2IntegrationRuntimeNode</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2LinkedService</S>
+          <S>PSCommand_Remove-AzDataFactoryV2LinkedService</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2Pipeline</S>
+          <S>PSCommand_Remove-AzDataFactoryV2Pipeline</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2Trigger</S>
+          <S>PSCommand_Remove-AzDataFactoryV2Trigger</S>
+          <S>PSCmdlet_Remove-AzDataFactoryV2TriggerSubscription</S>
+          <S>PSCommand_Remove-AzDataFactoryV2TriggerSubscription</S>
+          <S>PSCmdlet_Resume-AzDataFactoryPipeline</S>
+          <S>PSCommand_Resume-AzDataFactoryPipeline</S>
+          <S>PSCmdlet_Save-AzDataFactoryLog</S>
+          <S>PSCommand_Save-AzDataFactoryLog</S>
+          <S>PSCmdlet_Set-AzDataFactoryGateway</S>
+          <S>PSCommand_Set-AzDataFactoryGateway</S>
+          <S>PSCmdlet_Set-AzDataFactoryPipelineActivePeriod</S>
+          <S>PSCommand_Set-AzDataFactoryPipelineActivePeriod</S>
+          <S>PSCmdlet_Set-AzDataFactorySliceStatus</S>
+          <S>PSCommand_Set-AzDataFactorySliceStatus</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2</S>
+          <S>PSCommand_Set-AzDataFactoryV2</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2DataFlow</S>
+          <S>PSCommand_Set-AzDataFactoryV2DataFlow</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2Dataset</S>
+          <S>PSCommand_Set-AzDataFactoryV2Dataset</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCommand_Set-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2LinkedService</S>
+          <S>PSCommand_Set-AzDataFactoryV2LinkedService</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2Pipeline</S>
+          <S>PSCommand_Set-AzDataFactoryV2Pipeline</S>
+          <S>PSCmdlet_Set-AzDataFactoryV2Trigger</S>
+          <S>PSCommand_Set-AzDataFactoryV2Trigger</S>
+          <S>PSCmdlet_Start-AzDataFactoryV2DataFlowDebugSession</S>
+          <S>PSCommand_Start-AzDataFactoryV2DataFlowDebugSession</S>
+          <S>PSCmdlet_Start-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCommand_Start-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCmdlet_Start-AzDataFactoryV2Trigger</S>
+          <S>PSCommand_Start-AzDataFactoryV2Trigger</S>
+          <S>PSCmdlet_Stop-AzDataFactoryV2DataFlowDebugSession</S>
+          <S>PSCommand_Stop-AzDataFactoryV2DataFlowDebugSession</S>
+          <S>PSCmdlet_Stop-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCommand_Stop-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCmdlet_Stop-AzDataFactoryV2PipelineRun</S>
+          <S>PSCommand_Stop-AzDataFactoryV2PipelineRun</S>
+          <S>PSCmdlet_Stop-AzDataFactoryV2Trigger</S>
+          <S>PSCommand_Stop-AzDataFactoryV2Trigger</S>
+          <S>PSCmdlet_Stop-AzDataFactoryV2TriggerRun</S>
+          <S>PSCommand_Stop-AzDataFactoryV2TriggerRun</S>
+          <S>PSCmdlet_Suspend-AzDataFactoryPipeline</S>
+          <S>PSCommand_Suspend-AzDataFactoryPipeline</S>
+          <S>PSCmdlet_Sync-AzDataFactoryV2IntegrationRuntimeCredential</S>
+          <S>PSCommand_Sync-AzDataFactoryV2IntegrationRuntimeCredential</S>
+          <S>PSCmdlet_Update-AzDataFactoryV2</S>
+          <S>PSCommand_Update-AzDataFactoryV2</S>
+          <S>PSCmdlet_Update-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCommand_Update-AzDataFactoryV2IntegrationRuntime</S>
+          <S>PSCmdlet_Update-AzDataFactoryV2IntegrationRuntimeNode</S>
+          <S>PSCommand_Update-AzDataFactoryV2IntegrationRuntimeNode</S>
+          <S>PSIncludes_Cmdlet</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzDataFactoryV2DataFlowDebugSessionPackage</S>
+                <S>Add-AzDataFactoryV2TriggerSubscription</S>
+                <S>Get-AzDataFactory</S>
+                <S>Get-AzDataFactoryActivityWindow</S>
+                <S>Get-AzDataFactoryDataset</S>
+                <S>Get-AzDataFactoryGateway</S>
+                <S>Get-AzDataFactoryGatewayAuthKey</S>
+                <S>Get-AzDataFactoryHub</S>
+                <S>Get-AzDataFactoryLinkedService</S>
+                <S>Get-AzDataFactoryPipeline</S>
+                <S>Get-AzDataFactoryRun</S>
+                <S>Get-AzDataFactorySlice</S>
+                <S>Get-AzDataFactoryV2</S>
+                <S>Get-AzDataFactoryV2ActivityRun</S>
+                <S>Get-AzDataFactoryV2DataFlow</S>
+                <S>Get-AzDataFactoryV2DataFlowDebugSession</S>
+                <S>Get-AzDataFactoryV2Dataset</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeKey</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeMetric</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeNode</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeOutboundNetworkDependenciesEndpoint</S>
+                <S>Get-AzDataFactoryV2LinkedService</S>
+                <S>Get-AzDataFactoryV2Pipeline</S>
+                <S>Get-AzDataFactoryV2PipelineRun</S>
+                <S>Get-AzDataFactoryV2Trigger</S>
+                <S>Get-AzDataFactoryV2TriggerRun</S>
+                <S>Get-AzDataFactoryV2TriggerSubscriptionStatus</S>
+                <S>Invoke-AzDataFactoryV2DataFlowDebugSessionCommand</S>
+                <S>Invoke-AzDataFactoryV2IntegrationRuntimeUpgrade</S>
+                <S>Invoke-AzDataFactoryV2Pipeline</S>
+                <S>Invoke-AzDataFactoryV2TriggerRun</S>
+                <S>New-AzDataFactory</S>
+                <S>New-AzDataFactoryDataset</S>
+                <S>New-AzDataFactoryEncryptValue</S>
+                <S>New-AzDataFactoryGateway</S>
+                <S>New-AzDataFactoryGatewayAuthKey</S>
+                <S>New-AzDataFactoryHub</S>
+                <S>New-AzDataFactoryLinkedService</S>
+                <S>New-AzDataFactoryPipeline</S>
+                <S>New-AzDataFactoryV2IntegrationRuntimeKey</S>
+                <S>New-AzDataFactoryV2LinkedServiceEncryptedCredential</S>
+                <S>Remove-AzDataFactory</S>
+                <S>Remove-AzDataFactoryDataset</S>
+                <S>Remove-AzDataFactoryGateway</S>
+                <S>Remove-AzDataFactoryHub</S>
+                <S>Remove-AzDataFactoryLinkedService</S>
+                <S>Remove-AzDataFactoryPipeline</S>
+                <S>Remove-AzDataFactoryV2</S>
+                <S>Remove-AzDataFactoryV2DataFlow</S>
+                <S>Remove-AzDataFactoryV2Dataset</S>
+                <S>Remove-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Remove-AzDataFactoryV2IntegrationRuntimeNode</S>
+                <S>Remove-AzDataFactoryV2LinkedService</S>
+                <S>Remove-AzDataFactoryV2Pipeline</S>
+                <S>Remove-AzDataFactoryV2Trigger</S>
+                <S>Remove-AzDataFactoryV2TriggerSubscription</S>
+                <S>Resume-AzDataFactoryPipeline</S>
+                <S>Save-AzDataFactoryLog</S>
+                <S>Set-AzDataFactoryGateway</S>
+                <S>Set-AzDataFactoryPipelineActivePeriod</S>
+                <S>Set-AzDataFactorySliceStatus</S>
+                <S>Set-AzDataFactoryV2</S>
+                <S>Set-AzDataFactoryV2DataFlow</S>
+                <S>Set-AzDataFactoryV2Dataset</S>
+                <S>Set-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Set-AzDataFactoryV2LinkedService</S>
+                <S>Set-AzDataFactoryV2Pipeline</S>
+                <S>Set-AzDataFactoryV2Trigger</S>
+                <S>Start-AzDataFactoryV2DataFlowDebugSession</S>
+                <S>Start-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Start-AzDataFactoryV2Trigger</S>
+                <S>Stop-AzDataFactoryV2DataFlowDebugSession</S>
+                <S>Stop-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Stop-AzDataFactoryV2PipelineRun</S>
+                <S>Stop-AzDataFactoryV2Trigger</S>
+                <S>Stop-AzDataFactoryV2TriggerRun</S>
+                <S>Suspend-AzDataFactoryPipeline</S>
+                <S>Sync-AzDataFactoryV2IntegrationRuntimeCredential</S>
+                <S>Update-AzDataFactoryV2</S>
+                <S>Update-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Update-AzDataFactoryV2IntegrationRuntimeNode</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-AzDataFactoryV2DataFlowDebugSessionPackage</S>
+                <S>Add-AzDataFactoryV2TriggerSubscription</S>
+                <S>Get-AzDataFactory</S>
+                <S>Get-AzDataFactoryActivityWindow</S>
+                <S>Get-AzDataFactoryDataset</S>
+                <S>Get-AzDataFactoryGateway</S>
+                <S>Get-AzDataFactoryGatewayAuthKey</S>
+                <S>Get-AzDataFactoryHub</S>
+                <S>Get-AzDataFactoryLinkedService</S>
+                <S>Get-AzDataFactoryPipeline</S>
+                <S>Get-AzDataFactoryRun</S>
+                <S>Get-AzDataFactorySlice</S>
+                <S>Get-AzDataFactoryV2</S>
+                <S>Get-AzDataFactoryV2ActivityRun</S>
+                <S>Get-AzDataFactoryV2DataFlow</S>
+                <S>Get-AzDataFactoryV2DataFlowDebugSession</S>
+                <S>Get-AzDataFactoryV2Dataset</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeKey</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeMetric</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeNode</S>
+                <S>Get-AzDataFactoryV2IntegrationRuntimeOutboundNetworkDependenciesEndpoint</S>
+                <S>Get-AzDataFactoryV2LinkedService</S>
+                <S>Get-AzDataFactoryV2Pipeline</S>
+                <S>Get-AzDataFactoryV2PipelineRun</S>
+                <S>Get-AzDataFactoryV2Trigger</S>
+                <S>Get-AzDataFactoryV2TriggerRun</S>
+                <S>Get-AzDataFactoryV2TriggerSubscriptionStatus</S>
+                <S>Invoke-AzDataFactoryV2DataFlowDebugSessionCommand</S>
+                <S>Invoke-AzDataFactoryV2IntegrationRuntimeUpgrade</S>
+                <S>Invoke-AzDataFactoryV2Pipeline</S>
+                <S>Invoke-AzDataFactoryV2TriggerRun</S>
+                <S>New-AzDataFactory</S>
+                <S>New-AzDataFactoryDataset</S>
+                <S>New-AzDataFactoryEncryptValue</S>
+                <S>New-AzDataFactoryGateway</S>
+                <S>New-AzDataFactoryGatewayAuthKey</S>
+                <S>New-AzDataFactoryHub</S>
+                <S>New-AzDataFactoryLinkedService</S>
+                <S>New-AzDataFactoryPipeline</S>
+                <S>New-AzDataFactoryV2IntegrationRuntimeKey</S>
+                <S>New-AzDataFactoryV2LinkedServiceEncryptedCredential</S>
+                <S>Remove-AzDataFactory</S>
+                <S>Remove-AzDataFactoryDataset</S>
+                <S>Remove-AzDataFactoryGateway</S>
+                <S>Remove-AzDataFactoryHub</S>
+                <S>Remove-AzDataFactoryLinkedService</S>
+                <S>Remove-AzDataFactoryPipeline</S>
+                <S>Remove-AzDataFactoryV2</S>
+                <S>Remove-AzDataFactoryV2DataFlow</S>
+                <S>Remove-AzDataFactoryV2Dataset</S>
+                <S>Remove-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Remove-AzDataFactoryV2IntegrationRuntimeNode</S>
+                <S>Remove-AzDataFactoryV2LinkedService</S>
+                <S>Remove-AzDataFactoryV2Pipeline</S>
+                <S>Remove-AzDataFactoryV2Trigger</S>
+                <S>Remove-AzDataFactoryV2TriggerSubscription</S>
+                <S>Resume-AzDataFactoryPipeline</S>
+                <S>Save-AzDataFactoryLog</S>
+                <S>Set-AzDataFactoryGateway</S>
+                <S>Set-AzDataFactoryPipelineActivePeriod</S>
+                <S>Set-AzDataFactorySliceStatus</S>
+                <S>Set-AzDataFactoryV2</S>
+                <S>Set-AzDataFactoryV2DataFlow</S>
+                <S>Set-AzDataFactoryV2Dataset</S>
+                <S>Set-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Set-AzDataFactoryV2LinkedService</S>
+                <S>Set-AzDataFactoryV2Pipeline</S>
+                <S>Set-AzDataFactoryV2Trigger</S>
+                <S>Start-AzDataFactoryV2DataFlowDebugSession</S>
+                <S>Start-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Start-AzDataFactoryV2Trigger</S>
+                <S>Stop-AzDataFactoryV2DataFlowDebugSession</S>
+                <S>Stop-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Stop-AzDataFactoryV2PipelineRun</S>
+                <S>Stop-AzDataFactoryV2Trigger</S>
+                <S>Stop-AzDataFactoryV2TriggerRun</S>
+                <S>Suspend-AzDataFactoryPipeline</S>
+                <S>Sync-AzDataFactoryV2IntegrationRuntimeCredential</S>
+                <S>Update-AzDataFactoryV2</S>
+                <S>Update-AzDataFactoryV2IntegrationRuntime</S>
+                <S>Update-AzDataFactoryV2IntegrationRuntimeNode</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Added support for Databricks Job Activity._x000D__x000A_* Added more support for QuickBooks connection properties.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[5.1.1, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>5.1.1</ToString>
+                    <Props>
+                      <Version N="Version">5.1.1.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">5.1.1</S>
+                      <I32 N="Major">5</I32>
+                      <I32 N="Minor">1</I32>
+                      <I32 N="Patch">1</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[5.1.1, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.19.4</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

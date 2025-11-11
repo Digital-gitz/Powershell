@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-03-04T04:14:13.75</DT>
-      <DT N="InstalledDate">2025-06-08T15:49:48.9797716-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:53.2596272-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -130,62 +130,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Get-AzDataBoxEdgeBandwidthSchedule</S>
-                <S>Get-AzDataBoxEdgeDevice</S>
-                <S>Get-AzDataBoxEdgeJob</S>
-                <S>Get-AzDataBoxEdgeOrder</S>
-                <S>Get-AzDataBoxEdgeRole</S>
-                <S>Get-AzDataBoxEdgeShare</S>
-                <S>Get-AzDataBoxEdgeStorageAccount</S>
-                <S>Get-AzDataBoxEdgeStorageAccountCredential</S>
-                <S>Get-AzDataBoxEdgeStorageContainer</S>
-                <S>Get-AzDataBoxEdgeTrigger</S>
-                <S>Get-AzDataBoxEdgeUser</S>
-                <S>Invoke-AzDataBoxEdgeDevice</S>
-                <S>Invoke-AzDataBoxEdgeShare</S>
-                <S>Invoke-AzDataBoxEdgeStorageContainer</S>
-                <S>New-AzDataBoxEdgeBandwidthSchedule</S>
-                <S>New-AzDataBoxEdgeDevice</S>
-                <S>New-AzDataBoxEdgeOrder</S>
-                <S>New-AzDataBoxEdgeRole</S>
-                <S>New-AzDataBoxEdgeShare</S>
-                <S>New-AzDataBoxEdgeStorageAccount</S>
-                <S>New-AzDataBoxEdgeStorageAccountCredential</S>
-                <S>New-AzDataBoxEdgeStorageContainer</S>
-                <S>New-AzDataBoxEdgeTrigger</S>
-                <S>New-AzDataBoxEdgeUser</S>
-                <S>Remove-AzDataBoxEdgeBandwidthSchedule</S>
-                <S>Remove-AzDataBoxEdgeDevice</S>
-                <S>Remove-AzDataBoxEdgeOrder</S>
-                <S>Remove-AzDataBoxEdgeRole</S>
-                <S>Remove-AzDataBoxEdgeShare</S>
-                <S>Remove-AzDataBoxEdgeStorageAccount</S>
-                <S>Remove-AzDataBoxEdgeStorageAccountCredential</S>
-                <S>Remove-AzDataBoxEdgeStorageContainer</S>
-                <S>Remove-AzDataBoxEdgeTrigger</S>
-                <S>Remove-AzDataBoxEdgeUser</S>
-                <S>Set-AzDataBoxEdgeBandwidthSchedule</S>
-                <S>Set-AzDataBoxEdgeRole</S>
-                <S>Set-AzDataBoxEdgeShare</S>
-                <S>Set-AzDataBoxEdgeStorageAccountCredential</S>
-                <S>Set-AzDataBoxEdgeUser</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Get-AzDataBoxEdgeBandwidthSchedule</S>
@@ -237,6 +183,60 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Get-AzDataBoxEdgeBandwidthSchedule</S>
+                <S>Get-AzDataBoxEdgeDevice</S>
+                <S>Get-AzDataBoxEdgeJob</S>
+                <S>Get-AzDataBoxEdgeOrder</S>
+                <S>Get-AzDataBoxEdgeRole</S>
+                <S>Get-AzDataBoxEdgeShare</S>
+                <S>Get-AzDataBoxEdgeStorageAccount</S>
+                <S>Get-AzDataBoxEdgeStorageAccountCredential</S>
+                <S>Get-AzDataBoxEdgeStorageContainer</S>
+                <S>Get-AzDataBoxEdgeTrigger</S>
+                <S>Get-AzDataBoxEdgeUser</S>
+                <S>Invoke-AzDataBoxEdgeDevice</S>
+                <S>Invoke-AzDataBoxEdgeShare</S>
+                <S>Invoke-AzDataBoxEdgeStorageContainer</S>
+                <S>New-AzDataBoxEdgeBandwidthSchedule</S>
+                <S>New-AzDataBoxEdgeDevice</S>
+                <S>New-AzDataBoxEdgeOrder</S>
+                <S>New-AzDataBoxEdgeRole</S>
+                <S>New-AzDataBoxEdgeShare</S>
+                <S>New-AzDataBoxEdgeStorageAccount</S>
+                <S>New-AzDataBoxEdgeStorageAccountCredential</S>
+                <S>New-AzDataBoxEdgeStorageContainer</S>
+                <S>New-AzDataBoxEdgeTrigger</S>
+                <S>New-AzDataBoxEdgeUser</S>
+                <S>Remove-AzDataBoxEdgeBandwidthSchedule</S>
+                <S>Remove-AzDataBoxEdgeDevice</S>
+                <S>Remove-AzDataBoxEdgeOrder</S>
+                <S>Remove-AzDataBoxEdgeRole</S>
+                <S>Remove-AzDataBoxEdgeShare</S>
+                <S>Remove-AzDataBoxEdgeStorageAccount</S>
+                <S>Remove-AzDataBoxEdgeStorageAccountCredential</S>
+                <S>Remove-AzDataBoxEdgeStorageContainer</S>
+                <S>Remove-AzDataBoxEdgeTrigger</S>
+                <S>Remove-AzDataBoxEdgeUser</S>
+                <S>Set-AzDataBoxEdgeBandwidthSchedule</S>
+                <S>Set-AzDataBoxEdgeRole</S>
+                <S>Set-AzDataBoxEdgeShare</S>
+                <S>Set-AzDataBoxEdgeStorageAccountCredential</S>
+                <S>Set-AzDataBoxEdgeUser</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

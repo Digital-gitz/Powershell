@@ -92,3 +92,13 @@ function TwitchOverlay {
     Write-Host "Launching Twitch Chat Overlay..." -ForegroundColor Green
     Start-Process -FilePath $appPath
 }
+
+function Open-Gmail {
+    try {
+        Start-Process "https://mail.google.com/"
+        Write-Host "Gmail has been opened in your default browser." -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Failed to open Gmail: $_" -ForegroundColor Red
+    }
+}

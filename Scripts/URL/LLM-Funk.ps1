@@ -129,7 +129,7 @@ function global:claude {
     Write-Host "Opening Claude..." -ForegroundColor Cyan
     Start-Process "https://claude.ai/new"
 }
-function global:gemini {
+function global:gemini_url {
     Write-Host "Opening Gemini..." -ForegroundColor Cyan 
     Start-Process "https://gemini.google.com/app?hl=en-GB"
 }

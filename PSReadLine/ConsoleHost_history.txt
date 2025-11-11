@@ -155,3 +155,384 @@ Import-ModuleManaged
 pwsh
 Search-PyPiPackages internet
 pwsh
+. 'C:\Users\Digital_Russkiy\Documents\Powershell\Scripts\Core\Utility-Functions.ps1'
+clear
+pwsh
+z Stream deck
+cd C:\Program Files\Elgato\StreamDeck
+cd 'C:\Program Files\Elgato\StreamDeck'
+git status
+github
+spotify]
+spotify
+github
+imports`
+
+git status
+pwsh
+git add . 
+sudo git add . 
+sudo commit -m "Backing Up my Stream Deck Configs & plugins"
+sudo git commit -m "Backing Up my Stream Deck Configs & plugins"
+sudo git status
+git status
+git commit -m "Backing Up my Stream Deck Configs & plugins"
+sudo git commit -m "Backing Up my Stream Deck Configs & plugins"
+gh create_repo
+gh_create_repo
+pwsh
+gh_create_repo
+gh_create_repo . 
+  gh_create_repo Digital_StreamDeck_Dump private
+git status
+pwsh
+githubrepos
+git push 
+github 
+githubrepos
+git push Digital-gitz/Digital_StreamDeck_dump
+ git push --set-upstream Digital-gitz/Digital_StreamDeck_dump master
+winget search zed 
+ls
+doom
+lvim
+winget install LLVM.LLVM
+clang --version
+cl
+winget --version
+winget install Microsoft.VisualStudio.2022.BuildTools --accept-source-agreements --accept-package-agreements
+winget list Microsoft.VisualStudio
+Get-ChildItem -Path "C:\Program Files*" -Recurse -Name "vcvars*.bat" -ErrorAction SilentlyContinue | Select-Object -First 5
+cmd /c "\"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat\" x64 && set" | Where-Object { $_ -match "^(PATH|INCLUDE|LIB|LIBPATH|VCINSTALLDIR|WindowsSdkDir)" } | Sort-Object
+cmd /c '"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 && cl'
+cmd /c '"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 && powershell'
+lvim
+  cd .\Documents\
+ls
+cd .\Powershell\
+ls
+nvim
+lvim
+wsl --list --verbose
+wsl -d Arch
+Get-MoonPhase 
+Get-Weather
+Find-Module -Name "*weather*" | Select-Object Name, Description, Version | Format-Table -AutoSize
+clear
+pass
+winget search pass
+nvim
+nvim AppData/Local/nvim-data/lazy/NvChad/lua/nvchad/plugins/init.lua
+nvim
+cd AppData/Local/nvim-data/lazy/NvChad/lua/nvchad/plugins/
+ls
+explorer . 
+nvim "C:\Users\Digital_Russkiy\AppData\Local\nvim-data\lazy\NvChad\lua\nvchad\plugins\init.lua"
+cd C:\Users\Digital_Russkiy\AppData\Local\nvim\lua\custom
+ls
+wsl -d Arch
+Search-NpmPackages
+TwitchOverlay  
+github
+ddump
+node
+cd_blog
+pwsh -NoLogo -NoProfile -Command "$PSVersionTable.PSVersion; \n\nWrite-Host \"Profile path: $PROFILE\"; \nWrite-Host \"Profile exists: \" -NoNewline; Test-Path $PROFILE | Out-String | Write-Host; \n\nWrite-Host 'Reloading profile...'; . $PROFILE; \n\nWrite-Host 'Checking for cd_blog after profile load:'; $cmd = Get-Command cd_blog -ErrorAction SilentlyContinue; if ($cmd) { $cmd | Format-List Name,CommandType,Source; } else { Write-Host 'cd_blog not found after profile load.' -ForegroundColor Yellow }; \n\n$profileDir = Split-Path -Path $PROFILE; $navPath = Join-Path $profileDir 'Scripts/Core/Navigation/Directory-Navigation.ps1'; \nWrite-Host \"Navigation script path: $navPath\"; \nWrite-Host \"Navigation script exists: \" -NoNewline; Test-Path $navPath | Out-String | Write-Host; \n\nWrite-Host 'Dot-sourcing navigation script explicitly...'; . $navPath; \n\nWrite-Host 'Checking for cd_blog after dot-sourcing nav:'; $cmd2 = Get-Command cd_blog -ErrorAction SilentlyContinue; if ($cmd2) { $cmd2 | Format-List Name,CommandType,Source; } else { Write-Host 'cd_blog still not found.' -ForegroundColor Red }"
+pwsh -NoLogo -Command "$PSVersionTable.PSVersion; Write-Host ('Profile path: ' + $PROFILE); Write-Host ('Profile exists: ' + (Test-Path $PROFILE)); Write-Host 'Reloading profile...'; try { . $PROFILE; Write-Host 'Profile reloaded.' -ForegroundColor Green } catch { Write-Host ('Profile load error: ' + $_) -ForegroundColor Red }; Write-Host 'Checking cd_blog after profile load:'; $c = Get-Command cd_blog -ErrorAction SilentlyContinue; if ($c) { $c | Format-List Name,CommandType,Source } else { Write-Host 'cd_blog not found.' -ForegroundColor Yellow }; $profileDir = Split-Path -Path $PROFILE; $navPath = Join-Path $profileDir 'Scripts/Core/Navigation/Directory-Navigation.ps1'; Write-Host ('Navigation script path: ' + $navPath); Write-Host ('Navigation script exists: ' + (Test-Path $navPath)); Write-Host 'Dot-sourcing navigation script explicitly...'; if (Test-Path $navPath) { . $navPath; Write-Host 'Dot-sourced nav script.' -ForegroundColor Green } else { Write-Host 'Nav script not found at expected path.' -ForegroundColor Red }; Write-Host 'Checking cd_blog after dot-sourcing:'; $c2 = Get-Command cd_blog -ErrorAction SilentlyContinue; if ($c2) { $c2 | Format-List Name,CommandType,Source } else { Write-Host 'cd_blog still not found.' -ForegroundColor Red }"
+pwsh -NoLogo -Command "try { . $PROFILE; Write-Host 'Profile reloaded.' -ForegroundColor Green } catch { Write-Host ('Profile load error: ' + $_) -ForegroundColor Red }; Write-Host 'Checking cd_blog:'; $c = Get-Command cd_blog -ErrorAction SilentlyContinue; if ($c) { $c | Format-List Name,CommandType,Source } else { Write-Host 'cd_blog not found.' -ForegroundColor Yellow }; Write-Host 'Check function definition source by grepping the script:'; $profileDir = Split-Path -Path $PROFILE; $navPath = Join-Path $profileDir 'Scripts/Core/Navigation/Directory-Navigation.ps1'; if (Test-Path $navPath) { Select-String -Path $navPath -Pattern '^function\s+.*cd_blog' -SimpleMatch | ForEach-Object { $_.Line }; Write-Host ('Nav script path: ' + $navPath) } else { Write-Host 'Nav script not found.' -ForegroundColor Red }"
+cd_blog
+reload
+clear
+Install-Module -Name ScriptDeck
+cd_blog
+cd_blog
+Get-FunctionHelp
+o_blog
+  Open-SocialChat
+h
+neovim
+Initialize-OhMyPosh
+pwsh -NoLogo -Command "$modules = @(Get-Module -ListAvailable Terminal-Icons | Select-Object -ExpandProperty ModuleBase -Unique); Write-Host 'Found Terminal-Icons module paths:'; $modules | ForEach-Object { Write-Host $_ }; if ($modules.Count -gt 0) { Write-Host 'Removing existing Terminal-Icons modules...'; foreach ($m in $modules) { try { Remove-Item -Recurse -Force -LiteralPath $m; Write-Host ('Removed: ' + $m) -ForegroundColor Yellow } catch { Write-Host ('Failed to remove: ' + $m + ' -> ' + $_.Exception.Message) -ForegroundColor Red } } } else { Write-Host 'No existing Terminal-Icons found.' -ForegroundColor Yellow }; Write-Host 'Reinstalling Terminal-Icons from PSGallery...'; try { if ((Get-PSRepository -Name PSGallery).InstallationPolicy -ne 'Trusted') { Set-PSRepository -Name PSGallery -InstallationPolicy Trusted }; Install-Module Terminal-Icons -Scope CurrentUser -Force -AllowClobber -SkipPublisherCheck -ErrorAction Stop; Write-Host 'Terminal-Icons reinstalled.' -ForegroundColor Green } catch { Write-Host ('Install failed: ' + $_.Exception.Message) -ForegroundColor Red }"
+pwsh -NoLogo -NoProfile -Command "$m = Get-Module -ListAvailable Terminal-Icons | Select-Object -First 1; if (-not $m) { Write-Error 'Terminal-Icons module not found'; exit 1 }; $base = Split-Path -Parent $m.Path; Write-Host \"ModuleBase:\" $base; $fmt = Get-ChildItem -Path $base -Recurse -Filter *.format.ps1xml | Select-Object -First 1; if (-not $fmt) { Write-Error 'No .format.ps1xml found in module'; exit 1 }; Write-Host \"FormatFile:\" $fmt.FullName; $content = Get-Content -Path $fmt.FullName -Raw; $lines = $content -split \"`n\"; for ($i=730; $i -le [Math]::Min(760, $lines.Length); $i++) { $ln = $lines[$i-1]; Write-Output ([string]::Format('L{0}: {1}', $i, $ln)) }"
+pwsh -NoLogo -NoProfile -Command "$m = Get-Module -ListAvailable Terminal-Icons | Select-Object -First 1; if (-not $m) { Write-Error 'Terminal-Icons module not found'; exit 1 }; $base = Split-Path -Parent $m.Path; Write-Host ('ModuleBase: ' + $base); $fmts = Get-ChildItem -Path $base -Recurse -Filter *.format.ps1xml; if (-not $fmts) { Write-Error 'No .format.ps1xml found in module'; exit 1 }; foreach ($fmt in $fmts) { Write-Host ('FormatFile: ' + $fmt.FullName); $lines = Get-Content -Path $fmt.FullName; $start = 730; $end = 760; if ($lines.Length -lt $start) { $start = [Math]::Max(1, $lines.Length - 50) }; $end = [Math]::Min($end, $lines.Length); for ($i = $start; $i -le $end; $i++) { Write-Output ('L{0}: {1}' -f $i, $lines[$i-1]) } Write-Host ('---- total lines: ' + $lines.Length) }"
+powershell.exe -NoLogo -NoProfile -Command "$paths = @(); if ($env:USERPROFILE) { $paths += Join-Path $env:USERPROFILE 'Documents\PowerShell\Modules' }; if ($env:ProgramFiles) { $paths += Join-Path $env:ProgramFiles 'PowerShell\7\Modules' }; $mods = @(); foreach ($p in $paths) { if (Test-Path $p) { $mods += Get-ChildItem -Path $p -Directory -Filter 'Terminal-Icons*' -ErrorAction SilentlyContinue } }; if (-not $mods) { Write-Output 'No Terminal-Icons directory found in standard locations.'; exit 1 }; foreach ($mod in $mods) { Write-Output ('ModuleDir: ' + $mod.FullName); $fmts = Get-ChildItem -Path $mod.FullName -Recurse -Filter *.format.ps1xml -ErrorAction SilentlyContinue; if (-not $fmts) { Write-Output '  (no .format.ps1xml files)'; continue }; foreach ($fmt in $fmts) { Write-Output ('FormatFile: ' + $fmt.FullName); $lines = Get-Content -Path $fmt.FullName -ErrorAction SilentlyContinue; if (-not $lines) { Write-Output '  (cannot read file)'; continue }; $start = 730; $end = 760; if ($lines.Length -lt $start) { $start = [Math]::Max(1, $lines.Length - 50) }; $end = [Math]::Min($end, $lines.Length); for ($i = $start; $i -le $end; $i++) { $ln = $lines[$i-1]; [Console]::OutputEncoding = [Text.Encoding]::UTF8; Write-Output ([string]::Format('L{0}: {1}', $i, $ln)) }; Write-Output ('---- total lines: ' + $lines.Length) } } | Out-String -Width 4096 | Write-Output"
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -Command "$root = Join-Path $env:USERPROFILE 'Documents\PowerShell\Modules'; if (-not (Test-Path $root)) { Write-Output 'Modules root not found: ' + $root; exit 1 }; $fmt = Get-ChildItem -Path $root -Recurse -Filter *.format.ps1xml -ErrorAction SilentlyContinue | Where-Object { $_.FullName -match 'Terminal-Icons' } | Select-Object -First 1; if (-not $fmt) { Write-Output 'No Terminal-Icons .format.ps1xml found under ' + $root; exit 1 }; Write-Output ('FormatFile: ' + $fmt.FullName); $lines = Get-Content -Path $fmt.FullName -ErrorAction Stop; $start = 730; $end = 760; if ($lines.Length -lt $start) { $start = [Math]::Max(1, $lines.Length - 100) }; $end = [Math]::Min($end, $lines.Length); for ($i = $start; $i -le $end; $i++) { Write-Output ('L{0}: {1}' -f $i, $lines[$i-1]) } Write-Output ('---- total lines: ' + $lines.Length)"
+ gemini_url
+list_llm
+ai
+Open-GoogleDocsDocuments
+Open-GoogleDocsResume
+nmcal
+Show-ArtCommands
+Show-ArtCommands
+Get-Command | Select-Object Name, CommandType | Sort-Object Name | Format-Table -AutoSize
+Get-Command -CommandType Cmdlet | Group-Object Module | Sort-Object Count -Descending | Select-Object -First 10 Name, Count
+Get-Command -CommandType Function | Measure-Object | Select-Object Count
+Get-Command -CommandType Application | Select-Object -First 20 Name, Source
+ Go-PokemonSketchesDirectory
+Search-Sketchfab robot
+Search-X robots
+Search-Google robots
+Search-Reddit robots
+Search-Reddit
+Search-Reddit robots
+Search-HuggingFace robots
+Search-HuggingFace cats
+Search-Reddit cats
+Search-Google news
+Search-Google gamedev
+Search-Pinterest drawing cats
+Search-Pinterest "Drawing cats"
+Show-FunctionsInArt
+powershell
+ls
+clear
+Go-AsepriteDirectory
+startup
+steam
+powershell
+terminal
+clear
+Get-AlphabeticalFileList
+github
+Startup
+programs
+games
+winget install vlc
+winget install VideoLAN.VLC
+vlc
+ls
+oc . 
+oc
+startup
+lvim
+stream deack
+stream deck 
+sd
+winget install wacup
+New-Script
+System.Security.SecureString
+spotify
+# Example (Node.js)
+npm install ncs-colors
+npm
+npm install ncs-colors
+lvim
+scoop install fd
+nvim
+vim
+lvim
+winget install sharkdp.fd
+  fd
+fd -h
+fd .
+fd c:\
+fd c:/
+cd fd
+fd -h
+list_llm   
+──────────
+list_llm
+claude
+.\Get-ChromeTabs.ps1
+cd .\Documents\
+cd .\Powershell\
+ls
+cd .\Scripts\
+ls
+.\Get-ChromeTabs.ps1
+pwd
+.\Get-ChromeTabs.ps1`
+
+gh ext browse
+.\Get-ChromeTabs.ps1`
+
+Get-ChromeTabsFromSessionFile
+Get-ChromeTabsFromSessionFile
+cd "C:\Users\Digital_Russkiy\Documents\Powershell" && powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1"
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1"
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1" -Verbose
+powershell -ExecutionPolicy Bypass -Command "& { Get-Content 'Scripts\Networking\Chrome\Get-ChromeTabs.ps1' | Out-Null; Write-Host 'Syntax OK' }"
+powershell -ExecutionPolicy Bypass -Command "& 'Scripts\Networking\Chrome\Get-ChromeTabs.ps1' -Verbose"
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs-Simple.ps1"
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1" -Verbose
+lvim
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1"
+powershell -ExecutionPolicy Bypass -Command "try { . 'Scripts\Networking\Chrome\Get-ChromeTabs.ps1' } catch { Write-Host 'Error:' $_.Exception.Message }"
+nvim
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1"
+powershell -ExecutionPolicy Bypass -Command "& 'Scripts\Networking\Chrome\Get-ChromeTabs.ps1'"
+vim
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1"
+npm install -g @anthropic-ai/claude-code
+claude-code
+claude.cmd
+npx https://github.com/google-gemini/gemini-cli
+ddgr
+gh ext browse chrome
+gh ext browse "chrome"
+gh ext browse -help
+gh ext browse --help
+gh ext browse
+gh ext browse --help
+winget search cyberghost
+winget install CyberGhost.CyberGhost
+winget search proton
+winget install  Proton.ProtonVPN
+winget search inskscape
+winget search inkkscape
+winget search xshot
+claude
+winget install ShareX
+winget install  ShareX.ShareX
+icloud
+paswords
+claude
+pip install openai anthropic google-generativeai groq
+keepassxc-cli
+winget search keepassxc-cli
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path","Machine") + ";C:\Program Files\KeePassXC", "Machine")
+[Environment]::SetEnvironmentVariable(`
+  "Path",`
+  [Environment]::GetEnvironmentVariable("Path","User") + ";C:\Program Files\KeePassXC",`
+  "User"`
+)
+$env:Path -split ';' | Select-String "KeePassXC"
+keepassxc-cli --version
+$env:Path -split ';' | Select-String "KeePassXC"
+keepassxc-cli --version
+keypass
+keepassxc-cli --help
+zbrush
+startup
+startup 
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1"
+powershell -ExecutionPolicy Bypass -File "Scripts\Networking\Chrome\Get-ChromeTabs.ps1" -DebugMode
+winget list Microsoft.VisualStudio
+Get-Content ".\Documents\Powershell\Available Commands.txt"
+Show-CommandList
+Show-CommandList '.\Stable Diffusion - web UI\'
+Get-Content "file:///c:/Users/Digital_Russkiy/Documents/Powershell/text/Available%20Commands.txt"
+Get-Content "/text/Available%20Commands.txt"
+Get-Content "/text/Available Commands.txt"
+Get-Content "\text\Available Commands.txt"
+Get-Content "]Available Commands.txt"
+Get-Content "Available Commands.txt"
+Get-Content "C:\Users\Digital_Russkiy\Documents\Powershell\Available Commands.txt"
+Show-Markdown -Path ".\Documents\Powershell\markdown\Available Commands.md"
+cd "C:\Users\Digital_Russkiy\Documents\Powershell" && .\Scripts\build-readme.ps1 -Backup
+Get-ChildItem -Name "README*" | Sort-Object
+.\Scripts\build-readme.ps1 -Backup -Force
+Get-ExecutionPolicy
+jq
+npm install -g shelljs
+node
+github
+Search-ArtStation
+Search-Scripts
+Search-ArtStation
+Search-ArtStation -Subject "bogo"
+github
+arstation
+Get-SshStatus
+Get-MyIP
+Get-Cheat
+ddump
+pshell
+github
+ddump
+pwd
+twirch
+documents
+cd_blog
+o_blog
+ghub
+Get-GithubFunctionList
+   . $PROFILE
+Get-GithubFunctionList
+re
+rl
+reload
+   . $PROFILE
+reload
+reload_profile
+clear
+ls
+Get-GithubFunctionList
+Update-AllRepos
+New-GitHubRepository
+ghub
+ls
+ghub
+ls
+reload_profile
+create_directory
+ghub
+create_directory
+ls
+cd .\Windows\
+ls
+Search-Scripts
+Search-ArtStation batman
+claude
+clear
+ls
+python
+ghub
+mkdir python
+chatgpt
+gmail
+cd_obsidianRoot
+Aseprite
+Start-Aseprite
+Aseprite
+aseprite
+Show-AsepriteCommands
+pyscripts
+reload
+re
+reload_profile
+pyscripts
+ls
+Search-Art batman
+clear
+Search-Art
+Search-Art batman
+Search-Art batman 
+Search-Art zombie 
+chafa
+chafa -f symbols --symbols ascii -c none  --exact-size=auto --scale=.5 *IMG*
+npm
+npm list
+ASKII
+  Get-My_IP
+Search-Art Anatomy
+Search-Art abs
+Search-Art Teres major
+Search-Art "Teres major"
+clear
+reload_profile
+clear
+startup
+art
+startup
+everything
+cursor
+curs
+obsidian
+code
+script
+github
+eagle
+pintrest
+reload
+reload_profile
+Open
+list_open
+Open-Shopping
+list_open
+list-dir
+cd .\Documents\Powershell\
+ls
+git status
+git add .

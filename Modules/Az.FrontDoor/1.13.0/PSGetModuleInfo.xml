@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-05-06T01:51:59.847</DT>
-      <DT N="InstalledDate">2025-06-08T15:50:02.5312703-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:50:00.5147153-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -126,60 +126,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Disable-AzFrontDoorCustomDomainHttps</S>
-                <S>Enable-AzFrontDoorCustomDomainHttps</S>
-                <S>Get-AzFrontDoor</S>
-                <S>Get-AzFrontDoorFrontendEndpoint</S>
-                <S>Get-AzFrontDoorRulesEngine</S>
-                <S>Get-AzFrontDoorWafManagedRuleSetDefinition</S>
-                <S>Get-AzFrontDoorWafPolicy</S>
-                <S>New-AzFrontDoor</S>
-                <S>New-AzFrontDoorBackendObject</S>
-                <S>New-AzFrontDoorBackendPoolObject</S>
-                <S>New-AzFrontDoorBackendPoolsSettingObject</S>
-                <S>New-AzFrontDoorFrontendEndpointObject</S>
-                <S>New-AzFrontDoorHeaderActionObject</S>
-                <S>New-AzFrontDoorHealthProbeSettingObject</S>
-                <S>New-AzFrontDoorLoadBalancingSettingObject</S>
-                <S>New-AzFrontDoorRoutingRuleObject</S>
-                <S>New-AzFrontDoorRulesEngine</S>
-                <S>New-AzFrontDoorRulesEngineActionObject</S>
-                <S>New-AzFrontDoorRulesEngineMatchConditionObject</S>
-                <S>New-AzFrontDoorRulesEngineRuleObject</S>
-                <S>New-AzFrontDoorWafLogScrubbingRuleObject</S>
-                <S>New-AzFrontDoorWafLogScrubbingSettingObject</S>
-                <S>New-AzFrontDoorWafCustomRuleObject</S>
-                <S>New-AzFrontDoorWafCustomRuleGroupByVariableObject</S>
-                <S>New-AzFrontDoorWafManagedRuleExclusionObject</S>
-                <S>New-AzFrontDoorWafManagedRuleObject</S>
-                <S>New-AzFrontDoorWafManagedRuleOverrideObject</S>
-                <S>New-AzFrontDoorWafMatchConditionObject</S>
-                <S>New-AzFrontDoorWafPolicy</S>
-                <S>New-AzFrontDoorWafRuleGroupOverrideObject</S>
-                <S>Remove-AzFrontDoor</S>
-                <S>Remove-AzFrontDoorContent</S>
-                <S>Remove-AzFrontDoorRulesEngine</S>
-                <S>Remove-AzFrontDoorWafPolicy</S>
-                <S>Set-AzFrontDoor</S>
-                <S>Set-AzFrontDoorRulesEngine</S>
-                <S>Update-AzFrontDoorWafPolicy</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Disable-AzFrontDoorCustomDomainHttps</S>
@@ -229,6 +177,58 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Disable-AzFrontDoorCustomDomainHttps</S>
+                <S>Enable-AzFrontDoorCustomDomainHttps</S>
+                <S>Get-AzFrontDoor</S>
+                <S>Get-AzFrontDoorFrontendEndpoint</S>
+                <S>Get-AzFrontDoorRulesEngine</S>
+                <S>Get-AzFrontDoorWafManagedRuleSetDefinition</S>
+                <S>Get-AzFrontDoorWafPolicy</S>
+                <S>New-AzFrontDoor</S>
+                <S>New-AzFrontDoorBackendObject</S>
+                <S>New-AzFrontDoorBackendPoolObject</S>
+                <S>New-AzFrontDoorBackendPoolsSettingObject</S>
+                <S>New-AzFrontDoorFrontendEndpointObject</S>
+                <S>New-AzFrontDoorHeaderActionObject</S>
+                <S>New-AzFrontDoorHealthProbeSettingObject</S>
+                <S>New-AzFrontDoorLoadBalancingSettingObject</S>
+                <S>New-AzFrontDoorRoutingRuleObject</S>
+                <S>New-AzFrontDoorRulesEngine</S>
+                <S>New-AzFrontDoorRulesEngineActionObject</S>
+                <S>New-AzFrontDoorRulesEngineMatchConditionObject</S>
+                <S>New-AzFrontDoorRulesEngineRuleObject</S>
+                <S>New-AzFrontDoorWafLogScrubbingRuleObject</S>
+                <S>New-AzFrontDoorWafLogScrubbingSettingObject</S>
+                <S>New-AzFrontDoorWafCustomRuleObject</S>
+                <S>New-AzFrontDoorWafCustomRuleGroupByVariableObject</S>
+                <S>New-AzFrontDoorWafManagedRuleExclusionObject</S>
+                <S>New-AzFrontDoorWafManagedRuleObject</S>
+                <S>New-AzFrontDoorWafManagedRuleOverrideObject</S>
+                <S>New-AzFrontDoorWafMatchConditionObject</S>
+                <S>New-AzFrontDoorWafPolicy</S>
+                <S>New-AzFrontDoorWafRuleGroupOverrideObject</S>
+                <S>Remove-AzFrontDoor</S>
+                <S>Remove-AzFrontDoorContent</S>
+                <S>Remove-AzFrontDoorRulesEngine</S>
+                <S>Remove-AzFrontDoorWafPolicy</S>
+                <S>Set-AzFrontDoor</S>
+                <S>Set-AzFrontDoorRulesEngine</S>
+                <S>Update-AzFrontDoorWafPolicy</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

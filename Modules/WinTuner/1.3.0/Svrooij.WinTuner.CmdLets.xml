@@ -1,0 +1,896 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Svrooij.WinTuner.CmdLets</name>
+    </assembly>
+    <members>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.BaseIntuneCmdlet">
+            <summary>
+            Base class for all cmdlets that need to connect to Graph.
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.BaseIntuneCmdlet.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <summary>
+            Executes the cmdlet asynchronously.
+            </summary>
+            <param name="cancellationToken"></param>
+            <remarks>This is sealed, override ProcessAuthenticatedAsync</remarks>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.BaseIntuneCmdlet.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <summary>
+            Execute a cmdlet with required authentication provider.
+            </summary>
+            <param name="provider">Authentication provider, use <see cref="T:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner"/> to connect to Intune</param>
+            <param name="cancellationToken">CancallationToken that will cancel if the user pressed ctrl + c, during execution</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner">
+            <summary>
+            <para type="synopsis">Connect to Intune</para>
+            <para type="description">A separate command to select the correct authentication provider, you no longer have to provide the auth parameters with each command.</para>
+            </summary>
+            <psOrder>3</psOrder>
+            <parameterSet>
+            <para type="name">Interactive</para>
+            <para type="description">If you're running WinTuner on your local machine, you can use the interactive browser login. This will integrate with the native browser based login screen on Windows and with the default browser on other platforms.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">UseManagedIdentity</para>
+            <para type="description">WinTuner supports Managed Identity authentication, this is the recommended way if you run WinTuner in the Azure Environment.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">UseDefaultCredentials</para>
+            <para type="description">A more extended version of the Managed Identity is the Default Credentials, this will use the [DefaultAzureCredential](https://learn.microsoft.com/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet&amp;wt.mc_id=SEC-MVP-5004985), from the `Azure.Identity` package. This will try several methods to authenticate, Environment Variables, Managed Identity, Azure CLI and more.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">Token</para>
+            <para type="description">Let's say you have a token from another source, just hand us to token and we'll use it to connect to Intune. This token has a limited lifetime, so you'll be responsible for refreshing it.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">ClientCertificateCredentials</para>
+            <para type="description">Client credentials flow using a certificate in the user or local computer store.\r\n\r\nMake sure to mark the certificate as not exportable, this helps in keeping the certificate secure.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">ClientCredentials</para>
+            <para type="description">:::warning Last resort\r\nUsing client credentials is not recommended because you'll have to keep the secret, **secret**!\r\n\r\nPlease let us know if you have to use this method, we might be able to help you with a better solution.\r\n:::</para>
+            </parameterSet>
+            <example>
+            <para type="name">Connect using interactive authentication</para>
+            <para type="description">This will trigger a login broker popup (Windows Hello) on Windows and the default browser on other platforms</para>
+            <code>Connect-WtWinTuner -Username "youruser@contoso.com"</code>
+            </example>
+            <example>
+            <para type="name">Connect using managed identity</para>
+            <para type="description">Try to connect using a managed identity on the current platform, obviously only works in Azure.</para>
+            <code>Connect-WtWinTuner -UseManagedIdentity</code>
+            </example>
+            <example>
+            <para type="name">Connect using default credentials</para>
+            <para type="description">A chain of credentials is tried until one succeeds. Including Environment Variables, Managed Identity, Visual Studio (code) and Azure CLI</para>
+            <code>az login\r\nConnect-WtWinTuner -UseDefaultCredentials</code>
+            </example>
+        </member>
+        <member name="F:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.DefaultScopes">
+            <summary>
+            Used default scopes
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.UseManagedIdentity">
+            <summary>
+            Use a managed identity to connect to Intune
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.UseDefaultCredentials">
+            <summary>
+            Use default Azure Credentials from Azure.Identity to connect to Intune
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.Token">
+            <summary>
+            Use a token from another source to connect to Intune
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.NoBroker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.TenantId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.ClientId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.ClientSecret">
+            <summary>
+            Client secret for client credentials flow
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.ClientCertificateThumbprint">
+            <summary>
+            Certificate Thumbprint for client authentication
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.Scopes">
+            <summary>
+            Specify scopes to use
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.Test">
+            <summary>
+            Immediately try to get a token.
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.ConnectWtWinTuner.GetTokenAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously retrieves a token from the authentication provider.
+            </summary>
+            <param name="cancellationToken">A token to monitor for cancellation requests.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the token string if successful; otherwise, null.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the authentication provider is not set.</exception>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp">
+            <summary>
+            <para type="synopsis">Create a MsStore app in Intune</para>
+            <para type="description">Use this command to create an Microsoft Store app in Microsoft Intune.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>20</psOrder>
+            <parameterSet>
+            <para type="name">PackageId</para>
+            <para type="description">Deploy an app to Intune by specifying the package ID of the app in the Microsoft Store.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">SearchQuery</para>
+            <para type="description">Deploy an app to Intune by searching for packages and pick the first one, use carefully!</para>
+            </parameterSet>
+            <example>
+            <para type="name">Add Firefox to Intune</para>
+            <para type="description">Add Firefox to Intune and make available for `AllUsers`</para>
+            <code>Deploy-WtMsStoreApp -PackageId &quot;9NZVDKPMR9RD&quot; -AvailableFor AllUsers</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.PackageId">
+            <summary>
+            <para type="description">The package id to upload to Intune.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.SearchQuery">
+            <summary>
+            <para type="description">Name of the app to look for, first match will be created.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.Categories">
+            <summary>
+            <para type="description">Categories to add to the app</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.AvailableFor">
+            <summary>
+            <para type="description">Groups that the app should available for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.RequiredFor">
+            <summary>
+            <para type="description">Groups that the app is required for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.UninstallFor">
+            <summary>
+            <para type="description">Groups that the app should be uninstalled for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.DeployWtMsStoreApp.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App">
+            <summary>
+            <para type="synopsis">Create a Win32Lob app in Intune</para>
+            <para type="description">Use this command to upload an intunewin package to Microsoft Intune as a new Win32LobApp.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>11</psOrder>
+            <parameterSet>
+            <para type="name">WinGet</para>
+            <para type="description">Deploy an app packaged by WinTuner. If you used the [New-WtWingetPackage](./New-WtWingetPackage) commandlet to create the package, there will be some metadata available to us that is needed to create the Win32App in Intune.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">Win32LobApp</para>
+            <para type="description">Deploy an application, by specifying all the needed properties of the `Win32LobApp` and an IntuneWinFile.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">PackageFolder</para>
+            <para type="description">Deploy a pre-packaged application, from just it's folder</para>
+            </parameterSet>
+            <example>
+            <para type="name">Deploy OhMyPosh</para>
+            <para type="description">OhMyPosh v19.5.0 is packaged to this folder, now deploy it to Azure</para>
+            <code>Deploy-WtWin32App -PackageFolder &quot;C:\Tools\packages\JanDeDobbeleer.OhMyPosh\19.5.2&quot;</code>
+            </example>
+            <example>
+            <para type="name">Package and deploy OhMyPosh</para>
+            <para type="description">Combining both the `New-WtWinGetPackage` and the `Deploy-WtWin32App` command, and making it available to All Users</para>
+            <code>New-WtWingetPackage -PackageId JanDeDobbeleer.OhMyPosh -PackageFolder C:\Tools\Packages | Deploy-WtWin32App -Available AllUsers</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.App">
+            <summary>
+            <para type="description">The Win32LobApp configuration you want to create</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.IntuneWinFile">
+            <summary>
+            <para type="description">The .intunewin file that should be added to this app</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.LogoPath">
+            <summary>
+            <para type="description">Load the logo from file (optional)</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.PackageId">
+            <summary>
+            <para type="description">The package id to upload to Intune.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.Version">
+            <summary>
+            <para type="description">The version to upload to Intune</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.RootPackageFolder">
+            <summary>
+            <para type="description">The Root folder where all the package live in.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.PackageFolder">
+            <summary>
+            <para type="description">The folder where the package is</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.OverrideAppName">
+            <summary>
+            Override the name of the app in Intune
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.GraphId">
+            <summary>
+            <para type="description">The graph id of the app to supersede</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.KeepAssignments">
+            <summary>
+            <para type="description">If set to true the old apps will stay assigned to the user.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.Categories">
+            <summary>
+            <para type="description">Categories to add to the app</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.AvailableFor">
+            <summary>
+            <para type="description">Groups that the app should available for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.RequiredFor">
+            <summary>
+            <para type="description">Groups that the app is required for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.UninstallFor">
+            <summary>
+            <para type="description">Groups that the app should be uninstalled for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.RoleScopeTags">
+            <summary>
+            <para type="description">The role scope tags for this app</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32App.SupersedeApp(Microsoft.Extensions.Logging.ILogger,Microsoft.Graph.Beta.GraphServiceClient,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Supersede an app.
+            </summary>
+            <remarks>
+            1. Load the old app
+            2. Update relationships of the new app to supersede the old app
+            3. Copy categories from the old app to the new app
+            4. Copy assignments from the old app to the new app
+            5. Remove assignments from the old app
+            </remarks>
+            <param name="logger"></param>
+            <param name="graphServiceClient"></param>
+            <param name="newAppId"></param>
+            <param name="oldAppId"></param>
+            <param name="keepOldAssignments"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32ContentVersion">
+            <summary>
+            <para type="synopsis">Upload IntuneWin to existing application</para>
+            <para type="description">Use this command to upload an IntuneWin file to an existing app.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>20</psOrder>
+            <parameterSet>
+            <para type="name">IntuneWinFile</para>
+            <para type="description">Deploy an app packaged by WinTuner. If you used the [New-WtWingetPackage](./New-WtWingetPackage) commandlet to create the package, there will be some metadata available to us that is needed to create the Win32App in Intune.</para>
+            </parameterSet>
+            <example>
+            <para type="name">Upload intunewin</para>
+            <para type="description">Upload an intunewin to existing app.</para>
+            <code>Deploy-WtWin32ContentVersion -IntuneWinFile some-folder\\AppPackage.intunewin -AppId '187649c1-29b3-4f01-b32d-b4769334ec9c'</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32ContentVersion.IntuneWinFile">
+            <summary>
+            <para type="description">The .intunewin file that should be added to this app</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32ContentVersion.AppId">
+            <summary>
+            <para type="description">To which app does this new file have to be uploaded?</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.DeployWtWin32ContentVersion.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.DisconnectWtWinTuner">
+            <summary>
+            <para type="synopsis">Clear authentication data from module</para>
+            <para type="description">You can call Connect-WtWinTuner which will keep security things in memory, to be able to clear things we made this command</para>
+            </summary>
+            <psOrder>4</psOrder>
+            <example>
+            <para type="name">Logout</para>
+            <para type="description">This will remove all credentials from the memory</para>
+            <code>Disconnect-WtWinTuner</code>
+            </example>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.DisconnectWtWinTuner.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.GetWtMobileApps">
+            <summary>
+            <para type="synopsis">Get all apps from Intune</para>
+            <para type="description">Load apps from Tenant. This CmdLet will return all mobile apps in Intune. The raw Graph models are returned.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>100</psOrder>
+            <example>
+            <para type="name">Display all mobile apps</para>
+            <para type="description">Get a list of all apps in this tenant, and format the result as a table.</para>
+            <code>Get-WtMobileApps | Format-table -Property Id, DisplayName, IsAssigned, OdataType</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtMobileApps.NameContains">
+            <summary>
+            <para type="description">Server-side filter on displayName contains.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtMobileApps.IsAssigned">
+            <summary>
+            <para type="description">Server-side filter on isAssigned.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtMobileApps.Filter">
+            <summary>
+            <para type="description">Server-side filter on filter. This is a raw OData filter expression.</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.GetWtMobileApps.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.GetWtToken">
+            <summary>
+            <para type="synopsis">Get a token for graph</para>
+            <para type="description">This command will get a token for the graph api. The token is cached, so you can call this as often as you want.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>100</psOrder>
+            <example>
+            <para type="name">Get a token</para>
+            <para type="description">Get token, show details and copy to clipboard</para>
+            <code>Get-WtToken -DecodeToken | Set-Clipboard</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtToken.DecodeToken">
+            <summary>
+            Decode the token
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtToken.ShowToken">
+            <summary>
+            Output the token to the logs?
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.GetWtToken.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <summary>
+            Execute the command
+            </summary>
+            <param name="provider"></param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps">
+            <summary>
+            <para type="synopsis">Get all apps from Intune packaged by WinTuner</para>
+            <para type="description">Load apps from Tenant and filter based on Update available.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>12</psOrder>
+            <example>
+            <para type="name">Get all apps with updates</para>
+            <para type="description">Get all apps that have updates available</para>
+            <code>Get-WtWin32Apps -Update $true</code>
+            </example>
+            <example>
+            <para type="name">Update apps</para>
+            <para type="description">Get all apps that have be an update available and are not superseeded. This executes the [New-WtWingetPackage](./New-WtWingetPackage) command.\r\nYou could run this on a weekly bases.</para>
+            <code>$updatedApps = Get-WtWin32Apps -Update $true -Superseded $false\r\nforeach($app in $updatedApps) { New-WtWingetPackage -PackageId $($app.PackageId) -PackageFolder $rootPackageFolder -Version $($app.LatestVersion) | Deploy-WtWin32App -GraphId $($app.GraphId) -KeepAssignments }</code>
+            </example>
+            <example>
+            <para type="name">Remove superseeded apps</para>
+            <para type="description">Get all apps that have been superseeded and remove them. This executes the [Remove-WtWin32App](./Remove-WtWin32App) command.\r\nYou could run this on a weekly bases.</para>
+            <code>$oldApps = Get-WtWin32Apps -Superseded $true\r\nforeach($app in $oldApps) { Remove-WtWin32App -AppId $app.GraphId }</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps.Update">
+            <summary>
+            <para type="description">Filter based on UpdateAvailable</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps.Superseded">
+            <summary>
+            <para type="description">Filter on if this app is superseded. `true` means only show apps that are superseded. `false` means only show apps that are not superseded</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps.Superseding">
+            <summary>
+            <para type="description">Filter on if this app is superseding other apps. `true` means only show apps that are superseding at least 1 app. `false` means only show apps that are not superseding any app</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps.NameContains">
+            <summary>
+            <para type="description">Server-side filter on displayName contains.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps.IsAssigned">
+            <summary>
+            <para type="description">Server-side filter on isAssigned.</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.GetWtWin32Apps.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.NewIntuneWinPackage">
+            <summary>
+            <para type="synopsis">Create a new IntuneWin package</para>
+            <para type="description">This is a re-implementation of the IntuneWinAppUtil.exe tool, it's not feature complete use at your own risk.</para>
+            </summary>
+            <psOrder>100</psOrder>
+            <example>
+            <para type="description">Package all files in `C:\Temp\Source`, with setup file `..\setup.exe` to the specified folder</para>
+            <code>New-IntuneWinPackage -SourcePath C:\Temp\Source -SetupFile C:\Temp\Source\setup.exe -DestinationPath C:\Temp\Destination</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewIntuneWinPackage.SourcePath">
+            <summary>
+            <para type="description">Directory containing all the installation files</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewIntuneWinPackage.SetupFile">
+            <summary>
+            <para type="description">The main setupfile in the source directory</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewIntuneWinPackage.DestinationPath">
+            <summary>
+            <para type="description">Destination folder</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewIntuneWinPackage.PartialPackage">
+            <summary>
+            <para type="description">Create partial package</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.NewIntuneWinPackage.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage">
+            <summary>
+            <para type="synopsis">Create intunewin file from Winget installer</para>
+            <para type="description">Downloads the installer for the package and creates an `.intunewin` file for uploading in Intune.</para>
+            </summary>
+            <psOrder>10</psOrder>
+            <example>
+            <para type="name">Package winget installer</para>
+            <para type="description">Package the latest version of `JanDeDobbeleer.OhMyPosh` to `C:\tools\packages`. The package will be in `C:\tools\packages\{packageId}\{version}`</para>
+            <code>New-WtWingetPackage -PackageId JanDeDobbeleer.OhMyPosh -PackageFolder C:\Tools\Packages</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.PackageId">
+            <summary>
+            Package id to download
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.PackageFolder">
+            <summary>
+            The folder to store the package in
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.Version">
+            <summary>
+            The version to download (optional)
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.TempFolder">
+            <summary>
+            The folder to store temporary files in
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.Architecture">
+            <summary>
+            Pick this architecture
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.InstallerContext">
+            <summary>
+            The installer context
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.PackageScript">
+            <summary>
+            Package as script
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.Locale">
+            <summary>
+            Desired locale
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.InstallerArguments">
+            <summary>
+            Override the installer arguments
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.PreferedInstaller">
+            <summary>
+            Prefered installer type, (default: Msi)
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.MsiProductCode">
+            <summary>
+            MSI Product code (optional), in case the installer is an MSI with the wrong product code in winget.
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.MsiVersion">
+            <summary>
+            MSI Product version (optional), in case the installer is an MSI with the wrong msi version in winget.
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.PartialPackage">
+            <summary>
+            Creating a partial package means that the files are not zipped into the intunewin file, but are left as is.
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.NewWtWingetPackage.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.RemoveWtWin32App">
+            <summary>
+            <para type="synopsis">Remove an app from Intune</para>
+            <para type="description">Will remove the relationships (if any) first and then remove the app.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>4</psOrder>
+            <example>
+            <para type="name">Delete an app</para>
+            <para type="description">Delete a single app by ID, mind the quotes around the ID!</para>
+            <code>Remove-WtWin32App -AppId "1450c17d-aee5-4bef-acf9-9e0107d340f2"</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.RemoveWtWin32App.AppId">
+            <summary>
+            <para type="description">Id of the app in Intune</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.RemoveWtWin32App.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.SearchWtWinGetPackage">
+            <summary>
+            <para type="synopsis">Search for packages in WinGet</para>
+            <para type="description">Search for WinGet packages, but faster. This uses the an [online index](https://wintuner.app/docs/related/winget-package-index).</para>
+            </summary>
+            <psOrder>9</psOrder>
+            <parameterSet>
+            <para type="name">SearchQuery</para>
+            <para type="description">Filter packages based on search query. Used as `contains` on name, id and tags.</para>
+            </parameterSet>
+            <parameterSet>
+            <para type="name">All</para>
+            <para type="description">Return all packages, **be carefull** 7000+ packages is a large collection!</para>
+            </parameterSet>
+            <example>
+            <para type="name">Search for `fire`</para>
+            <para type="description">Searching in the online index.</para>
+            <code>Search-WtWinGetPackage fire</code>
+            </example>
+            <example>
+            <para type="name">All packages updated after</para>
+            <para type="description">All packages updated after a specific datetime `2025-02-25` in this case</para>
+            <code>Search-WtWinGetPackage -All -UpdatedAfter "2025-02-25" | Format-Table -Property PackageId,Version,LastUpdate</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.SearchWtWinGetPackage.SearchQuery">
+            <summary>
+            Filter packages by query string, used as `contains` on package id, name and tags.
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.SearchWtWinGetPackage.All">
+            <summary>
+            Show all packages, be care full 7000+ pacakges is a lot.
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.SearchWtWinGetPackage.UpdatedAfter">
+            <summary>
+            Only return packages updated after this date
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.SearchWtWinGetPackage.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.ShowMsiInfo">
+            <summary>
+            <para type="synopsis">Show information about an MSI file</para>
+            <para type="description">Show information about an MSI file, this includes the MSI code and version.</para>
+            </summary>
+            <psOrder>100</psOrder>
+            <example>
+            <para type="name">Show information about an MSI file</para>
+            <para type="description">Show information about an MSI file, this includes the MSI code and version.</para>
+            <code>Show-MsiInfo -MsiPath "C:\path\to\file.msi"</code>
+            </example>
+            <example>
+            <para type="name">Show information about an MSI file from URL</para>
+            <para type="description">Download an MSI file and show the details</para>
+            <code>Show-MsiInfo -MsiUrl "https://example.com/file.msi" -OutputPath "C:\path\to"</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ShowMsiInfo.MsiPath">
+            <summary>
+            <para type="description">Path to the MSI file</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ShowMsiInfo.MsiUrl">
+            <summary>
+            <para type="description">URL to the MSI file</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ShowMsiInfo.OutputPath">
+            <summary>
+            <para type="description">Path to save the MSI file</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.ShowMsiInfo.OutputFilename">
+            <summary>
+            <para type="description">Filename to save the MSI file, if cannot be discovered from url</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.ShowMsiInfo.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin">
+            <summary>
+            <para type="synopsis">Test if a package will install</para>
+            <para type="description">Use the Windows Sandbox to test if the provided installer arguments will make it install silently and if it exists with the expected exit code.</para>
+            </summary>
+            <psOrder>30</psOrder>
+            <example>
+            <para type="name">Test OhMyPosh version 22.0.3</para>
+            <para type="description">Test a packaged installer in sandbox</para>
+            <code>Test-WtIntuneWin -PackageFolder &quot;D:\packages\JanDeDobbeleer.OhMyPosh\22.0.3&quot;</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.PackageId">
+            <summary>
+            <para type="description">The package id to upload to Intune.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.Version">
+            <summary>
+            <para type="description">The version to upload to Intune</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.RootPackageFolder">
+            <summary>
+            <para type="description">The Root folder where all the package live in.</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.PackageFolder">
+            <summary>
+            <para type="description">The folder where the package is</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.IntuneWinFile">
+            <summary>
+            <para type="description">The IntuneWin file to test</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.InstallerFilename">
+            <summary>
+            <para type="description">The installer filename (if not set correctly inside the intunewin)</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.InstallerArguments">
+            <summary>
+            <para type="description">The installer arguments (if you want it to execute silently)</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.Clean">
+            <summary>
+            <para type="description">Clean the test files after run</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.Sleep">
+            <summary>
+            <para type="description">Sleep for x seconds before closing</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.TestWtIntuneWin.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.TestWtSetupFile">
+            <summary>
+            <para type="synopsis">Test your silent install switches</para>
+            <para type="description">Test if a setup will install on the Windows Sandbox</para>
+            <para type="link" uri="https://wintuner.app/docs/wintuner-powershell/Test-WtSetupFile">Documentation</para>
+            </summary>
+            <psOrder>31</psOrder>
+            <example>
+            <para type="description">Test any installer in sandbox</para>
+            <code>Test-WtSetupFile -SetupFile D:\packages\xyz.exe -Installer "all your arguments"</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtSetupFile.InstallerArguments">
+            <summary>
+            <para type="description">Override the installer arguments</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtSetupFile.SetupFile">
+            <summary>
+            <para type="description">The absolute path to your setup file</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.TestWtSetupFile.Sleep">
+            <summary>
+            <para type="description">Sleep for x seconds before closing</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.TestWtSetupFile.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.UnprotectIntuneWinPackage">
+            <summary>
+            <para type="synopsis">Decrypt an IntuneWin package</para>
+            <para type="description">Decrypt IntuneWin files, based on [this post](https://svrooij.io/2023/10/09/decrypting-intunewin-files/)</para>
+            </summary>
+            <psOrder>101</psOrder>
+            <example>
+            <code>Unprotect-IntuneWinPackage -SourceFile C:\Temp\Source\MyApp.intunewin -DestinationPath C:\Temp\Destination</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UnprotectIntuneWinPackage.SourceFile">
+            <summary>
+            <para type="description">The location of the .intunewin file</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UnprotectIntuneWinPackage.DestinationPath">
+            <summary>
+            <para type="description">Destination folder</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.UnprotectIntuneWinPackage.ProcessRecordAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp">
+            <summary>
+            <para type="synopsis">Update an app in Intune</para>
+            <para type="description">Update the assignments and/or categories for an app in Intune.\r\n\r\nThis is an [**authenticated command**](./authentication), so call [Connect-WtWinTuner](./Connect-WtWinTuner) before calling this command.</para>
+            </summary>
+            <psOrder>13</psOrder>
+            <example>
+            <para type="description">Update the categories of an app and make it available for all users</para>
+            <code>Update-WtIntuneApp -AppId "1450c17d-aee5-4bef-acf9-9e0107d340f2" -UseDefaultCredentials -Categories "Productivity","Business" -AvailableFor "AllUsers" -EnableAutoUpdate</code>
+            </example>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.AppId">
+            <summary>
+            <para type="description">Id of the app in Intune</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.Categories">
+            <summary>
+            <para type="description">Categories to add to the app</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.AvailableFor">
+            <summary>
+            <para type="description">Groups that the app should available for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.RequiredFor">
+            <summary>
+            <para type="description">Groups that the app is required for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.UninstallFor">
+            <summary>
+            <para type="description">Groups that the app should be uninstalled for, Group Object ID or `AllUsers` / `AllDevices`</para>
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.EnableAutoUpdate">
+            <summary>
+            <para type="description">Enable auto update for the app</para>
+            </summary>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Commands.UpdateWtIntuneApp.ProcessAuthenticatedAsync(Microsoft.Kiota.Abstractions.Authentication.IAuthenticationProvider,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Models.MsiInfo">
+            <summary>
+            Information about an MSI file
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Models.MsiInfo.Path">
+            <summary>
+            The path to the MSI file
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Models.MsiInfo.ProductCode">
+            <summary>
+            The product code of the MSI file
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Models.MsiInfo.ProductVersion">
+            <summary>
+            The version of the MSI file
+            </summary>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Models.WtWin32App">
+            <summary>
+            Deployed Win32App in Intune
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Models.WtWin32App.LatestVersion">
+            <summary>
+            Latest version of the app according to the winget repository
+            </summary>
+        </member>
+        <member name="P:Svrooij.WinTuner.CmdLets.Models.WtWin32App.IsUpdateAvailable">
+            <summary>
+            Is there an update available for this app
+            </summary>
+        </member>
+        <member name="T:Svrooij.WinTuner.CmdLets.Startup">
+            <inheritdoc/>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Svrooij.WinTuner.CmdLets.Startup.ConfigurePowerShellLogging">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

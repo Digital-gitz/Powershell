@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-16"?>
+<!-- Generated with EZOut 1.9.7: Install-Module EZOut or https://github.com/StartAutomating/EZOut -->
+<Types>
+  <Type>
+    <Name>LoupeDeck.Profile</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>Controls</Name>
+        <GetScriptBlock>
+                        $placesWithControls = 
+    @(
+        $this.layout
+        $this.layout.layoutModes
+    )
+
+foreach ($controlHolder in $placesWithControls) {
+    foreach ($layoutProperty in $controlHolder.psobject.properties) {
+        if ($layoutProperty.Name -like '*Pages') {
+            foreach ($v in $layoutProperty.Value) {
+                if ($v.PressAction) {
+                    $v.PressAction
+                }
+                if ($v.RotateAction) {
+                    $v.RotateAction
+                }
+                
+                if ($v.controls) {
+                    foreach ($ctrl in $v.controls) {
+                        if ($ctrl.PressAction) {
+                            $ctrl.PressAction
+                        }
+                        if ($ctrl.RotateAction) {
+                            $ctrl.RotateAction
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>LastModified</Name>
+        <GetScriptBlock>
+                        $this.LastModifiedTimeUtc.ToLocalTime()
+                    </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+  <Type>
+    <Name>StreamDeck.Profile</Name>
+    <Members>
+      <ScriptMethod>
+        <Name>AddAction</Name>
+        <Script>
+                        param(
+[PSTypeName('StreamDeck.Action')]
+$Action,
+
+[int]
+$Row = -1,
+
+[int]
+$Column = -1
+)
+
+$maxRows, $maxCols = $this.DeviceSize
+$foundSpot = 
+    if ($Row -lt 0) {
+        :foundRow for ($r = 0; $r -lt $maxRows; $r++) {        
+            if ($Column -lt 0) {
+                for ($c =0 ; $c -lt $maxCols; $c++) {
+                    if (-not $this.Actions."$c,$r") {
+                        $r, $C
+                        break foundRow
+                    }
+                }                           
+            } else {
+                if (-not $this.Actions."$Column,$r") {
+                    $r, $Column
+                    break foundRow
+                }        
+            }    
+        }        
+    } elseif ($Column -lt 0) {
+        for ($c =0 ; $c -lt $maxCols; $c++) {
+            if (-not $this.Actions."$c,$Row") {
+                $Row, $c
+                break
+            }
+        }
+    } else {
+        $row, $Column
+    }
+
+
+if (-not $foundSpot) {
+    throw "Unable to find a location. Row: $row Column: $Column"
+}
+
+$r, $c = $foundSpot
+Add-Member -MemberType NoteProperty "$c,$r" -Value $action -InputObject $this.Actions -Force
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>RemoveAction</Name>
+        <Script>
+                        param(
+[Parameter(Mandatory)]
+[string]
+$Row,
+[Parameter(Mandatory)]
+[string]
+$Column
+)
+
+$obj = $this
+$toRemove = @($obj.actions.psobject.properties | Select-Object -ExpandProperty Name |
+    Where-Object {
+        $c, $r = $_ -split ','
+        $colRow  = ''+  $c + "," + $r
+        $colRow -like "$column,$Row"
+    })
+
+foreach ($tr in $toRemove) {
+    $obj.actions.psobject.properties.Remove($tr)
+}
+
+                    </Script>
+      </ScriptMethod>
+      <ScriptMethod>
+        <Name>Save</Name>
+        <Script>
+                        if (-not $this.Path) { throw "Cannot save profile, as it has no path" }
+
+&lt;#$streamdeckprocess = Get-Process streamdeck -ErrorAction SilentlyContinue
+$streamDeckPath    = "$($streamdeckprocess.Path)"
+if ($streamDeckPath) { 
+    Start-Process -FilePath $streamDeckPath -ArgumentList '--quit' -Wait
+}#&gt;
+#$streamdeckprocess | Stop-Process
+
+foreach ($action in $this.Actions.psobject.properties) {
+    $stateIndex = 0
+    $actionImagePath  = $this.Path | 
+        Split-Path | 
+        Join-Path -ChildPath $action.Name |
+        Join-Path -ChildPath CustomImages
+
+    if ($action.value.uuid -in 'com.elgato.streamdeck.page.next', 'com.elgato.streamdeck.profile.openchild') {
+        
+        if ($action.value.settings.pstypenames -contains 'StreamDeck.Profile') {
+            $childPluginPath = $action.value.settings.guid
+            $root = $(if ($this.IsChild) {
+                $this.Parent
+            } else {
+                $this
+            })
+            $childRoot = $root | 
+                Split-Path | 
+                Join-Path -ChildPath Profiles | 
+                Join-Path -ChildPath "$($action.value.settings.guid).sdProfile" |
+                Join-Path -ChildPath "manifest.json"
+            
+            $childPlugin = $action.value.settings | Add-Member NoteProperty Path "$childRoot" -Force -PassThru
+            $childPlugin.Save()
+            $action.value.settings = [PSCustomObject]@{ProfileUUID=$childPlugin.guid}
+        }
+    }
+    foreach ($state in $action.value.states) {
+        
+        if ($state.Image) {
+            if ($state.Image -match '^http(?:s)?://') {
+                $imageUri = [uri]$state.Image
+                $fileName = $imageUri.Segments[-1]
+                
+                $destinationPath  =  Join-Path $actionImagePath $fileName
+                if (-not (Test-Path $destinationPath)) {
+                    $null = New-Item -ItemType File -Path $destinationPath -Force
+                }
+                [Net.Webclient]::new().DownloadFile($imageUri, $destinationPath)
+                $state.image = $fileName
+            }
+            elseif ($state.Image.Contains([IO.Path]::DirectorySeparatorChar) -and 
+                -not $state.Image.ToLower().StartsWith($this.Path.ToLower)
+            ) {
+                $resolvedImagePath  = $ExecutionContext.SessionState.Path.GetResolvedPSPathFromPSPath($state.Image)
+                if (-not $resolvedImagePath) {
+                    Write-Warning "Could not update image for $($action.Name)"
+                    continue
+                }
+                $fileName = [IO.Path]::GetFileName("$resolvedImagePath")
+                $destinationPath  =  Join-Path $actionImagePath $fileName
+                if (-not (Test-Path $destinationPath)) {
+                    $null = New-Item -ItemType File -Path $destinationPath -Force
+                }
+                Copy-Item -Path $resolvedImagePath -Destination $destinationPath -Force
+                $state.Image = $fileName
+            }
+        }
+        $stateIndex++
+    }
+}
+$scriptPropertyNames = $this.psobject.properties | Where-Object MemberType -EQ ScriptProperty | Select-Object -ExpandProperty Name -Unique
+$excludedProperties = @('Path','GUID') + $scriptPropertyNames
+
+if (-not (Test-Path $this.Path)) {
+    $createdProfile = New-Item -ItemType File -Path $this.Path -Force
+}
+
+$this |
+    Select-Object -Property * -ExcludeProperty $excludedProperties| 
+    ConvertTo-Json -Depth 100 | 
+    Set-Content -literalPath $this.Path -Encoding UTF8
+                    </Script>
+      </ScriptMethod>
+      <ScriptProperty>
+        <Name>Children</Name>
+        <GetScriptBlock>
+                        if (-not $this.HasChildren) { return }
+@(if ($this.IsChild) {
+    $this.Parent | 
+        Split-Path |
+        Join-Path -child Profiles 
+} else {
+    $this | 
+        Split-Path |
+        Join-Path -child Profiles 
+}) | 
+    Get-ChildItem | 
+    Get-StreamDeckProfile -ProfileRoot {$_.fullname } 
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>ColumnCount</Name>
+        <GetScriptBlock>
+                        switch ($this.DeviceName) {
+    StreamDeckXL { 8 }
+    StreamDeckMini { 3 }
+    StreamDeckMobile { 5 }
+    StreamDeck { 5 }
+    'Corsair G6 Keyboard' { 1 }
+}
+
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>DeviceName</Name>
+        <GetScriptBlock>
+                        switch ($this.DeviceModel) {
+    20GAI9901  { "StreamDeckMini" }
+    20GAT9901  { "StreamDeckXL" }
+    20GAA9901  { "StreamDeck" }
+    20GAA9902  { "StreamDeck" } 
+    'VSD/WiFi' { "StreamDeckMobile" }
+    default { $this.DeviceModel }
+}
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>DeviceSize</Name>
+        <GetScriptBlock>
+                        switch ($this.DeviceName) {
+    StreamDeckXL { 4,8 }
+    StreamDeckMini { 2,3 }
+    StreamDeckMobile { 3,5 }
+    StreamDeck { 3,5 }
+    'Corsair G6 Keyboard' { 6,1 }
+}
+
+
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>HasChildren</Name>
+        <GetScriptBlock>
+                        foreach ($act in $this.Actions.psobject.properties) {
+    if ($act.value.uuid -in 'com.elgato.streamdeck.profile.openchild') {
+        return $true
+    }
+}
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>HasPages</Name>
+        <GetScriptBlock>
+                        foreach ($act in $this.Actions.psobject.properties) {
+    if ($act.value.uuid -in 'com.elgato.streamdeck.page.previous','com.elgato.streamdeck.page.next') {
+        return $true
+    }
+}
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>IsChild</Name>
+        <GetScriptBlock>
+                        if (-not $this.Path) { return $true }
+($this.Path | Split-Path | Split-Path | Split-Path | Split-Path -Leaf) -ne 'StreamDeck'
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>NextPage</Name>
+        <GetScriptBlock>
+                        foreach ($act in $this.Actions.psobject.properties) {
+    if ($act.value.uuid -in 'com.elgato.streamdeck.page.next') {
+        if ($this.Path) {
+            $this.Path | 
+                ForEach-Object {
+                    if ($this.IsChild) {
+                        $_ | Split-Path | Split-Path
+                    } else {
+                        $_ | Split-Path | Join-Path -ChildPath Profiles 
+                    }
+                } |                
+                Join-Path -ChildPath "$($act.value.settings.profileUUID).sdProfile" |
+                Get-StreamDeckProfile -ProfileRoot { $_ }            
+        }
+    }
+}
+
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>PageNumber</Name>
+        <GetScriptBlock>
+                        if (-not $this.HasPages) { return 1 }
+if (-not $this.IsChild)  { return 1 }
+$page = $this.Parent
+$pageNumber = 1
+while ($page -and $page.Path -ne $this.Path) {
+    $pageNumber++
+    $page = $page.NextPage
+}
+if ($page) {
+    $pageNumber
+} else {
+    return 0
+}
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Parent</Name>
+        <GetScriptBlock>
+                        if (-not $this.IsChild) { return $null }
+($this.Path | Split-Path | Split-Path | Split-Path | Get-StreamDeckProfile -ProfileRoot { $_ })
+
+
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>ProfilePath</Name>
+        <GetScriptBlock>
+                        return $this.Path
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>RowCount</Name>
+        <GetScriptBlock>
+                        switch ($this.DeviceName) {
+    StreamDeckXL { 4 }
+    StreamDeckMini { 2 }
+    StreamDeckMobile { 3 }
+    StreamDeck { 3 }
+    'Corsair G6 Keyboard' { 6 }
+}
+
+                    </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+</Types>

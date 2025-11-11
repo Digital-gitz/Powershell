@@ -1,0 +1,477 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.NetworkCloud</S>
+      <S N="Version">1.2.1</S>
+      <Obj N="Type" RefId="1">
+        <TN RefId="1">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.ResourceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Module</ToString>
+        <I32>1</I32>
+      </Obj>
+      <S N="Description">Microsoft Azure PowerShell: NetworkCloud cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">Microsoft Corporation</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2025-09-02T02:39:44.14</DT>
+      <DT N="InstalledDate">2025-09-27T23:50:28.8561481-04:00</DT>
+      <B N="IsPrerelease">false</B>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="2">
+        <TN RefId="2">
+          <T>System.String[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>NetworkCloud</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+          <S>PSFunction_Deploy-AzNetworkCloudCluster</S>
+          <S>PSCommand_Deploy-AzNetworkCloudCluster</S>
+          <S>PSFunction_Disable-AzNetworkCloudStorageApplianceRemoteVendorManagement</S>
+          <S>PSCommand_Disable-AzNetworkCloudStorageApplianceRemoteVendorManagement</S>
+          <S>PSFunction_Enable-AzNetworkCloudStorageApplianceRemoteVendorManagement</S>
+          <S>PSCommand_Enable-AzNetworkCloudStorageApplianceRemoteVendorManagement</S>
+          <S>PSFunction_Get-AzNetworkCloudAgentPool</S>
+          <S>PSCommand_Get-AzNetworkCloudAgentPool</S>
+          <S>PSFunction_Get-AzNetworkCloudBareMetalMachine</S>
+          <S>PSCommand_Get-AzNetworkCloudBareMetalMachine</S>
+          <S>PSFunction_Get-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSCommand_Get-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSFunction_Get-AzNetworkCloudBmcKeySet</S>
+          <S>PSCommand_Get-AzNetworkCloudBmcKeySet</S>
+          <S>PSFunction_Get-AzNetworkCloudCluster</S>
+          <S>PSCommand_Get-AzNetworkCloudCluster</S>
+          <S>PSFunction_Get-AzNetworkCloudClusterManager</S>
+          <S>PSCommand_Get-AzNetworkCloudClusterManager</S>
+          <S>PSFunction_Get-AzNetworkCloudConsole</S>
+          <S>PSCommand_Get-AzNetworkCloudConsole</S>
+          <S>PSFunction_Get-AzNetworkCloudKubernetesCluster</S>
+          <S>PSCommand_Get-AzNetworkCloudKubernetesCluster</S>
+          <S>PSFunction_Get-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSCommand_Get-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSFunction_Get-AzNetworkCloudL2Network</S>
+          <S>PSCommand_Get-AzNetworkCloudL2Network</S>
+          <S>PSFunction_Get-AzNetworkCloudL3Network</S>
+          <S>PSCommand_Get-AzNetworkCloudL3Network</S>
+          <S>PSFunction_Get-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSCommand_Get-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSFunction_Get-AzNetworkCloudRack</S>
+          <S>PSCommand_Get-AzNetworkCloudRack</S>
+          <S>PSFunction_Get-AzNetworkCloudRackSku</S>
+          <S>PSCommand_Get-AzNetworkCloudRackSku</S>
+          <S>PSFunction_Get-AzNetworkCloudServicesNetwork</S>
+          <S>PSCommand_Get-AzNetworkCloudServicesNetwork</S>
+          <S>PSFunction_Get-AzNetworkCloudStorageAppliance</S>
+          <S>PSCommand_Get-AzNetworkCloudStorageAppliance</S>
+          <S>PSFunction_Get-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSCommand_Get-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSFunction_Get-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_Get-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_Get-AzNetworkCloudVolume</S>
+          <S>PSCommand_Get-AzNetworkCloudVolume</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineCordon</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineCordon</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineDataExtract</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineDataExtract</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineReimage</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineReimage</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineReplace</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineReplace</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineRunCommand</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineRunCommand</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineRunReadCommand</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineRunReadCommand</S>
+          <S>PSFunction_Invoke-AzNetworkCloudBareMetalMachineUncordon</S>
+          <S>PSCommand_Invoke-AzNetworkCloudBareMetalMachineUncordon</S>
+          <S>PSFunction_Invoke-AzNetworkCloudClusterContinueVersionUpdate</S>
+          <S>PSCommand_Invoke-AzNetworkCloudClusterContinueVersionUpdate</S>
+          <S>PSFunction_Invoke-AzNetworkCloudClusterVersionUpdate</S>
+          <S>PSCommand_Invoke-AzNetworkCloudClusterVersionUpdate</S>
+          <S>PSFunction_Invoke-AzNetworkCloudScanClusterRuntime</S>
+          <S>PSCommand_Invoke-AzNetworkCloudScanClusterRuntime</S>
+          <S>PSFunction_Invoke-AzNetworkCloudVirtualMachineReimage</S>
+          <S>PSCommand_Invoke-AzNetworkCloudVirtualMachineReimage</S>
+          <S>PSFunction_New-AzNetworkCloudAgentPool</S>
+          <S>PSCommand_New-AzNetworkCloudAgentPool</S>
+          <S>PSFunction_New-AzNetworkCloudBareMetalMachineConfigurationDataObject</S>
+          <S>PSCommand_New-AzNetworkCloudBareMetalMachineConfigurationDataObject</S>
+          <S>PSFunction_New-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSCommand_New-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSFunction_New-AzNetworkCloudBgpAdvertisementObject</S>
+          <S>PSCommand_New-AzNetworkCloudBgpAdvertisementObject</S>
+          <S>PSFunction_New-AzNetworkCloudBgpServiceLoadBalancerConfigurationObject</S>
+          <S>PSCommand_New-AzNetworkCloudBgpServiceLoadBalancerConfigurationObject</S>
+          <S>PSFunction_New-AzNetworkCloudBmcKeySet</S>
+          <S>PSCommand_New-AzNetworkCloudBmcKeySet</S>
+          <S>PSFunction_New-AzNetworkCloudCluster</S>
+          <S>PSCommand_New-AzNetworkCloudCluster</S>
+          <S>PSFunction_New-AzNetworkCloudClusterManager</S>
+          <S>PSCommand_New-AzNetworkCloudClusterManager</S>
+          <S>PSFunction_New-AzNetworkCloudConsole</S>
+          <S>PSCommand_New-AzNetworkCloudConsole</S>
+          <S>PSFunction_New-AzNetworkCloudControlPlaneNodeConfigurationObject</S>
+          <S>PSCommand_New-AzNetworkCloudControlPlaneNodeConfigurationObject</S>
+          <S>PSFunction_New-AzNetworkCloudEgressEndpointObject</S>
+          <S>PSCommand_New-AzNetworkCloudEgressEndpointObject</S>
+          <S>PSFunction_New-AzNetworkCloudEndpointDependencyObject</S>
+          <S>PSCommand_New-AzNetworkCloudEndpointDependencyObject</S>
+          <S>PSFunction_New-AzNetworkCloudInitialAgentPoolConfigurationObject</S>
+          <S>PSCommand_New-AzNetworkCloudInitialAgentPoolConfigurationObject</S>
+          <S>PSFunction_New-AzNetworkCloudIpAddressPoolObject</S>
+          <S>PSCommand_New-AzNetworkCloudIpAddressPoolObject</S>
+          <S>PSFunction_New-AzNetworkCloudKeySetUserObject</S>
+          <S>PSCommand_New-AzNetworkCloudKeySetUserObject</S>
+          <S>PSFunction_New-AzNetworkCloudKubernetesCluster</S>
+          <S>PSCommand_New-AzNetworkCloudKubernetesCluster</S>
+          <S>PSFunction_New-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSCommand_New-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSFunction_New-AzNetworkCloudL2Network</S>
+          <S>PSCommand_New-AzNetworkCloudL2Network</S>
+          <S>PSFunction_New-AzNetworkCloudL3Network</S>
+          <S>PSCommand_New-AzNetworkCloudL3Network</S>
+          <S>PSFunction_New-AzNetworkCloudL3NetworkAttachmentConfigurationObject</S>
+          <S>PSCommand_New-AzNetworkCloudL3NetworkAttachmentConfigurationObject</S>
+          <S>PSFunction_New-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSCommand_New-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSFunction_New-AzNetworkCloudNetworkAttachmentObject</S>
+          <S>PSCommand_New-AzNetworkCloudNetworkAttachmentObject</S>
+          <S>PSFunction_New-AzNetworkCloudRackDefinitionObject</S>
+          <S>PSCommand_New-AzNetworkCloudRackDefinitionObject</S>
+          <S>PSFunction_New-AzNetworkCloudServiceLoadBalancerBgpPeerObject</S>
+          <S>PSCommand_New-AzNetworkCloudServiceLoadBalancerBgpPeerObject</S>
+          <S>PSFunction_New-AzNetworkCloudServicesNetwork</S>
+          <S>PSCommand_New-AzNetworkCloudServicesNetwork</S>
+          <S>PSFunction_New-AzNetworkCloudStorageApplianceConfigurationDataObject</S>
+          <S>PSCommand_New-AzNetworkCloudStorageApplianceConfigurationDataObject</S>
+          <S>PSFunction_New-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSCommand_New-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSFunction_New-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_New-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_New-AzNetworkCloudVirtualMachinePlacementHintObject</S>
+          <S>PSCommand_New-AzNetworkCloudVirtualMachinePlacementHintObject</S>
+          <S>PSFunction_New-AzNetworkCloudVolume</S>
+          <S>PSCommand_New-AzNetworkCloudVolume</S>
+          <S>PSFunction_Remove-AzNetworkCloudAgentPool</S>
+          <S>PSCommand_Remove-AzNetworkCloudAgentPool</S>
+          <S>PSFunction_Remove-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSCommand_Remove-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSFunction_Remove-AzNetworkCloudBmcKeySet</S>
+          <S>PSCommand_Remove-AzNetworkCloudBmcKeySet</S>
+          <S>PSFunction_Remove-AzNetworkCloudCluster</S>
+          <S>PSCommand_Remove-AzNetworkCloudCluster</S>
+          <S>PSFunction_Remove-AzNetworkCloudClusterManager</S>
+          <S>PSCommand_Remove-AzNetworkCloudClusterManager</S>
+          <S>PSFunction_Remove-AzNetworkCloudConsole</S>
+          <S>PSCommand_Remove-AzNetworkCloudConsole</S>
+          <S>PSFunction_Remove-AzNetworkCloudKubernetesCluster</S>
+          <S>PSCommand_Remove-AzNetworkCloudKubernetesCluster</S>
+          <S>PSFunction_Remove-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSCommand_Remove-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSFunction_Remove-AzNetworkCloudL2Network</S>
+          <S>PSCommand_Remove-AzNetworkCloudL2Network</S>
+          <S>PSFunction_Remove-AzNetworkCloudL3Network</S>
+          <S>PSCommand_Remove-AzNetworkCloudL3Network</S>
+          <S>PSFunction_Remove-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSCommand_Remove-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSFunction_Remove-AzNetworkCloudServicesNetwork</S>
+          <S>PSCommand_Remove-AzNetworkCloudServicesNetwork</S>
+          <S>PSFunction_Remove-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSCommand_Remove-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSFunction_Remove-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_Remove-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_Remove-AzNetworkCloudVolume</S>
+          <S>PSCommand_Remove-AzNetworkCloudVolume</S>
+          <S>PSFunction_Restart-AzNetworkCloudBareMetalMachine</S>
+          <S>PSCommand_Restart-AzNetworkCloudBareMetalMachine</S>
+          <S>PSFunction_Restart-AzNetworkCloudKubernetesClusterNode</S>
+          <S>PSCommand_Restart-AzNetworkCloudKubernetesClusterNode</S>
+          <S>PSFunction_Restart-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_Restart-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_Start-AzNetworkCloudBareMetalMachine</S>
+          <S>PSCommand_Start-AzNetworkCloudBareMetalMachine</S>
+          <S>PSFunction_Start-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_Start-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_Stop-AzNetworkCloudBareMetalMachine</S>
+          <S>PSCommand_Stop-AzNetworkCloudBareMetalMachine</S>
+          <S>PSFunction_Stop-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_Stop-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_Update-AzNetworkCloudAgentPool</S>
+          <S>PSCommand_Update-AzNetworkCloudAgentPool</S>
+          <S>PSFunction_Update-AzNetworkCloudBareMetalMachine</S>
+          <S>PSCommand_Update-AzNetworkCloudBareMetalMachine</S>
+          <S>PSFunction_Update-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSCommand_Update-AzNetworkCloudBareMetalMachineKeySet</S>
+          <S>PSFunction_Update-AzNetworkCloudBmcKeySet</S>
+          <S>PSCommand_Update-AzNetworkCloudBmcKeySet</S>
+          <S>PSFunction_Update-AzNetworkCloudCluster</S>
+          <S>PSCommand_Update-AzNetworkCloudCluster</S>
+          <S>PSFunction_Update-AzNetworkCloudClusterManager</S>
+          <S>PSCommand_Update-AzNetworkCloudClusterManager</S>
+          <S>PSFunction_Update-AzNetworkCloudConsole</S>
+          <S>PSCommand_Update-AzNetworkCloudConsole</S>
+          <S>PSFunction_Update-AzNetworkCloudKubernetesCluster</S>
+          <S>PSCommand_Update-AzNetworkCloudKubernetesCluster</S>
+          <S>PSFunction_Update-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSCommand_Update-AzNetworkCloudKubernetesClusterFeature</S>
+          <S>PSFunction_Update-AzNetworkCloudL2Network</S>
+          <S>PSCommand_Update-AzNetworkCloudL2Network</S>
+          <S>PSFunction_Update-AzNetworkCloudL3Network</S>
+          <S>PSCommand_Update-AzNetworkCloudL3Network</S>
+          <S>PSFunction_Update-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSCommand_Update-AzNetworkCloudMetricsConfiguration</S>
+          <S>PSFunction_Update-AzNetworkCloudRack</S>
+          <S>PSCommand_Update-AzNetworkCloudRack</S>
+          <S>PSFunction_Update-AzNetworkCloudServicesNetwork</S>
+          <S>PSCommand_Update-AzNetworkCloudServicesNetwork</S>
+          <S>PSFunction_Update-AzNetworkCloudStorageAppliance</S>
+          <S>PSCommand_Update-AzNetworkCloudStorageAppliance</S>
+          <S>PSFunction_Update-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSCommand_Update-AzNetworkCloudTrunkedNetwork</S>
+          <S>PSFunction_Update-AzNetworkCloudVirtualMachine</S>
+          <S>PSCommand_Update-AzNetworkCloudVirtualMachine</S>
+          <S>PSFunction_Update-AzNetworkCloudVolume</S>
+          <S>PSCommand_Update-AzNetworkCloudVolume</S>
+          <S>PSIncludes_Function</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="3">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Deploy-AzNetworkCloudCluster</S>
+                <S>Disable-AzNetworkCloudStorageApplianceRemoteVendorManagement</S>
+                <S>Enable-AzNetworkCloudStorageApplianceRemoteVendorManagement</S>
+                <S>Get-AzNetworkCloudAgentPool</S>
+                <S>Get-AzNetworkCloudBareMetalMachine</S>
+                <S>Get-AzNetworkCloudBareMetalMachineKeySet</S>
+                <S>Get-AzNetworkCloudBmcKeySet</S>
+                <S>Get-AzNetworkCloudCluster</S>
+                <S>Get-AzNetworkCloudClusterManager</S>
+                <S>Get-AzNetworkCloudConsole</S>
+                <S>Get-AzNetworkCloudKubernetesCluster</S>
+                <S>Get-AzNetworkCloudKubernetesClusterFeature</S>
+                <S>Get-AzNetworkCloudL2Network</S>
+                <S>Get-AzNetworkCloudL3Network</S>
+                <S>Get-AzNetworkCloudMetricsConfiguration</S>
+                <S>Get-AzNetworkCloudRack</S>
+                <S>Get-AzNetworkCloudRackSku</S>
+                <S>Get-AzNetworkCloudServicesNetwork</S>
+                <S>Get-AzNetworkCloudStorageAppliance</S>
+                <S>Get-AzNetworkCloudTrunkedNetwork</S>
+                <S>Get-AzNetworkCloudVirtualMachine</S>
+                <S>Get-AzNetworkCloudVolume</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineCordon</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineDataExtract</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineReimage</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineReplace</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineRunCommand</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineRunReadCommand</S>
+                <S>Invoke-AzNetworkCloudBareMetalMachineUncordon</S>
+                <S>Invoke-AzNetworkCloudClusterContinueVersionUpdate</S>
+                <S>Invoke-AzNetworkCloudClusterVersionUpdate</S>
+                <S>Invoke-AzNetworkCloudScanClusterRuntime</S>
+                <S>Invoke-AzNetworkCloudVirtualMachineReimage</S>
+                <S>New-AzNetworkCloudAgentPool</S>
+                <S>New-AzNetworkCloudBareMetalMachineConfigurationDataObject</S>
+                <S>New-AzNetworkCloudBareMetalMachineKeySet</S>
+                <S>New-AzNetworkCloudBgpAdvertisementObject</S>
+                <S>New-AzNetworkCloudBgpServiceLoadBalancerConfigurationObject</S>
+                <S>New-AzNetworkCloudBmcKeySet</S>
+                <S>New-AzNetworkCloudCluster</S>
+                <S>New-AzNetworkCloudClusterManager</S>
+                <S>New-AzNetworkCloudConsole</S>
+                <S>New-AzNetworkCloudControlPlaneNodeConfigurationObject</S>
+                <S>New-AzNetworkCloudEgressEndpointObject</S>
+                <S>New-AzNetworkCloudEndpointDependencyObject</S>
+                <S>New-AzNetworkCloudInitialAgentPoolConfigurationObject</S>
+                <S>New-AzNetworkCloudIpAddressPoolObject</S>
+                <S>New-AzNetworkCloudKeySetUserObject</S>
+                <S>New-AzNetworkCloudKubernetesCluster</S>
+                <S>New-AzNetworkCloudKubernetesClusterFeature</S>
+                <S>New-AzNetworkCloudL2Network</S>
+                <S>New-AzNetworkCloudL3Network</S>
+                <S>New-AzNetworkCloudL3NetworkAttachmentConfigurationObject</S>
+                <S>New-AzNetworkCloudMetricsConfiguration</S>
+                <S>New-AzNetworkCloudNetworkAttachmentObject</S>
+                <S>New-AzNetworkCloudRackDefinitionObject</S>
+                <S>New-AzNetworkCloudServiceLoadBalancerBgpPeerObject</S>
+                <S>New-AzNetworkCloudServicesNetwork</S>
+                <S>New-AzNetworkCloudStorageApplianceConfigurationDataObject</S>
+                <S>New-AzNetworkCloudTrunkedNetwork</S>
+                <S>New-AzNetworkCloudVirtualMachine</S>
+                <S>New-AzNetworkCloudVirtualMachinePlacementHintObject</S>
+                <S>New-AzNetworkCloudVolume</S>
+                <S>Remove-AzNetworkCloudAgentPool</S>
+                <S>Remove-AzNetworkCloudBareMetalMachineKeySet</S>
+                <S>Remove-AzNetworkCloudBmcKeySet</S>
+                <S>Remove-AzNetworkCloudCluster</S>
+                <S>Remove-AzNetworkCloudClusterManager</S>
+                <S>Remove-AzNetworkCloudConsole</S>
+                <S>Remove-AzNetworkCloudKubernetesCluster</S>
+                <S>Remove-AzNetworkCloudKubernetesClusterFeature</S>
+                <S>Remove-AzNetworkCloudL2Network</S>
+                <S>Remove-AzNetworkCloudL3Network</S>
+                <S>Remove-AzNetworkCloudMetricsConfiguration</S>
+                <S>Remove-AzNetworkCloudServicesNetwork</S>
+                <S>Remove-AzNetworkCloudTrunkedNetwork</S>
+                <S>Remove-AzNetworkCloudVirtualMachine</S>
+                <S>Remove-AzNetworkCloudVolume</S>
+                <S>Restart-AzNetworkCloudBareMetalMachine</S>
+                <S>Restart-AzNetworkCloudKubernetesClusterNode</S>
+                <S>Restart-AzNetworkCloudVirtualMachine</S>
+                <S>Start-AzNetworkCloudBareMetalMachine</S>
+                <S>Start-AzNetworkCloudVirtualMachine</S>
+                <S>Stop-AzNetworkCloudBareMetalMachine</S>
+                <S>Stop-AzNetworkCloudVirtualMachine</S>
+                <S>Update-AzNetworkCloudAgentPool</S>
+                <S>Update-AzNetworkCloudBareMetalMachine</S>
+                <S>Update-AzNetworkCloudBareMetalMachineKeySet</S>
+                <S>Update-AzNetworkCloudBmcKeySet</S>
+                <S>Update-AzNetworkCloudCluster</S>
+                <S>Update-AzNetworkCloudClusterManager</S>
+                <S>Update-AzNetworkCloudConsole</S>
+                <S>Update-AzNetworkCloudKubernetesCluster</S>
+                <S>Update-AzNetworkCloudKubernetesClusterFeature</S>
+                <S>Update-AzNetworkCloudL2Network</S>
+                <S>Update-AzNetworkCloudL3Network</S>
+                <S>Update-AzNetworkCloudMetricsConfiguration</S>
+                <S>Update-AzNetworkCloudRack</S>
+                <S>Update-AzNetworkCloudServicesNetwork</S>
+                <S>Update-AzNetworkCloudStorageAppliance</S>
+                <S>Update-AzNetworkCloudTrunkedNetwork</S>
+                <S>Update-AzNetworkCloudVirtualMachine</S>
+                <S>Update-AzNetworkCloudVolume</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <S N="PowerShellGetFormatVersion"></S>
+      <S N="ReleaseNotes">* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229</S>
+      <Obj N="Dependencies" RefId="7">
+        <TN RefId="4">
+          <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="5">
+              <T>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.PSResourceGet.UtilClasses.Dependency</ToString>
+            <Props>
+              <S N="Name">Az.Accounts</S>
+              <Obj N="VersionRange" RefId="9">
+                <TN RefId="6">
+                  <T>NuGet.Versioning.VersionRange</T>
+                  <T>NuGet.Versioning.VersionRangeBase</T>
+                  <T>System.Object</T>
+                </TN>
+                <ToString>[5.3.0, )</ToString>
+                <Props>
+                  <B N="IsFloating">false</B>
+                  <Obj N="MinVersion" RefId="10">
+                    <TN RefId="7">
+                      <T>NuGet.Versioning.NuGetVersion</T>
+                      <T>NuGet.Versioning.SemanticVersion</T>
+                      <T>System.Object</T>
+                    </TN>
+                    <ToString>5.3.0</ToString>
+                    <Props>
+                      <Version N="Version">5.3.0.0</Version>
+                      <B N="IsLegacyVersion">false</B>
+                      <I32 N="Revision">0</I32>
+                      <B N="IsSemVer2">false</B>
+                      <S N="OriginalVersion">5.3.0</S>
+                      <I32 N="Major">5</I32>
+                      <I32 N="Minor">3</I32>
+                      <I32 N="Patch">0</I32>
+                      <Obj N="ReleaseLabels" RefId="11">
+                        <TNRef RefId="2" />
+                        <LST />
+                      </Obj>
+                      <S N="Release"></S>
+                      <B N="IsPrerelease">false</B>
+                      <B N="HasMetadata">false</B>
+                      <S N="Metadata"></S>
+                    </Props>
+                  </Obj>
+                  <Nil N="MaxVersion" />
+                  <B N="HasLowerBound">true</B>
+                  <B N="IsMinInclusive">true</B>
+                  <B N="HasUpperBound">false</B>
+                  <B N="IsMaxInclusive">false</B>
+                  <B N="HasLowerAndUpperBounds">false</B>
+                  <Nil N="Float" />
+                  <S N="OriginalString">[5.3.0, )</S>
+                </Props>
+              </Obj>
+            </Props>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <Obj N="AdditionalMetadata" RefId="12">
+        <TNRef RefId="0" />
+        <MS>
+          <S N="NormalizedVersion">1.2.1</S>
+          <S N="IsPrerelease">False</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Digital_Russkiy\Documents\PowerShell\Modules</S>
+    </MS>
+  </Obj>
+</Objs>

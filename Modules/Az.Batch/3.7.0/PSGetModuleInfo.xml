@@ -22,7 +22,7 @@
       <S N="CompanyName">Microsoft Corporation</S>
       <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
       <DT N="PublishedDate">2025-01-14T03:11:35.713</DT>
-      <DT N="InstalledDate">2025-06-08T15:49:39.0910068-04:00</DT>
+      <DT N="InstalledDate">2025-07-05T15:49:48.0470138-04:00</DT>
       <B N="IsPrerelease">false</B>
       <Nil N="UpdatedDate" />
       <URI N="LicenseUri">https://aka.ms/azps-license</URI>
@@ -196,95 +196,8 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">DscResource</S>
-            <Obj N="Value" RefId="4">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Obj N="Value" RefId="5">
-              <TNRef RefId="2" />
-              <LST>
-                <S>Disable-AzBatchAutoScale</S>
-                <S>Disable-AzBatchComputeNodeScheduling</S>
-                <S>Disable-AzBatchJob</S>
-                <S>Disable-AzBatchJobSchedule</S>
-                <S>Enable-AzBatchAutoScale</S>
-                <S>Enable-AzBatchComputeNodeScheduling</S>
-                <S>Enable-AzBatchJob</S>
-                <S>Enable-AzBatchJobSchedule</S>
-                <S>Enable-AzBatchTask</S>
-                <S>Get-AzBatchAccount</S>
-                <S>Get-AzBatchAccountKey</S>
-                <S>Get-AzBatchApplication</S>
-                <S>Get-AzBatchApplicationPackage</S>
-                <S>Get-AzBatchCertificate</S>
-                <S>Get-AzBatchComputeNode</S>
-                <S>Get-AzBatchComputeNodeExtension</S>
-                <S>Get-AzBatchJob</S>
-                <S>Get-AzBatchJobPreparationAndReleaseTaskStatus</S>
-                <S>Get-AzBatchJobSchedule</S>
-                <S>Get-AzBatchLocationQuota</S>
-                <S>Get-AzBatchNodeFile</S>
-                <S>Get-AzBatchNodeFileContent</S>
-                <S>Get-AzBatchPool</S>
-                <S>Get-AzBatchPoolNodeCount</S>
-                <S>Get-AzBatchPoolUsageMetric</S>
-                <S>Get-AzBatchRemoteDesktopProtocolFile</S>
-                <S>Get-AzBatchRemoteLoginSetting</S>
-                <S>Get-AzBatchSubtask</S>
-                <S>Get-AzBatchSupportedImage</S>
-                <S>Get-AzBatchSupportedVirtualMachineSku</S>
-                <S>Get-AzBatchTask</S>
-                <S>Get-AzBatchTaskCount</S>
-                <S>Get-AzBatchTaskSlotCount</S>
-                <S>New-AzBatchAccount</S>
-                <S>New-AzBatchAccountKey</S>
-                <S>New-AzBatchApplication</S>
-                <S>New-AzBatchApplicationPackage</S>
-                <S>New-AzBatchCertificate</S>
-                <S>New-AzBatchComputeNodeUser</S>
-                <S>New-AzBatchJob</S>
-                <S>New-AzBatchJobSchedule</S>
-                <S>New-AzBatchPool</S>
-                <S>New-AzBatchResourceFile</S>
-                <S>New-AzBatchTask</S>
-                <S>Remove-AzBatchAccount</S>
-                <S>Remove-AzBatchApplication</S>
-                <S>Remove-AzBatchApplicationPackage</S>
-                <S>Remove-AzBatchCertificate</S>
-                <S>Remove-AzBatchComputeNode</S>
-                <S>Remove-AzBatchComputeNodeUser</S>
-                <S>Remove-AzBatchJob</S>
-                <S>Remove-AzBatchJobSchedule</S>
-                <S>Remove-AzBatchNodeFile</S>
-                <S>Remove-AzBatchPool</S>
-                <S>Remove-AzBatchTask</S>
-                <S>Reset-AzBatchComputeNode</S>
-                <S>Restart-AzBatchComputeNode</S>
-                <S>Set-AzBatchAccount</S>
-                <S>Set-AzBatchApplication</S>
-                <S>Set-AzBatchComputeNodeUser</S>
-                <S>Set-AzBatchJob</S>
-                <S>Set-AzBatchJobSchedule</S>
-                <S>Set-AzBatchPool</S>
-                <S>Set-AzBatchTask</S>
-                <S>Start-AzBatchComputeNodeServiceLogUpload</S>
-                <S>Start-AzBatchPoolResize</S>
-                <S>Stop-AzBatchCertificateDeletion</S>
-                <S>Stop-AzBatchJob</S>
-                <S>Stop-AzBatchJobSchedule</S>
-                <S>Stop-AzBatchPoolResize</S>
-                <S>Stop-AzBatchTask</S>
-                <S>Test-AzBatchAutoScale</S>
-              </LST>
-            </Obj>
-          </En>
-          <En>
             <S N="Key">Command</S>
-            <Obj N="Value" RefId="6">
+            <Obj N="Value" RefId="4">
               <TNRef RefId="2" />
               <LST>
                 <S>Disable-AzBatchAutoScale</S>
@@ -369,6 +282,93 @@
           <En>
             <S N="Key">RoleCapability</S>
             <Nil N="Value" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Disable-AzBatchAutoScale</S>
+                <S>Disable-AzBatchComputeNodeScheduling</S>
+                <S>Disable-AzBatchJob</S>
+                <S>Disable-AzBatchJobSchedule</S>
+                <S>Enable-AzBatchAutoScale</S>
+                <S>Enable-AzBatchComputeNodeScheduling</S>
+                <S>Enable-AzBatchJob</S>
+                <S>Enable-AzBatchJobSchedule</S>
+                <S>Enable-AzBatchTask</S>
+                <S>Get-AzBatchAccount</S>
+                <S>Get-AzBatchAccountKey</S>
+                <S>Get-AzBatchApplication</S>
+                <S>Get-AzBatchApplicationPackage</S>
+                <S>Get-AzBatchCertificate</S>
+                <S>Get-AzBatchComputeNode</S>
+                <S>Get-AzBatchComputeNodeExtension</S>
+                <S>Get-AzBatchJob</S>
+                <S>Get-AzBatchJobPreparationAndReleaseTaskStatus</S>
+                <S>Get-AzBatchJobSchedule</S>
+                <S>Get-AzBatchLocationQuota</S>
+                <S>Get-AzBatchNodeFile</S>
+                <S>Get-AzBatchNodeFileContent</S>
+                <S>Get-AzBatchPool</S>
+                <S>Get-AzBatchPoolNodeCount</S>
+                <S>Get-AzBatchPoolUsageMetric</S>
+                <S>Get-AzBatchRemoteDesktopProtocolFile</S>
+                <S>Get-AzBatchRemoteLoginSetting</S>
+                <S>Get-AzBatchSubtask</S>
+                <S>Get-AzBatchSupportedImage</S>
+                <S>Get-AzBatchSupportedVirtualMachineSku</S>
+                <S>Get-AzBatchTask</S>
+                <S>Get-AzBatchTaskCount</S>
+                <S>Get-AzBatchTaskSlotCount</S>
+                <S>New-AzBatchAccount</S>
+                <S>New-AzBatchAccountKey</S>
+                <S>New-AzBatchApplication</S>
+                <S>New-AzBatchApplicationPackage</S>
+                <S>New-AzBatchCertificate</S>
+                <S>New-AzBatchComputeNodeUser</S>
+                <S>New-AzBatchJob</S>
+                <S>New-AzBatchJobSchedule</S>
+                <S>New-AzBatchPool</S>
+                <S>New-AzBatchResourceFile</S>
+                <S>New-AzBatchTask</S>
+                <S>Remove-AzBatchAccount</S>
+                <S>Remove-AzBatchApplication</S>
+                <S>Remove-AzBatchApplicationPackage</S>
+                <S>Remove-AzBatchCertificate</S>
+                <S>Remove-AzBatchComputeNode</S>
+                <S>Remove-AzBatchComputeNodeUser</S>
+                <S>Remove-AzBatchJob</S>
+                <S>Remove-AzBatchJobSchedule</S>
+                <S>Remove-AzBatchNodeFile</S>
+                <S>Remove-AzBatchPool</S>
+                <S>Remove-AzBatchTask</S>
+                <S>Reset-AzBatchComputeNode</S>
+                <S>Restart-AzBatchComputeNode</S>
+                <S>Set-AzBatchAccount</S>
+                <S>Set-AzBatchApplication</S>
+                <S>Set-AzBatchComputeNodeUser</S>
+                <S>Set-AzBatchJob</S>
+                <S>Set-AzBatchJobSchedule</S>
+                <S>Set-AzBatchPool</S>
+                <S>Set-AzBatchTask</S>
+                <S>Start-AzBatchComputeNodeServiceLogUpload</S>
+                <S>Start-AzBatchPoolResize</S>
+                <S>Stop-AzBatchCertificateDeletion</S>
+                <S>Stop-AzBatchJob</S>
+                <S>Stop-AzBatchJobSchedule</S>
+                <S>Stop-AzBatchPoolResize</S>
+                <S>Stop-AzBatchTask</S>
+                <S>Test-AzBatchAutoScale</S>
+              </LST>
+            </Obj>
           </En>
           <En>
             <S N="Key">Workflow</S>

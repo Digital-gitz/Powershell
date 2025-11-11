@@ -32,8 +32,8 @@ function Install-WingetPackage {
     param (
         [string]$PackageId,
         [string]$Scope = "user", # Default scope is user
-        [switch]$Silent = $true,
-        [switch]$AcceptAgreements = $true,
+        [switch]$Silent,
+        [switch]$AcceptAgreements,
         [int]$MaxRetries = 3
     )
 
@@ -87,8 +87,8 @@ function Install-WingetPackage {
 function Update-WingetPackage {
     param (
         [string]$PackageId,
-        [switch]$Silent = $true,
-        [switch]$AcceptAgreements = $true,
+        [switch]$Silent,
+        [switch]$AcceptAgreements,
         [int]$MaxRetries = 3
     )
 
@@ -276,3 +276,22 @@ else {
 }
 
 Import-Script -ScriptPath "Scripts/Installation/fzf-Install-script.ps1"
+
+# Close any PS sessions using Terminal-Icons first
+Remove-Module Terminal-Icons -ErrorAction SilentlyContinue
+
+# Uninstall all versions
+Get-InstalledModule Terminal-Icons -AllVersions -ErrorAction SilentlyContinue |
+Uninstall-Module -Force -AllVersions -ErrorAction SilentlyContinue
+
+# Delete any leftover folders
+Remove-Item -Recurse -Force "$HOME\Documents\PowerShell\Modules\Terminal-Icons" -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force "C:\Program Files\PowerShell\Modules\Terminal-Icons" -ErrorAction SilentlyContinue
+
+# Reinstall a known-good version (or latest)
+Install-Module Terminal-Icons -Scope CurrentUser -Force -AllowClobber
+# or pin a version:
+# Install-Module Terminal-Icons -RequiredVersion 0.9.0 -Scope CurrentUser -Force
+
+# Reload
+Import-Module Terminal-Icons -Force

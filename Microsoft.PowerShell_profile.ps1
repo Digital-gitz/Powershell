@@ -97,14 +97,15 @@ else {
 . "$PSScriptRoot\Scripts\URL\passwords.ps1"                                  #Password Functions.
 . "$PSScriptRoot\Scripts\URL\URL.ps1"                                        #URL Functions. 
 . "$PSScriptRoot\Scripts\URL\Art.ps1"                                        #Art Functions.
-. "$PSScriptRoot\Scripts\Search\Search-Art.ps1"                             #Search Art Functions wih a python Script.
+. "$PSScriptRoot\Scripts\Search\Search-Art.ps1"                              #Search Art Functions wih a python Script.
 . "$PSScriptRoot\Scripts\Core\Utility-Functions.ps1"
-. "$PSScriptRoot\Scripts\Programs\Windows.ps1"                              #windows Funtions.
-. "$PSScriptRoot\Scripts\Development\git\Github\GitHubFunctions.ps1"        #Github Funtionality.
-. "$PSScriptRoot\Scripts\Development\git\Github\GitHubVisibility.ps1"       #GitHub Visibility Functions.
-. "$PSScriptRoot\Scripts\Development\git\Github\Repositories.ps1"           #Github Repository Functions.
-. "$PSScriptRoot\Scripts\Core\FineAndFolderHandler.ps1"                    #Fine and Folder Handler Functions.
-. "$PSScriptRoot\Scripts\Networking\NetworkTools.ps1"                       #Network Tools Functions.
+. "$PSScroptRoot\Scripts\python\pipinstall.ps1"                              #function to handle all my pip dependencys.
+. "$PSScriptRoot\Scripts\Programs\Windows.ps1"                               #windows Funtions.
+. "$PSScriptRoot\Scripts\Development\git\Github\GitHubFunctions.ps1"         #Github Funtionality.
+. "$PSScriptRoot\Scripts\Development\git\Github\GitHubVisibility.ps1"        #GitHub Visibility Functions.
+. "$PSScriptRoot\Scripts\Development\git\Github\Repositories.ps1"            #Github Repository Functions.
+. "$PSScriptRoot\Scripts\Core\FineAndFolderHandler.ps1"                      #Fine and Folder Handler Functions.
+. "$PSScriptRoot\Scripts\Networking\NetworkTools.ps1"                        #Network Tools Functions.
 
 #region Navigation 
 function home { . "$PSScriptRoot\Scripts\Core\Navigation\cd-home.ps1" }
@@ -173,9 +174,6 @@ function create_directory {
         Write-Host $_.Exception.Message -ForegroundColor DarkRed
     }
 }
-
-
-
 #region Error Handling
 
 if (-not $global:ProfileCallDepth) { $global:ProfileCallDepth = 0 }

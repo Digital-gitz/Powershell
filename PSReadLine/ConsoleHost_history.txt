@@ -536,3 +536,87 @@ cd .\Documents\Powershell\
 ls
 git status
 git add .
+git status
+git commit -m "changed file shorted URL function list"
+Search-Art "Anatomy"
+claude
+pip install instagrapi tweepy
+C:\Users\Digital_Russkiy\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+clear
+Get-SearchFunctionList
+Get-UrlFunctionList
+Show-UrlFunctions
+clear
+cd github
+cd .\Documents\github\
+ls
+cd .\Windows\
+ls
+gh repo clone zachey01/NimbusScroll
+rust
+winget install discord
+winget install  Discord.Discord
+clear
+Search-Art "proko"
+Search-Art "brodgman"
+Search-Art "bridgman"
+todo
+clr`
+clear
+Search-Art "pelvis"
+gh search
+gh search repo spotdl
+github
+pip install --upgrade spotdl
+spotdl
+claude
+cd D:\Music\
+ls
+Search-GitHubRepos cmus
+Get-GitHubRepoView cmus
+gh view repo cmus
+gh
+gh alias
+gh help alias set
+gh view repo cmus
+Search-GitHubRepos cmus
+ghv cmus/cmus
+gh view cmus/cmus 
+gh view cmus/cmus web
+gh view cmus/cmus --web
+ls
+z documents
+cd .\github\
+ls
+mkdir music
+mkdir audio && mv music audio
+cd .\audio\ls
+cd .\audio\
+ls
+cd .\music\
+mkdir terminal 
+cd .\terminal\
+gh repo clone cmus/cmus
+clear
+winget search winamp 
+winget install -e --id Winamp.Winamp
+z music
+ls
+cd D:\Music\
+ls
+pwd
+cursor
+claude
+chatgpt
+claude
+chatgpt
+clear
+cd C:\Users\Digital_Russkiy\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\
+ls
+. explorer 
+explorer .
+z powersehll
+z powershell
+explorer .
+git status
+git add .

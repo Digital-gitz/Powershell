@@ -1,16 +1,23 @@
-    "https://www.amazon.com/",
-    "https://www.walmart.com/",
-    "https://www.target.com/",
-    "https://www.bestbuy.com/",
-    "https://www.costco.com/",
-    "https://www.publix.com/",
-    "https://www.aldi.com/",
-    "https://www.sobeys.com/",
-    "https://www.shoprite.com/",
-    "https://www.safeway.com/",
-    "https://www.wholefoods.com/",
-    "https://www.traderjoes.com/",
-    "https://www.publix.com/",
-    "https://www.sobeys.com/",
-    "https://www.etsy.com/",
-    "https://www.ebay.com/"
+Open-FloridaBlueMemberPortal
+Open-Grapevine
+Open-Phind
+Open-Perplexity
+Open-Youtube
+Open-Github
+Open-Discord
+Open-Indeed
+Open-ArtStation
+Open-SpotifyAPI
+Open-Spotify
+Open-Instagram
+Open-Threads
+Open-Meta
+Open-Tumblr
+Open-Bluesky
+Open-Twitter
+Open-TikTok
+Open-Reddit
+Open-Pintrest
+Open-GoogleResume
+Open-GoogleDocuments
+

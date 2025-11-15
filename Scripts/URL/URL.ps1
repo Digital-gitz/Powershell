@@ -1,37 +1,29 @@
-function Get-UrlFunctionList {
-    <#
-    .SYNOPSIS
-        Lists the contents of Url-Functions.txt.
-
-    .DESCRIPTION
-        Reads and outputs each line from the Url-Functions.txt file in the current directory.
-    #>
-    $urlFunctionsPath = Join-Path $PSScriptRoot "Url-Functions.txt"
-    if (Test-Path $urlFunctionsPath) {
-        Get-Content $urlFunctionsPath | ForEach-Object { Write-Output $_ }
-    } else {
-        Write-Warning "Url-Functions.txt not found in $PSScriptRoot."
-    }
-}
-Write-Host "Get-UrlFunctionList"
-
 function Get-SearchFunctionList {
-    <#
-    .SYNOPSIS
-        Lists the contents of Search-Functions.txt.
-
-    .DESCRIPTION
-        Reads and outputs each line from the Search-Functions.txt file in the current directory.
-    #>
     $searchFunctionsPath = Join-Path $PSScriptRoot "Search-Functions.txt"
     if (Test-Path $searchFunctionsPath) {
         Get-Content $searchFunctionsPath | ForEach-Object { Write-Output $_ }
-    } else {
+    }
+    else {
         Write-Warning "Search-Functions.txt not found in $PSScriptRoot."
     }
 }
 
 Write-Host "Get-SearchFunctionList"
+
+function Show-UrlFunctions {
+    $urlFunctionsPath = Join-Path $PSScriptRoot "Url-Functions.txt"
+    if (Test-Path $urlFunctionsPath) {
+        Write-Host "`nAvailable URL Functions:" -ForegroundColor Cyan
+        Write-Host "─────────────────────────────" -ForegroundColor DarkGray
+        Get-Content $urlFunctionsPath | ForEach-Object { Write-Host $_ -ForegroundColor Green }
+        Write-Host "─────────────────────────────" -ForegroundColor DarkGray
+    }
+    else {
+        Write-Warning "Url-Functions.txt not found in $PSScriptRoot."
+    }
+}
+
+Write-Host "Show-UrlFunctions"
 
 #region Government 
 $FloridaBlue = @{
@@ -41,34 +33,35 @@ $FloridaBlue = @{
 
 #region Google 
 $Google = @{
-    Documents = "https://docs.google.com/document/"
-    Resume = "https://docs.google.com/document/d/1UzMXCDF6FM4RGpVKbA_dt5Bi383w5BoBktMdQlPAajA/edit?usp=sharing"
-    Drive = "https://drive.google.com/"
-    Sheets = "https://docs.google.com/spreadsheets/"
-    Slides = "https://docs.google.com/presentation/"
-    Forms = "https://docs.google.com/forms/"
-    Keep = "https://keep.google.com/"
-    Meet = "https://meet.google.com/"
-    Contacts = "https://contacts.google.com/"
-    Photos = "https://photos.google.com/"
-    Youtube = "https://www.youtube.com/"
-    Maps = "https://www.google.com/maps/"
-    Translate = "https://www.google.com/translate/"
-    Earth = "https://www.google.com/earth/"
-    Ads = "https://www.google.com/ads/"
-    Analytics = "https://www.google.com/analytics/"
-    Adsense = "https://www.google.com/adsense/"
-    Webmasters = "https://www.google.com/webmasters/"
-    Blog = "https://www.google.com/blog/"
-    Cloud = "https://www.google.com/cloud/"
+    Documents    = "https://docs.google.com/document/"
+    Resume       = "https://docs.google.com/document/d/1UzMXCDF6FM4RGpVKbA_dt5Bi383w5BoBktMdQlPAajA/edit?usp=sharing"
+    Drive        = "https://drive.google.com/"
+    Sheets       = "https://docs.google.com/spreadsheets/"
+    Slides       = "https://docs.google.com/presentation/"
+    Forms        = "https://docs.google.com/forms/"
+    Keep         = "https://keep.google.com/"
+    Meet         = "https://meet.google.com/"
+    Contacts     = "https://contacts.google.com/"
+    Photos       = "https://photos.google.com/"
+    Youtube      = "https://www.youtube.com/"
+    Maps         = "https://www.google.com/maps/"
+    Translate    = "https://www.google.com/translate/"
+    Earth        = "https://www.google.com/earth/"
+    Ads          = "https://www.google.com/ads/"
+    Analytics    = "https://www.google.com/analytics/"
+    Adsense      = "https://www.google.com/adsense/"
+    Webmasters   = "https://www.google.com/webmasters/"
+    Blog         = "https://www.google.com/blog/"
+    Cloud        = "https://www.google.com/cloud/"
     CloudStorage = "https://www.google.com/cloud-storage/"
 }
 #region End Google URLs
 
 #region Social Media URLs
 $Twitter = @{
-    home = "https://x.com/SvyatRusskiy"
-    X = "https://www.twitter.com/"
+    home      = "https://x.com/SvyatRusskiy"
+    X         = "https://www.twitter.com/"
+    developer = "https://developer.x.com/en/portal/dashboard"
 
 
 }
